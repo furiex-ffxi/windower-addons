@@ -1,0 +1,37 @@
+-- Modes file for PUP
+return {
+    ["Default"]={
+        ["autodispelmode"]="Auto", 
+        ["skillchainpartnermode"]="Off", 
+        ["autoraisemode"]="Off", 
+        ["autoskillchainmode"]="Auto", 
+        ["maneuvermode"]="Ranged", 
+        ["skillchaindelaymode"]="Off", 
+        ["autotargetmode"]="Off", 
+        ["autoaftermathmode"]="Off", 
+        ["autosilencemode"]="Off", 
+        ["subtrustsettingsmode"]="Default", 
+        ["autobuffmode"]="Off", 
+        ["autofacemobmode"]="Auto", 
+        ["autodetectauramode"]="Off", 
+        ["autohealmode"]="Emergency", 
+        ["engagemode"]="None", 
+        ["autoengagemode"]="Always", 
+        ["autofollowmode"]="Always", 
+        ["autotrustsmode"]="Off", 
+        ["maintrustsettingsmode"]="Default", 
+        ["autoconvertmode"]="Off", 
+        ["automagicburstmode"]="Off", 
+        ["autopetmode"]="Auto", 
+        ["autoassaultmode"]="Auto", 
+        ["autopullmode"]="Auto", 
+        ["combatmode"]="Off", 
+        ["autorepairmode"]="Auto", 
+        ["autodebuffmode"]="Off", 
+        ["autobarspellmode"]="Off", 
+        ["autofoodmode"]="Off", 
+        ["skillchainprioritymode"]="Prefer", 
+        ["automaneuvermode"]="Auto", 
+        ["autoenmityreductionmode"]="Auto"
+    }
+}

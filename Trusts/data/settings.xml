@@ -1,0 +1,104 @@
+<?xml version="1.1" ?>
+<settings>
+    <global>
+        <auto>true</auto>
+        <language>English</language>
+        <sets>
+            <apex>
+                <1>Matsui-P</1>
+                <2>Joachim</2>
+                <3>Ulmia</3>
+                <4>Apururu (UC)</4>
+            </apex>
+            <default>
+                <1>Valaineral</1>
+                <2>Mihli Aliapoh</2>
+                <3>Tenzen</3>
+                <4>Adelheid</4>
+                <5>Joachim</5>
+            </default>
+            <dps>
+                <1>Valaineral</1>
+                <2>Qultada</2>
+                <3>AAMR</3>
+                <4>Zeid II</4>
+                <5>Semih Lafihna</5>
+            </dps>
+            <fusion>
+                <1>Joachim</1>
+                <2>Qultada</2>
+                <3>Koru-Moru</3>
+                <4>Apururu (UC)</4>
+                <5>Ayame</5>
+            </fusion>
+            <level>
+                <1>Valaineral</1>
+                <2>Joachim</2>
+                <3>Semih Lafihna</3>
+                <4>AAHM</4>
+                <5>Apururu (UC)</5>
+            </level>
+            <lilith>
+                <1>Selh&apos;teus</1>
+                <2>Cherukiki</2>
+                <3>Koru-Moru</3>
+                <4>Sylvie (UC)</4>
+            </lilith>
+            <locus>
+                <1>Sylvie (UC)</1>
+                <2>Matsui-P</2>
+                <3>Koru-Moru</3>
+                <4>Joachim</4>
+            </locus>
+            <ody>
+                <1>Sylvie (UC)</1>
+                <2>Joachim</2>
+                <3>Selh&apos;teus</3>
+                <4>Valaineral</4>
+            </ody>
+            <support>
+                <1>Qultada</1>
+                <2>Joachim</2>
+                <3>Apururu (UC)</3>
+                <4>Shikaree Z</4>
+                <5>Iroha II</5>
+            </support>
+            <sylvie>
+                <1>Joachim</1>
+                <2>Sylvie (UC)</2>
+                <3>Matsui-P</3>
+                <4>Ulmia</4>
+            </sylvie>
+            <tank>
+                <1>Qultada</1>
+                <2>Apururu (UC)</2>
+                <3>Joachim</3>
+                <4>Valaineral</4>
+                <5>Koru-Moru</5>
+            </tank>
+            <th>
+                <1>Kupipi</1>
+                <2>Selh&apos;teus</2>
+                <3>Sylvie (UC)</3>
+                <4>Lion II</4>
+            </th>
+            <v1ambu>
+                <1>Selh&apos;teus</1>
+                <2>Sylvie (UC)</2>
+                <3>Cherukiki</3>
+                <4>Matsui-P</4>
+            </v1ambu>
+            <v2ambu>
+                <1>Matsui-P</1>
+                <2>Apururu (UC)</2>
+                <3>AAEV</3>
+                <4>Valaineral</4>
+            </v2ambu>
+        </sets>
+        <wait>
+            <aftercast>3</aftercast>
+            <retr>1.25</retr>
+            <retrall>3</retrall>
+        </wait>
+    </global>
+</settings>

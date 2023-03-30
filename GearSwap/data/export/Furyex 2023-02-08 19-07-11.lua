@@ -1,0 +1,17 @@
+sets.exported={
+    main="Demers. Degen +1",
+    sub="Tokko Sword",
+    ammo="Hydrocera",
+    head="Jhakri Coronal",
+    body="Jhakri Robe",
+    hands="Jhakri Cuffs",
+    legs={ name="Carmine Cuisses +1", augments={'Accuracy+20','Attack+12','"Dual Wield"+6',}},
+    feet="Jhakri Pigaches +1",
+    neck="Loricate Torque +1",
+    waist="Sailfi Belt +1",
+    left_ear="Sherida Earring",
+    right_ear="Dominance Earring",
+    left_ring="Ilabrat Ring",
+    right_ring="Apate Ring",
+    back="Agema Cape",
+}

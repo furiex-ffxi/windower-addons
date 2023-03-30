@@ -1,0 +1,17 @@
+sets.exported={
+    main="Naegling",
+    sub="Demers. Degen +1",
+    ammo="Hydrocera",
+    head="Nyame Helm",
+    body="Nyame Mail",
+    hands="Nyame Gauntlets",
+    legs="Nyame Flanchard",
+    feet="Nyame Sollerets",
+    neck="Mizu. Kubikazari",
+    waist="Embla Sash",
+    left_ear="Mendi. Earring",
+    right_ear="Cessance Earring",
+    left_ring="Ilabrat Ring",
+    right_ring="Ayanmo Ring",
+    back="Agema Cape",
+}

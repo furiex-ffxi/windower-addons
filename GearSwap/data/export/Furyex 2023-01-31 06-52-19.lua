@@ -1,0 +1,16 @@
+sets.exported={
+    main="Demers. Degen +1",
+    sub="Psychist Shield",
+    head="Jhakri Coronal",
+    body="Jhakri Robe",
+    hands="Jhakri Cuffs",
+    legs={ name="Carmine Cuisses +1", augments={'Accuracy+10','Attack+7','"Dual Wield"+4',}},
+    feet="Jhakri Pigaches",
+    neck="Loricate Torque +1",
+    waist="Sailfi Belt +1",
+    left_ear="Aredan Earring",
+    right_ear="Dominance Earring",
+    left_ring="Jhakri Ring",
+    right_ring="Warp Ring",
+    back="Sucellos's Cape",
+}

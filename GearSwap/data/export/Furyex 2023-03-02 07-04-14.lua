@@ -1,0 +1,17 @@
+sets.exported={
+    main="Kaja Sword",
+    sub="Demers. Degen +1",
+    ammo="Hydrocera",
+    head="Atro. Chapeau +1",
+    body="Atrophy Tabard +1",
+    hands="Aya. Manopolas +2",
+    legs={ name="Carmine Cuisses +1", augments={'Accuracy+20','Attack+12','"Dual Wield"+6',}},
+    feet="Aya. Gambieras +2",
+    neck="Loricate Torque +1",
+    waist="Embla Sash",
+    left_ear="Aredan Earring",
+    right_ear={ name="Domin. Earring +1", augments={'Path: A',}},
+    left_ring="Kishar Ring",
+    right_ring="Warp Ring",
+    back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+}
