@@ -5,8 +5,6 @@ TrustSettings = {
             'Afflatus Solace'
         },
         SelfBuffs = L{
-            Buff.new('Barfira'),
-            Buff.new('Barparalyzra'),
             Buff.new('Haste'),
             Buff.new('Reraise'),
             Buff.new('Protectra'),
@@ -36,7 +34,7 @@ TrustSettings = {
             }
         },
         Debuffs = L{
-            Spell.new('Dia III')
+            Spell.new('Dia II')
         },
         Skillchains = {
             defaultws = {'Black Halo'},

@@ -2,8 +2,7 @@
 TrustSettings = {
     Default = {
         JobAbilities = S{
-            'Meditate',
-            'Hasso',
+            'Hasso'
         },
         Skillchains = {
             defaultws = {'Tachi: Fudo'},

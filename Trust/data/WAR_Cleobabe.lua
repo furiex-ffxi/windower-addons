@@ -7,14 +7,14 @@ TrustSettings = {
             'Warcry',
             'Restraint',
             'Blood Rage',
-            'Retaliation'
+            'Retaliation',
         },
         Skillchains = {
-            defaultws = {'Full Break',"King's Justice",'Upheaval',"Ukko's Fury",'Savage Blade','Impulse Drive'},
+            defaultws = {'Resolution','Ground Strike','Dragon Kick','Penta Thrust','Herculean Slash','Upheaval','Full Break',"King's Justice","Ukko's Fury",'Savage Blade','Impulse Drive'},
             tpws = {},
             spamws = {'Impulse Drive','Upheaval','Savage Blade','Judgment'},
-            starterws = {'Full Break'},
-            preferws = {"King's Justice",'Steel Cyclone','Upheaval','Savage Blade','Full Break','Impulse Drive'},
+            starterws = {'Upheaval'},
+            preferws = {'Resolution','Ground Strike',"King's Justice",'Steel Cyclone','Upheaval','Savage Blade','Full Break','Impulse Drive'},
             cleavews = {'Fell Cleave'},
             amws = "King's Justice"
         },
