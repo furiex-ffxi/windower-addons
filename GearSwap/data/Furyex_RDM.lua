@@ -540,7 +540,7 @@ function get_sets()
         head        =   AF.Head,
         hands       =   Jhakri.Hands,
         -- legs        =   Jhakri.Legs,
-        body        =   Jhakri.Body,
+        body        =   RELIC.Body,
         feet        =   Jhakri.Feet,
         legs		=	"Aya. Cosciales +2",    --6
         -- neck		=	"Voltsurge Torque",     --4
