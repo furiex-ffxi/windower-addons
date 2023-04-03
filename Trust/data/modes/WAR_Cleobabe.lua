@@ -1,7 +1,7 @@
 -- Modes file for WAR
 return {
-    ["Default"]={
-        ["skillchainpartnermode"]="Open", 
+    ["Assist"]={
+        ["skillchainpartnermode"]="Off", 
         ["subtrustsettingsmode"]="Default", 
         ["skillchainprioritymode"]="Strict", 
         ["autobuffmode"]="Auto", 
@@ -12,15 +12,35 @@ return {
         ["autoengagemode"]="Always", 
         ["autofollowmode"]="Always", 
         ["autotrustsmode"]="Off", 
-        ["autoskillchainmode"]="Spam", 
+        ["autoskillchainmode"]="Auto", 
         ["autofacemobmode"]="Auto", 
+        ["skillchaindelaymode"]="Off", 
+        ["engagemode"]="None", 
+        ["autofoodmode"]="Off", 
+        ["combatmode"]="Off", 
+        ["autoenmityreductionmode"]="Auto"
+    }, 
+    ["Default"]={
+        ["skillchainpartnermode"]="Open", 
+        ["subtrustsettingsmode"]="Default", 
+        ["autofacemobmode"]="Auto", 
+        ["autobuffmode"]="Auto", 
+        ["autoskillchainmode"]="Spam", 
+        ["autotargetmode"]="Off", 
+        ["autofollowmode"]="Always", 
+        ["autopullmode"]="Off", 
+        ["autoengagemode"]="Always", 
+        ["autoaftermathmode"]="Off", 
+        ["autotrustsmode"]="Off", 
+        ["maintrustsettingsmode"]="Default", 
+        ["skillchainprioritymode"]="Strict", 
         ["skillchaindelaymode"]="Off", 
         ["engagemode"]="None", 
         ["autofoodmode"]="Off", 
         ["combatmode"]="Melee", 
         ["autoenmityreductionmode"]="Off"
     }, 
-    ["Assist"]={
+    ["Pull"]={
         ["skillchainpartnermode"]="Off", 
         ["subtrustsettingsmode"]="Default", 
         ["autofacemobmode"]="Auto", 
@@ -28,7 +48,7 @@ return {
         ["autobuffmode"]="Auto", 
         ["autoaftermathmode"]="Off", 
         ["autoskillchainmode"]="Auto", 
-        ["autopullmode"]="Off", 
+        ["autopullmode"]="Auto", 
         ["autoengagemode"]="Always", 
         ["autotargetmode"]="Off", 
         ["autotrustsmode"]="Off", 
