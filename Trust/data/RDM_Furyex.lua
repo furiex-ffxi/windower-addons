@@ -27,7 +27,7 @@ TrustSettings = {
         CureSettings = {
             Thresholds = {
                 ['Default'] = 78,
-                ['Emergency'] = 30,
+                ['Emergency'] = 50,
                 ['Cure IV'] = 500,
                 ['Cure III'] = 300,
                 ['Cure II'] = 0
@@ -36,7 +36,6 @@ TrustSettings = {
         Debuffs = L{
             -- Debuff.new('Dia'),
             -- Spell.new('Distract III', L{}, L{}, nil, L{ InBattleCondition.new() }),
-
             -- Debuff.new('Distract'),
             -- Debuff.new('Slow'),
             -- Debuff.new('Paralyze'),
