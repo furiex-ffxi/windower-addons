@@ -194,14 +194,14 @@ function get_sets()
     AF.Feet		=	"Atrophy Boots +2"
 
     --Vitiation
-    RELIC.Head		=	"Viti. Chapeau +3"
-    RELIC.Body		=	"Viti. Tabard +3"
+    RELIC.Head		=	"Viti. Chapeau +1"
+    RELIC.Body		=	"Viti. Tabard +1"
     RELIC.Hands 	=	"Viti. Gloves +1"
-    RELIC.Legs		=	"Viti. Tights +3"
-    RELIC.Feet		=	"Vitiation Boots +3"
+    RELIC.Legs		=	"Viti. Tights +1"
+    RELIC.Feet		=	"Vitiation Boots +1"
 
     --Lethargy
-    EMPY.Head		=	"Leth. Chappel"
+    EMPY.Head		=	"Lethargy Chappel"
     EMPY.Body		=	"Lethargy Sayon"
     EMPY.Hands		=	"Leth. Gantherots"
     EMPY.Legs		=	"Leth. Fuseau"
@@ -265,18 +265,18 @@ function get_sets()
         hands		=	"Aya. Manopolas +2",
         -- legs		=	Carm.Legs.D,
         feet		=	"Aya. Gambieras +2",
-        neck		=	"Twilight Torque",
-        waist		=	"Flume Belt",
-        left_ear	=	"Etiolation Earring",
-        right_ear	=	"Ethereal Earring",
-        left_ring	=	"Defending Ring +1",
-        right_ring	=	"Stikini Ring",
+        -- neck		=	"Twilight Torque",
+        -- waist		=	"Flume Belt",
+        -- left_ear	=	"Etiolation Earring",
+        -- right_ear	=	"Ethereal Earring",
+        -- left_ring	=	"Defending Ring +1",
+        -- right_ring	=	"Stikini Ring",
         back		=	RDMCape.TP,
     }
 
     -- Your idle DT set
     sets.me.idle.dt = set_combine(sets.me.idle.refresh,{
-        neck		=	"Twilight Torque",
+        -- neck		=	"Twilight Torque",
         back        =   "Agema Cape",
         head		=	Nyame.Head,
         hands		=	Nyame.Hands,
@@ -284,7 +284,7 @@ function get_sets()
         -- legs		=	RELIC.Legs,
         legs        =   Nyame.Legs,
         feet		=	Nyame.Feet,
-	    left_ring	=	"Defending Ring",
+	    -- left_ring	=	"Defending Ring",
         right_ring	=	"Ayanmo Ring",
     })  
     sets.me.idle.mdt = set_combine(sets.me.idle.refresh,{
@@ -295,7 +295,9 @@ function get_sets()
 
     }
     
-    sets.me.latent_refresh = {waist="Fucho-no-obi"}     
+    sets.me.latent_refresh = {
+        -- waist="Fucho-no-obi"
+    }     
     
 	-- Combat Related Sets
 	------------------------------------------------------------------------------------------------------
@@ -322,13 +324,13 @@ function get_sets()
     })
     sets.me.melee.accdw = set_combine(sets.me.melee.normaldw,{
         --head		=	Carm.Head.D,
-        neck		=	"Sanctity Necklace",
+        -- neck		=	"Sanctity Necklace",
         right_ear   =  { name="Domin. Earring +1", augments={'Path: A',}},
         -- right_ear	=	"Mache Earring +1",
-        waist		=	"Grunfeld Rope",
+        -- waist		=	"Grunfeld Rope",
     })
     sets.me.melee.dtdw = set_combine(sets.me.melee.normaldw,{
-        neck		=	"Twilight Torque",
+        -- neck		=	"Twilight Torque",
         head		=	Nyame.Head,
         hands		=	Nyame.Hands,
         body        =   Nyame.Body,
@@ -336,7 +338,7 @@ function get_sets()
         legs        =   Nyame.Legs,
         feet		=	Nyame.Feet,
 	    left_ring	=	"Ayanmo Ring",
-        right_ring	=	"Defending Ring",
+        -- right_ring	=	"Defending Ring",
     })
     sets.me.melee.mdtdw = set_combine(sets.me.melee.normaldw,{
 
@@ -372,27 +374,27 @@ function get_sets()
         hands       =   Jhakri.Hands,
         legs		=	Jhakri.Legs,
         feet		=	Jhakri.Feet,
-        neck		=	"Dls. Torque +2",
-        waist		=	"Prosilio Belt +1",
+        -- neck		=	"Dls. Torque +2",
+        -- waist		=	"Prosilio Belt +1",
         left_ear	=	{ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
         right_ear	=	"Ishvara Earring",
-        left_ring   =   "Stikini Ring +1",
+        -- left_ring   =   "Stikini Ring +1",
         right_ring	=	"Karieyh Ring",
         -- right_ring	=	"Rufescent Ring",
         back		=	RDMCape.MACC,
 	}
     sets.me["Black Halo"] = {
-        ammo        =   "Regal Gem",
+        -- ammo        =   "Regal Gem",
         head        =   RELIC.Head,
         body        =   RELIC.Body,
         hands       =   AF.Hands,
         legs        =   RELIC.Legs,
         feet        =   "Jhakri Pigaches +2",
-        neck        =   "Dls. Torque +2",
+        -- neck        =   "Dls. Torque +2",
         waist       =   "Prosilio Belt +1",
         left_ear    =   { name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
         right_ear   =   "Ishvara Earring",
-        left_ring   =   "Stikini Ring +1",
+        -- left_ring   =   "Stikini Ring +1",
         right_ring	=	"Karieyh Ring",
         -- right_ring  =   "Rufescent Ring",
         back        =   RDMCape.MACC,
@@ -404,11 +406,11 @@ function get_sets()
         hands       =   "Jhakri Cuffs +2",
         legs        =   RELIC.Legs,
         --feet        =   Carm.Feet.B,
-        neck        =   "Fotia Gorget",
-        waist       =   "Fotia Belt",
-        left_ear    =   "Mache Earring +1",
+        -- neck        =   "Fotia Gorget",
+        -- waist       =   "Fotia Belt",
+        -- left_ear    =   "Mache Earring +1",
         right_ear   =   "Sherida Earring",
-        left_ring   =   "Begrudging Ring",
+        -- left_ring   =   "Begrudging Ring",
         right_ring	=	"Karieyh Ring",
         -- right_ring  =   "Rufescent Ring",
         back        =   RDMCape.TP,
@@ -424,59 +426,59 @@ function get_sets()
         hands       =   Jhakri.Hands,
         legs		=	Jhakri.Legs,
         feet		=	Jhakri.Feet,
-        neck		=	"Dls. Torque +2",
-        waist		=	"Prosilio Belt +1",
+        -- neck		=	"Dls. Torque +2",
+        -- waist		=	"Prosilio Belt +1",
         left_ear	=	{ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
         right_ear	=	"Ishvara Earring",
-        left_ring   =   "Stikini Ring +1",
+        -- left_ring   =   "Stikini Ring +1",
         right_ring	=	"Karieyh Ring",
         -- right_ring	=	"Rufescent Ring",
         back		=	RDMCape.MACC,
 	}
     sets.me["Sanguine Blade"] = {
-        ammo		=	"Pemphredo Tathlum",
-        head		=	"Pixie Hairpin +1",
+        -- ammo		=	"Pemphredo Tathlum",
+        -- head		=	"Pixie Hairpin +1",
         --body		=	Amal.Body.A,
         hands		=	"Jhakri Cuffs +2",
         --legs		=	Amal.Legs.A,
         feet		=	RELIC.Feet,
-        neck		=	"Dls. Torque +2",
-        waist		=	"Refoccilation Stone",
+        -- neck		=	"Dls. Torque +2",
+        -- waist		=	"Refoccilation Stone",
         left_ear	=	"Ishvara Earring",
-        right_ear	=	"Friomisi Earring",
-        left_ring	=	"Archon Ring",
+        -- right_ear	=	"Friomisi Earring",
+        -- left_ring	=	"Archon Ring",
         right_ring	=	"Karieyh Ring",
         -- right_ring	=	"Freke Ring",
         back		=	RDMCape.MACC,
     }
     sets.me["Red Lotus Blade"] = {
-        ammo		=	"Pemphredo Tathlum",
+        -- ammo		=	"Pemphredo Tathlum",
         head		=	RELIC.Head,
         --body		=	Amal.Body.A,
         hands		=	"Jhakri Cuffs +2",
         --legs		=	Amal.Legs.A,
         feet		=	RELIC.Feet,
-        neck		=	"Fotia Gorget",
-        waist		=	"Fotia Belt",
+        -- neck		=	"Fotia Gorget",
+        -- waist		=	"Fotia Belt",
         left_ear	=	"Ishvara Earring",
-        right_ear	=	"Friomisi Earring",
-        left_ring	=	"Freke Ring",
+        -- right_ear	=	"Friomisi Earring",
+        -- left_ring	=	"Freke Ring",
         right_ring	=	"Karieyh Ring",
         -- right_ring	=	"Rufescent Ring",
         back		=	RDMCape.MACC,
     }
     sets.me["Seraph Blade"] = {
-        ammo		=	"Pemphredo Tathlum",
+        -- ammo		=	"Pemphredo Tathlum",
         head		=	RELIC.Head,
         --body		=	Amal.Body.A,
         hands		=	"Jhakri Cuffs +2",
         --legs		=	Amal.Legs.A,
         feet		=	RELIC.Feet,
-        neck		=	"Fotia Gorget",
-        waist		=	"Fotia Belt",
+        -- neck		=	"Fotia Gorget",
+        -- waist		=	"Fotia Belt",
         left_ear	=	"Ishvara Earring",
-        right_ear	=	"Friomisi Earring",
-        left_ring	=	"Weather. Ring",
+        -- right_ear	=	"Friomisi Earring",
+        -- left_ring	=	"Weather. Ring",
         -- right_ring	=	"Freke Ring",
         right_ring	=	"Karieyh Ring",
         back		=	RDMCape.MACC,
@@ -488,12 +490,12 @@ function get_sets()
         hands		=	"Jhakri Cuffs +2",
         --legs		=	Amal.Legs.A,
         feet		=	RELIC.Feet,
-        neck		=	"Fotia Gorget",
-        waist		=	"Fotia Belt",
+        -- neck		=	"Fotia Gorget",
+        -- waist		=	"Fotia Belt",
         -- left_ear	=	"Ishvara Earring",
         left_ear	=	{ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-        right_ear	=	"Friomisi Earring",
-        left_ring	=	"Weather. Ring",
+        -- right_ear	=	"Friomisi Earring",
+        -- left_ring	=	"Weather. Ring",
         -- right_ring	=	"Freke Ring",
         right_ring	=	"Karieyh Ring",
         back		=	RDMCape.MACC,
@@ -534,7 +536,7 @@ function get_sets()
       
     -- Generic Casting Set that all others take off of. Here you should add all your fast cast RDM need 50 pre JP 42 at master
     sets.precast.casting = {
-        main		=	"Crocea Mors",		--20
+        -- main		=	"Crocea Mors",		--20
         head        =   AF.Head,
         hands       =   Jhakri.Hands,
         -- legs        =   Jhakri.Legs,
@@ -569,10 +571,10 @@ function get_sets()
       
     -- Curing Precast, Cure Spell Casting time -
     sets.precast.cure = set_combine(sets.precast.casting,{
-	back		=	"Pahtli Cape",
-    feet		=	"Telchine Pigaches",
+	-- back		=	"Pahtli Cape",
+    -- feet		=	"Telchine Pigaches",
     neck        =   "Diemer Gorget",
-	left_ring	=	"Lebeche Ring",		
+	-- left_ring	=	"Lebeche Ring",		
     left_ear    =   "Mendi. Earring",
     })
       
@@ -590,7 +592,7 @@ function get_sets()
 	
     -- Just go make it, inventory will thank you and making rules for each is meh.
     sets.midcast.Obi = {
-    	waist="Hachirin-no-Obi",
+    	-- waist="Hachirin-no-Obi",
     }
     sets.midcast.Orpheus = {
         --waist="Orpheus's Sash", -- Commented cause I dont have one yet
@@ -602,19 +604,19 @@ function get_sets()
 	-----------------------------------------------------------------------------------------------
     -- Make sure you have a non weather obi in this set. Helix get bonus naturally no need Obi.	
     sets.midcast.DarkHelix = {
-	head		=	"Pixie Hairpin +1",
-	waist		=	"Refoccilation Stone",
-        left_ring	=	"Archon Ring",
+	-- head		=	"Pixie Hairpin +1",
+	-- waist		=	"Refoccilation Stone",
+        -- left_ring	=	"Archon Ring",
     }
     -- Make sure you have a non weather obi in this set. Helix get bonus naturally no need Obi.	
     sets.midcast.Helix = {
-	waist		=	"Refoccilation Stone",
+	-- waist		=	"Refoccilation Stone",
     }	
 
     -- Whatever you want to equip mid-cast as a catch all for all spells, and we'll overwrite later for individual spells
     sets.midcast.casting = {
-        main		=	"Maxentius",
-        sub		    =	"Ammurapi Shield",
+        -- main		=	"Maxentius",
+        -- sub		    =	"Ammurapi Shield",
         neck        =   "Mizu. Kubikazari",
         back		=	RDMCape.MACC,
         body        =   Jhakri.Body,
@@ -628,33 +630,33 @@ function get_sets()
         ammo        =   "Hydrocera",
         left_ring   =   "Jhakri Ring",
         right_ring  =   "Ayanmo Ring",
-        -- ammo		=	"Pemphredo Tathlum",
+        -- -- ammo		=	"Pemphredo Tathlum",
         --head		=	Merl.Head.ACC,
         --body		=	Amal.Body.A,
         --hands		=	Amal.Hands.D,
         --legs		=	Amal.Legs.A,
         --feet		=	Amal.Feet.A,
-        -- neck		=	"Dls. Torque +2",
-        -- waist		=	"Refoccilation Stone",
+        -- -- neck		=	"Dls. Torque +2",
+        -- -- waist		=	"Refoccilation Stone",
         -- left_ear	=	"Friomisi Earring",
         -- right_ear	=	"Enchntr. Earring +1",
         -- right_ring	=	"Freke Ring",
     }
 
     sets.midcast.nuking.normal = set_combine(sets.midcast.normal, {
-        main		=	"Maxentius",
-        sub		=	"Ammurapi Shield",
+        -- main		=	"Maxentius",
+        -- sub		=	"Ammurapi Shield",
 
         -- left_ring	=	"Shiva Ring",    
-        -- ammo		=	"Pemphredo Tathlum",
+        -- -- ammo		=	"Pemphredo Tathlum",
         --head		=	Merl.Head.ACC,
         --body		=	Amal.Body.A,
         --hands		=	Amal.Hands.D,
         -- legs		=	Amal.Legs.A,
         --feet		=	Amal.Feet.A,
 
-        -- neck		=	"Dls. Torque +2",
-        -- waist		=	"Refoccilation Stone",
+        -- -- neck		=	"Dls. Torque +2",
+        -- -- waist		=	"Refoccilation Stone",
         -- left_ear	=	"Friomisi Earring",
         -- right_ear	=	"Enchntr. Earring +1",
         -- right_ring	=	"Freke Ring",
@@ -662,25 +664,25 @@ function get_sets()
     -- used with toggle, default: F10
     -- Pieces to swap from freen nuke to Magic Burst
     sets.midcast.MB.normal = set_combine(sets.midcast.nuking.normal, {
-        left_ring	=	"Mujin Band",    
+        -- left_ring	=	"Mujin Band",    
         --head		=	Merl.Head.MB,
         --body		=	Merl.Body.MB,
         neck		=	"Mizu. Kubikazari",
-        right_ring	=	"Locus Ring",
+        -- right_ring	=	"Locus Ring",
     })
 	
     sets.midcast.nuking.acc = set_combine(sets.midcast.normal, {
-        main		=	"Maxentius",
-        sub		=	"Ammurapi Shield",
+        -- main		=	"Maxentius",
+        -- sub		=	"Ammurapi Shield",
         -- left_ring	=	"Shiva Ring",    
-        -- ammo		=	"Pemphredo Tathlum",
+        -- -- ammo		=	"Pemphredo Tathlum",
         --head		=	Merl.Head.ACC,
         --body		=	Amal.Body.A,
         --hands		=	Amal.Hands.D,
         --legs		=	Amal.Legs.A,
         --feet		=	Amal.Feet.A,
-        -- neck		=	"Dls. Torque +2",
-        -- waist		=	"Refoccilation Stone",
+        -- -- neck		=	"Dls. Torque +2",
+        -- -- waist		=	"Refoccilation Stone",
         -- left_ear	=	"Friomisi Earring",
         -- right_ear	=	"Enchntr. Earring +1",
         back		=	RDMCape.MACC,
@@ -689,11 +691,11 @@ function get_sets()
     -- used with toggle, default: F10
     -- Pieces to swap from freen nuke to Magic Burst
     sets.midcast.MB.acc = set_combine(sets.midcast.nuking.acc, {
-        left_ring	=	"Mujin Band",    
+        -- left_ring	=	"Mujin Band",    
         --head		=	Merl.Head.MB,
         --body		=	Merl.Body.MB,
         neck		=	"Mizu. Kubikazari",
-        right_ring	=	"Locus Ring",
+        -- right_ring	=	"Locus Ring",
     })	
 	
     -- Enfeebling
@@ -701,8 +703,8 @@ function get_sets()
 	sets.midcast.Enfeebling = {} -- leave Empty
 	--Type A-pure macc no potency mod
     sets.midcast.Enfeebling.macc = {
-        main		=	"Maxentius",
-        sub		=	"Ammurapi Shield",
+        -- main		=	"Maxentius",
+        -- sub		=	"Ammurapi Shield",
         -- ammo		=	"Regal Gem",
         ammo		=	"Hydrocera",
         -- head		=	RELIC.Head,
@@ -713,9 +715,9 @@ function get_sets()
         legs		=	Chiro.Legs.MACC,
         -- feet		=	RELIC.Feet,
         feet		=	Jhakri.Feet,
-        -- neck		=	"Dls. Torque +2",
+        -- -- neck		=	"Dls. Torque +2",
         neck        =   "Mizu. Kubikazari",
-        waist		=	"Porous Rope",
+        -- waist		=	"Porous Rope",
         left_ear	=	"Snotra Earring",
         right_ear	=	"Malignance Earring",
          left_ring	=	"Kishar Ring",
@@ -734,119 +736,119 @@ function get_sets()
         --body		=	Amal.Body.A,
         --hands		=	Kayk.Hands.A,
         -- feet		=	RELIC.Feet,
-        -- neck		=	"Dls. Torque +2",
-        -- waist		=	"Porous Rope",
+        -- -- neck		=	"Dls. Torque +2",
+        -- -- waist		=	"Porous Rope",
     })
 	-- Type C-potency from: Int & "Enfeeb Potency" gear
     sets.midcast.Enfeebling.intpot = set_combine(sets.midcast.Enfeebling.macc, {
-        main		=	"Maxentius",
-        sub		=	"Ammurapi Shield",
-        ammo		=	"Regal Gem",
+        -- main		=	"Maxentius",
+        -- sub		=	"Ammurapi Shield",
+        -- ammo		=	"Regal Gem",
         head		=	RELIC.Head,
         --body		=	Amal.Body.A,
         --hands		=	Kayk.Hands.A,
         legs		=	Chiro.Legs.MACC,
         feet		=	RELIC.Feet,
-        neck		=	"Dls. Torque +2",
-        waist		=	"Acuity Belt +1 ",
-        -- waist		=	"Porous Rope",
+        -- neck		=	"Dls. Torque +2",
+        -- waist		=	"Acuity Belt +1 ",
+        -- -- waist		=	"Porous Rope",
         left_ear	=	"Snotra Earring",
         right_ear	=	"Malignance Earring",
         -- left_ear	=	"Odnowa Earring +1",
         -- right_ear	=	"Enchntr. Earring +1",
-        left_ring	=	"Stikini Ring +1",
-        right_ring	=	"Freke Ring",
+        -- left_ring	=	"Stikini Ring +1",
+        -- right_ring	=	"Freke Ring",
         back		=	RDMCape.MACC
     })
 	--Type D-potency from: Enfeeb Skill & "Enfeeb Potency" gear
     sets.midcast.Enfeebling.skillpot = {
-        main		=	"Maxentius",
-        sub		=	"Ammurapi Shield",
-        ammo		=	"Regal Gem",
+        -- main		=	"Maxentius",
+        -- sub		=	"Ammurapi Shield",
+        -- ammo		=	"Regal Gem",
         head		=	RELIC.Head,
         --body		=	Amal.Body.A,
         --hands		=	Kayk.Hands.A,
         legs		=	Chiro.Legs.MACC,
         feet		=	RELIC.Feet,
-        neck		=	"Dls. Torque +2",
-        waist		=	"Porous Rope",
+        -- neck		=	"Dls. Torque +2",
+        -- waist		=	"Porous Rope",
         left_ear	=	"Snotra Earring",
         right_ear	=	"Malignance Earring",
-        left_ring	=	"Stikini Ring +1",
-        right_ring	=	"Stikini Ring",
+        -- left_ring	=	"Stikini Ring +1",
+        -- right_ring	=	"Stikini Ring",
         back		=	RDMCape.MACC
     }
 	-- Tpe E-potency from: Enfeeb skill, Mnd, & "Enfeeb Potency" gear
     sets.midcast.Enfeebling.skillmndpot = {
-        main		=	"Maxentius",
-        sub		=	"Ammurapi Shield",
-        ammo		=	"Regal Gem",
+        -- main		=	"Maxentius",
+        -- sub		=	"Ammurapi Shield",
+        -- ammo		=	"Regal Gem",
         head		=	RELIC.Head,
         --body		=	Amal.Body.A,
         --hands		=	Kayk.Hands.A,
         legs		=	Chiro.Legs.MACC,
         feet		=	RELIC.Feet,
-        neck		=	"Dls. Torque +2",
-        waist		=	"Porous Rope",
+        -- neck		=	"Dls. Torque +2",
+        -- waist		=	"Porous Rope",
         left_ear	=	"Snotra Earring",
         right_ear	=	"Malignance Earring",
-        left_ring	=	"Stikini Ring +1",
-        right_ring	=	"Stikini Ring",
+        -- left_ring	=	"Stikini Ring +1",
+        -- right_ring	=	"Stikini Ring",
         back		=	RDMCape.MACC
     }
 	-- Type F-potency from "Enfeebling potency" gear only
     sets.midcast.Enfeebling.skillmndpot = {
-        main		=	"Maxentius",
-        sub		=	"Ammurapi Shield",
-        ammo		=	"Regal Gem",
+        -- main		=	"Maxentius",
+        -- sub		=	"Ammurapi Shield",
+        -- ammo		=	"Regal Gem",
         head		=	RELIC.Head,
         --body		=	Amal.Body.A,
         --hands		=	Kayk.Hands.A,
         legs		=	Chiro.Legs.MACC,
         feet		=	RELIC.Feet,
-        neck		=	"Dls. Torque +2",
-        waist		=	"Porous Rope",
+        -- neck		=	"Dls. Torque +2",
+        -- waist		=	"Porous Rope",
         left_ear	=	"Snotra Earring",
         right_ear	=	"Malignance Earring",
-        left_ring	=	"Stikini Ring +1",
-        right_ring	=	"Stikini Ring",
+        -- left_ring	=	"Stikini Ring +1",
+        -- right_ring	=	"Stikini Ring",
         back		=	RDMCape.MACC
     }
 	
     -- Enhancing yourself 
     sets.midcast.enhancing.duration = {
-        main		=	"Secespita",
-        sub		=	"Ammurapi Shield",
-        ammo		=	"Homiliary",
-        head		=	"Telchine Cap",
+        -- main		=	"Secespita",
+        -- sub		=	"Ammurapi Shield",
+        -- ammo		=	"Homiliary",
+        -- head		=	"Telchine Cap",
         body		=	RELIC.Body,
         hands		=	AF.Hands,
-        legs		=	"Telchine Braconi",
+        -- legs		=	"Telchine Braconi",
         -- feet		=	EMPY.Feet,
-        neck		=	"Dls. Torque +2",
+        -- neck		=	"Dls. Torque +2",
         waist		=	"Embla Sash",
-        left_ear	=	"Etiolation Earring",
-        right_ear	=	"Andoaa Earring",
-        left_ring	=	"Stikini Ring +1",
-        right_ring	=	"Stikini Ring",
+        -- left_ear	=	"Etiolation Earring",
+        -- right_ear	=	"Andoaa Earring",
+        -- left_ring	=	"Stikini Ring +1",
+        -- right_ring	=	"Stikini Ring",
         back		=	RDMCape.MACC,
     }
     -- For Potency spells like Temper and Enspells
     sets.midcast.enhancing.potency = set_combine(sets.midcast.enhancing.duration, {
         main		=	"Secespita",
-        sub		    =	"Ammurapi Shield",
-        ammo		=	"Homiliary",
+        -- sub		    =	"Ammurapi Shield",
+        -- ammo		=	"Homiliary",
         --head		=	Carm.Head.D,
         body		=	RELIC.Body,
         hands		=	RELIC.Hands,
         legs		=	AF.Legs,
         -- feet		=	EMPY.Feet,
-        neck		=	"Dls. Torque +2",
-        waist		=	"Olympus Sash",
-        left_ear	=	"Etiolation Earring",
-        right_ear	=	"Andoaa Earring",
-        left_ring	=	"Stikini Ring +1",
-        right_ring	=	"Stikini Ring",
+        -- neck		=	"Dls. Torque +2",
+        -- waist		=	"Olympus Sash",
+        -- left_ear	=	"Etiolation Earring",
+        -- right_ear	=	"Andoaa Earring",
+        -- left_ring	=	"Stikini Ring +1",
+        -- right_ring	=	"Stikini Ring",
         back		=	"Ghostfyre Cape",
     }) 
 
@@ -873,7 +875,7 @@ function get_sets()
 
     -- Stoneskin
     sets.midcast.stoneskin = set_combine(sets.midcast.enhancing.duration, {
-	    waist		=	"Siegel Sash",
+	    -- waist		=	"Siegel Sash",
     })
     sets.midcast.refresh = set_combine(sets.midcast.enhancing.duration, {
 	--head		=	Amal.Head.A,
@@ -884,31 +886,31 @@ function get_sets()
 	})
 	
     sets.midcast["Drain"] = set_combine(sets.midcast.nuking, {
-        main		=	"Rubicundity",
-	    head		=	"Pixie Hairpin +1",
-	    neck		=	"Erra Pendant",
+        -- main		=	"Rubicundity",
+	    -- head		=	"Pixie Hairpin +1",
+	    -- neck		=	"Erra Pendant",
     })
     sets.midcast["Aspir"] = sets.midcast["Drain"]
  	
     sets.midcast.cure = {} -- Leave This Empty
     -- Cure Potency
     sets.midcast.cure.normal = set_combine(sets.midcast.casting,{
-        main		=	"Chatoyant Staff",
-        ammo		=	"Homiliary",
+        -- main		=	"Chatoyant Staff",
+        -- ammo		=	"Homiliary",
         head		=	"Vanya Hood",
-        body		=	"Gende. Bilaut +1",
-        hands		=	"Telchine Gloves", 
+        -- body		=	"Gende. Bilaut +1",
+        -- hands		=	"Telchine Gloves", 
         legs		=	AF.Legs,
         feet		=	"Vanya Clogs",
         -- feet		=	RELIC.Feet,
-        neck		=	"Fylgja Torque +1",
-        waist		=	"Porous Rope",
+        -- neck		=	"Fylgja Torque +1",
+        -- waist		=	"Porous Rope",
         left_ear	=	"Mendi. Earring",
-        right_ear	=	"Roundel Earring",
-        left_ring	=	"Stikini Ring +1",
-        right_ring	=	"Lebeche Ring",
+        -- right_ear	=	"Roundel Earring",
+        -- left_ring	=	"Stikini Ring +1",
+        -- right_ring	=	"Lebeche Ring",
         back		=	"Ghostfyre Cape",
-        sub		=	"Enki Strap",
+        -- sub		=	"Enki Strap",
     })
     sets.midcast.cure.weather = set_combine(sets.midcast.cure.normal,{
 
