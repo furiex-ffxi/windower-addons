@@ -1,9 +1,11 @@
 -- Default trust settings for BRD
 TrustSettings = {
     Default = {
-        SelfBuffs = L{},
+        SelfBuffs = L{
+            Spell.new("Mage's Ballad III", L{'Pianissimo'}, L{'BLM','WHM','GEO','SCH','BRD'}),
+        },
         PartyBuffs = L{
-            Spell.new("Mage's Ballad III", L{'Pianissimo'}, L{'BLM','WHM','GEO','SCH'}),
+            Spell.new("Mage's Ballad III", L{'Pianissimo'}, L{'BLM','WHM','GEO','SCH','BRD','DRK','RDM'}),
             Spell.new("Sage Etude", L{'Pianissimo'}, L{'BLM'}),
         },
         Debuffs = L{
@@ -17,8 +19,8 @@ TrustSettings = {
             Spell.new("Valor Minuet III", L{}),
         },
         DummySongs = L{
-            Spell.new("Goddess's Hymnus"),
             Spell.new("Army's Paeon IV"),
+            Spell.new("Goddess's Hymnus"),
             Spell.new("Scop's Operetta"),
             Spell.new("Sheepfoe Mambo"),
             Spell.new("Goblin Gavotte")
@@ -31,7 +33,8 @@ TrustSettings = {
             spamws = {'Savage Blade','Mordant Rime'},
             cleavews = {'Aeolian Edge'},
             starterws = {'Savage Blade','Mordant Rime'},
-            preferws = {'Savage Blade','Mordant Rime',"Rudra's Storm"},
+            -- preferws = {'Savage Blade','Mordant Rime',"Rudra's Storm"},
+            preferws = {"Evisceration"},
             amws = 'Mordant Rime'
         }
     }

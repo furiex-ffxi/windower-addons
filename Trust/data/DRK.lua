@@ -16,7 +16,8 @@ TrustSettings = {
             tpws = {'Cross Reaper'},
             spamws = {'Catastrophe','Torcleaver','Cross Reaper','Entropy','Judgment','Savage Blade'},
             starterws = {'Torcleaver','Catastrophe','Cross Reaper','Entropy'},
-            preferws = {'Cross Reaper','Catastrophe','Torcleaver'},
+            -- preferws = {'Cross Reaper','Catastrophe','Torcleaver'},
+            preferws = {'Vorpal Scythe'},
             cleavews = {'Fell Cleave'},
             amws = 'Entropy'
         }

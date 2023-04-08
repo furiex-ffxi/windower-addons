@@ -316,7 +316,7 @@ function get_sets()
         legs		=	Carm.Legs.D,
         feet        =   "Aya. Gambieras +2",
         --feet		=	Carm.Feet.B,
-        neck		=	"Loricate Torque +1",
+        neck		=	"Anu Torque",
         waist		=	"Sailfi Belt +1",
         left_ear	=	"Sherida Earring",
         right_ear	=	"Cessance Earring",
@@ -331,6 +331,7 @@ function get_sets()
     })
     sets.me.melee.dtdw = set_combine(sets.me.melee.normaldw,{
         -- neck		=	"Twilight Torque",
+        neck		=	"Loricate Torque +1",
         head		=	Nyame.Head,
         hands		=	Nyame.Hands,
         body        =   Nyame.Body,

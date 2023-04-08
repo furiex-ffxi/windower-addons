@@ -1,0 +1,17 @@
+sets.exported={
+    main="Kali",
+    sub="Genmei Shield",
+    range="Gjallarhorn",
+    head="Bunzi's Hat",
+    body="Brioso Justau. +3",
+    hands="Fili Manchettes +1",
+    legs="Doyen Pants",
+    feet={ name="Bihu Slippers +3", augments={'Enhances "Nightingale" effect',}},
+    neck={ name="Bard's Charm +2", augments={'Path: A',}},
+    waist="Siegel Sash",
+    left_ear="Loquac. Earring",
+    right_ear="Etiolation Earring",
+    left_ring="Chirich Ring +1",
+    right_ring="Defending Ring",
+    back={ name="Intarabus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
+}
