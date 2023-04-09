@@ -81,4 +81,13 @@
         </display>
         <visible>true</visible>
     </furyex>
+    <liambear>
+        <display>
+            <pos>
+                <x>2144</x>
+                <y>317</y>
+            </pos>
+        </display>
+        <visible>true</visible>
+    </liambear>
 </settings>
