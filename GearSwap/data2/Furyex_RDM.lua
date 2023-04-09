@@ -537,22 +537,6 @@ function get_sets()
       
     -- Generic Casting Set that all others take off of. Here you should add all your fast cast RDM need 50 pre JP 42 at master
     sets.precast.casting = {
-        -- main		=	"Crocea Mors",		--20
-        head        =   AF.Head,
-        hands       =   Jhakri.Hands,
-        -- legs        =   Jhakri.Legs,
-        body        =   RELIC.Body,
-        feet        =   Jhakri.Feet,
-        legs		=	"Aya. Cosciales +2",    --6
-        -- neck		=	"Voltsurge Torque",     --4
-        waist		=	"Embla Sash",          --5
-        left_ear	=	"Malignance Earring",   --1
-        right_ear	=	"Halasz Earring",  --2
-        left_ring	=	"Evanescence Ring",          --4
-        right_ring	=	"Jhakri Ring",        --5
-	    -- head		=	Carm.Head.D,            --14
-        --body		=	Merl.Body.FC,           --12
-        ammo        =   "Hydrocera",
 
     }											--Total: 71 -- To Do: overkill need to slot DT / HP 
 
