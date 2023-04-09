@@ -68,7 +68,7 @@ function init_gear_sets()
         right_ear="Etiolation Earring",
         left_ring="Weather. Ring",
         right_ring="Kishar Ring",
-        back=gear.BRD_Song_Cape, --10
+        back=gear.magic_jse_back, --10
         -- head="Volte Beret", --6
         -- body="Inyanga Jubbah +2", --14
         -- hands="Gende. Gages +1", --7

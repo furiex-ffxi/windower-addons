@@ -442,21 +442,7 @@ function init_gear_sets()
         } -- 26%
 
     sets.engaged.DW.Acc = set_combine(sets.engaged.DW, {
-		main="Aeneas",
-		sub="Fusetto +2",
-        range={ name="Linos", augments={'Accuracy+14 Attack+14','"Dbl.Atk."+3','Quadruple Attack +3',}},
-		ammo=empty,
-		head="Aya. Zucchetto +2",
-		body="Ashera Harness",
-		hands="Bunzi's Gloves",
-		legs="Aya. Cosciales +2",
-		feet="Aya. Gambieras +2",
-		neck="Bard's Charm +2",
-		waist="Reiki Yotai",
-		left_ear="Digni. Earring",
-		right_ear="Telos Earring",
-		left_ring="Chirich Ring +1",
-		right_ring="Chirich Ring +1",
+
 		back={ name="Intarabus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
         })
 

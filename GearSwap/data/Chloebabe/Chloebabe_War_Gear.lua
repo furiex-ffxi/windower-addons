@@ -28,13 +28,6 @@ end
 
 -- Define sets and vars used by this job file.
 function init_gear_sets()
-    Nyame = {
-        Head="Nyame Helm",
-        Body="Nyame Mail",
-        Hands="Nyame Gauntlets",
-        Legs="Nyame Flanchard",
-        Feet="Nyame Sollerets"
-    }	
 	--------------------------------------
 	-- Start defining the sets
 	--------------------------------------
@@ -140,8 +133,7 @@ function init_gear_sets()
 	-- Default set for any weaponskill that isn't any more specifically defined
 	sets.precast.WS = {
         ammo="Seeth. Bomblet +1",
-        head =Nyame.Head,
-		neck = "Sanctity Necklace",
+        head		=	Nyame.Head,
         hands		=	Nyame.Hands,
         body="Pumm. Lorica +2",
         legs        =   Nyame.Legs,
@@ -293,8 +285,7 @@ function init_gear_sets()
 		-- waist="Ioskeha Belt +1",
 		-- left_ear="Telos Earring",
 		-- right_ear="Dedition Earring",
-		ring1="Flamma Ring",
-		ring2="Gelatinous Ring",
+		left_ring="Flamma Ring",
 		-- right_ring="Defending Ring",
 		back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
@@ -305,7 +296,7 @@ function init_gear_sets()
 	 })
 
 	sets.defense.MDT =  set_combine(sets.defense.PDT, {
-		ring2 = "Fortified Ring"
+		
 	})
 
 	sets.defense.MDTReraise = set_combine(sets.defense.MDT, { head = "Twilight Helm", body = "Twilight Mail" })
@@ -336,7 +327,6 @@ function init_gear_sets()
 		-- ammo="Coiste Bodhar",
 		ammo="Ginsen",
 		head="Flam. Zucchetto +2",
-		neck = "Combatant's Torque",
 		body="Flamma Korazin +2",
 		hands="Flamma Manopolas +2",
 		-- legs="Tatena. Haidate +1",
@@ -359,11 +349,9 @@ function init_gear_sets()
 	}
 	sets.engaged.SomeAcc = set_combine(sets.engaged, {
         -- body="Agoge Lorica +3",
-		feet = "Flamma Gambieras +2",
     })
 	sets.engaged.Acc = set_combine(sets.engaged.SomeAcc, {
         -- body="Agoge Lorica +3",
-		legs = "Flamma Dirs +2"
     })
 	sets.engaged.FullAcc = set_combine(sets.engaged.Acc, {
         -- body="Agoge Lorica +3",

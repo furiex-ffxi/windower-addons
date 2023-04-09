@@ -66,20 +66,14 @@ end
 function init_gear_sets()
  
     sets.precast.JA['Mighty Strikes'] = {
-        -- hands="Agoge Mufflers"
     }
     sets.precast.JA['Blood Rage'] = {
-        -- body="Boii Lorica +1"
     }
     sets.precast.JA['Warcry'] = {
-        -- head="Agoge Mask +3"
     }
     sets.precast.JA['Berserk'] = {
-        body="Pumm. Lorica +2", 
-        -- feet="Agoge Calligae +3"
     }
     sets.precast.JA['Tomahawk'] = {
-        -- feet="Agoge Calligae +3"
     }
     --sets.precast.JA["Warrior's Charge"] = {legs={ name="Agoge Cuisses +1", augments={'Enhances "Warrior\'s Charge" effect',}}}
     --sets.precast.JA['Restraint'] = {hands="Boii Mufflers"}
