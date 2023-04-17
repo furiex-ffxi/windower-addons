@@ -27,9 +27,9 @@ TrustSettings = {
         CureSettings = {
             Thresholds = {
                 ['Default'] = 78,
-                ['Emergency'] = 35,
-                ['Cure IV'] = 500,
-                ['Cure III'] = 300,
+                ['Emergency'] = 50,
+                ['Cure IV'] = 800,
+                ['Cure III'] = 500,
                 ['Cure II'] = 0
             }
         },

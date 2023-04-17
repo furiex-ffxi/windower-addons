@@ -2,13 +2,12 @@
 TrustSettings = {
     Default = {
         SelfBuffs = L{
-            Spell.new("Mage's Ballad III", L{'Pianissimo'}),
-            Spell.new("Mage's Ballad II", L{'Pianissimo'}),
+            Spell.new("Mage's Ballad III", L{'Pianissimo'}, L{'BRD'}),
+            Spell.new("Mage's Ballad II", L{'Pianissimo'}, L{'BRD'}),
         },
         PartyBuffs = L{
-            Spell.new("Mage's Ballad III", L{'Pianissimo'}, L{'BLM','WHM','GEO','SCH','BRD','DRK','RDM'}),
+            Spell.new("Mage's Ballad III", L{'Pianissimo'}, L{'BLM','WHM','GEO','SCH','BRD','RDM'}),
             Spell.new("Mage's Ballad II", L{'Pianissimo'}, L{'BLM','WHM','GEO','SCH','BRD','RDM'}),
-            Spell.new("Mage's Ballad", L{'Pianissimo'}, L{'BLM','WHM','GEO','SCH','BRD','RDM'}),
             Spell.new("Sage Etude", L{'Pianissimo'}, L{'BLM'}),
         },
         Debuffs = L{

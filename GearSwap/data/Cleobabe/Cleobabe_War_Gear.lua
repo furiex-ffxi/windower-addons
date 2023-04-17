@@ -149,8 +149,8 @@ function init_gear_sets()
 		waist="Sailfi Belt +1",
         left_ear="Thrud Earring",
         right_ear="Moonshade Earring",
-		back={ 
-            name="Cichol's Mantle", augments={'Weapon skill damage +10%',}
+		back={
+            { name="Cichol's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}}
         },
         -- head="Sakpata's Helm",
         -- body="Sakpata's Breastplate",

@@ -1,0 +1,26 @@
+Organizer loaded at Mon Apr 17 06:44:14 2023
+2023-04-17 06:44:14| Organizer [VERBOSE] Adding Inventory to the pull list
+2023-04-17 06:44:14| Organizer [VERBOSE] Adding Safe2 to the pull list
+2023-04-17 06:44:14| Organizer [VERBOSE] Adding Locker to the pull list
+2023-04-17 06:44:14| Organizer [VERBOSE] Adding Wardrobe8 to the pull list
+2023-04-17 06:44:14| Organizer [VERBOSE] Adding Wardrobe7 to the pull list
+2023-04-17 06:44:14| Organizer [VERBOSE] Adding Satchel to the pull list
+2023-04-17 06:44:14| Organizer [VERBOSE] Adding Sack to the pull list
+2023-04-17 06:44:14| Organizer [VERBOSE] Adding Case to the pull list
+2023-04-17 06:44:14| Organizer [VERBOSE] Adding Safe to the pull list
+2023-04-17 06:44:14| Organizer [VERBOSE] Adding Wardrobe4 to the pull list
+2023-04-17 06:44:14| Organizer [VERBOSE] Adding Wardrobe5 to the pull list
+2023-04-17 06:44:14| Organizer [VERBOSE] Adding Wardrobe to the pull list
+2023-04-17 06:44:14| Organizer [VERBOSE] Adding Wardrobe6 to the pull list
+2023-04-17 06:44:14| Organizer [VERBOSE] Adding Storage to the pull list
+2023-04-17 06:44:14| Organizer [VERBOSE] Adding Wardrobe2 to the pull list
+2023-04-17 06:44:14| Organizer [VERBOSE] Adding Wardrobe3 to the pull list
+2023-04-17 06:44:14| Organizer [VERBOSE] Adding Storage to the push list
+2023-04-17 06:44:14| Organizer [VERBOSE] Adding Safe to the push list
+2023-04-17 06:44:14| Organizer [VERBOSE] Adding Locker to the push list
+2023-04-17 06:44:14| Organizer [VERBOSE] Adding Safe2 to the push list
+2023-04-17 06:44:18| Organizer [MSG] Starting...
+2023-04-17 06:44:18| Organizer [VERBOSE] Getting!
+2023-04-17 06:44:18| Organizer [VERBOSE] Got 0 item(s), and failed getting 0 item(s)
+2023-04-17 06:44:18| Organizer [VERBOSE] No remainder, so we found everything we were looking for!
+2023-04-17 06:44:18| Organizer [MSG] Done! - 31 items matched and 0 items missing!

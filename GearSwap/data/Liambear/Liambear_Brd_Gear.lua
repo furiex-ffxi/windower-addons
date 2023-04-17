@@ -118,7 +118,12 @@ function init_gear_sets()
         ring2="Defending Ring",
 	})
     
-	sets.precast.FC.Dispelga = set_combine(sets.precast.FC, {main="Daybreak", sub="Ammurapi Shield", waist="Shinjutsu-no-Obi +1"})
+	sets.precast.FC.Dispelga = set_combine(sets.precast.FC, {
+		main="Daybreak", 
+		-- sub="Ammurapi Shield", 
+		waist="Shinjutsu-no-Obi +1"
+		}
+	)
 	sets.precast.FC.SongDebuff = set_combine(sets.precast.FC.BardSong, { range = "Marsyas" })
 	sets.precast.FC.SongDebuff.Resistant = set_combine(sets.precast.FC.BardSong, { range = "Gjallarhorn" })
 	sets.precast.FC.Lullaby = { range = "Marsyas" }
@@ -331,7 +336,7 @@ function init_gear_sets()
 	-- For song defbuffs (duration primary, accuracy secondary)
 	sets.midcast.SongDebuff = {
         main="Carnwenhan",
-        sub="Ammurapi Shield",
+        -- sub="Ammurapi Shield",
         range="Gjallarhorn",
         head="Brioso Roundlet +3",
         body="Brioso Justau. +3",
@@ -389,8 +394,8 @@ function init_gear_sets()
 
 	-- Other general spells and classes.
 	sets.midcast.Cure = {
-        main="Daybreak", --30
-        sub="Ammurapi Shield",
+        -- main="Daybreak", --30
+        -- sub="Ammurapi Shield",
         head="Kaykaus Mitra +1", --11
         body="Kaykaus Bliaut +1", --(+4)/(-6)
         hands="Kaykaus Cuffs +1", --11(+2)/(-6)
@@ -420,7 +425,7 @@ function init_gear_sets()
 
 	sets.midcast['Enhancing Magic'] = {
         main="Carnwenhan",
-        sub="Ammurapi Shield",
+        -- sub="Ammurapi Shield",
         head=gear.Telchine_ENH_head,
         body=gear.Telchine_ENH_body,
         hands=gear.Telchine_ENH_hands,
@@ -449,7 +454,7 @@ function init_gear_sets()
 
 	sets.midcast['Elemental Magic'] = {
 		main = "Daybreak",
-		sub = "Ammurapi Shield",
+		-- sub = "Ammurapi Shield",
 		ammo = "Ghastly Tathlum +1",
 		head = "C. Palug Crown",
 		neck = "Sanctity Necklace",
@@ -467,7 +472,7 @@ function init_gear_sets()
 
 	sets.midcast['Elemental Magic'].Resistant = {
 		main = "Daybreak",
-		sub = "Ammurapi Shield",
+		-- sub = "Ammurapi Shield",
 		ammo = "Ghastly Tathlum +1",
 		head = "C. Palug Crown",
 		neck = "Sanctity Necklace",
@@ -485,7 +490,7 @@ function init_gear_sets()
 
 	sets.midcast['Enfeebling Magic'] = {
         main="Carnwenhan",
-        sub="Ammurapi Shield",
+        -- sub="Ammurapi Shield",
         head=empty;
         body="Cohort Cloak +1",
         hands="Brioso Cuffs +3",
@@ -500,7 +505,12 @@ function init_gear_sets()
         back="Aurist's Cape +1",
         }
 
-    sets.midcast.Dispelga = set_combine(sets.midcast['Enfeebling Magic'], {main="Daybreak", sub="Ammurapi Shield", waist="Shinjutsu-no-Obi +1"})
+    sets.midcast.Dispelga = set_combine(sets.midcast['Enfeebling Magic'], {
+		main="Daybreak", 
+		sub="Ammurapi Shield", 
+		-- waist="Shinjutsu-no-Obi +1"
+		}
+	)
 
     sets.midcast.StatusRemoval = {
         head="Vanya Hood",
@@ -609,7 +619,7 @@ function init_gear_sets()
 	-- EG: sets.engaged.Dagger.Accuracy.Evasion
 
 	sets.engaged = {
-		main="Aeneas",
+		main="Naegling",
 		sub = "Genmei Shield",
         range={ name="Linos", augments={'Accuracy+14 Attack+14','"Dbl.Atk."+3','Quadruple Attack +3',}},
 		ammo=empty,
@@ -635,7 +645,7 @@ function init_gear_sets()
 
 	sets.engaged.DT = set_combine(sets.engaged, sets.engaged.Hybrid)
 	sets.engaged.Acc = {
-		main="Aeneas",
+		main="Naegling",
 		sub = "Genmei Shield",
         range={ name="Linos", augments={'Accuracy+14 Attack+14','"Dbl.Atk."+3','Quadruple Attack +3',}},
 		ammo=empty,
@@ -653,7 +663,7 @@ function init_gear_sets()
 		back = gear.melee_jse_back,
 	}
 	sets.engaged.DW = {
-		main="Aeneas",
+		main="Naegling",
 		sub="Fusetto +2",
         range={ name="Linos", augments={'Accuracy+14 Attack+14','"Dbl.Atk."+3','Quadruple Attack +3',}},
 		ammo=empty,
@@ -674,7 +684,7 @@ function init_gear_sets()
     sets.engaged.DW.DT = set_combine(sets.engaged.DW, sets.engaged.Hybrid)
 
 	sets.engaged.DW.Acc = {
-		main="Aeneas",
+		main="Naegling",
 		sub="Fusetto +2",
         range={ name="Linos", augments={'Accuracy+14 Attack+14','"Dbl.Atk."+3','Quadruple Attack +3',}},
 		ammo=empty,

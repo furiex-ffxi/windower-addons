@@ -443,7 +443,7 @@ function init_gear_sets()
 
 	--Cureset for if it's not light weather but is light day.
 	sets.midcast.LightDayCure = {
-		main = "Daybreak",
+		-- main = "Daybreak",
 		sub = "Sors Shield",
 		range = empty,
 		ammo = "Hasty Pinion +1",
@@ -541,24 +541,25 @@ function init_gear_sets()
 		-- main		=	"Maxentius",
         -- sub		=	"Ammurapi Shield",
         -- ammo		=	"Regal Gem",
-        ammo		=	"Hydrocera",
-        -- head		=	RELIC.Head,
-        head		=	AF.Head,
-        body		=	AF.Body,
+        -- -- neck		=	"Dls. Torque +2",
         -- body		=	Amal.Body.A,
         --hands		=	Kayk.Hands.A,
-        legs		=	Chiro.Legs.MACC,
+        -- head		=	RELIC.Head,
         -- feet		=	RELIC.Feet,
-        feet		=	Jhakri.Feet,
-        -- -- neck		=	"Dls. Torque +2",
-        neck        =   "Mizu. Kubikazari",
         -- waist		=	"Porous Rope",
+        -- left_ring	=	"Stikini Ring +1",
+        -- right_ring	=	"Stikini Ring",
+        ammo		=	"Hydrocera",
+        head		=	AF.Head,
+        body		=	AF.Body,
+		hands		=	Jhakri.Hands,
+        legs		=	Chiro.Legs.MACC,
+        feet		=	Jhakri.Feet,
+        neck        =   "Mizu. Kubikazari",
         left_ear	=	"Snotra Earring",
         right_ear	=	"Malignance Earring",
         left_ring	=	"Kishar Ring",
         right_ring	=	"Jhakri Ring",       
-        -- left_ring	=	"Stikini Ring +1",
-        -- right_ring	=	"Stikini Ring",
         back		=	RDMCape.MACC
 	}
 
@@ -809,7 +810,7 @@ function init_gear_sets()
 	}
 
 	sets.HPCure = {
-		main = "Daybreak",
+		-- main = "Daybreak",
 		sub = "Sors Shield",
 		range = empty,
 		ammo = "Hasty Pinion +1",
