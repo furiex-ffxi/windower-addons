@@ -1,0 +1,99 @@
+<?xml version="1.1" ?>
+<settings>
+    <global>
+        <buy_list>
+            <1>
+                <id>23</id>
+                <name>Maiden phantom gem</name>
+            </1>
+            <2>
+                <id>1</id>
+                <name>Stellar Fulcrum phantom gem</name>
+            </2>
+            <3>
+                <id>2</id>
+                <name>Celestial Nexus phantom gem</name>
+            </3>
+            <4>
+                <id>3</id>
+                <name>Phantom gem of apathy</name>
+            </4>
+            <5>
+                <id>4</id>
+                <name>Phantom gem of arrogance</name>
+            </5>
+            <6>
+                <id>5</id>
+                <name>Phantom gem of envy</name>
+            </6>
+            <7>
+                <id>6</id>
+                <name>Phantom gem of cowardice</name>
+            </7>
+            <8>
+                <id>7</id>
+                <name>Phantom gem of rage</name>
+            </8>
+            <9>
+                <id>8</id>
+                <name>P. Perpetrator phantom gem</name>
+            </9>
+            <10>
+                <id>9</id>
+                <name>Savage&apos;s phantom gem</name>
+            </10>
+            <11>
+                <id>10</id>
+                <name>Warrior&apos;s Path phantom gem</name>
+            </11>
+            <12>
+                <id>11</id>
+                <name>Puppet in Peril phantom gem</name>
+            </12>
+            <13>
+                <id>12</id>
+                <name>Legacy phantom gem</name>
+            </13>
+            <14>
+                <id>13</id>
+                <name>Head wind phantom gem</name>
+            </14>
+            <15>
+                <id>14</id>
+                <name>Avatar phantom gem</name>
+            </15>
+            <16>
+                <id>15</id>
+                <name>Moonlit Path phantom gem</name>
+            </16>
+            <17>
+                <id>16</id>
+                <name>Waking the Beast phantom gem</name>
+            </17>
+            <18>
+                <id>17</id>
+                <name>Waking Dream phantom gem</name>
+            </18>
+            <19>
+                <id>18</id>
+                <name>Feared One phantom gem</name>
+            </19>
+            <20>
+                <id>19</id>
+                <name>Dawn phantom gem</name>
+            </20>
+            <21>
+                <id>20</id>
+                <name>Stygian Pact phantom gem</name>
+            </21>
+            <22>
+                <id>21</id>
+                <name>Champion phantom gem</name>
+            </22>
+            <23>
+                <id>22</id>
+                <name>Divine phantom gem</name>
+            </23>
+        </buy_list>
+    </global>  
+</settings>

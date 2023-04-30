@@ -136,5 +136,7 @@ profiles['junk'] = S{
     'Soil Geode',
     'Light Geode',
     'Shadow Geode',
+    'Colibri Beak',
+    'Colibri Feather',
 }
 return profiles

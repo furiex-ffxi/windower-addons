@@ -43,8 +43,8 @@ function init_gear_sets()
 
 	-- Weapons sets
 	sets.weapons.Aeneas = { main = "Aeneas", sub = "Genmei Shield" }
-	sets.weapons.DualWeapons = { main = "Aeneas", sub = "Blurred Knife +1" }
-	sets.weapons.DualNaegling = { main = "Naegling", sub = "Blurred Knife +1" }
+	sets.weapons.DualWeapons = { main = "Aeneas", sub = "Fusetto +2" }
+	sets.weapons.DualNaegling = { main = "Naegling", sub = "Fusetto +2" }
 	sets.weapons.Naegling = { main = "Naegling", sub = "Genmei Shield" }
 	sets.weapons.DualTauret = { main = "Tauret", sub = "Blurred Knife +1" }
 	sets.weapons.DualAeolian = { main = "Tauret", sub = "Malevolence" }
@@ -56,7 +56,7 @@ function init_gear_sets()
 
 	-- Fast cast sets for spells
 	sets.precast.FC = {
-        -- main="Kali", --7
+        main="Kali", --7
         head="Bunzi's Hat",
         body="Brioso Justau. +3",
         hands="Fili Manchettes +1",
@@ -107,7 +107,10 @@ function init_gear_sets()
 	})
 
 	sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC, { waist = "Siegel Sash" })
-	sets.precast.FC.Dispelga = set_combine(sets.precast.FC, { main = "Daybreak", sub = "Genmei Shield" })
+	sets.precast.FC.Dispelga = set_combine(sets.precast.FC, { 
+		-- main = "Daybreak", 
+		-- sub = "Genmei Shield"
+	 })
 
 	sets.precast.FC.BardSong =  set_combine(sets.precast.FC, {
         head="Fili Calot +1", --14
@@ -119,7 +122,7 @@ function init_gear_sets()
 	})
     
 	sets.precast.FC.Dispelga = set_combine(sets.precast.FC, {
-		main="Daybreak", 
+		-- main="Daybreak", 
 		-- sub="Ammurapi Shield", 
 		waist="Shinjutsu-no-Obi +1"
 		}
@@ -331,12 +334,15 @@ function init_gear_sets()
 		back = gear.magic_jse_back,
 	}
 
-	sets.midcast.SongEffect.DW = { main = "Kali", sub = "Kali" } --Only weapons in this set. This set is overlayed onto  SongEffect
+	sets.midcast.SongEffect.DW = { 
+		main = "Kali", 
+		sub = "Kali" 
+	} --Only weapons in this set. This set is overlayed onto  SongEffect
 
 	-- For song defbuffs (duration primary, accuracy secondary)
 	sets.midcast.SongDebuff = {
         main="Carnwenhan",
-        -- sub="Ammurapi Shield",
+        sub="Ammurapi Shield",
         range="Gjallarhorn",
         head="Brioso Roundlet +3",
         body="Brioso Justau. +3",
@@ -352,7 +358,10 @@ function init_gear_sets()
 		back = gear.magic_jse_back,
 	}
 
-	sets.midcast.SongDebuff.DW = { main = "Kali", sub = "Kali" } --Only weapons in this set. This set is overlayed onto  SongDebuff
+	sets.midcast.SongDebuff.DW = { 
+		main = "Kali", 
+		sub = "Kali" 
+	} --Only weapons in this set. This set is overlayed onto  SongDebuff
 
 	-- For song defbuffs (accuracy primary, duration secondary)
 	sets.midcast.SongDebuff.Resistant = set_combine(sets.midcast.SongDebuff, {
@@ -424,7 +433,7 @@ function init_gear_sets()
 	sets.Self_Refresh = { back = "Grapevine Cape", waist = "Gishdubar Sash" }
 
 	sets.midcast['Enhancing Magic'] = {
-        main="Carnwenhan",
+        -- main="Carnwenhan",
         -- sub="Ammurapi Shield",
         head=gear.Telchine_ENH_head,
         body=gear.Telchine_ENH_body,
@@ -453,7 +462,7 @@ function init_gear_sets()
 	{ neck = "Nodens Gorget", ear2 = "Earthcry Earring", waist = "Siegel Sash", legs = "Shedir Seraweels" })
 
 	sets.midcast['Elemental Magic'] = {
-		main = "Daybreak",
+		-- main = "Daybreak",
 		-- sub = "Ammurapi Shield",
 		ammo = "Ghastly Tathlum +1",
 		head = "C. Palug Crown",
@@ -471,7 +480,7 @@ function init_gear_sets()
 	}
 
 	sets.midcast['Elemental Magic'].Resistant = {
-		main = "Daybreak",
+		-- main = "Daybreak",
 		-- sub = "Ammurapi Shield",
 		ammo = "Ghastly Tathlum +1",
 		head = "C. Palug Crown",
@@ -489,7 +498,7 @@ function init_gear_sets()
 	}
 
 	sets.midcast['Enfeebling Magic'] = {
-        main="Carnwenhan",
+        -- main="Carnwenhan",
         -- sub="Ammurapi Shield",
         head=empty;
         body="Cohort Cloak +1",
@@ -506,8 +515,8 @@ function init_gear_sets()
         }
 
     sets.midcast.Dispelga = set_combine(sets.midcast['Enfeebling Magic'], {
-		main="Daybreak", 
-		sub="Ammurapi Shield", 
+		-- main="Daybreak", 
+		-- sub="Ammurapi Shield", 
 		-- waist="Shinjutsu-no-Obi +1"
 		}
 	)
@@ -569,8 +578,8 @@ function init_gear_sets()
 	}
 
 	sets.idle.NoRefresh = {
-		main = "Daybreak",
-		sub = "Genmei Shield",
+		-- main = "Daybreak",
+		-- sub = "Genmei Shield",
 		ammo = "Staunch Tathlum +1",
 		head = "Nyame Helm",
 		neck = "Loricate Torque +1",

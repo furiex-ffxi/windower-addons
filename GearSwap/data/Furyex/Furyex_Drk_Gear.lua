@@ -7,7 +7,7 @@ function user_job_setup()
 	state.MagicalDefenseMode:options('MDT', 'MDTReraise')
 	state.ResistDefenseMode:options('MEVA')
 	state.IdleMode:options('Normal', 'PDT', 'Refresh', 'Reraise')
-	state.Weapons:options('Montante', 'Anguta')
+	state.Weapons:options('Apocalypse', 'Montante', 'Anguta')
 	state.ExtraMeleeMode = M { ['description'] = 'Extra Melee Mode', 'None' }
 	state.Passive = M { ['description'] = 'Passive Mode', 'None', 'MP', 'Twilight' }
 	state.DrainSwapWeaponMode = M { 'Always', 'Never', '300', '1000' }
@@ -28,15 +28,42 @@ function init_gear_sets()
 	DRKCape = {}
 	DRKCape.TP = { name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
 	DRKCape.STR = { name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}}
+
+	AF = {}
+	AF = {
+		Head="Igno. Burgeonet +1",
+		Body="Igno. Cuirass +1",
+		Hands="Igno. Gauntlets +1",
+		Legs="Igno. Flan. +1",
+		Feet="Igno. Sollerets +1",
+	}
+
+	Relic = {}
+	Relic = {
+		Head={ name="Fall. Burgeonet +1", augments={'Enhances "Dark Seal" effect',}},
+		Body={ name="Fall. Cuirass +1", augments={'Enhances "Blood Weapon" effect',}},
+		Hands={ name="Fall. Fin. Gaunt. +1", augments={'Enhances "Diabolic Eye" effect',}},
+		Legs={ name="Fall. Flanchard +1", augments={'Enhances "Muted Soul" effect',}},
+		Feet={ name="Fallen's Sollerets", augments={'Enhances "Desperate Blows" effect',}},
+	}
 	
 	-- Precast Sets
 	-- Precast sets to enhance JAs
-	sets.precast.JA['Diabolic Eye'] = {}
-	sets.precast.JA['Arcane Circle'] = {}
+	sets.precast.JA['Diabolic Eye'] = {
+		hands = Relic.Hands,
+	}
+	sets.precast.JA['Arcane Circle'] = {
+		feet = Relic.Feet,
+
+	}
 	sets.precast.JA['Souleater'] = {}
-	sets.precast.JA['Weapon Bash'] = {}
+	sets.precast.JA['Weapon Bash'] = {
+		hands = AF.Hands,
+	}
 	sets.precast.JA['Nether Void'] = {}
-	sets.precast.JA['Blood Weapon'] = {}
+	sets.precast.JA['Blood Weapon'] = {
+		body = Relic.Body,
+	}
 	sets.precast.JA['Dark Seal'] = {}
 	sets.precast.JA['Last Resort'] = { back = DRKCape.TP }
 
@@ -54,7 +81,8 @@ function init_gear_sets()
 
 	sets.precast.FC = {
 		ammo = "Impatiens",
-		head = "Carmine Mask +1",
+		-- head = "Carmine Mask +1",
+		head = Relic.Head,
 		neck = "Voltsurge Torque",
 		ear1 = "Enchntr. Earring +1",
 		ear2 = "Malignance Earring",
@@ -140,8 +168,15 @@ function init_gear_sets()
 		feet = "Flam. Gambieras +2"
 	}
 
-	sets.midcast.Drain = set_combine(sets.midcast['Dark Magic'],
-	{ ring1 = "Evanescence Ring", ring2 = "Archon Ring", back = "Niht Mantle" })
+	sets.midcast.Drain = set_combine(
+		sets.midcast['Dark Magic'],
+		{
+			hands = Relic.Hands, -- low magic accuracy
+			ring1 = "Evanescence Ring",
+			ring2 = "Archon Ring",
+			back = "Niht Mantle",
+		}
+	)
 
 	sets.DrainWeapon = { main = "Misanthropy", sub = "Alber Strap" }
 
@@ -164,11 +199,12 @@ function init_gear_sets()
 	-- Default set for any weaponskill that isn't any more specifically defined
 	sets.precast.WS = {
 		ammo = "Knobkierrie",
+		-- ammo = "Seeth. bomblet +1",
 		head = sets.Nyame.Head,
 		neck = "Fotia Gorget",
 		-- ear1 = "Lugra Earring +1",
         ear1 = { name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-        ear2 = "Ishvara Earring",
+        ear2 = "Thrud Earring",
 		body = sets.Nyame.Body,
 		hands = sets.Nyame.Hands,
 		-- body = gear.valorous_wsd_body,
@@ -179,7 +215,8 @@ function init_gear_sets()
 		-- ring2 = "Niqmaddu Ring",
 		back = DRKCape.STR,
 		waist = "Fotia Belt",
-		legs = sets.Nyame.Legs,
+		-- legs = sets.Nyame.Legs,
+		legs={ name="Valorous Hose", augments={'Attack+19','Accuracy+17 Attack+17','Weapon skill damage +2%',}},
 		feet = sets.Nyame.Feet,
 		-- legs = "Sulev. Cuisses +2",
 		-- feet = "Flam. Gambieras +2"
@@ -333,7 +370,7 @@ function init_gear_sets()
 	sets.passive.Reraise = { head = "Twilight Helm", body = "Twilight Mail" }
 	sets.buff.Doom = set_combine(sets.buff.Doom, {})
 	sets.buff.Sleep = { head = "Frenzy Sallet" }
-	sets.buff['Dark Seal'] = {} --head="Fallen's Burgeonet +3"
+	sets.buff['Dark Seal'] = { head= Relic.Head }
 
 	-- Engaged sets
 	sets.engaged = {
@@ -536,13 +573,16 @@ function init_gear_sets()
 	--
 	--Extra Special Sets
 
-	sets.buff.Souleater = {}
+	sets.buff.Souleater = {
+		head = AF.Head,
+	}
 	sets.buff.Doom = set_combine(sets.buff.Doom, {})
 	sets.buff.Sleep = { head = "Frenzy Sallet" }
 	sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
 
 	-- Weapons sets
-	sets.weapons.Montante = { main = "Montante +1", sub = "Utu Grip" }
+	sets.weapons.Apocalypse = { main = "Apocalypse", sub = "Duplus Grip" }
+	sets.weapons.Montante = { main = "Montante +1", sub = "Duplus Grip" }
 	sets.weapons.Anguta = { main = "Anguta", sub = "Utu Grip" }
 end
 

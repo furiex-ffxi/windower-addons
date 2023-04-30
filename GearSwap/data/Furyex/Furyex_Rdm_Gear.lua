@@ -59,7 +59,7 @@ function init_gear_sets()
     --Atrophy
     AF.Head		=	"Atro. Chapeau +2"
     AF.Body		=	"Atrophy Tabard +2"
-    AF.Hands		=	"Atrophy Gloves +2"
+    AF.Hands		=	"Atrophy Gloves +3"
     AF.Legs		=	"Atrophy Tights +2"
     AF.Feet		=	"Atrophy Boots +2"
 
@@ -71,11 +71,11 @@ function init_gear_sets()
     RELIC.Feet		=	"Vitiation Boots +1"
 
     --Lethargy
-    EMPY.Head		=	"Lethargy Chappel"
-    EMPY.Body		=	"Lethargy Sayon"
-    EMPY.Hands		=	"Leth. Gantherots"
-    EMPY.Legs		=	"Leth. Fuseau"
-    EMPY.Feet		=	"Leth. Houseaux"
+    EMPY.Head		=	"Leth. Chappel +1"
+    EMPY.Body		=	"Lethargy Sayon +1"
+    EMPY.Hands		=	"Leth. Gantherots +1"
+    EMPY.Legs		=	"Leth. Fuseau +1"
+    EMPY.Feet		=	"Leth. Houseaux +1"
 
     -- Carmine
     Carm.Legs = {}
@@ -105,6 +105,7 @@ function init_gear_sets()
     Malignance = {
         Head="Malignance Chapeau",
         Body="Malignance Tabard",
+		Hands="Malignance Gloves",
     }
 
     -- Capes:
@@ -499,7 +500,7 @@ function init_gear_sets()
 		neck = "Dls. Torque +2",
 		ear1 = "Andoaa Earring",
 		ear2 = "Gifted Earring",
-		body = "Viti. Tabard +3",
+		body = "Viti. Tabard +1",
 		hands = "Atrophy Gloves +3",
 		ring1 = "Stikini Ring +1",
 		ring2 = "Stikini Ring +1",
@@ -564,7 +565,7 @@ function init_gear_sets()
 	}
 
 	sets.midcast['Enfeebling Magic'].Resistant =  set_combine(sets.midcast['Enfeebling Magic'], {
-		main = "Daybreak",
+		-- main = "Daybreak",
 		-- sub = "Ammurapi Shield",
 		-- range = empty,
 		-- ammo = "Regal Gem",
@@ -985,7 +986,7 @@ function init_gear_sets()
 		ammo		=	"Ginsen",
         --head		=	Taeon.Head.TP,
         head=Malignance.Head,
-        hands="Aya. Manopolas +2",     
+        hands=Malignance.Hands,     
         body=Malignance.Body,
         -- body		=	"Ayanmo Corazza +2",
         left_ring = "Ilabrat Ring",

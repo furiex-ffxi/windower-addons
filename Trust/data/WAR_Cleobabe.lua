@@ -13,9 +13,9 @@ TrustSettings = {
             defaultws = {'Ground Strike','Dragon Kick','Penta Thrust','Herculean Slash','Upheaval','Full Break',"King's Justice","Ukko's Fury",'Savage Blade','Impulse Drive'},
             tpws = {},
             spamws = {'Impulse Drive','Upheaval','Savage Blade','Judgment'},
-            starterws = {'Upheaval'},
+            starterws = {'Upheaval','Impulse Drive'},
             preferws = {'Ground Strike',"King's Justice",'Upheaval','Steel Cyclone','Savage Blade','Full Break','Impulse Drive'},
-            cleavews = {'Fell Cleave'},
+            cleavews = {'Fell Cleave','Cyclone'},
             amws = "King's Justice"
         },
     }

@@ -34,11 +34,11 @@ TrustSettings = {
             }
         },
         Debuffs = L{
-            -- Debuff.new('Dia'),
-            -- Spell.new('Distract III', L{}, L{}, nil, L{ InBattleCondition.new() }),
-            -- Debuff.new('Distract'),
-            -- Debuff.new('Slow'),
-            -- Debuff.new('Paralyze'),
+            Debuff.new('Dia'),
+            Spell.new('Distract III', L{}, L{}, nil, L{ InBattleCondition.new() }),
+            Debuff.new('Distract'),
+            Debuff.new('Slow'),
+            Debuff.new('Paralyze'),
         },
         Skillchains = {
             defaultws = {'Exenterator','Chant du Cygne','Savage Blade','Seraph Blade','Death Blossom','Black Halo'},

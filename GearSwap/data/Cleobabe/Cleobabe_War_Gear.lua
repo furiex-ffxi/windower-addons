@@ -69,14 +69,14 @@ function init_gear_sets()
 		-- feet="Agoge Calligae +3",
 	}
 	sets.precast.JA['Retaliation'] = {
-		-- feet="Boii Calligae +1",
+		feet="Boii Calligae +1",
 		hands="Pummeler's Mufflers +2"
 	}
 	sets.precast.JA['Restraint'] = {
-		-- hands="Boii Mufflers"
+		hands="Boii Mufflers +1"
 	}
 	sets.precast.JA['Blood Rage'] = {
-        -- body="Boii Lorica +1"
+        body="Boii Lorica +1"
 	}
 	sets.precast.JA['Brazen Rush'] = {}
 	sets.precast.JA['Provoke'] = set_combine(sets.Enmity, {})

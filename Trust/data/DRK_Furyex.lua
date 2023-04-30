@@ -2,15 +2,19 @@
 TrustSettings = {
     Default = {
         SelfBuffs = S{
-            -- Spell.new('Endark II', L{}),
+            Spell.new('Endark II', L{}),
             -- Spell.new('Absorb-DEX', L{}, L{}, 'bt'),
             -- Spell.new('Absorb-STR', L{}, L{}, 'bt'),
-            -- Spell.new('Dread Spikes', L{}, L{}, nil, L{ HasBuffCondition.new('Max HP Boost'), IdleCondition.new() })
+            Spell.new('Dread Spikes', L{}, L{}, nil, L{ HasBuffCondition.new('Max HP Boost'), IdleCondition.new() })
         },
         JobAbilities = S{
             'Last Resort',
             'Scarlet Delirium'
         },
+        Debuffs = L{
+            Spell.new('Drain III'),
+
+        },        
         Skillchains = {
             defaultws = {'Resolution','Cross Reaper','Catastrophe','Insurgency','Entropy','Torcleaver'},
             tpws = {'Cross Reaper'},
@@ -19,7 +23,8 @@ TrustSettings = {
             -- preferws = {'Cross Reaper','Catastrophe','Torcleaver'},
             preferws = {'Resolution','Vorpal Scythe'},
             cleavews = {'Fell Cleave'},
-            amws = 'Entropy'
+            amws = 'Catastrophe'
+            -- amws = 'Entropy'
         }
     }
 }

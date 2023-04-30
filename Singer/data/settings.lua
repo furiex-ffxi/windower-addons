@@ -1,14 +1,14 @@
 return {
-    ["dummy"] = L{"Knight's Minne","Knight's Minne II",},
+    ["dummy"] = L{"Army's Paeon","Army's Paeon II",},
     ["debuffs"] = L{"Carnage Elegy","Pining Nocturne",},
     ["playlist"] = T{
         ["clear"] = L{},
         ["march"] = L{"Blade Madrigal","Victory March","Honor March","Valor Minuet V","Valor Minuet IV",},
-        ["minuet"] = L{"Blade Madrigal","Honor March","Valor Minuet V","Valor Minuet IV","Victory March",},
+        ["minuet"] = L{"Blade Madrigal","Honor March","Valor Minuet V","Valor Minuet IV","Valor Minuet III",},
     },
     ["buffs"] = T{
-        ["refresh"] = L{},
         ["haste"] = L{},
+        ["refresh"] = L{},
         ["aurorastorm"] = L{},
         ["firestorm"] = L{},
     },

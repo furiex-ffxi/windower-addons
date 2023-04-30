@@ -2,13 +2,17 @@
 TrustSettings = {
     Default = {
         SelfBuffs = L{
-            Spell.new("Mage's Ballad III", L{'Pianissimo'}, L{'BRD'}),
-            Spell.new("Mage's Ballad II", L{'Pianissimo'}, L{'BRD'}),
+            -- Spell.new("Mage's Ballad III", L{'Pianissimo'}, L{'BRD'}),
+            -- Spell.new("Mage's Ballad II", L{'Pianissimo'}, L{'BRD'}),
         },
         PartyBuffs = L{
             Spell.new("Mage's Ballad III", L{'Pianissimo'}, L{'BLM','WHM','GEO','SCH','BRD','RDM'}),
-            Spell.new("Mage's Ballad II", L{'Pianissimo'}, L{'BLM','WHM','GEO','SCH','BRD','RDM'}),
-            Spell.new("Sage Etude", L{'Pianissimo'}, L{'BLM'}),
+            -- Spell.new("Mage's Ballad II", L{'Pianissimo'}, L{'BLM','WHM','GEO','SCH','BRD','RDM'}),
+            -- Spell.new("Sage Etude", L{'Pianissimo'}, L{'BLM'}),
+        },
+        JobAbilities = S{
+            'Soul Voice',
+            'Clarion Call',
         },
         Debuffs = L{
             Spell.new('Carnage Elegy')
@@ -18,7 +22,8 @@ TrustSettings = {
             Spell.new("Valor Minuet V", L{}),
             Spell.new("Blade Madrigal", L{}),
             Spell.new("Honor March", L{'Marcato'}),
-            Spell.new("Valor Minuet III", L{}),
+            Spell.new("Victory March", L{}),
+            -- Spell.new("Valor Minuet III"),
         },
         DummySongs = L{
             Spell.new("Army's Paeon IV"),
@@ -30,14 +35,14 @@ TrustSettings = {
         NumSongs = 4,
         SongDuration = 240,
         Skillchains = {
-            defaultws = {'Exenterator','Savage Blade','Mordant Rime','Retribution'},
+            defaultws = {'Rudra\'s Storm','Savage Blade','Mordant Rime','Retribution'},
             tpws = {'Mordant Rime'},
-            spamws = {'Savage Blade','Mordant Rime'},
+            spamws = {'Savage Blade','Mordant Rime','Rudra\'s Storm'},
             cleavews = {'Aeolian Edge'},
             starterws = {'Savage Blade','Mordant Rime'},
             -- preferws = {'Savage Blade','Mordant Rime',"Rudra's Storm"},
-            preferws = {"Exenterator","Evisceration"},
-            amws = 'Mordant Rime'
+            preferws = {'Rudra\'s Storm',"Exenterator","Evisceration"},
+            amws = 'Exenterator'
         }
     }
 }

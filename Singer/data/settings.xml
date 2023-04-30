@@ -50,7 +50,7 @@
                 </stroke>
             </text>
         </box>
-        <clarion>false</clarion>
+        <clarion>true</clarion>
         <debuffing>false</debuffing>
         <delay>4</delay>
         <interval>0.1</interval>
@@ -77,8 +77,8 @@
         <actions>true</actions>
         <box>
             <pos>
-                <x>13</x>
-                <y>736</y>
+                <x>2266</x>
+                <y>777</y>
             </pos>
         </box>
         <pianissimo>true</pianissimo>
