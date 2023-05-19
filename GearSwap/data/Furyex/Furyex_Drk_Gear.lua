@@ -44,8 +44,17 @@ function init_gear_sets()
 		Body={ name="Fall. Cuirass +1", augments={'Enhances "Blood Weapon" effect',}},
 		Hands={ name="Fall. Fin. Gaunt. +1", augments={'Enhances "Diabolic Eye" effect',}},
 		Legs={ name="Fall. Flanchard +1", augments={'Enhances "Muted Soul" effect',}},
-		Feet={ name="Fallen's Sollerets", augments={'Enhances "Desperate Blows" effect',}},
+		Feet={ name="Fall. Sollerets +1", augments={'Enhances "Desperate Blows" effect',}},
 	}
+
+	Empy = {}
+	Empy = {
+		Head="Heath. Burgeonet +2",
+		Body="Heath. Cuirass +2",
+		Hands="Heath. Gauntlets +2",
+		Legs="Heath. Flanchard +2",
+		Feet="Heath. Sollerets +2",
+	}	
 	
 	-- Precast Sets
 	-- Precast sets to enhance JAs
@@ -149,8 +158,13 @@ function init_gear_sets()
 		feet = "Flam. Gambieras +2"
 	}
 
-	sets.midcast['Dread Spikes'] = set_combine(sets.midcast['Dark Magic'], {})
+	sets.midcast['Dread Spikes'] = set_combine(sets.midcast['Dark Magic'], {
+		body = Empy.Body,
+	})
 	sets.midcast.Absorb = set_combine(sets.midcast['Dark Magic'], { back = DRKCape.TP })
+	sets.midcast['Absorb-TP'] = set_combine(sets.midcast.Absorb, {
+		hands = Empy.Hands,
+	})
 
 	sets.midcast.Stun = {
 		ammo = "Pemphredo Tathlum",
@@ -201,11 +215,12 @@ function init_gear_sets()
 		ammo = "Knobkierrie",
 		-- ammo = "Seeth. bomblet +1",
 		head = sets.Nyame.Head,
-		neck = "Fotia Gorget",
+		-- neck = "Fotia Gorget",
+		neck = "Agitator's Collar",
 		-- ear1 = "Lugra Earring +1",
         ear1 = { name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
         ear2 = "Thrud Earring",
-		body = sets.Nyame.Body,
+		body = Empy.Body,
 		hands = sets.Nyame.Hands,
 		-- body = gear.valorous_wsd_body,
 		-- hands = "Sulev. Gauntlets +2",
@@ -217,7 +232,7 @@ function init_gear_sets()
 		waist = "Fotia Belt",
 		-- legs = sets.Nyame.Legs,
 		legs={ name="Valorous Hose", augments={'Attack+19','Accuracy+17 Attack+17','Weapon skill damage +2%',}},
-		feet = sets.Nyame.Feet,
+		feet = Empy.Feet,
 		-- legs = "Sulev. Cuisses +2",
 		-- feet = "Flam. Gambieras +2"
 	}

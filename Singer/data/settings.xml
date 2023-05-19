@@ -75,12 +75,18 @@
     </global>
     <liambear>
         <actions>true</actions>
+        <aoe>
+            <p4>false</p4>
+            <p5>false</p5>
+        </aoe>
         <box>
             <pos>
-                <x>2266</x>
-                <y>777</y>
+                <x>2203</x>
+                <y>155</y>
             </pos>
         </box>
+        <debuffing>true</debuffing>
+        <marcato>Honor March</marcato>
         <pianissimo>true</pianissimo>
     </liambear>
 </settings>

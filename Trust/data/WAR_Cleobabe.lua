@@ -14,7 +14,7 @@ TrustSettings = {
             tpws = {},
             spamws = {'Impulse Drive','Upheaval','Savage Blade','Judgment'},
             starterws = {'Upheaval','Impulse Drive'},
-            preferws = {'Ground Strike',"King's Justice",'Upheaval','Steel Cyclone','Savage Blade','Full Break','Impulse Drive'},
+            preferws = {'Ground Strike',"King's Justice",'Upheaval','Steel Cyclone','Savage Blade','Full Break','Impulse Drive',"Ukko's Fury"},
             cleavews = {'Fell Cleave','Cyclone'},
             amws = "King's Justice"
         },

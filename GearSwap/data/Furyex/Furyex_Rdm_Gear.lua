@@ -3,7 +3,7 @@ function user_job_setup()
 	state.OffenseMode:options('Normal', 'Acc', 'FullAcc')
 	state.HybridMode:options('Normal', 'DT')
 	state.WeaponskillMode:options('Match', 'Proc')
-	state.AutoBuffMode:options('Off', 'Auto', 'AutoMelee')
+	state.AutoBuffMode:options('Off', 'Auto', 'AutoMelee','FullMeleeBuff')
 	state.CastingMode:options('Normal', 'Resistant', 'Fodder', 'Proc')
 	state.IdleMode:options('Normal', 'PDT', 'MDT', 'DTHippo')
 	state.PhysicalDefenseMode:options('PDT', 'NukeLock')
@@ -12,12 +12,9 @@ function user_job_setup()
 	state.Weapons:options('None', 'Naegling', 'DualWeapons', 'DualWeaponsAcc', 'DualEvisceration', 'DualClubs',
 	'DualAeolian', 'DualProcDaggers', 'EnspellOnly', 'EnspellDW')
 
-	gear.stp_jse_back = { name = "Sucellos's Cape",
-		augments = { 'DEX+20', 'Accuracy+20 Attack+20', 'Accuracy+10', '"Store TP"+10', } }
-	gear.nuke_jse_back = { name = "Sucellos's Cape",
-		augments = { 'INT+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'INT+10', '"Mag.Atk.Bns."+10', 'Phys. dmg. taken-10%', } }
-	gear.wsd_jse_back = { name = "Sucellos's Cape",
-		augments = { 'STR+20', 'Accuracy+20 Attack+20', 'STR+10', 'Weapon skill damage +10%', } }
+	gear.stp_jse_back = { name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
+	gear.nuke_jse_back = { name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','Weapon skill damage +10%',}}
+	gear.wsd_jse_back = { name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','Weapon skill damage +10%',}}
 
 	-- Additional local binds
 	send_command('bind ^` gs c cycle ElementalMode')
@@ -145,8 +142,8 @@ function init_gear_sets()
         -- neck		=	"Voltsurge Torque",     --4
         waist		=	"Embla Sash",          --5
         left_ear	=	"Malignance Earring",   --1
-        right_ear	=	"Halasz Earring",  --2
-        left_ring	=	"Evanescence Ring",          --4
+        right_ear	=	"Lethargy Earring",  --2
+        left_ring	=	"Kishar Ring",          --4
         right_ring	=	"Jhakri Ring",        --5
 	    -- head		=	Carm.Head.D,            --14
         --body		=	Merl.Body.FC,           --12
@@ -155,7 +152,7 @@ function init_gear_sets()
 	}
 
 	-- Curing Precast, Cure Spell Casting time -
-	sets.precast.FC.Cure = set_combine(sets.precast.casting,{
+	sets.precast.FC.Cure = set_combine(sets.precast.FC,{
 		-- back		=	"Pahtli Cape",
 		-- feet		=	"Telchine Pigaches",
 		neck        =   "Diemer Gorget",
@@ -328,7 +325,6 @@ function init_gear_sets()
 		-- legs = "Merlinic Shalwar",
 		-- feet = "Amalric Nails +1"
         neck        =   "Mizu. Kubikazari",
-        back		=	RDMCape.MACC,
         body        =   Jhakri.Body,
         head        =   Jhakri.Head,
         hands       =   Jhakri.Hands,
@@ -349,11 +345,6 @@ function init_gear_sets()
 
 	-- Gear that converts elemental damage done to recover MP.	
 	sets.RecoverMP = { body = "Seidr Cotehardie" }
-
-	-- Gear for Magic Burst mode.
-	sets.MagicBurst = { main = gear.grioavolr_nuke_staff, sub = "Alber Strap", head = "Ea Hat +1",
-		neck = "Mizu. Kubikazari", body = "Ea Houppe. +1", hands = "Amalric Gages +1", ring1 = "Mujin Band",
-		legs = "Ea Slops +1", feet = "Jhakri Pigaches +2" }
 
 	-- Whatever you want to equip mid-cast as a catch all for all spells, and we'll overwrite later for individual spells
     sets.midcast.Casting = {
@@ -499,7 +490,7 @@ function init_gear_sets()
 		head = "Telchine Cap",
 		neck = "Dls. Torque +2",
 		ear1 = "Andoaa Earring",
-		ear2 = "Gifted Earring",
+		ear2 = "Lethargy Earring",
 		body = "Viti. Tabard +1",
 		hands = "Atrophy Gloves +3",
 		ring1 = "Stikini Ring +1",
@@ -512,11 +503,11 @@ function init_gear_sets()
 
 	--Atrophy Gloves are better than Lethargy for me despite the set bonus for duration on others.		
 	sets.buff.ComposureOther = {
-		head = "Leth. Chappel +1",
-		body = "Lethargy Sayon +1",
+		head = "Leth. Chappel +2",
+		body = "Lethargy Sayon +2",
 		hands = "Leth. Gantherots +1",
 		legs = "Leth. Fuseau +1",
-		feet = "Leth. Houseaux +1"
+		feet = "Leth. Houseaux +2"
 	}
 
 	--Red Mage enhancing sets are handled in a different way from most, layered on due to the way Composure works
@@ -619,18 +610,28 @@ function init_gear_sets()
 		sub = "Ammurapi Shield",
 		range = empty,
 		ammo = "Ghastly Tathlum +1",
-		head = "Bunzi's Hat",
-		neck = "Baetyl Pendant",
-		ear1 = "Crematio Earring",
-		ear2 = "Friomisi Earring",
-		body = gear.merlinic_nuke_body,
-		hands = "Amalric Gages +1",
-		ring1 = "Shiva Ring +1",
-		ring2 = "Freke Ring",
+		head = Jhakri.Head,
+		-- neck = "Baetyl Pendant",
+		neck = "Mizu. Kubikazari",
+		-- ear1 = "Crematio Earring",
+		-- ear2 = "Friomisi Earring",
+		ear1 = "Malignance Earring",
+		ear2 = "Lethargy Earring",
+		-- body = gear.merlinic_nuke_body,
+		body = Jhakri.Body,
+		-- hands = "Amalric Gages +1",
+		hands = Jhakri.Hands,
+		-- ring1 = "Shiva Ring +1",
+		-- ring2 = "Freke Ring",
+		ring1 = Jhakri.Ring,
+		ring2 = "Ayanmo Ring",
 		back = gear.nuke_jse_back,
-		waist = gear.ElementalObi,
-		legs = "Merlinic Shalwar",
-		feet = "Amalric Nails +1"
+		-- waist = gear.ElementalObi,
+		waist = "Acuity Belt +1",
+		-- legs = "Merlinic Shalwar",
+		-- feet = "Amalric Nails +1"
+		legs = Jhakri.Legs,
+		feet = Jhakri.Feet
 	}
 
 	sets.midcast['Elemental Magic'].Resistant = {
@@ -696,6 +697,18 @@ function init_gear_sets()
 	sets.midcast['Elemental Magic'].HighTierNuke.Fodder = set_combine(sets.midcast['Elemental Magic'].Fodder,
 	{ head = gear.merlinic_nuke_head, ammo = "Pemphredo Tathlum", ear1 = "Regal Earring", ring1 = "Metamor. Ring +1" })
 
+	-- Gear for Magic Burst mode.
+	sets.MagicBurst = set_combine(sets.midcast['Elemental Magic'],{
+		-- main = gear.grioavolr_nuke_staff, 
+		-- sub = "Alber Strap", head = "Ea Hat +1",
+		-- neck = "Mizu. Kubikazari", 
+		-- body = "Ea Houppe. +1", 
+		-- hands = "Amalric Gages +1", 
+		-- ring1 = "Mujin Band",
+		-- legs = "Ea Slops +1", 
+		-- feet = "Jhakri Pigaches +2" 
+	})
+	
 	sets.midcast.Impact = {
 		main = "Bunzi's Rod",
 		sub = "Ammurapi Shield",

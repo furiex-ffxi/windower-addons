@@ -48,35 +48,35 @@ function init_gear_sets()
 	sets.precast.JA['Berserk'] = { 
 		back = "Cichol's Mantle",
 		body="Pumm. Lorica +2", 
-        -- feet="Agoge Calligae +3"
+        feet="Agoge Calligae +1"
 	}
 	sets.precast.JA['Warcry'] = {
-        -- head="Agoge Mask +3"
+        head="Agoge Mask +1"
 	}
 	sets.precast.JA['Defender'] = {}
 	sets.precast.JA['Aggressor'] = {
-		-- body="Agoge Lorica +3",
+		body="Agoge Lorica +1",
 		head="Pummeler's Mask +2"
 	}
 	sets.precast.JA['Mighty Strikes'] = {
-		-- hands="Agoge Mufflers"
+		hands="Agoge Mufflers +1"
 	}
 	sets.precast.JA["Warrior's Charge"] = {
-		-- legs={ name="Agoge Cuisses +1", augments={'Enhances "Warrior\'s Charge" effect',}}
+		legs={ name="Agoge Cuisses +1", augments={'Enhances "Warrior\'s Charge" effect',}}
 	}
 	sets.precast.JA['Tomahawk'] = { 
 		ammo = "Thr. Tomahawk",
-		-- feet="Agoge Calligae +3",
+		feet="Agoge Calligae +1",
 	}
 	sets.precast.JA['Retaliation'] = {
 		feet="Boii Calligae +1",
 		hands="Pummeler's Mufflers +2"
 	}
 	sets.precast.JA['Restraint'] = {
-		hands="Boii Mufflers +1"
+		hands="Boii Mufflers +2"
 	}
 	sets.precast.JA['Blood Rage'] = {
-        body="Boii Lorica +1"
+        body="Boii Lorica +2"
 	}
 	sets.precast.JA['Brazen Rush'] = {}
 	sets.precast.JA['Provoke'] = set_combine(sets.Enmity, {})
@@ -140,11 +140,11 @@ function init_gear_sets()
 	-- Default set for any weaponskill that isn't any more specifically defined
 	sets.precast.WS = {
         ammo="Seeth. Bomblet +1",
-        head =Nyame.Head,
+        head ="Boii Mask +2",
 		neck = "Sanctity Necklace",
-        hands		=	Nyame.Hands,
+        hands		=	"Boii Mufflers +2",
         body="Pumm. Lorica +2",
-        legs        =   Nyame.Legs,
+        legs        =   "Boii Cuisses +2",
         feet		=	"Sulevia's Leggings +2",
 		waist="Sailfi Belt +1",
         left_ear="Thrud Earring",
@@ -358,15 +358,15 @@ function init_gear_sets()
 		back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
 	sets.engaged.SomeAcc = set_combine(sets.engaged, {
-        -- body="Agoge Lorica +3",
+        body="Agoge Lorica +1",
 		feet = "Flamma Gambieras +2",
     })
 	sets.engaged.Acc = set_combine(sets.engaged.SomeAcc, {
-        -- body="Agoge Lorica +3",
+        body="Agoge Lorica +1",
 		legs = "Flamma Dirs +2"
     })
 	sets.engaged.FullAcc = set_combine(sets.engaged.Acc, {
-        -- body="Agoge Lorica +3",
+        body="Agoge Lorica +1",
     })
 	sets.engaged.Fodder = set_combine(sets.engaged, {
     })

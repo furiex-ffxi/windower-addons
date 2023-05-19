@@ -6,13 +6,13 @@
         <Delay>0</Delay>
         <Drop />
         <Lot />
-        <Pass />
+        <Pass>Abyss cuirass</Pass>
         <Verbose>false</Verbose>
     </global>
     <cleobabe>
-        <Pass>Abyss cuirass</Pass>
+        <Pass>Gigas Socks,Abyss cuirass,Gigas Necklace</Pass>
     </cleobabe>
     <liambear>
-        <Pass>Abyss cuirass</Pass>
-    </liambear>    
+
+    </liambear>
 </settings>

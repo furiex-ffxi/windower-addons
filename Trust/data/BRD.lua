@@ -41,7 +41,7 @@ TrustSettings = {
             cleavews = {'Aeolian Edge'},
             starterws = {'Savage Blade','Mordant Rime'},
             -- preferws = {'Savage Blade','Mordant Rime',"Rudra's Storm"},
-            preferws = {'Rudra\'s Storm',"Exenterator","Evisceration"},
+            preferws = {'Rudra\'s Storm'},
             amws = 'Exenterator'
         }
     }

@@ -527,14 +527,14 @@ function check_arts()
 
  		local abil_recasts = windower.ffxi.get_ability_recasts()	
 
- 		if not buffactive.Composure then	
-			local abil_recasts = windower.ffxi.get_ability_recasts()	
-			if abil_recasts[50] < latency then	
-				tickdelay = os.clock() + 1.1
-				windower.chat.input('/ja "Composure" <me>')	
-				return true	
-			end	
-		end	
+ 		-- if not buffactive.Composure then	
+		-- 	local abil_recasts = windower.ffxi.get_ability_recasts()	
+		-- 	if abil_recasts[50] < latency then	
+		-- 		tickdelay = os.clock() + 1.1
+		-- 		windower.chat.input('/ja "Composure" <me>')	
+		-- 		return true	
+		-- 	end	
+		-- end	
 
  		if player.sub_job == 'SCH' and not (state.Buff['SJ Restriction'] or arts_active()) and abil_recasts[228] < latency then	
 			windower.chat.input('/ja "Light Arts" <me>')	
@@ -548,7 +548,7 @@ function check_arts()
 end
 
 function check_buff()
-	if state.AutoBuffMode.value ~= 'Off' and not data.areas.cities:contains(world.area) then
+	if state.AutoBuffMode.value ~= 'Off' and player.in_combat then
 		local spell_recasts = windower.ffxi.get_spell_recasts()
 		for i in pairs(buff_spell_lists[state.AutoBuffMode.Value]) do
 			if not buffactive[buff_spell_lists[state.AutoBuffMode.Value][i].Buff] and (buff_spell_lists[state.AutoBuffMode.Value][i].When == 'Always' or (buff_spell_lists[state.AutoBuffMode.Value][i].When == 'Combat' and (player.in_combat or being_attacked)) or (buff_spell_lists[state.AutoBuffMode.Value][i].When == 'Engaged' and player.status == 'Engaged') or (buff_spell_lists[state.AutoBuffMode.Value][i].When == 'Idle' and player.status == 'Idle') or (buff_spell_lists[state.AutoBuffMode.Value][i].When == 'OutOfCombat' and not (player.in_combat or being_attacked))) and spell_recasts[buff_spell_lists[state.AutoBuffMode.Value][i].SpellID] < spell_latency and silent_can_use(buff_spell_lists[state.AutoBuffMode.Value][i].SpellID) then
@@ -621,95 +621,103 @@ buff_spell_lists = {
 	AutoMelee = {
 		{Name='Haste II',		Buff='Haste',		SpellID=511,	When='Engaged'},
 		{Name='Temper II',		Buff='Multi Strikes',SpellID=895,	When='Engaged'},
+		{Name='Reraise',		Buff='Reraise',		SpellID=135,	When='Always'},
 	},
 	
 	Default = {
-		{Name='Refresh III',	Buff='Refresh',		SpellID=894,	Reapply=false},
-		{Name='Haste II',		Buff='Haste',		SpellID=511,	Reapply=false},
-		{Name='Stoneskin',		Buff='Stoneskin',	SpellID=54,		Reapply=false},
-		{Name='Shell V',		Buff='Shell',		SpellID=52,		Reapply=false},
-		{Name='Protect V',		Buff='Protect',		SpellID=47,		Reapply=false},
+		{Name='Refresh III',	Buff='Refresh',		SpellID=894,    When='Always'},
+		{Name='Haste II',		Buff='Haste',		SpellID=511,    When='Always'},
+		{Name='Stoneskin',		Buff='Stoneskin',	SpellID=54,	    When='Always'},
+		{Name='Shell V',		Buff='Shell',		SpellID=52,	    When='Always'},
+		{Name='Protect V',		Buff='Protect',		SpellID=47,	    When='Always'},
+		{Name='Reraise',		Buff='Reraise',		SpellID=135,	When='Always'},
 	},
 
 	MageBuff = {
-		{Name='Refresh III',	Buff='Refresh',			SpellID=894,	Reapply=false},
-		{Name='Haste II',		Buff='Haste',			SpellID=511,	Reapply=false},
-		{Name='Aquaveil',		Buff='Aquaveil',		SpellID=55,		Reapply=false},
-		{Name='Phalanx',		Buff='Phalanx',			SpellID=106,	Reapply=false},
-		{Name='Stoneskin',		Buff='Stoneskin',		SpellID=54,		Reapply=false},
-		{Name='Blink',			Buff='Blink',			SpellID=53,		Reapply=false},
-		{Name='Gain-INT',		Buff='INT Boost',		SpellID=490,	Reapply=false},
-		{Name='Shell V',		Buff='Shell',			SpellID=52,		Reapply=false},
-		{Name='Protect V',		Buff='Protect',			SpellID=47,		Reapply=false},
+		{Name='Refresh III',	Buff='Refresh',			SpellID=894,    When='Always'},
+		{Name='Haste II',		Buff='Haste',			SpellID=511,    When='Always'},
+		{Name='Aquaveil',		Buff='Aquaveil',		SpellID=55,	    When='Always'},
+		{Name='Phalanx',		Buff='Phalanx',			SpellID=106,    When='Always'},
+		{Name='Stoneskin',		Buff='Stoneskin',		SpellID=54,	    When='Always'},
+		{Name='Blink',			Buff='Blink',			SpellID=53,	    When='Always'},
+		{Name='Gain-INT',		Buff='INT Boost',		SpellID=490,    When='Always'},
+		{Name='Shell V',		Buff='Shell',			SpellID=52,	    When='Always'},
+		{Name='Protect V',		Buff='Protect',			SpellID=47,	    When='Always'},
+		{Name='Reraise',		Buff='Reraise',			SpellID=135,	When='Always'},
 	},
 	
 	FullMeleeBuff = {
-		{Name='Refresh III',	Buff='Refresh',			SpellID=894,	Reapply=false},
-		{Name='Haste II',		Buff='Haste',			SpellID=511,	Reapply=false},
-		{Name='Regen II',		Buff='Regen',			SpellID=110,	Reapply=false},
-		{Name='Aquaveil',		Buff='Aquaveil',		SpellID=55,		Reapply=false},
-		{Name='Phalanx',		Buff='Phalanx',			SpellID=106,	Reapply=false},
-		{Name='Stoneskin',		Buff='Stoneskin',		SpellID=54,		Reapply=false},
-		{Name='Blink',			Buff='Blink',			SpellID=53,		Reapply=false},
-		{Name='Gain-STR',		Buff='STR Boost',		SpellID=486,	Reapply=false},
-		{Name='Shell V',		Buff='Shell',			SpellID=52,		Reapply=false},
-		{Name='Protect V',		Buff='Protect',			SpellID=47,		Reapply=false},
-		{Name='Shock Spikes',	Buff='Shock Spikes',	SpellID=251,	Reapply=false},
-		{Name='Enthunder',		Buff='Enthunder',		SpellID=104,	Reapply=false},
-		{Name='Temper II',		Buff='Multi Strikes',	SpellID=895,	Reapply=false},
-		{Name='Barfire',		Buff='Barfire',			SpellID=60,		Reapply=false},
-		{Name='Barparalyze',	Buff='Barparalyze',		SpellID=74,		Reapply=false},
+		{Name='Refresh III',	Buff='Refresh',			SpellID=894,	When='Always'},
+		{Name='Haste II',		Buff='Haste',			SpellID=511,	When='Always'},
+		{Name='Regen II',		Buff='Regen',			SpellID=110,	When='Always'},
+		{Name='Aquaveil',		Buff='Aquaveil',		SpellID=55,		When='Always'},
+		{Name='Phalanx',		Buff='Phalanx',			SpellID=106,	When='Always'},
+		{Name='Stoneskin',		Buff='Stoneskin',		SpellID=54,		When='Always'},
+		{Name='Blink',			Buff='Blink',			SpellID=53,		When='Always'},
+		{Name='Gain-STR',		Buff='STR Boost',		SpellID=486,	When='Always'},
+		{Name='Shell V',		Buff='Shell',			SpellID=52,		When='Always'},
+		{Name='Protect V',		Buff='Protect',			SpellID=47,		When='Always'},
+		{Name='Shock Spikes',	Buff='Shock Spikes',	SpellID=251,	When='Always'},
+		-- {Name='Enthunder',		Buff='Enthunder',		SpellID=104,	When='Always'},
+		{Name='Temper II',		Buff='Multi Strikes',	SpellID=895,	When='Always'},
+		{Name='Barfire',		Buff='Barfire',			SpellID=60,		When='Always'},
+		{Name='Barparalyze',	Buff='Barparalyze',		SpellID=74,		When='Always'},
+		{Name='Reraise',		Buff='Reraise',			SpellID=135,	When='Always'},
 	},
 	
 	MeleeBuff = {
-		{Name='Refresh III',	Buff='Refresh',			SpellID=894,	Reapply=false},
-		{Name='Haste II',		Buff='Haste',			SpellID=511,	Reapply=false},
-		{Name='Temper II',		Buff='Multi Strikes',	SpellID=895,	Reapply=false},
-		{Name='Gain-STR',		Buff='STR Boost',		SpellID=486,	Reapply=false},
-		{Name='Phalanx',		Buff='Phalanx',			SpellID=106,	Reapply=false},
-		{Name='Shell V',		Buff='Shell',			SpellID=52,		Reapply=false},
-		{Name='Protect V',		Buff='Protect',			SpellID=47,		Reapply=false},
-		{Name='Shock Spikes',	Buff='Shock Spikes',	SpellID=251,	Reapply=false},
-		{Name='Enthunder',		Buff='Enthunder',		SpellID=104,	Reapply=false},
-		{Name='Barblizzard',	Buff='Barblizzard',		SpellID=61,		Reapply=false},
-		{Name='Barparalyze',	Buff='Barparalyze',		SpellID=74,		Reapply=false},
+		{Name='Refresh III',	Buff='Refresh',			SpellID=894,    When='Always'},
+		{Name='Haste II',		Buff='Haste',			SpellID=511,    When='Always'},
+		{Name='Temper II',		Buff='Multi Strikes',	SpellID=895,    When='Always'},
+		{Name='Gain-STR',		Buff='STR Boost',		SpellID=486,    When='Always'},
+		{Name='Phalanx',		Buff='Phalanx',			SpellID=106,    When='Always'},
+		{Name='Shell V',		Buff='Shell',			SpellID=52,	    When='Always'},
+		{Name='Protect V',		Buff='Protect',			SpellID=47,	    When='Always'},
+		{Name='Shock Spikes',	Buff='Shock Spikes',	SpellID=251,    When='Always'},
+		{Name='Enthunder',		Buff='Enthunder',		SpellID=104,    When='Always'},
+		{Name='Barblizzard',	Buff='Barblizzard',		SpellID=61,	    When='Always'},
+		{Name='Barparalyze',	Buff='Barparalyze',		SpellID=74,	    When='Always'},
+		{Name='Reraise',		Buff='Reraise',			SpellID=135,	When='Always'},
 	},
 
 	Odin = {
-		{Name='Refresh III',	Buff='Refresh',			SpellID=894,	Reapply=false},
-		{Name='Haste II',		Buff='Haste',			SpellID=511,	Reapply=false},
-		{Name='Phalanx',		Buff='Phalanx',			SpellID=106,	Reapply=false},
-		{Name='Gain-INT',		Buff='INT Boost',		SpellID=490,	Reapply=false},
-		{Name='Temper II',		Buff='Multi Strikes',	SpellID=895,	Reapply=false},
-		{Name='Regen II',		Buff='Regen',			SpellID=110,	Reapply=false},
-		{Name='Enaero',			Buff='Enaero',			SpellID=102,	Reapply=false},
-		{Name='Stoneskin',		Buff='Stoneskin',		SpellID=54,		Reapply=false},
-		{Name='Shell V',		Buff='Shell',			SpellID=52,		Reapply=false},
-		{Name='Protect V',		Buff='Protect',			SpellID=47,		Reapply=false},
+		{Name='Refresh III',	Buff='Refresh',			SpellID=894,    When='Always'},
+		{Name='Haste II',		Buff='Haste',			SpellID=511,    When='Always'},
+		{Name='Phalanx',		Buff='Phalanx',			SpellID=106,    When='Always'},
+		{Name='Gain-INT',		Buff='INT Boost',		SpellID=490,    When='Always'},
+		{Name='Temper II',		Buff='Multi Strikes',	SpellID=895,    When='Always'},
+		{Name='Regen II',		Buff='Regen',			SpellID=110,    When='Always'},
+		{Name='Enaero',			Buff='Enaero',			SpellID=102,    When='Always'},
+		{Name='Stoneskin',		Buff='Stoneskin',		SpellID=54,	    When='Always'},
+		{Name='Shell V',		Buff='Shell',			SpellID=52,	    When='Always'},
+		{Name='Protect V',		Buff='Protect',			SpellID=47,	    When='Always'},
+		{Name='Reraise',		Buff='Reraise',			SpellID=135,	When='Always'},
 	},
 	
 	Tolba = {
-		{Name='Refresh III',	Buff='Refresh',			SpellID=894,	Reapply=false},
-		{Name='Haste II',		Buff='Haste',			SpellID=511,	Reapply=false},
-		{Name='Phalanx',		Buff='Phalanx',			SpellID=106,	Reapply=false},
-		{Name='Gain-STR',		Buff='STR Boost',		SpellID=486,	Reapply=false},
-		{Name='Temper II',		Buff='Multi Strikes',	SpellID=895,	Reapply=false},
-		{Name='Regen II',		Buff='Regen',			SpellID=110,	Reapply=false},
-		{Name='Enblizzard',		Buff='Enblizzard',		SpellID=104,	Reapply=false},
-		{Name='Stoneskin',		Buff='Stoneskin',		SpellID=54,		Reapply=false},
-		{Name='Shell V',		Buff='Shell',			SpellID=52,		Reapply=false},
-		{Name='Protect V',		Buff='Protect',			SpellID=47,		Reapply=false},
-		{Name='Barwater',		Buff='Barwater',		SpellID=65,		Reapply=false},
+		{Name='Refresh III',	Buff='Refresh',			SpellID=894,    When='Always'},
+		{Name='Haste II',		Buff='Haste',			SpellID=511,    When='Always'},
+		{Name='Phalanx',		Buff='Phalanx',			SpellID=106,    When='Always'},
+		{Name='Gain-STR',		Buff='STR Boost',		SpellID=486,    When='Always'},
+		{Name='Temper II',		Buff='Multi Strikes',	SpellID=895,    When='Always'},
+		{Name='Regen II',		Buff='Regen',			SpellID=110,    When='Always'},
+		{Name='Enblizzard',		Buff='Enblizzard',		SpellID=104,    When='Always'},
+		{Name='Stoneskin',		Buff='Stoneskin',		SpellID=54,	    When='Always'},
+		{Name='Shell V',		Buff='Shell',			SpellID=52,	    When='Always'},
+		{Name='Protect V',		Buff='Protect',			SpellID=47,	    When='Always'},
+		{Name='Barwater',		Buff='Barwater',		SpellID=65,	    When='Always'},
+		{Name='Reraise',		Buff='Reraise',			SpellID=135,	When='Always'},
 	},
 	
 	HybridCleave = {
-		{Name='Refresh III',	Buff='Refresh',			SpellID=894,	Reapply=false},
-		{Name='Haste II',		Buff='Haste',			SpellID=511,	Reapply=false},
-		{Name='Phalanx',		Buff='Phalanx',			SpellID=106,	Reapply=false},
-		{Name='Gain-INT',		Buff='INT Boost',		SpellID=490,	Reapply=false},
-		{Name='Enthunder II',	Buff='Enthunder II',	SpellID=316,	Reapply=false},
-		{Name='Temper II',		Buff='Multi Strikes',	SpellID=895,	Reapply=false},
-		{Name='Shell V',		Buff='Shell',			SpellID=52,		Reapply=false},
-		{Name='Protect V',		Buff='Protect',			SpellID=47,		Reapply=false},
+		{Name='Refresh III',	Buff='Refresh',			SpellID=894,    When='Always'},
+		{Name='Haste II',		Buff='Haste',			SpellID=511,    When='Always'},
+		{Name='Phalanx',		Buff='Phalanx',			SpellID=106,    When='Always'},
+		{Name='Gain-INT',		Buff='INT Boost',		SpellID=490,    When='Always'},
+		{Name='Enthunder II',	Buff='Enthunder II',	SpellID=316,    When='Always'},
+		{Name='Temper II',		Buff='Multi Strikes',	SpellID=895,    When='Always'},
+		{Name='Shell V',		Buff='Shell',			SpellID=52,	    When='Always'},
+		{Name='Protect V',		Buff='Protect',			SpellID=47,	    When='Always'},
+		{Name='Reraise',		Buff='Reraise',			SpellID=135,	When='Always'},
 	},
 }

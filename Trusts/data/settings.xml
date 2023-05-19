@@ -38,6 +38,11 @@
                 <4>Apururu (UC)</4>
                 <5>Ayame</5>
             </fusion>
+            <healers>
+                <1>Kupipi</1>
+                <2>Cherukiki</2>
+                <3>Sylvie (UC)</3>
+            </healers>
             <level>
                 <1>Valaineral</1>
                 <2>Joachim</2>
@@ -46,10 +51,9 @@
                 <5>Apururu (UC)</5>
             </level>
             <lilith>
-                <1>Selh&apos;teus</1>
-                <2>Cherukiki</2>
-                <3>Koru-Moru</3>
-                <4>Sylvie (UC)</4>
+                <1>AAEV</1>
+                <2>Sylvie (UC)</2>
+                <3>Ulmia</3>
             </lilith>
             <locus>
                 <1>Koru-Moru</1>
@@ -62,6 +66,28 @@
                 <3>Gessho</3>
                 <4>Kupipi</4>
             </ody>
+            <omen>
+                <1>Valaineral</1>
+                <2>Matsui-P</2>
+                <4>Cherukiki</4>
+                <5>Sylvie (UC)</5>
+            </omen>
+            <omenboss>
+                <1>Selh&apos;teus</1>
+                <2>Valaineral</2>
+                <4>Cherukiki</4>
+                <5>Sylvie (UC)</5>
+            </omenboss>
+            <rem>
+                <1>Cherukiki</1>
+                <2>Gessho</2>
+                <3>Kupipi</3>
+            </rem>
+            <sortie>
+                <1>Sylvie (UC)</1>
+                <2>Kupipi</2>
+                <3>Valaineral</3>
+            </sortie>
             <support>
                 <1>Qultada</1>
                 <2>Joachim</2>
@@ -75,13 +101,6 @@
                 <3>Matsui-P</3>
                 <4>Ulmia</4>
             </sylvie>
-            <tank>
-                <1>Qultada</1>
-                <2>Apururu (UC)</2>
-                <3>Joachim</3>
-                <4>Valaineral</4>
-                <5>Koru-Moru</5>
-            </tank>
             <th>
                 <1>Kupipi</1>
                 <2>Selh&apos;teus</2>
@@ -89,9 +108,9 @@
                 <4>Lion II</4>
             </th>
             <v1ambu>
-                <1>Kupipi</1>
-                <2>Sylvie (UC)</2>
-                <3>Selh&apos;teus</3>
+                <1>Valaineral</1>
+                <2>August</2>
+                <3>Apururu (UC)</3>
             </v1ambu>
             <v2ambu>
                 <1>Matsui-P</1>

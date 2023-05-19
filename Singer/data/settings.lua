@@ -3,18 +3,19 @@ return {
     ["debuffs"] = L{"Carnage Elegy","Pining Nocturne",},
     ["playlist"] = T{
         ["clear"] = L{},
-        ["march"] = L{"Blade Madrigal","Victory March","Honor March","Valor Minuet V","Valor Minuet IV",},
-        ["minuet"] = L{"Blade Madrigal","Honor March","Valor Minuet V","Valor Minuet IV","Valor Minuet III",},
+        ["march"] = L{"Blade Madrigal","Valor Minuet V","Victory March","Honor March","Valor Minuet IV",},
+        ["minne"] = L{"Knight's Minne V","Blade Madrigal","Honor March","Victory March","Valor Minuet V",},
+        ["minuet"] = L{"Valor Minuet IV","Valor Minuet V","Blade Madrigal","Honor March","Valor Minuet III",},
     },
     ["buffs"] = T{
-        ["haste"] = L{},
         ["refresh"] = L{},
+        ["haste"] = L{},
         ["aurorastorm"] = L{},
         ["firestorm"] = L{},
     },
     ["song"] = T{
-        ["Sylvie"] = L{"Mage's Ballad III",},
         ["Koru-Moru"] = L{"Mage's Ballad III",},
+        ["Sylvie"] = L{"Mage's Ballad III",},
     },
-    ["songs"] = L{"Blade Madrigal","Victory March","Honor March","Valor Minuet V","Valor Minuet IV",},
+    ["songs"] = L{"Valor Minuet IV","Valor Minuet V","Blade Madrigal","Honor March","Valor Minuet III",},
 }

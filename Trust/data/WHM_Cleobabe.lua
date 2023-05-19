@@ -39,11 +39,11 @@ TrustSettings = {
             Spell.new('Dia II')
         },
         Skillchains = {
-            defaultws = {'Black Halo','Shell Crusher'},
+            defaultws = {'Black Halo','Judgment'},
             tpws = {},
-            spamws = {'Black Halo','Spirit Taker'},
-            starterws = {'Black Halo','Shell Crusher'},
-            preferws = {'Black Halo'},
+            spamws = {'Spirit Taker'},
+            starterws = {'Black Halo','Judgment'},
+            preferws = {'Black Halo','Judgment'},
             cleavews = {},
             amws = 'Mystic Boon',
         },

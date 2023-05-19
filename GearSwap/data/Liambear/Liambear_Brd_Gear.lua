@@ -59,7 +59,7 @@ function init_gear_sets()
         main="Kali", --7
         head="Bunzi's Hat",
         body="Brioso Justau. +3",
-        hands="Fili Manchettes +1",
+        hands="Fili Manchettes +2",
         legs="Doyen Pants",
         feet={ name="Bihu Slippers +3", augments={'Enhances "Nightingale" effect',}},
         neck={ name="Bard's Charm +2", augments={'Path: A',}},
@@ -108,12 +108,12 @@ function init_gear_sets()
 
 	sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC, { waist = "Siegel Sash" })
 	sets.precast.FC.Dispelga = set_combine(sets.precast.FC, { 
-		-- main = "Daybreak", 
-		-- sub = "Genmei Shield"
+		main = "Daybreak", 
+		sub = "Genmei Shield"
 	 })
 
 	sets.precast.FC.BardSong =  set_combine(sets.precast.FC, {
-        head="Fili Calot +1", --14
+        head="Fili Calot +2", --14
         body="Brioso Justau. +3", --15
         feet="Bihu Slippers +3", --9
         neck="Loricate Torque +1",
@@ -122,8 +122,8 @@ function init_gear_sets()
 	})
     
 	sets.precast.FC.Dispelga = set_combine(sets.precast.FC, {
-		-- main="Daybreak", 
-		-- sub="Ammurapi Shield", 
+		main="Daybreak", 
+		sub="Ammurapi Shield", 
 		waist="Shinjutsu-no-Obi +1"
 		}
 	)
@@ -294,35 +294,35 @@ function init_gear_sets()
 	sets.midcast.Etude = {head="Mousai Turban +1"}
 	sets.midcast.Lullaby = { range = "Marsyas", hands="Brioso Cuffs +3" }
 	sets.midcast.Lullaby.Resistant = { range = "Gjallarhorn", hands="Brioso Cuffs +3" }
-	sets.midcast.Madrigal = { head = "Fili Calot +1" }
+	sets.midcast.Madrigal = { head = "Fili Calot +2" }
 	sets.midcast.Mambo = {feet="Mou. Crackows +1"}
-	sets.midcast.March = { hands = "Fili Manchettes +1" }
+	sets.midcast.March = { hands = "Fili Manchettes +2" }
 	sets.midcast.Mazurka = { range = "Marsyas" }
 	sets.midcast.Minne = {legs="Mou. Seraweels +1"}
-	sets.midcast.Minuet = { body = "Fili Hongreline +1" }
+	sets.midcast.Minuet = { body = "Fili Hongreline +2" }
 	sets.midcast.Paeon = { range = info.ExtraSongInstrument }
 	sets.midcast.Threnody = {body="Mou. Manteel +1"}
 	sets.midcast['Honor March'] = set_combine(sets.midcast.March, { range = "Marsyas" })
 	sets.midcast['Horde Lullaby II'] = { range = "Marsyas", hands="Brioso Cuffs +3" }
-	sets.midcast['Horde Lullaby II'].AoE = { range = "Gjallarhorn", hands="Brioso Cuffs +3" }
+	sets.midcast['Horde Lullaby II'].AoE = { range = "Daurdabla", hands="Brioso Cuffs +3" }
 	sets.midcast['Horde Lullaby II'].Resistant = { range = "Gjallarhorn", hands="Brioso Cuffs +3" }
 	sets.midcast['Horde Lullaby'] = { range = "Marsyas", hands="Brioso Cuffs +3" }
-	sets.midcast['Horde Lullaby'].AoE = { range = "Gjallarhorn", hands="Brioso Cuffs +3" }
+	sets.midcast['Horde Lullaby'].AoE = { range = "Daurdabla", hands="Brioso Cuffs +3" }
 	sets.midcast['Horde Lullaby'].Resistant = { range = "Gjallarhorn", hands="Brioso Cuffs +3" }
 	sets.midcast['Magic Finale'] = { range = "Gjallarhorn" }
 	sets.midcast["Goblin Gavotte"] = { range = info.ExtraSongInstrument }
 	sets.midcast["Goddess's Hymnus"] = { range = info.ExtraSongInstrument }
 	sets.midcast["Scop's Operetta"] = { range = info.ExtraSongInstrument }
-	sets.midcast["Sentinel's Scherzo"] = { feet = "Fili Cothurnes +1" }
+	sets.midcast["Sentinel's Scherzo"] = { feet = "Fili Cothurnes +2" }
 	sets.midcast["Sheepfoe Mambo"] = { range = info.ExtraSongInstrument }
 
 	-- For song buffs (duration and AF3 set bonus)
 	sets.midcast.SongEffect = {
         main="Carnwenhan",
         range="Gjallarhorn",
-        head="Fili Calot +1",
-        body="Fili Hongreline +1",
-        hands="Fili Manchettes +1",
+        head="Fili Calot +2",
+        body="Fili Hongreline +2",
+        hands="Fili Manchettes +2",
         legs="Inyanga Shalwar +2",
         feet="Brioso Slippers +3",
         neck="Mnbw. Whistle +1",
@@ -403,20 +403,24 @@ function init_gear_sets()
 
 	-- Other general spells and classes.
 	sets.midcast.Cure = {
-        -- main="Daybreak", --30
-        -- sub="Ammurapi Shield",
-        head="Kaykaus Mitra +1", --11
+        main="Daybreak", --30
+        sub="Ammurapi Shield",
+        -- head="Kaykaus Mitra +1", --11
+        head="Vanya Hood", --10
         body="Kaykaus Bliaut +1", --(+4)/(-6)
         hands="Kaykaus Cuffs +1", --11(+2)/(-6)
-        legs="Kaykaus Tights +1", --11/(+2)/(-6)
+        -- legs="Kaykaus Tights +1", --11/(+2)/(-6)
+        legs="Chironic Hose", --8
         feet="Kaykaus Boots +1", --11(+2)/(-12)
         neck="Incanter's Torque",
-        ear1="Beatific Earring",
-        ear2="Meili Earring",
+        -- ear1="Beatific Earring",
+        -- ear1="Beatific Earring",
+        ear2="Mendicant's Earring",
         ring1="Menelaus's Ring",
         ring2="Haoma's Ring",
         back="Solemnity Cape", --7
-        waist="Bishop's Sash",
+        -- waist="Bishop's Sash",
+        waist="Luminary Sash",
 	}
 
     sets.midcast.Curaga = set_combine(sets.midcast.Cure, {
@@ -462,8 +466,8 @@ function init_gear_sets()
 	{ neck = "Nodens Gorget", ear2 = "Earthcry Earring", waist = "Siegel Sash", legs = "Shedir Seraweels" })
 
 	sets.midcast['Elemental Magic'] = {
-		-- main = "Daybreak",
-		-- sub = "Ammurapi Shield",
+		main = "Daybreak",
+		sub = "Ammurapi Shield",
 		ammo = "Ghastly Tathlum +1",
 		head = "C. Palug Crown",
 		neck = "Sanctity Necklace",
@@ -480,8 +484,8 @@ function init_gear_sets()
 	}
 
 	sets.midcast['Elemental Magic'].Resistant = {
-		-- main = "Daybreak",
-		-- sub = "Ammurapi Shield",
+		main = "Daybreak",
+		sub = "Ammurapi Shield",
 		ammo = "Ghastly Tathlum +1",
 		head = "C. Palug Crown",
 		neck = "Sanctity Necklace",
@@ -515,9 +519,9 @@ function init_gear_sets()
         }
 
     sets.midcast.Dispelga = set_combine(sets.midcast['Enfeebling Magic'], {
-		-- main="Daybreak", 
-		-- sub="Ammurapi Shield", 
-		-- waist="Shinjutsu-no-Obi +1"
+		main="Daybreak", 
+		sub="Ammurapi Shield", 
+		waist="Shinjutsu-no-Obi +1"
 		}
 	)
 
@@ -567,7 +571,7 @@ function init_gear_sets()
         hands="Raetic Bangles +1",
         legs="Volte Brais",
         legs="Volte Gaiters",
-        feet="Fili cothurnes +1",
+        feet="Fili Cothurnes +2",
         neck="Bathy Choker +1",
         ear1="Eabani Earring",
         ear2="Sanare Earring",
@@ -578,8 +582,8 @@ function init_gear_sets()
 	}
 
 	sets.idle.NoRefresh = {
-		-- main = "Daybreak",
-		-- sub = "Genmei Shield",
+		main = "Daybreak",
+		sub = "Genmei Shield",
 		ammo = "Staunch Tathlum +1",
 		head = "Nyame Helm",
 		neck = "Loricate Torque +1",
@@ -592,7 +596,7 @@ function init_gear_sets()
 		back = "Moonlight Cape",
 		waist = "Carrier's Sash",
 		legs = "Nyame Flanchard",
-		feet = "Fili Cothurnes +1"
+		feet = "Fili Cothurnes +2"
 	}
 
 	sets.idle.DT = {
@@ -615,7 +619,7 @@ function init_gear_sets()
 	sets.defense.PDT = sets.idle.DT
 	sets.defense.MDT = sets.idle.DT
 
-	sets.Kiting = { feet = "Fili Cothurnes +1" }
+	sets.Kiting = { feet = "Fili Cothurnes +2" }
 	sets.latent_refresh = { waist = "Fucho-no-obi" }
 	sets.latent_refresh_grip = { sub = "Oneiros Grip" }
 	sets.TPEat = { neck = "Chrys. Torque" }
