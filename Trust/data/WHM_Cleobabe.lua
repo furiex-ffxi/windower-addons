@@ -11,6 +11,7 @@ TrustSettings = {
             Buff.new('Shellra'),
             Buff.new('Auspice'),
             Buff.new('Boost-STR'),
+            Buff.new('Barthundra')
         },
         PartyBuffs = L{
             Buff.new('Haste', L{}, L{'WAR','MNK','THF','PLD','DRK','SAM','DRG','NIN','PUP','COR','DNC','BLU','RUN','BLM','BRD','BST'}),

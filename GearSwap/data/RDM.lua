@@ -64,7 +64,7 @@ function job_setup()
 	
 	state.RecoverMode = M('35%', '60%', 'Always', 'Never')
 	
-	autows = "Savage Blade"
+	autows = "Fast Blade"
 	autofood = 'Pear Crepe'
 	enspell = ''
 	

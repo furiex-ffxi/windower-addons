@@ -596,8 +596,8 @@ function init_gear_sets()
 	sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
 
 	-- Weapons sets
-	sets.weapons.Apocalypse = { main = "Apocalypse", sub = "Duplus Grip" }
-	sets.weapons.Montante = { main = "Montante +1", sub = "Duplus Grip" }
+	sets.weapons.Apocalypse = { main = "Apocalypse", sub = "Capitoline Strap" }
+	sets.weapons.Montante = { main = "Montante +1", sub = "Capitoline Strap" }
 	sets.weapons.Anguta = { main = "Anguta", sub = "Utu Grip" }
 end
 

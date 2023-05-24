@@ -1,18 +1,20 @@
 <?xml version="1.1" ?>
 <settings>
     <global>
-        <AutoDrop>false</AutoDrop>
+        <AutoDrop>true</AutoDrop>
         <AutoStack>true</AutoStack>
         <Delay>0</Delay>
-        <Drop />
+        <Drop>Thundaja,Hi-Potion +2,Durium Ore,Translucent Rock,Rainbow Cloth,Thunder V,Hydra Scale,Dark Carol II,Fluorite,S.Abjuration: Lg.,Mythril Ore,Kitron,Petrified Log,Pro-Ether +1,Ice Carol II,Mind Potion,Absorb-Attri,Aquamarine,Gold Thread,Purple Rock,Yellow Rock,White Rock,Comet,Aeroja,Gravity II,Breeze Geode,Boost-STR,Boost-DEX,Pining Nocturne,Green Rock,Wyvern Tailskin,Gain-CHR,Fire Carol II,Wind Carol II,Regen IV,X-Potion +2,Ebony Log,Strength Potion,Phoenix Feather,King Truffle,Jacaranda Log,Kakka: Ichi,Migawari: Ichi,Jadeite,Coral Fragment,Danceshroom,Mahogany Log,Dexterity Potion,Boost-CHR,Dark Adaman,Gain-STR,Gain-AGI,Steel Ingot,Cerberus Hide,Divine Log,Granite,Horde Lullaby II,Anc. Beast Horn,Holy II,Gold Ingot,Gain-DEX,Charisma Potion,Hi-Elixir,Dragon Meat,Pigeon&apos;s Blood,Boost-AGI,X-Potion +3,Woozyshroom,Breakga,Zircon,Chrysoberyl,Ruszor Meat,Temper,Red Rock,Demon Horn,Blizzard V,Cura III,Blizzaja,Hi-Potion +3,Painite,Sunstone,Int. Potion,Ram Skin,Agility Potion,Valor Minuet V,W. Spider&apos;s Web,C.Abjuration: Lg.,Gibbous Axe,Khimaira Mane,Adloquium,Icarus Wing,Light Carol II,Gold Ore,Elixir,Wyvern Skin,Firaja,Phrygian Ore,Moonstone,Kudzu Aketon,F.Abjuration: Lg.,Ram Horn,Blue Rock,Flocon-de-mer,Wyvern Scales,Pro-Ether,Beech Log,Imperial Cermet,Mythril Ingot</Drop>
         <Lot />
-        <Pass>Abyss cuirass</Pass>
+        <Pass>Gigas Socks,Abyss cuirass,Gigas Necklace</Pass>
         <Verbose>false</Verbose>
     </global>
     <cleobabe>
-        <Pass>Gigas Socks,Abyss cuirass,Gigas Necklace</Pass>
-    </cleobabe>
-    <liambear>
 
+    </cleobabe>
+    <furyex>
+
+    </furyex>
+    <liambear>
     </liambear>
 </settings>

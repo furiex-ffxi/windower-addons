@@ -41,11 +41,11 @@ TrustSettings = {
             Debuff.new('Paralyze'),
         },
         Skillchains = {
-            defaultws = {'Exenterator','Chant du Cygne','Savage Blade','Seraph Blade','Death Blossom','Black Halo'},
+            defaultws = {'Exenterator','Chant du Cygne','Savage Blade','Seraph Blade','Death Blossom','Black Halo','Evisceration'},
             tpws = {'Savage Blade'},
-            spamws = {'Savage Blade','Black Halo'},
+            spamws = {'Savage Blade','Black Halo','Evisceration'},
             starterws = {'Burning Blade','Death Blossom','Savage Blade','Chant du Cygne'},
-            preferws = {'Flat Blade','Death Blossom','Savage Blade','Black Halo','Realmrazer'},
+            preferws = {'Flat Blade','Death Blossom','Savage Blade','Black Halo','Realmrazer','Evisceration'},
             cleavews = {'Aeolian Edge'},
             amws = 'Death Blossom'
         },

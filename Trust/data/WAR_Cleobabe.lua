@@ -10,7 +10,7 @@ TrustSettings = {
             'Retaliation',
         },
         Skillchains = {
-            defaultws = {'Ground Strike','Dragon Kick','Penta Thrust','Herculean Slash','Upheaval','Full Break',"King's Justice","Ukko's Fury",'Savage Blade','Impulse Drive'},
+            defaultws = {'Ground Strike','Dragon Kick','Herculean Slash','Upheaval','Full Break',"King's Justice","Ukko's Fury",'Savage Blade','Impulse Drive'},
             tpws = {},
             spamws = {'Impulse Drive','Upheaval','Savage Blade','Judgment'},
             starterws = {'Upheaval','Impulse Drive'},
