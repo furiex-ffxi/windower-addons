@@ -12,7 +12,7 @@ function user_job_setup()
 	state.Weapons:options('None', 'Naegling', 'DualWeapons', 'DualWeaponsAcc', 'DualEvisceration', 'DualClubs',
 	'DualAeolian', 'DualProcDaggers', 'EnspellOnly', 'EnspellDW')
 
-	gear.stp_jse_back = { name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
+	gear.stp_jse_back = { name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}}
 	gear.nuke_jse_back = { name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','Weapon skill damage +10%',}}
 	gear.wsd_jse_back = { name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','Weapon skill damage +10%',}}
 
@@ -108,7 +108,7 @@ function init_gear_sets()
     -- Capes:
     -- Sucellos's And such, add your own.
     RDMCape = {}
-    RDMCape.TP	=	{ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
+    RDMCape.TP	=	{ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}}
     RDMCape.MACC	=	{ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','Weapon skill damage +10%',}}
     -- RDMCape.TP		=	{ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}}
     -- RDMCape.MACC	=	{ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','Weapon skill damage +10%',}}
@@ -900,7 +900,7 @@ function init_gear_sets()
         -- legs		=	RELIC.Legs,
         legs        =   Nyame.Legs,
         feet		=	Nyame.Feet,
-	    -- left_ring	=	"Defending Ring",
+	    left_ring	=	"Gelatinous Ring +1",
         right_ring	=	"Ayanmo Ring",
 	}
 
@@ -938,13 +938,15 @@ function init_gear_sets()
 		-- legs		=	RELIC.Legs,
 		legs        =   Nyame.Legs,
 		feet		=	Nyame.Feet,
-		-- left_ring	=	"Defending Ring",
+		left_ring	=	"Gelatinous Ring +1",
 		right_ring	=	"Ayanmo Ring",
 	}
 
 	sets.defense.NukeLock = sets.midcast['Elemental Magic']
 
-	sets.defense.MDT = set_combine(sets.defense.PDT)
+	sets.defense.MDT = set_combine(sets.defense.PDT, {
+		ear1 = "Odnowa Earring +1"
+	})
 	sets.defense.MEVA = set_combine(sets.defense.MDT, {
 		-- main = "Daybreak",
 		-- sub = "Sacro Bulwark",

@@ -616,8 +616,12 @@ function init_gear_sets()
 
 	-- Defense sets
 
-	sets.defense.PDT = sets.idle.DT
-	sets.defense.MDT = sets.idle.DT
+	sets.defense.PDT = set_combine(sets.idle.DT, {
+		ring1="Gelatinous Ring +1",
+	})
+	sets.defense.MDT = set_combine(sets.idle.DT, {
+        ear1="Odnowa Earring +1",
+	})
 
 	sets.Kiting = { feet = "Fili Cothurnes +2" }
 	sets.latent_refresh = { waist = "Fucho-no-obi" }

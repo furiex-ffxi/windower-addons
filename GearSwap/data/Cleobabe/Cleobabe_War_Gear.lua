@@ -9,7 +9,7 @@ function user_job_setup()
 	state.IdleMode:options('Normal', 'PDT', 'Refresh', 'Reraise')
 	state.ExtraMeleeMode = M { ['description'] = 'Extra Melee Mode', 'None' }
 	state.Passive = M { ['description'] = 'Passive Mode', 'None', 'Twilight' }
-	state.Weapons:options('Chango', 'DualWeapons', 'Greatsword', 'ProcDagger', 'ProcSword', 'ProcGreatSword',
+	state.Weapons:options('Lycurgos', 'ShiningOne', 'Chango', 'Naegling', 'DualWeapons', 'Greatsword', 'ProcDagger', 'ProcSword', 'ProcGreatSword',
 	'ProcScythe', 'ProcPolearm', 'ProcGreatKatana', 'ProcClub', 'ProcStaff')
 
 	gear.da_jse_back = { name = "Cichol's Mantle", augments = { 'DEX+20', 'Accuracy+20 Attack+20', '"Dbl.Atk."+10' } }
@@ -294,7 +294,7 @@ function init_gear_sets()
 		-- left_ear="Telos Earring",
 		-- right_ear="Dedition Earring",
 		ring1="Flamma Ring",
-		ring2="Gelatinous Ring",
+		ring2="Gelatinous Ring +1",
 		-- right_ring="Defending Ring",
 		back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
@@ -305,6 +305,7 @@ function init_gear_sets()
 	 })
 
 	sets.defense.MDT =  set_combine(sets.defense.PDT, {
+		earring1 = "Odnowa Earring +1",
 		ring2 = "Fortified Ring"
 	})
 
@@ -350,7 +351,7 @@ function init_gear_sets()
 		-- waist="Ioskeha Belt +1",
 		-- left_ear="Brutal Earring",
 		left_ear="Cessance Earring",
-		right_ear="Assuage Earring",
+		right_ear="Boii Earring",
 		-- right_ear="Schere Earring",
 		left_ring="Flamma Ring",
 		right_ring="Petrov Ring",
@@ -1393,6 +1394,9 @@ function init_gear_sets()
 	sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
 
 	-- Weapons sets
+	sets.weapons.Lycurgos = { main = "Lycurgos", sub = "Duplus Grip" }
+	sets.weapons.ShiningOne = { main = "Shining One", sub = "Duplus Grip" }
+	sets.weapons.Naegling = { main = "Naegling", sub = "Blurred Shield +1" }
 	sets.weapons.Chango = { main = "Chango", sub = "Utu Grip" }
 	sets.weapons.DualWeapons = { main = "Firangi", sub = "Reikiko" }
 	sets.weapons.Greatsword = { main = "Montante +1", sub = "Utu Grip" }

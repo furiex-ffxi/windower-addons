@@ -71,6 +71,7 @@
                 <y>287</y>
             </pos>
         </display>
+        <visible>true</visible>
     </cleobabe>
     <furyex>
         <display>
@@ -79,7 +80,6 @@
                 <y>189</y>
             </pos>
         </display>
-        <visible>true</visible>
     </furyex>
     <liambear>
         <display>

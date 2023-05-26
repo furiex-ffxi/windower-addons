@@ -161,7 +161,10 @@ function init_gear_sets()
 	sets.midcast['Dread Spikes'] = set_combine(sets.midcast['Dark Magic'], {
 		body = Empy.Body,
 	})
-	sets.midcast.Absorb = set_combine(sets.midcast['Dark Magic'], { back = DRKCape.TP })
+	sets.midcast.Absorb = set_combine(sets.midcast['Dark Magic'], { 
+		back = DRKCape.TP,
+		ring1 = "Kishar Ring",
+	})
 	sets.midcast['Absorb-TP'] = set_combine(sets.midcast.Absorb, {
 		hands = Empy.Hands,
 	})
@@ -187,7 +190,8 @@ function init_gear_sets()
 		{
 			hands = Relic.Hands, -- low magic accuracy
 			ring1 = "Evanescence Ring",
-			ring2 = "Archon Ring",
+			ring2 = "Excelsis Ring",
+			-- ring2 = "Archon Ring",
 			back = "Niht Mantle",
 		}
 	)
@@ -352,10 +356,10 @@ function init_gear_sets()
 		head = "Loess Barbuta +1",
 		neck = "Warder's Charm +1",
 		ear1 = "Genmei Earring",
-		ear2 = "Ethereal Earring",
+		ear2 = "Odnowa Earring +1",
 		body = "Tartarus Platemail",
 		hands = "Sulev. Gauntlets +2",
-		ring1 = "Gelatinous Ring +1",
+		-- ring1 = "Gelatinous Ring +1",
 		ring2 = "Moonlight Ring",
 		back = "Moonlight Cape",
 		waist = "Flume Belt +1",
@@ -370,10 +374,10 @@ function init_gear_sets()
 		head = "Loess Barbuta +1",
 		neck = "Warder's Charm +1",
 		ear1 = "Genmei Earring",
-		ear2 = "Ethereal Earring",
+		ear2 = "Odnowa Earring +1",
 		body = "Tartarus Platemail",
 		hands = "Sulev. Gauntlets +2",
-		ring1 = "Gelatinous Ring +1",
+		-- ring1 = "Gelatinous Ring +1",
 		ring2 = "Moonlight Ring",
 		back = "Moonlight Cape",
 		waist = "Flume Belt +1",

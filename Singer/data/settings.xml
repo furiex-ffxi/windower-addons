@@ -76,13 +76,13 @@
     <liambear>
         <actions>true</actions>
         <aoe>
-            <p3>false</p3>
-            <p5>false</p5>
+            <p1>false</p1>
+            <p2>false</p2>
         </aoe>
         <box>
             <pos>
-                <x>2203</x>
-                <y>155</y>
+                <x>2230</x>
+                <y>364</y>
             </pos>
             <text>
                 <fonts>
@@ -93,5 +93,6 @@
         <debuffing>true</debuffing>
         <marcato>Honor March</marcato>
         <pianissimo>true</pianissimo>
+        <troubadour>false</troubadour>
     </liambear>
 </settings>
