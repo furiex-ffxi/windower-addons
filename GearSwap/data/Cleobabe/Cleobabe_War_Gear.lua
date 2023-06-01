@@ -1,7 +1,7 @@
 function user_job_setup()
 	-- Options: Override default values
 	state.OffenseMode:options('Normal', 'SomeAcc', 'Acc', 'FullAcc', 'Fodder')
-	state.WeaponskillMode:options('Match', 'Normal', 'SomeAcc', 'Acc', 'FullAcc', 'Fodder')
+	state.WeaponskillMode:options('Match', 'Proc', 'Normal', 'SomeAcc', 'Acc', 'FullAcc', 'Fodder')
 	state.HybridMode:options('Normal')
 	state.PhysicalDefenseMode:options('PDT', 'PDTReraise')
 	state.MagicalDefenseMode:options('MDT', 'MDTReraise')
@@ -9,7 +9,7 @@ function user_job_setup()
 	state.IdleMode:options('Normal', 'PDT', 'Refresh', 'Reraise')
 	state.ExtraMeleeMode = M { ['description'] = 'Extra Melee Mode', 'None' }
 	state.Passive = M { ['description'] = 'Passive Mode', 'None', 'Twilight' }
-	state.Weapons:options('Lycurgos', 'ShiningOne', 'Chango', 'Naegling', 'DualWeapons', 'Greatsword', 'ProcDagger', 'ProcSword', 'ProcGreatSword',
+	state.Weapons:options('None', 'Lycurgos', 'ShiningOne', 'Chango', 'Naegling', 'DualWeapons', 'Greatsword', 'ProcDagger', 'ProcSword', 'ProcGreatSword',
 	'ProcScythe', 'ProcPolearm', 'ProcGreatKatana', 'ProcClub', 'ProcStaff')
 
 	gear.da_jse_back = { name = "Cichol's Mantle", augments = { 'DEX+20', 'Accuracy+20 Attack+20', '"Dbl.Atk."+10' } }
@@ -19,8 +19,8 @@ function user_job_setup()
 	send_command('bind ^` input /ja "Hasso" <me>')
 	send_command('bind !` input /ja "Seigan" <me>')
 	send_command('bind @` gs c cycle SkillchainMode')
-	send_command('bind !r gs c weapons Greatsword;gs c update')
-
+	send_command('bind !r gs c set skipprocweapons true;gs c reset weaponskillmode;gs c set weapons none')
+	send_command('bind !q gs c set skipprocweapons false;gs c set weapons ProcSword;gs c set weaponskillmode proc')
 	--Ikenga_axe_bonus = 300  -- It is 300 at R25. Uncomment if you need to manually adjust because you are using below R25 or above
 
 	select_default_macro_book()
@@ -164,6 +164,9 @@ function init_gear_sets()
         -- right_ring="Niqmaddu Ring",
 
 	}
+
+	sets.precast.WS.Proc = {
+	}	
 
 	sets.precast.WS.SomeAcc = set_combine(sets.precast.WS, { 
 		-- back = "Letalis Mantle", 
@@ -1401,7 +1404,7 @@ function init_gear_sets()
 	sets.weapons.DualWeapons = { main = "Firangi", sub = "Reikiko" }
 	sets.weapons.Greatsword = { main = "Montante +1", sub = "Utu Grip" }
 	sets.weapons.ProcDagger = { main = "Chicken Knife II", sub = empty }
-	sets.weapons.ProcSword = { main = "Ark Sword", sub = empty }
+	sets.weapons.ProcSword = { main = "Wax Sword", sub = empty }
 	sets.weapons.ProcGreatSword = { main = "Lament", sub = empty }
 	sets.weapons.ProcScythe = { main = "Ark Scythe", sub = empty }
 	sets.weapons.ProcPolearm = { main = "Pitchfork +1", sub = empty }

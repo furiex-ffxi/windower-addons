@@ -118,6 +118,13 @@
                 <3>AAEV</3>
                 <4>Valaineral</4>
             </v2ambu>
+            <woe>
+                <1>Valaineral</1>
+                <2>Kupipi</2>
+                <3>Zeid II</3>
+                <4>Iroha II</4>
+                <5>Shantotto II</5>
+            </woe>
         </sets>
         <wait>
             <aftercast>3</aftercast>

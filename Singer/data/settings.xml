@@ -1,11 +1,11 @@
 <?xml version="1.1" ?>
 <settings>
     <global>
-        <actions>false</actions>
+        <actions>true</actions>
         <active>true</active>
         <aoe>
-            <p1>true</p1>
-            <p2>true</p2>
+            <p1>false</p1>
+            <p2>false</p2>
             <p3>true</p3>
             <p4>true</p4>
             <p5>true</p5>
@@ -28,8 +28,8 @@
             </flags>
             <padding>0</padding>
             <pos>
-                <x>650</x>
-                <y>0</y>
+                <x>2230</x>
+                <y>364</y>
             </pos>
             <text>
                 <alpha>255</alpha>
@@ -51,14 +51,14 @@
             </text>
         </box>
         <clarion>true</clarion>
-        <debuffing>false</debuffing>
+        <debuffing>true</debuffing>
         <delay>4</delay>
         <interval>0.1</interval>
-        <marcato>Sentinel&apos;s Scherzo</marcato>
+        <marcato>Honor March</marcato>
         <max_ws>99</max_ws>
         <min_ws>20</min_ws>
         <nightingale>true</nightingale>
-        <pianissimo>false</pianissimo>
+        <pianissimo>true</pianissimo>
         <recast>
             <buff>
                 <max>10</max>
@@ -74,25 +74,10 @@
         <troubadour>true</troubadour>
     </global>
     <liambear>
-        <actions>true</actions>
         <aoe>
-            <p1>false</p1>
-            <p2>false</p2>
+            <p2>true</p2>
+            <p4>false</p4>
+            <p5>false</p5>
         </aoe>
-        <box>
-            <pos>
-                <x>2230</x>
-                <y>364</y>
-            </pos>
-            <text>
-                <fonts>
-
-                </fonts>
-            </text>
-        </box>
-        <debuffing>true</debuffing>
-        <marcato>Honor March</marcato>
-        <pianissimo>true</pianissimo>
-        <troubadour>false</troubadour>
     </liambear>
 </settings>

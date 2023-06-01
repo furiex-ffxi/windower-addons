@@ -1,6 +1,6 @@
 function user_job_setup()
 	-- Options: Override default values
-	state.OffenseMode:options('Normal', 'SomeAcc', 'Acc', 'FullAcc', 'Fodder')
+	state.OffenseMode:options('Normal','DT','SomeAcc', 'Acc', 'FullAcc', 'Fodder')
 	state.WeaponskillMode:options('Match', 'Normal', 'SomeAcc', 'Acc', 'FullAcc', 'Fodder')
 	state.HybridMode:options('Normal')
 	state.PhysicalDefenseMode:options('PDT', 'PDTReraise')
@@ -54,8 +54,17 @@ function init_gear_sets()
 		Hands="Heath. Gauntlets +2",
 		Legs="Heath. Flanchard +2",
 		Feet="Heath. Sollerets +2",
-	}	
-	
+	}
+
+	Sulevia = {}
+	Sulevia = {
+		head="Sulevia's Mask +2",
+		body="Sulevia's Plate. +2",
+		hands="Sulev. Gauntlets +2",
+		legs="Sulev. Cuisses +2",
+		feet="Sulev. Leggings +2",
+	}
+
 	-- Precast Sets
 	-- Precast sets to enhance JAs
 	sets.precast.JA['Diabolic Eye'] = {
@@ -97,7 +106,7 @@ function init_gear_sets()
 		ear2 = "Malignance Earring",
 		body = "Odyss. Chestplate",
 		hands = "Leyline Gloves",
-		ring1 = "Lebeche Ring",
+		ring1 = "Prolix Ring",
 		ring2 = "Kishar Ring",
 		back = "Moonlight Cape",
 		waist = "Flume Belt +1",
@@ -218,14 +227,14 @@ function init_gear_sets()
 	sets.precast.WS = {
 		ammo = "Knobkierrie",
 		-- ammo = "Seeth. bomblet +1",
-		head = sets.Nyame.Head,
+		head = Empy.Head,
 		-- neck = "Fotia Gorget",
 		neck = "Agitator's Collar",
 		-- ear1 = "Lugra Earring +1",
         ear1 = { name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
         ear2 = "Thrud Earring",
 		body = Empy.Body,
-		hands = sets.Nyame.Hands,
+		hands = Empy.Hands,
 		-- body = gear.valorous_wsd_body,
 		-- hands = "Sulev. Gauntlets +2",
         ring1 = "Stikini Ring +1",
@@ -318,7 +327,7 @@ function init_gear_sets()
 		legs = sets.Nyame.Legs,
 		feet = sets.Nyame.Feet,
 		ring1 = "Defending Ring",
-		ring2 = "Dark Ring",
+		ring2 = "Sulevia's Ring",
 		back = "Shadow Mantle",
 		waist = "Flume Belt +1",
 	}
@@ -479,6 +488,14 @@ function init_gear_sets()
 		legs = "Sulev. Cuisses +2",
 		feet = "Flam. Gambieras +2"
 	}
+	sets.engaged.DT = set_combine(sets.engaged, {
+		head="Sulevia's Mask +2",
+		body="Sulevia's Plate. +2",
+		hands="Sulev. Gauntlets +2",
+		legs="Sulev. Cuisses +2",
+		feet="Sulev. Leggings +2",
+	})
+
 	--Example sets:
 	--[[
     sets.engaged.Adoulin = {}

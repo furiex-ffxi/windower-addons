@@ -4,7 +4,7 @@ function user_job_setup()
 	state.HybridMode:options('Normal', 'DT')
 	state.CastingMode:options('Normal', 'Resistant', 'AoE')
 	state.IdleMode:options('Normal', 'NoRefresh', 'DT')
-	state.Weapons:options('None', 'Naegling', 'Aeneas', 'DualWeapons', 'DualNaegling', 'DualTauret', 'DualAeolian')
+	state.Weapons:options('None', 'Naegling', 'Aeneas', 'Daybreak', 'DualWeapons', 'DualNaegling', 'DualTauret', 'DualAeolian')
 	-- Whether to use Carn (or song daggers in general) under a certain threshhold even when weapons are locked.
 	state.CarnMode = M { 'Always', '300', '1000', 'Never' }
 
@@ -48,6 +48,7 @@ function init_gear_sets()
 	sets.weapons.Naegling = { main = "Naegling", sub = "Genmei Shield" }
 	sets.weapons.DualTauret = { main = "Tauret", sub = "Blurred Knife +1" }
 	sets.weapons.DualAeolian = { main = "Tauret", sub = "Malevolence" }
+	sets.weapons.Daybreak = { main = "Daybreak", sub = "Ammurapi Shield" }
 
 	sets.buff.Sublimation = { waist = "Embla Sash" }
 	sets.buff.DTSublimation = { waist = "Embla Sash" }
@@ -299,7 +300,7 @@ function init_gear_sets()
 	sets.midcast.March = { hands = "Fili Manchettes +2" }
 	sets.midcast.Mazurka = { range = "Marsyas" }
 	sets.midcast.Minne = {legs="Mou. Seraweels +1"}
-	sets.midcast.Minuet = { body = "Fili Hongreline +2" }
+	sets.midcast.Minuet = { body = "Fili Hongreline +3" }
 	sets.midcast.Paeon = { range = info.ExtraSongInstrument }
 	sets.midcast.Threnody = {body="Mou. Manteel +1"}
 	sets.midcast['Honor March'] = set_combine(sets.midcast.March, { range = "Marsyas" })
@@ -321,7 +322,7 @@ function init_gear_sets()
         main="Carnwenhan",
         range="Gjallarhorn",
         head="Fili Calot +2",
-        body="Fili Hongreline +2",
+        body="Fili Hongreline +3",
         hands="Fili Manchettes +2",
         legs="Inyanga Shalwar +2",
         feet="Brioso Slippers +3",
@@ -726,7 +727,7 @@ function select_default_macro_book()
 	set_macro_page(1, 1)
 end
 
-state.Weapons:options('None', 'Naegling', 'Aeneas', 'DualWeapons', 'DualNaegling', 'DualTauret', 'DualAeolian')
+state.Weapons:options('None', 'Naegling', 'Aeneas', 'DualWeapons', 'DualNaegling', 'DualTauret', 'DualAeolian', 'Daybreak')
 
 autows_list = {
 	['Naegling'] = 'Savage Blade',

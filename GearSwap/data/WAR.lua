@@ -51,7 +51,6 @@ end
 
     -- Setup vars that are user-independent.
 function job_setup()
-
 	state.Buff['Brazen Rush'] = buffactive['Brazen Rush'] or false
 	state.Buff["Warrior's Charge"] = buffactive["Warrior's Charge"] or false
 	state.Buff['Mighty Strikes'] = buffactive['Mighty Strikes']  or false

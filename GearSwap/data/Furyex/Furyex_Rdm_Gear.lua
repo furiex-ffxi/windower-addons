@@ -10,7 +10,7 @@ function user_job_setup()
 	state.MagicalDefenseMode:options('MDT')
 	state.ResistDefenseMode:options('MEVA')
 	state.Weapons:options('None', 'Naegling', 'DualWeapons', 'DualWeaponsAcc', 'DualEvisceration', 'DualClubs',
-	'DualAeolian', 'DualProcDaggers', 'EnspellOnly', 'EnspellDW')
+	'DualAeolian', 'DualProcSwords', 'DualProcDaggers', 'EnspellOnly', 'EnspellDW')
 
 	gear.stp_jse_back = { name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}}
 	gear.nuke_jse_back = { name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','Weapon skill damage +10%',}}
@@ -36,8 +36,8 @@ function user_job_setup()
 	send_command(
 	'bind ^r gs c set skipprocweapons true;gs c reset weaponskillmode;gs c weapons Default;gs c set unlockweapons false')
 	send_command('bind ^q gs c set weapons enspellonly;gs c set unlockweapons true')
-	send_command('bind !r gs c set skipprocweapons true;gs c reset weaponskillmode;gs c set weapons none')
-	send_command('bind !q gs c set skipprocweapons false;gs c set weapons DualProcDaggers;gs c set weaponskillmode proc')
+	send_command('bind !r gs c set skipprocweapons true;gs c reset weaponskillmode;gs c set weapons dualweapons')
+	send_command('bind !q gs c set skipprocweapons false;gs c set weapons DualProcSwords;gs c set weaponskillmode proc')
 
 	select_default_macro_book()
 end
@@ -72,7 +72,7 @@ function init_gear_sets()
     EMPY.Body		=	"Lethargy Sayon +2"
     EMPY.Hands		=	"Leth. Gantherots +2"
     EMPY.Legs		=	"Leth. Fuseau +2"
-    EMPY.Feet		=	"Leth. Houseaux +2"
+    EMPY.Feet		=	"Leth. Houseaux +3"
 
     -- Carmine
     Carm.Legs = {}
@@ -197,7 +197,7 @@ function init_gear_sets()
 		hands = "Malignance Gloves",
 		ring1 = "Ramuh Ring +1",
 		ring2 = "Ramuh Ring +1",
-        back		=	RDMCape.MACC,		
+        back		=	RDMCape.TP,		
 		waist = "Olseni Belt",
 		legs = "Malignance Tights",
 		feet = "Malignance Boots"
@@ -975,10 +975,11 @@ function init_gear_sets()
 
 	-- Weapons sets
 	sets.weapons.Naegling = { main = "Naegling", sub = "Sacro Bulwark", range = empty }
-	sets.weapons.DualWeapons = { main = "Naegling", sub = "Thibron", range = empty }
+	sets.weapons.DualWeapons = { main = "Naegling", sub = "Machaera +2", range = empty }
 	sets.weapons.DualWeaponsAcc = { main = "Naegling", sub = "Almace", range = empty }
 	sets.weapons.DualEvisceration = { main = "Tauret", sub = "Almace", range = empty }
 	sets.weapons.DualAeolian = { main = "Tauret", sub = "Bunzi's Rod", range = empty }
+	sets.weapons.DualProcSwords = { main = "Brunello", sub = "Soulflayer's Wand", range = empty }
 	sets.weapons.DualProcDaggers = { main = "Blurred Knife +1", sub = "Atoyac", range = empty }
 	sets.weapons.EnspellOnly = { main = "Norgish Dagger", sub = "Aern Dagger", range = "Kaja Bow", ammo = "Beetle Arrow" }
 	sets.weapons.EnspellDW = { main = "Blurred Knife +1", sub = "Atoyac", range = "Kaja Bow", ammo = "Beetle Arrow" }
