@@ -69,7 +69,7 @@ function init_gear_sets()
 		feet="Agoge Calligae +1",
 	}
 	sets.precast.JA['Retaliation'] = {
-		feet="Boii Calligae +1",
+		feet="Boii Calligae +2",
 		hands="Pummeler's Mufflers +2"
 	}
 	sets.precast.JA['Restraint'] = {
@@ -175,7 +175,7 @@ function init_gear_sets()
 	sets.precast.WS.Acc = set_combine(sets.precast.WS, { 
 		neck = "Combatant's Torque",
 		legs="Pumm. Cuisses +2",
-        feet="Pumm. Calligae +2",
+        feet="Pumm. Calligae +3",
 	})
 	sets.precast.WS.FullAcc = set_combine(sets.precast.WS, { 
 		neck = "Combatant's Torque" 
@@ -291,7 +291,7 @@ function init_gear_sets()
 		-- body="Sakpata's Plate",
 		-- hands="Sakpata's Gauntlets",
 		-- legs="Pumm. Cuisses +2",
-		-- feet="Pumm. Calligae +2",
+		-- feet="Pumm. Calligae +3",
 		-- neck={ name="War. Beads +2", augments={'Path: A',}},
 		-- waist="Ioskeha Belt +1",
 		-- left_ear="Telos Earring",
@@ -339,17 +339,13 @@ function init_gear_sets()
 	sets.engaged = {
 		-- ammo="Coiste Bodhar",
 		ammo="Ginsen",
-		head="Flam. Zucchetto +2",
+		head = "Boii Mask +2",
 		neck = "Combatant's Torque",
-		body="Flamma Korazin +2",
-		hands="Flamma Manopolas +2",
+		body = "Boii Lorica +2",
 		-- legs="Tatena. Haidate +1",
-		-- feet="Flamma Gambieras +2",
-		-- head="Flam. Zucchetto +2",
-		-- body={ name="Valorous Mail", augments={'Accuracy+22','"Dbl.Atk."+5','Attack+14',}},
-		-- hands="Tatenashi Gote +1",
+		hands="Tatenashi Gote +1",
 		legs="Pumm. Cuisses +2",
-		feet="Pumm. Calligae +2",
+		feet="Pumm. Calligae +3",
 		-- neck="Warrior's Bead Necklace +2",
 		-- waist="Ioskeha Belt +1",
 		-- left_ear="Brutal Earring",

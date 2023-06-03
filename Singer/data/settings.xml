@@ -76,6 +76,7 @@
     <liambear>
         <aoe>
             <p2>true</p2>
+            <p3>false</p3>
             <p4>false</p4>
             <p5>false</p5>
         </aoe>

@@ -54,11 +54,11 @@ function init_gear_sets()
 
 	-- Fill this with your own JSE. 
     --Atrophy
-    AF.Head		=	"Atro. Chapeau +2"
-    AF.Body		=	"Atrophy Tabard +2"
+    AF.Head		=	"Atrophy Chapeau +3"
+    AF.Body		=	"Atrophy Tabard +3"
     AF.Hands		=	"Atrophy Gloves +3"
-    AF.Legs		=	"Atrophy Tights +2"
-    AF.Feet		=	"Atrophy Boots +2"
+    AF.Legs		=	"Atrophy Tights +3"
+    AF.Feet		=	"Atrophy Boots +3"
 
     --Vitiation
     RELIC.Head		=	"Viti. Chapeau +1"
@@ -872,7 +872,6 @@ function init_gear_sets()
 		feet = gear.chironic_refresh_feet
 	}
 
-
 	-- Idle sets
 	sets.idle = {
         ammo		=	"Homiliary",
@@ -889,6 +888,14 @@ function init_gear_sets()
         -- left_ring	=	"Defending Ring +1",
         -- right_ring	=	"Stikini Ring",
         back		=	RDMCape.TP,
+	}
+
+	sets.idle.Town = {
+		Head = AF.Head,
+        Body = AF.Body, 
+        Hands = AF.Hands,
+        Legs = AF.Legs,
+        Feet = AF.Feet,
 	}
 
 	sets.idle.PDT = {

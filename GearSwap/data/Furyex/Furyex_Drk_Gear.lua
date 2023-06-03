@@ -321,11 +321,11 @@ function init_gear_sets()
 		-- hands = "Sulev. Gauntlets +2",
 		-- legs = "Carmine Cuisses +1",
 		-- feet = "Amm Greaves",
-		head = sets.Nyame.Head,
-		body = sets.Nyame.Body,
-		hands = sets.Nyame.Hands,
-		legs = sets.Nyame.Legs,
-		feet = sets.Nyame.Feet,
+		head="Nyame Helm",
+        body="Nyame Mail",
+        hands="Nyame Gauntlets",
+        legs="Nyame Flanchard",
+        feet="Nyame Sollerets",
 		ring1 = "Defending Ring",
 		ring2 = "Sulevia's Ring",
 		back = "Shadow Mantle",
@@ -395,7 +395,9 @@ function init_gear_sets()
 	}
 
 	sets.Kiting = { legs = "Carmine Cuisses +1" }
-	sets.passive.Reraise = { head = "Twilight Helm", body = "Twilight Mail" }
+	sets.passive.Reraise = { 
+		head = "Twilight Helm", body = "Twilight Mail"
+	 }
 	sets.buff.Doom = set_combine(sets.buff.Doom, {})
 	sets.buff.Sleep = { head = "Frenzy Sallet" }
 	sets.buff['Dark Seal'] = { head= Relic.Head }

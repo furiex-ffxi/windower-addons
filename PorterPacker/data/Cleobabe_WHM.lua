@@ -2,8 +2,8 @@
 -- Proof of Concept v 0.2.0
 -- by Lili
 
-character_name = 'Furyex'
-character_job = 'DRK'
+character_name = 'Cleobabe'
+character_job = 'WHM'
 
 local slot_names = {
 	['main'] = true,
@@ -67,6 +67,7 @@ gear = {}
 sets = {
 	['weapons'] = {},
 	['precast'] = {
+		['FC'] = {},
 		['WS'] = {},
 		['JA'] = {},
 	},
