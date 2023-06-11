@@ -56,8 +56,17 @@
     <furyex>
         <text_box_settings>
             <pos>
-                <x>857</x>
+                <x>888</x>
+                <y>7</y>
             </pos>
         </text_box_settings>
     </furyex>
+    <liambear>
+        <text_box_settings>
+            <pos>
+                <x>939</x>
+                <y>-2</y>
+            </pos>
+        </text_box_settings>
+    </liambear>
 </settings>

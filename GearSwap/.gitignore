@@ -1,0 +1,31 @@
+# git ls-files --others --exclude-from=.git/info/exclude
+# Lines that start with '#' are comments.
+
+equip_processing.lua
+export.lua
+flow.lua
+gearswap.lua
+helper_functions.lua
+packet_parsing.lua
+readme.md
+README.md
+refresh.lua
+statics.lua
+targets.lua
+triggers.lua
+user_functions.lua
+validate.lua
+version_history.txt
+beta_examples_and_information/*
+libs/Mote-*
+libs/rev1/*
+data/common/*
+data/user/*
+data/export/*
+
+
+libs/closetCleaner.lua
+
+Modes.lua
+organizer-lib.lua
+data/export/*

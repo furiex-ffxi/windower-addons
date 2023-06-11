@@ -23,7 +23,7 @@ Toggles:
     * condensecrits - Condenses critical hits and normal hits together (Default: False)
 * cancelmulti - Cancels multiple consecutive identical lines (Default: True)
 * showonernames - Shows the name of the owner on pet messages (Default: False)
-* crafting - Toggle early display of crafting results (Default: True)
+* crafting - Toggle early display of crafting results (Default: True)   
 
 Utilities:  
 * colortest - Shows the 509 possible colors for use with the settings file

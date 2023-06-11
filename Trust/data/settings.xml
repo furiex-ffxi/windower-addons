@@ -4,7 +4,7 @@
         <battle>
             <melee_distance>3</melee_distance>
             <range_distance>21</range_distance>
-            <targets>Aello,Apex Leech,Apex Eft,Apex Mandragora,Apex Chapuli,Apex Jagil,Lentic Toad,Phlegmatic Byrgen,Undulating Umbril,Wretched Poroggo,Lentic Toad,Apex Eft,Locus Colibri,Locus Dire Bat,Locus Thousand Eyes,Locus Spartoi Warrior,Locus Spartoi Sorcerer,Locus Hati,Locus Ghost Crab</targets>
+            <targets>Locus Camelopard,Locus Armet Beetle,Apex Leech,Apex Eft,Apex Mandragora,Apex Chapuli,Apex Jagil,Lentic Toad,Phlegmatic Byrgen,Undulating Umbril,Wretched Poroggo,Lentic Toad,Apex Eft,Locus Colibri,Locus Dire Bat,Locus Spartoi Warrior,Locus Spartoi Sorcerer,Locus Hati,Locus Ghost Crab</targets>
             <trusts>Ulmia,Apururu (UC),Koru-Moru,Qultada,Ayame</trusts>
         </battle>
         <help>

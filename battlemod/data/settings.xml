@@ -7,25 +7,25 @@
     <global>
         <cancelmulti>true</cancelmulti>
         <commamode>false</commamode>
-        <condensecrits>false</condensecrits>
+        <condensecrits>true</condensecrits>
         <condensedamage>true</condensedamage>
         <condensetargetname>false</condensetargetname>
         <condensetargets>true</condensetargets>
         <crafting>true</crafting>
-        <line_aoe>AOE ${numb} ¨ ${target}</line_aoe>
-        <line_aoebuff>${actor} ${abil} ¨ ${target} (${status})</line_aoebuff>
-        <line_full>[${actor}] ${numb} ${abil} ¨ ${target}</line_full>
-        <line_item>[${actor}] ${abil} ¨ ${target} (${item2})</line_item>
-        <line_itemnum>[${actor}] ${abil} ¨ ${target} (${numb} ${item2})</line_itemnum>
-        <line_noability>${numb} ¨ ${target}</line_noability>
-        <line_noactor>${abil} ${numb} ¨ ${target}</line_noactor>
-        <line_nonumber>[${actor}] ${abil} ¨ ${target}</line_nonumber>
-        <line_notarget>[${actor}] ${abil} ¨ ${number}</line_notarget>
-        <line_roll>${actor} ${abil} ¨ ${target} ª ${number}</line_roll>
-        <line_steal>[${actor}] ${abil} ¨ ${target} (${item})</line_steal>
+        <line_aoe>AOE ${numb} ï¿½ï¿½ ${target}</line_aoe>
+        <line_aoebuff>${actor} ${abil} ï¿½ï¿½ ${target} (${status})</line_aoebuff>
+        <line_full>[${actor}] ${numb} ${abil} ï¿½ï¿½ ${target}</line_full>
+        <line_item>[${actor}] ${abil} ï¿½ï¿½ ${target} (${item2})</line_item>
+        <line_itemnum>[${actor}] ${abil} ï¿½ï¿½ ${target} (${numb} ${item2})</line_itemnum>
+        <line_noability>${numb} ï¿½ï¿½ ${target}</line_noability>
+        <line_noactor>${abil} ${numb} ï¿½ï¿½ ${target}</line_noactor>
+        <line_nonumber>[${actor}] ${abil} ï¿½ï¿½ ${target}</line_nonumber>
+        <line_notarget>[${actor}] ${abil} ï¿½ï¿½ ${number}</line_notarget>
+        <line_roll>${actor} ${abil} ï¿½ï¿½ ${target} ï¿½ï¿½ ${number}</line_roll>
+        <line_steal>[${actor}] ${abil} ï¿½ï¿½ ${target} (${item})</line_steal>
         <oxford>true</oxford>
         <showblocks>true</showblocks>
-        <showcritws>false</showcritws>
+        <showcritws>true</showcritws>
         <showguards>true</showguards>
         <showownernames>false</showownernames>
         <showrollinfo>false</showrollinfo>

@@ -67,16 +67,16 @@
     <cleobabe>
         <display>
             <pos>
-                <x>2023</x>
-                <y>296</y>
+                <x>2008</x>
+                <y>287</y>
             </pos>
         </display>
     </cleobabe>
     <furyex>
         <display>
             <pos>
-                <x>1984</x>
-                <y>122</y>
+                <x>1931</x>
+                <y>189</y>
             </pos>
         </display>
         <visible>true</visible>
@@ -84,8 +84,8 @@
     <liambear>
         <display>
             <pos>
-                <x>2144</x>
-                <y>317</y>
+                <x>2103</x>
+                <y>830</y>
             </pos>
         </display>
         <visible>true</visible>

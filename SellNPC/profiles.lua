@@ -42,7 +42,6 @@ profiles['junk'] = S{
     'Wyvern Tailskin',
     'Khimaira Mane',
     'Anc. Beast Horn',
-    'Raxa',
     'Behemoth Horn',
     'Beech Log',
     'Ebony Log',
@@ -135,6 +134,10 @@ profiles['junk'] = S{
     'Breeze Geode',
     'Soil Geode',
     'Light Geode',
-    'Shadow Geode',
+    'Colibri Beak',
+    'Colibri Feather',
+    'Beetle Jaw',
+    'Beetle Shell',
+    'Insect Wing',
 }
 return profiles

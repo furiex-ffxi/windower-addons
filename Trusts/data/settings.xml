@@ -10,6 +10,13 @@
                 <3>Ulmia</3>
                 <4>Apururu (UC)</4>
             </apex>
+            <apoc>
+                <1>Kupipi</1>
+                <2>Joachim</2>
+                <3>Ulmia</3>
+                <4>Koru-Moru</4>
+                <5>Sylvie (UC)</5>
+            </apoc>
             <default>
                 <1>Valaineral</1>
                 <2>Mihli Aliapoh</2>
@@ -31,6 +38,11 @@
                 <4>Apururu (UC)</4>
                 <5>Ayame</5>
             </fusion>
+            <healers>
+                <1>Kupipi</1>
+                <2>Cherukiki</2>
+                <3>Sylvie (UC)</3>
+            </healers>
             <level>
                 <1>Valaineral</1>
                 <2>Joachim</2>
@@ -39,15 +51,14 @@
                 <5>Apururu (UC)</5>
             </level>
             <lilith>
-                <1>Selh&apos;teus</1>
-                <2>Cherukiki</2>
-                <3>Koru-Moru</3>
-                <4>Sylvie (UC)</4>
+                <1>AAEV</1>
+                <2>Sylvie (UC)</2>
+                <3>Ulmia</3>
             </lilith>
             <locus>
-                <1>Koru-Moru</1>
-                <2>Matsui-P</2>
-                <3>Sylvie (UC)</3>
+                <1>Sylvie (UC)</1>
+                <2>Kupipi</2>
+                <3>Qultada</3>
             </locus>
             <ody>
                 <1>Sylvie (UC)</1>
@@ -55,6 +66,33 @@
                 <3>Gessho</3>
                 <4>Kupipi</4>
             </ody>
+            <omen>
+                <1>Valaineral</1>
+                <2>Matsui-P</2>
+                <4>Cherukiki</4>
+                <5>Sylvie (UC)</5>
+            </omen>
+            <omenboss>
+                <1>Selh&apos;teus</1>
+                <2>Valaineral</2>
+                <4>Cherukiki</4>
+                <5>Sylvie (UC)</5>
+            </omenboss>
+            <rem>
+                <1>Cherukiki</1>
+                <2>Gessho</2>
+                <3>Kupipi</3>
+            </rem>
+            <sortie>
+                <1>Sylvie (UC)</1>
+                <2>Kupipi</2>
+                <3>Valaineral</3>
+            </sortie>
+            <sov>
+                <1>King of Hearts</1>
+                <2>Valaineral</2>
+                <3>Sylvie (UC)</3>
+            </sov>
             <support>
                 <1>Qultada</1>
                 <2>Joachim</2>
@@ -68,13 +106,6 @@
                 <3>Matsui-P</3>
                 <4>Ulmia</4>
             </sylvie>
-            <tank>
-                <1>Qultada</1>
-                <2>Apururu (UC)</2>
-                <3>Joachim</3>
-                <4>Valaineral</4>
-                <5>Koru-Moru</5>
-            </tank>
             <th>
                 <1>Kupipi</1>
                 <2>Selh&apos;teus</2>
@@ -82,9 +113,9 @@
                 <4>Lion II</4>
             </th>
             <v1ambu>
-                <1>Kupipi</1>
-                <2>Koru-Moru</2>
-                <3>Sylvie (UC)</3>
+                <1>Valaineral</1>
+                <2>August</2>
+                <3>Apururu (UC)</3>
             </v1ambu>
             <v2ambu>
                 <1>Matsui-P</1>
@@ -92,6 +123,13 @@
                 <3>AAEV</3>
                 <4>Valaineral</4>
             </v2ambu>
+            <woe>
+                <1>Valaineral</1>
+                <2>Kupipi</2>
+                <3>Zeid II</3>
+                <4>Iroha II</4>
+                <5>Shantotto II</5>
+            </woe>
         </sets>
         <wait>
             <aftercast>3</aftercast>

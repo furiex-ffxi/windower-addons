@@ -1,0 +1,21 @@
+<?xml version="1.1" ?>
+<settings>
+    <global>
+        <WS>Evisceration</WS>
+        <autoloop>false</autoloop>
+        <autosell>false</autosell>
+        <autows>false</autows>
+        <autowstp>1000</autowstp>
+        <cobalt>1</cobalt>
+        <converttocell>false</converttocell>
+        <displacers>5</displacers>
+        <refreshtrusts>true</refreshtrusts>
+        <rubicund>1</rubicund>
+        <scdelay>3</scdelay>
+        <trustset>botulus</trustset>
+        <warpwhendone>false</warpwhendone>
+    </global>
+    <liambear>
+        <autoloop>true</autoloop>
+    </liambear>
+</settings>

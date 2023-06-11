@@ -1,0 +1,132 @@
+<?xml version="1.1" ?>
+<settings>
+    <global>
+        <AutoActivate>true</AutoActivate>
+        <AutoDeusExAutomata>false</AutoDeusExAutomata>
+        <autosets>
+            <default>
+
+            </default>
+            <healer>
+                <frame>Stormwaker Frame</frame>
+                <head>Soulsoother Head</head>
+                <slot01>Disruptor</slot01>
+                <slot02>Economizer</slot02>
+                <slot03>Mana Conserver</slot03>
+                <slot04>Vivi-Valve</slot04>
+                <slot05>Percolator</slot05>
+                <slot06>Damage Gauge</slot06>
+                <slot07>Eraser</slot07>
+                <slot08>Optic Fiber</slot08>
+                <slot09>Steam Jacket</slot09>
+                <slot10>Condenser</slot10>
+                <slot11>Mana Channeler</slot11>
+                <slot12>Stealth Screen</slot12>
+            </healer>
+            <melee>
+                <frame>valoredge frame</frame>
+                <head>valoredge head</head>
+                <slot01>optic fiber</slot01>
+                <slot02>optic fiber ii</slot02>
+                <slot03>attuner</slot03>
+                <slot04>flame holder</slot04>
+                <slot05>turbo charger</slot05>
+                <slot06>turbo charger ii</slot06>
+                <slot07>magniplug</slot07>
+                <slot08>magniplug ii</slot08>
+                <slot09>auto-repair kit iv</slot09>
+                <slot10>inhibitor</slot10>
+                <slot11>inhibitor ii</slot11>
+                <slot12>steam jacket</slot12>
+            </melee>
+            <melrng>
+                <frame>sharpshot frame</frame>
+                <head>valoredge head</head>
+                <slot01>tension spring v</slot01>
+                <slot02>turbo charger</slot02>
+                <slot03>optic fiber ii</slot03>
+                <slot04>dynamo</slot04>
+                <slot05>tension spring iv</slot05>
+                <slot06>scope</slot06>
+                <slot07>auto-repair kit iv</slot07>
+                <slot08>coiler</slot08>
+                <slot09>tactical processor</slot09>
+                <slot10>armor plate ii</slot10>
+                <slot11>optic fiber</slot11>
+                <slot12>volt gun</slot12>
+            </melrng>
+            <ranger>
+                <frame>sharpshot frame</frame>
+                <head>sharpshot head</head>
+                <slot01>drum magazine</slot01>
+                <slot02>turbo charger ii</slot02>
+                <slot03>optic fiber ii</slot03>
+                <slot04>inhibitor</slot04>
+                <slot05>repeater</slot05>
+                <slot06>scope</slot06>
+                <slot07>auto-repair kit iv</slot07>
+                <slot08>inhibitor ii</slot08>
+                <slot09>speedloader ii</slot09>
+                <slot10>mana jammer iv</slot10>
+                <slot11>optic fiber</slot11>
+                <slot12>armor plate iv</slot12>
+            </ranger>
+            <rune>
+                <frame>valoredge frame</frame>
+                <head>soulsoother head</head>
+                <slot01>optic fiber</slot01>
+                <slot02>optic fiber ii</slot02>
+                <slot03>strobe</slot03>
+                <slot04>strobe ii</slot04>
+                <slot05>armor plate iv</slot05>
+                <slot06>flashbulb</slot06>
+                <slot07>mana jammer iii</slot07>
+                <slot08>mana jammer iv</slot08>
+                <slot09>auto-repair kit iv</slot09>
+                <slot10>barrier module</slot10>
+                <slot11>barrier module ii</slot11>
+                <slot12>analyzer</slot12>
+            </rune>
+        </autosets>
+        <bg>
+            <alpha>255</alpha>
+            <blue>0</blue>
+            <green>0</green>
+            <red>0</red>
+            <visible>true</visible>
+        </bg>
+        <burdentracker>true</burdentracker>
+        <flags>
+            <bold>false</bold>
+            <bottom>false</bottom>
+            <draggable>true</draggable>
+            <italic>false</italic>
+            <right>false</right>
+        </flags>
+        <maneuvertimers>true</maneuvertimers>
+        <padding>0</padding>
+        <pos>
+            <x>2218</x>
+            <y>815</y>
+        </pos>
+        <text>
+            <alpha>255</alpha>
+            <blue>255</blue>
+            <font>Consolas</font>
+            <fonts>
+
+            </fonts>
+            <green>255</green>
+            <red>255</red>
+            <size>10</size>
+            <stroke>
+                <alpha>255</alpha>
+                <blue>0</blue>
+                <green>0</green>
+                <red>0</red>
+                <width>0</width>
+            </stroke>
+        </text>
+        <visible>false</visible>
+    </global>
+</settings>

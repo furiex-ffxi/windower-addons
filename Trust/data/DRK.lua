@@ -12,12 +12,11 @@ TrustSettings = {
             'Scarlet Delirium'
         },
         Skillchains = {
-            defaultws = {'Cross Reaper','Catastrophe','Insurgency','Entropy','Torcleaver'},
+            defaultws = {'Resolution','Cross Reaper','Catastrophe','Insurgency','Entropy','Torcleaver'},
             tpws = {'Cross Reaper'},
-            spamws = {'Catastrophe','Torcleaver','Cross Reaper','Entropy','Judgment','Savage Blade'},
-            starterws = {'Torcleaver','Catastrophe','Cross Reaper','Entropy'},
-            -- preferws = {'Cross Reaper','Catastrophe','Torcleaver'},
-            preferws = {'Armor Break','Ground Strike','Vorpal Scythe'},
+            spamws = {'Resolution','Catastrophe','Torcleaver','Cross Reaper','Entropy','Judgment','Savage Blade'},
+            starterws = {'Resolution','Torcleaver','Catastrophe','Cross Reaper','Entropy'},
+            preferws = {'Cross Reaper','Catastrophe','Torcleaver'},
             cleavews = {'Fell Cleave'},
             amws = 'Entropy'
         }
