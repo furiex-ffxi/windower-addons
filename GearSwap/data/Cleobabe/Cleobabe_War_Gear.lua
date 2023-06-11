@@ -9,7 +9,7 @@ function user_job_setup()
 	state.IdleMode:options('Normal', 'PDT', 'Refresh', 'Reraise')
 	state.ExtraMeleeMode = M { ['description'] = 'Extra Melee Mode', 'None' }
 	state.Passive = M { ['description'] = 'Passive Mode', 'None', 'Twilight' }
-	state.Weapons:options('None', 'Lycurgos', 'ShiningOne', 'Chango', 'Naegling', 'DualWeapons', 'Greatsword', 'ProcDagger', 'ProcSword', 'ProcGreatSword',
+	state.Weapons:options('None', 'Lycurgos', 'ShiningOne', 'Naegling', 'Loxotic', 'Chango', 'DualWeapons', 'Greatsword', 'ProcDagger', 'ProcSword', 'ProcGreatSword',
 	'ProcScythe', 'ProcPolearm', 'ProcGreatKatana', 'ProcClub', 'ProcStaff')
 
 	gear.da_jse_back = { name = "Cichol's Mantle", augments = { 'DEX+20', 'Accuracy+20 Attack+20', '"Dbl.Atk."+10' } }
@@ -47,26 +47,28 @@ function init_gear_sets()
 	-- Precast sets to enhance JAs
 	sets.precast.JA['Berserk'] = { 
 		back = "Cichol's Mantle",
-		body="Pumm. Lorica +2", 
-        feet="Agoge Calligae +1"
+		body="Pumm. Lorica +3", 
+        feet="Agoge Calligae +2"
 	}
 	sets.precast.JA['Warcry'] = {
-        head="Agoge Mask +1"
+        head="Agoge Mask +2"
 	}
-	sets.precast.JA['Defender'] = {}
+	sets.precast.JA['Defender'] = {
+		hands="Agoge Mufflers +2"
+	}
 	sets.precast.JA['Aggressor'] = {
-		body="Agoge Lorica +1",
-		head="Pummeler's Mask +2"
+		body="Agoge Lorica +2",
+		head="Pummeler's Mask +3"
 	}
 	sets.precast.JA['Mighty Strikes'] = {
-		hands="Agoge Mufflers +1"
+		hands="Agoge Mufflers +2"
 	}
 	sets.precast.JA["Warrior's Charge"] = {
-		legs={ name="Agoge Cuisses +1", augments={'Enhances "Warrior\'s Charge" effect',}}
+		legs={ name="Agoge Cuisses +2", augments={'Enhances "Warrior\'s Charge" effect',}}
 	}
 	sets.precast.JA['Tomahawk'] = { 
 		ammo = "Thr. Tomahawk",
-		feet="Agoge Calligae +1",
+		feet="Agoge Calligae +2",
 	}
 	sets.precast.JA['Retaliation'] = {
 		feet="Boii Calligae +2",
@@ -76,7 +78,7 @@ function init_gear_sets()
 		hands="Boii Mufflers +2"
 	}
 	sets.precast.JA['Blood Rage'] = {
-        body="Boii Lorica +2"
+        body="Boii Lorica +3"
 	}
 	sets.precast.JA['Brazen Rush'] = {}
 	sets.precast.JA['Provoke'] = set_combine(sets.Enmity, {})
@@ -95,8 +97,8 @@ function init_gear_sets()
 
 	sets.precast.FC = {
         -- ammo="Sapience Orb",
-        -- head="Sakpata's Helm",
-        -- body="Sakpata's Breastplate",
+        head="Sakpata's Helm",
+        body="Sakpata's Breastplate",
         -- hands="Leyline Gloves",
         -- legs="Arjuna Breeches",
         -- feet="Odyssean Greaves",
@@ -104,7 +106,7 @@ function init_gear_sets()
         -- waist="Audumbla Sash",
         -- left_ear="Loquac. Earring",
         -- right_ear="Etiolation Earring",
-        -- left_ring="Gelatinous Ring +1",
+        left_ring="Gelatinous Ring +1",
         -- right_ring="Defending Ring",
         -- back="Solemnity Cape"
 	}
@@ -139,16 +141,16 @@ function init_gear_sets()
 	-- Weaponskill sets
 	-- Default set for any weaponskill that isn't any more specifically defined
 	sets.precast.WS = {
-        ammo="Seeth. Bomblet +1",
-        head ="Boii Mask +2",
+        ammo = "Seeth. Bomblet +1",
+        head = "Boii Mask +2",
 		neck = "Sanctity Necklace",
-        hands		=	"Boii Mufflers +2",
-        body="Pumm. Lorica +2",
-        legs        =   "Boii Cuisses +2",
-        feet		=	"Sulevia's Leggings +2",
+        hands =	"Boii Mufflers +2",
+        body = "Pumm. Lorica +3",
+        legs = "Boii Cuisses +2",
+        feet = "Sulevia's Leggings +2",
 		waist="Sailfi Belt +1",
-        left_ear="Thrud Earring",
-        right_ear="Moonshade Earring",
+        left_ear = "Thrud Earring",
+        right_ear = "Moonshade Earring",
 		back={
             { name="Cichol's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}}
         },
@@ -170,12 +172,12 @@ function init_gear_sets()
 
 	sets.precast.WS.SomeAcc = set_combine(sets.precast.WS, { 
 		-- back = "Letalis Mantle", 
-		legs="Pumm. Cuisses +2",
+		legs="Pumm. Cuisses +3",
 	})
 	sets.precast.WS.Acc = set_combine(sets.precast.WS, { 
 		neck = "Combatant's Torque",
-		legs="Pumm. Cuisses +2",
-        feet="Pumm. Calligae +3",
+		legs = "Pumm. Cuisses +3",
+        feet = "Pumm. Calligae +3",
 	})
 	sets.precast.WS.FullAcc = set_combine(sets.precast.WS, { 
 		neck = "Combatant's Torque" 
@@ -255,15 +257,11 @@ function init_gear_sets()
 	-- Idle sets
 	sets.idle = {
 		-- ammo="Staunch Tathlum +1",
-		head="Flam. Zucchetto +2",
-		body="Flamma Korazin +2",
-		hands="Flamma Manopolas +2",
-		legs="Flamma Dirs +2",
-		feet="Flamma Gambieras +2",
-		-- head="Sakpata's Helm",
-		-- body="Sakpata's Breastplate",
-		-- hands="Sakpata's Gauntlets",
-		-- legs="Sakpata's Cuisses",
+		head="Sakpata's Helm",
+		body="Sakpata's Plate",
+		hands="Sakpata's Gauntlets",
+		legs="Sakpata's Cuisses",
+		feet="Sakpata's Leggings",
 		-- feet="Hermes' Sandals +1",
 		-- neck="Bathy Choker +1",
 		-- waist="Flume Belt",
@@ -282,15 +280,12 @@ function init_gear_sets()
 	-- Defense sets
 	sets.defense.PDT = {
 		-- ammo="Coiste Bodhar",
-		head		=	Nyame.Head,
-		hands		=	Nyame.Hands,
-		body        =   Nyame.Body,
-		legs        =   Nyame.Legs,
-		feet		=	Nyame.Feet,
-		-- head="Sakpata's Helm",
-		-- body="Sakpata's Plate",
-		-- hands="Sakpata's Gauntlets",
-		-- legs="Pumm. Cuisses +2",
+		head="Sakpata's Helm",
+		body="Sakpata's Plate",
+		hands="Sakpata's Gauntlets",
+		legs="Sakpata's Cuisses",
+		feet="Sakpata's Leggings",
+		-- legs="Pumm. Cuisses +3",
 		-- feet="Pumm. Calligae +3",
 		-- neck={ name="War. Beads +2", augments={'Path: A',}},
 		-- waist="Ioskeha Belt +1",
@@ -341,10 +336,10 @@ function init_gear_sets()
 		ammo="Ginsen",
 		head = "Boii Mask +2",
 		neck = "Combatant's Torque",
-		body = "Boii Lorica +2",
+		body = "Boii Lorica +3",
 		-- legs="Tatena. Haidate +1",
 		hands="Tatenashi Gote +1",
-		legs="Pumm. Cuisses +2",
+		legs="Pumm. Cuisses +3",
 		feet="Pumm. Calligae +3",
 		-- neck="Warrior's Bead Necklace +2",
 		-- waist="Ioskeha Belt +1",
@@ -358,15 +353,15 @@ function init_gear_sets()
 		back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
 	sets.engaged.SomeAcc = set_combine(sets.engaged, {
-        body="Agoge Lorica +1",
+        body="Agoge Lorica +2",
 		feet = "Flamma Gambieras +2",
     })
 	sets.engaged.Acc = set_combine(sets.engaged.SomeAcc, {
-        body="Agoge Lorica +1",
+        body="Agoge Lorica +2",
 		legs = "Flamma Dirs +2"
     })
 	sets.engaged.FullAcc = set_combine(sets.engaged.Acc, {
-        body="Agoge Lorica +1",
+        body="Agoge Lorica +2",
     })
 	sets.engaged.Fodder = set_combine(sets.engaged, {
     })
@@ -1393,20 +1388,29 @@ function init_gear_sets()
 	sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
 
 	-- Weapons sets
-	sets.weapons.Lycurgos = { main = "Lycurgos", sub = "Duplus Grip" }
-	sets.weapons.ShiningOne = { main = "Shining One", sub = "Duplus Grip" }
+	sets.weapons.Lycurgos = { main = "Lycurgos", sub = "Utu Grip" }
+	sets.weapons.ShiningOne = { main = "Shining One", sub = "Utu Grip" }
 	sets.weapons.Naegling = { main = "Naegling", sub = "Blurred Shield +1" }
+	sets.weapons.Loxotic = { main = "Loxotic Mace +1", sub = "Blurred Shield +1" }
 	sets.weapons.Chango = { main = "Chango", sub = "Utu Grip" }
 	sets.weapons.DualWeapons = { main = "Firangi", sub = "Reikiko" }
 	sets.weapons.Greatsword = { main = "Montante +1", sub = "Utu Grip" }
-	sets.weapons.ProcDagger = { main = "Chicken Knife II", sub = empty }
+	sets.weapons.ProcDagger = { main = "Bronze Dagger", sub = empty }
 	sets.weapons.ProcSword = { main = "Wax Sword", sub = empty }
-	sets.weapons.ProcGreatSword = { main = "Lament", sub = empty }
-	sets.weapons.ProcScythe = { main = "Ark Scythe", sub = empty }
-	sets.weapons.ProcPolearm = { main = "Pitchfork +1", sub = empty }
-	sets.weapons.ProcGreatKatana = { main = "Hardwood Katana", sub = empty }
-	sets.weapons.ProcClub = { main = "Dream Bell +1", sub = empty }
-	sets.weapons.ProcStaff = { main = "Terra's Staff", sub = empty }
+	sets.weapons.ProcGreatSword = { main = "Goujian", sub = empty }
+	sets.weapons.ProcScythe = { main = "Bronze Zaghnal", sub = empty }
+	sets.weapons.ProcPolearm = { main = "Harpoon", sub = empty }
+	sets.weapons.ProcGreatKatana = { main = "Mutsunokami", sub = empty }
+	sets.weapons.ProcClub = { main = "Kitty Rod", sub = empty }
+	sets.weapons.ProcStaff = { main = "Cobra Staff", sub = empty }	
+	-- sets.weapons.ProcDagger = { main = "Chicken Knife II", sub = empty }
+	-- sets.weapons.ProcSword = { main = "Wax Sword", sub = empty }
+	-- sets.weapons.ProcGreatSword = { main = "Lament", sub = empty }
+	-- sets.weapons.ProcScythe = { main = "Ark Scythe", sub = empty }
+	-- sets.weapons.ProcPolearm = { main = "Pitchfork +1", sub = empty }
+	-- sets.weapons.ProcGreatKatana = { main = "Hardwood Katana", sub = empty }
+	-- sets.weapons.ProcClub = { main = "Dream Bell +1", sub = empty }
+	-- sets.weapons.ProcStaff = { main = "Terra's Staff", sub = empty }
 end
 
 -- Select default macro book on initial load or subjob change.

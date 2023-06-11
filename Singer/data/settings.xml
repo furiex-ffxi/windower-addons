@@ -75,7 +75,7 @@
     </global>
     <liambear>
         <aoe>
-            <p2>true</p2>
+            <p1>true</p1>
             <p3>false</p3>
             <p4>false</p4>
             <p5>false</p5>

@@ -297,18 +297,23 @@ function init_gear_sets()
 
 	sets.idle = {
 		ammo = "Staunch Tathlum +1",
-		head = "Jumalik Helm",
+		-- head = "Jumalik Helm",
+		-- body = "Jumalik Mail",
+		-- hands = "Sulev. Gauntlets +2",
+		-- legs = "Carmine Cuisses +1",
+		-- feet = "Amm Greaves"
+		head="Sakpata's Helm",
+		body="Sakpata's Plate",
+		hands="Sakpata's Gauntlets",
+		legs="Sakpata's Cuisses",
+		feet="Sakpata's Leggings",
 		neck = "Loricate Torque +1",
 		ear1 = "Genmei Earring",
 		ear2 = "Ethereal Earring",
-		body = "Jumalik Mail",
-		hands = "Sulev. Gauntlets +2",
 		ring1 = "Stikini Ring +1",
 		ring2 = "Stikini Ring +1",
 		back = "Shadow Mantle",
 		waist = "Flume Belt +1",
-		legs = "Carmine Cuisses +1",
-		feet = "Amm Greaves"
 	}
 
 	sets.idle.PDT = {
@@ -321,11 +326,11 @@ function init_gear_sets()
 		-- hands = "Sulev. Gauntlets +2",
 		-- legs = "Carmine Cuisses +1",
 		-- feet = "Amm Greaves",
-		head="Nyame Helm",
-        body="Nyame Mail",
-        hands="Nyame Gauntlets",
-        legs="Nyame Flanchard",
-        feet="Nyame Sollerets",
+		head="Sakpata's Helm",
+		body="Sakpata's Plate",
+		hands="Sakpata's Gauntlets",
+		legs="Sakpata's Cuisses",
+		feet="Sakpata's Leggings",
 		ring1 = "Defending Ring",
 		ring2 = "Sulevia's Ring",
 		back = "Shadow Mantle",
@@ -342,11 +347,11 @@ function init_gear_sets()
 		neck = "Loricate Torque +1",
 		ear1 = "Genmei Earring",
 		ear2 = "Ethereal Earring",
-		head="Nyame Helm",
-        body="Nyame Mail",
-        hands="Nyame Gauntlets",
-        legs="Nyame Flanchard",
-        feet="Nyame Sollerets",
+		head="Sakpata's Helm",
+		body="Sakpata's Plate",
+		hands="Sakpata's Gauntlets",
+		legs="Sakpata's Cuisses",
+		feet="Sakpata's Leggings",
 		-- head = "Loess Barbuta +1",
 		-- body = "Tartarus Platemail",
 		-- hands = "Sulev. Gauntlets +2",
@@ -491,11 +496,11 @@ function init_gear_sets()
 		feet = "Flam. Gambieras +2"
 	}
 	sets.engaged.DT = set_combine(sets.engaged, {
-		head="Sulevia's Mask +2",
-		body="Sulevia's Plate. +2",
-		hands="Sulev. Gauntlets +2",
-		legs="Sulev. Cuisses +2",
-		feet="Sulev. Leggings +2",
+		head="Sakpata's Helm",
+		body="Sakpata's Plate",
+		hands="Sakpata's Gauntlets",
+		legs="Sakpata's Cuisses",
+		feet="Sakpata's Leggings",
 	})
 
 	--Example sets:

@@ -61,17 +61,17 @@ function init_gear_sets()
     AF.Feet		=	"Atrophy Boots +3"
 
     --Vitiation
-    RELIC.Head		=	"Viti. Chapeau +1"
-    RELIC.Body		=	"Viti. Tabard +1"
-    RELIC.Hands 	=	"Viti. Gloves +1"
-    RELIC.Legs		=	"Viti. Tights +1"
-    RELIC.Feet		=	"Vitiation Boots +1"
+    RELIC.Head		=	"Viti. Chapeau +2"
+    RELIC.Body		=	"Viti. Tabard +2"
+    RELIC.Hands 	=	"Viti. Gloves +2"
+    RELIC.Legs		=	"Viti. Tights +2"
+    RELIC.Feet		=	"Vitiation Boots +2"
 
     --Lethargy
     EMPY.Head		=	"Leth. Chappel +2"
     EMPY.Body		=	"Lethargy Sayon +2"
     EMPY.Hands		=	"Leth. Gantherots +2"
-    EMPY.Legs		=	"Leth. Fuseau +2"
+    EMPY.Legs		=	"Leth. Fuseau +3"
     EMPY.Feet		=	"Leth. Houseaux +3"
 
     -- Carmine
@@ -147,7 +147,7 @@ function init_gear_sets()
         right_ring	=	"Jhakri Ring",        --5
 	    -- head		=	Carm.Head.D,            --14
         --body		=	Merl.Body.FC,           --12
-        ammo        =   "Hydrocera",
+        ammo        =   "Regal Gem",
 		--Total: 71 -- To Do: overkill need to slot DT / HP 
 	}
 
@@ -230,12 +230,14 @@ function init_gear_sets()
 		ear2 = "Sherida Earring",
 		body = "Ayanmo Corazza +2",
 		hands = AF.Hands,
-		ring1 = "Begrudging Ring",
+		-- ring1 = "Begrudging Ring",
+		ring1 = "Karieyh Ring",
 		ring2 = "Ilabrat Ring",
         back		=	RDMCape.MACC,		
 		waist = "Fotia Belt",
 		legs = "Carmine Cuisses +1",
-		feet = "Thereoid Greaves"
+		-- feet = "Thereoid Greaves"
+		feet = EMPY.Feet,
 	}
 
 	sets.precast.WS['Evisceration'] = sets.precast.WS['Chant Du Cygne']
@@ -243,10 +245,9 @@ function init_gear_sets()
 	sets.precast.WS['Savage Blade'] = {
         -- ammo		=	"Regal Gem",
         ammo		=	"Voluspa Tathlum",
-        -- head		=	RELIC.Head,
+        head		=	RELIC.Head,
         -- body		=	RELIC.Body,
         -- hands		=	AF.Hands,
-        head		=	EMPY.Head,
         body		=	EMPY.Body,        
         hands       =   Jhakri.Hands,
         legs		=	EMPY.Legs,
@@ -332,7 +333,7 @@ function init_gear_sets()
         left_ear    =   "Malignance Earring",
         right_ear   =   "Snotra Earring",
         waist       =   "Acuity Belt +1",
-        ammo        =   "Hydrocera",
+        ammo        =   "Regal Gem",
         left_ring   =   "Jhakri Ring",
         right_ring  =   "Ayanmo Ring",
         back		=	RDMCape.MACC,		
@@ -351,15 +352,15 @@ function init_gear_sets()
         -- sub		    =	"Ammurapi Shield",
         neck        =   "Mizu. Kubikazari",
         back		=	RDMCape.MACC,
-        body        =   Jhakri.Body,
-        head        =   Jhakri.Head,
-        hands       =   Jhakri.Hands,
-        legs        =   Jhakri.Legs,
-        feet        =   Jhakri.Feet,
+        body        =   EMPY.Body,
+        head        =   EMPY.Head,
+        hands       =   EMPY.Hands,
+        legs        =   EMPY.Legs,
+        feet        =   EMPY.Feet,
         left_ear    =   "Malignance Earring",
         right_ear   =   "Snotra Earring",
         waist       =   "Acuity Belt +1",
-        ammo        =   "Hydrocera",
+        ammo        =   "Regal Gem",
         left_ring   =   "Jhakri Ring",
         right_ring  =   "Ayanmo Ring",
         -- -- ammo		=	"Pemphredo Tathlum",
@@ -511,9 +512,16 @@ function init_gear_sets()
 
 	--Red Mage enhancing sets are handled in a different way from most, layered on due to the way Composure works
 	--Don't set combine a full set with these spells, they should layer on Enhancing Set > Composure (If Applicable) > Spell
-	sets.EnhancingSkill = { main = "Pukulatmuj +1", head = "Befouled Crown", neck = "Incanter's Torque",
-		ear2 = "Mimir Earring", hands = RELIC.Hands, back = "Ghostfyre Cape", waist = "Olympus Sash",
-		legs = AF.Legs }
+	sets.EnhancingSkill = { 
+		main = "Pukulatmuj +1", 
+		head = "Befouled Crown", 
+		neck = "Incanter's Torque",
+		ear2 = "Mimir Earring", 
+		hands = RELIC.Hands, 
+		back = "Ghostfyre Cape", 
+		waist = "Olympus Sash",
+		legs = AF.Legs 
+	}
 	sets.midcast.Refresh = { head = "Amalric Coif +1", body = AF.Body, legs = EMPY.Feet }
 	sets.midcast.Aquaveil = { head = "Amalric Coif +1", hands = "Regal Cuffs", waist = "Emphatikos Rope",
 		legs = "Shedir Seraweels" }
@@ -535,13 +543,12 @@ function init_gear_sets()
         -- -- neck		=	"Dls. Torque +2",
         -- body		=	Amal.Body.A,
         --hands		=	Kayk.Hands.A,
-        -- head		=	RELIC.Head,
         -- feet		=	RELIC.Feet,
         -- waist		=	"Porous Rope",
         -- left_ring	=	"Stikini Ring +1",
         -- right_ring	=	"Stikini Ring",
-        ammo		=	"Hydrocera",
-        head		=	EMPY.Head,
+        ammo		=	"Regal Gem",
+        head		=	RELIC.Head,
         body		=	AF.Body,
 		hands		=	EMPY.Hands,
         legs		=	Chiro.Legs.MACC,
@@ -877,8 +884,8 @@ function init_gear_sets()
         ammo		=	"Homiliary",
         head		=	RELIC.Head,
 		neck = "Loricate Torque +1",
-        body		=	Jhakri.Body,
-        hands		=	"Aya. Manopolas +2",
+        body		=	AF.Body,
+        hands		=	EMPY.Hands,
         -- legs		=	Carm.Legs.D,
         feet		=	"Aya. Gambieras +2",
         -- neck		=	"Twilight Torque",
@@ -982,7 +989,7 @@ function init_gear_sets()
 
 	-- Weapons sets
 	sets.weapons.Naegling = { main = "Naegling", sub = "Sacro Bulwark", range = empty }
-	sets.weapons.DualWeapons = { main = "Naegling", sub = "Machaera +2", range = empty }
+	sets.weapons.DualWeapons = { main = "Naegling", sub = "Machaera +3", range = empty }
 	sets.weapons.DualWeaponsAcc = { main = "Naegling", sub = "Almace", range = empty }
 	sets.weapons.DualEvisceration = { main = "Tauret", sub = "Almace", range = empty }
 	sets.weapons.DualAeolian = { main = "Tauret", sub = "Bunzi's Rod", range = empty }

@@ -60,7 +60,7 @@ function init_gear_sets()
         main="Kali", --7
         head="Bunzi's Hat",
         body="Brioso Justau. +3",
-        hands="Fili Manchettes +2",
+        hands="Fili Manchettes +3",
         legs="Doyen Pants",
         feet={ name="Bihu Slippers +3", augments={'Enhances "Nightingale" effect',}},
         neck={ name="Bard's Charm +2", augments={'Path: A',}},
@@ -297,7 +297,7 @@ function init_gear_sets()
 	sets.midcast.Lullaby.Resistant = { range = "Gjallarhorn", hands="Brioso Cuffs +3" }
 	sets.midcast.Madrigal = { head = "Fili Calot +2" }
 	sets.midcast.Mambo = {feet="Mou. Crackows +1"}
-	sets.midcast.March = { hands = "Fili Manchettes +2" }
+	sets.midcast.March = { hands = "Fili Manchettes +3" }
 	sets.midcast.Mazurka = { range = "Marsyas" }
 	sets.midcast.Minne = {legs="Mou. Seraweels +1"}
 	sets.midcast.Minuet = { body = "Fili Hongreline +3" }
@@ -323,7 +323,7 @@ function init_gear_sets()
         range="Gjallarhorn",
         head="Fili Calot +2",
         body="Fili Hongreline +3",
-        hands="Fili Manchettes +2",
+        hands="Fili Manchettes +3",
         legs="Inyanga Shalwar +2",
         feet="Brioso Slippers +3",
         neck="Mnbw. Whistle +1",

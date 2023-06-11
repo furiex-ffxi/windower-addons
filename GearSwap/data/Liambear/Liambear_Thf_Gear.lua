@@ -42,7 +42,11 @@ function init_gear_sets()
     -- Special sets (required by rules)
     --------------------------------------
 
-    sets.TreasureHunter = { hands = "Plun. Armlets +3", waist = "Chaac Belt", feet = "Skulk. Poulaines +1" }
+    sets.TreasureHunter = { 
+        ammo = "Per. Lucky Egg",
+        hands = "Plun. Armlets +3", 
+        waist = "Chaac Belt", 
+        feet = "Skulk. Poulaines +1" }
     sets.Kiting = { feet = "Skd. Jambeaux +1" }
 
     sets.buff.Doom = set_combine(sets.buff.Doom, {})
