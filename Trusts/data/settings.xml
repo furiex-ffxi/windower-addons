@@ -4,6 +4,11 @@
         <auto>true</auto>
         <language>English</language>
         <sets>
+            <ambu>
+                <1>Valaineral</1>
+                <2>Amchuchu</2>
+                <3>Sylvie (UC)</3>
+            </ambu>
             <apex>
                 <1>Matsui-P</1>
                 <2>Joachim</2>
@@ -52,8 +57,8 @@
             </level>
             <lilith>
                 <1>AAEV</1>
-                <2>Sylvie (UC)</2>
-                <3>Ulmia</3>
+                <2>Cherukiki</2>
+                <3>Koru-Moru</3>
             </lilith>
             <locus>
                 <1>Sylvie (UC)</1>
@@ -84,9 +89,9 @@
                 <3>Kupipi</3>
             </rem>
             <sortie>
-                <1>Sylvie (UC)</1>
-                <2>Kupipi</2>
-                <3>Valaineral</3>
+                <1>Valaineral</1>
+                <2>Sylvie (UC)</2>
+                <3>Cherukiki</3>
             </sortie>
             <sov>
                 <1>King of Hearts</1>

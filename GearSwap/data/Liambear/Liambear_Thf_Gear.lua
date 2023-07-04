@@ -15,9 +15,8 @@ function user_job_setup()
     state.ExtraMeleeMode = M { ['description'] = 'Extra Melee Mode', 'None', 'Suppa', 'DWMax', 'Parry' }
     state.AmbushMode = M(false, 'Ambush Mode')
 
-    gear.da_jse_back = { name = "Toutatis's Cape", augments = { 'DEX+20', 'Accuracy+20 Attack+20', '"Dbl.Atk."+10', } }
-    gear.wsd_jse_back = { name = "Toutatis's Cape",
-        augments = { 'DEX+20', 'Accuracy+20 Attack+20', 'Weapon skill damage +10%', } }
+    gear.da_jse_back = { name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}}
+    gear.wsd_jse_back = { name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}}
 
     -- Additional local binds
     send_command('bind ^` input /ja "Flee" <me>')
@@ -46,7 +45,7 @@ function init_gear_sets()
         ammo = "Per. Lucky Egg",
         hands = "Plun. Armlets +3", 
         waist = "Chaac Belt", 
-        feet = "Skulk. Poulaines +1" }
+        feet = "Skulk. Poulaines +2" }
     sets.Kiting = { feet = "Skd. Jambeaux +1" }
 
     sets.buff.Doom = set_combine(sets.buff.Doom, {})
@@ -122,7 +121,7 @@ function init_gear_sets()
     sets.precast.JA['Conspirator'] = { body = "Skulker's Vest" }
     sets.precast.JA['Steal'] = {} --feet="Pillager's Poulaines +1"
     sets.precast.JA['Mug'] = {}
-    sets.precast.JA['Despoil'] = { legs = "Skulker's Culottes", feet = "Skulk. Poulaines +1" }
+    sets.precast.JA['Despoil'] = { legs = "Skulker's Culottes", feet = "Skulk. Poulaines +2" }
     sets.precast.JA['Perfect Dodge'] = { hands = "Plunderer's Armlets +1" }
     sets.precast.JA['Feint'] = {} -- {legs="Assassin's Culottes +2"}
 
@@ -186,7 +185,7 @@ function init_gear_sets()
         hands = "Meg. Gloves +2",
         ring1 = "Ilabrat Ring",
         ring2 = "Regal Ring",
-        back = gear.da_jse_back,
+        back = gear.wsd_jse_back,
         waist = "Grunfeld Rope",
         legs = "Samnuha Tights",
         feet = gear.herculean_wsd_feet
@@ -523,13 +522,13 @@ function init_gear_sets()
         -- feet = gear.herculean_ta_feet
         main={ name="Aeneas", augments={'Path: A',}},
         sub="Gleti's Knife",
-        ammo="C. Palug Stone",
+        ammo = "Yamarang",
         head="Malignance Chapeau",
         body="Ashera Harness",
         hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
         legs="Malignance Tights",
         feet={ name="Plun. Poulaines +3", augments={'Enhances "Assassin\'s Charge" effect',}},
-        neck="Loricate Torque +1",
+        neck={ name="Asn. Gorget +1", augments={'Path: A',}},
         waist="Flume Belt +1",
         left_ear="Digni. Earring",
         right_ear="Sherida Earring",
@@ -539,7 +538,8 @@ function init_gear_sets()
     }
 
     sets.engaged.SomeAcc = {
-        ammo = "Aurgelmir Orb +1",
+        -- ammo = "Aurgelmir Orb +1",
+        ammo = "Yamarang",
         head = "Dampening Tam",
         neck = "Combatant's Torque",
         ear1 = "Brutal Earring",
@@ -587,7 +587,8 @@ function init_gear_sets()
     }
 
     sets.engaged.Fodder = {
-        ammo = "Aurgelmir Orb +1",
+        -- ammo = "Aurgelmir Orb +1",
+        ammo = "Yamarang",
         head = "Dampening Tam",
         neck = "Iskur Gorget",
         ear1 = "Dedition Earring",
@@ -603,7 +604,8 @@ function init_gear_sets()
     }
 
     sets.engaged.DT = {
-        ammo = "Aurgelmir Orb +1",
+        -- ammo = "Aurgelmir Orb +1",
+        ammo = "Yamarang",
         head = "Malignance Chapeau",
         neck = "Loricate Torque +1",
         ear1 = "Brutal Earring",
@@ -615,7 +617,7 @@ function init_gear_sets()
         back = gear.da_jse_back,
         waist = "Reiki Yotai",
         legs = "Malignance Tights",
-        feet = "Malignance Boots"
+        feet = "Skulker's Poulaines +2"
     }
 
     sets.engaged.SomeAcc.DT = {

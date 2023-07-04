@@ -1,6 +1,6 @@
 function user_job_setup()
 	-- Options: Override default values
-	state.OffenseMode:options('Normal', 'SomeAcc', 'Acc', 'FullAcc', 'Fodder')
+	state.OffenseMode:options('Normal', 'SomeAcc', 'Acc', 'FullAcc', 'Fodder', 'Fencer')
 	state.WeaponskillMode:options('Match', 'Proc', 'Normal', 'SomeAcc', 'Acc', 'FullAcc', 'Fodder')
 	state.HybridMode:options('Normal')
 	state.PhysicalDefenseMode:options('PDT', 'PDTReraise')
@@ -9,7 +9,7 @@ function user_job_setup()
 	state.IdleMode:options('Normal', 'PDT', 'Refresh', 'Reraise')
 	state.ExtraMeleeMode = M { ['description'] = 'Extra Melee Mode', 'None' }
 	state.Passive = M { ['description'] = 'Passive Mode', 'None', 'Twilight' }
-	state.Weapons:options('None', 'Lycurgos', 'ShiningOne', 'Naegling', 'Loxotic', 'Chango', 'DualWeapons', 'Greatsword', 'ProcDagger', 'ProcSword', 'ProcGreatSword',
+	state.Weapons:options('None', 'Lycurgos', 'ShiningOne', 'Chango', 'DualWeapons', 'Greatsword', 'Naegling', 'Loxotic', 'ProcDagger', 'ProcSword', 'ProcGreatSword',
 	'ProcScythe', 'ProcPolearm', 'ProcGreatKatana', 'ProcClub', 'ProcStaff')
 
 	gear.da_jse_back = { name = "Cichol's Mantle", augments = { 'DEX+20', 'Accuracy+20 Attack+20', '"Dbl.Atk."+10' } }
@@ -48,31 +48,31 @@ function init_gear_sets()
 	sets.precast.JA['Berserk'] = { 
 		back = "Cichol's Mantle",
 		body="Pumm. Lorica +3", 
-        feet="Agoge Calligae +2"
+        feet="Agoge Calligae +3"
 	}
 	sets.precast.JA['Warcry'] = {
-        head="Agoge Mask +2"
+        head="Agoge Mask +3"
 	}
 	sets.precast.JA['Defender'] = {
-		hands="Agoge Mufflers +2"
+		hands="Agoge Mufflers +3"
 	}
 	sets.precast.JA['Aggressor'] = {
-		body="Agoge Lorica +2",
+		body="Agoge Lorica +3",
 		head="Pummeler's Mask +3"
 	}
 	sets.precast.JA['Mighty Strikes'] = {
-		hands="Agoge Mufflers +2"
+		hands="Agoge Mufflers +3"
 	}
 	sets.precast.JA["Warrior's Charge"] = {
-		legs={ name="Agoge Cuisses +2", augments={'Enhances "Warrior\'s Charge" effect',}}
+		legs={ name="Agoge Cuisses +3", augments={'Enhances "Warrior\'s Charge" effect',}}
 	}
 	sets.precast.JA['Tomahawk'] = { 
 		ammo = "Thr. Tomahawk",
-		feet="Agoge Calligae +2",
+		feet="Agoge Calligae +3",
 	}
 	sets.precast.JA['Retaliation'] = {
 		feet="Boii Calligae +2",
-		hands="Pummeler's Mufflers +2"
+		hands="Pumm. Mufflers +3"
 	}
 	sets.precast.JA['Restraint'] = {
 		hands="Boii Mufflers +2"
@@ -141,18 +141,20 @@ function init_gear_sets()
 	-- Weaponskill sets
 	-- Default set for any weaponskill that isn't any more specifically defined
 	sets.precast.WS = {
-        ammo = "Seeth. Bomblet +1",
-        head = "Boii Mask +2",
+        ammo = "Knobkierrie",
+        head = "Agoge Mask +3",
 		neck = "Sanctity Necklace",
         hands =	"Boii Mufflers +2",
         body = "Pumm. Lorica +3",
         legs = "Boii Cuisses +2",
         feet = "Sulevia's Leggings +2",
 		waist="Sailfi Belt +1",
-        left_ear = "Thrud Earring",
+		left_ring="Cornelia's Ring",
+        right_ring="Petrov Ring",
+		left_ear = "Thrud Earring",
         right_ear = "Moonshade Earring",
 		back={
-            { name="Cichol's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}}
+			name="Cichol's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',},
         },
         -- head="Sakpata's Helm",
         -- body="Sakpata's Breastplate",
@@ -285,6 +287,7 @@ function init_gear_sets()
 		hands="Sakpata's Gauntlets",
 		legs="Sakpata's Cuisses",
 		feet="Sakpata's Leggings",
+		waist="Plat. Mog. Belt",
 		-- legs="Pumm. Cuisses +3",
 		-- feet="Pumm. Calligae +3",
 		-- neck={ name="War. Beads +2", augments={'Path: A',}},
@@ -332,10 +335,9 @@ function init_gear_sets()
 
 	-- Engaged sets
 	sets.engaged = {
-		-- ammo="Coiste Bodhar",
-		ammo="Ginsen",
-		head = "Boii Mask +2",
-		neck = "Combatant's Torque",
+		ammo="Coiste Bodhar",
+		head = "Boii Mask +3",
+		neck = "War. Beads +2",
 		body = "Boii Lorica +3",
 		-- legs="Tatena. Haidate +1",
 		hands="Tatenashi Gote +1",
@@ -343,6 +345,7 @@ function init_gear_sets()
 		feet="Pumm. Calligae +3",
 		-- neck="Warrior's Bead Necklace +2",
 		-- waist="Ioskeha Belt +1",
+		waist="Sailfi Belt +1",
 		-- left_ear="Brutal Earring",
 		left_ear="Cessance Earring",
 		right_ear="Boii Earring",
@@ -353,18 +356,25 @@ function init_gear_sets()
 		back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
 	sets.engaged.SomeAcc = set_combine(sets.engaged, {
-        body="Agoge Lorica +2",
+        body="Agoge Lorica +3",
 		feet = "Flamma Gambieras +2",
     })
 	sets.engaged.Acc = set_combine(sets.engaged.SomeAcc, {
-        body="Agoge Lorica +2",
+        body="Agoge Lorica +3",
 		legs = "Flamma Dirs +2"
     })
 	sets.engaged.FullAcc = set_combine(sets.engaged.Acc, {
-        body="Agoge Lorica +2",
+        body="Agoge Lorica +3",
+		ammo="Ginsen",
     })
 	sets.engaged.Fodder = set_combine(sets.engaged, {
     })
+	sets.engaged.Fencer = set_combine(sets.engaged, {
+		hands = "Agoge Mufflers +3",
+		body="Agoge Lorica +3", 
+		legs = "Boii Cuisses +2",
+    })
+
 
 	--[[
     sets.engaged.Charge = {}

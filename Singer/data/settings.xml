@@ -1,11 +1,11 @@
 <?xml version="1.1" ?>
 <settings>
     <global>
-        <actions>true</actions>
+        <actions>false</actions>
         <active>true</active>
         <aoe>
-            <p1>false</p1>
-            <p2>false</p2>
+            <p1>true</p1>
+            <p2>true</p2>
             <p3>true</p3>
             <p4>true</p4>
             <p5>true</p5>
@@ -51,7 +51,7 @@
             </text>
         </box>
         <clarion>true</clarion>
-        <debuffing>true</debuffing>
+        <debuffing>false</debuffing>
         <delay>4</delay>
         <interval>0.1</interval>
         <marcato>Honor March</marcato>
@@ -74,11 +74,17 @@
         <troubadour>true</troubadour>
     </global>
     <liambear>
+        <actions>true</actions>
         <aoe>
-            <p1>true</p1>
-            <p3>false</p3>
+            <p2>false</p2>
             <p4>false</p4>
             <p5>false</p5>
         </aoe>
+        <box>
+            <pos>
+                <x>2237</x>
+                <y>381</y>
+            </pos>
+        </box>
     </liambear>
 </settings>

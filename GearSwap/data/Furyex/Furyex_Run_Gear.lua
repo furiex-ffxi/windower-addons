@@ -8,7 +8,7 @@ function user_job_setup()
 	state.MagicalDefenseMode:options('MDT_HP','MDT')
 	state.ResistDefenseMode:options('MEVA','MEVA_HP')
 	state.IdleMode:options('Tank','KiteTank') --,'Normal','Sphere'
-	state.Weapons:options('None','Aettir','Lionheart','DualWeapons')
+	state.Weapons:options('None','Montante','Aettir','Lionheart','DualWeapons')
 	
 	state.ExtraDefenseMode = M{['description']='Extra Defense Mode','None','MP'}
 
@@ -285,6 +285,7 @@ function init_gear_sets()
 	-- Weapons sets
 	sets.weapons.Aettir = {main="Aettir",sub="Utu Grip"}
 	sets.weapons.Lionheart = {main="Lionheart",sub="Utu Grip"}
+	sets.weapons.Montante = {main="Montante +1",sub="Duplus Grip"}
 	sets.weapons.DualWeapons = {main="Firangi",sub="Reikiko"}
 	
 	-- Defense Sets

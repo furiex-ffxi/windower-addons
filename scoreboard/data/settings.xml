@@ -67,8 +67,8 @@
     <cleobabe>
         <display>
             <pos>
-                <x>2008</x>
-                <y>287</y>
+                <x>2003</x>
+                <y>391</y>
             </pos>
         </display>
     </cleobabe>
@@ -84,10 +84,9 @@
     <liambear>
         <display>
             <pos>
-                <x>2103</x>
-                <y>830</y>
+                <x>2125</x>
+                <y>994</y>
             </pos>
         </display>
-        <visible>true</visible>
     </liambear>
 </settings>

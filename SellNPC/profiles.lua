@@ -13,6 +13,8 @@ profiles['ore'] = S{
 }
 -- //sellnpc junk
 profiles['junk'] = S{
+    'Land Crab Meat',
+    'Golden Shell',
     'chestnut',
     'san d\'Or. carrot',
     'Darksteel Ore',

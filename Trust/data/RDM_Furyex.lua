@@ -19,7 +19,6 @@ TrustSettings = {
         PartyBuffs = L{
             Buff.new('Refresh', L{}, L{'DRK','PUP','PLD','BLU','BLM','BRD','GEO','SMN','WHM','RUN', 'RDM'}),
             Buff.new('Haste', L{}, job_util.melee_jobs():extend(L{'SCH','BLM', 'RDM', 'BRD'})),
-            Buff.new('Haste', L{}, L{ 'COR' }, nil, L{ InBattleCondition.new() }),
             Buff.new('Flurry', L{}, L{'RNG'}, nil, L{ IdleCondition.new() }),
             Spell.new('Phalanx II', L{}, job_util.melee_jobs(), nil, L{ InBattleCondition.new() }),
         },

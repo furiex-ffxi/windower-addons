@@ -6,6 +6,7 @@ TrustSettings = {
                 Buff.new('Reraise'),
                 Buff.new('Protect', L{'Accession'}),
                 Buff.new('Shell', L{'Accession'}),
+                Buff.new('Adloquium', L{'Accession'}),
                 Buff.new('Regen', L{'Accession', 'Perpetuance'}),
                 Spell.new('Phalanx', L{'Accession', 'Perpetuance'}),
                 Spell.new('Aurorastorm II', L{})
@@ -39,7 +40,7 @@ TrustSettings = {
         Skillchains = {
             defaultws = {'Retribution','Black Halo'},
             tpws = {},
-            spamws = {'Black Halo'},
+            spamws = {'Black Halo', 'True Strike'},
             starterws = {'Black Halo'},
             preferws = {'Retribution','Black Halo'},
             cleavews = {},

@@ -327,8 +327,8 @@ function init_gear_sets()
         legs="Inyanga Shalwar +2",
         feet="Brioso Slippers +3",
         neck="Mnbw. Whistle +1",
-        ear1="Odnowa Earring +1",
-        ear2="Etiolation Earring",
+        ear1="Etiolation Earring",
+        ear2="Fili Earring",
         ring1="Moonlight Ring",
         ring2="Defending Ring",
         waist="Flume Belt +1",
@@ -512,7 +512,7 @@ function init_gear_sets()
         feet="Brioso Slippers +3",
         neck="Mnbw. Whistle +1",
         ear1="Digni. Earring",
-        ear2="Vor Earring",
+        ear2="Fili Earring",
         ring1="Kishar Ring",
         ring2="Metamor. Ring +1",
         waist="Acuity Belt +1",
@@ -612,7 +612,7 @@ function init_gear_sets()
         ring1="Moonlight Ring", --5/5
         ring2="Defending Ring",  --10/10
         back="Moonlight Cape", --6/6
-        waist="Carrier's Sash",
+		waist="Plat. Mog. Belt", -- 3/3
 	}
 
 	-- Defense sets
@@ -651,7 +651,8 @@ function init_gear_sets()
 		left_ear="Digni. Earring",
 		right_ear="Telos Earring",
 		left_ring="Chirich Ring +1",
-		right_ring="Chirich Ring +1",
+		-- right_ring="Chirich Ring +1",
+		right_ring="Lehko's Ring",
 		back = gear.melee_jse_back,
 	}
 
@@ -695,7 +696,7 @@ function init_gear_sets()
 		left_ear="Digni. Earring",
 		right_ear="Telos Earring",
 		left_ring="Chirich Ring +1",
-		right_ring="Chirich Ring +1",
+		right_ring="Lehko's Ring",
 		back={ name="Intarabus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 

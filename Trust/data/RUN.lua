@@ -15,11 +15,11 @@ TrustSettings = {
             'Swordplay'
         },
         Skillchains = {
-            defaultws = {'Dimidiation','Steel Cyclone'},
+            defaultws = {'Resolution','Dimidiation','Steel Cyclone'},
             tpws = {},
-            spamws = {'Dimidiation','Savage Blade'},
-            starterws = {'Dimidiation'},
-            preferws = {'Dimidiation','Savage Blade'},
+            spamws = {'Resolution','Dimidiation','Savage Blade'},
+            starterws = {'Resolution','Dimidiation'},
+            preferws = {'Resolution','Dimidiation','Savage Blade'},
             cleavews = {},
             amws = 'Dimidiation'
         },

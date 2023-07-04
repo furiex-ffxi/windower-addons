@@ -49,7 +49,7 @@ function init_gear_sets()
 
 	Empy = {}
 	Empy = {
-		Head="Heath. Burgeonet +2",
+		Head="Heathen's Burgeonet +2",
 		Body="Heath. Cuirass +2",
 		Hands="Heath. Gauntlets +2",
 		Legs="Heath. Flanchard +2",
@@ -137,7 +137,7 @@ function init_gear_sets()
 
 	sets.midcast['Dark Magic'] = {
 		ammo = "Pemphredo Tathlum",
-		head = "Carmine Mask +1",
+		head = "Pixie Hairpin +1",
 		neck = "Erra Pendant",
 		ear1 = "Digni. Earring",
 		ear2 = "Malignance Earring",
@@ -302,9 +302,9 @@ function init_gear_sets()
 		-- hands = "Sulev. Gauntlets +2",
 		-- legs = "Carmine Cuisses +1",
 		-- feet = "Amm Greaves"
-		head="Sakpata's Helm",
-		body="Sakpata's Plate",
-		hands="Sakpata's Gauntlets",
+		head=empty,
+		body="Lugra Cloak +1",
+		hands={ name="Odyssean Gauntlets", augments={'Pet: Phys. dmg. taken -2%','STR+2','"Refresh"+2','Accuracy+20 Attack+20','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
 		legs="Sakpata's Cuisses",
 		feet="Sakpata's Leggings",
 		neck = "Loricate Torque +1",
@@ -421,17 +421,17 @@ function init_gear_sets()
 		-- waist = "Ioskeha Belt",
 		-- legs = "Sulev. Cuisses +2",
 		-- feet = "Flam. Gambieras +2"
-	    ammo="Ginsen",
+		ammo="Coiste Bodhar",
 		head="Flam. Zucchetto +2",
-		body="Flamma Korazin +2",
-		hands="Flam. Manopolas +2",
-		legs="Flamma Dirs +2",
+		body="Sakpata's Plate",
+		hands="Sakpata's Gauntlets",
+		legs="Sakpata's Cuisses",
 		feet="Flam. Gambieras +2",
-		neck="Agitator's Collar",
+		neck="Vim Torque +1",
 		waist="Sailfi Belt +1",
-		left_ear={ name="Domin. Earring +1", augments={'Path: A',}},
-		right_ear="Cessance Earring",
-		left_ring="Apate Ring",
+		left_ear="Cessance Earring",
+		right_ear="Heathen's Earring",
+		left_ring="Lehko's Ring",
 		right_ring="Flamma Ring",
 		back = DRKCape.TP,
 	}
@@ -466,7 +466,8 @@ function init_gear_sets()
 		feet = "Flam. Gambieras +2"
 	}
 	sets.engaged.FullAcc = {
-		ammo = "Aurgelmir Orb +1",
+		-- ammo = "Aurgelmir Orb +1",
+	    ammo="Ginsen",
 		head = "Flam. Zucchetto +2",
 		neck = "Combatant's Torque",
 		ear1 = "Mache Earring +1",

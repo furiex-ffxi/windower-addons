@@ -67,7 +67,7 @@ function init_gear_sets()
 		body="Zendik Robe",hands="Volte Gloves",ring1="Kishar Ring",ring2="Lebeche Ring",
 		back="Perimede Cape",waist="Witful Belt",legs="Geo. Pants +1",feet="Regal Pumps +1"}
 
-	sets.precast.FC.Geomancy = set_combine(sets.precast.FC, {range="Dunna",ammo=empty})
+	sets.precast.FC.Geomancy = set_combine(sets.precast.FC, {range="Matre Bell",ammo=empty})
 	
     sets.precast.FC['Elemental Magic'] = set_combine(sets.precast.FC, {ear2="Malignance Earring",hands="Bagua Mitaines +1"})
 

@@ -61,11 +61,11 @@ function init_gear_sets()
     AF.Feet		=	"Atrophy Boots +3"
 
     --Vitiation
-    RELIC.Head		=	"Viti. Chapeau +2"
-    RELIC.Body		=	"Viti. Tabard +2"
-    RELIC.Hands 	=	"Viti. Gloves +2"
-    RELIC.Legs		=	"Viti. Tights +2"
-    RELIC.Feet		=	"Vitiation Boots +2"
+    RELIC.Head		=	"Viti. Chapeau +3"
+    RELIC.Body		=	"Viti. Tabard +3"
+    RELIC.Hands 	=	"Viti. Gloves +3"
+    RELIC.Legs		=	"Viti. Tights +3"
+    RELIC.Feet		=	"Vitiation Boots +3"
 
     --Lethargy
     EMPY.Head		=	"Leth. Chappel +2"
@@ -170,20 +170,34 @@ function init_gear_sets()
 	-- Weaponskill sets
 	-- Default set for any weaponskill that isn't any more specifically defined
 	sets.precast.WS = {
-		range = empty,
-		ammo = "Voluspa Tathlum",
-		head = RELIC.Head,
-		neck = "Asperity Necklace",
-		ear1 = "Cessance Earring",
-		ear2 = "Sherida Earring",
-		body = "Ayanmo Corazza +2",
-		hands = "Aya. Manopolas +2",
-		ring1 = "Petrov Ring",
-		ring2 = "Ilabrat Ring",
-        back		=	RDMCape.MACC,		
-		waist = "Windbuffet Belt +1",
-		legs = "Carmine Cuisses +1",
-		feet = "Carmine Greaves +1"
+		-- range = empty,
+		-- head = RELIC.Head,
+		-- neck = "Asperity Necklace",
+		-- ear1 = "Cessance Earring",
+		-- ear2 = "Sherida Earring",
+		-- body = "Ayanmo Corazza +2",
+		-- hands = "Aya. Manopolas +2",
+		-- ring1 = "Petrov Ring",
+		-- ring2 = "Ilabrat Ring",
+        -- back		=	RDMCape.MACC,		
+		-- waist = "Windbuffet Belt +1",
+		-- legs = "Carmine Cuisses +1",
+		-- feet = "Carmine Greaves +1"
+		-- ammo		=	"Regal Gem",
+		head		=	RELIC.Head,
+		ammo = "Oshasha's Treatise",
+		-- body		=	RELIC.Body,
+		neck = "Anu Torque",
+		body		=	EMPY.Body,        
+		hands       =   Jhakri.Hands,
+		legs		=	EMPY.Legs,
+		feet		=	EMPY.Feet,
+		-- neck		=	"Dls. Torque +2",
+		-- waist		=	"Prosilio Belt +1",
+		left_ear	=	{ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+		right_ear	=	"Ishvara Earring",
+		right_ring	=	"Karieyh Ring",
+		back		=	RDMCape.MACC,		
 	}
 
 	sets.precast.WS.Proc = {
@@ -221,9 +235,8 @@ function init_gear_sets()
 		feet = "Jhakri Pigaches +2"
 	}
 
-	sets.precast.WS['Chant Du Cygne'] = {
+	sets.precast.WS['Chant Du Cygne'] = set_combine(sets.precast.WS, {
 		range = empty,
-		ammo = "Voluspa Tathlum",
 		head = "Malignance Chapeau",
 		neck = "Fotia Gorget",
         ear1 = { name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
@@ -238,13 +251,12 @@ function init_gear_sets()
 		legs = "Carmine Cuisses +1",
 		-- feet = "Thereoid Greaves"
 		feet = EMPY.Feet,
-	}
+	})
 
 	sets.precast.WS['Evisceration'] = sets.precast.WS['Chant Du Cygne']
 
-	sets.precast.WS['Savage Blade'] = {
+	sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {
         -- ammo		=	"Regal Gem",
-        ammo		=	"Voluspa Tathlum",
         head		=	RELIC.Head,
         -- body		=	RELIC.Body,
         -- hands		=	AF.Hands,
@@ -273,7 +285,7 @@ function init_gear_sets()
 		-- waist = "Sailfi Belt +1",
 		-- legs = "Jhakri Slops +2",
 		-- feet = "Jhakri Pigaches +2"
-	}
+	})
 
 	sets.precast.WS['Sanguine Blade'] = {
 		range = empty,
@@ -315,9 +327,7 @@ function init_gear_sets()
 		-- head = gear.merlinic_nuke_head,
 		-- neck = "Baetyl Pendant",
 		-- ear1 = "Regal Earring",
-		-- ear2 = "Malignance Earring",
 		-- body = gear.merlinic_nuke_body,
-		-- hands = "Jhakri Cuffs +2",
 		-- ring1 = "Metamor. Ring +1",
 		-- ring2 = "Freke Ring",
 		-- back = gear.nuke_jse_back,
@@ -325,11 +335,11 @@ function init_gear_sets()
 		-- legs = "Merlinic Shalwar",
 		-- feet = "Amalric Nails +1"
         neck        =   "Mizu. Kubikazari",
-        body        =   Jhakri.Body,
-        head        =   Jhakri.Head,
-        hands       =   Jhakri.Hands,
-        legs        =   Jhakri.Legs,
-        feet        =   Jhakri.Feet,
+        head        =   EMPY.Head,
+        body        =   EMPY.Body,
+		hands = "Jhakri Cuffs +2",
+        legs        =   EMPY.Legs,
+        feet        =   EMPY.Feet,
         left_ear    =   "Malignance Earring",
         right_ear   =   "Snotra Earring",
         waist       =   "Acuity Belt +1",
@@ -540,20 +550,18 @@ function init_gear_sets()
 		-- main		=	"Maxentius",
         -- sub		=	"Ammurapi Shield",
         -- ammo		=	"Regal Gem",
-        -- -- neck		=	"Dls. Torque +2",
         -- body		=	Amal.Body.A,
         --hands		=	Kayk.Hands.A,
-        -- feet		=	RELIC.Feet,
         -- waist		=	"Porous Rope",
         -- left_ring	=	"Stikini Ring +1",
         -- right_ring	=	"Stikini Ring",
         ammo		=	"Regal Gem",
+        neck		=	"Dls. Torque +2",
         head		=	RELIC.Head,
         body		=	AF.Body,
 		hands		=	EMPY.Hands,
         legs		=	Chiro.Legs.MACC,
-        feet		=	EMPY.Feet,
-        neck        =   "Mizu. Kubikazari",
+        feet		=	RELIC.Feet,
         left_ear	=	"Snotra Earring",
         right_ear	=	"Malignance Earring",
         left_ring	=	"Kishar Ring",
@@ -883,11 +891,11 @@ function init_gear_sets()
 	sets.idle = {
         ammo		=	"Homiliary",
         head		=	RELIC.Head,
-		neck = "Loricate Torque +1",
+		neck = "Dls. Torque +2",
         body		=	AF.Body,
         hands		=	EMPY.Hands,
         -- legs		=	Carm.Legs.D,
-        feet		=	"Aya. Gambieras +2",
+        feet		=	EMPY.Feet,
         -- neck		=	"Twilight Torque",
         -- waist		=	"Flume Belt",
         -- left_ear	=	"Etiolation Earring",
@@ -911,6 +919,7 @@ function init_gear_sets()
         head		=	Nyame.Head,
         hands		=	Nyame.Hands,
         body        =   Nyame.Body,
+		waist		=   "Plat. Mog. Belt",
         -- legs		=	RELIC.Legs,
         legs        =   Nyame.Legs,
         feet		=	Nyame.Feet,
@@ -949,6 +958,7 @@ function init_gear_sets()
 		head		=	Malignance.Head,
 		hands		=	Malignance.Hands,
 		body        =   Malignance.Body,
+		waist		=   "Plat. Mog. Belt",
 		-- legs		=	RELIC.Legs,
 		legs        =   Nyame.Legs,
 		feet		=	Nyame.Feet,
@@ -991,7 +1001,8 @@ function init_gear_sets()
 	sets.weapons.Naegling = { main = "Naegling", sub = "Sacro Bulwark", range = empty }
 	sets.weapons.DualWeapons = { main = "Naegling", sub = "Machaera +3", range = empty }
 	sets.weapons.DualWeaponsAcc = { main = "Naegling", sub = "Almace", range = empty }
-	sets.weapons.DualEvisceration = { main = "Tauret", sub = "Almace", range = empty }
+	-- sets.weapons.DualEvisceration = { main = "Tauret", sub = "Almace", range = empty }
+	sets.weapons.DualEvisceration = { main = "Tauret", sub = "Ternion Dagger +1", range = empty }
 	sets.weapons.DualAeolian = { main = "Tauret", sub = "Bunzi's Rod", range = empty }
 	sets.weapons.DualProcSwords = { main = "Brunello", sub = "Soulflayer's Wand", range = empty }
 	sets.weapons.DualProcDaggers = { main = "Blurred Knife +1", sub = "Atoyac", range = empty }
@@ -1026,7 +1037,7 @@ function init_gear_sets()
         body=Malignance.Body,
         -- body		=	"Ayanmo Corazza +2",
         left_ring = "Ilabrat Ring",
-        right_ring = "Apate Ring",   
+        right_ring = "Lehko's Ring",
         -- left_ring	=	{name="Chirich Ring +1", bag="wardrobe2"}, -- I do this to prevent issues with lag sometimes if 2 ring are the same in same bag GS sometimes only equips 1 of them        
         legs		=	Carm.Legs.D,
         feet        =   "Aya. Gambieras +2",
