@@ -12,8 +12,8 @@ function user_job_setup()
         'DualProcWeapons', 'None')
     state.CompensatorMode:options('Always', '300', '1000', 'Never')
 
-    gear.RAbullet = "Bronze Bullet"
-    gear.WSbullet = "Bronze Bullet"
+    gear.RAbullet = "Eminent Bullet"
+    gear.WSbullet = "Eminent Bullet"
     gear.MAbullet = "Orichalc. Bullet" --For MAB WS, do not put single-use bullets here.
     gear.QDbullet = "Animikii Bullet"
     options.ammo_warning_limit = 15
@@ -65,8 +65,8 @@ function init_gear_sets()
 
     sets.precast.JA['Triple Shot'] = { body = "Chasseur's Frac +1" }
     sets.precast.JA['Snake Eye'] = { legs = "Lanun Trews +1" }
-    sets.precast.JA['Wild Card'] = { feet = "Lanun Bottes +3" }
-    sets.precast.JA['Random Deal'] = { body = "Lanun Frac +3" }
+    sets.precast.JA['Wild Card'] = { feet = "Lanun Bottes +1" }
+    sets.precast.JA['Random Deal'] = { body = "Lanun Frac +1" }
     sets.precast.FoldDoubleBust = { hands = "Lanun Gants +1" }
 
     sets.precast.CorsairRoll = {
@@ -76,7 +76,7 @@ function init_gear_sets()
         neck = "Regal Necklace",
         ear1 = "Etiolation Earring",
         ear2 = "Sanare Earring",
-        body = "Lanun Frac +3",
+        body = "Lanun Frac +1",
         hands = "Chasseur's Gants +1",
         ring1 = "Defending Ring",
         ring2 = "Dark Ring",
@@ -207,12 +207,12 @@ function init_gear_sets()
         ammo = gear.RAbullet,
         head = "Chass. Tricorne +1",
         neck = "Comm. Charm +2",
-        body = "Laksa. Frac +3",
+        body = "Laksa. Frac +1",
         hands = "Carmine Fin. Ga. +1",
         ring1 = "Crepuscular Ring",
         back = gear.snapshot_jse_back,
         waist = "Impulse Belt",
-        legs = "Laksa. Trews +3",
+        legs = "Laksa. Trews +1",
         feet = "Meg. Jam. +2"
     }
 
@@ -227,7 +227,7 @@ function init_gear_sets()
         neck = "Fotia Gorget",
         ear1 = "Moonshade Earring",
         ear2 = "Telos Earring",
-        body = "Laksa. Frac +3",
+        body = "Laksa. Frac +1",
         hands = "Meg. Gloves +2",
         ring1 = "Regal Ring",
         -- ring2 = "Ifrit Ring +1",
@@ -235,7 +235,7 @@ function init_gear_sets()
         back = gear.str_wsd_jse_back,
         waist = "Fotia Belt",
         legs = "Meg. Chausses +2",
-        feet = "Lanun Bottes +3"
+        feet = "Lanun Bottes +1"
     }
 
     sets.precast.WS.Acc = {
@@ -250,7 +250,7 @@ function init_gear_sets()
         back = gear.str_wsd_jse_back,
         waist = "Grunfeld Rope",
         legs = "Carmine Cuisses +1",
-        feet = "Lanun Bottes +3"
+        feet = "Lanun Bottes +1"
     }
 
     sets.precast.WS.Proc = {
@@ -311,14 +311,14 @@ function init_gear_sets()
         neck = "Comm. Charm +2",
         ear1 = "Moonshade Earring",
         ear2 = "Ishvara Earring",
-        body = "Laksa. Frac +3",
+        body = "Laksa. Frac +1",
         hands = "Meg. Gloves +2",
         ring1 = "Regal Ring",
         ring2 = "Rufescent Ring",
         back = gear.str_wsd_jse_back,
         waist = "Sailfi Belt +1",
         legs = gear.herculean_wsd_legs,
-        feet = "Lanun Bottes +3"
+        feet = "Lanun Bottes +1"
     }
 
     sets.precast.WS['Savage Blade'].Acc = {
@@ -334,7 +334,7 @@ function init_gear_sets()
         back = gear.str_wsd_jse_back,
         waist = "Grunfeld Rope",
         legs = "Carmine Cuisses +1",
-        feet = "Lanun Bottes +3"
+        feet = "Lanun Bottes +1"
     }
 
     sets.precast.WS['Last Stand'] = {
@@ -343,14 +343,14 @@ function init_gear_sets()
         neck = "Fotia Gorget",
         ear1 = "Moonshade Earring",
         ear2 = "Telos Earring",
-        body = "Laksa. Frac +3",
+        body = "Laksa. Frac +1",
         hands = "Meg. Gloves +2",
         ring1 = "Regal Ring",
         ring2 = "Dingir Ring",
         back = gear.ranger_wsd_jse_back,
         waist = "Fotia Belt",
         legs = "Meg. Chausses +2",
-        feet = "Lanun Bottes +3"
+        feet = "Lanun Bottes +1"
     }
 
     sets.precast.WS['Last Stand'].Acc = {
@@ -359,14 +359,46 @@ function init_gear_sets()
         neck = "Iskur Gorget",
         ear1 = "Moonshade Earring",
         ear2 = "Telos Earring",
-        body = "Laksa. Frac +3",
+        body = "Laksa. Frac +1",
         hands = "Meg. Gloves +2",
         ring1 = "Regal Ring",
         ring2 = "Dingir Ring",
         back = gear.ranger_wsd_jse_back,
         waist = "Fotia Belt",
         legs = "Meg. Chausses +2",
-        feet = "Lanun Bottes +3"
+        feet = "Lanun Bottes +1"
+    }
+
+    sets.precast.WS['Split Shot'] = {
+        ammo = gear.WSbullet,
+        head = "Meghanada Visor +2",
+        neck = "Comm. Charm +2",
+        ear1 = "Moonshade Earring",
+        ear2 = "Telos Earring",
+        body = "Laksa. Frac +1",
+        hands = "Meg. Gloves +2",
+        ring1 = "Regal Ring",
+        ring2 = "Dingir Ring",
+        back = gear.ranger_wsd_jse_back,
+        waist = "Fotia Belt",
+        legs = "Meg. Chausses +2",
+        feet = "Lanun Bottes +1"
+    }
+
+    sets.precast.WS['Split Shot'].Acc = {
+        ammo = gear.WSbullet,
+        head = "Meghanada Visor +2",
+        neck = "Comm. Charm +2",
+        ear1 = "Moonshade Earring",
+        ear2 = "Telos Earring",
+        body = "Laksa. Frac +1",
+        hands = "Meg. Gloves +2",
+        ring1 = "Regal Ring",
+        ring2 = "Dingir Ring",
+        back = gear.ranger_wsd_jse_back,
+        waist = "Fotia Belt",
+        legs = "Meg. Chausses +2",
+        feet = "Lanun Bottes +1"
     }
 
     sets.precast.WS['Detonator'] = sets.precast.WS['Last Stand']
@@ -386,14 +418,14 @@ function init_gear_sets()
         neck = "Comm. Charm +2",
         ear1 = "Moonshade Earring",
         ear2 = "Friomisi Earring",
-        body = "Laksa. Frac +3",
+        body = "Laksa. Frac +1",
         hands = "Carmine Fin. Ga. +1",
         ring1 = "Archon Ring",
         ring2 = "Dingir Ring",
         back = gear.magic_wsd_jse_back,
         waist = "Eschan Stone",
         legs = "Nyame Flanchard",
-        feet = "Lanun Bottes +3"
+        feet = "Lanun Bottes +1"
     }
 
     sets.precast.WS['Leaden Salute'].Acc = {
@@ -402,14 +434,14 @@ function init_gear_sets()
         neck = "Comm. Charm +2",
         ear1 = "Moonshade Earring",
         ear2 = "Friomisi Earring",
-        body = "Laksa. Frac +3",
+        body = "Laksa. Frac +1",
         hands = "Carmine Fin. Ga. +1",
         ring1 = "Archon Ring",
         ring2 = "Dingir Ring",
         back = gear.magic_wsd_jse_back,
         waist = "Eschan Stone",
         legs = "Nyame Flanchard",
-        feet = "Lanun Bottes +3"
+        feet = "Lanun Bottes +1"
     }
 
     sets.precast.WS['Aeolian Edge'] = {
@@ -418,14 +450,14 @@ function init_gear_sets()
         neck = "Baetyl Pendant",
         ear1 = "Moonshade Earring",
         ear2 = "Friomisi Earring",
-        body = "Laksa. Frac +3",
+        body = "Laksa. Frac +1",
         hands = "Carmine Fin. Ga. +1",
         ring1 = "Metamor. Ring +1",
         ring2 = "Dingir Ring",
         back = gear.magic_wsd_jse_back,
         waist = "Eschan Stone",
         legs = "Nyame Flanchard",
-        feet = "Lanun Bottes +3"
+        feet = "Lanun Bottes +1"
     }
 
     sets.precast.WS['Wildfire'] = {
@@ -434,14 +466,14 @@ function init_gear_sets()
         neck = "Comm. Charm +2",
         ear1 = "Crematio Earring",
         ear2 = "Friomisi Earring",
-        body = "Laksa. Frac +3",
+        body = "Laksa. Frac +1",
         hands = "Carmine Fin. Ga. +1",
         ring1 = "Regal Ring",
         ring2 = "Dingir Ring",
         back = gear.magic_wsd_jse_back,
         waist = "Eschan Stone",
         legs = "Nyame Flanchard",
-        feet = "Lanun Bottes +3"
+        feet = "Lanun Bottes +1"
     }
 
     sets.precast.WS['Wildfire'].Acc = {
@@ -450,14 +482,14 @@ function init_gear_sets()
         neck = "Comm. Charm +2",
         ear1 = "Crematio Earring",
         ear2 = "Friomisi Earring",
-        body = "Laksa. Frac +3",
+        body = "Laksa. Frac +1",
         hands = "Leyline Gloves",
         ring1 = "Regal Ring",
         ring2 = "Dingir Ring",
         back = gear.magic_wsd_jse_back,
         waist = "Eschan Stone",
         legs = "Nyame Flanchard",
-        feet = "Lanun Bottes +3"
+        feet = "Lanun Bottes +1"
     }
 
     sets.precast.WS['Hot Shot'] = sets.precast.WS['Wildfire']
@@ -548,13 +580,13 @@ function init_gear_sets()
         neck = "Iskur Gorget",
         ear1 = "Enervating Earring",
         ear2 = "Telos Earring",
-        body = "Laksa. Frac +3",
+        body = "Laksa. Frac +1",
         hands = "Malignance Gloves",
         ring1 = "Regal Ring",
         ring2 = "Ilabrat Ring",
         back = gear.tp_ranger_jse_back,
         waist = "Yemaya Belt",
-        legs = "Laksa. Trews +3",
+        legs = "Laksa. Trews +1",
         feet = "Malignance Boots"
     }
 
@@ -675,8 +707,8 @@ function init_gear_sets()
         hands = "Floral Gauntlets", waist = "Reiki Yotai" }
 
     -- Weapons sets
-    sets.weapons.Default = { main = "Naegling", sub = "Nusku Shield", range = "Fomalhaut" }
-    sets.weapons.Ranged = { main = "Rostam", sub = "Nusku Shield", range = "Fomalhaut" }
+    sets.weapons.Default = { main = "Naegling", sub = "Nusku Shield", range = "Anarchy" }
+    sets.weapons.Ranged = { main = "Naegling", sub = "Nusku Shield", range = "Anarchy" }
     sets.weapons.Evisceration = { main = "Tauret", sub = "Nusku Shield", range = "Ataktos" }
     sets.weapons.DualWeapons = { main = "Naegling", sub = "Blurred Knife +1", range = "Fomalhaut" }
     sets.weapons.DualSavageWeapons = { main = "Naegling", sub = "Blurred Knife +1", range = "Ataktos" }
@@ -686,7 +718,7 @@ function init_gear_sets()
     sets.weapons.DualLeadenMelee = { main = "Naegling", sub = "Atoyac", range = "Fomalhaut" }
     sets.weapons.DualAeolian = { main = "Rostam", sub = "Tauret", range = "Ataktos" }
     sets.weapons.DualLeadenMeleeAcc = { main = "Naegling", sub = "Blurred Knife +1", range = "Fomalhaut" }
-    sets.weapons.DualRanged = { main = "Rostam", sub = "Kustawi +1", range = "Fomalhaut" }
+    sets.weapons.DualRanged = { main = "Qutrub Knife", sub = "Burrower's Wand", range = "Anarchy" }
 
     -- Engaged sets
 
@@ -697,18 +729,30 @@ function init_gear_sets()
 
     -- Normal melee group
     sets.engaged = {
-        head = "Dampening Tam",
-        neck = "Iskur Gorget",
+        -- head = "Dampening Tam",
+        -- neck = "Iskur Gorget",
+        -- ear1 = "Cessance Earring",
+        -- ear2 = "Brutal Earring",
+        -- body = "Meg. Cuirie +2",
+        -- hands = "Adhemar Wrist. +1",
+        -- ring1 = "Petrov Ring",
+        -- ring2 = "Epona's Ring",
+        -- back = gear.tp_jse_back,
+        -- waist = "Windbuffet Belt +1",
+        -- legs = "Samnuha Tights",
+        -- feet = gear.herculean_ta_feet
+        head = "Nyame Helm",
+        neck = "Combatant's Torque",
         ear1 = "Cessance Earring",
         ear2 = "Brutal Earring",
-        body = "Meg. Cuirie +2",
-        hands = "Adhemar Wrist. +1",
+        body = "Nyame Mail",
+        hands = "Nyame Gauntlets",
         ring1 = "Petrov Ring",
-        ring2 = "Epona's Ring",
+        ring2 = "Crepuscular Ring",
         back = gear.tp_jse_back,
-        waist = "Windbuffet Belt +1",
-        legs = "Samnuha Tights",
-        feet = gear.herculean_ta_feet
+        waist = "Sailfi Belt +1",
+        legs = "Nyame Flanchard",
+        feet = "Nyame Sollerets"        
     }
 
     sets.engaged.Acc = {
@@ -861,6 +905,6 @@ function user_job_lockstyle()
 end
 
 autows_list = { ['Default'] = 'Savage Blade', ['Evisceration'] = 'Evisceration', ['Savage'] = 'Savage Blade',
-    ['Ranged'] = 'Last Stand', ['DualWeapons'] = 'Savage Blade', ['DualSavageWeapons'] = 'Savage Blade',
+    ['Ranged'] = 'Split Shot', ['DualWeapons'] = 'Savage Blade', ['DualSavageWeapons'] = 'Savage Blade',
     ['DualEvisceration'] = 'Evisceration', ['DualLeadenRanged'] = 'Leaden Salute', ['DualLeadenMelee'] = 'Leaden Salute',
-    ['DualAeolian'] = 'Aeolian Edge', ['DualRanged'] = 'Last Stand' }
+    ['DualAeolian'] = 'Aeolian Edge', ['DualRanged'] = 'Sniper Shot' }

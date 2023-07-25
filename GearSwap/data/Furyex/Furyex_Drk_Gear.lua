@@ -430,7 +430,7 @@ function init_gear_sets()
 		neck="Vim Torque +1",
 		waist="Sailfi Belt +1",
 		left_ear="Cessance Earring",
-		right_ear="Heathen's Earring",
+		right_ear="Crep. Earring",
 		left_ring="Lehko's Ring",
 		right_ring="Flamma Ring",
 		back = DRKCape.TP,

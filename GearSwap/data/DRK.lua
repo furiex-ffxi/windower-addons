@@ -77,9 +77,16 @@ end
 -- Set eventArgs.useMidcastGear to true if we want midcast gear equipped on precast.
 	
 function job_precast(spell, spellMap, eventArgs)
+	local abil_recasts = windower.ffxi.get_ability_recasts()
+	
+	if (spell.english == 'Drain II' or spell.english == 'Drain III') and not state.Buff['Dark Seal'] and abil_recasts[89] < latency and not state.Buff['Nether Void'] and abil_recasts[91] < latency then
+		eventArgs.cancel = true
+		send_command('input /ja "Dark Seal" <me>; wait 2; input /ja "Nether Void" <me>; wait 2; input /ma "' .. spell.english .. '" <t>')
+		tickdelay = os.clock() + 6
+		return
+	end
 
 	if spell.type == 'WeaponSkill' and state.AutoBuffMode.value ~= 'Off' then
-		local abil_recasts = windower.ffxi.get_ability_recasts()
 		if spell.english == 'Entropy' and not buffactive['Sekkanoki'] and abil_recasts[95] < latency then
 			eventArgs.cancel = true
 			windower.chat.input('/ja "Consume Mana" <me>')

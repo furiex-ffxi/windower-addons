@@ -80,11 +80,11 @@ TrustSettings = {
             },
         },
         Skillchains = {
-            defaultws = {'Shijin Spiral'},
+            defaultws = {'Stringing Pummel','Shijin Spiral'},
             tpws = {'Shijin Spiral'},
             spamws = {'Howling Fist'},
             starterws = {'Dragon Kick','Stringing Pummel'},
-            preferws = {'Victory Smite','Shijin Spiral','Stringing Pummel'},
+            preferws = {'Stringing Pummel','Victory Smite','Shijin Spiral'},
             cleavews = {'Spinning Attack'},
             amws = 'Stringing Pummel'
         }

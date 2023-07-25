@@ -46,7 +46,7 @@ function init_gear_sets()
         hands = "Plun. Armlets +3", 
         waist = "Chaac Belt", 
         feet = "Skulk. Poulaines +2" }
-    sets.Kiting = { feet = "Skd. Jambeaux +1" }
+    sets.Kiting = { feet = "Jute Boots +1" }
 
     sets.buff.Doom = set_combine(sets.buff.Doom, {})
     sets.buff.Sleep = { head = "Frenzy Sallet" }

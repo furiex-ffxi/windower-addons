@@ -11,9 +11,9 @@ TrustSettings = {
             Buff.new('Shellra'),
             Buff.new('Auspice'),
             Buff.new('Boost-STR'),
-            Buff.new('Barblizzara'),
-            Buff.new('Barparalyzra'),    
-            -- Buff.new('Barstonra'),
+            -- Buff.new('Barfira'),
+            Buff.new('Barsilencera'),    
+            Buff.new('Baraera'),
             -- Buff.new('Barpetra'),
         },
         PartyBuffs = L{

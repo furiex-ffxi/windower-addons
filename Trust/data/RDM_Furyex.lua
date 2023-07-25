@@ -14,7 +14,7 @@ TrustSettings = {
             Spell.new('Phalanx'),
             Buff.new('Protect'),
             Buff.new('Shell'),
-            Buff.new('Barthundra')
+            -- Buff.new('Barthundra')
         },
         PartyBuffs = L{
             Buff.new('Refresh', L{}, L{'DRK','PUP','PLD','BLU','BLM','BRD','GEO','SMN','WHM','RUN', 'RDM'}),
@@ -39,10 +39,10 @@ TrustSettings = {
             Debuff.new('Paralyze'),
         },
         Skillchains = {
-            defaultws = {'Exenterator','Chant du Cygne','Savage Blade','Seraph Blade','Death Blossom','Black Halo','Evisceration'},
+            defaultws = {'Exenterator','Savage Blade','Seraph Blade','Death Blossom','Black Halo','Evisceration'},
             tpws = {'Savage Blade'},
             spamws = {'Savage Blade','Black Halo','Evisceration'},
-            starterws = {'Burning Blade','Death Blossom','Savage Blade','Chant du Cygne'},
+            starterws = {'Burning Blade','Death Blossom','Savage Blade'},
             preferws = {'Flat Blade','Death Blossom','Savage Blade','Black Halo','Realmrazer','Evisceration'},
             cleavews = {'Aeolian Edge'},
             amws = 'Death Blossom'

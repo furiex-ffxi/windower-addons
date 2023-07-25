@@ -76,8 +76,9 @@
     <liambear>
         <actions>true</actions>
         <aoe>
+            <p1>false</p1>
             <p2>false</p2>
-            <p4>false</p4>
+            <p3>false</p3>
             <p5>false</p5>
         </aoe>
         <box>
@@ -86,5 +87,7 @@
                 <y>381</y>
             </pos>
         </box>
+        <clarion>false</clarion>
+        <marcato>Sentinel&apos;s Scherzo</marcato>
     </liambear>
 </settings>

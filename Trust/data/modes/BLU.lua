@@ -8,7 +8,7 @@ return {
         ["autobuffmode"]="Auto",
         ["autoskillchainmode"]="Auto",
         ["autopullmode"]="Off",
-        ["autoaftermathmode"]="Auto",
+        ["autoaftermathmode"]="Off",
         ["skillchainprioritymode"]="Prefer",
         ["autoengagemode"]="Always",
         ["autotargetmode"]="Off",

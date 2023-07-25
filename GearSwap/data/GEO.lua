@@ -61,7 +61,7 @@ function job_setup()
 
 	state.RecoverMode = M('35%', '60%', 'Always', 'Never')
 
-	autows = 'Realmrazer'
+	autows = 'Moonlight'
 	autofood = 'Miso Ramen'
 	autoindi = 'Torpor'
 	autoentrust = 'Fury'

@@ -69,8 +69,8 @@ function init_gear_sets()
 
     --Lethargy
     EMPY.Head		=	"Leth. Chappel +2"
-    EMPY.Body		=	"Lethargy Sayon +2"
-    EMPY.Hands		=	"Leth. Gantherots +2"
+    EMPY.Body		=	"Lethargy Sayon +3"
+    EMPY.Hands		=	"Leth. Gantherots +3"
     EMPY.Legs		=	"Leth. Fuseau +3"
     EMPY.Feet		=	"Leth. Houseaux +3"
 
@@ -103,6 +103,7 @@ function init_gear_sets()
         Head="Malignance Chapeau",
         Body="Malignance Tabard",
 		Hands="Malignance Gloves",
+		Feet="Malignance Boots",
     }
 
     -- Capes:
@@ -241,7 +242,6 @@ function init_gear_sets()
 		neck = "Fotia Gorget",
         ear1 = { name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 		ear2 = "Sherida Earring",
-		body = "Ayanmo Corazza +2",
 		hands = AF.Hands,
 		-- ring1 = "Begrudging Ring",
 		ring1 = "Karieyh Ring",
@@ -259,12 +259,11 @@ function init_gear_sets()
         -- ammo		=	"Regal Gem",
         head		=	RELIC.Head,
         -- body		=	RELIC.Body,
-        -- hands		=	AF.Hands,
+        hands		=	AF.Hands,
         body		=	EMPY.Body,        
-        hands       =   Jhakri.Hands,
         legs		=	EMPY.Legs,
         feet		=	EMPY.Feet,
-        -- neck		=	"Dls. Torque +2",
+        neck		=	"Dls. Torque +2",
         -- waist		=	"Prosilio Belt +1",
         left_ear	=	{ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
         right_ear	=	"Ishvara Earring",
@@ -721,13 +720,18 @@ function init_gear_sets()
 	-- Gear for Magic Burst mode.
 	sets.MagicBurst = set_combine(sets.midcast['Elemental Magic'],{
 		-- main = gear.grioavolr_nuke_staff, 
-		-- sub = "Alber Strap", head = "Ea Hat +1",
-		-- neck = "Mizu. Kubikazari", 
+		-- sub = "Alber Strap", 
+		-- head = "Ea Hat +1",
+		neck = "Mizu. Kubikazari", 
+		hands = "Bunzi's Gloves",
 		-- body = "Ea Houppe. +1", 
 		-- hands = "Amalric Gages +1", 
-		-- ring1 = "Mujin Band",
+		waist = "Acuity Belt +1",
+		ammo = "Ghastly Tathlum +1",
+		ring1 = "Jhakri Ring",
+		ring2 = "Mujin Band",
 		-- legs = "Ea Slops +1", 
-		-- feet = "Jhakri Pigaches +2" 
+		feet = "Jhakri Pigaches +2" 
 	})
 	
 	sets.midcast.Impact = {
@@ -1003,7 +1007,7 @@ function init_gear_sets()
 	sets.weapons.DualWeaponsAcc = { main = "Naegling", sub = "Almace", range = empty }
 	-- sets.weapons.DualEvisceration = { main = "Tauret", sub = "Almace", range = empty }
 	sets.weapons.DualEvisceration = { main = "Tauret", sub = "Ternion Dagger +1", range = empty }
-	sets.weapons.DualAeolian = { main = "Tauret", sub = "Bunzi's Rod", range = empty }
+	sets.weapons.DualAeolian = { main = "Tauret", sub = "Daybreak", range = empty }
 	sets.weapons.DualProcSwords = { main = "Brunello", sub = "Soulflayer's Wand", range = empty }
 	sets.weapons.DualProcDaggers = { main = "Blurred Knife +1", sub = "Atoyac", range = empty }
 	sets.weapons.EnspellOnly = { main = "Norgish Dagger", sub = "Aern Dagger", range = "Kaja Bow", ammo = "Beetle Arrow" }
@@ -1040,12 +1044,12 @@ function init_gear_sets()
         right_ring = "Lehko's Ring",
         -- left_ring	=	{name="Chirich Ring +1", bag="wardrobe2"}, -- I do this to prevent issues with lag sometimes if 2 ring are the same in same bag GS sometimes only equips 1 of them        
         legs		=	Carm.Legs.D,
-        feet        =   "Aya. Gambieras +2",
+        feet        =   Malignance.Feet,
         --feet		=	Carm.Feet.B,
         neck		=	"Anu Torque",
         waist		=	"Sailfi Belt +1",
         left_ear	=	"Sherida Earring",
-        right_ear	=	"Cessance Earring",
+        right_ear	=	"Crep. Earring",
         back		=	RDMCape.TP,  
 	}
 

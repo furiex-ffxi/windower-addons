@@ -83,6 +83,35 @@ end
 
 -- Define sets used by this job file.
 function init_gear_sets()
+	Animators = {}
+    --Animators.Range = "Animator P II +1"
+	Animators.Range = "Animator P +1"
+	Animators.Melee = "Animator P +1"
+
+    --Adjust to your reforge level
+    --Sets up a Key, Value Pair
+    Artifact_Foire = {}
+    Artifact_Foire.Head = "Foire Taj +1"
+    Artifact_Foire.Body = "Foire Tobe +1"
+    Artifact_Foire.Hands = "Foire Dastanas +1"
+    Artifact_Foire.Legs = "Foire Churidars +1"
+    Artifact_Foire.Feet = "Foire Babouches +1"
+
+    Relic_Pitre = {}
+    Relic_Pitre.Head = "Pitre Taj +1" --Enhances Optimization
+    Relic_Pitre.Body = "Pitre Tobe +1" --Enhances Overdrive
+    Relic_Pitre.Hands = "Pitre Dastanas +1" --Enhances Fine-Tuning
+    Relic_Pitre.Legs = "Pitre Churidars +1" --Enhances Ventriloquy
+    Relic_Pitre.Feet = "Pitre Babouches +1" --Role Reversal
+
+    Empy_Karagoz = {}
+    Empy_Karagoz.Head = "Karagoz Cappello +1"
+    Empy_Karagoz.Body = "Karagoz Farsetto +1"
+    Empy_Karagoz.Hands = "Karagoz Guanti +1"
+    Empy_Karagoz.Legs = "Karagoz Pantaloni +1"
+    Empy_Karagoz.Feet = "Karagoz Scarpe +1"
+	Empy_Karagoz.Earring = "Kara. Earring +1"
+
     -- Precast Sets
 
     -- Fast cast sets for spells
@@ -105,11 +134,14 @@ function init_gear_sets()
 
 
     -- Precast sets to enhance JAs
-    sets.precast.JA['Tactical Switch'] = { feet = "Cirque Scarpe +2" }
-    sets.precast.JA['Repair'] = { ammo = "Automat. Oil +3" } --feet="Foire Babouches"
+    sets.precast.JA['Tactical Switch'] = { feet = Empy_Karagoz.Feet }
+    sets.precast.JA['Repair'] = { ammo = "Automat. Oil +3", feet=Artifact_Foire.Feet }
     sets.precast.JA['Maintenance'] = { ammo = "Automat. Oil +3" }
+    sets.precast.JA['Overdrive'] = {body=Relic_Pitre.Body}
+    sets.precast.JA['Ventriloquy'] = {body=Relic_Pitre.Legs}
+    sets.precast.JA['Role Reversal'] = {body=Relic_Pitre.Feet}
 
-    sets.precast.JA.Maneuver = { main = "Midnights", back = "Visucius's Mantle" } --neck="Buffoon's Collar",hands="Foire Dastanas",body="Cirque Farsetto +2",
+    sets.precast.JA.Maneuver = { main = "Midnights", back = "Visucius's Mantle", neck="Buffoon's Collar",hands=Artifact_Foire.Hands, body=Empy_Karagoz.Body } 
 
     -- Waltz set (chr and vit)
     sets.precast.Waltz = {
@@ -291,7 +323,7 @@ function init_gear_sets()
     sets.midcast.Pet.PetEnmityGear = {}
     sets.midcast.Pet.PetWSGear = {
         main = "Ohtas",
-        head = "Mpaca's Cap",
+        head = Empy_Karagoz.Head,
         neck = "Shulmanu Collar",
         ear1 = "Enmerkar Earring",
         ear2 = "Domesticator's Earring",
@@ -326,18 +358,18 @@ function init_gear_sets()
     -- Idle sets
 
     sets.idle = {
-        head = "Nyame Helm",
+        head = "Malignance Chapeau",
         neck = "Loricate Torque +1",
         ear1 = "Etiolation Earring",
         ear2 = "Sanare Earring",
-        body = "Hiza. Haramaki +2",
-        hands = "Nyame Gauntlets",
+        body = "Malignance Tabard",
+        hands = "Malignance Gloves",
         ring1 = "Defending Ring",
         ring2 = "Dark Ring",
         back = "Moonlight Cape",
         waist = "Carrier Sash",
         legs = "Nyame Flanchard",
-        feet = "Hippo. Socks +1"
+        feet = "Malignance Boots"
     }
 
     sets.idle.Refresh = {
@@ -488,16 +520,16 @@ function init_gear_sets()
         body="Malignance Tabard",
         hands="Malignance Gloves",
         neck = "Subtlety Spectacles",
-        ear1 = "Cessance Earring",
-        ear2 = "Telos Earring",
-        ring1 = "Niqmaddu Ring",
+        ear1 = "Crep. Earring",
+        ear2 = "Karagoz Earring",
+        ring1 = "Lehko's Ring",
         ring2 = "Fortified Ring",
         -- ring2 = "Epona's Ring",
         back = "Visucius's Mantle",
         waist = "Windbuffet Belt +1",
-        legs = "Nyame Flanchard",
+        legs = "Mpaca's Hose",
         -- legs = "Ryuo Hakama",
-        feet="Nyame Sollerets",
+        feet="Malignance Boots",
         -- feet = gear.herculean_ta_feet
     }
     sets.engaged.Acc = {

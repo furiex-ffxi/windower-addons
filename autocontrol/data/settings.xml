@@ -129,4 +129,10 @@
         </text>
         <visible>false</visible>
     </global>
+    <furyex>
+        <pos>
+            <x>2080</x>
+            <y>1092</y>
+        </pos>
+    </furyex>
 </settings>

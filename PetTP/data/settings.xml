@@ -1,6 +1,7 @@
 <?xml version="1.1" ?>
 <settings>
     <global>
+        <autocolor>true</autocolor>
         <bg>
             <alpha>255</alpha>
             <blue>0</blue>
@@ -8,19 +9,6 @@
             <red>0</red>
             <visible>true</visible>
         </bg>
-        <blacklist />
-        <colors>
-            <others>
-                <blue>0</blue>
-                <green>255</green>
-                <red>255</red>
-            </others>
-            <player>
-                <blue>255</blue>
-                <green>255</green>
-                <red>255</red>
-            </player>
-        </colors>
         <flags>
             <bold>false</bold>
             <bottom>false</bottom>
@@ -28,24 +16,21 @@
             <italic>false</italic>
             <right>false</right>
         </flags>
-        <hide_below_zero>false</hide_below_zero>
-        <interval>0.1</interval>
-        <mode>blacklist</mode>
         <padding>0</padding>
         <pos>
-            <x>0</x>
-            <y>0</y>
+            <x>1706.6666666667</x>
+            <y>1583</y>
         </pos>
         <text>
             <alpha>255</alpha>
             <blue>255</blue>
-            <font>Arial</font>
+            <font>Courier New</font>
             <fonts>
 
             </fonts>
             <green>255</green>
             <red>255</red>
-            <size>12</size>
+            <size>10</size>
             <stroke>
                 <alpha>255</alpha>
                 <blue>0</blue>
@@ -54,25 +39,16 @@
                 <width>0</width>
             </stroke>
         </text>
-        <timers>true</timers>
-        <whitelist />
     </global>
-    <cleobabe>
-        <pos>
-            <x>2318</x>
-            <y>674</y>
-        </pos>
-    </cleobabe>
     <furyex>
         <pos>
-            <x>2050</x>
-            <y>681</y>
+            <x>2075.6665039062</x>
+            <y>1073</y>
         </pos>
+        <text>
+            <fonts>
+
+            </fonts>
+        </text>
     </furyex>
-    <liambear>
-        <pos>
-            <x>2243</x>
-            <y>907</y>
-        </pos>
-    </liambear>
 </settings>

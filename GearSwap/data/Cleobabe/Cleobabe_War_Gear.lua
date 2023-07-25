@@ -9,7 +9,7 @@ function user_job_setup()
 	state.IdleMode:options('Normal', 'PDT', 'Refresh', 'Reraise')
 	state.ExtraMeleeMode = M { ['description'] = 'Extra Melee Mode', 'None' }
 	state.Passive = M { ['description'] = 'Passive Mode', 'None', 'Twilight' }
-	state.Weapons:options('None', 'Lycurgos', 'ShiningOne', 'Chango', 'DualWeapons', 'Greatsword', 'Naegling', 'Loxotic', 'ProcDagger', 'ProcSword', 'ProcGreatSword',
+	state.Weapons:options('None', 'Lycurgos', 'ShiningOne', 'Chango', 'DualWeapons', 'Greatsword', 'Naegling', 'Loxotic', 'ProcSword', 'ProcDagger', 'ProcKatana', 'ProcGreatSword',
 	'ProcScythe', 'ProcPolearm', 'ProcGreatKatana', 'ProcClub', 'ProcStaff')
 
 	gear.da_jse_back = { name = "Cichol's Mantle", augments = { 'DEX+20', 'Accuracy+20 Attack+20', '"Dbl.Atk."+10' } }
@@ -75,7 +75,7 @@ function init_gear_sets()
 		hands="Pumm. Mufflers +3"
 	}
 	sets.precast.JA['Restraint'] = {
-		hands="Boii Mufflers +2"
+		hands="Boii Mufflers +3"
 	}
 	sets.precast.JA['Blood Rage'] = {
         body="Boii Lorica +3"
@@ -144,9 +144,9 @@ function init_gear_sets()
         ammo = "Knobkierrie",
         head = "Agoge Mask +3",
 		neck = "Sanctity Necklace",
-        hands =	"Boii Mufflers +2",
+        hands =	"Boii Mufflers +3",
         body = "Pumm. Lorica +3",
-        legs = "Boii Cuisses +2",
+        legs = "Boii Cuisses +3",
         feet = "Sulevia's Leggings +2",
 		waist="Sailfi Belt +1",
 		left_ring="Cornelia's Ring",
@@ -372,7 +372,7 @@ function init_gear_sets()
 	sets.engaged.Fencer = set_combine(sets.engaged, {
 		hands = "Agoge Mufflers +3",
 		body="Agoge Lorica +3", 
-		legs = "Boii Cuisses +2",
+		legs = "Boii Cuisses +3",
     })
 
 
@@ -1407,6 +1407,7 @@ function init_gear_sets()
 	sets.weapons.Greatsword = { main = "Montante +1", sub = "Utu Grip" }
 	sets.weapons.ProcDagger = { main = "Bronze Dagger", sub = empty }
 	sets.weapons.ProcSword = { main = "Wax Sword", sub = empty }
+	sets.weapons.ProcKatana = { main = "Trainee Burin", sub = empty }
 	sets.weapons.ProcGreatSword = { main = "Goujian", sub = empty }
 	sets.weapons.ProcScythe = { main = "Bronze Zaghnal", sub = empty }
 	sets.weapons.ProcPolearm = { main = "Harpoon", sub = empty }

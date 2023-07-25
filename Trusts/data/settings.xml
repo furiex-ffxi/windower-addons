@@ -5,9 +5,9 @@
         <language>English</language>
         <sets>
             <ambu>
-                <1>Valaineral</1>
-                <2>Amchuchu</2>
-                <3>Sylvie (UC)</3>
+                <1>Sylvie (UC)</1>
+                <2>King of Hearts</2>
+                <3>Kupipi</3>
             </ambu>
             <apex>
                 <1>Matsui-P</1>
@@ -56,14 +56,14 @@
                 <5>Apururu (UC)</5>
             </level>
             <lilith>
-                <1>AAEV</1>
-                <2>Cherukiki</2>
-                <3>Koru-Moru</3>
+                <1>King of Hearts</1>
+                <2>Sylvie (UC)</2>
+                <3>AAEV</3>
             </lilith>
             <locus>
                 <1>Sylvie (UC)</1>
-                <2>Kupipi</2>
-                <3>Qultada</3>
+                <2>Ulmia</2>
+                <3>Joachim</3>
             </locus>
             <ody>
                 <1>Sylvie (UC)</1>
@@ -88,8 +88,13 @@
                 <2>Gessho</2>
                 <3>Kupipi</3>
             </rem>
-            <sortie>
+            <shinryu>
                 <1>Valaineral</1>
+                <2>Sylvie (UC)</2>
+                <3>Selh&apos;teus</3>
+            </shinryu>
+            <sortie>
+                <1>Amchuchu</1>
                 <2>Sylvie (UC)</2>
                 <3>Cherukiki</3>
             </sortie>
@@ -119,8 +124,7 @@
             </th>
             <v1ambu>
                 <1>Valaineral</1>
-                <2>August</2>
-                <3>Apururu (UC)</3>
+                <2>Sylvie (UC)</2>
             </v1ambu>
             <v2ambu>
                 <1>Matsui-P</1>

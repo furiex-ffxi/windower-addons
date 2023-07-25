@@ -4,7 +4,7 @@ function user_job_setup()
 	state.HybridMode:options('Normal', 'DT')
 	state.CastingMode:options('Normal', 'Resistant', 'AoE')
 	state.IdleMode:options('Normal', 'NoRefresh', 'DT')
-	state.Weapons:options('None', 'Naegling', 'Aeneas', 'Daybreak', 'DualWeapons', 'DualNaegling', 'DualTauret', 'DualAeolian')
+	state.Weapons:options('None', 'Naegling', 'Aeneas', 'Carnwenhan', 'Daybreak', 'DualWeapons', 'DualNaegling', 'DualTauret', 'DualAeolian', 'DualCarnwenhan')
 	-- Whether to use Carn (or song daggers in general) under a certain threshhold even when weapons are locked.
 	state.CarnMode = M { 'Always', '300', '1000', 'Never' }
 
@@ -43,9 +43,12 @@ function init_gear_sets()
 
 	-- Weapons sets
 	sets.weapons.Aeneas = { main = "Aeneas", sub = "Genmei Shield" }
+	-- sets.weapons.DualWeapons = { main = "Dancing Dagger", sub = "Gleti's Knife" }
 	sets.weapons.DualWeapons = { main = "Aeneas", sub = "Fusetto +2" }
 	sets.weapons.DualNaegling = { main = "Naegling", sub = "Fusetto +2" }
+	sets.weapons.DualCarnwenhan = { main = "Carnwenhan", sub = "Fusetto +2" }
 	sets.weapons.Naegling = { main = "Naegling", sub = "Genmei Shield" }
+	sets.weapons.Carnwenhan = { main = "Carnwenhan", sub = "Genmei Shield" }
 	sets.weapons.DualTauret = { main = "Tauret", sub = "Blurred Knife +1" }
 	sets.weapons.DualAeolian = { main = "Tauret", sub = "Malevolence" }
 	sets.weapons.Daybreak = { main = "Daybreak", sub = "Ammurapi Shield" }
@@ -57,12 +60,12 @@ function init_gear_sets()
 
 	-- Fast cast sets for spells
 	sets.precast.FC = {
-        main="Kali", --7
+        main="Carnwenhan", --7
         head="Bunzi's Hat",
         body="Brioso Justau. +3",
         hands="Fili Manchettes +3",
         legs="Doyen Pants",
-        feet={ name="Bihu Slippers +3", augments={'Enhances "Nightingale" effect',}},
+        feet="Fili Cothurnes +3",
         neck={ name="Bard's Charm +2", augments={'Path: A',}},
         waist="Siegel Sash",
         left_ear="Loquac. Earring",
@@ -114,9 +117,8 @@ function init_gear_sets()
 	 })
 
 	sets.precast.FC.BardSong =  set_combine(sets.precast.FC, {
-        head="Fili Calot +2", --14
+        head="Fili Calot +3", --14
         body="Brioso Justau. +3", --15
-        feet="Bihu Slippers +3", --9
         neck="Loricate Torque +1",
         ear1="Odnowa Earring +1",
         ring2="Defending Ring",
@@ -295,7 +297,7 @@ function init_gear_sets()
 	sets.midcast.Etude = {head="Mousai Turban +1"}
 	sets.midcast.Lullaby = { range = "Marsyas", hands="Brioso Cuffs +3" }
 	sets.midcast.Lullaby.Resistant = { range = "Gjallarhorn", hands="Brioso Cuffs +3" }
-	sets.midcast.Madrigal = { head = "Fili Calot +2" }
+	sets.midcast.Madrigal = { head = "Fili Calot +3" }
 	sets.midcast.Mambo = {feet="Mou. Crackows +1"}
 	sets.midcast.March = { hands = "Fili Manchettes +3" }
 	sets.midcast.Mazurka = { range = "Marsyas" }
@@ -314,14 +316,14 @@ function init_gear_sets()
 	sets.midcast["Goblin Gavotte"] = { range = info.ExtraSongInstrument }
 	sets.midcast["Goddess's Hymnus"] = { range = info.ExtraSongInstrument }
 	sets.midcast["Scop's Operetta"] = { range = info.ExtraSongInstrument }
-	sets.midcast["Sentinel's Scherzo"] = { feet = "Fili Cothurnes +2" }
+	sets.midcast["Sentinel's Scherzo"] = { feet = "Fili Cothurnes +3" }
 	sets.midcast["Sheepfoe Mambo"] = { range = info.ExtraSongInstrument }
 
 	-- For song buffs (duration and AF3 set bonus)
 	sets.midcast.SongEffect = {
         main="Carnwenhan",
         range="Gjallarhorn",
-        head="Fili Calot +2",
+        head="Fili Calot +3",
         body="Fili Hongreline +3",
         hands="Fili Manchettes +3",
         legs="Inyanga Shalwar +2",
@@ -336,13 +338,13 @@ function init_gear_sets()
 	}
 
 	sets.midcast.SongEffect.DW = { 
-		main = "Kali", 
-		sub = "Kali" 
+		main = "Carnwenhan", 
+		sub = { name="Kali", augments={'MP+60','Mag. Acc.+20','"Refresh"+1',}} 
 	} --Only weapons in this set. This set is overlayed onto  SongEffect
 
 	-- For song defbuffs (duration primary, accuracy secondary)
 	sets.midcast.SongDebuff = {
-        main="Carnwenhan",
+        main={ name="Kali", augments={'MP+60','Mag. Acc.+20','"Refresh"+1',}},
         sub="Ammurapi Shield",
         range="Gjallarhorn",
         head="Brioso Roundlet +3",
@@ -360,7 +362,7 @@ function init_gear_sets()
 	}
 
 	sets.midcast.SongDebuff.DW = { 
-		main = "Kali", 
+		main = { name="Kali", augments={'MP+60','Mag. Acc.+20','"Refresh"+1',}}, 
 		sub = "Kali" 
 	} --Only weapons in this set. This set is overlayed onto  SongDebuff
 
@@ -572,7 +574,7 @@ function init_gear_sets()
         hands="Raetic Bangles +1",
         legs="Volte Brais",
         legs="Volte Gaiters",
-        feet="Fili Cothurnes +2",
+        feet="Fili Cothurnes +3",
         neck="Bathy Choker +1",
         ear1="Eabani Earring",
         ear2="Sanare Earring",
@@ -597,7 +599,7 @@ function init_gear_sets()
 		back = "Moonlight Cape",
 		waist = "Carrier's Sash",
 		legs = "Nyame Flanchard",
-		feet = "Fili Cothurnes +2"
+		feet = "Fili Cothurnes +3"
 	}
 
 	sets.idle.DT = {
@@ -624,7 +626,7 @@ function init_gear_sets()
         ear1="Odnowa Earring +1",
 	})
 
-	sets.Kiting = { feet = "Fili Cothurnes +2" }
+	sets.Kiting = { feet = "Fili Cothurnes +3" }
 	sets.latent_refresh = { waist = "Fucho-no-obi" }
 	sets.latent_refresh_grip = { sub = "Oneiros Grip" }
 	sets.TPEat = { neck = "Chrys. Torque" }
