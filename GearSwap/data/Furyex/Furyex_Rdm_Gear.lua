@@ -230,7 +230,7 @@ function init_gear_sets()
 		hands = AF.Hands,
 		ring1 = "Ifrit Ring +1",
 		ring2 = "Rufescent Ring",
-        back		=	RDMCape.MACC,		
+        back = RDMCape.MACC,		
 		waist = "Fotia Belt",
 		legs = "Jhakri Slops +2",
 		feet = "Jhakri Pigaches +2"
