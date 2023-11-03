@@ -1,23 +1,31 @@
--- Default trust settings for COR
-TrustSettings = {
+-- Settings file for COR
+return {
     Default = {
-        -- Roll1=Roll.new("Wizard's Roll", true),
-        -- Roll2=Roll.new("Caster's Roll", false),
-        -- Roll1=Roll.new("Corsair's Roll", true),
-        Roll1=Roll.new("Corsair's Roll", true),
-        Roll2=Roll.new("Samurai Roll", false),
-        -- Roll1=Roll.new("Beast Roll", true),
-        -- Roll2=Roll.new("Companion's Roll", false),
         Skillchains = {
-            defaultws = {'Leaden Salute','Savage Blade'},
-            tpws = {'Leaden Salute','Savage Blade'},
-            spamws = {'Savage Blade'},
-            starterws = {'Leaden Salute','Savage Blade'},
-            preferws = {'Leaden Salute','Savage Blade'},
-            cleavews = {},
-            amws = 'Leaden Salute'
-        }
+            spamws = L{
+                "Savage Blade"
+            },
+            starterws = L{
+                "Leaden Salute"
+            },
+            defaultws = L{
+                "Leaden Salute",
+                "Savage Blade"
+            },
+            preferws = L{
+                "Leaden Salute",
+                "Savage Blade"
+            },
+            cleavews = L{
+
+            },
+            amws = "Leaden Salute",
+            tpws = L{
+                "Leaden Salute",
+                "Savage Blade"
+            }
+        },
+        Roll1 = Roll.new("Chaos Roll", true),
+        Roll2 = Roll.new("Samurai Roll", false)
     }
 }
-return TrustSettings
-

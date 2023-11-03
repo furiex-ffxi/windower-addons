@@ -1,50 +1,58 @@
--- Default trust settings for BRD
-TrustSettings = {
+-- Settings file for BRD
+return {
     Default = {
+        NumSongs = 4,
         SelfBuffs = L{
-            -- Spell.new("Mage's Ballad III", L{'Pianissimo'}, L{'BRD'}),
-            -- Spell.new("Mage's Ballad II", L{'Pianissimo'}, L{'BRD'}),
+
+        },
+        SongDuration = 240,
+        SongDelay = 6,
+        Skillchains = {
+            spamws = L{
+                "Savage Blade",
+                "Mordant Rime"
+            },
+            starterws = L{
+                "Savage Blade",
+                "Mordant Rime"
+            },
+            defaultws = L{
+                "Savage Blade",
+                "Mordant Rime",
+                "Retribution"
+            },
+            cleavews = L{
+                "Aeolian Edge"
+            },
+            preferws = L{
+                "Savage Blade",
+                "Mordant Rime",
+                "Rudra's Storm"
+            },
+            amws = "Mordant Rime",
+            tpws = L{
+                "Mordant Rime"
+            }
         },
         PartyBuffs = L{
-            Spell.new("Mage's Ballad III", L{'Pianissimo'}, L{'BLM','WHM','GEO','SCH','BRD','RDM'}),
-            -- Spell.new("Mage's Ballad II", L{'Pianissimo'}, L{'BLM','WHM','GEO','SCH','BRD','RDM'}),
-            -- Spell.new("Sage Etude", L{'Pianissimo'}, L{'BLM'}),
-        },
-        JobAbilities = S{
-            'Soul Voice',
-            'Clarion Call',
-        },
-        Debuffs = L{
-            Spell.new('Carnage Elegy')
-        },
-        Songs = L{
-            Spell.new("Valor Minuet IV", L{}),
-            Spell.new("Valor Minuet V", L{}),
-            Spell.new("Blade Madrigal", L{}),
-            Spell.new("Honor March", L{'Marcato'}),
-            Spell.new("Victory March", L{}),
-            -- Spell.new("Valor Minuet III"),
+            Spell.new("Mage's Ballad III", L{"Pianissimo"}, L{"BLM", "WHM", "GEO", "SCH"}, nil, L{}),
+            Spell.new("Sage Etude", L{"Pianissimo"}, L{"BLM"}, nil, L{}),
+            Spell.new("Knight's Minne V", L{"Pianissimo"}, L{"PLD","RUN"}, nil, L{}),
         },
         DummySongs = L{
-            Spell.new("Army's Paeon IV"),
-            Spell.new("Goddess's Hymnus"),
-            Spell.new("Scop's Operetta"),
-            Spell.new("Sheepfoe Mambo"),
-            Spell.new("Goblin Gavotte")
+            Spell.new("Scop's Operetta", L{}, nil, nil, L{}),
+            Spell.new("Goblin Gavotte", L{}, nil, nil, L{}),
+            Spell.new("Sheepfoe Mambo", L{}, nil, nil, L{}),
         },
-        NumSongs = 4,
-        SongDuration = 240,
-        Skillchains = {
-            defaultws = {'Rudra\'s Storm','Savage Blade','Mordant Rime','Retribution'},
-            tpws = {'Mordant Rime'},
-            spamws = {'Savage Blade','Mordant Rime'},
-            cleavews = {'Aeolian Edge'},
-            starterws = {'Savage Blade','Mordant Rime'},
-            -- preferws = {'Savage Blade','Mordant Rime',"Rudra's Storm"},
-            preferws = {'Rudra\'s Storm'},
-            amws = 'Exenterator'
+        Debuffs = L{
+            Spell.new("Carnage Elegy", L{}, nil, nil, L{})
+        },
+        Songs = L{
+            Spell.new("Honor March", L{"Marcato"}, L{'WAR','PLD','BRD','SAM','DRG','BLU','PUP','RUN','MNK','THF','BST','NIN','DNC','DRK','COR','WHM'}, nil, L{}),
+            Spell.new("Blade Madrigal", L{}, L{'WAR','PLD','BRD','SAM','DRG','BLU','PUP','RUN','MNK','THF','BST','NIN','DNC','DRK','COR'}, nil, L{}),
+            Spell.new("Valor Minuet IV", L{}, L{'WAR','PLD','BRD','SAM','DRG','BLU','PUP','RUN','MNK','THF','BST','NIN','DNC','DRK','COR'}, nil, L{}),
+            Spell.new("Valor Minuet V", L{}, L{'WAR','PLD','BRD','SAM','DRG','BLU','PUP','RUN','MNK','THF','BST','NIN','DNC','DRK','COR'}, nil, L{}),
+            Spell.new("Valor Minuet III", L{}, L{'WAR','PLD','BRD','SAM','DRG','BLU','PUP','RUN','MNK','THF','BST','NIN','DNC','DRK','COR'}, nil, L{})
         }
     }
 }
-return TrustSettings
-

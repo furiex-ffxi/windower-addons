@@ -1,14 +1,14 @@
 -- Modes file for BLU
 return {
     ["Default"]={
-        ["autodispelmode"]="Auto",
+        ["autodispelmode"]="Off",
         ["subtrustsettingsmode"]="Default",
         ["automagicburstmode"]="Off",
         ["autofollowmode"]="Always",
         ["autobuffmode"]="Auto",
         ["autoskillchainmode"]="Auto",
         ["autopullmode"]="Off",
-        ["autoaftermathmode"]="Off",
+        ["autoaftermathmode"]="Auto",
         ["skillchainprioritymode"]="Prefer",
         ["autoengagemode"]="Always",
         ["autotargetmode"]="Off",

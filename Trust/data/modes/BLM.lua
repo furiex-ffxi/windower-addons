@@ -1,4 +1,4 @@
--- Modes file for BLU
+-- Modes file for BLM
 return {
     ["Default"]={
         ["autodispelmode"]="Auto",
@@ -9,6 +9,7 @@ return {
         ["autoaftermathmode"]="Off",
         ["autoskillchainmode"]="Off",
         ["automagicburstmode"]="Auto",
+        ["autonukemode"]="Off",
         ["skillchainprioritymode"]="Off",
         ["autoengagemode"]="Off",
         ["autodebuffmode"]="Auto",

@@ -1,30 +1,40 @@
--- Default trust settings for GEO
-TrustSettings = {
+-- Settings file for GEO
+return {
     Default = {
-        JobAbilities = S{
+        SelfBuffs = L{
+
         },
-        SelfBuffs = S{
+        JobAbilities = L{
+
         },
-        PartyBuffs = S{
-            Spell.new('Indi-Fury', L{'Entrust'}, L{'DRK','SAM'}),
-            -- Spell.new('Indi-Refresh', L{'Entrust'}, L{'DRK'})
-        },
-        Geomancy = {
-            -- Indi = Spell.new('Indi-Haste', L{}, L{}),
-            Indi = Spell.new('Indi-Frailty', L{}, L{}),
-            -- Indi = Spell.new('Indi-Acumen', L{}, L{}),
-            Geo = Spell.new('Geo-Malaise', L{}, L{}, 'bt')
+        PartyBuffs = L{
+            Spell.new("Indi-STR", L{"Entrust"}, L{"DRK", "SAM", "WAR", "MNK"}, nil, L{}),
+            Spell.new("Indi-Fury", L{"Entrust"}, L{"RUN"}, nil, L{})
         },
         Skillchains = {
-            defaultws = {'Black Halo'},
-            tpws = {'Black Halo'},
-            spamws = {'Black Halo'},
-            starterws = {},
-            preferws = {'Black Halo'},
-            cleavews = {},
-            amws = 'Exudation'
+            spamws = L{
+                "Black Halo"
+            },
+            starterws = L{
+
+            },
+            defaultws = L{
+                "Black Halo"
+            },
+            preferws = L{
+                "Black Halo"
+            },
+            cleavews = L{
+
+            },
+            amws = "Exudation",
+            tpws = L{
+                "Black Halo"
+            }
+        },
+        Geomancy = {
+            Indi = Spell.new("Indi-Acumen", L{}, L{}, nil, L{}),
+            Geo = Spell.new("Geo-Malaise", L{}, L{}, "bt", L{})
         }
     }
 }
-return TrustSettings
-
