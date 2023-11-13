@@ -7,7 +7,7 @@ function user_job_setup()
 	state.MagicalDefenseMode:options('MDT', 'MDTReraise')
 	state.ResistDefenseMode:options('MEVA')
 	state.IdleMode:options('Normal', 'PDT', 'Refresh', 'Reraise')
-	state.Weapons:options('Apocalypse', 'Montante', 'Anguta')
+	state.Weapons:options('Apocalypse', 'Liberator', 'Montante', 'Anguta')
 	state.ExtraMeleeMode = M { ['description'] = 'Extra Melee Mode', 'None' }
 	state.Passive = M { ['description'] = 'Passive Mode', 'None', 'MP', 'Twilight' }
 	state.DrainSwapWeaponMode = M { 'Always', 'Never', '300', '1000' }
@@ -31,20 +31,20 @@ function init_gear_sets()
 
 	AF = {}
 	AF = {
-		Head="Igno. Burgeonet +1",
-		Body="Igno. Cuirass +1",
-		Hands="Igno. Gauntlets +1",
-		Legs="Igno. Flan. +1",
-		Feet="Igno. Sollerets +1",
+		Head="Igno. Burgeonet +2",
+		Body="Igno. Cuirass +2",
+		Hands="Igno. Gauntlets +2",
+		Legs="Igno. Flan. +2",
+		Feet="Igno. Sollerets +2",
 	}
 
 	Relic = {}
 	Relic = {
-		Head={ name="Fall. Burgeonet +1", augments={'Enhances "Dark Seal" effect',}},
-		Body={ name="Fall. Cuirass +1", augments={'Enhances "Blood Weapon" effect',}},
-		Hands={ name="Fall. Fin. Gaunt. +1", augments={'Enhances "Diabolic Eye" effect',}},
-		Legs={ name="Fall. Flanchard +1", augments={'Enhances "Muted Soul" effect',}},
-		Feet={ name="Fall. Sollerets +1", augments={'Enhances "Desperate Blows" effect',}},
+		Head={ name="Fall. Burgeonet +3", augments={'Enhances "Dark Seal" effect',}},
+		Body={ name="Fall. Cuirass +3", augments={'Enhances "Blood Weapon" effect',}},
+		Hands={ name="Fall. Fin. Gaunt. +3", augments={'Enhances "Diabolic Eye" effect',}},
+		Legs={ name="Fall. Flanchard +3", augments={'Enhances "Muted Soul" effect',}},
+		Feet={ name="Fall. Sollerets +3", augments={'Enhances "Desperate Blows" effect',}},
 	}
 
 	Empy = {}
@@ -104,14 +104,14 @@ function init_gear_sets()
 		neck = "Voltsurge Torque",
 		ear1 = "Enchntr. Earring +1",
 		ear2 = "Malignance Earring",
-		body = "Odyss. Chestplate",
+		body = Relic.Body,
 		hands = "Leyline Gloves",
 		ring1 = "Prolix Ring",
 		ring2 = "Kishar Ring",
 		back = "Moonlight Cape",
 		waist = "Flume Belt +1",
 		legs = gear.odyssean_fc_legs,
-		feet = "Odyssean Greaves"
+		feet={ name="Odyssean Greaves", augments={'Pet: STR+7','Accuracy+8','"Fast Cast"+6','Mag. Acc.+7 "Mag.Atk.Bns."+7',}},
 	}
 
 	sets.precast.FC.Impact = set_combine(sets.precast.FC, { head = empty, body = "Twilight Cloak" })
@@ -225,7 +225,7 @@ function init_gear_sets()
 	-- Weaponskill sets
 	-- Default set for any weaponskill that isn't any more specifically defined
 	sets.precast.WS = {
-		ammo = "Knobkierrie",
+		ammo = "Oshasha's Treatise",
 		-- ammo = "Seeth. bomblet +1",
 		head = Empy.Head,
 		-- neck = "Fotia Gorget",
@@ -233,18 +233,18 @@ function init_gear_sets()
 		-- ear1 = "Lugra Earring +1",
         ear1 = { name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
         ear2 = "Thrud Earring",
-		body = Empy.Body,
-		hands = Empy.Hands,
+		body = AF.Body,
+		hands = "Sakpata's Gauntlets",
 		-- body = gear.valorous_wsd_body,
 		-- hands = "Sulev. Gauntlets +2",
-        ring1 = "Stikini Ring +1",
+        ring1 = "Ilabrat Ring",
         ring2 ="Karieyh Ring",		
 		-- ring1 = "Regal Ring",
 		-- ring2 = "Niqmaddu Ring",
 		back = DRKCape.STR,
-		waist = "Fotia Belt",
+		waist = "Sailfi Belt +1",
 		-- legs = sets.Nyame.Legs,
-		legs={ name="Valorous Hose", augments={'Attack+19','Accuracy+17 Attack+17','Weapon skill damage +2%',}},
+		legs=Relic.Legs,
 		feet = Empy.Feet,
 		-- legs = "Sulev. Cuisses +2",
 		-- feet = "Flam. Gambieras +2"
@@ -626,6 +626,7 @@ function init_gear_sets()
 
 	-- Weapons sets
 	sets.weapons.Apocalypse = { main = "Apocalypse", sub = "Capitoline Strap" }
+	sets.weapons.Liberator = { main = "Liberator", sub = "Capitoline Strap" }
 	sets.weapons.Montante = { main = "Montante +1", sub = "Capitoline Strap" }
 	sets.weapons.Anguta = { main = "Anguta", sub = "Utu Grip" }
 end

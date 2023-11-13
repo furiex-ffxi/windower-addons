@@ -1,6 +1,6 @@
 function user_job_setup()
 	-- Options: Override default values
-	state.OffenseMode:options('Normal', 'Acc', 'FullAcc')
+	state.OffenseMode:options('Normal', 'Acc', 'FullAcc', 'DT')
 	state.HybridMode:options('Normal', 'DT')
 	state.WeaponskillMode:options('Match', 'Proc')
 	state.AutoBuffMode:options('Off', 'Auto', 'AutoMelee','FullMeleeBuff')
@@ -287,20 +287,33 @@ function init_gear_sets()
 	})
 
 	sets.precast.WS['Sanguine Blade'] = {
-		range = empty,
-		ammo = "Pemphredo Tathlum",
-		head = "Pixie Hairpin +1",
-		neck = "Baetyl Pendant",
-		ear1 = "Regal Earring",
-		ear2 = "Malignance Earring",
-		body = gear.merlinic_nuke_body,
+		-- range = empty,
+		-- ammo = "Pemphredo Tathlum",
+		-- head = "Pixie Hairpin +1",
+		-- neck = "Baetyl Pendant",
+		-- ear1 = "Regal Earring",
+		-- ear2 = "Malignance Earring",
+		-- body = gear.merlinic_nuke_body,
+		-- hands = "Jhakri Cuffs +2",
+		-- ring1 = "Metamor. Ring +1",
+		-- ring2 = "Archon Ring",
+		-- back = gear.nuke_jse_back,
+		-- waist = "Refoccilation Stone",
+		-- legs = "Merlinic Shalwar",
+		-- feet = "Amalric Nails +1"
+        neck        =   "Mizu. Kubikazari",
+        head        =   EMPY.Head,
+        body        =   EMPY.Body,
 		hands = "Jhakri Cuffs +2",
-		ring1 = "Metamor. Ring +1",
-		ring2 = "Archon Ring",
-		back = gear.nuke_jse_back,
-		waist = "Refoccilation Stone",
-		legs = "Merlinic Shalwar",
-		feet = "Amalric Nails +1"
+        legs        =   EMPY.Legs,
+        feet        =   EMPY.Feet,
+        left_ear    =   "Malignance Earring",
+        right_ear   =   "Snotra Earring",
+        waist       =   "Acuity Belt +1",
+        ammo        =   "Regal Gem",
+        left_ring   =   "Jhakri Ring",
+        right_ring  =   "Ayanmo Ring",
+        back		=	RDMCape.MACC,	
 	}
 
 	sets.precast.WS['Seraph Blade'] = {
@@ -1012,7 +1025,7 @@ function init_gear_sets()
 	sets.weapons.DualProcDaggers = { main = "Blurred Knife +1", sub = "Atoyac", range = empty }
 	sets.weapons.EnspellOnly = { main = "Norgish Dagger", sub = "Aern Dagger", range = "Kaja Bow", ammo = "Beetle Arrow" }
 	sets.weapons.EnspellDW = { main = "Blurred Knife +1", sub = "Atoyac", range = "Kaja Bow", ammo = "Beetle Arrow" }
-	sets.weapons.DualClubs = { main = "Maxentius", sub = "Thibron", range = empty }
+	sets.weapons.DualClubs = { main = "Maxentius", sub = "Machaera +3", range = empty }
 	sets.weapons.DualAlmace = { main = "Almace", sub = "Sequence", range = empty }
 	sets.weapons.DualBow = { main = "Naegling", sub = "Tauret", range = "Kaja Bow" }
 	sets.weapons.BowMacc = { main = "Naegling", sub = "Tauret", range = "Kaja Bow", ammo = empty }
@@ -1043,7 +1056,8 @@ function init_gear_sets()
         left_ring = "Ilabrat Ring",
         right_ring = "Lehko's Ring",
         -- left_ring	=	{name="Chirich Ring +1", bag="wardrobe2"}, -- I do this to prevent issues with lag sometimes if 2 ring are the same in same bag GS sometimes only equips 1 of them        
-        legs		=	Carm.Legs.D,
+        -- legs		=	Carm.Legs.D,
+		legs 		=   RELIC.Legs,
         feet        =   Malignance.Feet,
         --feet		=	Carm.Feet.B,
         neck		=	"Anu Torque",
@@ -1052,6 +1066,12 @@ function init_gear_sets()
         right_ear	=	"Crep. Earring",
         back		=	RDMCape.TP,  
 	}
+
+	sets.engaged.Subtle = set_combine(sets.engaged, {
+		neck="Subtlety Spec.",
+		left_ear="Sherida Earring",
+		left_ring="Apate Ring",
+	})	
 
 	sets.engaged.EnspellOnly = {
 		head = "Malignance Chapeau",
@@ -1087,13 +1107,9 @@ function init_gear_sets()
 	sets.engaged.DT = set_combine(sets.engaged,{
         -- neck		=	"Twilight Torque",
         neck		=	"Loricate Torque +1",
-        head		=	Nyame.Head,
-        hands		=	Nyame.Hands,
-        body        =   Nyame.Body,
         -- legs		=	RELIC.Legs,
-        legs        =   Nyame.Legs,
-        feet		=	Nyame.Feet,
-	    left_ring	=	"Ayanmo Ring",
+		legs 		=   RELIC.Legs,
+	    -- left_ring	=	"Ayanmo Ring",
         -- right_ring	=	"Defending Ring",
     })
 

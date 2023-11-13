@@ -222,9 +222,9 @@
                 <healing>false</healing> <!-- Prevents your healing from appearing -->
                 <items>false</items>     <!-- Prevents your "Jim used an item. Jim gains the effect of
             Reraise." messages from appearing -->
-                <melee>true</melee>      <!-- Prevents your melee ("white") damage from appearing -->
+                <melee>false</melee>      <!-- Prevents your melee ("white") damage from appearing -->
                 <misses>false</misses>   <!-- Prevents your misses from appearing -->
-                <ranged>true</ranged>    <!-- Prevents your ranged damage from appearing -->
+                <ranged>false</ranged>    <!-- Prevents your ranged damage from appearing -->
                 <readies>false</readies> <!-- Prevents your "Jim readies ____" messages from appearing -->
                 <uses>false</uses>       <!-- Prevents your "Jim uses an item." messages from appearing -->
             </me>

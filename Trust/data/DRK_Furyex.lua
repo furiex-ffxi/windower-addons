@@ -17,12 +17,12 @@ TrustSettings = {
         Skillchains = {
             defaultws = {'Resolution','Cross Reaper','Catastrophe','Insurgency','Entropy','Torcleaver'},
             tpws = {'Cross Reaper'},
-            spamws = {'Resolution','Catastrophe','Torcleaver','Entropy','Judgment','Savage Blade'},
+            spamws = {'Insurgency','Resolution','Catastrophe','Torcleaver','Entropy','Judgment','Savage Blade'},
             starterws = {'Resolution','Torcleaver','Cross Reaper','Catastrophe','Entropy'},
             -- preferws = {'Cross Reaper','Catastrophe','Torcleaver'},
             preferws = {'Resolution','Catastrophe'},
             cleavews = {'Fell Cleave', 'Spinning Scythe'},
-            amws = 'Catastrophe'
+            amws = 'Insurgency'
             -- amws = 'Entropy'
         }
     }

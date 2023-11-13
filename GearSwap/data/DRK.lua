@@ -276,7 +276,7 @@ function update_melee_groups()
     end
 	
 	if (player.equipment.main == "Liberator" and buffactive['Aftermath: Lv.3']) then
-			classes.CustomMeleeGroups:append('AM')
+		classes.CustomMeleeGroups:append('AM')
 	end
 	
 end
