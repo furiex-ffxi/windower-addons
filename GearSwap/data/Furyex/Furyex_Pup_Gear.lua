@@ -113,6 +113,9 @@ function init_gear_sets()
 	Empy_Karagoz.Earring = "Kara. Earring +1"
 
     -- Precast Sets
+    sets.buff.Overdrive = {
+        
+    }
 
     -- Fast cast sets for spells
     sets.precast.FC = {

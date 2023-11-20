@@ -405,7 +405,6 @@ function packets.build(packet)
         error('Packet 0x%.3X not recognized, unable to build.':format(packet._id))
         return nil
     end
-
     local pack_string = fields:map(make_pack_string):concat()
     local data = pack_string:pack(fields:map(lookup+{packet}):unpack())
     local rem = #data % 4

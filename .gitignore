@@ -1,3 +1,5 @@
 equipviewer/icons/*.bmp
 findAll/data/*.lua
-displacers/*
+ConquestPoints/*
+Trust/*
+quetz/*

@@ -524,7 +524,6 @@ end
 function poke_npc(npc,target_index)
 
 	if npc and target_index then
-
 		local packet = packets.new('outgoing', 0x01A, {
 
 			["Target"]=npc,
@@ -536,7 +535,6 @@ function poke_npc(npc,target_index)
 			["Param"]=0,
 
 			["_unknown1"]=0})
-
 		packets.inject(packet)
 
 	end

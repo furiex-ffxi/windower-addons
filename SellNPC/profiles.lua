@@ -1,6 +1,11 @@
 -- Add items to existing profiles or create your own to sell groups of items using alias commands
 local profiles = {}
 
+profiles['cp'] = S{
+    'Royal Squire\'s Halberd',
+    'Mercenary Captain\'s Scythe',
+}
+
 -- //sellnpc powder
 profiles['powder'] = S{
     'prize powder',
@@ -13,6 +18,7 @@ profiles['ore'] = S{
 }
 -- //sellnpc junk
 profiles['junk'] = S{
+    'Wind Crystal',
     'Land Crab Meat',
     'Golden Shell',
     'chestnut',

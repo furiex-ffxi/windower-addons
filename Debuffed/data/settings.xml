@@ -57,6 +57,12 @@
         <timers>true</timers>
         <whitelist />
     </global>
+    <caintoo>
+        <pos>
+            <x>123</x>
+            <y>417</y>
+        </pos>
+    </caintoo>
     <cleobabe>
         <pos>
             <x>2318</x>

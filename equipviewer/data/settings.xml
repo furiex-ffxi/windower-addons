@@ -41,6 +41,12 @@
         <show_encumbrance>true</show_encumbrance>
         <size>32</size>
     </global>
+    <caintoo>
+        <pos>
+            <x>2080</x>
+            <y>1226</y>
+        </pos>
+    </caintoo>
     <cleobabe>
         <pos>
             <x>2080</x>

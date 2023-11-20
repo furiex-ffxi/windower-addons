@@ -46,6 +46,14 @@
             </text>
         </text_box_settings>
     </global>
+    <caintoo>
+        <text_box_settings>
+            <pos>
+                <x>914</x>
+                <y>-3</y>
+            </pos>
+        </text_box_settings>
+    </caintoo>
     <cleobabe>
         <text_box_settings>
             <pos>
@@ -69,4 +77,12 @@
             </pos>
         </text_box_settings>
     </liambear>
+    <mailman>
+        <text_box_settings>
+            <pos>
+                <x>886</x>
+                <y>1</y>
+            </pos>
+        </text_box_settings>
+    </mailman>
 </settings>

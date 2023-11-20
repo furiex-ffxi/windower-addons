@@ -4,6 +4,6 @@
         <autodecline>false</autodecline>
         <blacklist />
         <mode>whitelist</mode>
-        <whitelist />
+        <whitelist>Furyex,Cyrite</whitelist>
     </global>
 </settings>

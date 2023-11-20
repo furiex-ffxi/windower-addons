@@ -7,7 +7,7 @@ function user_job_setup()
 	state.MagicalDefenseMode:options('MDT', 'MDTReraise')
 	state.ResistDefenseMode:options('MEVA')
 	state.IdleMode:options('Normal', 'PDT', 'Refresh', 'Reraise')
-	state.Weapons:options('Apocalypse', 'Liberator', 'Montante', 'Anguta')
+	state.Weapons:options('Liberator', 'Apocalypse', 'Montante', 'Anguta')
 	state.ExtraMeleeMode = M { ['description'] = 'Extra Melee Mode', 'None' }
 	state.Passive = M { ['description'] = 'Passive Mode', 'None', 'MP', 'Twilight' }
 	state.DrainSwapWeaponMode = M { 'Always', 'Never', '300', '1000' }
@@ -229,7 +229,7 @@ function init_gear_sets()
 		-- ammo = "Seeth. bomblet +1",
 		head = Empy.Head,
 		-- neck = "Fotia Gorget",
-		neck = "Agitator's Collar",
+		neck = "Abyssal Beads +2",
 		-- ear1 = "Lugra Earring +1",
         ear1 = { name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
         ear2 = "Thrud Earring",
@@ -427,7 +427,7 @@ function init_gear_sets()
 		hands="Sakpata's Gauntlets",
 		legs="Sakpata's Cuisses",
 		feet="Flam. Gambieras +2",
-		neck="Vim Torque +1",
+		neck="Abyssal Beads +2",
 		waist="Sailfi Belt +1",
 		left_ear="Cessance Earring",
 		right_ear="Crep. Earring",
@@ -625,9 +625,9 @@ function init_gear_sets()
 	sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
 
 	-- Weapons sets
-	sets.weapons.Apocalypse = { main = "Apocalypse", sub = "Capitoline Strap" }
-	sets.weapons.Liberator = { main = "Liberator", sub = "Capitoline Strap" }
-	sets.weapons.Montante = { main = "Montante +1", sub = "Capitoline Strap" }
+	sets.weapons.Liberator = { main = "Liberator", sub = "Utu Grip" }
+	sets.weapons.Apocalypse = { main = "Apocalypse", sub = "Utu Grip" }
+	sets.weapons.Montante = { main = "Montante +1", sub = "Utu Grip" }
 	sets.weapons.Anguta = { main = "Anguta", sub = "Utu Grip" }
 end
 

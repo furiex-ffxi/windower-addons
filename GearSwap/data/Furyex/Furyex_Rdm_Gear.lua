@@ -253,7 +253,9 @@ function init_gear_sets()
 		feet = EMPY.Feet,
 	})
 
-	sets.precast.WS['Evisceration'] = sets.precast.WS['Chant Du Cygne']
+	sets.precast.WS['Evisceration'] = set_combine(sets.precast.WS['Chant Du Cygne'], {
+		ear1 = "Ishvara Earring"
+	})
 
 	sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {
         -- ammo		=	"Regal Gem",
@@ -561,7 +563,6 @@ function init_gear_sets()
 	sets.midcast['Enfeebling Magic'] = {
 		-- main		=	"Maxentius",
         -- sub		=	"Ammurapi Shield",
-        -- ammo		=	"Regal Gem",
         -- body		=	Amal.Body.A,
         --hands		=	Kayk.Hands.A,
         -- waist		=	"Porous Rope",
@@ -584,20 +585,14 @@ function init_gear_sets()
 	sets.midcast['Enfeebling Magic'].Resistant =  set_combine(sets.midcast['Enfeebling Magic'], {
 		-- main = "Daybreak",
 		-- sub = "Ammurapi Shield",
-		-- range = empty,
-		-- ammo = "Regal Gem",
-		-- head = "Viti. Chapeau +3",
-		-- neck = "Dls. Torque +2",
+		range = "Ullr",
+		ammo = empty,
 		-- ear1 = "Regal Earring",
-		-- ear2 = "Snotra Earring",
-		-- body = "Atrophy Tabard +3",
 		-- hands = gear.chironic_enfeeble_hands,
 		-- ring1 = "Metamor. Ring +1",
 		-- ring2 = "Stikini Ring +1",
 		-- back = gear.nuke_jse_back,
 		-- waist = "Luminary Sash",
-		-- legs = "Chironic Hose",
-		-- feet = "Vitiation Boots +3"
 	})
 
 	sets.midcast.DurationOnlyEnfeebling = set_combine(sets.midcast['Enfeebling Magic'],
@@ -606,7 +601,8 @@ function init_gear_sets()
 		range = "Kaja Bow",
 		body = AF.Body, 
 		left_ear = "Snotra Earring",
-		left_ring="Kishar Ring",
+		left_ring = "Kishar Ring",
+		waist = "Obstinate Sash",
 		feet = EMPY.Feet,
 	})
 
@@ -633,8 +629,11 @@ function init_gear_sets()
 
 	sets.midcast['Divine Magic'] = set_combine(sets.midcast['Enfeebling Magic'].Resistant, {})
 
-	sets.midcast.Dia = set_combine(sets.midcast['Enfeebling Magic'], sets.TreasureHunter)
-	sets.midcast.Diaga = set_combine(sets.midcast['Enfeebling Magic'], sets.TreasureHunter)
+	sets.midcast.Dia = set_combine(sets.midcast['Enfeebling Magic'], 
+		{
+			waist = "Obstinate Sash"
+		})
+	sets.midcast.Diaga = sets.midcast.Dia
 
 	sets.midcast.Bio = set_combine(sets.midcast['Enfeebling Magic'], sets.TreasureHunter)
 

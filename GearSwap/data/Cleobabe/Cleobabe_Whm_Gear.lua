@@ -56,8 +56,8 @@ function init_gear_sets()
 		main = gear.grioavolr_fc_staff,
 		sub = "Clerisy Strap +1",
 		ammo = "Impatiens",
-		head = "Bunzi's Hat",
-		neck = "Voltsurge Torque",
+		head = "Ebers cap +2",
+		neck = "Clr. Torque +2",
 		ear1 = "Enchntr. Earring +1",
 		ear2 = "Malignance Earring",
 		body = "Inyanga Jubbah +2",
@@ -99,7 +99,6 @@ function init_gear_sets()
 	sets.precast.FC.StatusRemoval = sets.precast.FC['Healing Magic']
 
 	sets.precast.FC.Cure = set_combine(sets.precast.FC['Healing Magic'], {
-		head = "Theo. Cap +1",
 		feet = "Hygieia Clogs +1"
 	})
 
@@ -854,9 +853,9 @@ function init_gear_sets()
 		body = "Nyame Mail",
 		hands = "Nyame Gauntlets",
 		ring1 = "Defending Ring",
-		ring2 = "Shadow Ring",
+		ring2 = "Fortified Ring",
 		back = "Moonlight Cape",
-		waist = "Carrier's Sash",
+		waist = "Platinum Moogle Belt",
 		legs = "Nyame Flanchard",
 		feet = "Nyame Sollerets"
 	}
@@ -892,7 +891,7 @@ function init_gear_sets()
 		body = "Nyame Mail",
 		hands = "Nyame Gauntlets",
 		ring1 = "Shadow Ring",
-		ring2 = "Archon Ring",
+		ring2 = "Fortified Ring",
 		back = "Moonlight Cape",
 		waist = "Carrier's Sash",
 		legs = "Nyame Flanchard",

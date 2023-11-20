@@ -7,6 +7,22 @@
             <default>
 
             </default>
+            <frogbu>
+                <frame>valoredge frame</frame>
+                <head>soulsoother head</head>
+                <slot01>optic fiber</slot01>
+                <slot02>optic fiber ii</slot02>
+                <slot03>attuner</slot03>
+                <slot04>flame holder</slot04>
+                <slot05>turbo charger</slot05>
+                <slot06>turbo charger ii</slot06>
+                <slot07>magniplug</slot07>
+                <slot08>magniplug ii</slot08>
+                <slot09>auto-repair kit iv</slot09>
+                <slot10>mana jammer iv</slot10>
+                <slot11>inhibitor ii</slot11>
+                <slot12>mana jammer iii</slot12>
+            </frogbu>
             <healer>
                 <frame>Stormwaker Frame</frame>
                 <head>Soulsoother Head</head>
@@ -106,8 +122,8 @@
         <maneuvertimers>true</maneuvertimers>
         <padding>0</padding>
         <pos>
-            <x>2218</x>
-            <y>815</y>
+            <x>2080</x>
+            <y>1092</y>
         </pos>
         <text>
             <alpha>255</alpha>
@@ -129,10 +145,4 @@
         </text>
         <visible>false</visible>
     </global>
-    <furyex>
-        <pos>
-            <x>2080</x>
-            <y>1092</y>
-        </pos>
-    </furyex>
 </settings>

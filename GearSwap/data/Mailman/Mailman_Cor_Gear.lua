@@ -13,10 +13,8 @@ function user_job_setup()
     state.CompensatorMode:options('Always', '300', '1000', 'Never')
 
     gear.RAbullet = "Living Bullet"
-    gear.WSbullet = "Living Bullet"
-     -- gear.RAbullet = "Chrono Bullet"
-    -- gear.WSbullet = "Chrono Bullet"
-    gear.MAbullet = "Orichalc. Bullet" --For MAB WS, do not put single-use bullets here.
+    gear.WSbullet = "Chrono Bullet"
+    gear.MAbullet = "Living Bullet" --For MAB WS, do not put single-use bullets here.
     gear.QDbullet = "Animikii Bullet"
     options.ammo_warning_limit = 15
     --Ikenga_vest_bonus = 190  -- It is 190 at R20. Uncomment if you need to manually adjust because you are using below R20
@@ -351,19 +349,29 @@ function init_gear_sets()
     }
 
     sets.precast.WS['Last Stand'] = {
-        ammo = gear.WSbullet,
-        head = "Meghanada Visor +2",
-        neck = "Fotia Gorget",
-        ear1 = "Moonshade Earring",
-        ear2 = "Telos Earring",
-        body = "Laksa. Frac +3",
-        hands = "Meg. Gloves +2",
-        ring1 = "Regal Ring",
-        ring2 = "Dingir Ring",
-        back = gear.ranger_wsd_jse_back,
-        waist = "Fotia Belt",
+        -- ammo = gear.WSbullet,
+        -- head = "Meghanada Visor +2",
+        -- neck = "Fotia Gorget",
+        -- ear1 = "Moonshade Earring",
+        -- ear2 = "Telos Earring",
+        -- body = "Laksa. Frac +3",
+        -- hands = "Meg. Gloves +2",
+        -- ring1 = "Regal Ring",
+        -- ring2 = "Dingir Ring",
+        -- back = gear.ranger_wsd_jse_back,
+        -- waist = "Fotia Belt",
+        head={ name="Nyame Helm", augments={'Path: B',}},
+        body="Laksa. Frac +2",
+        hands="Meg. Gloves +2",
         legs = "Meg. Chausses +2",
-        feet = "Lanun Bottes +3"
+        feet = "Lanun Bottes +3",
+        neck="Iskur Gorget",
+        waist="Sailfi Belt +1",
+        left_ear={ name="Moonshade Earring", augments={'Attack+4','TP Bonus +250',}},
+        right_ear="Ishvara Earring",
+        left_ring="Epaminondas's Ring",
+        right_ring="Dingir Ring",
+        back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dual Wield"+10','Phys. dmg. taken-10%',}},        
     }
 
     sets.precast.WS['Last Stand'].Acc = {
