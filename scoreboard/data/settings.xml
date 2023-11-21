@@ -79,7 +79,6 @@
                 <y>199</y>
             </pos>
         </display>
-        <visible>true</visible>
     </furyex>
     <liambear>
         <display>
@@ -89,4 +88,7 @@
             </pos>
         </display>
     </liambear>
+    <lolababe>
+        <visible>true</visible>
+    </lolababe>
 </settings>

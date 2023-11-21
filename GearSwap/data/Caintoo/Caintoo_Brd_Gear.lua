@@ -259,10 +259,10 @@ function init_gear_sets()
 	sets.midcast.Lullaby.Resistant = {range="Gjallarhorn"}
 	sets.midcast['Horde Lullaby'] = {range="Marsyas"}
 	sets.midcast['Horde Lullaby'].Resistant = {range="Gjallarhorn"}
-	sets.midcast['Horde Lullaby'].AoE = {range="Gjallarhorn"}
+	sets.midcast['Horde Lullaby'].AoE = {range="Daurdabla"}
 	sets.midcast['Horde Lullaby II'] = {range="Marsyas"}
 	sets.midcast['Horde Lullaby II'].Resistant = {range="Gjallarhorn"}
-	sets.midcast['Horde Lullaby II'].AoE = {range="Gjallarhorn"}
+	sets.midcast['Horde Lullaby II'].AoE = {range="Daurdabla"}
 	sets.midcast.Madrigal = {feet=gear.empy_feet}
 	sets.midcast.Prelude = {feet=gear.empy_feet}
 	sets.midcast.March = {}
