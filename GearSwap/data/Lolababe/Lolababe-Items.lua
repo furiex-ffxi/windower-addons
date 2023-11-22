@@ -15,7 +15,7 @@ gear.gada_enhancing_club = {name="Gada",augments={'Enh. Mag. eff. dur. +6','STR+
 gear.gada_healing_club = {name="Gada",augments={'"Cure" potency +9%','Mag. Acc.+11','"Mag.Atk.Bns."+13','DMG:+3',}}
 gear.grioavolr_nuke_staff = {name="Grioavolr",augments={'Magic burst dmg.+8%','MP+61','Mag. Acc.+16','"Mag.Atk.Bns."+30','Magic Damage +7',}}
 gear.grioavolr_fc_staff = {name="Grioavolr",augments={'"Fast Cast"+7','MP+20','Mag. Acc.+17','"Mag.Atk.Bns."+10','Magic Damage +5',}}
-gear.grioavolr_pet_staff = {name="Grioavolr",augments={'Blood Pact Dmg.+8','Pet: STR+10','Pet: Mag. Acc.+19','Pet: "Mag.Atk.Bns."+30',}}
+gear.grioavolr_pet_staff = { name="Grioavolr", augments={'Blood Pact Dmg.+10','Pet: INT+15','Pet: Mag. Acc.+22','Pet: "Mag.Atk.Bns."+10','DMG:+18',}}
 
 gear.taeon_pet_body = {name="Taeon Tabard",augments={'Pet: Accuracy+15 Pet: Rng. Acc.+15','Pet: "Dbl. Atk."+4','Pet: Damage taken -4%',}}
 gear.taeon_phalanx_body = {name="Taeon Tabard",augments={'Mag. Evasion+15','Spell interruption rate down -10%','Phalanx +3'}}
@@ -42,7 +42,7 @@ gear.herculean_wsd_feet = {name="Herculean Boots",augments={'Accuracy+23 Attack+
 gear.herculean_waltz_feet = {name="Herculean Boots",augments={'Attack+10','"Waltz" potency +10%','AGI+4','Accuracy+9',}}
 gear.herculean_nuke_feet = {name="Herculean Boots",augments={'"Mag.Atk.Bns."+23','Rng.Acc.+14','Phalanx +1','Mag. Acc.+15 "Mag.Atk.Bns."+15',}}
 
-gear.merlinic_nuke_head = {name="Merlinic Hood",augments={'Mag. Acc.+21 "Mag.Atk.Bns."+21','INT+15','Mag. Acc.+3','"Mag.Atk.Bns."+13',}}
+gear.merlinic_nuke_head = name="Merlinic Hood", augments={'Mag. Acc.+20 "Mag.Atk.Bns."+20','Magic burst dmg.+10%','CHR+10','Mag. Acc.+14','"Mag.Atk.Bns."+12'
 gear.merlinic_nuke_body = {name="Merlinic Jubbah",augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','"Occult Acumen"+4','INT+10','Mag. Acc.+2','"Mag.Atk.Bns."+15',}}
 gear.merlinic_occult_body = {name="Merlinic Jubbah",augments={'Mag. Acc.+14','"Occult Acumen"+11','MND+6',}}
 gear.merlinic_refresh_hands = {name="Merlinic Dastanas",augments={'Attack+17','Pet: INT+5','"Refresh"+2','Accuracy+11 Attack+11',}}
