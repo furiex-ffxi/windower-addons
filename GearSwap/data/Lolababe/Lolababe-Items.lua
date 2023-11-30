@@ -42,6 +42,7 @@ gear.herculean_wsd_feet = {name="Herculean Boots",augments={'Accuracy+23 Attack+
 gear.herculean_waltz_feet = {name="Herculean Boots",augments={'Attack+10','"Waltz" potency +10%','AGI+4','Accuracy+9',}}
 gear.herculean_nuke_feet = {name="Herculean Boots",augments={'"Mag.Atk.Bns."+23','Rng.Acc.+14','Phalanx +1','Mag. Acc.+15 "Mag.Atk.Bns."+15',}}
 
+gear.merlinic_fc_head = { name="Merlinic Hood", augments={'Mag. Acc.+22','"Fast Cast"+7','"Mag.Atk.Bns."+3'}}
 gear.merlinic_nuke_head = {name="Merlinic Hood", augments={'Mag. Acc.+20 "Mag.Atk.Bns."+20','Magic burst dmg.+10%','CHR+10','Mag. Acc.+14','"Mag.Atk.Bns."+12',}}
 gear.merlinic_nuke_body = {name="Merlinic Jubbah",augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','"Occult Acumen"+4','INT+10','Mag. Acc.+2','"Mag.Atk.Bns."+15',}}
 gear.merlinic_occult_body = {name="Merlinic Jubbah",augments={'Mag. Acc.+14','"Occult Acumen"+11','MND+6',}}

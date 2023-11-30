@@ -43,8 +43,8 @@ function init_gear_sets()
 	--------------------------------------
 
 	-- Weapons sets
-	sets.weapons.MeleeWeapons = { main = "Izcalli", sub = "Ammurapi Shield" }
-	sets.weapons.DualWeapons = { main = "Izcalli", sub = "Nehushtan" }
+	sets.weapons.MeleeWeapons = { main = "Daybreak", sub = "Ammurapi Shield" }
+	sets.weapons.DualWeapons = { main = "Daybreak", sub = "Nehushtan" }
 
 	sets.buff.Sublimation = { waist = "Embla Sash" }
 	sets.buff.DTSublimation = { waist = "Embla Sash" }
@@ -222,7 +222,8 @@ function init_gear_sets()
 		ring2 = "Prolix Ring",
 		back = "Solemnity Cape",
 		waist = "Austerity Belt +1",
-		legs = "Vanya Slops",
+		-- legs = "Vanya Slops",
+		legs = "Theurigst's Slacks",
 		feet = "Medium's Sabots"
 	}
 
@@ -260,7 +261,8 @@ function init_gear_sets()
 	sets.midcast['Full Cure'] = sets.midcast.FastRecast
 
 	sets.midcast.Cure = {
-		main = "Queller Rod",
+		-- main = "Queller Rod",
+		main = "Daybreak",
 		sub = "Sors Shield",
 		ammo = "Pemphredo Tathlum",
 		head = "Theo. Cap +1",
@@ -425,7 +427,7 @@ function init_gear_sets()
 	sets.midcast.MeleeLightDayCuraga.DT = set_combine(sets.midcast.Cure.DT, { waist = "Hachirin-no-Obi" })
 
 	sets.midcast.Cursna = {
-		main = gear.grioavolr_fc_staff,
+		main = "Yagrush",
 		sub = "Clemency Grip",
 		ammo = "Hasty Pinion +1",
 		head = "Ebers Cap +2",
@@ -443,8 +445,7 @@ function init_gear_sets()
 	}
 
 	sets.midcast.StatusRemoval = {
-		main = gear.grioavolr_fc_staff,
-		sub = "Clemency Grip",
+		main = "Yagrush",
 		ammo = "Hasty Pinion +1",
 		head = "Ebers Cap +2",
 		neck = "Voltsurge Torque",
@@ -467,18 +468,18 @@ function init_gear_sets()
 		main = gear.gada_enhancing_club,
 		sub = "Ammurapi Shield",
 		ammo = "Hasty Pinion +1",
-		head = "Telchine Cap",
 		neck = "Incanter's Torque",
 		ear1 = "Andoaa Earring",
 		ear2 = "Gifted Earring",
+		head = "Telchine Cap",
 		body = "Telchine Chas.",
 		hands = "Telchine Gloves",
+		legs = "Telchine Braconi",
+		feet = "Theo. Duckbills +1",
 		ring1 = "Stikini Ring +1",
 		ring2 = "Stikini Ring +1",
 		back = "Perimede Cape",
 		waist = "Embla Sash",
-		legs = "Telchine Braconi",
-		feet = "Theo. Duckbills +1"
 	}
 
 	sets.midcast.Stoneskin = set_combine(sets.midcast['Enhancing Magic'],

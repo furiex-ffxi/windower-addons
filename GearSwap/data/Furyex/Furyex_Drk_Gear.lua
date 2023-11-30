@@ -26,16 +26,17 @@ function init_gear_sets()
 	-- Start defining the sets
 	--------------------------------------
 	DRKCape = {}
-	DRKCape.TP = { name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
+	DRKCape.TP = { name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}}
+	DRKCape.STP = { name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%', }}
 	DRKCape.STR = { name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}}
 
 	AF = {}
 	AF = {
-		Head="Igno. Burgeonet +2",
-		Body="Igno. Cuirass +2",
-		Hands="Igno. Gauntlets +2",
-		Legs="Igno. Flan. +2",
-		Feet="Igno. Sollerets +2",
+		Head="Ig. Burgeonet +2",
+		Body="Ignominy Cuirass +3",
+		Hands="Ig. Gauntlets +2",
+		Legs="Ig. Flan. +2",
+		Feet="Ig. Sollerets +2",
 	}
 
 	Relic = {}
@@ -71,7 +72,7 @@ function init_gear_sets()
 		hands = Relic.Hands,
 	}
 	sets.precast.JA['Arcane Circle'] = {
-		feet = Relic.Feet,
+		feet = AF.Feet,
 
 	}
 	sets.precast.JA['Souleater'] = {}
@@ -142,12 +143,12 @@ function init_gear_sets()
 		ear1 = "Digni. Earring",
 		ear2 = "Malignance Earring",
 		body = "Flamma Korazin +2",
-		hands = "Flam. Manopolas +2",
+		hands = Relic.Hands,
 		ring1 = "Stikini Ring +1",
 		ring2 = "Stikini Ring +1",
 		back = "Toro Cape",
 		waist = "Eschan Stone",
-		legs = "Eschite Cuisses",
+		legs = Empy.Legs,
 		feet = "Flam. Gambieras +2"
 	}
 
@@ -225,7 +226,7 @@ function init_gear_sets()
 	-- Weaponskill sets
 	-- Default set for any weaponskill that isn't any more specifically defined
 	sets.precast.WS = {
-		ammo = "Oshasha's Treatise",
+		ammo = "Knobkierrie",
 		-- ammo = "Seeth. bomblet +1",
 		head = Empy.Head,
 		-- neck = "Fotia Gorget",
@@ -234,10 +235,10 @@ function init_gear_sets()
         ear1 = { name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
         ear2 = "Thrud Earring",
 		body = AF.Body,
-		hands = "Sakpata's Gauntlets",
+		hands={ name="Odyssean Gauntlets", augments={'Pet: Phys. dmg. taken -2%','STR+2','"Refresh"+2','Accuracy+20 Attack+20','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
 		-- body = gear.valorous_wsd_body,
 		-- hands = "Sulev. Gauntlets +2",
-        ring1 = "Ilabrat Ring",
+        ring1 = "Epaminondas's Ring",
         ring2 ="Karieyh Ring",		
 		-- ring1 = "Regal Ring",
 		-- ring2 = "Niqmaddu Ring",
@@ -367,37 +368,30 @@ function init_gear_sets()
 
 	sets.defense.MDT = {
 		ammo = "Staunch Tathlum +1",
-		head = "Loess Barbuta +1",
+		-- head = "Loess Barbuta +1",
+		-- body = "Tartarus Platemail",
+		-- hands = "Sulev. Gauntlets +2",
+		-- legs = "Sulev. Cuisses +2",
+		-- feet = "Amm Greaves"
+		head="Sakpata's Helm",
+		body="Sakpata's Plate",
+		hands="Sakpata's Gauntlets",
+		legs="Sakpata's Cuisses",
+		feet="Sakpata's Leggings",
 		neck = "Warder's Charm +1",
-		ear1 = "Genmei Earring",
+		-- ear1 = "Genmei Earring",
+		ear1 = "Ethereal Earring",
 		ear2 = "Odnowa Earring +1",
-		body = "Tartarus Platemail",
-		hands = "Sulev. Gauntlets +2",
-		-- ring1 = "Gelatinous Ring +1",
 		ring2 = "Moonlight Ring",
 		back = "Moonlight Cape",
-		waist = "Flume Belt +1",
-		legs = "Sulev. Cuisses +2",
-		feet = "Amm Greaves"
+		waist = "Flume Belt +1",		
 	}
 
 	sets.defense.MDTReraise = set_combine(sets.defense.MDT, { head = "Twilight Helm", body = "Twilight Mail" })
 
-	sets.defense.MEVA = {
-		ammo = "Staunch Tathlum +1",
-		head = "Loess Barbuta +1",
-		neck = "Warder's Charm +1",
-		ear1 = "Genmei Earring",
-		ear2 = "Odnowa Earring +1",
-		body = "Tartarus Platemail",
-		hands = "Sulev. Gauntlets +2",
-		-- ring1 = "Gelatinous Ring +1",
-		ring2 = "Moonlight Ring",
-		back = "Moonlight Cape",
-		waist = "Flume Belt +1",
-		legs = "Sulev. Cuisses +2",
-		feet = "Amm Greaves"
-	}
+	sets.defense.MEVA = set_combine(sets.defense.MDT, {
+
+	})
 
 	sets.Kiting = { legs = "Carmine Cuisses +1" }
 	sets.passive.Reraise = { 
@@ -429,10 +423,10 @@ function init_gear_sets()
 		feet="Flam. Gambieras +2",
 		neck="Abyssal Beads +2",
 		waist="Sailfi Belt +1",
-		left_ear="Cessance Earring",
+		left_ear="Telos Earring",
 		right_ear="Crep. Earring",
 		left_ring="Lehko's Ring",
-		right_ring="Flamma Ring",
+		right_ring="Moonlight Ring",
 		back = DRKCape.TP,
 	}
 	sets.engaged.SomeAcc = {
@@ -443,7 +437,7 @@ function init_gear_sets()
 		ear2 = "Cessance Earring",
 		body = gear.valorous_wsd_body,
 		hands = gear.valorous_acc_hands,
-		ring1 = "Flamma Ring",
+		ring1 = "Moonlight Ring",
 		ring2 = "Niqmaddu Ring",
 		back = DRKCape.TP,
 		waist = "Ioskeha Belt",
@@ -458,7 +452,7 @@ function init_gear_sets()
 		ear2 = "Telos Earring",
 		body = gear.valorous_wsd_body,
 		hands = gear.valorous_acc_hands,
-		ring1 = "Flamma Ring",
+		ring1 = "Moonlight Ring",
 		ring2 = "Niqmaddu Ring",
 		back = DRKCape.TP,
 		waist = "Ioskeha Belt",
@@ -474,7 +468,7 @@ function init_gear_sets()
 		ear2 = "Telos Earring",
 		body = gear.valorous_wsd_body,
 		hands = gear.valorous_acc_hands,
-		ring1 = "Flamma Ring",
+		ring1 = "Moonlight Ring",
 		ring2 = "Ramuh Ring +1",
 		back = DRKCape.TP,
 		waist = "Ioskeha Belt",
@@ -497,12 +491,34 @@ function init_gear_sets()
 		feet = "Flam. Gambieras +2"
 	}
 	sets.engaged.DT = set_combine(sets.engaged, {
-		head="Sakpata's Helm",
-		body="Sakpata's Plate",
-		hands="Sakpata's Gauntlets",
-		legs="Sakpata's Cuisses",
-		feet="Sakpata's Leggings",
 	})
+
+	sets.engaged.Liberator = sets.engaged
+
+	sets.engaged.Liberator.AM = {
+		ammo="Ginsen",
+		waist="Reiki Yotai",
+		neck="Abyssal Beads +2",
+		head = "Sulevia's Mask +2",
+		body = "Flamma Korazin +2",
+		hands = "Flam. Manopolas +2",
+		legs = "Flamma Dirs +2",
+		feet = "Flam. Gambieras +2",
+		left_ear="Telos Earring",
+		right_ear="Crep. Earring",
+		left_ring="Lehko's Ring",
+		right_ring="Moonlight Ring",
+		back = DRKCape.STP,
+	}
+
+	sets.engaged.Liberator.DT = sets.engaged
+	sets.engaged.Liberator.DT.AM = set_combine(sets.engaged.Liberator.AM, {
+		neck = "Loricate Torque +1",
+		body = Empy.Body,
+		legs = "Sakpata's Leggings"
+	}
+
+	)
 
 	--Example sets:
 	--[[

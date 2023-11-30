@@ -48,10 +48,12 @@ function init_gear_sets()
         main = gear.grioavolr_fc_staff,
         -- sub = "Clerisy Strap +1",
         -- ammo = "Impatiens",
-        head = "Amalric Coif +1",
-        -- neck = "Voltsurge Torque",
+        head = gear.merlinic_fc_head,
+        neck = "Orunmila's Torque",
         -- ear1 = "Enchntr. Earring +1",
+        ear1 = "Etiolation Earring",
         ear2 = "Malignance Earring",
+        body = "Pinga Tunic +1",
         -- body = "Zendik Robe",
         -- hands = "Acad. Bracers +3",
         ring1 = "Kishar Ring",
@@ -136,6 +138,7 @@ function init_gear_sets()
     }
 
     sets.midcast.Cure = {
+        main = "Daybreak",
         -- main = "Serenity",
         -- sub = "Curatio Grip",
         -- ammo = "Hasty Pinion +1",
@@ -154,6 +157,7 @@ function init_gear_sets()
     }
 
     sets.midcast.LightWeatherCure = {
+        main = "Daybreak",
         -- main = "Chatoyant Staff",
         -- sub = "Curatio Grip",
         -- ammo = "Hasty Pinion +1",
@@ -229,6 +233,8 @@ function init_gear_sets()
     }
 
     sets.midcast.Regen = set_combine(sets.midcast['Enhancing Magic'], { 
+        main = "Bolelabunga",
+        head = "Arbatel Bonnet +3",
         back = gear.nuke_jse_back 
     })
 
@@ -291,7 +297,7 @@ function init_gear_sets()
         -- feet = "Uk'uxkaj Boots"
     }
 
-    sets.midcast['Enfeebling Magic'].Resistant =sets.combine(sets.midcast['Enfeebling Magic'], {
+    sets.midcast['Enfeebling Magic'].Resistant =set_combine(sets.midcast['Enfeebling Magic'], {
         ear2 = "Digni. Earring",
         -- body = "Chironic Doublet",
         -- hands = "Acad. Bracers +3",
@@ -403,7 +409,7 @@ function init_gear_sets()
         -- feet = gear.merlinic_aspir_feet
     }
 
-    sets.midcast.Drain.Resistant = sets.combine(sets.midcast.Drain, {
+    sets.midcast.Drain.Resistant = set_combine(sets.midcast.Drain, {
         sub = "Ammurapi Shield",
         ammo = "Pemphredo Tathlum",
         head = "Amalric Coif +1",
@@ -470,7 +476,7 @@ function init_gear_sets()
         feet = "Amalric Nails +1"
     }
 
-    sets.midcast['Elemental Magic'].Resistant = sets.combine(sets.midcast['Elemental Magic'], 
+    sets.midcast['Elemental Magic'].Resistant = set_combine(sets.midcast['Elemental Magic'], 
     {
         neck = "Sanctity Necklace",
         ear1 = "Malignance Earring",
@@ -481,7 +487,7 @@ function init_gear_sets()
         waist = "Acuity Belt +1",
     })
 
-    sets.midcast['Elemental Magic']['9k'] = sets.combine(sets.midcast['Elemental Magic'], {
+    sets.midcast['Elemental Magic']['9k'] = set_combine(sets.midcast['Elemental Magic'], {
         main = "Daybreak",
         head = gear.merlinic_nuke_head,
         ear1 = "Crematio Earring",

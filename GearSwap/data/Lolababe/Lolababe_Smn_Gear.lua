@@ -512,7 +512,7 @@ function init_gear_sets()
 
     sets.midcast.Pet.PhysicalBloodPactRage = {
         main = "Nirvana",
-        -- sub = "Elan Strap +1",
+        sub = "Enki Strap",
         ammo = "Epitaph",
         head = "Helios Band",
         neck = "Shulmanu Collar",
@@ -521,10 +521,10 @@ function init_gear_sets()
         body = "Con. Doublet +3",
         hands = gear.merlinic_physpact_hands,
         -- ring1 = "Varar Ring +1",
+        legs = {"name='Apogee Slacks +1', augments={'Pet: STR+20','Blood Pact Dmg.+14','Pet: 'Dbl. Atk. +4',"},
         ring2 = "C. Palug Ring",
         back = gear.phys_jse_back,
         waist = "Incarnation Sash",
-        legs = "Apogee Slacks +1",
         feet = "Apogee Pumps +1"
     }
 
@@ -533,20 +533,20 @@ function init_gear_sets()
     }
 
     sets.midcast.Pet.MagicalBloodPactRage = {
-        -- main = gear.grioavolr_pet_staff,
-        -- sub = "Elan Strap +1",
+        main="Nirvana",
+        sub = "Enki Strap",
         ammo = "Epitaph",
         head = "Apogee Crown +1",
-        -- neck = "Adad Amulet",
-        -- ear1 = "Lugalbanda Earring",
-        -- ear2 = "Gelos Earring",
+        neck="Summoner's Collar +2",
+        ear1="Gelos Earring",
+        ear2="Lugalbanda Earring",
         body = "Con. Doublet +3",
         hands = gear.merlinic_magpact_hands,
-        -- ring1 = "Varar Ring +1",
-        -- ring2 = "Varar Ring +1",
+        ring1 = "Varar Ring",
+        ring2 = "Varar Ring",
         back = gear.magic_jse_back,
         waist = "Regal Belt",
-        -- legs = "Enticer's Pants",
+        legs = "Enticer's Pants",
         feet = "Apogee Pumps +1"
     }
 
@@ -653,7 +653,7 @@ function init_gear_sets()
         -- body = "Shomonjijoe +1",
         -- hands = gear.merlinic_refresh_hands,
         ring1 = "Stikini Ring +1",
-        ring2 = "Stikini Ring +1",
+        ring2 = "Metamor. Ring +1",
         -- back = "Umbra Cape",
         waist = "Regal Belt",
         legs = "Assid. Pants +1",
@@ -881,6 +881,7 @@ function init_gear_sets()
     -- Normal melee group
     sets.engaged = {
         main = "Nirvana",
+        sub = "Enki Strap",
         -- sub = "Bloodrain Strap",
         ammo = "Epitaph",
         head = "Beckoner's Horn +3",

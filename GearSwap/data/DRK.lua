@@ -86,14 +86,14 @@ function job_precast(spell, spellMap, eventArgs)
 		return
 	end
 
-	if spell.type == 'WeaponSkill' and state.AutoBuffMode.value ~= 'Off' then
+	if spell.type == 'WeaponSkill' then
 		if spell.english == 'Entropy' and not buffactive['Sekkanoki'] and abil_recasts[95] < latency then
 			eventArgs.cancel = true
 			windower.chat.input('/ja "Consume Mana" <me>')
 			windower.chat.input:schedule(1,'/ws "Entropy" <t>')
 			tickdelay = os.clock() + 1.25
 			return
-		elseif player.sub_job == 'SAM' and not state.Buff['SJ Restriction'] then
+		elseif (player.sub_job == 'SAM' and not state.Buff['SJ Restriction']) and (not buffactive['Aftermath: Lv.3'] or not buffactive['Aftermath']) then
 				if player.tp > 1850 and not buffactive['Consume Mana'] and abil_recasts[140] < latency then
 					eventArgs.cancel = true
 					windower.chat.input('/ja "Sekkanoki" <me>')

@@ -1,4 +1,14 @@
 return {
+    ["Lady Lilith"]={
+        ["Dark Thorn"]={
+            ["complete_reaction"]="/dispel",
+            ["ready_reaction"]=""
+        },
+        ["Fatal Allure"]={
+            ["complete_reaction"]="facemob",
+            ["ready_reaction"]="turnaround"
+        }
+    },   
     ["Henwen"]={
         ["Zealous Snort"]={
             ["complete_reaction"]="/dispel",
@@ -7,7 +17,7 @@ return {
     },
     ["Zerde"]={
         ["Just Desserts"]={
-            ["complete_reaction"]="wait 2;input /ma 'Frazzle II' <bt>", 
+            ["complete_reaction"]="", 
             ["ready_reaction"]="input /ma Stun <bt>"
         }
     },
