@@ -182,6 +182,11 @@ windower.register_event('addon command', function()
             local arg = params[1]
             local arg2 = params[2]
 
+            -- no chat mode was specified, just echo it
+            if not arg then
+                arg = "echo"
+            end
+
             if arg then
                 if chatmodes:contains(arg) then
                     if arg == 't' or arg == 'tell' then
@@ -254,8 +259,12 @@ windower.register_event('addon command', function()
                 -- Arg2 is a chatmode so we assume this is a 3-arg version (no player specified)
                 display:report_stat(stat, {chatmode = arg2, telltarget = arg3})
             else
-                -- Arg2 is not a chatmode, so we assume it's a player name and then see
-                -- if arg3 looks like an optional chatmode.
+                -- no chat mode was specified, just echo it
+                if not arg2 and not arg3 then
+                    display:report_stat(stat, {chatmode = "echo", telltarget = arg3})
+                    return
+                end
+                
                 if arg2 and not arg2:match('^[a-zA-Z]+$') then
                     -- should be a valid player name
                     error('Invalid argument for reportstat t ' .. arg2)
