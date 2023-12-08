@@ -16,6 +16,27 @@ function user_job_setup()
 	gear.obi_high_nuke_waist = "Yamabuki-no-Obi"
 	gear.obi_nuke_back = "Toro Cape"
 
+	gear.af = {}
+	gear.af.head = "Theophany Cap +2"
+	gear.af.body = "Theo. Bliaut +2"
+	gear.af.hands = "Theo. Mitts +1"
+	gear.af.legs = "Theo. Pant. +1"
+	gear.af.feet = "Theo. Duckbills +2"
+
+	gear.relic = {}
+	gear.relic.head = "Piety Cap +3"
+	gear.relic.body = "Piety Bliaut +3"
+	gear.relic.hands = "Piety Mitts +3"
+	gear.relic.legs = "Piety Pantaln. +3"
+	gear.relic.feet = "Piety Duckbills +3"
+
+	gear.empy = {}
+	gear.empy.head = "Ebers Cap +2"
+	gear.empy.body = "Ebers Bliaut +2"
+	gear.empy.hands = "Ebers Mitts +2"
+	gear.empy.legs = "Ebers Pant. +2"
+	gear.empy.feet = "Ebers Duckbills +2"
+
 	-- Additional local binds
 	send_command('bind ^` input /ma "Arise" <t>')
 	send_command('bind !` input /ja "Penury" <me>')
@@ -56,13 +77,13 @@ function init_gear_sets()
 		main = gear.grioavolr_fc_staff,
 		sub = "Clerisy Strap +1",
 		ammo = "Impatiens",
-		head = "Ebers cap +2",
+		head = gear.empy.head,
 		neck = "Clr. Torque +2",
 		ear1 = "Enchntr. Earring +1",
 		ear2 = "Malignance Earring",
 		body = "Inyanga Jubbah +2",
 		hands = "Gende. Gages +1",
-		ring1 = "Prolix Ring",
+		ring1 = "Kishar Ring",
 		ring2 = "Lebeche Ring",
 		back = "Alaunus's Cape",
 		waist = "Witful Belt",
@@ -93,12 +114,13 @@ function init_gear_sets()
 	sets.precast.FC.Stoneskin = set_combine(sets.precast.FC['Enhancing Magic'], {})
 
 	sets.precast.FC['Healing Magic'] = set_combine(sets.precast.FC, {
-		legs = "Ebers Pantaloons +2"
+		legs = gear.empy.legs
 	})
 
 	sets.precast.FC.StatusRemoval = sets.precast.FC['Healing Magic']
 
 	sets.precast.FC.Cure = set_combine(sets.precast.FC['Healing Magic'], {
+		head = gear.relic.head,
 		feet = "Hygieia Clogs +1"
 	})
 
@@ -111,13 +133,13 @@ function init_gear_sets()
 	sets.precast.FC.Dispelga = set_combine(sets.precast.FC, { main = "Daybreak", sub = "Genmei Shield" })
 
 	-- Precast sets to enhance JAs
-	sets.precast.JA.Benediction = { body = "Piety Bliaut +1" }
+	sets.precast.JA.Benediction = { body = gear.relic.body }
 
 	-- Waltz set (chr and vit)
 	sets.precast.Waltz = {
 		head = "Bunzi's Hat",
 		ear1 = "Roundel Earring",
-		body = "Piety Bliaut +1",
+		body = gear.relic.body,
 		hands = "Telchine Gloves",
 		waist = "Chaac Belt",
 		back = "Aurist's Cape +1"
@@ -171,7 +193,7 @@ function init_gear_sets()
 		back = "Aurist's Cape +1",
 		waist = "Fotia Belt",
 		legs = "Nyame Flanchard",
-		feet = "Theo. Duckbills +1"
+		feet = gear.af.feet
 	}
 
 	sets.MaxTP = { ear1 = "Cessance Earring", ear2 = "Brutal Earring" }
@@ -265,14 +287,14 @@ function init_gear_sets()
 		main = "Daybreak",
 		sub = "Sors Shield",
 		ammo = "Pemphredo Tathlum",
-		head = "Theo. Cap +1",
+		head = gear.af.head,
 		neck = "Incanter's Torque",
 		-- ear1 = "Regal Earring",
 		-- ear2 = "Glorious Earring",
 		ear1 = "Nourish. Earring +1",
 		ear2 = "Ebers Earring +1",
-		body = "Theo. Bliaut +1",
-		hands = "Theo. Mitts +1",
+		body = gear.af.body,
+		hands = gear.af.hands,
 		ring1 = "Lebeche Ring",
 		ring2 = "Mephitas's Ring",
 		back = "Alaunus's Cape",
@@ -282,9 +304,9 @@ function init_gear_sets()
 
 	sets.midcast.CureSolace = set_combine(sets.midcast.Cure, {
 		ammo = "Pemphredo Tathlum",
-		head = "Theo. Cap +1",
+		head = gear.af.head,
 		neck = "Incanter's Torque",
-		body = "Ebers Bliaut +2",
+		body = gear.empy.body,
 		waist = "Luminary Sash",
 		feet = "Kaykaus Boots"
 	})
@@ -293,7 +315,7 @@ function init_gear_sets()
 		main = "Chatoyant Staff",
 		sub = "Curatio Grip",
 		ammo = "Esper Stone +1",
-		head = "Theo. Cap +1",
+		head = gear.af.head,
 		neck = "Incanter's Torque",
 		ear1 = "Nourish. Earring +1",
 		body = "Kaykaus Bliaut",
@@ -306,28 +328,28 @@ function init_gear_sets()
 		main = "Chatoyant Staff",
 		sub = "Curatio Grip",
 		ammo = "Esper Stone +1",
-		head = "Theo. Cap +1",
+		head = gear.af.head,
 		neck = "Incanter's Torque",
-		body = "Ebers Bliaut +2",
+		body = gear.empy.body,
 		waist = "Hachirin-no-Obi",
 		feet = "Kaykaus Boots"
 	})
 
 	sets.midcast.LightDayCureSolace = set_combine(sets.midcast.Cure, {
 		ammo = "Pemphredo Tathlum",
-		head = "Theo. Cap +1",
+		head = gear.af.head,
 		neck = "Incanter's Torque",
-		body = "Ebers Bliaut +2",
+		body = gear.empy.body,
 		waist = "Hachirin-no-Obi",
 		feet = "Kaykaus Boots"
 	})
 
 	sets.midcast.LightDayCure = set_combine(sets.midcast.Cure, {
 		ammo = "Pemphredo Tathlum",
-		head = "Theo. Cap +1",
+		head = gear.af.head,
 		neck = "Incanter's Torque",
 		ear1 = "Nourish. Earring +1",
-		body = "Theo. Bliaut +1",
+		body = gear.af.body,
 		back = "Twilight Cape",
 		waist = "Hachirin-no-Obi",
 		feet = "Kaykaus Boots"
@@ -335,9 +357,9 @@ function init_gear_sets()
 
 	sets.midcast.Curaga = set_combine(sets.midcast.Cure, {
 		ammo = "Pemphredo Tathlum",
-		head = "Theo. Cap +1",
+		head = gear.af.head,
 		neck = "Incanter's Torque",
-		body = "Theo. Bliaut +1",
+		body = gear.af.body,
 		waist = "Luminary Sash",
 		feet = "Kaykaus Boots"
 	})
@@ -346,7 +368,7 @@ function init_gear_sets()
 		main = "Chatoyant Staff",
 		sub = "Curatio Grip",
 		ammo = "Esper Stone +1",
-		head = "Theo. Cap +1",
+		head = gear.af.head,
 		neck = "Incanter's Torque",
 		ear1 = "Nourish. Earring +1",
 		body = "Kaykaus Bliaut",
@@ -358,10 +380,10 @@ function init_gear_sets()
 	sets.midcast.LightDayCuraga = set_combine(sets.midcast.Cure, {
 		sub = "Sors Shield",
 		ammo = "Pemphredo Tathlum",
-		head = "Theo. Cap +1",
+		head = gear.af.head,
 		neck = "Incanter's Torque",
 		ear1 = "Nourish. Earring +1",
-		body = "Theo. Bliaut +1",
+		body = gear.af.body,
 		back = "Twilight Cape",
 		waist = "Hachirin-no-Obi",
 		feet = "Kaykaus Boots"
@@ -370,7 +392,7 @@ function init_gear_sets()
 	sets.midcast.Cure.DT = set_combine(sets.midcast.Cure, {
 		sub = "Genmei Shield",
 		ammo = "Staunch Tathlum +1",
-		head = "Theo. Cap +1",
+		head = gear.af.head,
 		neck = "Loricate Torque +1",
 		ear1 = "Nourish. Earring +1",
 		body = "Nyame Mail",
@@ -382,45 +404,45 @@ function init_gear_sets()
 	--Melee Curesets are used whenever your Weapons state is set to anything but None.
 	sets.midcast.MeleeCure = {
 		ammo = "Pemphredo Tathlum",
-		head = "Theo. Cap +1",
+		head = gear.af.head,
 		neck = "Incanter's Torque",
 		ear1 = "Regal Earring",
-		body = "Theo. Bliaut +1",
+		body = gear.af.body,
 		hands = "Kaykaus Cuffs",
 		back = "Alaunus's Cape",
 		waist = "Luminary Sash",
 		feet = "Kaykaus Boots"
 	}
 
-	sets.midcast.MeleeCureSolace = set_combine(sets.midcast.MeleeCure, { body = "Ebers Bliaut +2" })
+	sets.midcast.MeleeCureSolace = set_combine(sets.midcast.MeleeCure, { body = gear.empy.body })
 	sets.midcast.MeleeLightWeatherCure = set_combine(sets.midcast.MeleeCure, { waist = "Hachirin-no-Obi" })
 	sets.midcast.MeleeLightWeatherCureSolace = set_combine(sets.midcast.MeleeCure,
-		{ body = "Ebers Bliaut +2", waist = "Hachirin-no-Obi" })
+		{ body = gear.empy.body, waist = "Hachirin-no-Obi" })
 	sets.midcast.MeleeLightDayCureSolace = set_combine(sets.midcast.MeleeCure,
-		{ body = "Ebers Bliaut +2", waist = "Hachirin-no-Obi" })
+		{ body = gear.empy.body, waist = "Hachirin-no-Obi" })
 	sets.midcast.MeleeLightDayCure = set_combine(sets.midcast.MeleeCure, { waist = "Hachirin-no-Obi" })
 	sets.midcast.MeleeCuraga = set_combine(sets.midcast.MeleeCure, {})
 	sets.midcast.MeleeLightWeatherCuraga = set_combine(sets.midcast.MeleeCure, { waist = "Hachirin-no-Obi" })
 	sets.midcast.MeleeLightDayCuraga = set_combine(sets.midcast.MeleeCure, { waist = "Hachirin-no-Obi" })
 
-	sets.midcast.CureSolace.DT = set_combine(sets.midcast.Cure.DT, { body = "Ebers Bliaut +2" })
+	sets.midcast.CureSolace.DT = set_combine(sets.midcast.Cure.DT, { body = gear.empy.body })
 	sets.midcast.LightWeatherCure.DT = set_combine(sets.midcast.Cure.DT, { waist = "Hachirin-no-Obi" })
 	sets.midcast.LightWeatherCureSolace.DT = set_combine(sets.midcast.Cure.DT,
-		{ body = "Ebers Bliaut +2", waist = "Hachirin-no-Obi" })
+		{ body = gear.empy.body, waist = "Hachirin-no-Obi" })
 	sets.midcast.LightDayCureSolace.DT = set_combine(sets.midcast.Cure.DT,
-		{ body = "Ebers Bliaut +2", waist = "Hachirin-no-Obi" })
+		{ body = gear.empy.body, waist = "Hachirin-no-Obi" })
 	sets.midcast.LightDayCure.DT = set_combine(sets.midcast.Cure.DT, { waist = "Hachirin-no-Obi" })
 	sets.midcast.Curaga.DT = set_combine(sets.midcast.Cure.DT, {})
 	sets.midcast.LightWeatherCuraga.DT = set_combine(sets.midcast.Cure.DT, { waist = "Hachirin-no-Obi" })
 	sets.midcast.LightDayCuraga.DT = set_combine(sets.midcast.Cure.DT, { waist = "Hachirin-no-Obi" })
 	sets.midcast.MeleeCure.DT = set_combine(sets.midcast.Cure.DT, {})
 
-	sets.midcast.MeleeCureSolace.DT = set_combine(sets.midcast.Cure.DT, { body = "Ebers Bliaut +2" })
+	sets.midcast.MeleeCureSolace.DT = set_combine(sets.midcast.Cure.DT, { body = gear.empy.body })
 	sets.midcast.MeleeLightWeatherCure.DT = set_combine(sets.midcast.Cure.DT, { waist = "Hachirin-no-Obi" })
 	sets.midcast.MeleeLightWeatherCureSolace.DT = set_combine(sets.midcast.Cure.DT,
-		{ body = "Ebers Bliaut +2", waist = "Hachirin-no-Obi" })
+		{ body = gear.empy.body, waist = "Hachirin-no-Obi" })
 	sets.midcast.MeleeLightDayCureSolace.DT = set_combine(sets.midcast.Cure.DT,
-		{ body = "Ebers Bliaut +2", waist = "Hachirin-no-Obi" })
+		{ body = gear.empy.body, waist = "Hachirin-no-Obi" })
 	sets.midcast.MeleeLightDayCure.DT = set_combine(sets.midcast.Cure.DT, { waist = "Hachirin-no-Obi" })
 	sets.midcast.MeleeCuraga.DT = set_combine(sets.midcast.Cure.DT, {})
 	sets.midcast.MeleeLightWeatherCuraga.DT = set_combine(sets.midcast.Cure.DT, { waist = "Hachirin-no-Obi" })
@@ -430,24 +452,24 @@ function init_gear_sets()
 		main = "Yagrush",
 		sub = "Clemency Grip",
 		ammo = "Hasty Pinion +1",
-		head = "Ebers Cap +2",
+		head = gear.empy.head,
 		neck = "Debilis Medallion",
 		ear1 = "Meili Earring",
 		ear2 = "Malignance Earring",
-		body = "Ebers Bliaut +2",
+		body = gear.empy.body,
 		hands = "Fanatic Gloves",
 		ring1 = "Haoma's Ring",
 		ring2 = "Menelaus's Ring",
 		back = "Alaunus's Cape",
 		waist = "Witful Belt",
-		legs = "Theo. Pant. +1",
+		legs = gear.af.legs,
 		feet = "Vanya Clogs"
 	}
 
 	sets.midcast.StatusRemoval = {
 		main = "Yagrush",
 		ammo = "Hasty Pinion +1",
-		head = "Ebers Cap +2",
+		head = gear.empy.head,
 		neck = "Voltsurge Torque",
 		ear1 = "Enchntr. Earring +1",
 		ear2 = "Malignance Earring",
@@ -457,11 +479,11 @@ function init_gear_sets()
 		ring2 = "Prolix Ring",
 		back = "Swith Cape +1",
 		waist = "Witful Belt",
-		legs = "Ebers Pantaloons +2",
+		legs = gear.empy.legs,
 		feet = "Regal Pumps +1"
 	}
 
-	sets.midcast.Erase = set_combine(sets.midcast.StatusRemoval, { neck = "Cleric's Torque" })
+	sets.midcast.Erase = set_combine(sets.midcast.StatusRemoval, { neck = "Cleric's Torque +2" })
 
 	-- 110 total Enhancing Magic Skill; caps even without Light Arts
 	sets.midcast['Enhancing Magic'] = {
@@ -475,7 +497,7 @@ function init_gear_sets()
 		body = "Telchine Chas.",
 		hands = "Telchine Gloves",
 		legs = "Telchine Braconi",
-		feet = "Theo. Duckbills +1",
+		feet = "Telchine Pigaches",
 		ring1 = "Stikini Ring +1",
 		ring2 = "Stikini Ring +1",
 		back = "Perimede Cape",
@@ -485,7 +507,7 @@ function init_gear_sets()
 	sets.midcast.Stoneskin = set_combine(sets.midcast['Enhancing Magic'],
 		{ neck = "Nodens Gorget", ear2 = "Earthcry Earring", waist = "Siegel Sash", legs = "Shedir Seraweels" })
 
-	sets.midcast.Auspice = set_combine(sets.midcast['Enhancing Magic'], { feet = "Ebers Duckbills +2" })
+	sets.midcast.Auspice = set_combine(sets.midcast['Enhancing Magic'], { feet = gear.empy.feet })
 
 	sets.midcast.Aquaveil = set_combine(sets.midcast['Enhancing Magic'],
 		{
@@ -497,33 +519,57 @@ function init_gear_sets()
 		})
 
 	sets.midcast.Regen = set_combine(sets.midcast['Enhancing Magic'],
-		{ hands = "Ebers Mitts +1", legs = "Theo. Pant. +1", })
+		{ 
+			body = gear.relic.body,
+			hands = gear.empy.hands, 
+			legs = gear.af.legs, 
+		})
 
 	sets.midcast.Protect = set_combine(sets.midcast['Enhancing Magic'],
-		{ ring2 = "Sheltered Ring", feet = "Piety Duckbills +1", ear1 = "Gifted Earring", waist = "Sekhmet Corset" })
+		{
+			ring2 = "Sheltered Ring",
+			feet = gear.relic.feet,
+			ear1 = "Gifted Earring",
+			waist = "Sekhmet Corset"
+		})
 	sets.midcast.Protectra = set_combine(sets.midcast['Enhancing Magic'],
-		{ ring2 = "Sheltered Ring", feet = "Piety Duckbills +1", ear1 = "Gifted Earring", waist = "Sekhmet Corset" })
+		{
+			ring2 = "Sheltered Ring",
+			feet = gear.relic.feet,
+			ear1 = "Gifted Earring",
+			waist = "Sekhmet Corset"
+		})
 	sets.midcast.Shell = set_combine(sets.midcast['Enhancing Magic'],
-		{ ring2 = "Sheltered Ring", legs = "Piety Pantaln. +1", ear1 = "Gifted Earring", waist = "Sekhmet Corset" })
+		{
+			ring2 = "Sheltered Ring",
+			legs = gear.relic.legs,
+			ear1 = "Gifted Earring",
+			waist = "Sekhmet Corset"
+		})
 	sets.midcast.Shellra = set_combine(sets.midcast['Enhancing Magic'],
-		{ ring2 = "Sheltered Ring", legs = "Piety Pantaln. +1", ear1 = "Gifted Earring", waist = "Sekhmet Corset" })
+		{
+			ring2 = "Sheltered Ring",
+			legs = gear.relic.legs,
+			ear1 = "Gifted Earring",
+			waist = "Sekhmet Corset"
+		})
 
 	sets.midcast.BarElement = {
 		main = "Beneficus",
 		sub = "Ammurapi Shield",
 		ammo = "Staunch Tathlum +1",
-		head = "Ebers Cap +2",
+		head = gear.empy.head,
 		neck = "Incanter's Torque",
 		ear1 = "Andoaa Earring",
 		ear2 = "Gifted Earring",
-		body = "Ebers Bliaut +2",
-		hands = "Ebers Mitts +1",
+		body = gear.empy.body,
+		hands = gear.empy.hands,
 		ring1 = "Stikini Ring +1",
 		ring2 = "Stikini Ring +1",
 		back = "Alaunus's Cape",
 		waist = "Olympus Sash",
-		legs = "Piety Pantaln. +1",
-		feet = "Ebers Duckbills +2"
+		legs = gear.relic.legs,
+		feet = gear.empy.feet
 	}
 
 	sets.midcast.Impact = {
@@ -737,7 +783,7 @@ function init_gear_sets()
 		neck = "Erra Pendant",
 		ear1 = "Regal Earring",
 		ear2 = "Digni. Earring",
-		body = "Theo. Bliaut +1",
+		body = gear.af.body,
 		hands = "Regal Cuffs",
 		ring1 = "Kishar Ring",
 		ring2 = "Stikini Ring +1",
@@ -755,14 +801,14 @@ function init_gear_sets()
 		neck = "Erra Pendant",
 		ear1 = "Regal Earring",
 		ear2 = "Digni. Earring",
-		body = "Theo. Bliaut +1",
-		hands = "Theo. Mitts +1",
+		body = gear.af.body,
+		hands = gear.af.hands,
 		ring1 = "Metamor. Ring +1",
 		ring2 = "Stikini Ring +1",
 		back = "Aurist's Cape +1",
 		waist = "Luminary Sash",
 		legs = "Chironic Hose",
-		feet = "Theo. Duckbills +1"
+		feet = gear.af.feet
 	}
 
 	sets.midcast.Dia = set_combine(sets.midcast['Enfeebling Magic'], sets.TreasureHunter)
@@ -795,7 +841,7 @@ function init_gear_sets()
 		neck = "Chrys. Torque",
 		ear1 = "Etiolation Earring",
 		ear2 = "Ethereal Earring",
-		body = "Ebers Bliaut +2",
+		body = gear.empy.body,
 		hands = gear.chironic_refresh_hands,
 		ring1 = "Defending Ring",
 		ring2 = "Dark Ring",
@@ -815,7 +861,7 @@ function init_gear_sets()
 		neck = "Loricate Torque +1",
 		ear1 = "Etiolation Earring",
 		ear2 = "Ethereal Earring",
-		body = "Ebers Bliaut",
+		body = gear.empy.body,
 		hands = gear.chironic_refresh_hands,
 		ring1 = "Stikini Ring +1",
 		ring2 = "Shneddick Ring",
@@ -1006,7 +1052,7 @@ function init_gear_sets()
 	}
 
 	-- Buff sets: Gear that needs to be worn to actively enhance a current player buff.
-	sets.buff['Divine Caress'] = { hands = "Ebers Mitts +1", back = "Mending Cape" }
+	sets.buff['Divine Caress'] = { hands = gear.empy.heads, back = "Mending Cape" }
 
 	sets.HPDown = {
 		head = "Pixie Hairpin +1",
@@ -1036,7 +1082,7 @@ function init_gear_sets()
 		ring2 = "Meridian Ring",
 		back = "Alaunus's Cape",
 		waist = "Eschan Stone",
-		legs = "Ebers Pantaloons +2",
+		legs = gear.empy.legs,
 		feet = "Kaykaus Boots"
 	}
 

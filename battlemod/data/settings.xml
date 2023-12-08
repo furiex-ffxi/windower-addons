@@ -28,7 +28,7 @@
         <showcritws>true</showcritws>
         <showguards>true</showguards>
         <showownernames>false</showownernames>
-        <showrollinfo>false</showrollinfo>
+        <showrollinfo>true</showrollinfo>
         <simplify>true</simplify>
         <sumdamage>true</sumdamage>
         <swingnumber>true</swingnumber>

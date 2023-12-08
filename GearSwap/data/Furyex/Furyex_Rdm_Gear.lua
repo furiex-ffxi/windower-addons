@@ -117,6 +117,12 @@ function init_gear_sets()
 	--------------------------------------
 	-- Start defining the sets
 	--------------------------------------
+	sets.enmity = {
+		hands = "Merlinic Dastanas",
+		back = "Agema Cape",
+		neck = "Warder's Charm +1",
+		ring1 = "Petrov Ring",
+	}
 
 	-- Precast Sets
 
@@ -146,6 +152,7 @@ function init_gear_sets()
         right_ear	=	"Lethargy Earring",  --2
         left_ring	=	"Kishar Ring",          --4
         right_ring	=	"Jhakri Ring",        --5
+		back 	    =   "Perimede Cape",
 	    -- head		=	Carm.Head.D,            --14
         --body		=	Merl.Body.FC,           --12
         ammo        =   "Regal Gem",
@@ -161,7 +168,7 @@ function init_gear_sets()
 		left_ear    =   "Mendi. Earring",
 		})
 	sets.precast.FC.Impact = set_combine(sets.precast.FC, { 
-		-- head = empty, body = "Twilight Cloak" 
+		head = empty, body = "Twilight Cloak" 
 	})
 	sets.precast.FC.Dispelga = set_combine(sets.precast.FC, { 
 		main = "Daybreak", 
@@ -185,18 +192,18 @@ function init_gear_sets()
 		-- legs = "Carmine Cuisses +1",
 		-- feet = "Carmine Greaves +1"
 		-- ammo		=	"Regal Gem",
-		head		=	RELIC.Head,
+		head		=	"Nyame Helm",
 		ammo = "Oshasha's Treatise",
 		-- body		=	RELIC.Body,
 		neck = "Anu Torque",
-		body		=	EMPY.Body,        
-		hands       =   EMPY.Hands,
+		body		=	"Nyame Mail",        
+		hands       =   "Nyame Gauntlets",
 		legs		=	RELIC.Legs,
 		feet		=	EMPY.Feet,
 		-- neck		=	"Dls. Torque +2",
-		-- waist		=	"Prosilio Belt +1",
+		waist		=	"Sailfi Belt +1",
 		left_ear	=	{ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-		right_ear	=	"Sherida Earring",
+		right_ear	=	"Ishvara Earring",
 		left_ring   =   "Epaminondas's Ring",
 		right_ring	=	"Karieyh Ring",
 		back		=	RDMCape.MACC,		
@@ -260,19 +267,14 @@ function init_gear_sets()
 
 	sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {
         -- ammo		=	"Regal Gem",
-        head		=	RELIC.Head,
         -- body		=	RELIC.Body,
-        hands		=	AF.Hands,
-        body		=	EMPY.Body,        
         legs		=	EMPY.Legs,
         feet		=	EMPY.Feet,
-        neck		=	"Dls. Torque +2",
+        neck		=	"Anu Torque",
         -- waist		=	"Prosilio Belt +1",
         left_ear	=	{ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
         right_ear	=	"Ishvara Earring",
-        -- left_ring   =   "Stikini Ring +1",
         right_ring	=	"Karieyh Ring",
-        -- right_ring	=	"Rufescent Ring",
         back		=	RDMCape.MACC,		
 		-- range = empty,
 		-- ammo = "Regal Gem",
@@ -523,7 +525,7 @@ function init_gear_sets()
 		hands = RELIC.Hands,
 		ring1 = "Stikini Ring +1",
 		ring2 = "Stikini Ring +1",
-		back = gear.nuke_jse_back,
+		back = "Perimede Cape",
 		waist = "Embla Sash",
 		legs = AF.Legs,
 		feet = EMPY.Feet
@@ -614,6 +616,8 @@ function init_gear_sets()
 	sets.midcast.Bind.Resistant = set_combine(sets.midcast['Enfeebling Magic'].Resistant, { waist = "Acuity Belt +1" })
 	sets.midcast.Break = set_combine(sets.midcast.DurationOnlyEnfeebling, { waist = "Acuity Belt +1" })
 	sets.midcast.Break.Resistant = set_combine(sets.midcast['Enfeebling Magic'].Resistant, { waist = "Acuity Belt +1" })
+	sets.midcast.Foil = sets.enmity
+	sets.midcast.Flash = sets.enmity
 
 	sets.midcast.Dispel = sets.midcast['Enfeebling Magic'].Resistant
 
@@ -746,24 +750,11 @@ function init_gear_sets()
 		feet = "Jhakri Pigaches +2" 
 	})
 	
-	sets.midcast.Impact = {
-		main = "Bunzi's Rod",
-		sub = "Ammurapi Shield",
-		range = "Kaja Bow",
-		ammo = empty,
-		head = empty,
+	sets.midcast.Impact = set_combine(sets.midcast['Elemental Magic'], {
 		neck = "Erra Pendant",
-		ear1 = "Regal Earring",
-		ear2 = "Malignance Earring",
+		head = empty,
 		body = "Twilight Cloak",
-		hands = EMPY.Hands,
-		ring1 = "Metamor. Ring +1",
-		ring2 = "Stikini Ring +1",
-		back = gear.nuke_jse_back,
-		waist = "Luminary Sash",
-		legs = "Merlinic Shalwar",
-		feet = "Amalric Nails +1"
-	}
+	})
 
 	sets.midcast['Dark Magic'] = set_combine(sets.midcast['Enfeebling Magic'].Resistant, {
 		main = "Rubicundity",
@@ -982,8 +973,10 @@ function init_gear_sets()
 	-- sets.weapons.Naegling = { main = "Naegling", sub = "Sacro Bulwark", range = empty }
 	sets.weapons.Naegling = { main = "Naegling", sub = "Genmei Shield", range = empty }
 	sets.weapons.DualWeapons = { main = "Naegling", sub = "Machaera +3", range = empty }
-	sets.weapons.DualWeaponsAcc = { main = "Naegling", sub = "Almace", range = empty }
+	-- sets.weapons.DualWeaponsAcc = { main = "Naegling", sub = "Almace", range = empty }
+	sets.weapons.DualWeaponsAcc = { main = "Naegling", sub = "Ternion Dagger +1", range = empty }
 	-- sets.weapons.DualEvisceration = { main = "Tauret", sub = "Almace", range = empty }
+	sets.weapons.DualClubs = { main = "Maxentius", sub = "Machaera +3", range = empty }
 	sets.weapons.DualEvisceration = { main = "Tauret", sub = "Ternion Dagger +1", range = empty }
 	sets.weapons.DualAeolian = { main = "Tauret", sub = "Daybreak", range = empty }
 	sets.weapons.DualProcSwords = { main = "Brunello", sub = "Soulflayer's Wand", range = empty }
@@ -991,7 +984,6 @@ function init_gear_sets()
 	sets.weapons.Tauret = { main = "Tauret", sub = "Genmei Shield"}
 	sets.weapons.EnspellOnly = { main = "Norgish Dagger", sub = "Aern Dagger", range = "Ullr", ammo = "Beetle Arrow" }
 	sets.weapons.EnspellDW = { main = "Blurred Knife +1", sub = "Atoyac", range = "Ullr", ammo = "Beetle Arrow" }
-	sets.weapons.DualClubs = { main = "Maxentius", sub = "Machaera +3", range = empty }
 	sets.weapons.DualAlmace = { main = "Almace", sub = "Sequence", range = empty }
 	sets.weapons.DualBow = { main = "Naegling", sub = "Tauret", range = "Ullr" }
 	sets.weapons.BowMacc = { main = "Naegling", sub = "Tauret", range = "Ullr", ammo = empty }
@@ -1013,16 +1005,10 @@ function init_gear_sets()
 	--		back=gear.stp_jse_back,waist="Windbuffet Belt +1",legs="Carmine Cuisses +1",feet="Carmine Greaves +1"}
 
 	sets.engaged = {
-	-- 	main  Demersal Degen +1 R15
 	-- 	sub  Crepuscular Knife
 	--  ranged  Empty
 	--    ammo  Aurgelmir Orb +1
-	--    head  Malignance Chapeau
-	--    body  Malignance Tabard
-	--   hands  Malignance Gloves
 	--    legs  Malignance Tights
-	--    feet  Malignance Boots
-	--    neck  Anu Torque
 	--   waist  Windbuffet Belt +1
 	--    ear1  Sherida Earring
 	--    ear2  Dedition Earring
@@ -1069,11 +1055,11 @@ function init_gear_sets()
 
 	sets.engaged.Acc = set_combine(sets.engaged, {
         --head		=	Carm.Head.D,
-        -- neck		=	"Sanctity Necklace",
+        neck = "Subtlety Spec.",
 		ammo = "Ginsen",
-        right_ear   =  { name="Domin. Earring +1", augments={'Path: A',}},
+        left_ear = { name="Domin. Earring +1", augments={'Path: A',}},
         -- right_ear	=	"Mache Earring +1",
-        -- waist		=	"Grunfeld Rope",
+        waist =	"Eschan Stone",
     })
 
 	sets.engaged.FullAcc = set_combine(sets.Acc, {

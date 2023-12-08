@@ -5,14 +5,14 @@ function user_job_setup()
     state.WeaponskillMode:options('Match', 'Normal', 'Acc', 'FullAcc', 'Fodder')
     state.PhysicalDefenseMode:options('PDT')
     state.IdleMode:options('Normal', 'PDT', 'Refresh')
-    state.Weapons:options('None', 'Godhands', 'PetWeapons')
+    state.Weapons:options('None', 'Godhands', 'Midnights', 'PetWeapons')
     state.PetMode        = M { ['description'] = 'Pet Mode', 'None', 'Melee', 'Ranged', 'HybridRanged', 'Bruiser', 'Tank',
         'LightTank', 'Magic', 'Heal', 'Nuke' }
-    state.AutoRepairMode = M(false, 'Auto Repair Mode')
+    state.AutoRepairMode = M(true, 'Auto Repair Mode')
     state.AutoDeployMode = M(true, 'Auto Deploy Mode')
     state.AutoPetMode    = M(false, 'Auto Pet Mode')
-    state.PetWSGear      = M(false, 'Pet WS Gear')
-    state.PetEnmityGear  = M(false, 'Pet Enmity Gear')
+    state.PetWSGear      = M(true, 'Pet WS Gear')
+    state.PetEnmityGear  = M(true, 'Pet Enmity Gear')
 
     -- Default/Automatic maneuvers for each pet mode.  Define at least 3.
     defaultManeuvers     = {
@@ -79,6 +79,7 @@ function user_job_setup()
     send_command('bind @` gs c cycle SkillchainMode')
     send_command('bind @f8 gs c toggle AutoPuppetMode')
     send_command('bind @f7 gs c toggle AutoRepairMode')
+    send_command('bind !f7 gs c toggle PetMode')
 end
 
 -- Define sets used by this job file.
@@ -98,19 +99,19 @@ function init_gear_sets()
     Artifact_Foire.Feet = "Foire Babouches +1"
 
     Relic_Pitre = {}
-    Relic_Pitre.Head = "Pitre Taj +1" --Enhances Optimization
-    Relic_Pitre.Body = "Pitre Tobe +1" --Enhances Overdrive
-    Relic_Pitre.Hands = "Pitre Dastanas +1" --Enhances Fine-Tuning
-    Relic_Pitre.Legs = "Pitre Churidars +1" --Enhances Ventriloquy
-    Relic_Pitre.Feet = "Pitre Babouches +1" --Role Reversal
+    Relic_Pitre.Head = "Pitre Taj +2" --Enhances Optimization
+    Relic_Pitre.Body = "Pitre Tobe +3" --Enhances Overdrive
+    Relic_Pitre.Hands = "Pitre Dastanas +2" --Enhances Fine-Tuning
+    Relic_Pitre.Legs = "Pitre Churidars +2" --Enhances Ventriloquy
+    Relic_Pitre.Feet = "Pitre Babouches +2" --Role Reversal
 
     Empy_Karagoz = {}
-    Empy_Karagoz.Head = "Karagoz Cappello +1"
-    Empy_Karagoz.Body = "Karagoz Farsetto +1"
-    Empy_Karagoz.Hands = "Karagoz Guanti +1"
-    Empy_Karagoz.Legs = "Karagoz Pantaloni +1"
-    Empy_Karagoz.Feet = "Karagoz Scarpe +1"
-	Empy_Karagoz.Earring = "Kara. Earring +1"
+    Empy_Karagoz.Head = "Kara. Cappello +2"
+    Empy_Karagoz.Body = "Kara. Farsetto +2"
+    Empy_Karagoz.Hands = "Karagoz Guanti +2"
+    Empy_Karagoz.Legs = "Kara. Pantaloni +2"
+    Empy_Karagoz.Feet = "Karagoz Scarpe +2"
+	Empy_Karagoz.Earring = "Karagoz Earring"
 
     -- Precast Sets
     sets.buff.Overdrive = {
@@ -144,7 +145,13 @@ function init_gear_sets()
     sets.precast.JA['Ventriloquy'] = {body=Relic_Pitre.Legs}
     sets.precast.JA['Role Reversal'] = {body=Relic_Pitre.Feet}
 
-    sets.precast.JA.Maneuver = { main = "Midnights", back = "Visucius's Mantle", neck="Buffoon's Collar",hands=Artifact_Foire.Hands, body=Empy_Karagoz.Body } 
+    sets.precast.JA.Maneuver = { 
+        main = "Midnights", 
+        back = "Visucius's Mantle", 
+        neck="Buffoon's Collar",
+        hands=Artifact_Foire.Hands, 
+        body=Empy_Karagoz.Body 
+    } 
 
     -- Waltz set (chr and vit)
     sets.precast.Waltz = {
@@ -326,21 +333,27 @@ function init_gear_sets()
     sets.midcast.Pet.PetEnmityGear = {}
     sets.midcast.Pet.PetWSGear = {
         main = "Ohtas",
-        head = Empy_Karagoz.Head,
+        head = "Taeon Chapeau",
         neck = "Shulmanu Collar",
-        ear1 = "Enmerkar Earring",
-        ear2 = "Domesticator's Earring",
-        body = gear.taeon_pet_body,
+        -- ear1 = "Enmerkar Earring",
+        ear1 = "Crep. Earring",
+        ear2 = "Karagoz Earring",
+        body={ name="Taeon Tabard", augments={'Pet: Accuracy+24 Pet: Rng. Acc.+24','Pet: "Dbl. Atk."+5','Pet: Damage taken -3%',}},
+        legs = "Taeon Tights",
         hands = "Mpaca's Gloves",
-        ring1 = "Varar Ring +1",
+        ring1 = "Overbearing Ring",
         ring2 = "C. Palug Ring",
         back = "Visucius's Mantle",
         waist = "Incarnation Sash",
-        legs = "Taeon Tights",
         feet = "Mpaca's Boots"
     }
 
-    sets.midcast.Pet.PetWSGear.Ranged = set_combine(sets.midcast.Pet.PetWSGear, {})
+    sets.midcast.Pet.PetWSGear.Ranged = set_combine(sets.midcast.Pet.PetWSGear, {
+        head = Empy_Karagoz.Head,
+        -- waist = "Klouskap Sash +1",
+        -- ear2 = "Domesticator's Earring",
+        -- back = "Dispersal Mantle",
+    })
     sets.midcast.Pet.PetWSGear.Melee = set_combine(sets.midcast.Pet.PetWSGear, {})
     sets.midcast.Pet.PetWSGear.Tank = set_combine(sets.midcast.Pet.PetWSGear, {})
     sets.midcast.Pet.PetWSGear.Bruiser = set_combine(sets.midcast.Pet.PetWSGear, {})
@@ -423,34 +436,45 @@ function init_gear_sets()
         -- head = "Anwig Salade",
         neck = "Shulmanu Collar",
         -- ear1 = "Enmerkar Earring",
-        -- ear2 = "Crepuscular Earring",
-        -- body = gear.taeon_pet_body,
-        -- hands = "Taeon Gloves",
-        -- ring1 = "Varar Ring +1",
-        -- ring2 = "C. Palug Ring",
-        -- back = "Visucius's Mantle",
         -- waist = "Incarnation Sash",
-        -- legs = "Taeon Tights",
-        -- feet = "Taeon Boots"
         head={ name="Taeon Chapeau", augments={'Pet: Accuracy+23 Pet: Rng. Acc.+23','Pet: "Dbl. Atk."+4','Pet: Damage taken -3%',}},
         body={ name="Taeon Tabard", augments={'Pet: Accuracy+24 Pet: Rng. Acc.+24','Pet: "Dbl. Atk."+5','Pet: Damage taken -3%',}},
         hands={ name="Taeon Gloves", augments={'Pet: Accuracy+20 Pet: Rng. Acc.+20','Pet: "Dbl. Atk."+4','Pet: Damage taken -3%',}},
         legs={ name="Taeon Tights", augments={'Pet: Accuracy+23 Pet: Rng. Acc.+23','Pet: "Dbl. Atk."+4','Pet: Damage taken -4%',}},
         feet={ name="Taeon Boots", augments={'Pet: Accuracy+25 Pet: Rng. Acc.+25','Pet: "Dbl. Atk."+5','Pet: Damage taken -3%',}},
         waist="Hurch'lan Sash",
-        left_ear="Rimeice Earring",
-        right_ear={ name="Karagoz Earring", augments={'System: 1 ID: 1676 Val: 0','Accuracy+6','Mag. Acc.+6',}},
-        left_ring="C. Palug Ring",
-        right_ring="Overbearing Ring",
+        ear1 = "Crepuscular Earring",
+        ear2={ name="Karagoz Earring", augments={'System: 1 ID: 1676 Val: 0','Accuracy+6','Mag. Acc.+6',}},
+        ring1="C. Palug Ring",
+        ring2="Varar Ring +1",
         back={ name="Visucius's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Accuracy+20 Attack+20','Pet: Haste+10','System: 1 ID: 1246 Val: 4',}},
     }
 
-    sets.idle.Pet.Engaged.Ranged = set_combine(sets.idle.Pet.Engaged, {})
+    sets.idle.Pet.Engaged.Ranged = set_combine(sets.idle.Pet.Engaged, {
+        gloves="Mpaca's Gloves",
+        ring1="Varar Ring +1",
+        ring2="Varar Ring +1",
+    })
     sets.idle.Pet.Engaged.Melee = set_combine(sets.idle.Pet.Engaged, {})
-    sets.idle.Pet.Engaged.Tank = set_combine(sets.idle.Pet.Engaged, { waist = "Isa Belt", ear2 = "Handler's Earring +1" })
-    sets.idle.Pet.Engaged.Bruiser = set_combine(sets.idle.Pet.Engaged, { hands = "Mpaca's Gloves", feet = "Mpaca's Boots" })
-    sets.idle.Pet.Engaged.LightTank = set_combine(sets.idle.Pet.Engaged, { waist = "Isa Belt",
-        ear2 = "Handler's Earring +1" })
+    sets.idle.Pet.Engaged.Tank = set_combine(sets.idle.Pet.Engaged, { 
+        head = "Rao Kabuto +1",
+        body = "Rao Togi +1",
+        hands = "Rao Kote +1",
+        legs = "Rao Haidate +1",
+        feet = "Rao Sune-Ate +1",
+        -- waist = "Isa Belt", 
+        ear1 = "Rimeice Earring",
+        ear2 = "Handler's Earring +1",
+        ring2 = "Overbearing Ring"
+    })
+    sets.idle.Pet.Engaged.Bruiser = set_combine(sets.idle.Pet.Engaged, { 
+        hands = "Mpaca's Gloves", 
+        feet = "Mpaca's Boots" 
+    })
+    sets.idle.Pet.Engaged.LightTank = set_combine(sets.idle.Pet.Engaged, { 
+        waist = "Isa Belt",
+        ear2 = "Handler's Earring +1"
+    })
     sets.idle.Pet.Engaged.Magic = set_combine(sets.idle.Pet.Engaged, {})
     sets.idle.Pet.Engaged.Heal = sets.idle.Pet.Engaged.Magic
     sets.idle.Pet.Engaged.Nuke = sets.idle.Pet.Engaged.Magic
@@ -698,6 +722,7 @@ function init_gear_sets()
     -- Weapons sets
     sets.weapons.PetWeapons = { main = "Ohtas", range = "Animator P +1", }
     sets.weapons.Godhands = { main = "Godhands", range = "Animator P +1", }
+    sets.weapons.Midnights = { main = "Midnights", range = "Animator P +1", }
 end
 
 -- Select default macro book on initial load or subjob change.

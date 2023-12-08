@@ -103,6 +103,38 @@
                 <slot11>barrier module ii</slot11>
                 <slot12>analyzer</slot12>
             </rune>
+            <schah>
+                <frame>valoredge frame</frame>
+                <head>soulsoother head</head>
+                <slot01>strobe</slot01>
+                <slot02>strobe ii</slot02>
+                <slot03>steam jacket</slot03>
+                <slot04>mana jammer iv</slot04>
+                <slot05>mana jammer iii</slot05>
+                <slot06>armor plate iii</slot06>
+                <slot07>armor plate iv</slot07>
+                <slot08>barrier module</slot08>
+                <slot09>auto-repair kit iv</slot09>
+                <slot10>optic fiber</slot10>
+                <slot11>optic fiber ii</slot11>
+                <slot12>flashbulb</slot12>
+            </schah>
+            <sortie>
+                <frame>valoredge frame</frame>
+                <head>soulsoother head</head>
+                <slot01>optic fiber</slot01>
+                <slot02>optic fiber ii</slot02>
+                <slot03>strobe</slot03>
+                <slot04>strobe ii</slot04>
+                <slot05>armor plate iv</slot05>
+                <slot06>flashbulb</slot06>
+                <slot07>mana jammer iii</slot07>
+                <slot08>mana jammer iv</slot08>
+                <slot09>auto-repair kit iv</slot09>
+                <slot10>armor plate iii</slot10>
+                <slot11>attuner</slot11>
+                <slot12>speedloader ii</slot12>
+            </sortie>
         </autosets>
         <bg>
             <alpha>255</alpha>

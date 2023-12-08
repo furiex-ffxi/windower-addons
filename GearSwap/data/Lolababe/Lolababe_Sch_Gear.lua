@@ -463,22 +463,22 @@ function init_gear_sets()
         sub = "Ammurapi Shield",
         ammo = "Ghastly Tathlum +1",
         head = "Agwu's Cap",
-        neck = "Saevus Pendant +1",
-        -- ear1 = "Crematio Earring",
-        ear2 = "Friomisi Earring",
-        body = "Amalric Doublet +1",
-        hands = "Amalric Gages +1",
+        neck = "Argute Stole +2",
+        ear1 = "Regal Earring",
+        ear2 = "Malignance Earring",
+        body = "Arbatel Gown +3",
+        hands = "Arbatel Bracer's +3",
         ring1 = "Freke Ring",
-        -- ring2 = "Shiva Ring +1",
+        ring2 = "Metamor. Ring +1",
         back = gear.nuke_jse_back,
         waist = "Refoccilation Stone",
-        legs = "Merlinic Shalwar",
-        feet = "Amalric Nails +1"
+        legs = "Agwu's Slops",
+        feet = "Arbatel Loafers +3"
     }
 
     sets.midcast['Elemental Magic'].Resistant = set_combine(sets.midcast['Elemental Magic'], 
     {
-        neck = "Sanctity Necklace",
+        neck = "Argute Stole +2",
         ear1 = "Malignance Earring",
         ear2 = "Regal Earring",
         -- hands = "Mallquis Cuffs +2",
@@ -539,59 +539,65 @@ function init_gear_sets()
     }
 
     -- Gear for Magic Burst mode.
+
+    --[[
+    Best Stone V set with the provided buffs:
+
+        main  Bunzi's Rod R20
+        sub  Ammurapi Shield
+        ranged  Empty
+        ammo  Ghastly Tathlum +1 R15
+        head  Agwu's Cap R20
+        body  Arbatel Gown +3
+        hands  Arbatel Bracers +3
+        legs  Arbatel Pants +3
+        feet  Arbatel Loafers +3
+        neck  Argute Stole +2 R25
+        waist  Hachirin-no-Obi
+        ear1  Regal Earring
+        ear2  Malignance Earring
+        ring1  Metamorph Ring +1 R15
+        ring2  Freke Ring
+        back  Lugh's Cape INT Magic Attack
+
+    List of potential swaps within 2.0% of the best set (32489.46 ):
+    head   Pedagogy Mortarboard +3                            31909.74    1.8%
+    ear1   Barkarole Earring                                  31858.90    1.9%
+    ear2   Arbatel Earring +1                                 31862.43    1.9%
+    ear2   Barkarole Earring                                  31999.81    1.5%
+    hands  Agwu's Gages R20                                   31937.75    1.7%
+    ring1  Mujin Band                                         31844.05    2.0%
+    ring1  Shiva Ring +1A                                     31971.63    1.6%
+    ring2  Mujin Band                                         31985.55    1.6%
+    ring2  Shiva Ring +1A                                     32101.97    1.2%
+    legs   Agwu's Slops R20                                   31957.54    1.6%
+    ]]    
     sets.MagicBurst = {
         main = "Bunzi's Rod",
         sub = "Ammurapi Shield",
         ammo = "Ghastly Tathlum +1",
         head = "Agwu's Cap",
-        -- neck = "Mizukage-no-Kubikazari",
+        neck = "Argute Stole +2",
         ear1 = "Malignance Earring",
         ear2 = "Regal Earring",
-        body = "Amalric Doublet +1",
-        hands = "Amalric Gages +1",
+        body = "Arbatel Gown +3",
+        hands = "Agwu's Gages",
         ring1 = "Freke Ring",
-        ring2 = "Mujin Band",
+        ring2 = "Metamor. Ring +1",
         back = gear.nuke_jse_back,
-        waist = "Acuity Belt +1",
+        waist = "Hachirin-no-Obi",
         legs = "Agwu's Slops",
-        feet = "Amalric Nails +1"
+        feet = "Arbatel Loafers +3"
     }
 
-    sets.HelixBurst = {
-        main = "Bunzi's Rod",
-        sub = "Ammurapi Shield",
-        ammo = "Ghastly Tathlum +1",
-        head = "Agwu's Cap",
-        -- neck = "Mizukage-no-Kubikazari",
-        ear1 = "Malignance Earring",
-        ear2 = "Regal Earring",
-        body = "Amalric Doublet +1",
-        hands = "Amalric Gages +1",
-        ring1 = "Freke Ring",
-        ring2 = "Mujin Band",
-        back = gear.nuke_jse_back,
-        waist = "Refoccilation Stone",
-        legs = "Agwu's Slops",
-        feet = "Amalric Nails +1"
-    }
-
-    sets.ResistantHelixBurst = {
-        main = "Bunzi's Rod",
-        sub = "Ammurapi Shield",
-        ammo = "Ghastly Tathlum +1",
-        head = "Agwu's Cap",
-        -- neck = "Mizukage-no-Kubikazari",
-        ear1 = "Malignance Earring",
-        ear2 = "Regal Earring",
-        body = "Amalric Doublet +1",
-        hands = "Amalric Gages +1",
+    sets.HelixBurst = set_combine(sets.MagicBurst, {
+        head = "Arbatel Bonnet +3",
         ring1 = "Mujin Band",
-        ring2 = "Metamorph Ring +1",
-        back = gear.nuke_jse_back,
-        waist = "Acuity Belt +1",
-        legs = "Agwu's Slops",
-        feet = "Agwu's Pigaches"
-    }
+        ear2 = "Arbatel Earring +2",
+    })
+
+    sets.ResistantHelixBurst = set_combine(sets.HelixBurst, {
+    })
 
     -- Custom refinements for certain nuke tiers
     sets.midcast['Elemental Magic'].HighTierNuke = {
@@ -599,6 +605,7 @@ function init_gear_sets()
         sub = "Ammurapi Shield",
         ammo = "Ghastly Tathlum +1",
         head = "Merlinic Hood",
+        neck = "Argute Stole +2",
         -- neck = "Saevus Pendant +1",
         ear1 = "Malignance Earring",
         ear2 = "Regal Earring",
@@ -617,7 +624,7 @@ function init_gear_sets()
         sub = "Ammurapi Shield",
         ammo = "Ghastly Tathlum +1",
         head = "Merlinic Hood",
-        neck = "Sanctity Necklace",
+        neck = "Argute Stole +2",
         ear1 = "Malignance Earring",
         ear2 = "Regal Earring",
         body = "Amalric Doublet +1",
@@ -635,7 +642,7 @@ function init_gear_sets()
         sub = "Ammurapi Shield",
         ammo = "Ghastly Tathlum +1",
         head = "Merlinic Hood",
-        neck = "Saevus Pendant +1",
+        neck = "Argute Stole +2",
         -- ear1 = "Crematio Earring",
         ear2 = "Friomisi Earring",
         -- body = gear.merlinic_nuke_body,
@@ -653,7 +660,7 @@ function init_gear_sets()
         sub = "Ammurapi Shield",
         ammo = "Pemphredo Tathlum",
         head = gear.merlinic_nuke_head,
-        neck = "Sanctity Necklace",
+        neck = "Argute Stole +2",
         ear1 = "Malignance Earring",
         ear2 = "Friomisi Earring",
         -- body = gear.merlinic_nuke_body,
@@ -899,8 +906,15 @@ function init_gear_sets()
     -- Buff sets: Gear that needs to be worn to actively enhance a current player buff.
     sets.buff['Ebullience'] = { head = "Arbatel Bonnet +3" }
     sets.buff['Rapture'] = { head = "Arbatel Bonnet +3" }
-    sets.buff['Perpetuance'] = { hands = "Arbatel Bracers+3" }
-    sets.buff['Immanence'] = { hands = "Arbatel Bracers+3" }
+    sets.buff['Perpetuance'] = { hands = "Arbatel Bracers +3" }
+    sets.buff['Immanence'] = { 
+        head = "Nyame Helm",
+        body = "Nyame Mail",
+        neck = "Warder's charm +1",
+        hands = "Arbatel Bracers +3",
+        back = "Lugh's Cape",
+    }
+
     -- sets.buff['Penury'] = { legs = "Arbatel Pants +1" }
     -- sets.buff['Parsimony'] = { legs = "Arbatel Pants +1" }
     -- sets.buff['Celerity'] = { feet = "Peda. Loafers +1" }

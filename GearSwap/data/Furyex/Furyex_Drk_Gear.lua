@@ -227,17 +227,14 @@ function init_gear_sets()
 	-- Default set for any weaponskill that isn't any more specifically defined
 	sets.precast.WS = {
 		ammo = "Knobkierrie",
-		-- ammo = "Seeth. bomblet +1",
-		head = Empy.Head,
+		head = "Nyame Helm",
 		-- neck = "Fotia Gorget",
 		neck = "Abyssal Beads +2",
 		-- ear1 = "Lugra Earring +1",
         ear1 = { name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
         ear2 = "Thrud Earring",
 		body = AF.Body,
-		hands={ name="Odyssean Gauntlets", augments={'Pet: Phys. dmg. taken -2%','STR+2','"Refresh"+2','Accuracy+20 Attack+20','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
-		-- body = gear.valorous_wsd_body,
-		-- hands = "Sulev. Gauntlets +2",
+		hands = "Nyame Gauntlets",
         ring1 = "Epaminondas's Ring",
         ring2 ="Karieyh Ring",		
 		-- ring1 = "Regal Ring",
@@ -314,7 +311,8 @@ function init_gear_sets()
 		ring1 = "Stikini Ring +1",
 		ring2 = "Stikini Ring +1",
 		back = "Shadow Mantle",
-		waist = "Flume Belt +1",
+		waist = "Plat. Mog. Belt",
+		-- waist = "Flume Belt +1",
 	}
 
 	sets.idle.PDT = {
@@ -335,7 +333,7 @@ function init_gear_sets()
 		ring1 = "Defending Ring",
 		ring2 = "Sulevia's Ring",
 		back = "Shadow Mantle",
-		waist = "Flume Belt +1",
+		waist = "Plat. Mog. Belt",
 	}
 
 	sets.idle.Weak = set_combine(sets.idle, { head = "Twilight Helm", body = "Twilight Mail" })

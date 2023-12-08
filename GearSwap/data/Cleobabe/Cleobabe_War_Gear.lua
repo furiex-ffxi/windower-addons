@@ -12,8 +12,10 @@ function user_job_setup()
 	state.Weapons:options('None', 'Lycurgos', 'ShiningOne', 'Chango', 'DualWeapons', 'Greatsword', 'Naegling', 'Loxotic', 'ProcSword', 'ProcDagger', 'ProcKatana', 'ProcGreatSword',
 	'ProcScythe', 'ProcPolearm', 'ProcGreatKatana', 'ProcClub', 'ProcStaff')
 
-	gear.da_jse_back = { name = "Cichol's Mantle", augments = { 'DEX+20', 'Accuracy+20 Attack+20', '"Dbl.Atk."+10' } }
-	gear.crit_jse_back = { name = "Cichol's Mantle", augments = { 'STR+20', 'Accuracy+20 Attack+20', 'Crit.hit rate+10' } }
+	gear.da_jse_back = { name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
+	gear.wsd_str_jse_back = { name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%','Damage taken-5%',}}
+	gear.wsd_vit_jse_back = {name="Cichol's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}}
+	-- gear.crit_jse_back = { name = "Cichol's Mantle", augments = { 'STR+20', 'Accuracy+20 Attack+20', 'Crit.hit rate+10' } }
 
 	-- Additional local binds
 	send_command('bind ^` input /ja "Hasso" <me>')
@@ -46,7 +48,7 @@ function init_gear_sets()
 
 	-- Precast sets to enhance JAs
 	sets.precast.JA['Berserk'] = { 
-		back = "Cichol's Mantle",
+		back = gear.da_jse_back,
 		body="Pumm. Lorica +3", 
         feet="Agoge Calligae +3"
 	}
@@ -150,12 +152,10 @@ function init_gear_sets()
         feet = "Sulevia's Leggings +2",
 		waist="Sailfi Belt +1",
 		left_ring="Cornelia's Ring",
-        right_ring="Petrov Ring",
+        right_ring="Epaminondas's Ring",
 		left_ear = "Thrud Earring",
         right_ear = "Moonshade Earring",
-		back={
-			name="Cichol's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',},
-        },
+		back=gear.wsd_str_jse_back,
         -- head="Sakpata's Helm",
         -- body="Sakpata's Breastplate",
         -- hands="Sakpata's Gauntlets",
@@ -166,7 +166,6 @@ function init_gear_sets()
         -- right_ear="Schere Earring",
         -- left_ring="Regal Ring",
         -- right_ring="Niqmaddu Ring",
-
 	}
 
 	sets.precast.WS.Proc = {
@@ -193,11 +192,21 @@ function init_gear_sets()
 	sets.precast.WS['Savage Blade'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
 	sets.precast.WS['Savage Blade'].Fodder = set_combine(sets.precast.WS.Fodder, {})
 
-	sets.precast.WS['Upheaval'] = set_combine(sets.precast.WS, {})
-	sets.precast.WS['Upheaval'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
-	sets.precast.WS['Upheaval'].Acc = set_combine(sets.precast.WS.Acc, {})
-	sets.precast.WS['Upheaval'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
-	sets.precast.WS['Upheaval'].Fodder = set_combine(sets.precast.WS.Fodder, {})
+	sets.precast.WS['Upheaval'] = set_combine(sets.precast.WS, {
+		back=gear.wsd_vit_jse_back,
+	})
+	sets.precast.WS['Upheaval'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {
+		back=gear.wsd_vit_jse_back,
+	})
+	sets.precast.WS['Upheaval'].Acc = set_combine(sets.precast.WS.Acc, {
+		back=gear.wsd_vit_jse_back,
+	})
+	sets.precast.WS['Upheaval'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
+		back=gear.wsd_vit_jse_back,
+	})
+	sets.precast.WS['Upheaval'].Fodder = set_combine(sets.precast.WS.Fodder, {
+		back=gear.wsd_vit_jse_back,
+	})
 
 	sets.precast.WS['Resolution'] = set_combine(sets.precast.WS, {})
 	sets.precast.WS['Resolution'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
@@ -272,7 +281,7 @@ function init_gear_sets()
 		left_ring="Shneddick Ring",
 		-- right_ring="Chirich Ring +1",
 		-- right_ring="Chirich Ring +1",
-		back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+		back=gear.da_jse_back,
 	}
 
 	sets.idle.Weak = set_combine(sets.idle, { head = "Twilight Helm", body = "Twilight Mail" })
@@ -297,7 +306,7 @@ function init_gear_sets()
 		ring1="Flamma Ring",
 		ring2="Gelatinous Ring +1",
 		-- right_ring="Defending Ring",
-		back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+		back=gear.da_jse_back,
 	}
 
 	sets.defense.PDTReraise = set_combine(sets.defense.PDT, { 
@@ -343,7 +352,6 @@ function init_gear_sets()
 		hands="Tatenashi Gote +1",
 		legs="Pumm. Cuisses +3",
 		feet="Pumm. Calligae +3",
-		-- neck="Warrior's Bead Necklace +2",
 		-- waist="Ioskeha Belt +1",
 		waist="Sailfi Belt +1",
 		-- left_ear="Brutal Earring",
@@ -353,8 +361,9 @@ function init_gear_sets()
 		left_ring="Flamma Ring",
 		right_ring="Petrov Ring",
 		-- right_ring="Niqmaddu Ring",
-		back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+		back=gear.da_jse_back,
 	}
+	
 	sets.engaged.SomeAcc = set_combine(sets.engaged, {
         body="Agoge Lorica +3",
 		feet = "Flamma Gambieras +2",
