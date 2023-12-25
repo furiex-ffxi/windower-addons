@@ -6,4 +6,7 @@
         <mode>whitelist</mode>
         <whitelist>Furyex,Cyrite</whitelist>
     </global>
+    <mailman>
+        <whitelist>Furyex,Wapiti,Cyrite</whitelist>
+    </mailman>
 </settings>

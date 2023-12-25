@@ -2,7 +2,7 @@ function user_job_setup()
 	-- Options: Override default values
 	state.OffenseMode:options('Normal','DT','SomeAcc', 'Acc', 'FullAcc', 'Fodder')
 	state.WeaponskillMode:options('Match', 'Normal', 'SomeAcc', 'Acc', 'FullAcc', 'Fodder')
-	state.HybridMode:options('Normal')
+	state.HybridMode:options('Normal', 'DT')
 	state.PhysicalDefenseMode:options('PDT', 'PDTReraise')
 	state.MagicalDefenseMode:options('MDT', 'MDTReraise')
 	state.ResistDefenseMode:options('MEVA')
@@ -26,8 +26,8 @@ function init_gear_sets()
 	-- Start defining the sets
 	--------------------------------------
 	DRKCape = {}
-	DRKCape.TP = { name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}}
-	DRKCape.STP = { name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%', }}
+	DRKCape.TP = { name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
+	DRKCape.STP = { name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%', }}
 	DRKCape.STR = { name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}}
 
 	AF = {}
@@ -169,6 +169,12 @@ function init_gear_sets()
 	}
 
 	sets.midcast['Dread Spikes'] = set_combine(sets.midcast['Dark Magic'], {
+		ear1 = "Odnowa Earring +1",
+		ear2 = "Tuisto Earring",
+		neck = "Unmoving Collar +1",
+		waist = "Plat. Mog. Belt",
+		ring1 = "Gelatinous Ring +1",
+		ring2 = "Moonbean Ring",
 		body = Empy.Body,
 	})
 	sets.midcast.Absorb = set_combine(sets.midcast['Dark Magic'], { 
@@ -266,6 +272,22 @@ function init_gear_sets()
 	sets.precast.WS['Torcleaver'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
 	sets.precast.WS['Torcleaver'].Fodder = set_combine(sets.precast.WS.Fodder, {})
 
+	sets.precast.WS['Insurgency'] = set_combine(sets.precast.WS, {
+		ring2 = "Niqmaddu Ring",
+	})
+	sets.precast.WS['Insurgency'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
+	sets.precast.WS['Insurgency'].Acc = set_combine(sets.precast.WS.Acc, {})
+	sets.precast.WS['Insurgency'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
+	sets.precast.WS['Insurgency'].Fodder = set_combine(sets.precast.WS.Fodder, {})
+
+	sets.precast.WS['Cross Reaper'] = set_combine(sets.precast.WS, {
+		ring2 = "Niqmaddu Ring",
+	})
+	sets.precast.WS['Cross Reaper'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
+	sets.precast.WS['Cross Reaper'].Acc = set_combine(sets.precast.WS.Acc, {})
+	sets.precast.WS['Cross Reaper'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
+	sets.precast.WS['Cross Reaper'].Fodder = set_combine(sets.precast.WS.Fodder, {})
+
 	sets.precast.WS['Entropy'] = set_combine(sets.precast.WS, {})
 	sets.precast.WS['Entropy'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
 	sets.precast.WS['Entropy'].Acc = set_combine(sets.precast.WS.Acc, {})
@@ -305,7 +327,7 @@ function init_gear_sets()
 		hands={ name="Odyssean Gauntlets", augments={'Pet: Phys. dmg. taken -2%','STR+2','"Refresh"+2','Accuracy+20 Attack+20','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
 		legs="Sakpata's Cuisses",
 		feet="Sakpata's Leggings",
-		neck = "Loricate Torque +1",
+		neck = "Abyssal Beads +2",
 		ear1 = "Genmei Earring",
 		ear2 = "Ethereal Earring",
 		ring1 = "Stikini Ring +1",
@@ -401,8 +423,6 @@ function init_gear_sets()
 
 	-- Engaged sets
 	sets.engaged = {
-		-- ammo = "Aurgelmir Orb +1",
-		-- head = "Flam. Zucchetto +2",
 		-- neck = "Asperity Necklace",
 		-- ear1 = "Brutal Earring",
 		-- ear2 = "Cessance Earring",
@@ -413,8 +433,8 @@ function init_gear_sets()
 		-- waist = "Ioskeha Belt",
 		-- legs = "Sulev. Cuisses +2",
 		-- feet = "Flam. Gambieras +2"
-		ammo="Coiste Bodhar",
-		head="Flam. Zucchetto +2",
+		ammo="Aurgelmir Orb +1",
+		head="Hjarrandi Helm",
 		body="Sakpata's Plate",
 		hands="Sakpata's Gauntlets",
 		legs="Sakpata's Cuisses",
@@ -424,12 +444,12 @@ function init_gear_sets()
 		left_ear="Telos Earring",
 		right_ear="Crep. Earring",
 		left_ring="Lehko's Ring",
-		right_ring="Moonlight Ring",
+		right_ring="Niqmaddu Ring",
 		back = DRKCape.TP,
 	}
 	sets.engaged.SomeAcc = {
 		ammo = "Aurgelmir Orb +1",
-		head = "Flam. Zucchetto +2",
+		head = "Hjarrandi Helm",
 		neck = "Combatant's Torque",
 		ear1 = "Brutal Earring",
 		ear2 = "Cessance Earring",
@@ -444,7 +464,7 @@ function init_gear_sets()
 	}
 	sets.engaged.Acc = {
 		ammo = "Aurgelmir Orb +1",
-		head = "Flam. Zucchetto +2",
+		head = "Hjarrandi Helm",
 		neck = "Combatant's Torque",
 		ear1 = "Digni. Earring",
 		ear2 = "Telos Earring",
@@ -458,9 +478,8 @@ function init_gear_sets()
 		feet = "Flam. Gambieras +2"
 	}
 	sets.engaged.FullAcc = {
-		-- ammo = "Aurgelmir Orb +1",
-	    ammo="Ginsen",
-		head = "Flam. Zucchetto +2",
+		ammo = "Aurgelmir Orb +1",
+		head = "Hjarrandi Helm",
 		neck = "Combatant's Torque",
 		ear1 = "Mache Earring +1",
 		ear2 = "Telos Earring",
@@ -475,7 +494,7 @@ function init_gear_sets()
 	}
 	sets.engaged.Fodder = {
 		ammo = "Aurgelmir Orb +1",
-		head = "Flam. Zucchetto +2",
+		head = "Hjarrandi Helm",
 		neck = "Asperity Necklace",
 		ear1 = "Brutal Earring",
 		ear2 = "Sherida Earring",
@@ -489,34 +508,32 @@ function init_gear_sets()
 		feet = "Flam. Gambieras +2"
 	}
 	sets.engaged.DT = set_combine(sets.engaged, {
+
 	})
 
 	sets.engaged.Liberator = sets.engaged
-
+	sets.engaged.Liberator.DT = set_combine(sets.engaged.Liberator, {
+		hands = sets.Nyame.Hands,
+		feet = sets.Nyame.Feet,
+	})
 	sets.engaged.Liberator.AM = {
-		ammo="Ginsen",
-		waist="Reiki Yotai",
-		neck="Abyssal Beads +2",
-		head = "Sulevia's Mask +2",
-		body = "Flamma Korazin +2",
+		ammo="Aurgelmir Orb +1",
+		waist="Sailfi Belt +1",
+		-- neck="Vim Torque +1",
+		neck = "Loricate Torque +1",
+		head = "Hjarrandi Helm",
+		body = "Hjarrandi Breastplate",
 		hands = "Flam. Manopolas +2",
-		legs = "Flamma Dirs +2",
+		-- legs = "Flamma Dirs +2",
+		legs = "Sulevia's cuisses +2",
 		feet = "Flam. Gambieras +2",
-		left_ear="Telos Earring",
+		left_ear="Dedition Earring",
 		right_ear="Crep. Earring",
 		left_ring="Lehko's Ring",
 		right_ring="Moonlight Ring",
 		back = DRKCape.STP,
 	}
 
-	sets.engaged.Liberator.DT = sets.engaged
-	sets.engaged.Liberator.DT.AM = set_combine(sets.engaged.Liberator.AM, {
-		neck = "Loricate Torque +1",
-		body = Empy.Body,
-		legs = "Sakpata's Leggings"
-	}
-
-	)
 
 	--Example sets:
 	--[[

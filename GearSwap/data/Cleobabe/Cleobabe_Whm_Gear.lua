@@ -19,8 +19,8 @@ function user_job_setup()
 	gear.af = {}
 	gear.af.head = "Theophany Cap +2"
 	gear.af.body = "Theo. Bliaut +2"
-	gear.af.hands = "Theo. Mitts +1"
-	gear.af.legs = "Theo. Pant. +1"
+	gear.af.hands = "Theophany Mitts +2"
+	gear.af.legs = "Theo. Pant. +2"
 	gear.af.feet = "Theo. Duckbills +2"
 
 	gear.relic = {}
@@ -74,40 +74,26 @@ function init_gear_sets()
 
 	-- Fast cast sets for spells
 	sets.precast.FC = {
-		main = gear.grioavolr_fc_staff,
-		sub = "Clerisy Strap +1",
-		ammo = "Impatiens",
-		head = gear.empy.head,
-		neck = "Clr. Torque +2",
-		ear1 = "Enchntr. Earring +1",
-		ear2 = "Malignance Earring",
-		body = "Inyanga Jubbah +2",
-		hands = "Gende. Gages +1",
-		ring1 = "Kishar Ring",
-		ring2 = "Lebeche Ring",
-		back = "Alaunus's Cape",
-		waist = "Witful Belt",
-		legs = "Aya. Cosciales +2",
-		feet = "Regal Pumps +1"
-	}
+		main = "Mpaca's Staff", -- 5
+		sub = "Clerisy Strap +1", -- 3 
+		ammo = "Impatiens", -- 2 QM
+		head = gear.empy.head, -- 10
+		neck = "Clr. Torque +2", -- 8
+		ear1 = "Enchntr. Earring +1", -- 2
+		ear2 = "Malignance Earring", -- 4
+		body = "Inyanga Jubbah +2", -- 14
+		hands = "Volte Gloves", -- 6
+		ring1 = "Kishar Ring", -- 4
+		ring2 = "Lebeche Ring", -- 2 QM
+		back = "Alaunus's Cape", -- 10
+		waist = "Witful Belt", -- 3/3 QM
+		legs = "Ayanmo Cosciales +2", -- 6
+		feet = "Regal Pumps +1"  -- 4
+	} -- 79 FC / 7 QM
 
-	sets.precast.FC.DT = {
-		main = gear.grioavolr_fc_staff,
-		sub = "Clerisy Strap +1",
-		ammo = "Impatiens",
+	sets.precast.FC.DT = set_combine(sets.precast.FC, {
 		head = "Bunzi's Hat",
-		neck = "Voltsurge Torque",
-		ear1 = "Enchntr. Earring +1",
-		ear2 = "Malignance Earring",
-		body = "Inyanga Jubbah +2",
-		hands = "Gende. Gages +1",
-		ring1 = "Prolix Ring",
-		ring2 = "Lebeche Ring",
-		back = "Alaunus's Cape",
-		waist = "Witful Belt",
-		legs = "Aya. Cosciales +2",
-		feet = "Regal Pumps +1"
-	}
+	})
 
 	sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC, { waist = "Siegel Sash" })
 
@@ -260,31 +246,26 @@ function init_gear_sets()
 		ring2 = "Locus Ring"
 	}
 
-	sets.midcast.FastRecast = {
+	sets.midcast.FastRecast = set_combine(sets.precast.FC, {
 		main = gear.grioavolr_fc_staff,
 		sub = "Clerisy Strap +1",
-		ammo = "Hasty Pinion +1",
-		head = "Bunzi's Hat",
-		neck = "Voltsurge Torque",
-		ear1 = "Enchntr. Earring +1",
-		ear2 = "Malignance Earring",
-		body = "Inyanga Jubbah +2",
-		hands = "Gende. Gages +1",
-		ring1 = "Kishar Ring",
-		ring2 = "Prolix Ring",
-		back = "Swith Cape +1",
-		waist = "Witful Belt",
-		legs = "Lengo Pants",
-		feet = "Regal Pumps +1"
-	}
+		-- ammo = "Hasty Pinion +1",
+		ammo = "Impatiens",
+		head = "Bunzi's Hat", -- 6 Haste, 10 FC
+		ear1 = "Enchntr. Earring +1", -- 2 FC
+		body = "Inyanga Jubbah +2", -- 2 Haste, 14 FC
+		hands = "Fanatic Gloves", -- 3 Haste, 2 FC
+		feet = "Regal Pumps +1",  -- 3 Haste, 7 FC
+		waist = "Channeler's Stone", -- 2 FC
+		ring2 = "Prolix Ring",  -- 2 FC
+	})
 
 	-- Cure sets
 
 	sets.midcast['Full Cure'] = sets.midcast.FastRecast
 
 	sets.midcast.Cure = {
-		-- main = "Queller Rod",
-		main = "Daybreak",
+		main = "Raetic Rod +1",
 		sub = "Sors Shield",
 		ammo = "Pemphredo Tathlum",
 		head = gear.af.head,
@@ -854,7 +835,8 @@ function init_gear_sets()
 	-- Idle sets (default idle set not needed since the other three are defined, but leaving for testing purposes)
 	sets.idle = {
 		main = "Mpaca's Staff",
-		sub = "Umbra Strap",
+		sub = "Clerisy Strap +1",
+		-- sub = "Umbra Strap",
 		-- ammo = "Homiliary",
 		ammo = "Hydrocera",
 		head = "Befouled Crown",
@@ -862,7 +844,7 @@ function init_gear_sets()
 		ear1 = "Etiolation Earring",
 		ear2 = "Ethereal Earring",
 		body = gear.empy.body,
-		hands = gear.chironic_refresh_hands,
+		hands = "Volte Gloves",
 		ring1 = "Stikini Ring +1",
 		ring2 = "Shneddick Ring",
 		back = "Moonlight Cape",
@@ -871,7 +853,7 @@ function init_gear_sets()
 		feet = gear.chironic_refresh_feet
 	}
 
-	sets.idle.PDT = {
+	sets.idle.PDT = set_combine(sets.idle, {
 		main = "Malignance Pole",
 		sub = "Umbra Strap",
 		ammo = "Homiliary",
@@ -887,7 +869,7 @@ function init_gear_sets()
 		waist = "Carrier's Sash",
 		legs = "Assid. Pants +1",
 		feet = gear.chironic_refresh_feet
-	}
+	})
 
 	sets.idle.MDT = {
 		main = "Daybreak",
@@ -1095,7 +1077,7 @@ function select_default_macro_book()
 end
 
 function user_job_lockstyle()
-	windower.chat.input('/lockstyleset 006')
+	windower.chat.input('/lockstyleset 002')
 end
 
 autows_list = { ['DualWeapons'] = 'Realmrazer', ['MeleeWeapons'] = 'Realmrazer' }

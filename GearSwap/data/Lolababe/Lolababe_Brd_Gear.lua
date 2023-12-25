@@ -166,8 +166,8 @@ function init_gear_sets()
 		waist = "Fotia Belt",
 		ear1 = "Moonshade Earring",
 		ear2 = "Ishvara Earring",
-		ring1 = "Cornelia's Ring",
-		ring2 = "Ilabrat Ring",
+		ring1 = "Ilabrat Ring",
+		ring2 = "Cornelia's Ring",
 		back = { name = "Intarabus's Cape", augments = { 'STR+20', 'Accuracy+20 Attack+20', 'STR+10', 'Weapon skill damage +10%', 'Phys. dmg. taken-10%', } },
 	}
 
@@ -213,7 +213,7 @@ function init_gear_sets()
 
 	sets.precast.WS['Rudra\'s Storm'] = set_combine(sets.precast.WS, {
 		waist = "Kentarch Belt +1",
-		ring2 = "Ilabrat Ring",
+		ring1 = "Ilabrat Ring",
 		back = { name = "Intarabus's Cape", augments = { 'DEX+20', 'Accuracy+20 Attack+20', 'DEX+10', 'Weapon skill damage +10%', } },
 	})
 
@@ -694,20 +694,25 @@ function init_gear_sets()
 		back = { name = "Intarabus's Cape", augments = { 'DEX+20', 'Accuracy+20 Attack+20', 'Accuracy+10', '"Dbl.Atk."+10', 'Phys. dmg. taken-10%', } },
 	}
 
-	sets.engaged.DT = {
-	}
-	sets.engaged.Acc = {}
+	sets.engaged.DT = set_combine(sets.engaged, {
+		
+	})
+	sets.engaged.Acc = set_combine(sets.engaged, {
+		hands = "Gazu Bracelets +1",
+		ear1 = "Crep. Earring",
+		ear2 = "Digni. Earring",
+	})
 	sets.engaged.DW = set_combine(sets.engaged, {
 		ear1 = "Eabani Earring",
 		ear2 = "Suppanomimi",
 		waist = "Reiki Yotai",
 	})
-	sets.engaged.DW.DT = {}
-	sets.engaged.DW.Acc = set_combine(sets.engaged.DW, {
-		ear1 = "Digni. Earring",
-		ear2 = "Crep. Earring",
+	sets.engaged.DW.DT = set_combine(sets.engaged.DW, sets.engaged.DT)
+	sets.engaged.DW.Acc = set_combine(sets.engaged.DW, sets.engaged.Acc, {
+		ear2 = "Suppanomimi",
+		waist = "Reiki Yotai",
 	})
-	sets.engaged.DW.Acc.DT = {}
+	sets.engaged.DW.Acc.DT = set_combine(sets.engaged.DW, sets.engaged.Acc, sets.engaged.DT)
 
 	sets.buff.Doom = {
 		--neck="Nicander's Necklace", --20

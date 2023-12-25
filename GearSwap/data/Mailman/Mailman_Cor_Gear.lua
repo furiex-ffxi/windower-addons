@@ -9,7 +9,7 @@ function user_job_setup()
     state.ExtraMeleeMode = M { ['description'] = 'Extra Melee Mode', 'None', 'DWMax' }
     state.Weapons:options('Default', 'Ranged', 'Savage', 'Evisceration', 'DualWeapons', 'DualSavageWeapons',
         'DualEvisceration', 'DualLeadenRanged', 'DualLeadenMelee', 'DualAeolian', 'DualLeadenMeleeAcc', 'DualRanged',
-        'DualProcWeapons', 'None')
+        'DualFermion', 'None')
     state.CompensatorMode:options('Always', '300', '1000', 'Never')
 
     gear.RAbullet = "Living Bullet"
@@ -236,10 +236,10 @@ function init_gear_sets()
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {
         ammo = gear.WSbullet,
-		head="Nyame Helm", augments={'Attack++6 Rng. Atk. +6','Weapon skill damage +2%',},
+		head=sets.Nyame.Head,
 		body="Laksa. Frac +3",
 		hands=gear.Empy.Hands,
-		legs={ name="Nyame Flanchard", augments={'Attack++6 Rng. Atk. +6','Weapon skill damage +2%',}},
+		legs=sets.Nyame.Legs,
 		feet="Lanun Bottes +3",
 		neck={ name="Comm. Charm +2", augments={'Path: A',}},
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
@@ -700,7 +700,7 @@ function init_gear_sets()
     sets.weapons.Savage = { main = "Naegling", sub = "Nusku Shield", range = "Ataktos" }
     sets.weapons.DualLeadenRanged = { 
 		main={ name="Rostam", augments={'Path: A'}, bag="Wardrobe 4"},
-		sub="Tauret",
+		sub="Kustawi +1",
 		range="Death Penalty", 
 		ammo="Living Bullet",
     }
@@ -719,6 +719,12 @@ function init_gear_sets()
 		-- sub={ name="Rostam", augments={'Path: C'}, bag="Wardrobe 2"},
 		-- range={ name="Fomalhaut", augments={'Path: A',}},
 		-- ammo="Chrono Bullet",
+    }
+    sets.weapons.DualFermion = {
+        main="Fermion Sword",
+        sub="Qutrub Knife",
+        range="Death Penalty",
+        ammo="Living Bullet",
     }
 
     -- Engaged sets
@@ -749,7 +755,7 @@ function init_gear_sets()
         back  Camulus's Mantle DEX Dual Wield
     ]]
     sets.engaged = {
-        head = "Malignance Chapeau",
+        head=sets.Malignance.Head,
         neck = "Iskur Gorget",
         ear1 = "Crep. Earring",
         ear2 = "Dedition Earring",
@@ -759,7 +765,7 @@ function init_gear_sets()
         ring2 = "Epona's Ring",
         back = gear.tp_jse_back,
         waist = "Windbuffet Belt +1",
-        legs = { name="Samnuha Tights", augments={'STR+8','DEX+9','"Dbl.Atk."+3','"Triple Atk."+2',}},
+        legs = "Samnuha Tights",
         -- feet = gear.herc_feet_qa
         feet = gear.Empy.Feet
     }
@@ -767,22 +773,10 @@ function init_gear_sets()
     sets.engaged.Acc = set_combine(sets.engaged, {
     })
 
-    sets.engaged.DT = {
-        -- head = "Malignance Chapeau",
-        -- neck = "Loricate Torque +1",
-        -- ear1 = "Cessance Earring",
-        -- ear2 = "Brutal Earring",
-        -- body = "Malignance Tabard",
-        -- hands = "Malignance Gloves",
-        -- ring1 = "Defending Ring",
-        -- ring2 = "Petrov Ring",
-        -- back = gear.tp_jse_back,
-        -- waist = "Windbuffet Belt +1",
-        -- legs = "Malignance Tights",
-        -- feet = "Malignance Boots"
-        head="Malignance Chapeau",
+    sets.engaged.DT = set_combine(sets.engaged, {
+        head=sets.Malignance.Head,
         body="Chasseur's Frac +2",
-        hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+        hands=sets.Malignance.Hands,
         legs="Chas. Culottes +2",
         feet="Meg. Jam. +2",
         neck="Iskur Gorget",
@@ -791,8 +785,8 @@ function init_gear_sets()
         right_ear="Dedition Earring",
         left_ring="Petrov Ring",
         right_ring="Epona's Ring",
-        back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dual Wield"+10','Phys. dmg. taken-10%',}},
-    }
+        back = gear.tp_jse_back,
+    })
 
     sets.engaged.Acc.DT = {
         head = "Malignance Chapeau",
@@ -813,20 +807,10 @@ function init_gear_sets()
 		ear2="Suppanomimi",
     })
 
-    sets.engaged.DW.Acc = {
-        head = "Carmine Mask +1",
-        neck = "Combatant's Torque",
-        ear1 = "Odr Earring",
-        ear2 = "Telos Earring",
-        body = "Malignance Tabard",
-        hands = "Floral Gauntlets",
-        ring1 = "Ramuh Ring +1",
-        ring2 = "Ramuh Ring +1",
-        back = gear.tp_jse_back,
-        waist = "Olseni Belt",
+    sets.engaged.DW.Acc = set_combine(sets.engaged.DW, {
+        hands = "Gazu Bracelets +1",
         legs = "Carmine Cuisses +1",
-        feet = "Malignance Boots"
-    }
+    })
 
     sets.engaged.DW.DT = {
         head = "Malignance Chapeau",

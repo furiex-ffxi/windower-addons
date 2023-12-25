@@ -1,4 +1,19 @@
 --Gearsets your character will use among multiple jobs.
+sets.Nyame = {
+    Head="Nyame Helm",
+    Body="Nyame Mail",
+    Hands="Nyame Gauntlets",
+    Legs="Nyame Flanchard",
+    Feet="Nyame Sollerets"
+}
+sets.Malignance = {
+    Head="Malignance Chapeau",
+    Body="Malignance Tabard",
+    Hands="Malignance Gloves",
+    Legs="Malignance Tights",
+    Feet="Malignance Boots",
+}
+
 sets.BehemothSuit = {body="Behemoth Suit +1",hands=empty,legs=empty,feet=empty}
 sets.Sheltered = {ring2="Sheltered Ring"}
 sets.Capacity = {back="Mecisto. Mantle"}

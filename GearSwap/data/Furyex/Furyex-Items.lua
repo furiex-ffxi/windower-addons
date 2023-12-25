@@ -9,6 +9,13 @@ sets.Nyame = {
     Legs="Nyame Flanchard",
     Feet="Nyame Sollerets"
 }
+sets.Malignance = {
+    Head="Malignance Chapeau",
+    Body="Malignance Tabard",
+    Hands="Malignance Gloves",
+    Legs="Malignance Tights",
+    Feet="Malignance Boots",
+}
 
 sets.buff.Doom = {neck="Nicander's Necklace",waist="Gishdubar Sash",ring1="Eshmun's Ring",ring2="Eshmun's Ring"}
 sets.TreasureHunter = {head="Wh. Rarab Cap +1",waist="Chaac Belt"}

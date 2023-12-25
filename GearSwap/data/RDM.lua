@@ -197,6 +197,10 @@ function job_post_midcast(spell, spellMap, eventArgs)
 			equip(sets.buff.Saboteur)
 		end
 
+		if state.CastingMode.value:contains('Enmity') and sets.Enmity then
+			equip(sets.Enmity)
+		end
+
 	elseif spell.skill == 'Enhancing Magic' then
 		equip(sets.midcast['Enhancing Magic'])
 	
@@ -220,6 +224,10 @@ function job_post_midcast(spell, spellMap, eventArgs)
 			elseif sets.midcast[spellMap] and sets.midcast[spellMap].DW then
 				equip(sets.midcast[spellMap].DW)
 			end
+		end
+		
+		if state.CastingMode.value:contains('Enmity') and sets.Enmity then
+			equip(sets.Enmity)
 		end
     end
 end
@@ -653,7 +661,7 @@ buff_spell_lists = {
 		{Name='Aquaveil',		Buff='Aquaveil',		SpellID=55,		When='Always'},
 		{Name='Phalanx',		Buff='Phalanx',			SpellID=106,	When='Always'},
 		{Name='Stoneskin',		Buff='Stoneskin',		SpellID=54,		When='Always'},
-		{Name='Blink',			Buff='Blink',			SpellID=53,		When='Always'},
+		-- {Name='Blink',			Buff='Blink',			SpellID=53,		When='Always'},
 		{Name='Gain-STR',		Buff='STR Boost',		SpellID=486,	When='Always'},
 		{Name='Shell V',		Buff='Shell',			SpellID=52,		When='Always'},
 		{Name='Protect V',		Buff='Protect',			SpellID=47,		When='Always'},

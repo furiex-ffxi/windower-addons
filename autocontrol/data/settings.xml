@@ -4,6 +4,22 @@
         <AutoActivate>true</AutoActivate>
         <AutoDeusExAutomata>false</AutoDeusExAutomata>
         <autosets>
+            <bruiser>
+                <frame>valoredge frame</frame>
+                <head>soulsoother head</head>
+                <slot01>optic fiber</slot01>
+                <slot02>optic fiber ii</slot02>
+                <slot03>attuner</slot03>
+                <slot04>flame holder</slot04>
+                <slot05>turbo charger</slot05>
+                <slot06>turbo charger ii</slot06>
+                <slot07>armor plate iv</slot07>
+                <slot08>magniplug ii</slot08>
+                <slot09>auto-repair kit iv</slot09>
+                <slot10>strobe</slot10>
+                <slot11>strobe ii</slot11>
+                <slot12>flashbulb</slot12>
+            </bruiser>
             <default>
 
             </default>
@@ -23,6 +39,22 @@
                 <slot11>inhibitor ii</slot11>
                 <slot12>mana jammer iii</slot12>
             </frogbu>
+            <fu>
+                <frame>sharpshot frame</frame>
+                <head>valoredge head</head>
+                <slot01>auto-repair kit iv</slot01>
+                <slot02>optic fiber</slot02>
+                <slot03>optic fiber ii</slot03>
+                <slot04>coiler ii</slot04>
+                <slot05>mana jammer iv</slot05>
+                <slot06>inhibitor ii</slot06>
+                <slot07>attuner</slot07>
+                <slot08>magniplug ii</slot08>
+                <slot09>speedloader ii</slot09>
+                <slot10>turbo charger ii</slot10>
+                <slot11>flame holder</slot11>
+                <slot12>armor plate iv</slot12>
+            </fu>
             <healer>
                 <frame>Stormwaker Frame</frame>
                 <head>Soulsoother Head</head>
@@ -58,18 +90,18 @@
             <melrng>
                 <frame>sharpshot frame</frame>
                 <head>valoredge head</head>
-                <slot01>tension spring v</slot01>
-                <slot02>turbo charger</slot02>
+                <slot01>auto-repair kit iv</slot01>
+                <slot02>optic fiber</slot02>
                 <slot03>optic fiber ii</slot03>
-                <slot04>dynamo</slot04>
-                <slot05>tension spring iv</slot05>
-                <slot06>scope</slot06>
-                <slot07>auto-repair kit iv</slot07>
-                <slot08>coiler</slot08>
-                <slot09>tactical processor</slot09>
-                <slot10>armor plate ii</slot10>
-                <slot11>optic fiber</slot11>
-                <slot12>volt gun</slot12>
+                <slot04>coiler</slot04>
+                <slot05>inhibitor</slot05>
+                <slot06>inhibitor ii</slot06>
+                <slot07>attuner</slot07>
+                <slot08>magniplug ii</slot08>
+                <slot09>speedloader ii</slot09>
+                <slot10>turbo charger ii</slot10>
+                <slot11>magniplug</slot11>
+                <slot12>armor plate iv</slot12>
             </melrng>
             <ranger>
                 <frame>sharpshot frame</frame>

@@ -145,11 +145,11 @@ function init_gear_sets()
 	sets.precast.WS = {
         ammo = "Knobkierrie",
         head = "Agoge Mask +3",
-		neck = "Sanctity Necklace",
+		neck = "War. Beads +2",
         hands =	"Boii Mufflers +3",
         body = "Pumm. Lorica +3",
-        legs = "Boii Cuisses +3",
-        feet = "Sulevia's Leggings +2",
+        legs = sets.Nyame.Legs,
+        feet = sets.Nyame.Feet,
 		waist="Sailfi Belt +1",
 		left_ring="Cornelia's Ring",
         right_ring="Epaminondas's Ring",
@@ -193,19 +193,24 @@ function init_gear_sets()
 	sets.precast.WS['Savage Blade'].Fodder = set_combine(sets.precast.WS.Fodder, {})
 
 	sets.precast.WS['Upheaval'] = set_combine(sets.precast.WS, {
-		back=gear.wsd_vit_jse_back,
+		back = gear.wsd_vit_jse_back,
+		ring2 = "Niqmaddu Ring",
 	})
 	sets.precast.WS['Upheaval'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {
 		back=gear.wsd_vit_jse_back,
+		ring2 = "Niqmaddu Ring",
 	})
 	sets.precast.WS['Upheaval'].Acc = set_combine(sets.precast.WS.Acc, {
 		back=gear.wsd_vit_jse_back,
+		ring2 = "Niqmaddu Ring",
 	})
 	sets.precast.WS['Upheaval'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
 		back=gear.wsd_vit_jse_back,
+		ring2 = "Niqmaddu Ring",
 	})
 	sets.precast.WS['Upheaval'].Fodder = set_combine(sets.precast.WS.Fodder, {
 		back=gear.wsd_vit_jse_back,
+		ring2 = "Niqmaddu Ring",
 	})
 
 	sets.precast.WS['Resolution'] = set_combine(sets.precast.WS, {})
@@ -299,7 +304,7 @@ function init_gear_sets()
 		waist="Plat. Mog. Belt",
 		-- legs="Pumm. Cuisses +3",
 		-- feet="Pumm. Calligae +3",
-		-- neck={ name="War. Beads +2", augments={'Path: A',}},
+		neck={ name="War. Beads +2", augments={'Path: A',}},
 		-- waist="Ioskeha Belt +1",
 		-- left_ear="Telos Earring",
 		-- right_ear="Dedition Earring",
@@ -358,9 +363,9 @@ function init_gear_sets()
 		left_ear="Cessance Earring",
 		right_ear="Boii Earring",
 		-- right_ear="Schere Earring",
-		left_ring="Flamma Ring",
-		right_ring="Petrov Ring",
-		-- right_ring="Niqmaddu Ring",
+		left_ring="Moonlight Ring",
+		-- right_ring="Petrov Ring",
+		right_ring="Niqmaddu Ring",
 		back=gear.da_jse_back,
 	}
 	

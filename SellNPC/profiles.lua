@@ -4,6 +4,7 @@ local profiles = {}
 profiles['cp'] = S{
     'Royal Squire\'s Halberd',
     'Mercenary Captain\'s Scythe',
+    'Centurion\'s Axe'
 }
 
 -- //sellnpc powder

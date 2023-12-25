@@ -61,4 +61,12 @@
             </pos>
         </display>
     </furyex>
+    <mailman>
+        <display>
+            <pos>
+                <x>1</x>
+                <y>-2</y>
+            </pos>
+        </display>
+    </mailman>
 </settings>

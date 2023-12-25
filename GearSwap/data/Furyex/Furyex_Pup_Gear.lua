@@ -5,7 +5,7 @@ function user_job_setup()
     state.WeaponskillMode:options('Match', 'Normal', 'Acc', 'FullAcc', 'Fodder')
     state.PhysicalDefenseMode:options('PDT')
     state.IdleMode:options('Normal', 'PDT', 'Refresh')
-    state.Weapons:options('None', 'Godhands', 'Midnights', 'PetWeapons')
+    state.Weapons:options('None', 'PetWeapons', 'PetWeaponsRanged', 'Godhands', 'Midnights')
     state.PetMode        = M { ['description'] = 'Pet Mode', 'None', 'Melee', 'Ranged', 'HybridRanged', 'Bruiser', 'Tank',
         'LightTank', 'Magic', 'Heal', 'Nuke' }
     state.AutoRepairMode = M(true, 'Auto Repair Mode')
@@ -99,11 +99,11 @@ function init_gear_sets()
     Artifact_Foire.Feet = "Foire Babouches +1"
 
     Relic_Pitre = {}
-    Relic_Pitre.Head = "Pitre Taj +2" --Enhances Optimization
+    Relic_Pitre.Head = "Pitre Taj +3" --Enhances Optimization
     Relic_Pitre.Body = "Pitre Tobe +3" --Enhances Overdrive
-    Relic_Pitre.Hands = "Pitre Dastanas +2" --Enhances Fine-Tuning
-    Relic_Pitre.Legs = "Pitre Churidars +2" --Enhances Ventriloquy
-    Relic_Pitre.Feet = "Pitre Babouches +2" --Role Reversal
+    Relic_Pitre.Hands = "Pitre Dastanas +3" --Enhances Fine-Tuning
+    Relic_Pitre.Legs = "Pitre Churidars +3" --Enhances Ventriloquy
+    Relic_Pitre.Feet = "Pitre Babouches +3" --Role Reversal
 
     Empy_Karagoz = {}
     Empy_Karagoz.Head = "Kara. Cappello +2"
@@ -115,7 +115,8 @@ function init_gear_sets()
 
     -- Precast Sets
     sets.buff.Overdrive = {
-        
+        legs = Empy_Karagoz.Legs,
+        waist = "Klouskap Sash +1",
     }
 
     -- Fast cast sets for spells
@@ -350,10 +351,11 @@ function init_gear_sets()
 
     sets.midcast.Pet.PetWSGear.Ranged = set_combine(sets.midcast.Pet.PetWSGear, {
         head = Empy_Karagoz.Head,
-        -- waist = "Klouskap Sash +1",
+        waist = "Klouskap Sash +1",
         -- ear2 = "Domesticator's Earring",
         -- back = "Dispersal Mantle",
     })
+    sets.midcast.Pet.PetWSGear.HybridRanged = sets.midcast.Pet.PetWSGear.Ranged
     sets.midcast.Pet.PetWSGear.Melee = set_combine(sets.midcast.Pet.PetWSGear, {})
     sets.midcast.Pet.PetWSGear.Tank = set_combine(sets.midcast.Pet.PetWSGear, {})
     sets.midcast.Pet.PetWSGear.Bruiser = set_combine(sets.midcast.Pet.PetWSGear, {})
@@ -423,7 +425,7 @@ function init_gear_sets()
         legs={ name="Taeon Tights", augments={'Pet: Accuracy+23 Pet: Rng. Acc.+23','Pet: "Dbl. Atk."+4','Pet: Damage taken -4%',}},
         feet={ name="Taeon Boots", augments={'Pet: Accuracy+25 Pet: Rng. Acc.+25','Pet: "Dbl. Atk."+5','Pet: Damage taken -3%',}},
         neck="Adad Amulet",
-        waist="Hurch'lan Sash",
+        waist="Klouskap Sash +1",
         left_ear="Rimeice Earring",
         right_ear={ name="Karagoz Earring", augments={'System: 1 ID: 1676 Val: 0','Accuracy+6','Mag. Acc.+6',}},
         left_ring="C. Palug Ring",
@@ -441,8 +443,8 @@ function init_gear_sets()
         body={ name="Taeon Tabard", augments={'Pet: Accuracy+24 Pet: Rng. Acc.+24','Pet: "Dbl. Atk."+5','Pet: Damage taken -3%',}},
         hands={ name="Taeon Gloves", augments={'Pet: Accuracy+20 Pet: Rng. Acc.+20','Pet: "Dbl. Atk."+4','Pet: Damage taken -3%',}},
         legs={ name="Taeon Tights", augments={'Pet: Accuracy+23 Pet: Rng. Acc.+23','Pet: "Dbl. Atk."+4','Pet: Damage taken -4%',}},
-        feet={ name="Taeon Boots", augments={'Pet: Accuracy+25 Pet: Rng. Acc.+25','Pet: "Dbl. Atk."+5','Pet: Damage taken -3%',}},
-        waist="Hurch'lan Sash",
+        feet="Mpaca's Boots",
+        waist="Klouskap Sash +1",
         ear1 = "Crepuscular Earring",
         ear2={ name="Karagoz Earring", augments={'System: 1 ID: 1676 Val: 0','Accuracy+6','Mag. Acc.+6',}},
         ring1="C. Palug Ring",
@@ -451,9 +453,12 @@ function init_gear_sets()
     }
 
     sets.idle.Pet.Engaged.Ranged = set_combine(sets.idle.Pet.Engaged, {
-        gloves="Mpaca's Gloves",
-        ring1="Varar Ring +1",
-        ring2="Varar Ring +1",
+        head = Relic_Pitre.Head,
+        body = Relic_Pitre.Body,
+        gloves = "Mpaca's Gloves",
+        legs = Empy_Karagoz.Legs,
+        ring1 = "Varar Ring +1",
+        ring2 = "Varar Ring +1",
     })
     sets.idle.Pet.Engaged.Melee = set_combine(sets.idle.Pet.Engaged, {})
     sets.idle.Pet.Engaged.Tank = set_combine(sets.idle.Pet.Engaged, { 
@@ -548,7 +553,7 @@ function init_gear_sets()
         ear1 = "Crep. Earring",
         ear2 = "Karagoz Earring",
         ring1 = "Lehko's Ring",
-        ring2 = "Fortified Ring",
+        ring2 = "Gere Ring",
         -- ring2 = "Epona's Ring",
         back = "Visucius's Mantle",
         waist = "Windbuffet Belt +1",
@@ -666,7 +671,7 @@ function init_gear_sets()
         -- feet={ name="Taeon Boots", augments={'Pet: Accuracy+25 Pet: Rng. Acc.+25','Pet: "Dbl. Atk."+5','Pet: Damage taken -3%',}},
         feet="Mpaca's Boots",
         neck="Adad Amulet",
-        waist="Hurch'lan Sash",
+        waist="Klouskap Sash +1",
         left_ear="Rimeice Earring",
         right_ear={ name="Karagoz Earring", augments={'System: 1 ID: 1676 Val: 0','Accuracy+6','Mag. Acc.+6',}},
         left_ring="C. Palug Ring",
@@ -720,9 +725,10 @@ function init_gear_sets()
     }
 
     -- Weapons sets
-    sets.weapons.PetWeapons = { main = "Ohtas", range = "Animator P +1", }
     sets.weapons.Godhands = { main = "Godhands", range = "Animator P +1", }
     sets.weapons.Midnights = { main = "Midnights", range = "Animator P +1", }
+    sets.weapons.PetWeapons = { main = "Ohtas", range = "Animator P +1", }
+    sets.weapons.PetWeaponsRanged = { main = "Ohtas", range = "Animator P II +1", }
 end
 
 -- Select default macro book on initial load or subjob change.
