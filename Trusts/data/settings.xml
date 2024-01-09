@@ -6,7 +6,7 @@
         <sets>
             <ambu>
                 <1>Sylvie (UC)</1>
-                <2>King of Hearts</2>
+                <2>AAMR</2>
                 <3>Kupipi</3>
             </ambu>
             <apex>
@@ -22,6 +22,10 @@
                 <4>Koru-Moru</4>
                 <5>Sylvie (UC)</5>
             </apoc>
+            <cath>
+                <1>AAMR</1>
+                <2>Sylvie (UC)</2>
+            </cath>
             <default>
                 <1>Valaineral</1>
                 <2>Mihli Aliapoh</2>
@@ -56,9 +60,8 @@
                 <5>Apururu (UC)</5>
             </level>
             <lilith>
-                <1>King of Hearts</1>
-                <2>Sylvie (UC)</2>
-                <3>AAEV</3>
+                <1>Sylvie (UC)</1>
+                <2>Amchuchu</2>
             </lilith>
             <locus>
                 <1>Sylvie (UC)</1>

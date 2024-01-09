@@ -1,6 +1,6 @@
 function user_job_setup()
 	-- Options: Override default values
-	state.OffenseMode:options('Normal','DT','SomeAcc', 'Acc', 'FullAcc', 'Fodder')
+	state.OffenseMode:options('Normal','SomeAcc', 'Acc', 'FullAcc', 'Fodder')
 	state.WeaponskillMode:options('Match', 'Normal', 'SomeAcc', 'Acc', 'FullAcc', 'Fodder')
 	state.HybridMode:options('Normal', 'DT')
 	state.PhysicalDefenseMode:options('PDT', 'PDTReraise')
@@ -176,6 +176,7 @@ function init_gear_sets()
 		ring1 = "Gelatinous Ring +1",
 		ring2 = "Moonbean Ring",
 		body = Empy.Body,
+		back = "Moonlight Cape",
 	})
 	sets.midcast.Absorb = set_combine(sets.midcast['Dark Magic'], { 
 		back = DRKCape.TP,
@@ -208,6 +209,7 @@ function init_gear_sets()
 			ring1 = "Evanescence Ring",
 			ring2 = "Excelsis Ring",
 			-- ring2 = "Archon Ring",
+			waist = "Austerity Belt +1",
 			back = "Niht Mantle",
 		}
 	)
@@ -225,14 +227,20 @@ function init_gear_sets()
 
 	sets.Self_Healing = { neck = "Phalaina Locket", hands = "Buremte Gloves", ring2 = "Kunaji Ring",
 		waist = "Gishdubar Sash" }
-	sets.Cure_Received = { neck = "Phalaina Locket", hands = "Buremte Gloves", ring2 = "Kunaji Ring",
-		waist = "Gishdubar Sash" }
+	sets.Cure_Received = { 
+		neck = "Phalaina Locket", 
+		hands = "Buremte Gloves",
+		body = "Sakpata's Plate",
+		legs = "Flamma Dirs +2",
+		ring2 = "Kunaji Ring",
+		waist = "Gishdubar Sash" 
+	}
 	sets.Self_Refresh = { waist = "Gishdubar Sash" }
 
 	-- Weaponskill sets
 	-- Default set for any weaponskill that isn't any more specifically defined
 	sets.precast.WS = {
-		ammo = "Knobkierrie",
+        ammo="Oshasha's Treatise",
 		head = "Nyame Helm",
 		-- neck = "Fotia Gorget",
 		neck = "Abyssal Beads +2",
@@ -322,12 +330,12 @@ function init_gear_sets()
 		-- hands = "Sulev. Gauntlets +2",
 		-- legs = "Carmine Cuisses +1",
 		-- feet = "Amm Greaves"
-		head=empty,
-		body="Lugra Cloak +1",
+		head="Hjarrandi Helm",
+		body="Hjarrandi Breastplate",
 		hands={ name="Odyssean Gauntlets", augments={'Pet: Phys. dmg. taken -2%','STR+2','"Refresh"+2','Accuracy+20 Attack+20','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
 		legs="Sakpata's Cuisses",
 		feet="Sakpata's Leggings",
-		neck = "Abyssal Beads +2",
+		neck = "Loricate Torque +1",
 		ear1 = "Genmei Earring",
 		ear2 = "Ethereal Earring",
 		ring1 = "Stikini Ring +1",
@@ -423,104 +431,54 @@ function init_gear_sets()
 
 	-- Engaged sets
 	sets.engaged = {
-		-- neck = "Asperity Necklace",
-		-- ear1 = "Brutal Earring",
-		-- ear2 = "Cessance Earring",
-		-- body = gear.valorous_wsd_body,
-		-- hands = gear.valorous_acc_hands,
-		-- ring1 = "Petrov Ring",
-		-- ring2 = "Niqmaddu Ring",
 		-- waist = "Ioskeha Belt",
-		-- legs = "Sulev. Cuisses +2",
-		-- feet = "Flam. Gambieras +2"
 		ammo="Aurgelmir Orb +1",
-		head="Hjarrandi Helm",
-		body="Sakpata's Plate",
+		head="Flam. Zucchetto +2",
+		body="Hjarrandi Breastplate",
 		hands="Sakpata's Gauntlets",
-		legs="Sakpata's Cuisses",
+		legs = "Sulev. Cuisses +2",
 		feet="Flam. Gambieras +2",
-		neck="Abyssal Beads +2",
+		neck="Vim Torque +1",
 		waist="Sailfi Belt +1",
 		left_ear="Telos Earring",
-		right_ear="Crep. Earring",
+		right_ear="Schere Earring",
 		left_ring="Lehko's Ring",
 		right_ring="Niqmaddu Ring",
 		back = DRKCape.TP,
 	}
-	sets.engaged.SomeAcc = {
-		ammo = "Aurgelmir Orb +1",
-		head = "Hjarrandi Helm",
-		neck = "Combatant's Torque",
-		ear1 = "Brutal Earring",
-		ear2 = "Cessance Earring",
-		body = gear.valorous_wsd_body,
-		hands = gear.valorous_acc_hands,
-		ring1 = "Moonlight Ring",
-		ring2 = "Niqmaddu Ring",
-		back = DRKCape.TP,
-		waist = "Ioskeha Belt",
-		legs = "Sulev. Cuisses +2",
-		feet = "Flam. Gambieras +2"
-	}
-	sets.engaged.Acc = {
-		ammo = "Aurgelmir Orb +1",
-		head = "Hjarrandi Helm",
-		neck = "Combatant's Torque",
-		ear1 = "Digni. Earring",
-		ear2 = "Telos Earring",
-		body = gear.valorous_wsd_body,
-		hands = gear.valorous_acc_hands,
-		ring1 = "Moonlight Ring",
-		ring2 = "Niqmaddu Ring",
-		back = DRKCape.TP,
-		waist = "Ioskeha Belt",
-		legs = "Sulev. Cuisses +2",
-		feet = "Flam. Gambieras +2"
-	}
-	sets.engaged.FullAcc = {
-		ammo = "Aurgelmir Orb +1",
-		head = "Hjarrandi Helm",
-		neck = "Combatant's Torque",
-		ear1 = "Mache Earring +1",
-		ear2 = "Telos Earring",
-		body = gear.valorous_wsd_body,
-		hands = gear.valorous_acc_hands,
-		ring1 = "Moonlight Ring",
-		ring2 = "Ramuh Ring +1",
-		back = DRKCape.TP,
-		waist = "Ioskeha Belt",
-		legs = "Sulev. Cuisses +2",
-		feet = "Flam. Gambieras +2"
-	}
-	sets.engaged.Fodder = {
-		ammo = "Aurgelmir Orb +1",
-		head = "Hjarrandi Helm",
-		neck = "Asperity Necklace",
-		ear1 = "Brutal Earring",
-		ear2 = "Sherida Earring",
-		body = gear.valorous_wsd_body,
-		hands = gear.valorous_acc_hands,
-		ring1 = "Petrov Ring",
-		ring2 = "Niqmaddu Ring",
-		back = DRKCape.TP,
-		waist = "Ioskeha Belt",
-		legs = "Sulev. Cuisses +2",
-		feet = "Flam. Gambieras +2"
-	}
+	
+	sets.engaged.SomeAcc = set_combine(sets.engaged, {
+
+	})
+
+	sets.engaged.Acc = set_combine(sets.engaged.SomeAcc, {
+		right_ear = "Domin. Earring +1",
+		neck = "Combatant's Torque"
+	})
+
+	sets.engaged.FullAcc = set_combine(sets.engaged.Acc, {
+		hands = "Gazu Bracelets +1",
+	})
+
+	sets.engaged.Fodder = set_combine(sets.engaged, {
+		
+	})
+
 	sets.engaged.DT = set_combine(sets.engaged, {
 
 	})
 
-	sets.engaged.Liberator = sets.engaged
-	sets.engaged.Liberator.DT = set_combine(sets.engaged.Liberator, {
-		hands = sets.Nyame.Hands,
-		feet = sets.Nyame.Feet,
+	sets.engaged.Liberator = set_combine(sets.engaged, {
+		right_ear="Schere Earring",
 	})
+
+	sets.engaged.Liberator.DT = set_combine(sets.engaged.Liberator, {
+	})
+
 	sets.engaged.Liberator.AM = {
 		ammo="Aurgelmir Orb +1",
 		waist="Sailfi Belt +1",
-		-- neck="Vim Torque +1",
-		neck = "Loricate Torque +1",
+		neck="Vim Torque +1",
 		head = "Hjarrandi Helm",
 		body = "Hjarrandi Breastplate",
 		hands = "Flam. Manopolas +2",
@@ -533,7 +491,10 @@ function init_gear_sets()
 		right_ring="Moonlight Ring",
 		back = DRKCape.STP,
 	}
-
+	sets.engaged.Liberator.DT.AM = set_combine(sets.engaged.Liberator.AM, {
+		neck = "Loricate Torque +1",
+		ammo = "Crepuscular Pebble",
+	})
 
 	--Example sets:
 	--[[
@@ -660,6 +621,10 @@ function init_gear_sets()
 	sets.weapons.Apocalypse = { main = "Apocalypse", sub = "Utu Grip" }
 	sets.weapons.Montante = { main = "Montante +1", sub = "Utu Grip" }
 	sets.weapons.Anguta = { main = "Anguta", sub = "Utu Grip" }
+end
+
+function user_job_lockstyle()
+	windower.chat.input('/lockstyleset 003')
 end
 
 -- Select default macro book on initial load or subjob change.

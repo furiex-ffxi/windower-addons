@@ -64,9 +64,12 @@
     <mailman>
         <display>
             <pos>
-                <x>1</x>
-                <y>-2</y>
+                <x>-125</x>
+                <y>-17</y>
             </pos>
+            <text>
+                <blue>128</blue>
+            </text>
         </display>
     </mailman>
 </settings>

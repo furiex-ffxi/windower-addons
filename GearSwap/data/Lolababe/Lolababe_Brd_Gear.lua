@@ -5,7 +5,7 @@ function user_job_setup()
 	state.HybridMode:options('Normal', 'DT')
 	state.CastingMode:options('Normal', 'Resistant', 'AoE')
 	state.IdleMode:options('Normal', 'NoRefresh', 'DT')
-	state.Weapons:options('None', 'Naegling', 'Aeneas', 'Carnwenhan', 'DualCarnwenhan', 'DualWeapons', 'DualNaegling', 'DualTauret', 'DualAeolian')
+	state.Weapons:options('None', 'Naegling', 'Aeneas', 'Carnwenhan', 'Qutrub', 'DualCarnwenhan', 'DualWeapons', 'DualNaegling', 'DualTauret', 'DualAeolian')
 	-- Whether to use Carn (or song daggers in general) under a certain threshhold even when weapons are locked.
 	state.CarnMode           = M { 'Always', '300', '1000', 'Never' }
 
@@ -66,6 +66,7 @@ function init_gear_sets()
 	sets.weapons.DualWeapons = { main = "Aeneas", sub = "Centovente" }
 	sets.weapons.DualNaegling = { main = "Naegling", sub = "Centovente" }
 	sets.weapons.Naegling = { main = "Naegling", sub = "Genmei Shield" }
+sets.weapons.Qutrub = { main = "Qutrub Knife", sub = "Genmei Shield" }
 	sets.weapons.DualTauret = { main = "Tauret", sub = "Blurred Knife +1" }
 	sets.weapons.DualAeolian = { main = "Tauret", sub = "Malevolence" }
 
@@ -140,6 +141,9 @@ function init_gear_sets()
 
 	sets.precast.FC.Mazurka = set_combine(sets.precast.FC.BardSong, { range = "Marsyas" })
 	sets.precast.FC["Honor March"] = set_combine(sets.precast.FC.BardSong, { range = "Marsyas" })
+	sets.precast.FC["Aria of Passion"] = set_combine(sets.precast.FC, { 
+		range = "Loughnashade",
+	})
 
 	sets.precast.FC.Daurdabla = set_combine(sets.precast.FC.BardSong, { range = info.ExtraSongInstrument })
 	sets.precast.DaurdablaDummy = sets.precast.FC.Daurdabla
@@ -171,21 +175,9 @@ function init_gear_sets()
 		back = { name = "Intarabus's Cape", augments = { 'STR+20', 'Accuracy+20 Attack+20', 'STR+10', 'Weapon skill damage +10%', 'Phys. dmg. taken-10%', } },
 	}
 
-	sets.precast.WS.Acc = {
-		--ammo="Aurgelmir Orb +1",
-		head = "Aya. Zucchetto +2",
-		--neck="Combatant's Torque",
-		--ear1="Moonshade Earring",
-		--ear2="Mache Earring +1",
-		body = "Ayanmo Corazza +2",
-		hands = "Aya. Manopolas +2",
-		--ring1="Ramuh Ring +1",
-		--ring2="Ilabrat Ring",
-		--back=gear.melee_jse_back,
-		--waist="Olseni Belt",
-		legs = "Aya. Cosciales +2",
-		feet = "Aya. Gambieras +2"
-	}
+	sets.precast.WS.Acc = set_combine(sets.precast.WS, {
+
+	})
 
 	-- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
 	sets.precast.WS['Evisceration'] = set_combine(sets.precast.WS, {
@@ -332,7 +324,10 @@ function init_gear_sets()
 		back = { name = "Intarabus's Cape", augments = { 'CHR+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'CHR+10', '"Fast Cast"+10', 'Phys. dmg. taken-10%', } }
 	}
 
-	sets.midcast.SongDebuff.DW = { main = "Carnwenhan", sub = "Kali" } --Only weapons in this set. This set is overlayed onto SongDebuff
+	sets.midcast.SongDebuff.DW = { 
+		main = "Carnwenhan", 
+		sub = "Kali" 
+	} --Only weapons in this set. This set is overlayed onto SongDebuff
 
 	-- For song defbuffs (accuracy primary, duration secondary)
 	sets.midcast.SongDebuff.Resistant = {
@@ -687,7 +682,7 @@ function init_gear_sets()
 		feet = "Volte Spats",
 		neck = { name = "Bard's Charm +2", augments = { 'Path: A', } },
 		waist = { name = "Sailfi Belt +1", augments = { 'Path: A', } },
-		ear1 = "Crep. Earring",
+		ear1 = "Telos Earring",
 		ear2 = "Digni. Earring",
 		ring1 = "Chirich Ring +1",
 		ring2 = "Chirich Ring +1",
@@ -699,7 +694,7 @@ function init_gear_sets()
 	})
 	sets.engaged.Acc = set_combine(sets.engaged, {
 		hands = "Gazu Bracelets +1",
-		ear1 = "Crep. Earring",
+		ear1 = "Telos Earring",
 		ear2 = "Digni. Earring",
 	})
 	sets.engaged.DW = set_combine(sets.engaged, {
@@ -727,7 +722,7 @@ function select_default_macro_book()
 	set_macro_page(1, 1)
 end
 
-state.Weapons:options('None', 'Naegling', 'Aeneas', 'Carnwenhan', 'DualCarnwenhan','DualWeapons', 'DualNaegling', 'DualTauret', 'DualAeolian')
+state.Weapons:options('None', 'Naegling', 'Aeneas', 'Carnwenhan', 'Qutrub', 'DualCarnwenhan','DualWeapons', 'DualNaegling', 'DualTauret', 'DualAeolian')
 
 autows_list = {
 	['Naegling'] = 'Savage Blade',

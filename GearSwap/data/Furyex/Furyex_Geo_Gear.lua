@@ -44,13 +44,32 @@ function init_gear_sets()
 	--------------------------------------
 	-- Precast sets
 	--------------------------------------
+	af = {}
+	af.Body = "Geomancy Tunic +2"
+	af.Hands = "Geo. Mitaines +2"
+	af.Legs = "Geomancy Pants +2"
+	af.Feet = "Geomancy Sandals +2"
+
+	relic = {}
+	relic.Head = "Bagua Galero +2"
+	relic.Body = "Bagua Tunic +1"
+	relic.Hands = "Bagua Mitaines +1"
+	relic.Legs = "Bagua Pants +1"
+	relic.Feet = "Bagua Sandals +1"
+
+	empy = {}
+	empy.Head = "Azimuth Hood +2"
+	empy.Body = "Azimuth Coat +2"
+	empy.Hands = "Azimuth Gloves +2"
+	empy.Legs = "Azimuth Tights +2"
+	empy.Feet = "Azimuth Gaiters +2"
 
 	-- Precast sets to enhance JAs
-	sets.precast.JA.Bolster = { body = "Bagua Tunic +1" }
-	sets.precast.JA['Life Cycle'] = { body = "Geo. Tunic +1", back = gear.idle_jse_back }
-	sets.precast.JA['Radial Arcana'] = { feet = "Bagua Sandals +1" }
-	sets.precast.JA['Mending Halation'] = { legs = "Bagua Pants +1" }
-	sets.precast.JA['Full Circle'] = { head = "Azimuth Hood +1", hands = "Bagua Mitaines +1" }
+	sets.precast.JA.Bolster = { body = relic.Body }
+	sets.precast.JA['Life Cycle'] = { body = af.Body, back = gear.idle_jse_back }
+	sets.precast.JA['Radial Arcana'] = { feet = relic.Feet }
+	sets.precast.JA['Mending Halation'] = { legs = relic.Legs }
+	sets.precast.JA['Full Circle'] = { head = empy.Head, hands = relic.Hands }
 
 	-- Indi Duration in slots that would normally have skill here to make entrust more efficient.
 	sets.buff.Entrust = {}
@@ -64,24 +83,25 @@ function init_gear_sets()
 		main = gear.grioavolr_fc_staff,
 		sub = "Clerisy Strap +1",
 		ammo = "Impatiens",
-		head = "Amalric Coif +1",
-		neck = "Voltsurge Torque",
-		ear1 = "Enchntr. Earring +1",
-		ear2 = "Malignance Earring",
-		body = "Zendik Robe",
+		head = "C. Palug Crown",
+        neck = "Baetyl Pendant", --4
+		ear1 = "Loquac. Earring",
+		ear2 = "Etiolation Earring",
+		-- body = "Zendik Robe",
+		body = "Merlinic Jubbah",
 		hands = "Volte Gloves",
 		ring1 = "Kishar Ring",
 		ring2 = "Lebeche Ring",
 		back = "Perimede Cape",
 		waist = "Witful Belt",
-		legs = "Geo. Pants +1",
+		legs = af.Legs,
 		feet = "Regal Pumps +1"
 	}
 
 	sets.precast.FC.Geomancy = set_combine(sets.precast.FC, { range = "Dunna", ammo = empty })
 
 	sets.precast.FC['Elemental Magic'] = set_combine(sets.precast.FC,
-		{ ear2 = "Malignance Earring", hands = "Bagua Mitaines +1" })
+		{ ear2 = "Malignance Earring", hands = relic.Hands })
 
 	sets.precast.FC.Cure = set_combine(sets.precast.FC, { main = "Serenity", sub = "Clerisy Strap +1" })
 
@@ -109,7 +129,7 @@ function init_gear_sets()
 		ring2 = "Lebeche Ring",
 		back = "Lifestream Cape",
 		waist = "Witful Belt",
-		legs = "Geo. Pants +1",
+		legs = af.Legs,
 		feet = "Regal Pumps +1"
 	}
 
@@ -137,7 +157,7 @@ function init_gear_sets()
 		ring2 = "Prolix Ring",
 		back = "Lifestream Cape",
 		waist = "Witful Belt",
-		legs = "Geo. Pants +1",
+		legs = af.Legs,
 		feet = "Regal Pumps +1"
 	}
 
@@ -150,7 +170,7 @@ function init_gear_sets()
 		ear1 = "Gifted Earring",
 		ear2 = "Malignance Earring",
 		body = "Vedic Coat",
-		hands = "Geo. Mitaines +3",
+		hands = af.Hands,
 		ring1 = "Defending Ring",
 		ring2 = "Dark Ring",
 		back = "Solemnity Cape",
@@ -162,14 +182,19 @@ function init_gear_sets()
 
 	--Extra Indi duration as long as you can keep your 900 skill cap.
 	sets.midcast.Geomancy.Indi = set_combine(sets.midcast.Geomancy,
-		{ neck = "Incanter's Torque", back = gear.idle_jse_back, legs = "Bagua Pants +1", feet = "Azimuth Gaiters +1" })
+		{ 
+			neck = "Incanter's Torque", 
+			back = gear.idle_jse_back, 
+			legs = relic.Legs, 
+			feet = empy.Feet })
 
 	sets.midcast.Cure = {
 		main = gear.gada_healing_club,
 		sub = "Sors Shield",
 		ammo = "Hasty Pinion +1",
-		head = "Amalric Coif +1",
-		neck = "Incanter's Torque",
+		head = "Vanya Hood",
+		-- neck = "Incanter's Torque",
+		neck = "Deviant Necklace",
 		ear1 = "Gifted Earring",
 		ear2 = "Etiolation Earring",
 		body = "Zendik Robe",
@@ -178,7 +203,7 @@ function init_gear_sets()
 		ring2 = "Menelaus's Ring",
 		back = "Tempered Cape +1",
 		waist = "Witful Belt",
-		legs = "Geo. Pants +1",
+		legs = af.Legs,
 		feet = "Vanya Clogs"
 	}
 
@@ -196,7 +221,7 @@ function init_gear_sets()
 		ring2 = "Menelaus's Ring",
 		back = "Twilight Cape",
 		waist = "Hachirin-no-Obi",
-		legs = "Geo. Pants +1",
+		legs = af.Legs,
 		feet = "Vanya Clogs"
 	}
 
@@ -215,7 +240,7 @@ function init_gear_sets()
 		ring2 = "Lebeche Ring",
 		back = "Twilight Cape",
 		waist = "Hachirin-no-Obi",
-		legs = "Geo. Pants +1",
+		legs = af.Legs,
 		feet = "Vanya Clogs"
 	}
 
@@ -235,21 +260,36 @@ function init_gear_sets()
 	"Clemency Grip" })
 
 	sets.midcast['Elemental Magic'] = {
+		-- main = "Daybreak",
+		-- sub = "Ammurapi Shield",
+		-- ammo = "Ghastly Tathlum +1",
+		-- head = gear.merlinic_nuke_head,
+		-- neck = "Saevus Pendant +1",
+		-- ear1 = "Crematio Earring",
+		-- ear2 = "Friomisi Earring",
+		-- body = gear.merlinic_nuke_body,
+		-- hands = "Mallquis Cuffs +2",
+		-- ring1 = "Shiva Ring +1",
+		-- ring2 = "Freke Ring",
+		-- back = gear.nuke_jse_back,
+		-- waist = gear.ElementalObi,
+		-- legs = "Merlinic Shalwar",
+		-- feet = "Amalric Nails +1",
 		main = "Daybreak",
 		sub = "Ammurapi Shield",
 		ammo = "Ghastly Tathlum +1",
-		head = gear.merlinic_nuke_head,
-		neck = "Saevus Pendant +1",
-		ear1 = "Crematio Earring",
-		ear2 = "Friomisi Earring",
-		body = gear.merlinic_nuke_body,
-		hands = "Mallquis Cuffs +2",
-		ring1 = "Shiva Ring +1",
-		ring2 = "Freke Ring",
-		back = gear.nuke_jse_back,
-		waist = gear.ElementalObi,
-		legs = "Merlinic Shalwar",
-		feet = "Amalric Nails +1"
+		head = empy.Head,
+		body = empy.Body,
+		hands = empy.Hands,
+		legs = empy.Legs,
+		feet = empy.Feet,
+		neck = "Mizu. Kubikazari",
+		waist = { name="Acuity Belt +1", augments={'Path: A',}},
+		left_ear = "Friomisi Earring",
+		right_ear = "Azimuth Earring",
+		left_ring = "Stikini Ring +1",
+		right_ring = "Stikini Ring +1",
+		back = "Aurist's Cape +1",
 	}
 
 	sets.midcast['Elemental Magic'].Resistant = {
@@ -476,18 +516,23 @@ function init_gear_sets()
 		main = "Daybreak",
 		sub = "Ammurapi Shield",
 		ammo = "Pemphredo Tathlum",
-		head = "Befouled Crown",
+		-- head = "Befouled Crown",
+		head = empy.Head,
+		body = empy.Body,
+		hands = empy.Hands,
+		legs = empy.Legs,
+		feet = empy.Feet,
 		neck = "Erra Pendant",
 		ear1 = "Regal Earring",
 		ear2 = "Digni. Earring",
-		body = gear.merlinic_nuke_body,
-		hands = "Regal Cuffs",
+		-- body = gear.merlinic_nuke_body,
+		-- hands = "Regal Cuffs",
 		ring1 = "Kishar Ring",
 		ring2 = "Stikini Ring +1",
 		back = gear.nuke_jse_back,
 		waist = "Luminary Sash",
-		legs = "Psycloth Lappas",
-		feet = "Uk'uxkaj Boots"
+		-- legs = "Psycloth Lappas",
+		-- feet = "Uk'uxkaj Boots"
 	}
 
 	sets.midcast['Enfeebling Magic'].Resistant = {
@@ -595,37 +640,36 @@ function init_gear_sets()
 		main = "Mpaca's Staff",
 		sub = "Umbra Strap",
 		ammo = "Staunch Tathlum +1",
-		head = "Befouled Crown",
 		neck = "Loricate Torque +1",
 		ear1 = "Genmei Earring",
 		ear2 = "Ethereal Earring",
+		head = "Befouled Crown",
 		body = "Jhakri Robe +2",
-		hands = gear.merlinic_refresh_hands,
+		hands = relic.Hands,
+		legs = "Assid. Pants +1",
+		-- feet = gear.merlinic_refresh_feet
 		ring1 = "Stikini Ring +1",
 		ring2 = "Stikini Ring +1",
 		back = "Umbra Cape",
 		waist = "Carrier's Sash",
-		legs = "Assid. Pants +1",
-		feet = gear.merlinic_refresh_feet
 	}
 
 	sets.idle.PDT = {
 		main = "Malignance Pole",
 		sub = "Umbra Strap",
 		ammo = "Staunch Tathlum +1",
-		head = "Nyame Helm",
 		neck = "Loricate Torque +1",
 		ear1 = "Genmei Earring",
 		ear2 = "Ethereal Earring",
-		body = "Jhakri Robe +2",
-		hands = "Nyame Gauntlets",
 		ring1 = "Defending Ring",
 		ring2 = "Shadow Ring",
 		back = "Shadow Mantle",
 		waist = "Carrier's Sash",
-		legs = "Nyame Flanchard",
-		feet = gear.Nyame.Feet,
-		-- feet = "Mallquis Clogs +2"
+		head = sets.Nyame.Head,
+		body = sets.Nyame.Body,
+		hands = sets.Nyame.Hands,
+		legs = sets.Nyame.Legs,
+		feet = sets.Nyame.Feet,
 	}
 
 	-- .Pet sets are for when Luopan is present.
@@ -633,36 +677,36 @@ function init_gear_sets()
 		main = "Sucellus",
 		sub = "Genmei Shield",
 		range = "Dunna",
-		head = "Azimuth Hood +1",
+		head = empy.Head,
 		neck = "Loricate Torque +1",
 		ear1 = "Handler's Earring",
 		ear2 = "Handler's Earring +1",
 		body = "Jhakri Robe +2",
-		hands = "Geo. Mitaines +3",
+		hands = af.Hands,
 		ring1 = "Defending Ring",
 		ring2 = "Dark Ring",
 		back = gear.idle_jse_back,
 		waist = "Isa Belt",
 		legs = "Psycloth Lappas",
-		feet = "Bagua Sandals +1"
+		feet = relic.Feet
 	}
 
 	sets.idle.PDT.Pet = {
 		main = "Malignance Pole",
 		sub = "Umbra Strap",
 		range = "Dunna",
-		head = "Azimuth Hood +1",
+		head = empy.Head,
 		neck = "Loricate Torque +1",
 		ear1 = "Handler's Earring",
 		ear2 = "Handler's Earring +1",
 		body = "Jhakri Robe +2",
-		hands = "Geo. Mitaines +3",
+		hands = af.Hands,
 		ring1 = "Defending Ring",
 		ring2 = "Dark Ring",
 		back = gear.idle_jse_back,
 		waist = "Isa Belt",
 		legs = "Nyame Flanchard",
-		feet = "Bagua Sandals +1"
+		feet = relic.Feet
 	}
 
 	-- .Indi sets are for when an Indi-spell is active.
@@ -686,7 +730,7 @@ function init_gear_sets()
 		back = "Umbra Cape",
 		waist = "Carrier's Sash",
 		legs = "Assid. Pants +1",
-		feet = "Azimuth Gaiters +1"
+		feet = empy.Feet
 	}
 
 	-- Defense sets
@@ -706,14 +750,14 @@ function init_gear_sets()
 		back = "Umbra Cape",
 		waist = "Carrier's Sash",
 		legs = "Nyame Flanchard",
-		feet = "Azimuth Gaiters +1"
+		feet = empy.Feet
 	}
 
 	sets.defense.MDT = {
 		main = "Malignance Pole",
 		sub = "Umbra Strap",
 		ammo = "Staunch Tathlum +1",
-		head = "Azimuth Hood +1",
+		head = empy.Head,
 		neck = "Loricate Torque +1",
 		ear1 = "Etiolation Earring",
 		ear2 = "Handler's Earring +1",
@@ -724,14 +768,14 @@ function init_gear_sets()
 		back = "Umbra Cape",
 		waist = "Carrier's Sash",
 		legs = "Nyame Flanchard",
-		feet = "Azimuth Gaiters +1"
+		feet = empy.Feet
 	}
 
 	sets.defense.MEVA = {
 		main = "Malignance Pole",
 		sub = "Enki Strap",
 		ammo = "Staunch Tathlum +1",
-		head = "Azimuth Hood +1",
+		head = empy.Head,
 		neck = "Warder's Charm +1",
 		ear1 = "Etiolation Earring",
 		ear2 = "Sanare Earring",
@@ -742,7 +786,7 @@ function init_gear_sets()
 		back = gear.idle_jse_back,
 		waist = "Luminary Sash",
 		legs = "Telchine Braconi",
-		feet = "Azimuth Gaiters +1"
+		feet = empy.Feet
 	}
 
 	sets.defense.PetPDT = sets.idle.PDT.Pet

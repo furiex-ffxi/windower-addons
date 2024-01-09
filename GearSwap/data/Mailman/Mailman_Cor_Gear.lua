@@ -13,9 +13,9 @@ function user_job_setup()
     state.CompensatorMode:options('Always', '300', '1000', 'Never')
 
     gear.RAbullet = "Living Bullet"
-    gear.WSbullet = "Chrono Bullet"
+    gear.WSbullet = "Living Bullet" -- "Chrono Bullet"
     gear.MAbullet = "Living Bullet" --For MAB WS, do not put single-use bullets here.
-    gear.QDbullet = "Animikii Bullet"
+    gear.QDbullet = "Living Bullet" -- "Animikii Bullet"
     options.ammo_warning_limit = 15
     --Ikenga_vest_bonus = 190  -- It is 190 at R20. Uncomment if you need to manually adjust because you are using below R20
 
@@ -31,7 +31,7 @@ function user_job_setup()
     gear.Empy = {}
     gear.Empy.Head = "Chass. Tricorne +2"
     gear.Empy.Body = "Chasseur's Frac +2"
-    gear.Empy.Hands = "Chasseur's Gants +2"
+    gear.Empy.Hands = "Chasseur's Gants +3"
     gear.Empy.Legs = "Chas. Culottes +2"
     gear.Empy.Feet = "Chass. Bottes +2"
 
@@ -71,14 +71,14 @@ function init_gear_sets()
     sets.precast.JA['Triple Shot'] = { 
         head="Oshosi Mask +1", -- Missing
         body=gear.Empy.Body, --14
-        hands="Lanun Gants +3", -- Tripple shot becomes Quad shot
+        hands="Lanun Gants", -- Tripple shot becomes Quad shot
         legs="Osh. Trousers +1", -- Missing
         feet="Osh. Leggings +1", --3
     }
     sets.precast.JA['Snake Eye'] = { legs = "Lanun Trews +1" }
     sets.precast.JA['Wild Card'] = { feet = "Lanun Bottes +3" }
     sets.precast.JA['Random Deal'] = { body = "Lanun Frac +3" }
-    sets.precast.FoldDoubleBust = { hands = "Lanun Gants +1" }
+    sets.precast.FoldDoubleBust = { hands = "Lanun Gants" }
 
     sets.precast.CorsairRoll = {
 		main={ name="Rostam", augments={'Path: C'}, bag="Wardrobe 2", priority=1}, -- +8 Effect and 60 sec Duration
@@ -550,19 +550,18 @@ function init_gear_sets()
     sets.midcast.RA.Acc = set_combine(sets.midcast.RA, {
         head = "Malignance Chapeau",
         body = "Laksa. Frac +3",
-		hands=gear.Empy.Hands,
+        hands = "Malignance Gloves",
 		legs="Chas. Cullotes +2",
-		feet=gear.Empy.Feet,
-        -- hands = "Malignance Gloves",
+		-- feet=gear.Empy.Feet,
         -- ring1 = "Regal Ring",
         -- legs = "Laksa. Trews +3",
-        -- feet = "Malignance Boots"
+        feet = "Malignance Boots"
     })
 
     sets.buff['Triple Shot'] = { 
         head="Oshosi Mask +1", -- Missing
         body=gear.Empy.Body, --14
-        hands="Lanun Gants +3", -- Tripple shot becomes Quad shot
+        hands="Lanun Gants", -- Tripple shot becomes Quad shot
         legs="Osh. Trousers +1", -- Missing
         feet="Osh. Leggings +1", --3
     }
@@ -704,7 +703,12 @@ function init_gear_sets()
 		range="Death Penalty", 
 		ammo="Living Bullet",
     }
-    sets.weapons.DualLeadenMelee = { main = "Naegling", sub = "Atoyac", range = "Fomalhaut" }
+    sets.weapons.DualLeadenMelee = { 
+        main = "Rostam", 
+        sub = "Tauret", 
+        range = "Death Penalty",
+        ammo="Living Bullet",
+    }
     sets.weapons.DualAeolian = { 
 		ammo="Living Bullet",
 		main="Tauret",
@@ -761,29 +765,28 @@ function init_gear_sets()
         ear2 = "Dedition Earring",
         body = "Adhemar Jacket +1",
         hands = "Adhemar Wrist. +1",
-        ring1 = "Petrov Ring",
+		ring1="Lehko's Ring",
         ring2 = "Epona's Ring",
         back = gear.tp_jse_back,
         waist = "Windbuffet Belt +1",
         legs = "Samnuha Tights",
-        -- feet = gear.herc_feet_qa
-        feet = gear.Empy.Feet
+        feet = sets.Malignance.Feet
     }
 
     sets.engaged.Acc = set_combine(sets.engaged, {
+        hands = "Gazu Bracelets +1",
     })
 
     sets.engaged.DT = set_combine(sets.engaged, {
         head=sets.Malignance.Head,
         body="Chasseur's Frac +2",
         hands=sets.Malignance.Hands,
-        legs="Chas. Culottes +2",
-        feet="Meg. Jam. +2",
+        legs=sets.Malignance.Lets,
         neck="Iskur Gorget",
         waist="Sailfi Belt +1",
         left_ear="Crep. Earring",
         right_ear="Dedition Earring",
-        left_ring="Petrov Ring",
+		ring1="Lehko's Ring",
         right_ring="Epona's Ring",
         back = gear.tp_jse_back,
     })
@@ -804,12 +807,13 @@ function init_gear_sets()
     }
 
     sets.engaged.DW = set_combine(sets.engaged, {
-		ear2="Suppanomimi",
+		ear2 = "Suppanomimi",
     })
 
     sets.engaged.DW.Acc = set_combine(sets.engaged.DW, {
         hands = "Gazu Bracelets +1",
         legs = "Carmine Cuisses +1",
+        waist = "Kentarch Belt +1",
     })
 
     sets.engaged.DW.DT = {
@@ -819,10 +823,11 @@ function init_gear_sets()
         ear2 = "Brutal Earring",
         body = "Malignance Tabard",
         hands = "Malignance Gloves",
-        ring1 = "Defending Ring",
+		ring1="Lehko's Ring",
         ring2 = "Epona's Ring",
         back = gear.tp_jse_back,
-        waist = "Reiki Yotai",
+        -- waist = "Reiki Yotai",
+        waist = "Windbuffet Belt +1",
         legs = "Malignance Tights",
         feet = "Malignance Boots"
     }
@@ -834,10 +839,11 @@ function init_gear_sets()
         ear2 = "Telos Earring",
         body = "Malignance Tabard",
         hands = "Malignance Gloves",
-        ring1 = "Defending Ring",
-        ring2 = "Ramuh Ring +1",
+        ring1="Lehko's Ring",
+        ring2 = "Defending Ring",
         back = gear.tp_jse_back,
-        waist = "Reiki Yotai",
+        waist = "Kentarch Belt +1",
+        -- waist = "Reiki Yotai",
         legs = "Malignance Tights",
         feet = "Malignance Boots"
     }

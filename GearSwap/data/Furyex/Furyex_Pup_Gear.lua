@@ -433,6 +433,18 @@ function init_gear_sets()
         back={ name="Visucius's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Accuracy+20 Attack+20','Pet: Haste+10','System: 1 ID: 1246 Val: 4',}},        
     }
 
+    sets.idle.Pet.Tank = set_combine(sets.idle.Pet, {
+        head = "Rao Kabuto +1",
+        body = "Rao Togi +1",
+        hands = "Rao Kote +1",
+        legs = "Rao Haidate +1",
+        feet = "Rao Sune-Ate +1",
+        -- waist = "Isa Belt", 
+        ear1 = "Rimeice Earring",
+        ear2 = "Handler's Earring +1",
+        ring2 = "Overbearing Ring"
+    })
+
     -- Idle sets to wear while pet is engaged
     sets.idle.Pet.Engaged = {
         -- head = "Anwig Salade",

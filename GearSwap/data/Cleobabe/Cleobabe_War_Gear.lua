@@ -13,7 +13,7 @@ function user_job_setup()
 	'ProcScythe', 'ProcPolearm', 'ProcGreatKatana', 'ProcClub', 'ProcStaff')
 
 	gear.da_jse_back = { name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
-	gear.wsd_str_jse_back = { name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%','Damage taken-5%',}}
+	gear.wsd_str_jse_back = { name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}}
 	gear.wsd_vit_jse_back = {name="Cichol's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}}
 	-- gear.crit_jse_back = { name = "Cichol's Mantle", augments = { 'STR+20', 'Accuracy+20 Attack+20', 'Crit.hit rate+10' } }
 
@@ -73,7 +73,7 @@ function init_gear_sets()
 		feet="Agoge Calligae +3",
 	}
 	sets.precast.JA['Retaliation'] = {
-		feet="Boii Calligae +2",
+		feet="Boii Calligae +3",
 		hands="Pumm. Mufflers +3"
 	}
 	sets.precast.JA['Restraint'] = {
@@ -272,18 +272,24 @@ function init_gear_sets()
 
 	-- Idle sets
 	sets.idle = {
+		ammo="Coiste Bodhar",
+		head="Hjarrandi Helm",
+		body="Hjarrandi Breast.",
+		hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
+		legs="Pumm. Cuisses +3",
+		feet="Boii Calligae +3",
+		neck={ name="War. Beads +2", augments={'Path: A',}},
+		waist="Plat. Mog. Belt",
+		left_ear="Odnowa Earring +1",
+		right_ear="Etiolation Earring",
+		left_ring="Shneddick Ring",
+		right_ring="Moonlight Ring",
 		-- ammo="Staunch Tathlum +1",
-		head="Sakpata's Helm",
-		body="Sakpata's Plate",
-		hands="Sakpata's Gauntlets",
-		legs="Sakpata's Cuisses",
-		feet="Sakpata's Leggings",
 		-- feet="Hermes' Sandals +1",
 		-- neck="Bathy Choker +1",
 		-- waist="Flume Belt",
 		-- left_ear="Genmei Earring",
 		-- right_ear="Etiolation Earring",
-		left_ring="Shneddick Ring",
 		-- right_ring="Chirich Ring +1",
 		-- right_ring="Chirich Ring +1",
 		back=gear.da_jse_back,

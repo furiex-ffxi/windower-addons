@@ -4,9 +4,22 @@
         <AutoDrop>true</AutoDrop>
         <AutoStack>true</AutoStack>
         <Delay>0</Delay>
-        <Drop>Hi-Potion +2,Durium Ore,Translucent Rock,Rainbow Cloth,Thunder V,Hydra Scale,Dark Carol II,Fluorite,S.Abjuration: Lg.,Dark Adaman,Kitron,Horde Lullaby II,Pro-Ether +1,Ice Carol II,Mind Potion,F.Abjuration: Lg.,Aquamarine,Gold Thread,Purple Rock,Light Carol II,Gain-CHR,Comet,Aeroja,Gravity II,Breeze Geode,Boost-DEX,Strength Potion,Ebony Log,Flocon-de-mer,Wind Carol II,Coral Fragment,X-Potion +2,White Rock,Wyvern Scales,Pining Nocturne,Yellow Rock,Jacaranda Log,Kakka: Ichi,Ram Horn,Beech Log,Absorb-Attri,Danceshroom,Mahogany Log,Dexterity Potion,Boost-CHR,Moonstone,Gain-STR,Kudzu Aketon,Jadeite,Cerberus Hide,Divine Log,Firaja,Granite,King Truffle,Gain-AGI,Gold Ingot,Zircon,Charisma Potion,Gold Ore,Dragon Meat,Elixir,Woozyshroom,Hi-Elixir,Pigeon&apos;s Blood,Breakga,Adloquium,Chrysoberyl,C.Abjuration: Lg.,Ruszor Meat,Temper,Red Rock,Agility Potion,Cura III,Blizzaja,Demon Horn,Painite,Hi-Potion +3,Sunstone,Ram Skin,Int. Potion,Blizzard V,W. Spider&apos;s Web,Valor Minuet V,Gibbous Axe,Khimaira Mane,Boost-AGI,Holy II,X-Potion +3,Gain-DEX,Thundaja,Wyvern Skin,Boost-STR,Phrygian Ore,Mythril Ore,Wyvern Tailskin,Anc. Beast Horn,Migawari: Ichi,Blue Rock,Green Rock,Regen IV,Pro-Ether,Imperial Cermet,Fire Carol II,Mythril Ingot</Drop>
-        <Lot>Dedition Earring,Carabosse&apos;s Gem,Cirein-Croin&apos;s Lantern,Mystic Fragment,Isgebind&apos;s Heart</Lot>
-        <Pass>Hpemde Organ,High-Quality Hpemde Organ,Fire Cluster,High-Quality Xzomit Organ,Xzomit Organ,Light Cluster,Aern Organ,Wind Cluster,Ice Cluster,Water Cluster,Luminian Tissue,Dark Cluster,Yovra Organ,High-Quality Phuabo Organ,Earth Cluster,Phuabo Organ,Lightning Cluster</Pass>
+        <Drop>Hi-Potion +2,Durium Ore,Translucent Rock,Rainbow Cloth,Thunder V,Hydra Scale,Dark Carol II,Fluorite,S.Abjuration: Lg.,Dark Adaman,Kitron,Horde Lullaby II,Pro-Ether +1,Ice Carol II,Mind Potion,F.Abjuration: Lg.,Aquamarine,Gold Thread,Ram Horn,Yellow Rock,White Rock,Comet,Aeroja,Gravity II,Breeze Geode,Boost-DEX,Green Rock,Pining Nocturne,Fire Carol II,Wind Carol II,Flocon-de-mer,X-Potion +2,Ebony Log,Wyvern Scales,Strength Potion,Coral Fragment,Jacaranda Log,Kakka: Ichi,Purple Rock,Beech Log,Light Carol II,Danceshroom,Mahogany Log,Dexterity Potion,Boost-CHR,Absorb-Attri,Gain-STR,Kudzu Aketon,Moonstone,Cerberus Hide,Divine Log,Zircon,Firaja,Anc. Beast Horn,Gain-AGI,Gold Ingot,King Truffle,Charisma Potion,Elixir,Granite,Gold Ore,Woozyshroom,X-Potion +3,Pigeon&apos;s Blood,Breakga,C.Abjuration: Lg.,Chrysoberyl,Adloquium,Ruszor Meat,Temper,Red Rock,Agility Potion,Cura III,Blizzaja,Demon Horn,Painite,Hi-Potion +3,Sunstone,Ram Skin,Int. Potion,Blizzard V,W. Spider&apos;s Web,Valor Minuet V,Gibbous Axe,Khimaira Mane,Boost-AGI,Holy II,Hi-Elixir,Gain-DEX,Thundaja,Wyvern Skin,Boost-STR,Phrygian Ore,Dragon Meat,Wyvern Tailskin,Mythril Ore,Migawari: Ichi,Blue Rock,Gain-CHR,Regen IV,Pro-Ether,Jadeite,Imperial Cermet,Mythril Ingot</Drop>
+        <Pass>Hpemde Organ,High-Quality Hpemde Organ,Fire Cluster,High-Quality Xzomit Organ,Xzomit Organ,Light Cluster,Aern Organ,Wind Cluster,Water Cluster,Ice Cluster,Luminian Tissue,Dark Cluster,High-Quality Phuabo Organ,Yovra Organ,Earth Cluster,Phuabo Organ,Lightning Cluster</Pass>
         <Verbose>false</Verbose>
     </global>
+    <cleobabe>
+        <Lot>Baetyl Pendant,Melic Torque,Deceiver&apos;s Torque,Henic Torque,Passion Jacket,Carabosse&apos;s Gem,Mystic Fragment,Isgebind&apos;s Heart,Cirein-Croin&apos;s Lantern</Lot>
+        <Pass>Decimus Torque,Yarak Torque,Carnal Torque,Acantha Torque,Maskirova Torque,Bilious Torque,Agelast Torque</Pass>
+    </cleobabe>
+    <furyex>
+        <Lot>Melic Torque,Acantha Torque,Maskirova Torque,Cirein-Croin&apos;s Lantern,Carabosse&apos;s Gem,Isgebind&apos;s Heart,Mystic Fragment</Lot>
+        <Pass>Decimus Torque,Yarak Torque,Carnal Torque,Acantha Torque,Bilious Torque,Agelast Torque</Pass>
+    </furyex>
+    <lolababe>
+        <Lot>Henic Torque,Melic Torque,Deceiver&apos;s Torque,Barathrum,Querkening Brais</Lot>
+    </lolababe>
+    <mailman>
+        <Lot>Lissome Necklace</Lot>
+    </mailman>
 </settings>

@@ -19,6 +19,14 @@ profiles['ore'] = S{
 }
 -- //sellnpc junk
 profiles['junk'] = S{
+    'Eschalixir',
+    'Eschalixir +1',
+    'Snow Geode',
+    'Leviatite',
+    'Giant Femur',
+    'Dhalmel Meat',
+    'Shadow Geode',
+    'Earth Crystal',
     'Water Crystal',
     'Wind Crystal',
     'Land Crab Meat',

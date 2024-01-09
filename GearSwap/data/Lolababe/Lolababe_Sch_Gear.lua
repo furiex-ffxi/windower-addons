@@ -7,7 +7,7 @@ function user_job_setup()
     state.Weapons:options('None', 'Akademos', 'Khatvanga')
 
     gear.nuke_jse_back = { name = "Lugh's Cape", augments = { 'INT+20', 'Mag. Acc+20 /Mag. Dmg.+20', '"Mag.Atk.Bns."+10' } }
-
+    gear.fc_jse_back = { name="Lugh's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
     -- Additional local binds
     send_command('bind ^` gs c cycle ElementalMode')
     send_command('bind !` gs c scholar power')
@@ -47,7 +47,7 @@ function init_gear_sets()
     sets.precast.FC = {
         main = gear.grioavolr_fc_staff,
         -- sub = "Clerisy Strap +1",
-        -- ammo = "Impatiens",
+        ammo = "Sapience Orb",
         head = gear.merlinic_fc_head,
         neck = "Orunmila's Torque",
         -- ear1 = "Enchntr. Earring +1",
@@ -55,12 +55,15 @@ function init_gear_sets()
         ear2 = "Malignance Earring",
         body = "Pinga Tunic +1",
         -- body = "Zendik Robe",
+        hands = "Volte Gloves",
         -- hands = "Acad. Bracers +3",
         ring1 = "Kishar Ring",
         -- ring2 = "Lebeche Ring",
         -- back = "Perimede Cape",
         waist = "Witful Belt",
-        legs = "Psycloth Lappas",
+        legs = "Kaykaus Tights +1",
+        feet = "Merlinic Crackows",
+        back= gear.fc_jse_back,
         -- feet = "Regal Pumps +1"
     }
 

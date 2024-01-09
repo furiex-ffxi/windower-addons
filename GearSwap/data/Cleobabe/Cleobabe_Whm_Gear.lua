@@ -100,7 +100,6 @@ function init_gear_sets()
 	sets.precast.FC.Stoneskin = set_combine(sets.precast.FC['Enhancing Magic'], {})
 
 	sets.precast.FC['Healing Magic'] = set_combine(sets.precast.FC, {
-		legs = gear.empy.legs
 	})
 
 	sets.precast.FC.StatusRemoval = sets.precast.FC['Healing Magic']
@@ -217,8 +216,8 @@ function init_gear_sets()
 	-- Conserve Mp set for spells that don't need anything else, for set_combine.
 
 	sets.ConserveMP = {
-		main = gear.grioavolr_fc_staff,
-		sub = "Umbra Strap",
+		-- main = gear.grioavolr_fc_staff,
+		-- sub = "Umbra Strap",
 		ammo = "Hasty Pinion +1",
 		head = "Vanya Hood",
 		neck = "Incanter's Torque",
@@ -247,7 +246,8 @@ function init_gear_sets()
 	}
 
 	sets.midcast.FastRecast = set_combine(sets.precast.FC, {
-		main = gear.grioavolr_fc_staff,
+		-- main = gear.grioavolr_fc_staff,
+		main = "Mpaca's Staff",
 		sub = "Clerisy Strap +1",
 		-- ammo = "Hasty Pinion +1",
 		ammo = "Impatiens",
@@ -269,13 +269,14 @@ function init_gear_sets()
 		sub = "Sors Shield",
 		ammo = "Pemphredo Tathlum",
 		head = gear.af.head,
-		neck = "Incanter's Torque",
+		neck = "Cleric's Torque +2",
 		-- ear1 = "Regal Earring",
 		-- ear2 = "Glorious Earring",
-		ear1 = "Nourish. Earring +1",
+		ear1 = "Mendicant's Earring",
 		ear2 = "Ebers Earring +1",
 		body = gear.af.body,
 		hands = gear.af.hands,
+		legs = gear.empy.legs,
 		ring1 = "Lebeche Ring",
 		ring2 = "Mephitas's Ring",
 		back = "Alaunus's Cape",
@@ -701,7 +702,7 @@ function init_gear_sets()
 	sets.midcast.Aspir.Resistant = sets.midcast.Drain.Resistant
 
 	sets.midcast.Stun = {
-		main = gear.grioavolr_fc_staff,
+		-- main = gear.grioavolr_fc_staff,
 		sub = "Clerisy Strap +1",
 		ammo = "Hasty Pinion +1",
 		head = "Bunzi's Hat",
@@ -855,7 +856,8 @@ function init_gear_sets()
 
 	sets.idle.PDT = set_combine(sets.idle, {
 		main = "Malignance Pole",
-		sub = "Umbra Strap",
+		sub = "Clerisy Strap +1",
+		-- sub = "Umbra Strap",
 		ammo = "Homiliary",
 		head = "Nyame Helm",
 		neck = "Loricate Torque +1",

@@ -1,4 +1,10 @@
 return {
+    ["Albumen"]={
+        ["Petalback Spin"]={
+            ["complete_reaction"]="",
+            ["ready_reaction"]="turnaround"
+        },
+     },
     ["Lady Lilith"]={
         ["Dark Thorn"]={
             ["complete_reaction"]="/dispel",
