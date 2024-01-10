@@ -742,17 +742,17 @@ function init_gear_sets()
         -- waist = "Windbuffet Belt +1",
         -- legs = "Samnuha Tights",
         -- feet = gear.herculean_ta_feet
-        head = "Nyame Helm",
+        head = sets.Malignance.Head,
         neck = "Combatant's Torque",
         ear1 = "Cessance Earring",
         ear2 = "Brutal Earring",
-        body = "Nyame Mail",
-        hands = "Nyame Gauntlets",
+        body = sets.Malignance.Body,
+        hands = sets.Malignance.Hands,
         ring1 = "Petrov Ring",
         ring2 = "Crepuscular Ring",
         back = gear.tp_jse_back,
         waist = "Sailfi Belt +1",
-        legs = "Nyame Flanchard",
+        legs = "Samnuha Tights",
         feet = "Nyame Sollerets"        
     }
 
@@ -801,20 +801,20 @@ function init_gear_sets()
         feet = "Malignance Boots"
     }
 
-    sets.engaged.DW = {
-        head = "Dampening Tam",
+    sets.engaged.DW = set_combine(sets.engaged, {
+        -- head = "Dampening Tam",
         neck = "Iskur Gorget",
         ear1 = "Suppanomimi",
         ear2 = "Brutal Earring",
-        body = "Adhemar Jacket +1",
-        hands = "Adhemar Wrist. +1",
+        -- body = "Adhemar Jacket +1",
+        -- hands = "Adhemar Wrist. +1",
         ring1 = "Petrov Ring",
         ring2 = "Epona's Ring",
         back = gear.tp_jse_back,
         waist = "Windbuffet Belt +1",
         legs = "Samnuha Tights",
-        feet = gear.herculean_ta_feet
-    }
+        -- feet = gear.herculean_ta_feet
+    })
 
     sets.engaged.DW.Acc = {
         head = "Carmine Mask +1",

@@ -14,5 +14,11 @@ return {
             ["complete_reaction"]="/magicfinale",
             ["ready_reaction"]="" 
         }
-    }   
+    },
+    ["Locus Camelopard"]={
+        ["Cold Stare"]={
+            ["complete_reaction"]="facemob",
+            ["ready_reaction"]="turnaround"
+        },
+    },   
 }

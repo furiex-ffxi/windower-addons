@@ -103,4 +103,10 @@ return {
             ["ready_reaction"]="input /ma \"Barfira\" <me>"
         }
     },
+    ["Locus Camelopard"]={
+        ["Cold Stare"]={
+            ["complete_reaction"]="facemob",
+            ["ready_reaction"]="turnaround"
+        },
+    },   
 }

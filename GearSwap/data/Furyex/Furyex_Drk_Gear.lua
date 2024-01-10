@@ -437,13 +437,13 @@ function init_gear_sets()
 		body="Hjarrandi Breastplate",
 		hands="Sakpata's Gauntlets",
 		legs = "Sulev. Cuisses +2",
-		feet="Flam. Gambieras +2",
-		neck="Vim Torque +1",
-		waist="Sailfi Belt +1",
-		left_ear="Telos Earring",
-		right_ear="Schere Earring",
-		left_ring="Lehko's Ring",
-		right_ring="Niqmaddu Ring",
+		feet = "Flam. Gambieras +2",
+		neck = "Abyssal Beads +2",
+		waist = "Sailfi Belt +1",
+		left_ear = "Telos Earring",
+		right_ear = "Schere Earring",
+		left_ring = "Lehko's Ring",
+		right_ring = "Niqmaddu Ring",
 		back = DRKCape.TP,
 	}
 	
@@ -453,7 +453,6 @@ function init_gear_sets()
 
 	sets.engaged.Acc = set_combine(sets.engaged.SomeAcc, {
 		right_ear = "Domin. Earring +1",
-		neck = "Combatant's Torque"
 	})
 
 	sets.engaged.FullAcc = set_combine(sets.engaged.Acc, {

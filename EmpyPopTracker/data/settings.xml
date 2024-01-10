@@ -73,12 +73,23 @@
         <tracking>briareus</tracking>
         <visible>true</visible>
     </global>
-    <furyex>
+    <cleobabe>
         <text>
             <pos>
-                <x>611</x>
+                <x>42</x>
                 <y>336</y>
             </pos>
         </text>
+        <tracking>cirein-croin</tracking>
+        <visible>false</visible>
+    </cleobabe>
+    <furyex>
+        <text>
+            <pos>
+                <x>90</x>
+                <y>370</y>
+            </pos>
+        </text>
+        <tracking>isgebind</tracking>
     </furyex>
 </settings>
