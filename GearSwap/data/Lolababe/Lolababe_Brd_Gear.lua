@@ -255,16 +255,10 @@ sets.weapons.Qutrub = { main = "Qutrub Knife", sub = "Genmei Shield" }
 	sets.midcast.Ballad = { legs = "Fili Rhingrave +2" }
 	sets.midcast.Carol = { hands = "Mousai Gages +1" }
 	sets.midcast.Etude = { head = "Mousai Turban +1" }
-	sets.midcast['Horde Lullaby'] = { 
-		main = "Carnwenhan",
-		sub = "Ammurapi Shield",
-		range = "Gjallarhorn" 
-	} 
+	sets.midcast['Horde Lullaby'] = { range = "Gjallarhorn" } 
 	sets.midcast['Horde Lullaby'].Resistant = sets.midcast['Horde Lullaby']
 	sets.midcast['Horde Lullaby'].AoE = sets.midcast['Horde Lullaby']
 	sets.midcast['Horde Lullaby II'] = {
-		main = "Carnwenhan",
-		sub = "Ammurapi Shield",
 		range = "Daurdabla",
 		hands = "Inyan. Dastanas +2",
 		feet = "Bihu Slippers +3",
@@ -276,9 +270,6 @@ sets.weapons.Qutrub = { main = "Qutrub Knife", sub = "Genmei Shield" }
 	sets.midcast.Mambo = { feet = "Mou. Crackows +1" }
 	sets.midcast.March = { hands = "Fili Manchettes +3" }
 	sets.midcast['Honor March'] = set_combine(sets.midcast.March,{range="Marsyas"})
-	sets.midcast["Aria of Passion"] = {
-		range = "Loughnashade",
-	}
 	sets.midcast.Minne = { legs = "Mou. Seraweels +1" }
 	sets.midcast.Minuet = { body = "Fili Hongreline +3" }
 	sets.midcast.Paeon = set_combine(sets.precast.FC, { range = info.ExtraSongInstrument }) --for singer addon dummy
@@ -316,8 +307,8 @@ sets.weapons.Qutrub = { main = "Qutrub Knife", sub = "Genmei Shield" }
 
 	-- For song defbuffs (duration primary, accuracy secondary)
 	sets.midcast.SongDebuff = {
-		-- main = "Carnwenhan",
-		-- sub = "Ammurapi Shield",
+		main = "Carnwenhan",
+		sub = "Ammurapi Shield",
 		range = "Gjallarhorn",
 		head = "Brioso Roundlet +3",
 		body = "Brioso Justau. +3",
@@ -334,10 +325,6 @@ sets.weapons.Qutrub = { main = "Qutrub Knife", sub = "Genmei Shield" }
 	}
 
 	sets.midcast.SongDebuff.DW = { 
-	} --Only weapons in this set. This set is overlayed onto SongDebuff
-
-
-	sets.midcast.SongDebuff.DW.Resistant = { 
 		main = "Carnwenhan", 
 		sub = "Kali" 
 	} --Only weapons in this set. This set is overlayed onto SongDebuff
