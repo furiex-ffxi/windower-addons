@@ -61,6 +61,13 @@
             </pos>
         </display>
     </furyex>
+    <lolababe>
+        <display>
+            <text>
+                <blue>128</blue>
+            </text>
+        </display>
+    </lolababe>
     <mailman>
         <display>
             <pos>

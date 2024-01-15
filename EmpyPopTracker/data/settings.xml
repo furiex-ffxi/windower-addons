@@ -48,8 +48,8 @@
             </flags>
             <padding>8</padding>
             <pos>
-                <x>0</x>
-                <y>0</y>
+                <x>3</x>
+                <y>951</y>
             </pos>
             <text>
                 <alpha>255</alpha>
@@ -70,26 +70,13 @@
                 </stroke>
             </text>
         </text>
-        <tracking>briareus</tracking>
+        <tracking>carabosse</tracking>
         <visible>true</visible>
     </global>
     <cleobabe>
-        <text>
-            <pos>
-                <x>42</x>
-                <y>336</y>
-            </pos>
-        </text>
-        <tracking>cirein-croin</tracking>
         <visible>false</visible>
     </cleobabe>
-    <furyex>
-        <text>
-            <pos>
-                <x>90</x>
-                <y>370</y>
-            </pos>
-        </text>
-        <tracking>isgebind</tracking>
-    </furyex>
+    <lolababe>
+        <visible>false</visible>
+    </lolababe>
 </settings>

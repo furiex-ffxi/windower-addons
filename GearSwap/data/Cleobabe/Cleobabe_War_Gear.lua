@@ -359,16 +359,14 @@ function init_gear_sets()
 		head = "Boii Mask +3",
 		neck = "War. Beads +2",
 		body = "Boii Lorica +3",
-		-- legs="Tatena. Haidate +1",
 		hands="Tatenashi Gote +1",
 		legs="Pumm. Cuisses +3",
 		feet="Pumm. Calligae +3",
 		-- waist="Ioskeha Belt +1",
 		waist="Sailfi Belt +1",
-		-- left_ear="Brutal Earring",
 		left_ear="Cessance Earring",
 		right_ear="Boii Earring",
-		-- right_ear="Schere Earring",
+		-- left_ear="Schere Earring",
 		left_ring="Moonlight Ring",
 		-- right_ring="Petrov Ring",
 		right_ring="Niqmaddu Ring",
@@ -390,9 +388,10 @@ function init_gear_sets()
 	sets.engaged.Fodder = set_combine(sets.engaged, {
     })
 	sets.engaged.Fencer = set_combine(sets.engaged, {
-		hands = "Agoge Mufflers +3",
-		body="Agoge Lorica +3", 
+		hands = "Sakpata's Gauntlets",
+		body="Hjarrandi Breast.", 
 		legs = "Boii Cuisses +3",
+		left_ring = "Petrov Ring",
     })
 
 

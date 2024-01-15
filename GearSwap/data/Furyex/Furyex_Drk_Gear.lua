@@ -7,7 +7,7 @@ function user_job_setup()
 	state.MagicalDefenseMode:options('MDT', 'MDTReraise')
 	state.ResistDefenseMode:options('MEVA')
 	state.IdleMode:options('Normal', 'PDT', 'Refresh', 'Reraise')
-	state.Weapons:options('Liberator', 'Apocalypse', 'Montante', 'Anguta')
+	state.Weapons:options('Caladbolg', 'Apocalypse', 'Liberator', 'Montante', 'Anguta')
 	state.ExtraMeleeMode = M { ['description'] = 'Extra Melee Mode', 'None' }
 	state.Passive = M { ['description'] = 'Passive Mode', 'None', 'MP', 'Twilight' }
 	state.DrainSwapWeaponMode = M { 'Always', 'Never', '300', '1000' }
@@ -240,7 +240,7 @@ function init_gear_sets()
 	-- Weaponskill sets
 	-- Default set for any weaponskill that isn't any more specifically defined
 	sets.precast.WS = {
-        ammo="Oshasha's Treatise",
+        ammo="Knobkierrie",
 		head = "Nyame Helm",
 		-- neck = "Fotia Gorget",
 		neck = "Abyssal Beads +2",
@@ -274,11 +274,21 @@ function init_gear_sets()
 	sets.precast.WS['Catastrophe'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
 	sets.precast.WS['Catastrophe'].Fodder = set_combine(sets.precast.WS.Fodder, {})
 
-	sets.precast.WS['Torcleaver'] = set_combine(sets.precast.WS, {})
-	sets.precast.WS['Torcleaver'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
-	sets.precast.WS['Torcleaver'].Acc = set_combine(sets.precast.WS.Acc, {})
-	sets.precast.WS['Torcleaver'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
-	sets.precast.WS['Torcleaver'].Fodder = set_combine(sets.precast.WS.Fodder, {})
+	sets.precast.WS['Torcleaver'] = set_combine(sets.precast.WS, {
+		ring2 ="Niqmaddu Ring",		
+	})
+	sets.precast.WS['Torcleaver'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {
+		ring2 ="Niqmaddu Ring",		
+	})
+	sets.precast.WS['Torcleaver'].Acc = set_combine(sets.precast.WS.Acc, {
+		ring2 ="Niqmaddu Ring",		
+	})
+	sets.precast.WS['Torcleaver'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
+		ring2 ="Niqmaddu Ring",		
+	})
+	sets.precast.WS['Torcleaver'].Fodder = set_combine(sets.precast.WS.Fodder, {
+		ring2 ="Niqmaddu Ring",		
+	})
 
 	sets.precast.WS['Insurgency'] = set_combine(sets.precast.WS, {
 		ring2 = "Niqmaddu Ring",
@@ -436,12 +446,13 @@ function init_gear_sets()
 		head="Flam. Zucchetto +2",
 		body="Hjarrandi Breastplate",
 		hands="Sakpata's Gauntlets",
-		legs = "Sulev. Cuisses +2",
+		legs = AF.Legs,
 		feet = "Flam. Gambieras +2",
 		neck = "Abyssal Beads +2",
 		waist = "Sailfi Belt +1",
 		left_ear = "Telos Earring",
-		right_ear = "Schere Earring",
+		right_ear = "Cessance Earring",
+		-- right_ear = "Schere Earring",
 		left_ring = "Lehko's Ring",
 		right_ring = "Niqmaddu Ring",
 		back = DRKCape.TP,
@@ -616,8 +627,9 @@ function init_gear_sets()
 	sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
 
 	-- Weapons sets
-	sets.weapons.Liberator = { main = "Liberator", sub = "Utu Grip" }
+	sets.weapons.Caladbolg = { main = "Caladbolg", sub = "Utu Grip" }
 	sets.weapons.Apocalypse = { main = "Apocalypse", sub = "Utu Grip" }
+	sets.weapons.Liberator = { main = "Liberator", sub = "Utu Grip" }
 	sets.weapons.Montante = { main = "Montante +1", sub = "Utu Grip" }
 	sets.weapons.Anguta = { main = "Anguta", sub = "Utu Grip" }
 end

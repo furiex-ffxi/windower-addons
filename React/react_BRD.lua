@@ -21,4 +21,10 @@ return {
             ["ready_reaction"]="turnaround"
         },
     },   
+    ["Esurient Botulus"]={
+        ["Slimy Proposal"]={
+            ["complete_reaction"]="",
+            ["ready_reaction"]="/flatblade"
+        },
+    }
 }
