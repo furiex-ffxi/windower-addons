@@ -63,9 +63,10 @@
     </furyex>
     <lolababe>
         <display>
-            <text>
-                <blue>128</blue>
-            </text>
+            <pos>
+                <x>-420</x>
+                <y>-17</y>
+            </pos>
         </display>
     </lolababe>
     <mailman>
