@@ -75,8 +75,8 @@
     <furyex>
         <display>
             <pos>
-                <x>2066</x>
-                <y>289</y>
+                <x>2017</x>
+                <y>347</y>
             </pos>
         </display>
         <visible>true</visible>
@@ -97,6 +97,5 @@
                 <y>296</y>
             </pos>
         </display>
-        <visible>true</visible>
     </mailman>
 </settings>

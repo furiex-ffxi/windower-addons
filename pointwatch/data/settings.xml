@@ -58,14 +58,15 @@
         <text_box_settings>
             <pos>
                 <x>922</x>
+                <y>-4</y>
             </pos>
         </text_box_settings>
     </cleobabe>
     <furyex>
         <text_box_settings>
             <pos>
-                <x>1047</x>
-                <y>12</y>
+                <x>904</x>
+                <y>-1</y>
             </pos>
         </text_box_settings>
     </furyex>
@@ -81,6 +82,7 @@
         <text_box_settings>
             <pos>
                 <x>840</x>
+                <y>12</y>
             </pos>
         </text_box_settings>
     </lolababe>

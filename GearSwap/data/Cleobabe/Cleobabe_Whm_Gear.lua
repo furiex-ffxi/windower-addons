@@ -17,11 +17,11 @@ function user_job_setup()
 	gear.obi_nuke_back = "Toro Cape"
 
 	gear.af = {}
-	gear.af.head = "Theophany Cap +2"
-	gear.af.body = "Theo. Bliaut +2"
-	gear.af.hands = "Theophany Mitts +2"
+	gear.af.head = "Theophany Cap +3"
+	gear.af.body = "Theo. Bliaut +3"
+	gear.af.hands = "Theophany Mitts +3"
 	gear.af.legs = "Theo. Pant. +2"
-	gear.af.feet = "Theo. Duckbills +2"
+	gear.af.feet = "Theo. Duckbills +3"
 
 	gear.relic = {}
 	gear.relic.head = "Piety Cap +3"
@@ -432,7 +432,7 @@ function init_gear_sets()
 
 	sets.midcast.Cursna = {
 		main = "Yagrush",
-		sub = "Clemency Grip",
+		sub = "Ammurapi Shield",
 		ammo = "Hasty Pinion +1",
 		head = gear.empy.head,
 		neck = "Debilis Medallion",
@@ -450,6 +450,7 @@ function init_gear_sets()
 
 	sets.midcast.StatusRemoval = {
 		main = "Yagrush",
+		sub = "Ammurapi Shield",
 		ammo = "Hasty Pinion +1",
 		head = gear.empy.head,
 		neck = "Voltsurge Torque",
@@ -479,7 +480,7 @@ function init_gear_sets()
 		body = "Telchine Chas.",
 		hands = "Telchine Gloves",
 		legs = "Telchine Braconi",
-		feet = "Telchine Pigaches",
+		feet = gear.af.feet,
 		ring1 = "Stikini Ring +1",
 		ring2 = "Stikini Ring +1",
 		back = "Perimede Cape",

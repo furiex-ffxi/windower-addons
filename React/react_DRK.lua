@@ -5,7 +5,7 @@ return {
             ["ready_reaction"]="turnaround"
         },
      },
-     ["Lilith"]={
+     ["Lady Lilith"]={
         ["Dark Thorn"]={
             ["complete_reaction"]="",
             ["ready_reaction"]="turnaround"
@@ -32,5 +32,51 @@ return {
             ["complete_reaction"]="",
             ["ready_reaction"]="/stun"
         },
-    }
+    },
+    ["Bozzetto Skathi"]={
+        ["Blight Dance"]={
+            ["complete_reaction"]="facemob", 
+            ["ready_reaction"]="turnaround"
+        }, 
+        ["Petrifaction"]={
+            ["complete_reaction"]="facemob", 
+            ["ready_reaction"]="turnaround"
+        },
+        ["Calcifying Deluge"]={
+            ["complete_reaction"]="facemob", 
+            ["ready_reaction"]="turnaround"
+        },
+        ["Impaling Disregard"]={
+            ["complete_reaction"]="", 
+            ["ready_reaction"]="facemob"
+        },
+        ["Poisonous Dance"]={
+            ["complete_reaction"]="facemob", 
+            ["ready_reaction"]="turnaround"
+        },
+    }, 
+    ["Bozzetto Freyja"]={
+        ["Implaing Disregard"]={
+            ["complete_reaction"]="", 
+            ["ready_reaction"]="facemob"
+        },
+        ["Petrifaction"]={
+            ["complete_reaction"]="facemob", 
+            ["ready_reaction"]="turnaround"
+        }, 
+        ["Petrifactive Dance"]={
+            ["complete_reaction"]="facemob", 
+            ["ready_reaction"]="turnaround"
+        },
+    },
+    ["Bozzetto Frigg"]={
+        ["Chastening Disregard"]={
+            ["complete_reaction"]="", 
+            ["ready_reaction"]="facemob"
+        },
+        ["Luxurious Dance"]={
+            ["complete_reaction"]="facemob", 
+            ["ready_reaction"]="turnaround"
+        }
+    },
 }

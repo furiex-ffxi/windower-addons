@@ -1424,12 +1424,12 @@ function init_gear_sets()
 	sets.weapons.Chango = { main = "Chango", sub = "Utu Grip" }
 	sets.weapons.DualWeapons = { main = "Firangi", sub = "Reikiko" }
 	sets.weapons.Greatsword = { main = "Montante +1", sub = "Utu Grip" }
-	sets.weapons.ProcDagger = { main = "Bronze Dagger", sub = empty }
+	sets.weapons.ProcDagger = { main = "Qutrub Knife", sub = empty }
 	sets.weapons.ProcSword = { main = "Wax Sword", sub = empty }
 	sets.weapons.ProcKatana = { main = "Trainee Burin", sub = empty }
 	sets.weapons.ProcGreatSword = { main = "Goujian", sub = empty }
 	sets.weapons.ProcScythe = { main = "Bronze Zaghnal", sub = empty }
-	sets.weapons.ProcPolearm = { main = "Harpoon", sub = empty }
+	sets.weapons.ProcPolearm = { main = "Tzee Xicu's Blade", sub = empty }
 	sets.weapons.ProcGreatKatana = { main = "Mutsunokami", sub = empty }
 	sets.weapons.ProcClub = { main = "Kitty Rod", sub = empty }
 	sets.weapons.ProcStaff = { main = "Cobra Staff", sub = empty }	

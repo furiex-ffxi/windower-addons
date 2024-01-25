@@ -45,17 +45,18 @@ function init_gear_sets()
 	-- Precast sets
 	--------------------------------------
 	af = {}
+	af.Head = "Geo. Galero +2"
 	af.Body = "Geomancy Tunic +2"
-	af.Hands = "Geo. Mitaines +2"
+	af.Hands = "Geo. Mitaines +3"
 	af.Legs = "Geomancy Pants +2"
-	af.Feet = "Geomancy Sandals +2"
+	af.Feet = "Geo. Sandals +2"
 
 	relic = {}
-	relic.Head = "Bagua Galero +2"
-	relic.Body = "Bagua Tunic +1"
-	relic.Hands = "Bagua Mitaines +1"
-	relic.Legs = "Bagua Pants +1"
-	relic.Feet = "Bagua Sandals +1"
+	relic.Head = "Bagua Galero +3"
+	relic.Body = "Bagua Tunic +3"
+	relic.Hands = "Bagua Mitaines +3"
+	relic.Legs = "Bagua Pants +3"
+	relic.Feet = "Bagua Sandals +3"
 
 	empy = {}
 	empy.Head = "Azimuth Hood +2"
@@ -80,8 +81,9 @@ function init_gear_sets()
 	-- Fast cast sets for spells
 
 	sets.precast.FC = {
-		main = gear.grioavolr_fc_staff,
-		sub = "Clerisy Strap +1",
+		-- main = gear.grioavolr_fc_staff,
+		-- sub = "Clerisy Strap +1",
+		range = empty,
 		ammo = "Impatiens",
 		head = "C. Palug Crown",
         neck = "Baetyl Pendant", --4
@@ -165,6 +167,7 @@ function init_gear_sets()
 		main = "Solstice",
 		sub = "Genmei Shield",
 		range = "Dunna",
+		ammo = empty,
 		head = "Vanya Hood",
 		neck = "Bagua Charm +2",
 		ear1 = "Gifted Earring",
@@ -639,6 +642,7 @@ function init_gear_sets()
 	sets.idle = {
 		main = "Mpaca's Staff",
 		sub = "Umbra Strap",
+		range = empty,
 		ammo = "Staunch Tathlum +1",
 		neck = "Loricate Torque +1",
 		ear1 = "Genmei Earring",
@@ -677,6 +681,7 @@ function init_gear_sets()
 		main = "Sucellus",
 		sub = "Genmei Shield",
 		range = "Dunna",
+		ammo = empty,
 		head = empy.Head,
 		neck = "Loricate Torque +1",
 		ear1 = "Handler's Earring",
@@ -695,6 +700,7 @@ function init_gear_sets()
 		main = "Malignance Pole",
 		sub = "Umbra Strap",
 		range = "Dunna",
+		ammo = empty,
 		head = empy.Head,
 		neck = "Loricate Torque +1",
 		ear1 = "Handler's Earring",
@@ -829,18 +835,19 @@ function init_gear_sets()
 
 	-- Normal melee group
 	sets.engaged = {
-		ammo = "Hasty Pinion +1",
-		head = "Befouled Crown",
-		neck = "Asperity Necklace",
-		ear1 = "Cessance Earring",
-		ear2 = "Brutal Earring",
-		body = "Jhakri Robe +2",
-		hands = "Gazu Bracelet +1",
-		ring1 = "Ramuh Ring +1",
-		ring2 = "Ramuh Ring +1",
+		ammo = "Staunch Tathlum +1",
+		-- head = "Blistering Sallet +1",
+		head = empy.Head,
+		neck = "Combatant's Torque",
+		ear1 = "Crep. Earring",
+		ear2 = "Telos Earring",
+		body = empy.Body,
+		hands = "Gazu Bracelets +1",
+		ring1 = "Petrov Ring",
+		ring2 = "Lehko's Ring",
 		back = "Moonlight Cape",
-		waist = "Witful Belt",
-		legs = "Assid. Pants +1",
+		waist = "Eschan Stone",
+		legs = empy.Legs,
 		feet = "Battlecast Gaiters"
 	}
 
@@ -868,8 +875,23 @@ function init_gear_sets()
 	sets.RecoverMP = { body = "Seidr Cotehardie" }
 
 	-- Gear for Magic Burst mode.
-	sets.MagicBurst = { main = gear.grioavolr_nuke_staff, sub = "Alber Strap", head = "Ea Hat +1", neck =
-	"Mizu. Kubikazari", body = "Ea Houppe. +1", ring1 = "Mujin Band", legs = "Ea Slops +1", feet = "Jhakri Pigaches +2" }
+	sets.MagicBurst = { 
+		-- main = gear.grioavolr_nuke_staff, 
+		-- sub = "Alber Strap", 
+		range = empty,
+		ammo = "Ghastly Tathlum +1",
+		head = empy.Head, 
+		neck = "Mizu. Kubikazari", 
+		hands = empy.Hands,
+		body = empy.Body, 
+		waist = "Refoccilation Stone",
+		earring1 = "Malignance Earring",
+		earring2 = "Friomisi Earring",
+		ring1 = "Mujin Band", 
+		ring2 = "Freke Ring",
+		legs = empy.Legs, 
+		feet = "Jhakri Pigaches +2" 
+	}
 	sets.ResistantMagicBurst = { main = gear.grioavolr_nuke_staff, sub = "Enki Strap", head = "Ea Hat +1", neck =
 	"Mizu. Kubikazari", body = "Ea Houppe. +1", ring1 = "Mujin Band", legs = "Ea Slops +1", feet = "Jhakri Pigaches +2" }
 

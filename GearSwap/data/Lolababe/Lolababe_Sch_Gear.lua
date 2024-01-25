@@ -4,7 +4,7 @@ function user_job_setup()
     state.CastingMode:options('Normal', 'Resistant', 'Proc', 'OccultAcumen', '9k')
     state.IdleMode:options('Normal', 'PDT')
     state.HybridMode:options('Normal', 'PDT')
-    state.Weapons:options('None', 'Akademos', 'Khatvanga')
+    state.Weapons:options('None', 'Grioavolr', 'Bunzi', 'Akademos', 'Khatvanga')
 
     gear.nuke_jse_back = { name = "Lugh's Cape", augments = { 'INT+20', 'Mag. Acc+20 /Mag. Dmg.+20', '"Mag.Atk.Bns."+10' } }
     gear.fc_jse_back = { name="Lugh's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
@@ -874,18 +874,18 @@ function init_gear_sets()
         main = "Bolelabunga",
         sub = "Genmei Shield",
         ammo = "Homiliary",
-        head = "Befouled Crown",
-        neck = "Loricate Torque +1",
-        ear1 = "Etiolation Earring",
-        -- ear2 = "Ethereal Earring",
-        body = "Jhakri Robe +1",
-        -- hands = gear.merlinic_refresh_hands,
-        ring1 = "Defending Ring",
-        -- ring2 = "Sheltered Ring",
+        head = "Volte Beret",
+        neck = "Sanctity Necklace",
+        ear1 = "Crep. Earring",
+        ear2 = "Telos Earring",
+        body = "Volte Jupon",
+        hands = "Gazu Bracelets +1",
+        ring1 = "Chirich Ring +1",
+        ring2 = "Chirich Ring +1",
         -- back = "Umbra Cape",
-        -- waist = "Carrier's Sash",
-        legs = "Assid. Pants +1",
-        -- feet = gear.chironic_refresh_feet
+        waist = "Windbuffet Belt +1",
+        legs = "Agwu's Slops",
+        feet = "Nyame Sollerets"
     }
 
     sets.engaged.PDT = {
@@ -971,6 +971,8 @@ function init_gear_sets()
         main = "Khatvanga", 
         sub = "Bloodrain Strap"
     }
+    sets.weapons.Bunzi = { main = "Bunzi's Rod", sub = "Genmei Shield" }
+    sets.weapons.Grioavolr = { main = "Grioavolr", sub = "Enki Strap" }
 end
 
 -- Select default macro book on initial load or subjob change.

@@ -297,7 +297,9 @@ function init_gear_sets()
 	-- For song buffs (duration and AF3 set bonus)
 	sets.midcast.SongEffect = {
 		main = "Carnwenhan",
+		sub = "Ammurapi Shield",
 		range = "Gjallarhorn",
+		ammo = empty,
 		head = "Fili Calot +3",
 		body = "Fili Hongreline +3",
 		hands = "Fili Manchettes +3",
@@ -312,13 +314,16 @@ function init_gear_sets()
 		back = { name = "Intarabus's Cape", augments = { 'DEX+20', 'Accuracy+20 Attack+20', 'Accuracy+10', '"Dbl.Atk."+10', 'Phys. dmg. taken-10%', } },
 	}
 
-	sets.midcast.SongEffect.DW = { main = "Carnwenhan", sub = "Kali" } --Only weapons in this set. This set is overlayed onto SongEffect
+	sets.midcast.SongEffect.DW = { 
+		main = "Carnwenhan", sub = "Kali" 
+	} --Only weapons in this set. This set is overlayed onto SongEffect
 
 	-- For song defbuffs (duration primary, accuracy secondary)
 	sets.midcast.SongDebuff = {
 		-- main = "Carnwenhan",
 		-- sub = "Ammurapi Shield",
 		range = "Gjallarhorn",
+		ammo = empty,
 		head = "Brioso Roundlet +3",
 		body = "Brioso Justau. +3",
 		hands = "Brioso Cuffs +3",

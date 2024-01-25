@@ -79,4 +79,7 @@
     <lolababe>
         <visible>false</visible>
     </lolababe>
+    <mailman>
+        <visible>false</visible>
+    </mailman>
 </settings>

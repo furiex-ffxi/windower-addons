@@ -9,7 +9,7 @@ function user_job_setup()
 	state.PhysicalDefenseMode:options('PDT', 'NukeLock')
 	state.MagicalDefenseMode:options('MDT')
 	state.ResistDefenseMode:options('MEVA')
-	state.Weapons:options('None', 'Naegling', 'Tauret', 'DualWeapons', 'DualWeaponsAcc', 'DualEvisceration', 'DualClubs',
+	state.Weapons:options('None', 'Naegling', 'Tauret', 'Club', 'DualWeapons', 'DualWeaponsAcc', 'DualEvisceration', 'DualClubs',
 	'DualAeolian', 'DualProcSwords', 'DualProcDaggers', 'EnspellOnly', 'EnspellDW')
 
 	gear.stp_jse_back = { name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}}
@@ -935,6 +935,7 @@ function init_gear_sets()
 	sets.weapons.DualProcSwords = { main = "Brunello", sub = "Soulflayer's Wand", range = empty }
 	sets.weapons.DualProcDaggers = { main = "Blurred Knife +1", sub = "Atoyac", range = empty }
 	sets.weapons.Tauret = { main = "Tauret", sub = "Genmei Shield"}
+	sets.weapons.Club = { main = "Maxentius", sub = "Genmei Shield"}
 	sets.weapons.EnspellOnly = { main = "Qutrub Knife", sub = "Ceremonial Dagger", range = "Ullr", ammo = "Beetle Arrow" }
 	sets.weapons.EnspellDW = { main = "Crocea Mors", sub = "Bunzi's Rod", range = empty }
 	sets.weapons.DualAlmace = { main = "Almace", sub = "Sequence", range = empty }
@@ -1140,4 +1141,4 @@ end
 
 autows_list = { ['Naegling'] = 'Savage Blade',['DualWeapons'] = 'Savage Blade',['DualWeaponsAcc'] = 'Savage Blade',
 	['DualEvisceration'] = 'Evisceration',['DualClubs'] = 'Black Halo',['DualAeolian'] = 'Aeolian Edge',
-	['EnspellDW'] = 'Sanguine Blade' }
+	['EnspellDW'] = 'Sanguine Blade',['Club'] = 'Black Halo' }

@@ -130,7 +130,6 @@ function job_precast(spell, spellMap, eventArgs)
 	if spell.action_type == 'Magic' then
 		if spell.english:contains('Honor March') then
 			equip({range="Marsyas"})
-			disable('range')
 		end
 		if not sets.precast.FC[spell.english] and (spell.type == 'BardSong' and spell.targets.Enemy) then
 			classes.CustomClass = 'SongDebuff'
@@ -320,8 +319,6 @@ function job_aftercast(spell, spellMap, eventArgs)
 					equip({sub=sets.weapons[state.Weapons.value].sub})
 					disable('sub')
 				end
-			else
-				enable('range')
 			end
 		end
 

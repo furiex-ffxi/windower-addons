@@ -11,7 +11,7 @@ function user_job_setup()
 
 	state.ExtraDefenseMode = M { ['description'] = 'Extra Defense Mode', 'None', 'MP' }
 
-	gear.enmity_jse_back = { name = "Ogma's cape", augments = { 'HP+60', 'Eva.+20 /Mag. Eva.+20', 'Mag. Evasion+10', 'Enmity+10', 'Damage taken-5%', } }
+	gear.enmity_jse_back = { name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}}
 	gear.stp_jse_back = { name = "Ogma's cape", augments = { 'DEX+20', 'Accuracy+20 Attack+20', '"Store TP"+10', } }
 	gear.da_jse_back = { name = "Ogma's cape", augments = { 'STR+20', 'Accuracy+20 Attack+20', '"Dbl.Atk."+10', } }
 
@@ -46,11 +46,11 @@ function init_gear_sets()
 	gear.af.Feet = "Runeist Bottes +1"
 
 	gear.relic = {}
-	gear.relic.Head = "Fu. Bandeau +1"
-	gear.relic.Body = "Futhark Coat +1"
-	gear.relic.Hands = "Futhark Mitons +1"
-	gear.relic.Legs = "Futhark Trousers +1"
-	gear.relic.Feet = "Futhark Boots +1"
+	gear.relic.Head = "Fu. Bandeau +3"
+	gear.relic.Body = "Futhark Coat +2"
+	gear.relic.Hands = "Futhark Mitons +3"
+	gear.relic.Legs = "Futhark Trousers +2"
+	gear.relic.Feet = "Futhark Boots +3"
 
 	gear.empy = {}
 	gear.empy.Head = "Erilaz Galea +2"
@@ -73,8 +73,7 @@ function init_gear_sets()
 		hands = gear.relic.Hands,
 		ring1 = "Eihwaz Ring",
 		ring2 = "Provocare Ring",
-		back = "Agema Cape",
-		-- back = gear.enmity_jse_back,
+		back = gear.enmity_jse_back,
 		waist = "Kasiri Belt",
 		legs = gear.empy.Legs,
 		feet = gear.empy.Feet
@@ -110,7 +109,7 @@ function init_gear_sets()
 		hands = "Nyame Gauntlets",
 		ring1 = "Gelatinous Ring +1",
 		ring2 = "Moonlight Ring",
-		back = "Moonlight Cape",
+		back = gear.enmity_jse_back,
 		waist = "Flume Belt +1",
 		legs = gear.empy.Legs,
 		feet = gear.empy.Feet
@@ -215,7 +214,7 @@ function init_gear_sets()
 		hands = gear.herculean_waltz_hands,
 		ring1 = "Defending Ring",
 		ring2 = "Valseur's Ring",
-		back = "Moonlight Cape",
+		back = gear.enmity_jse_back,
 		waist = "Chaac Belt",
 		legs = "Dashing Subligar",
 		feet = gear.herculean_waltz_feet
@@ -241,7 +240,7 @@ function init_gear_sets()
 		hands = "Leyline Gloves",
 		ring1 = "Lebeche Ring",
 		ring2 = "Kishar Ring",
-		back = "Moonlight Cape",
+		back = gear.enmity_jse_back,
 		waist = "Carrier's Sash",
 		legs = "Agwu's Slops",
 		feet = "Carmine Greaves +1"
@@ -259,7 +258,7 @@ function init_gear_sets()
 		hands = "Leyline Gloves",
 		ring1 = "Gelatinous Ring +1",
 		ring2 = "Moonlight Ring",
-		back = "Moonlight Cape",
+		back = gear.enmity_jse_back,
 		waist = "Carrier's Sash",
 		legs = "Nyame Flanchard",
 		feet = "Carmine Greaves +1"
@@ -284,7 +283,8 @@ function init_gear_sets()
 		hands = "Meg. Gloves +2",
 		ring1 = "Niqmaddu Ring",
 		ring2 = "Regal Ring",
-		back = gear.da_jse_back,
+		-- back = gear.da_jse_back,
+		back = gear.enmity_jse_back,
 		waist = "Fotia Belt",
 		legs = "Meg. Chausses +2",
 		feet = gear.herculean_ta_feet
@@ -299,7 +299,8 @@ function init_gear_sets()
 		hands = "Meg. Gloves +2",
 		ring1 = "Niqmaddu Ring",
 		ring2 = "Regal Ring",
-		back = gear.da_jse_back,
+		-- back = gear.da_jse_back,
+		back = gear.enmity_jse_back,
 		waist = "Fotia Belt",
 		legs = "Meg. Chausses +2",
 		feet = gear.herculean_ta_feet
@@ -314,7 +315,8 @@ function init_gear_sets()
 		hands = "Meg. Gloves +2",
 		ring1 = "Niqmaddu Ring",
 		ring2 = "Regal Ring",
-		back = gear.da_jse_back,
+		-- back = gear.da_jse_back,
+		back = gear.enmity_jse_back,
 		waist = "Fotia Belt",
 		legs = "Meg. Chausses +2",
 		feet = gear.herculean_ta_feet
@@ -329,7 +331,8 @@ function init_gear_sets()
 		hands = "Meg. Gloves +2",
 		ring1 = "Niqmaddu Ring",
 		ring2 = "Regal Ring",
-		back = gear.da_jse_back,
+		-- back = gear.da_jse_back,
+		back = gear.enmity_jse_back,
 		waist = "Fotia Belt",
 		legs = "Meg. Chausses +2",
 		feet = gear.herculean_acc_feet
@@ -344,7 +347,8 @@ function init_gear_sets()
 		hands = "Meg. Gloves +2",
 		ring1 = "Ramuh Ring +1",
 		ring2 = "Ramuh Ring +1",
-		back = gear.stp_jse_back,
+		-- back = gear.stp_jse_back,
+		back = gear.enmity_jse_back,
 		waist = "Fotia Belt",
 		legs = "Meg. Chausses +2",
 		feet = gear.herculean_acc_feet
@@ -387,7 +391,7 @@ function init_gear_sets()
 		hands = "Leyline Gloves",
 		ring1 = "Lebeche Ring",
 		ring2 = "Kishar Ring",
-		back = "Moonlight Cape",
+		back = gear.enmity_jse_back,
 		waist = "Flume Belt +1",
 		legs = "Aya. Cosciales +2",
 		feet = "Carmine Greaves +1"
@@ -405,7 +409,7 @@ function init_gear_sets()
 		hands = "Nyame Gauntlets",
 		ring1 = "Gelatinous Ring +1",
 		ring2 = "Moonlight Ring",
-		back = "Moonlight Cape",
+		back = gear.enmity_jse_back,
 		waist = "Flume Belt +1",
 		legs = "Nyame Flanchard",
 		feet = "Nyame Sollerets"
@@ -712,19 +716,22 @@ function init_gear_sets()
 	--------------------------------------
 
 	sets.engaged = {
-		main = "Aettir", -- Lionheart
+		main = "Montante +1", -- Lionheart
 		sub = "Utu Grip",
 		ammo = "Aurgelmir Orb +1",
 		head = "Dampening Tam",
 		neck = "Anu Torque",
-		ear1 = "Brutal Earring",
-		ear2 = "Sherida Earring",
-		body = "Adhemar Jacket +1",
-		hands = "Adhemar Wrist. +1",
+		ear1 = "Crepuscular Earring",
+		ear2 = "Erilaz Earring +2",
+		body = "Ashera Harness",
+		-- hands = "Adhemar Wrist. +1",
+		hands = "Gazu Bracelets +1", 
 		ring1 = "Niqmaddu Ring",
-		ring2 = "Epona's Ring",
-		back = gear.stp_jse_back,
-		waist = "Windbuffet Belt +1",
+		ring2 = "Lehko's Ring",
+		-- back = gear.stp_jse_back,
+		back = gear.enmity_jse_back,
+		-- waist = "Windbuffet Belt +1",
+		waist = "Sailfi Belt +1",
 		legs = "Samnuha Tights",
 		feet = gear.herculean_ta_feet
 	}
@@ -740,7 +747,8 @@ function init_gear_sets()
 		hands = "Adhemar Wrist. +1",
 		ring1 = "Niqmaddu Ring",
 		ring2 = "Ilabrat Ring",
-		back = gear.stp_jse_back,
+		-- back = gear.stp_jse_back,
+		back = gear.enmity_jse_back,
 		waist = "Grunfeld Rope",
 		legs = "Meg. Chausses +2",
 		feet = gear.herculean_ta_feet
@@ -757,7 +765,8 @@ function init_gear_sets()
 		hands = "Meg. Gloves +2",
 		ring1 = "Ramuh Ring +1",
 		ring2 = "Ramuh Ring +1",
-		back = gear.stp_jse_back,
+		-- back = gear.stp_jse_back,
+		back = gear.enmity_jse_back,
 		waist = "Olseni Belt",
 		legs = "Carmine Cuisses +1",
 		feet = gear.herculean_acc_feet
@@ -775,7 +784,8 @@ function init_gear_sets()
 		hands = "Nyame Gauntlets",
 		ring1 = "Defending Ring",
 		ring2 = "Epona's Ring",
-		back = gear.stp_jse_back,
+		-- back = gear.stp_jse_back,
+		back = gear.enmity_jse_back,
 		waist = "Windbuffet Belt +1",
 		legs = "Meg. Chausses +2",
 		feet = "Nyame Sollerets"
@@ -792,7 +802,8 @@ function init_gear_sets()
 		hands = "Nyame Gauntlets",
 		ring1 = "Defending Ring",
 		ring2 = "Ilabrat Ring",
-		back = gear.stp_jse_back,
+		-- back = gear.stp_jse_back,
+		back = gear.enmity_jse_back,
 		waist = "Windbuffet Belt +1",
 		legs = "Meg. Chausses +2",
 		feet = "Nyame Sollerets"
@@ -809,7 +820,8 @@ function init_gear_sets()
 		hands = "Meg. Gloves +2",
 		ring1 = "Defending Ring",
 		ring2 = "Ramuh Ring +1",
-		back = gear.stp_jse_back,
+		-- back = gear.stp_jse_back,
+		back = gear.enmity_jse_back,
 		waist = "Olseni Belt",
 		legs = "Meg. Chausses +2",
 		feet = "Nyame Sollerets"
@@ -927,9 +939,5 @@ function check_trust()
 end
 
 function user_job_lockstyle()
-	if state.Weapons.value == 'Lionheart' then
-		windower.chat.input('/lockstyleset 034')
-	else
-		windower.chat.input('/lockstyleset 033')
-	end
+	windower.chat.input('/lockstyleset 004')
 end

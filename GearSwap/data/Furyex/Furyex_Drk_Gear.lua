@@ -30,17 +30,15 @@ function init_gear_sets()
 	DRKCape.STP = { name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%', }}
 	DRKCape.STR = { name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}}
 
-	AF = {}
-	AF = {
-		Head="Ig. Burgeonet +2",
+	gear.af = {
+		Head="Ig. Burgeonet +3",
 		Body="Ignominy Cuirass +3",
 		Hands="Ig. Gauntlets +2",
 		Legs="Ig. Flan. +2",
 		Feet="Ig. Sollerets +2",
 	}
 
-	Relic = {}
-	Relic = {
+	gear.relic = {
 		Head={ name="Fall. Burgeonet +3", augments={'Enhances "Dark Seal" effect',}},
 		Body={ name="Fall. Cuirass +3", augments={'Enhances "Blood Weapon" effect',}},
 		Hands={ name="Fall. Fin. Gaunt. +3", augments={'Enhances "Diabolic Eye" effect',}},
@@ -48,17 +46,15 @@ function init_gear_sets()
 		Feet={ name="Fall. Sollerets +3", augments={'Enhances "Desperate Blows" effect',}},
 	}
 
-	Empy = {}
-	Empy = {
-		Head="Heathen's Burgeonet +2",
+	gear.empy = {
+		Head="Heath. Burgeon. +2",
 		Body="Heath. Cuirass +2",
 		Hands="Heath. Gauntlets +2",
 		Legs="Heath. Flanchard +2",
 		Feet="Heath. Sollerets +2",
 	}
 
-	Sulevia = {}
-	Sulevia = {
+	gear.sulevia = {
 		head="Sulevia's Mask +2",
 		body="Sulevia's Plate. +2",
 		hands="Sulev. Gauntlets +2",
@@ -69,19 +65,19 @@ function init_gear_sets()
 	-- Precast Sets
 	-- Precast sets to enhance JAs
 	sets.precast.JA['Diabolic Eye'] = {
-		hands = Relic.Hands,
+		hands = gear.relic.Hands,
 	}
 	sets.precast.JA['Arcane Circle'] = {
-		feet = AF.Feet,
+		feet = gear.af.Feet,
 
 	}
 	sets.precast.JA['Souleater'] = {}
 	sets.precast.JA['Weapon Bash'] = {
-		hands = AF.Hands,
+		hands = gear.af.Hands,
 	}
 	sets.precast.JA['Nether Void'] = {}
 	sets.precast.JA['Blood Weapon'] = {
-		body = Relic.Body,
+		body = gear.relic.Body,
 	}
 	sets.precast.JA['Dark Seal'] = {}
 	sets.precast.JA['Last Resort'] = { back = DRKCape.TP }
@@ -100,12 +96,11 @@ function init_gear_sets()
 
 	sets.precast.FC = {
 		ammo = "Impatiens",
-		-- head = "Carmine Mask +1",
-		head = Relic.Head,
+		head = "Carmine Mask +1",
 		neck = "Voltsurge Torque",
 		ear1 = "Enchntr. Earring +1",
 		ear2 = "Malignance Earring",
-		body = Relic.Body,
+		body = gear.relic.Body,
 		hands = "Leyline Gloves",
 		ring1 = "Prolix Ring",
 		ring2 = "Kishar Ring",
@@ -143,12 +138,12 @@ function init_gear_sets()
 		ear1 = "Digni. Earring",
 		ear2 = "Malignance Earring",
 		body = "Flamma Korazin +2",
-		hands = Relic.Hands,
+		hands = gear.relic.Hands,
 		ring1 = "Stikini Ring +1",
 		ring2 = "Stikini Ring +1",
 		back = "Toro Cape",
 		waist = "Eschan Stone",
-		legs = Empy.Legs,
+		legs = gear.empy.Legs,
 		feet = "Flam. Gambieras +2"
 	}
 
@@ -175,15 +170,16 @@ function init_gear_sets()
 		waist = "Plat. Mog. Belt",
 		ring1 = "Gelatinous Ring +1",
 		ring2 = "Moonbean Ring",
-		body = Empy.Body,
+		body = gear.empy.Body,
 		back = "Moonlight Cape",
 	})
 	sets.midcast.Absorb = set_combine(sets.midcast['Dark Magic'], { 
+		head = gear.af.Head,
 		back = DRKCape.TP,
 		ring1 = "Kishar Ring",
 	})
 	sets.midcast['Absorb-TP'] = set_combine(sets.midcast.Absorb, {
-		hands = Empy.Hands,
+		hands = gear.empy.Hands,
 	})
 
 	sets.midcast.Stun = {
@@ -205,7 +201,7 @@ function init_gear_sets()
 	sets.midcast.Drain = set_combine(
 		sets.midcast['Dark Magic'],
 		{
-			hands = Relic.Hands, -- low magic accuracy
+			hands = gear.relic.Hands, -- low magic accuracy
 			ring1 = "Evanescence Ring",
 			ring2 = "Excelsis Ring",
 			-- ring2 = "Archon Ring",
@@ -247,7 +243,7 @@ function init_gear_sets()
 		-- ear1 = "Lugra Earring +1",
         ear1 = { name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
         ear2 = "Thrud Earring",
-		body = AF.Body,
+		body = gear.af.Body,
 		hands = "Nyame Gauntlets",
         ring1 = "Epaminondas's Ring",
         ring2 ="Karieyh Ring",		
@@ -256,8 +252,8 @@ function init_gear_sets()
 		back = DRKCape.STR,
 		waist = "Sailfi Belt +1",
 		-- legs = sets.Nyame.Legs,
-		legs=Relic.Legs,
-		feet = Empy.Feet,
+		legs=gear.relic.Legs,
+		feet = gear.empy.Feet,
 		-- legs = "Sulev. Cuisses +2",
 		-- feet = "Flam. Gambieras +2"
 	}
@@ -338,7 +334,6 @@ function init_gear_sets()
 		-- head = "Jumalik Helm",
 		-- body = "Jumalik Mail",
 		-- hands = "Sulev. Gauntlets +2",
-		-- legs = "Carmine Cuisses +1",
 		-- feet = "Amm Greaves"
 		head="Hjarrandi Helm",
 		body="Hjarrandi Breastplate",
@@ -363,7 +358,6 @@ function init_gear_sets()
 		-- head = "Jumalik Helm",
 		-- body = "Jumalik Mail",
 		-- hands = "Sulev. Gauntlets +2",
-		-- legs = "Carmine Cuisses +1",
 		-- feet = "Amm Greaves",
 		head="Sakpata's Helm",
 		body="Sakpata's Plate",
@@ -437,7 +431,7 @@ function init_gear_sets()
 	 }
 	sets.buff.Doom = set_combine(sets.buff.Doom, {})
 	sets.buff.Sleep = { head = "Frenzy Sallet" }
-	sets.buff['Dark Seal'] = { head= Relic.Head }
+	sets.buff['Dark Seal'] = { head= gear.relic.Head }
 
 	-- Engaged sets
 	sets.engaged = {
@@ -446,7 +440,7 @@ function init_gear_sets()
 		head="Flam. Zucchetto +2",
 		body="Hjarrandi Breastplate",
 		hands="Sakpata's Gauntlets",
-		legs = AF.Legs,
+		legs = gear.af.Legs,
 		feet = "Flam. Gambieras +2",
 		neck = "Abyssal Beads +2",
 		waist = "Sailfi Belt +1",
@@ -493,7 +487,7 @@ function init_gear_sets()
 		body = "Hjarrandi Breastplate",
 		hands = "Flam. Manopolas +2",
 		-- legs = "Flamma Dirs +2",
-		legs = "Sulevia's cuisses +2",
+		legs = gear.sulevia.Legs,
 		feet = "Flam. Gambieras +2",
 		left_ear="Dedition Earring",
 		right_ear="Crep. Earring",
@@ -620,7 +614,7 @@ function init_gear_sets()
 	--Extra Special Sets
 
 	sets.buff.Souleater = {
-		head = AF.Head,
+		head = gear.af.Head,
 	}
 	sets.buff.Doom = set_combine(sets.buff.Doom, {})
 	sets.buff.Sleep = { head = "Frenzy Sallet" }
