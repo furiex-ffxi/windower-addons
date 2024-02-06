@@ -21,106 +21,50 @@ return {
             ["ready_reaction"] = "turnaround"
         }
     },
-    ["Bozzetto Skathi"] = {
-        ["Blight Dance"] = {
-            ["complete_reaction"] = "facemob",
-            ["ready_reaction"] = "turnaround"
+    ["Bozzetto Skathi"]={
+        ["Blight Dance"]={
+            ["complete_reaction"]="facemob", 
+            ["ready_reaction"]="turnaround"
+        }, 
+        ["Petrifaction"]={
+            ["complete_reaction"]="facemob", 
+            ["ready_reaction"]="turnaround"
         },
-        ["Noxious Dance"] = {
-            ["complete_reaction"] = "facemob",
-            ["ready_reaction"] = "turnaround"
+        ["Calcifying Deluge"]={
+            ["complete_reaction"]="facemob", 
+            ["ready_reaction"]="turnaround"
         },
-        ["Petrifaction"] = {
-            ["complete_reaction"] = "facemob",
-            ["ready_reaction"] = "turnaround"
+        ["Impale"]={
+            ["complete_reaction"]="", 
+            ["ready_reaction"]="facemob"
         },
-        ["Edifying Dance"] = {
-            ["complete_reaction"] = "facemob",
-            ["ready_reaction"] = "turnaround"
+        ["Poisonous Dance"]={
+            ["complete_reaction"]="facemob", 
+            ["ready_reaction"]="turnaround"
         },
-        ["Implaing Disregard"] = {
-            ["complete_reaction"] = "",
-            ["ready_reaction"] = "facemob"
+    }, 
+    ["Bozzetto Freyja"]={
+        ["Impale"]={
+            ["complete_reaction"]="", 
+            ["ready_reaction"]="facemob"
         },
-        ["Noahionto"] = {
-            ["complete_reaction"] = "",
-            ["ready_reaction"] = "facemob"
+        ["Petrifaction"]={
+            ["complete_reaction"]="facemob", 
+            ["ready_reaction"]="turnaround"
+        }, 
+        ["Petrifactive Dance"]={
+            ["complete_reaction"]="facemob", 
+            ["ready_reaction"]="turnaround"
         },
-        ["Eisenschneider"] = {
-            ["complete_reaction"] = "facemob",
-            ["ready_reaction"] = "turnaround"
+    },
+    ["Bozzetto Frigg"]={
+        ["Chastening Disregard"]={
+            ["complete_reaction"]="", 
+            ["ready_reaction"]="facemob"
         },
-        ["Infernal Bulwark"] = {
-            ["complete_reaction"] = "facemob",
-            ["ready_reaction"] = "turnaround"
-        },
-        ["Acheron Kick"] = {
-            ["complete_reaction"] = "facemob",
-            ["ready_reaction"] = "turnaround"
+        ["Luxurious Dance"]={
+            ["complete_reaction"]="facemob", 
+            ["ready_reaction"]="turnaround"
         }
     },
-    ["Bozzetto Freyja"] = {
-        ["Implaing Disregard"] = {
-            ["complete_reaction"] = "",
-            ["ready_reaction"] = "facemob"
-        },
-        ["Petrifaction"] = {
-            ["complete_reaction"] = "facemob",
-            ["ready_reaction"] = "turnaround"
-        },
-        ["Petrifying Dance"] = {
-            ["complete_reaction"] = "facemob",
-            ["ready_reaction"] = "turnaround"
-        },
-        ["Edifying Dance"] = {
-            ["complete_reaction"] = "facemob",
-            ["ready_reaction"] = "turnaround"
-        },
-        ["Noahionto"] = {
-            ["complete_reaction"] = "",
-            ["ready_reaction"] = "facemob"
-        },
-        ["Eisenschneider"] = {
-            ["complete_reaction"] = "facemob",
-            ["ready_reaction"] = "turnaround"
-        },
-        ["Infernal Bulwark"] = {
-            ["complete_reaction"] = "facemob",
-            ["ready_reaction"] = "turnaround"
-        },
-        ["Acheron Kick"] = {
-            ["complete_reaction"] = "facemob",
-            ["ready_reaction"] = "turnaround"
-        }
-    },
-    ["Bozzetto Frigg"] = {
-        ["Chasting Disregard"] = {
-            ["complete_reaction"] = "",
-            ["ready_reaction"] = "facemob"
-        },
-        ["Raqs Baladi Dance"] = {
-            ["complete_reaction"] = "facemob",
-            ["ready_reaction"] = "turnaround"
-        },
-        ["Noahionto"] = {
-            ["complete_reaction"] = "",
-            ["ready_reaction"] = "facemob"
-        },
-        ["Eisenschneider"] = {
-            ["complete_reaction"] = "facemob",
-            ["ready_reaction"] = "turnaround"
-        },
-        ["Infernal Bulwark"] = {
-            ["complete_reaction"] = "facemob",
-            ["ready_reaction"] = "turnaround"
-        },
-        ["Acheron Kick"] = {
-            ["complete_reaction"] = "facemob",
-            ["ready_reaction"] = "turnaround"
-        },
-        ["Rampant Stance"] = {
-            ["complete_reaction"] = "facemob",
-            ["ready_reaction"] = "turnaround"
-        }
-    }
 }

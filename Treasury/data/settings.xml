@@ -4,20 +4,21 @@
         <AutoDrop>true</AutoDrop>
         <AutoStack>true</AutoStack>
         <Delay>0</Delay>
-        <Drop>Hi-Potion +2,Durium Ore,Translucent Rock,Rainbow Cloth,Thunder V,Hydra Scale,Dark Carol II,Fluorite,S.Abjuration: Lg.,Dark Adaman,Kitron,Horde Lullaby II,Pro-Ether +1,Ice Carol II,Mind Potion,F.Abjuration: Lg.,Aquamarine,Gold Thread,Ram Horn,Yellow Rock,White Rock,Comet,Aeroja,Gravity II,Breeze Geode,Boost-DEX,Green Rock,Pining Nocturne,Fire Carol II,Wind Carol II,Flocon-de-mer,X-Potion +2,Ebony Log,Wyvern Scales,Strength Potion,Coral Fragment,Jacaranda Log,Kakka: Ichi,Purple Rock,Beech Log,Light Carol II,Danceshroom,Mahogany Log,Dexterity Potion,Boost-CHR,Absorb-Attri,Gain-STR,Kudzu Aketon,Moonstone,Cerberus Hide,Divine Log,Zircon,Firaja,Anc. Beast Horn,Gain-AGI,Gold Ingot,King Truffle,Charisma Potion,Elixir,Granite,Gold Ore,Woozyshroom,X-Potion +3,Pigeon&apos;s Blood,Breakga,C.Abjuration: Lg.,Chrysoberyl,Adloquium,Ruszor Meat,Temper,Red Rock,Agility Potion,Cura III,Blizzaja,Demon Horn,Painite,Hi-Potion +3,Sunstone,Ram Skin,Int. Potion,Blizzard V,W. Spider&apos;s Web,Valor Minuet V,Gibbous Axe,Khimaira Mane,Boost-AGI,Holy II,Hi-Elixir,Gain-DEX,Thundaja,Wyvern Skin,Boost-STR,Phrygian Ore,Dragon Meat,Wyvern Tailskin,Mythril Ore,Migawari: Ichi,Blue Rock,Gain-CHR,Regen IV,Pro-Ether,Jadeite,Imperial Cermet,Mythril Ingot</Drop>
-        <Pass>Hpemde Organ,High-Quality Hpemde Organ,Fire Cluster,High-Quality Xzomit Organ,Xzomit Organ,Light Cluster,Aern Organ,Wind Cluster,Water Cluster,Ice Cluster,Luminian Tissue,Dark Cluster,High-Quality Phuabo Organ,Yovra Organ,Earth Cluster,Phuabo Organ,Lightning Cluster</Pass>
+        <Drop>Hi-Potion +2,Durium Ore,Translucent Rock,Rainbow Cloth,Thunder V,Elixir,Dark Carol II,Fluorite,S.Abjuration: Lg.,Dark Adaman,Kitron,Horde Lullaby II,Pro-Ether +1,Moonstone,Mind Potion,Absorb-Attri,Aquamarine,Gold Thread,Ram Horn,Light Carol II,White Rock,Comet,Aeroja,Gravity II,Breeze Geode,Boost-DEX,Strength Potion,Imperial Cermet,Flocon-de-mer,Wind Carol II,Jadeite,X-Potion +2,Pining Nocturne,Regen IV,Green Rock,Gain-CHR,Jacaranda Log,Kakka: Ichi,Yellow Rock,Beech Log,Migawari: Ichi,Danceshroom,Mahogany Log,Zircon,Boost-CHR,Mythril Ore,Gain-STR,Wyvern Tailskin,Dragon Meat,Cerberus Hide,Divine Log,Dexterity Potion,Boost-STR,King Truffle,Gain-AGI,Gold Ingot,Anc. Beast Horn,Charisma Potion,Hydra Scale,Granite,Gain-DEX,Hi-Elixir,X-Potion +3,Woozyshroom,Breakga,Holy II,Chrysoberyl,Boost-AGI,Ruszor Meat,Temper,Valor Minuet V,Agility Potion,Cura III,Blizzaja,Blizzard V,Painite,Int. Potion,Sunstone,Ram Skin,Hi-Potion +3,Demon Horn,W. Spider&apos;s Web,Red Rock,Gibbous Axe,Khimaira Mane,Adloquium,C.Abjuration: Lg.,Pigeon&apos;s Blood,Gold Ore,Thundaja,Wyvern Skin,Firaja,Phrygian Ore,Ice Carol II,Coral Fragment,F.Abjuration: Lg.,Purple Rock,Blue Rock,Kudzu Aketon,Wyvern Scales,Pro-Ether,Fire Carol II,Ebony Log,Mythril Ingot</Drop>
+        <Lot />
+        <Pass>Hpemde Organ,High-Quality Hpemde Organ,Fire Cluster,Yovra Organ,Xzomit Organ,Water Cluster,Aern Organ,Wind Cluster,Light Cluster,Phuabo Organ,Luminian Tissue,Dark Cluster,Earth Cluster,High-Quality Xzomit Organ,High-Quality Phuabo Organ,Ice Cluster,Lightning Cluster</Pass>
         <Verbose>false</Verbose>
     </global>
     <cleobabe>
-        <Lot>Baetyl Pendant,Melic Torque,Deceiver&apos;s Torque,Henic Torque,Passion Jacket,Mystic Fragment</Lot>
-        <Pass>Decimus Torque,Yarak Torque,Carnal Torque,Acantha Torque,Maskirova Torque,Bilious Torque,Agelast Torque</Pass>
+        <Lot>Henic Torque,Mystic Fragment,Deceiver&apos;s Torque,Passion Jacket,Melic Torque,Baetyl Pendant</Lot>
+        <Pass>Yarak Torque,Carnal Torque,Decimus Torque,Agelast Torque,Acantha Torque,Maskirova Torque,Bilious Torque</Pass>
     </cleobabe>
     <furyex>
-        <Lot>Melic Torque,Acantha Torque,Maskirova Torque,Cirein-Croin&apos;s Lantern,Carabosse&apos;s Gem,Isgebind&apos;s Heart,Mystic Fragment</Lot>
-        <Pass>Decimus Torque,Yarak Torque,Carnal Torque,Acantha Torque,Bilious Torque,Agelast Torque</Pass>
+        <Lot>Mystic Fragment,Isgebind&apos;s Heart,Carabosse&apos;s Gem,Cirein-Croin&apos;s Lantern,Acantha Torque,Maskirova Torque,Melic Torque</Lot>
+        <Pass>Yarak Torque,Carnal Torque,Decimus Torque,Agelast Torque,Acantha Torque,Bilious Torque</Pass>
     </furyex>
     <lolababe>
-        <Lot>Henic Torque,Melic Torque,Deceiver&apos;s Torque,Barathrum,Querkening Brais</Lot>
+        <Lot>Querkening Brais,Henic Torque,Barathrum,Melic Torque,Deceiver&apos;s Torque</Lot>
     </lolababe>
     <mailman>
         <Lot>Lissome Necklace</Lot>

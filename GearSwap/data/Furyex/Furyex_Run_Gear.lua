@@ -836,7 +836,7 @@ function init_gear_sets()
 		ear1 = "Odnowa Earring +1",
 		ear2 = "Tuisto Earring",
 		body = "Nyame Mail",
-		hands = "Nyame Gauntlets",
+		hands = "Turms Mittens +1",
 		ring1 = "Gelatinous Ring +1",
 		ring2 = "Shadow Ring",
 		back = "Shadow Mantle",

@@ -61,6 +61,7 @@ function init_gear_sets()
 
 	-- Weapons sets
 	sets.weapons.DualCarnwenhan = {main="Carnwenhan", sub="Centovente"}
+	sets.weapons.Naegling = { main = "Naegling", sub = "Genmei Shield" }
 	sets.weapons.Aeneas = { main = "Aeneas", sub = "Genmei Shield" }
 	sets.weapons.Carnwenhan = { main = "Carnwenhan", sub = "Genmei Shield" }
 	sets.weapons.DualWeapons = { main = "Aeneas", sub = "Centovente" }
@@ -247,52 +248,6 @@ function init_gear_sets()
 	}
 
 	sets.midcast.Utsusemi = sets.midcast.SpellInterrupt
-
-	-- Gear to enhance certain classes of songs
-	sets.midcast.Lullaby = { range = "Gjallarhorn" }
-	sets.midcast.Lullaby.Resistant = sets.midcast.Lullaby
-
-	sets.midcast.Ballad = { legs = "Fili Rhingrave +2" }
-	sets.midcast.Carol = { hands = "Mousai Gages +1" }
-	sets.midcast.Etude = { head = "Mousai Turban +1" }
-	sets.midcast['Horde Lullaby'] = { 
-		main = "Carnwenhan",
-		sub = "Ammurapi Shield",
-		range = "Gjallarhorn" 
-	} 
-	sets.midcast['Horde Lullaby'].Resistant = sets.midcast['Horde Lullaby']
-	sets.midcast['Horde Lullaby'].AoE = sets.midcast['Horde Lullaby']
-	sets.midcast['Horde Lullaby II'] = {
-		main = "Carnwenhan",
-		sub = "Ammurapi Shield",
-		range = "Daurdabla",
-		hands = "Inyan. Dastanas +2",
-		feet = "Bihu Slippers +3",
-		ear1 = "Gersemi Earring",
-	}
-	sets.midcast['Horde Lullaby II'].Resistant = sets.midcast['Horde Lullaby II']
-	sets.midcast['Horde Lullaby II'].AoE = sets.midcast['Horde Lullaby II']
-	sets.midcast.Madrigal = { head = "Fili Calot +3" }
-	sets.midcast.Mambo = { feet = "Mou. Crackows +1" }
-	sets.midcast.March = { hands = "Fili Manchettes +3" }
-	sets.midcast['Honor March'] = set_combine(sets.midcast.March,{range="Marsyas"})
-	sets.midcast["Aria of Passion"] = {
-		range = "Loughnashade",
-	}
-	sets.midcast.Minne = { legs = "Mou. Seraweels +1" }
-	sets.midcast.Minuet = { body = "Fili Hongreline +3" }
-	sets.midcast.Paeon = set_combine(sets.precast.FC, { range = info.ExtraSongInstrument }) --for singer addon dummy
-	sets.midcast.Prelude = { feet = "Fili Cothurnes +3" }
-	sets.midcast.Threnody = { body = "Mou. Manteel +1" }
-	sets.midcast['Adventurer\'s Dirge'] = { range = "Marsyas", hands = "Bihu Cuffs +3" }
-	sets.midcast['Foe Sirvente'] = { head = "Bihu Roundlet +3" }
-	sets.midcast['Magic Finale'] = { legs = "Fili Rhingrave +2" }
-	sets.midcast["Sentinel's Scherzo"] = { feet = "Fili Cothurnes +3" }
-	sets.midcast["Chocobo Mazurka"] = { range = "Marsyas" }
-
-	sets.midcast['Scop\'s Operetta'] = sets.precast.FC.Daurdabla
-	sets.midcast['Goblin Gavotte'] = sets.precast.FC.Daurdabla
-	sets.midcast['Sheepfoe Mambo'] = sets.precast.FC.Daurdabla
 
 	-- For song buffs (duration and AF3 set bonus)
 	sets.midcast.SongEffect = {
@@ -529,6 +484,52 @@ function init_gear_sets()
 	sets.midcast.Dispelga = set_combine(sets.midcast['Enfeebling Magic'],
 		{ main = "Daybreak", sub = "Ammurapi Shield", waist = "Shinjutsu-no-Obi +1" })
 
+
+	-- Gear to enhance certain classes of songs
+	sets.midcast.Lullaby = { range = "Gjallarhorn" }
+	sets.midcast.Lullaby.Resistant = sets.midcast.Lullaby
+
+	sets.midcast.Ballad = { legs = "Fili Rhingrave +2" }
+	sets.midcast.Carol = { hands = "Mousai Gages +1" }
+	sets.midcast.Etude = { head = "Mousai Turban +1" }
+	sets.midcast['Horde Lullaby'] = { 
+		main = "Carnwenhan",
+		sub = "Ammurapi Shield",
+		range = "Gjallarhorn" 
+	} 
+	sets.midcast['Horde Lullaby'].Resistant = sets.midcast['Horde Lullaby']
+	sets.midcast['Horde Lullaby'].AoE = sets.midcast['Horde Lullaby']
+	sets.midcast['Horde Lullaby II'] = {
+		main = "Carnwenhan",
+		sub = "Ammurapi Shield",
+		range = "Daurdabla",
+		hands = "Inyan. Dastanas +2",
+		feet = "Bihu Slippers +3",
+		ear1 = "Gersemi Earring",
+	}
+	sets.midcast['Horde Lullaby II'].Resistant = sets.midcast['Horde Lullaby II']
+	sets.midcast['Horde Lullaby II'].AoE = sets.midcast['Horde Lullaby II']
+	sets.midcast.Madrigal = { head = "Fili Calot +3" }
+	sets.midcast.Mambo = { feet = "Mou. Crackows +1" }
+	sets.midcast.March = { hands = "Fili Manchettes +3" }
+	sets.midcast['Honor March'] = set_combine(sets.midcast.March,{range="Marsyas"})
+	sets.midcast["Aria of Passion"] = {
+		range = "Loughnashade",
+	}
+	sets.midcast.Minne = { legs = "Mou. Seraweels +1" }
+	sets.midcast.Minuet = { body = "Fili Hongreline +3" }
+	sets.midcast.Prelude = { feet = "Fili Cothurnes +3" }
+	sets.midcast.Threnody = { body = "Mou. Manteel +1" }
+	sets.midcast['Adventurer\'s Dirge'] = { range = "Marsyas", hands = "Bihu Cuffs +3" }
+	sets.midcast['Foe Sirvente'] = { head = "Bihu Roundlet +3" }
+	sets.midcast['Magic Finale'] = { legs = "Fili Rhingrave +2" }
+	sets.midcast["Sentinel's Scherzo"] = { feet = "Fili Cothurnes +3" }
+	sets.midcast["Chocobo Mazurka"] = { range = "Marsyas" }
+
+	sets.midcast.Paeon = sets.midcast.DaurdablaDummy 
+	sets.midcast['Scop\'s Operetta'] = sets.midcast.DaurdablaDummy
+	sets.midcast['Goblin Gavotte'] = sets.midcast.DaurdablaDummy
+	sets.midcast['Sheepfoe Mambo'] = sets.midcast.DaurdablaDummy		
 	------
 
 	-- Resting sets
@@ -728,7 +729,7 @@ function init_gear_sets()
 	sets.engaged.DW.Acc.DT = set_combine(sets.engaged.DW, sets.engaged.Acc, sets.engaged.DT)
 
 	sets.buff.Doom = {
-		--neck="Nicander's Necklace", --20
+		neck="Nicander's Necklace", --20
 		ring1 = { name = "Eshmun's Ring", bag = "wardrobe3" }, --20
 		ring2 = { name = "Eshmun's Ring", bag = "wardrobe4" }, --20
 		waist = "Gishdubar Sash",                      --10

@@ -40,20 +40,16 @@ return {
             ["complete_reaction"]="facemob", 
             ["ready_reaction"]="turnaround"
         },
-        ["Impaling Disregard"]={
-            ["complete_reaction"]="", 
-            ["ready_reaction"]="facemob"
-        },
         ["Impale"]={
             ["complete_reaction"]="", 
             ["ready_reaction"]="facemob"
         },
+        ["Poisonous Dance"]={
+            ["complete_reaction"]="facemob", 
+            ["ready_reaction"]="turnaround"
+        },
     }, 
     ["Bozzetto Freyja"]={
-        ["Implaing Disregard"]={
-            ["complete_reaction"]="", 
-            ["ready_reaction"]="facemob"
-        },
         ["Impale"]={
             ["complete_reaction"]="", 
             ["ready_reaction"]="facemob"
@@ -76,5 +72,5 @@ return {
             ["complete_reaction"]="facemob", 
             ["ready_reaction"]="turnaround"
         }
-    } 
+    },
 }

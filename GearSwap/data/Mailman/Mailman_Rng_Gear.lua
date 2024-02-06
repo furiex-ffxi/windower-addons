@@ -149,7 +149,7 @@ function init_gear_sets()
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {
         -- head = "Orion Beret +3",
-        -- neck = "Fotia Gorget",
+        neck = "Fotia Gorget",
         body = sets.Nyame.Body,
         hands = sets.Nyame.Hands,
 		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},

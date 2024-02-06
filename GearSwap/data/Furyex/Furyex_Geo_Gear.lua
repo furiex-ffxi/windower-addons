@@ -139,7 +139,22 @@ function init_gear_sets()
 
 	-- Weaponskill sets
 	-- Default set for any weaponskill that isn't any more specifically defined
-	sets.precast.WS = {}
+	sets.precast.WS = {
+		head = sets.Nyame.Head,
+		ammo = "Oshasha's Treatise",
+		range = empty,
+		neck = "Combatant's Torque",
+		body = sets.Nyame.Body,        
+		hands = sets.Nyame.Hands,
+		legs = sets.Nyame.Legs,
+		feet = sets.Nyame.Feet,
+		waist =	"Sailfi Belt +1",
+		left_ear = { name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+		right_ear =	"Ishvara Earring",
+		left_ring = "Epaminondas's Ring",
+		right_ring = "Karieyh Ring",
+		-- back = RDMCape.MACC,
+	}
 
 
 	--------------------------------------
@@ -164,8 +179,8 @@ function init_gear_sets()
 	}
 
 	sets.midcast.Geomancy = {
-		main = "Solstice",
-		sub = "Genmei Shield",
+		-- main = "Solstice",
+		-- sub = "Genmei Shield",
 		range = "Dunna",
 		ammo = empty,
 		head = "Vanya Hood",

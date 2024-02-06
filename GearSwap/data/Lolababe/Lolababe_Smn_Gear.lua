@@ -520,8 +520,8 @@ function init_gear_sets()
         ear2 = "Gelos Earring",
         body = "Con. Doublet +3",
         hands = gear.merlinic_physpact_hands,
+        legs = { name="Apogee Slacks +1", augments={'Pet: STR+20','Blood Pact Dmg.+14','Pet: "Dbl. Atk."+4'}},
         -- ring1 = "Varar Ring +1",
-        legs = {"name='Apogee Slacks +1', augments={'Pet: STR+20','Blood Pact Dmg.+14','Pet: 'Dbl. Atk. +4',"},
         ring2 = "C. Palug Ring",
         back = gear.phys_jse_back,
         waist = "Incarnation Sash",
@@ -869,7 +869,7 @@ function init_gear_sets()
     }
 
     -- Weapons sets
-    sets.weapons.Nirvana = { main = "Nirvana", sub = "Elan Strap +1" }
+    sets.weapons.Nirvana = { main = "Nirvana", sub = "Enki Strap" }
     sets.weapons.Khatvanga = { main = "Khatvanga", sub = "Bloodrain Strap" }
 
     sets.buff.Sublimation = { waist = "Embla Sash" }

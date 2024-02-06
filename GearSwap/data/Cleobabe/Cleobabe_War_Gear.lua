@@ -1,7 +1,7 @@
 function user_job_setup()
 	-- Options: Override default values
 	state.OffenseMode:options('Normal', 'SomeAcc', 'Acc', 'FullAcc', 'Fodder', 'Fencer')
-	state.WeaponskillMode:options('Match', 'Proc', 'Normal', 'SomeAcc', 'Acc', 'FullAcc', 'Fodder')
+	state.WeaponskillMode:options('Match', 'AttackCap', 'Normal', 'SomeAcc', 'Acc', 'FullAcc', 'Fodder', 'Proc')
 	state.HybridMode:options('Normal')
 	state.PhysicalDefenseMode:options('PDT', 'PDTReraise')
 	state.MagicalDefenseMode:options('MDT', 'MDTReraise')
@@ -13,7 +13,7 @@ function user_job_setup()
 	'ProcScythe', 'ProcPolearm', 'ProcGreatKatana', 'ProcClub', 'ProcStaff')
 
 	gear.da_jse_back = { name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
-	gear.wsd_str_jse_back = { name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}}
+	gear.wsd_str_jse_back = { name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
 	gear.wsd_vit_jse_back = {name="Cichol's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}}
 	-- gear.crit_jse_back = { name = "Cichol's Mantle", augments = { 'STR+20', 'Accuracy+20 Attack+20', 'Crit.hit rate+10' } }
 
@@ -167,6 +167,11 @@ function init_gear_sets()
         -- left_ring="Regal Ring",
         -- right_ring="Niqmaddu Ring",
 	}
+
+	sets.precast.WS.AttackCap = set_combine(sets.precast.WS, { 
+		-- body="Sakpata's Breastplate",
+		legs = "Boii Cuisses +3",
+	})
 
 	sets.precast.WS.Proc = {
 	}	

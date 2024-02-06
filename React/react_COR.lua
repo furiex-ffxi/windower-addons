@@ -40,7 +40,7 @@ return {
             ["complete_reaction"]="facemob", 
             ["ready_reaction"]="turnaround"
         },
-        ["Impaling Disregard"]={
+        ["Impale"]={
             ["complete_reaction"]="", 
             ["ready_reaction"]="facemob"
         },
@@ -50,7 +50,7 @@ return {
         },
     }, 
     ["Bozzetto Freyja"]={
-        ["Implaing Disregard"]={
+        ["Impale"]={
             ["complete_reaction"]="", 
             ["ready_reaction"]="facemob"
         },

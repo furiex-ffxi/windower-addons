@@ -29,10 +29,10 @@ function user_job_setup()
     gear.str_wsd_jse_back = { name="Camulus's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}}
 
     gear.Empy = {}
-    gear.Empy.Head = "Chass. Tricorne +2"
-    gear.Empy.Body = "Chasseur's Frac +2"
+    gear.Empy.Head = "Chass. Tricorne +3"
+    gear.Empy.Body = "Chasseur's Frac +3"
     gear.Empy.Hands = "Chasseur's Gants +3"
-    gear.Empy.Legs = "Chas. Culottes +2"
+    gear.Empy.Legs = "Chas. Culottes +3"
     gear.Empy.Feet = "Chass. Bottes +2"
 
     -- Additional local binds
@@ -71,14 +71,14 @@ function init_gear_sets()
     sets.precast.JA['Triple Shot'] = { 
         head="Oshosi Mask +1", -- Missing
         body=gear.Empy.Body, --14
-        hands="Lanun Gants", -- Tripple shot becomes Quad shot
+        hands="Lanun Gants +3", -- Tripple shot becomes Quad shot
         legs="Osh. Trousers +1", -- Missing
         feet="Osh. Leggings +1", --3
     }
-    sets.precast.JA['Snake Eye'] = { legs = "Lanun Trews +1" }
+    sets.precast.JA['Snake Eye'] = { legs = "Lanun Trews +3" }
     sets.precast.JA['Wild Card'] = { feet = "Lanun Bottes +3" }
     sets.precast.JA['Random Deal'] = { body = "Lanun Frac +3" }
-    sets.precast.FoldDoubleBust = { hands = "Lanun Gants" }
+    sets.precast.FoldDoubleBust = { hands = "Lanun Gants +3" }
 
     sets.precast.CorsairRoll = {
 		main={ name="Rostam", augments={'Path: C'}, bag="Wardrobe 2", priority=1}, -- +8 Effect and 60 sec Duration
@@ -541,7 +541,7 @@ function init_gear_sets()
 		waist="Yemaya Belt",
 		left_ear="Crep. Earring",
         -- right_ear = "Telos Earring",
-		right_ear="Chas. Earring",
+		right_ear="Chas. Earring +1",
 		left_ring="Ilabrat Ring",
 		right_ring="Crepuscular Ring",
         back=gear.tp_ranger_jse_back
@@ -561,7 +561,7 @@ function init_gear_sets()
     sets.buff['Triple Shot'] = { 
         head="Oshosi Mask +1", -- Missing
         body=gear.Empy.Body, --14
-        hands="Lanun Gants", -- Tripple shot becomes Quad shot
+        hands="Lanun Gants +3", -- Tripple shot becomes Quad shot
         legs="Osh. Trousers +1", -- Missing
         feet="Osh. Leggings +1", --3
     }
@@ -779,7 +779,6 @@ function init_gear_sets()
 
     sets.engaged.DT = set_combine(sets.engaged, {
         head=sets.Malignance.Head,
-        body="Chasseur's Frac +2",
         hands=sets.Malignance.Hands,
         legs=sets.Malignance.Lets,
         neck="Iskur Gorget",

@@ -85,31 +85,6 @@ function job_precast(spell, spellMap, eventArgs)
 		tickdelay = os.clock() + 6
 		return
 	end
-
-	if spell.type == 'WeaponSkill' then
-		if spell.english == 'Entropy' and not buffactive['Sekkanoki'] and abil_recasts[95] < latency then
-			eventArgs.cancel = true
-			windower.chat.input('/ja "Consume Mana" <me>')
-			windower.chat.input:schedule(1,'/ws "Entropy" <t>')
-			tickdelay = os.clock() + 1.25
-			return
-		elseif (player.sub_job == 'SAM' and not state.Buff['SJ Restriction']) and (not buffactive['Aftermath: Lv.3'] or not buffactive['Aftermath']) then
-				if player.tp > 1850 and not buffactive['Consume Mana'] and abil_recasts[140] < latency then
-					eventArgs.cancel = true
-					windower.chat.input('/ja "Sekkanoki" <me>')
-					windower.chat.input:schedule(1,'/ws "'..spell.english..'" '..spell.target.raw..'')
-					tickdelay = os.clock() + 1.25
-					return
-				elseif abil_recasts[134] < latency then
-					eventArgs.cancel = true
-					windower.chat.input('/ja "Meditate" <me>')
-					windower.chat.input:schedule(1,'/ws "'..spell.english..'" '..spell.target.raw..'')
-					tickdelay = os.clock() + 1.25
-					return
-				end
-			end
-	end
-
 end
 
 function job_aftercast(spell, spellMap, eventArgs)
@@ -278,7 +253,10 @@ function update_melee_groups()
 	if (player.equipment.main == "Liberator" and buffactive['Aftermath: Lv.3']) then
 		classes.CustomMeleeGroups:append('AM')
 	end
-	
+
+	if (player.equipment.main == "Liberator") then
+		
+	end
 end
 
 function check_hasso()

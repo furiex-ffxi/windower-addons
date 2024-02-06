@@ -62,6 +62,14 @@ function init_gear_sets()
 		feet="Sulev. Leggings +2",
 	}
 
+	sets.enmity = {
+		head = "Halitus Helm",
+		back = "Agema Cape",
+		neck = "Warder's Charm +1",
+		ring1 = "Petrov Ring",
+		ring2 = "Provocare Ring",
+	}
+
 	-- Precast Sets
 	-- Precast sets to enhance JAs
 	sets.precast.JA['Diabolic Eye'] = {
@@ -130,6 +138,8 @@ function init_gear_sets()
 	}
 
 	-- Specific spells
+	sets.midcast['Sleep'] = sets.enmity
+	sets.midcast['Sleep II'] = sets.enmity
 
 	sets.midcast['Dark Magic'] = {
 		ammo = "Pemphredo Tathlum",
@@ -170,7 +180,11 @@ function init_gear_sets()
 		waist = "Plat. Mog. Belt",
 		ring1 = "Gelatinous Ring +1",
 		ring2 = "Moonbean Ring",
+		head="Ratri Sallet +1",
 		body = gear.empy.Body,
+		hands="Rat. Gadlings +1",
+		legs="Ratri Cuisses +1",
+		feet="Rat. Sollerets +1",
 		back = "Moonlight Cape",
 	})
 	sets.midcast.Absorb = set_combine(sets.midcast['Dark Magic'], { 
@@ -210,9 +224,9 @@ function init_gear_sets()
 		}
 	)
 
-	sets.DrainWeapon = { main = "Misanthropy", sub = "Alber Strap" }
+	sets.DrainWeapon = { main = "Apocalypse", sub = "Niobid Strap" }
 
-	--sets.AbsorbWeapon = {main="Liberator",sub="Khonsu",range="Ullr",ammo=empty}
+	--sets.AbsorbWeapon = {main="Liberator",sub="Niobid Strap",range="Ullr",ammo=empty}
 	--sets.DreadWeapon = {main="Crepuscular Scythe",sub="Utu Grip",} 	
 
 	sets.midcast.Aspir = sets.midcast.Drain
@@ -237,14 +251,13 @@ function init_gear_sets()
 	-- Default set for any weaponskill that isn't any more specifically defined
 	sets.precast.WS = {
         ammo="Knobkierrie",
-		head = "Nyame Helm",
-		-- neck = "Fotia Gorget",
+		head = sets.Nyame.Head,
 		neck = "Abyssal Beads +2",
 		-- ear1 = "Lugra Earring +1",
         ear1 = { name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
         ear2 = "Thrud Earring",
 		body = gear.af.Body,
-		hands = "Nyame Gauntlets",
+		hands = sets.Nyame.Hands,
         ring1 = "Epaminondas's Ring",
         ring2 ="Karieyh Ring",		
 		-- ring1 = "Regal Ring",
@@ -254,8 +267,6 @@ function init_gear_sets()
 		-- legs = sets.Nyame.Legs,
 		legs=gear.relic.Legs,
 		feet = gear.empy.Feet,
-		-- legs = "Sulev. Cuisses +2",
-		-- feet = "Flam. Gambieras +2"
 	}
 
 	sets.precast.WS.SomeAcc = set_combine(sets.precast.WS, {})
@@ -288,19 +299,48 @@ function init_gear_sets()
 
 	sets.precast.WS['Insurgency'] = set_combine(sets.precast.WS, {
 		ring2 = "Niqmaddu Ring",
+		hands = "Sakpata's Gauntlets",
 	})
-	sets.precast.WS['Insurgency'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
-	sets.precast.WS['Insurgency'].Acc = set_combine(sets.precast.WS.Acc, {})
-	sets.precast.WS['Insurgency'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
-	sets.precast.WS['Insurgency'].Fodder = set_combine(sets.precast.WS.Fodder, {})
+	sets.precast.WS['Insurgency'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {
+		ring2 = "Niqmaddu Ring",
+		hands = "Sakpata's Gauntlets",
+	})
+	sets.precast.WS['Insurgency'].Acc = set_combine(sets.precast.WS.Acc, {
+		ring2 = "Niqmaddu Ring",
+		hands = "Sakpata's Gauntlets",
+	})
+	sets.precast.WS['Insurgency'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
+		ring2 = "Niqmaddu Ring",
+		hands = "Sakpata's Gauntlets",
+	})
+	sets.precast.WS['Insurgency'].Fodder = set_combine(sets.precast.WS.Fodder, {
+		ring2 = "Niqmaddu Ring",
+		hands = "Sakpata's Gauntlets",
+		legs = "Ratri Cuisses +1"
+	})
 
 	sets.precast.WS['Cross Reaper'] = set_combine(sets.precast.WS, {
 		ring2 = "Niqmaddu Ring",
 	})
-	sets.precast.WS['Cross Reaper'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
-	sets.precast.WS['Cross Reaper'].Acc = set_combine(sets.precast.WS.Acc, {})
-	sets.precast.WS['Cross Reaper'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
-	sets.precast.WS['Cross Reaper'].Fodder = set_combine(sets.precast.WS.Fodder, {})
+	sets.precast.WS['Cross Reaper'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {
+		ring2 = "Niqmaddu Ring",
+	})
+	sets.precast.WS['Cross Reaper'].Acc = set_combine(sets.precast.WS.Acc, {
+		ring2 = "Niqmaddu Ring",
+	})
+	sets.precast.WS['Cross Reaper'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
+		ring2 = "Niqmaddu Ring",
+	})
+	sets.precast.WS['Cross Reaper'].Fodder = set_combine(sets.precast.WS.Fodder, {
+		ring2 = "Niqmaddu Ring",
+	})
+
+	sets.precast.WS['Quietus'] = set_combine(sets.precast.WS, {})
+	sets.precast.WS['Quietus'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
+	sets.precast.WS['Quietus'].Acc = set_combine(sets.precast.WS.Acc, {})
+	sets.precast.WS['Quietus'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
+	sets.precast.WS['Quietus'].Fodder = set_combine(sets.precast.WS.Fodder, {})
+
 
 	sets.precast.WS['Entropy'] = set_combine(sets.precast.WS, {})
 	sets.precast.WS['Entropy'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
@@ -308,11 +348,57 @@ function init_gear_sets()
 	sets.precast.WS['Entropy'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
 	sets.precast.WS['Entropy'].Fodder = set_combine(sets.precast.WS.Fodder, {})
 
-	sets.precast.WS['Resolution'] = set_combine(sets.precast.WS, {})
-	sets.precast.WS['Resolution'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
-	sets.precast.WS['Resolution'].Acc = set_combine(sets.precast.WS.Acc, {})
-	sets.precast.WS['Resolution'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
-	sets.precast.WS['Resolution'].Fodder = set_combine(sets.precast.WS.Fodder, {})
+	sets.precast.WS['Resolution'] = set_combine(sets.precast.WS, {
+		neck = "Fotia Gorget",
+	})
+	sets.precast.WS['Resolution'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {
+		neck = "Fotia Gorget",
+	})
+	sets.precast.WS['Resolution'].Acc = set_combine(sets.precast.WS.Acc, {
+		neck = "Fotia Gorget",
+	})
+	sets.precast.WS['Resolution'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
+		neck = "Fotia Gorget",
+	})
+	sets.precast.WS['Resolution'].Fodder = set_combine(sets.precast.WS.Fodder, {
+		neck = "Fotia Gorget",
+	})
+
+	sets.precast.WS['Herculean Slash'] = set_combine(sets.precast.WS, {
+		-- neck = "Sanctity Necklace",
+		ear1 = "Friomisi Earring",
+		ear2 = "Malignance Earring",
+		waist = "Eschan Stone",
+		ring2 = "Metamor. Ring +1",
+	})
+	sets.precast.WS['Herculean Slash'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {
+		-- neck = "Sanctity Necklace",
+		ear1 = "Friomisi Earring",
+		ear2 = "Malignance Earring",
+		waist = "Eschan Stone",
+		ring2 = "Metamor. Ring +1",
+	})
+	sets.precast.WS['Herculean Slash'].Acc = set_combine(sets.precast.WS.Acc, {
+		-- neck = "Sanctity Necklace",
+		ear1 = "Friomisi Earring",
+		ear2 = "Malignance Earring",
+		waist = "Eschan Stone",
+		ring2 = "Metamor. Ring +1",
+	})
+	sets.precast.WS['Herculean Slash'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
+		-- neck = "Sanctity Necklace",
+		ear1 = "Friomisi Earring",
+		ear2 = "Malignance Earring",
+		waist = "Eschan Stone",
+		ring2 = "Metamor. Ring +1",
+	})
+	sets.precast.WS['Herculean Slash'].Fodder = set_combine(sets.precast.WS.Fodder, {
+		-- neck = "Sanctity Necklace",
+		ear1 = "Friomisi Earring",
+		ear2 = "Malignance Earring",
+		waist = "Eschan Stone",
+		ring2 = "Metamor. Ring +1",
+	})
 
 	-- Sets to return to when not performing an action.
 
@@ -473,7 +559,7 @@ function init_gear_sets()
 	})
 
 	sets.engaged.Liberator = set_combine(sets.engaged, {
-		right_ear="Schere Earring",
+		-- right_ear="Schere Earring",
 	})
 
 	sets.engaged.Liberator.DT = set_combine(sets.engaged.Liberator, {

@@ -9,13 +9,13 @@ function user_job_setup()
         name = "Gridarvor"
     }
 
-    gear.magic_jse_back = {
-        name = "Campestres's Cape",
-        augments = {'Pet: M.Acc.+20 Pet: M.Dmg.+20', 'Eva.+20 /Mag. Eva.+20', 'Pet: "Regen"+10'}
+    gear.magic_jse_back = { 
+        name="Campestres's Cape", 
+        augments={'Pet: M.Acc.+20 Pet: M.Dmg.+20','Eva.+20 /Mag. Eva.+20','Pet: Mag. Acc.+10','Pet: "Regen"+10','Phys. dmg. taken-10%'}
     }
-    gear.phys_jse_back = {
-        name = "Campestres's Cape",
-        augments = {'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20', 'Eva.+20 /Mag. Eva.+20', 'Pet: Haste+10'}
+    gear.phys_jse_back = { 
+        name="Campestres's Cape", 
+        augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Eva.+20 /Mag. Eva.+20','Pet: Attack+10 Pet: Rng.Atk.+10','Pet: Haste+10','Phys. dmg. taken-10%'}
     }
 
     send_command('bind !` input /ja "Release" <me>')
@@ -531,18 +531,22 @@ function init_gear_sets()
         main = "Gridarvor",
         sub = "Elan Strap +1",
         ammo = "Epitaph",
-        head = "Helios Band",
+        head = "Apogee Crown +1",
         neck = "Shulmanu Collar",
         ear1 = "Lugalbanda Earring",
-        ear2 = "Gelos Earring",
-        body = "Con. Doublet +3",
-        hands = gear.merlinic_physpact_hands,
-        ring1 = "Varar Ring +1",
-        ring2 = "C. Palug Ring",
+        ear2 = "Cath Palug Earring",
+        -- ear2 = "Gelos Earring",
+        -- body = "Con. Doublet +3",
+        body = sets.Nyame.Body,
+        -- hands = gear.merlinic_physpact_hands,
+        hands = sets.Nyame.Hands,
+        ring1 = { name="Varar Ring +1", bag="wardrobe3" },
+        ring2 = { name="Varar Ring +1", bag="wardrobe4" },
         back = gear.phys_jse_back,
         waist = "Incarnation Sash",
         legs = "Apogee Slacks +1",
-        feet = "Apogee Pumps +1"
+        feet = "Apogee Pumps +1",
+        -- feet = "Convo. Pigaches +3"
     }
 
     sets.midcast.Pet.PhysicalBloodPactRage.Acc = {
@@ -550,20 +554,25 @@ function init_gear_sets()
     }
 
     sets.midcast.Pet.MagicalBloodPactRage = {
-        main = gear.grioavolr_pet_staff,
+        -- main = gear.grioavolr_pet_staff,
+        main = "Grioavolr",
         sub = "Elan Strap +1",
         ammo = "Epitaph",
         head = "Apogee Crown +1",
         neck = "Adad Amulet",
         ear1 = "Lugalbanda Earring",
-        ear2 = "Gelos Earring",
-        body = "Con. Doublet +3",
-        hands = gear.merlinic_magpact_hands,
+        ear2 = "Cath Palug Earring",
+        -- ear2 = "Gelos Earring",
+        -- body = "Con. Doublet +3",
+        body = sets.Nyame.Body,
+        hands = sets.Nyame.Hands,
+        -- hands = gear.merlinic_magpact_hands,
         ring1 = "Varar Ring +1",
         ring2 = "Varar Ring +1",
         back = gear.magic_jse_back,
         waist = "Regal Belt",
-        legs = "Enticer's Pants",
+        legs = sets.Nyame.Legs,
+        -- legs = "Enticer's Pants",
         feet = "Apogee Pumps +1"
     }
 
@@ -678,23 +687,23 @@ function init_gear_sets()
         feet = "Baayami Sabots"
     }
 
-    sets.idle.PDT = {
+    sets.idle.PDT = set_combine(sets.Nyame, {
         main = "Malignance Pole",
         sub = "Umbra Strap",
         ammo = "Staunch Tathlum +1",
-        head = "Convoker's Horn +3",
+        -- head = "Convoker's Horn +3",
         neck = "Loricate Torque +1",
         ear1 = "C. Palug Earring",
         ear2 = "Ethereal Earring",
-        body = "Shomonjijoe +1",
-        hands = gear.merlinic_refresh_hands,
+        -- body = "Shomonjijoe +1",
+        -- hands = gear.merlinic_refresh_hands,
         ring1 = "Defending Ring",
         ring2 = "Dark Ring",
         back = "Moonlight Cape",
         waist = "Regal Belt",
-        legs = "Assid. Pants +1",
-        feet = "Baayami Sabots"
-    }
+        -- legs = "Assid. Pants +1",
+        -- feet = "Baayami Sabots"
+    })
 
     -- perp costs:
     -- spirits: 7
@@ -726,7 +735,7 @@ function init_gear_sets()
         feet = "Convo. Pigaches +3"
     }
 
-    sets.idle.PDT.Avatar = {
+    sets.idle.PDT.Avatar = set_combine(sets.Nyame, {
         main = "Malignance Pole",
         sub = "Umbra Strap",
         ammo = "Epitaph",
@@ -743,7 +752,7 @@ function init_gear_sets()
         legs = "Assid. Pants +1",
         feet = "Convo. Pigaches +3"
     }
-
+)
     sets.idle.Spirit = {
         main = "Gridarvor",
         sub = "Umbra Strap",
@@ -803,43 +812,43 @@ function init_gear_sets()
     sets.perp.staff_and_grip = {}
 
     -- Defense sets
-    sets.defense.PDT = {
+    sets.defense.PDT = set_combine(sets.Nyame, {
         main = "Malignance Pole",
         sub = "Umbra Strap",
         ammo = "Epitaph",
-        head = "Beckoner's Horn +1",
+        -- head = "Beckoner's Horn +1",
         neck = "Loricate Torque +1",
         ear1 = "Handler's Earring +1",
         ear2 = "Enmerkar Earring",
-        body = "Shomonjijoe +1",
-        hands = gear.merlinic_refresh_hands,
+        -- body = "Shomonjijoe +1",
+        -- hands = gear.merlinic_refresh_hands,
         ring1 = "Defending Ring",
         ring2 = "Dark Ring",
         back = "Moonlight Cape",
         waist = "Regal Belt",
-        legs = "Assid. Pants +1",
-        feet = "Baayami Sabots"
-    }
+        -- legs = "Assid. Pants +1",
+        -- feet = "Baayami Sabots"
+    })
 
-    sets.defense.MDT = {
+    sets.defense.MDT = set_combine(sets.Nyame, {
         main = "Malignance Pole",
         sub = "Umbra Strap",
         ammo = "Epitaph",
-        head = "Beckoner's Horn +1",
+        -- head = "Beckoner's Horn +1",
         neck = "Loricate Torque +1",
         ear1 = "Handler's Earring +1",
         ear2 = "Enmerkar Earring",
-        body = "Shomonjijoe +1",
-        hands = gear.merlinic_refresh_hands,
+        -- body = "Shomonjijoe +1",
+        -- hands = gear.merlinic_refresh_hands,
         ring1 = "Defending Ring",
         ring2 = "Dark Ring",
         back = "Moonlight Cape",
         waist = "Regal Belt",
-        legs = "Assid. Pants +1",
-        feet = "Baayami Sabots"
-    }
+        -- legs = "Assid. Pants +1",
+        -- feet = "Baayami Sabots"
+    })
 
-    sets.defense.MEVA = {
+    sets.defense.MEVA = set_combine(sets.Nyame, {
         main = "Malignance Pole",
         sub = "Enki Strap",
         ammo = "Epitaph",
@@ -855,7 +864,7 @@ function init_gear_sets()
         waist = "Luminary Sash",
         legs = "Telchine Braconi",
         feet = "Telchine Pigaches"
-    }
+    })
 
     sets.Kiting = {
         feet = "Herald's Gaiters"

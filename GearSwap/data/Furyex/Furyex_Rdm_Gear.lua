@@ -167,7 +167,7 @@ function init_gear_sets()
 		neck = "Anu Torque",
 		body = sets.Nyame.Body,        
 		hands = sets.Nyame.Hands,
-		legs = sets.Nyame.Feet,
+		legs = sets.Nyame.Legs,
 		feet = EMPY.Feet,
 		waist =	"Sailfi Belt +1",
 		left_ear = { name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
@@ -215,7 +215,7 @@ function init_gear_sets()
 	sets.precast.WS['Chant Du Cygne'] = set_combine(sets.precast.WS, {
 		range = empty,
 		head = sets.Malignance.Head,
-		-- neck = "Fotia Gorget",
+		neck = "Fotia Gorget",
 		body = EMPY.Body,
 		ear1 = "Sherida Earring",
         ear2 = "Lethargy Earring",

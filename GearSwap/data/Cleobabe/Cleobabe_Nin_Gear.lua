@@ -13,8 +13,8 @@ function user_job_setup()
         'ProcPolearm', 'ProcGreatKatana', 'ProcKatana', 'ProcClub', 'ProcStaff')
     state.ExtraMeleeMode = M { ['description'] = 'Extra Melee Mode', 'None', 'SuppaBrutal', 'DWEarrings', 'DWMax' }
 
-    gear.wsd_jse_back = { name = "Andartia's Mantle", augments = { 'STR+20', 'Accuracy+20 Attack+20', 'Weapon skill damage +10%', } }
-    gear.da_jse_back = { name = "Andartia's Mantle", augments = { 'DEX+20', 'Accuracy+20 Attack+20', '"Dbl.Atk."+10', } }
+    gear.wsd_jse_back = { name = "Andartia's Mantle", augments = { 'STR+20', 'Accuracy+20 Attack+20', 'Weapon skill damage +10%', 'Phys. dmg. taken-10%',} }
+    gear.da_jse_back = { name = "Andartia's Mantle", augments = { 'DEX+20', 'Accuracy+20 Attack+20', '"Dbl.Atk."+10', 'Phys. dmg. taken-10%',} }
 
     send_command('bind ^` input /ja "Innin" <me>')
     send_command('bind !` input /ja "Yonin" <me>')
@@ -42,11 +42,11 @@ function init_gear_sets()
     }
 
     gear.relic = {
-        Head = "Mochi. Hatsuburi +2",
-        Body = "Mochi. Chainmail +2",
-        Hands = "Mochizuki Tekko +2",
-        Legs = "Mochi. Hakama +2",
-        Feet = "Mochi. Kyahan +2"
+        Head = "Mochi. Hatsuburi +3",
+        Body = "Mochi. Chainmail +3",
+        Hands = "Mochizuki Tekko +3",
+        Legs = "Mochi. Hakama +3",
+        Feet = "Mochi. Kyahan +3"
     }
 
     gear.empy = {
@@ -175,7 +175,6 @@ function init_gear_sets()
     sets.precast.WS = {
         -- ammo = "Voluspa Tathlum",
         -- head = "Hachiya Hatsu. +3",
-        -- neck = "Fotia Gorget",
         -- ear1 = "Lugra Earring",
         -- ear2 = "Moonshade Earring",
         -- body = "Adhemar Jacket +1",
@@ -186,12 +185,12 @@ function init_gear_sets()
         -- waist = "Fotia Belt",
         -- feet = "Mochi. Hakama +3"
         ammo = "Oshasha's Treatise",
+        neck = "Fotia Gorget",
         head = sets.Nyame.Head,
         body = sets.Nyame.Body,
         hands = sets.Nyame.Hands,
         legs = sets.Nyame.Legs,
         feet = sets.Nyame.Feet,
-        neck = "Combatant's Torque",
         waist = { name="Sailfi Belt +1", augments={'Path: A',}},
         left_ear = { name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
         right_ear = "Lugra Earring",
@@ -581,16 +580,16 @@ function init_gear_sets()
     -- Normal melee group
     sets.engaged = {
         ammo="Coiste Bodhar",
-        head="Nyame Helm",
+        head="Malignance Chapeau",
         body="Malignance Tabard",
         hands={ name="Tatena. Gote +1", augments={'Path: A',}},
         legs="Samnuha Tights",
-        feet="Nyame Sollerets",
-        neck="Loricate Torque +1",
+        feet="Malignance Boots",
+        neck="Ninja Nodowa +2",
         waist={ name="Sailfi Belt +1", augments={'Path: A',}},
         left_ear="Suppanomimi",
         right_ear="Cessance Earring",
-        left_ring="Crepuscular Ring",
+        left_ring="Ilabrat Ring",
         right_ring="Epona's Ring",
         back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Damage taken-5%',}},
     }
