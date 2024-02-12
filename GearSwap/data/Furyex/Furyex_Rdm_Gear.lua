@@ -272,7 +272,7 @@ function init_gear_sets()
         back = RDMCape.MACC,	
 	})
 
-	sets.precast.WS['Seraph Blade'] = {
+	sets.precast.WS['Seraph Blade'] = set_combine(sets.precast.WS, {
         neck = "Dls. Torque +2",
         legs = EMPY.Legs,
 		hands = "Jhakri Cuffs +2",
@@ -283,7 +283,20 @@ function init_gear_sets()
         ammo = "Sroda Tathlum",
 		range =  empty,
         back = RDMCape.MACC,
-	}
+	})
+
+	sets.precast.WS['Red Lotus Blade'] = set_combine(sets.precast.WS, {
+        neck = "Dls. Torque +2",
+        legs = EMPY.Legs,
+		hands = "Jhakri Cuffs +2",
+        feet = EMPY.Feet,
+        left_ear = "Malignance Earring",
+        right_ear = "Snotra Earring",
+        waist = "Orpheus's Sash ",
+        ammo = "Sroda Tathlum",
+		range =  empty,
+        back = RDMCape.MACC,
+	})	
 
 	sets.precast.WS['Aeolian Edge'] = {
 		-- range = empty,
@@ -829,7 +842,7 @@ function init_gear_sets()
         -- legs		=	Carm.Legs.D,
         feet		=	EMPY.Feet,
         -- neck		=	"Twilight Torque",
-        -- waist		=	"Flume Belt",
+        waist		=	"Orpheus's Sash",
         left_ear	=	"Etiolation Earring",
         right_ear	=	"Ethereal Earring",
         left_ring	=	"Defending Ring",

@@ -13,7 +13,7 @@ function user_job_setup()
     state.CompensatorMode:options('Always', '300', '1000', 'Never')
 
     gear.RAbullet = "Living Bullet"
-    gear.WSbullet = "Living Bullet" -- "Chrono Bullet"
+    gear.WSbullet = "Chrono Bullet"
     gear.MAbullet = "Living Bullet" --For MAB WS, do not put single-use bullets here.
     gear.QDbullet = "Living Bullet" -- "Animikii Bullet"
     options.ammo_warning_limit = 15
@@ -685,8 +685,7 @@ function init_gear_sets()
     sets.weapons.Ranged = { 
         main = "Rostam", 
         sub = "Nusku Shield", 
-        range = "Death Penalty", 
-        -- range = "Fomalhaut" 
+        range = "Fomalhaut"
     }
     sets.weapons.Evisceration = { main = "Tauret", sub = "Nusku Shield", range = "Ataktos" }
     sets.weapons.DualWeapons = { main = "Naegling", sub = "Rostam", range = "Fomalhaut" }
@@ -719,10 +718,9 @@ function init_gear_sets()
     sets.weapons.DualRanged = {
 		main="Rostam",
         sub="Tauret",
-        range="Death Penalty"
 		-- sub={ name="Rostam", augments={'Path: C'}, bag="Wardrobe 2"},
-		-- range={ name="Fomalhaut", augments={'Path: A',}},
-		-- ammo="Chrono Bullet",
+		range={ name="Fomalhaut", augments={'Path: A',}},
+		ammo="Chrono Bullet",
     }
     sets.weapons.DualFermion = {
         main="Fermion Sword",

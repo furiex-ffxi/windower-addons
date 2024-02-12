@@ -1,6 +1,6 @@
 function user_job_setup()
 	-- Options: Override default values
-	state.OffenseMode:options('Normal','SomeAcc', 'Acc', 'FullAcc', 'Fodder')
+	state.OffenseMode:options('Normal','SomeAcc', 'Acc', 'FullAcc', 'Fodder', 'Subtle')
 	state.WeaponskillMode:options('Match', 'Normal', 'SomeAcc', 'Acc', 'FullAcc', 'Fodder')
 	state.HybridMode:options('Normal', 'DT')
 	state.PhysicalDefenseMode:options('PDT', 'PDTReraise')
@@ -34,7 +34,7 @@ function init_gear_sets()
 		Head="Ig. Burgeonet +3",
 		Body="Ignominy Cuirass +3",
 		Hands="Ig. Gauntlets +2",
-		Legs="Ig. Flan. +2",
+		Legs="Ig. Flanchard +2",
 		Feet="Ig. Sollerets +2",
 	}
 
@@ -555,7 +555,13 @@ function init_gear_sets()
 	})
 
 	sets.engaged.DT = set_combine(sets.engaged, {
+	})
 
+	sets.engaged.Subtle = set_combine(sets.engaged, {
+		head = "Sakpata's Helm",
+		feet = "Sakpata's Leggings",
+		left_ring = "Chirich Ring +1",
+		right_ring = "Chirich Ring +1",
 	})
 
 	sets.engaged.Liberator = set_combine(sets.engaged, {

@@ -9,7 +9,7 @@ function user_job_setup()
 	state.IdleMode:options('Normal', 'PDT', 'Refresh', 'Reraise')
 	state.ExtraMeleeMode = M { ['description'] = 'Extra Melee Mode', 'None' }
 	state.Passive = M { ['description'] = 'Passive Mode', 'None', 'Twilight' }
-	state.Weapons:options('None', 'Lycurgos', 'ShiningOne', 'Chango', 'DualWeapons', 'Greatsword', 'Naegling', 'Loxotic', 'ProcSword', 'ProcDagger', 'ProcKatana', 'ProcGreatSword',
+	state.Weapons:options('None', 'Chango', 'Lycurgos', 'ShiningOne', 'DualWeapons', 'Greatsword', 'Naegling', 'Loxotic', 'ProcSword', 'ProcDagger', 'ProcKatana', 'ProcGreatSword',
 	'ProcScythe', 'ProcPolearm', 'ProcGreatKatana', 'ProcClub', 'ProcStaff')
 
 	gear.da_jse_back = { name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
@@ -191,34 +191,59 @@ function init_gear_sets()
 	sets.precast.WS.Fodder = set_combine(sets.precast.WS, {})
 
 	-- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.	
-	sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {})
-	sets.precast.WS['Savage Blade'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
-	sets.precast.WS['Savage Blade'].Acc = set_combine(sets.precast.WS.Acc, {})
-	sets.precast.WS['Savage Blade'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
-	sets.precast.WS['Savage Blade'].Fodder = set_combine(sets.precast.WS.Fodder, {})
+	sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {
+		head = sets.Nyame.Head,
+	})
+	sets.precast.WS['Savage Blade'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {
+		head = sets.Nyame.Head,
+	})
+	sets.precast.WS['Savage Blade'].Acc = set_combine(sets.precast.WS.Acc, {
+		head = sets.Nyame.Head,
+	})
+	sets.precast.WS['Savage Blade'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
+		head = sets.Nyame.Head,
+	})
+	sets.precast.WS['Savage Blade'].Fodder = set_combine(sets.precast.WS.Fodder, {
+		head = sets.Nyame.Head,
+	})
 
 	sets.precast.WS['Upheaval'] = set_combine(sets.precast.WS, {
 		back = gear.wsd_vit_jse_back,
+		legs = "Boii Cuisses +3",
 		ring2 = "Niqmaddu Ring",
 	})
 	sets.precast.WS['Upheaval'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {
-		back=gear.wsd_vit_jse_back,
+		back = gear.wsd_vit_jse_back,
+		legs = "Boii Cuisses +3",
 		ring2 = "Niqmaddu Ring",
 	})
 	sets.precast.WS['Upheaval'].Acc = set_combine(sets.precast.WS.Acc, {
-		back=gear.wsd_vit_jse_back,
+		back = gear.wsd_vit_jse_back,
+		legs = "Boii Cuisses +3",
 		ring2 = "Niqmaddu Ring",
 	})
 	sets.precast.WS['Upheaval'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
-		back=gear.wsd_vit_jse_back,
+		back = gear.wsd_vit_jse_back,
+		legs = "Boii Cuisses +3",
 		ring2 = "Niqmaddu Ring",
 	})
 	sets.precast.WS['Upheaval'].Fodder = set_combine(sets.precast.WS.Fodder, {
-		back=gear.wsd_vit_jse_back,
+		back = gear.wsd_vit_jse_back,
+		legs = "Boii Cuisses +3",
 		ring2 = "Niqmaddu Ring",
 	})
 
-	sets.precast.WS['Resolution'] = set_combine(sets.precast.WS, {})
+	sets.precast.WS['Resolution'] = set_combine(sets.precast.WS, {
+		ammo = "Coiste Bodhar",
+		neck = "Fotia Gorget",
+		head = "Hjarrandi Helm",
+		body = "Sakpata's Plate",
+		hands = "Sakpata's Gauntlets",
+		legs = "Sakpata's Cuisses",
+		feet = "Pumm. Calligae +3",
+		belt = "Fotia Belt",
+		ring2 = "Niqmaddu Ring",
+	})
 	sets.precast.WS['Resolution'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
 	sets.precast.WS['Resolution'].Acc = set_combine(sets.precast.WS.Acc, {})
 	sets.precast.WS['Resolution'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
@@ -242,17 +267,52 @@ function init_gear_sets()
 	sets.precast.WS['Raging Rush'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
 	sets.precast.WS['Raging Rush'].Fodder = set_combine(sets.precast.WS.Fodder, {})
 
-	sets.precast.WS["Ukko's Fury"] = set_combine(sets.precast.WS, {})
-	sets.precast.WS["Ukko's Fury"].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
-	sets.precast.WS["Ukko's Fury"].Acc = set_combine(sets.precast.WS.Acc, {})
-	sets.precast.WS["Ukko's Fury"].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
-	sets.precast.WS["Ukko's Fury"].Fodder = set_combine(sets.precast.WS.Fodder, {})
+	sets.precast.WS["Ukko's Fury"] = set_combine(sets.precast.WS, {
+		body = "Hjarrandi Breast.",
+		hands = "Flam. Manopolas +2",
+		legs = "Boii Cuisses +3",
+		feet = "Boii Calligae +3",
+	})
+	sets.precast.WS["Ukko's Fury"].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {
+		body = "Hjarrandi Breast.",
+		hands = "Flam. Manopolas +2",
+		legs = "Boii Cuisses +3",
+		feet = "Boii Calligae +3",
+	})
+	sets.precast.WS["Ukko's Fury"].Acc = set_combine(sets.precast.WS.Acc, {
+		body = "Hjarrandi Breast.",
+		hands = "Flam. Manopolas +2",
+		legs = "Boii Cuisses +3",
+		feet = "Boii Calligae +3",
+	})
+	sets.precast.WS["Ukko's Fury"].FullAcc = set_combine(sets.precast.WS.FullAcc, {
+		body = "Hjarrandi Breast.",
+		hands = "Flam. Manopolas +2",
+		legs = "Boii Cuisses +3",
+		feet = "Boii Calligae +3",
+	})
+	sets.precast.WS["Ukko's Fury"].Fodder = set_combine(sets.precast.WS.Fodder, {
+		body = "Hjarrandi Breast.",
+		hands = "Flam. Manopolas +2",
+		legs = "Boii Cuisses +3",
+		feet = "Boii Calligae +3",
+	})
 
-	sets.precast.WS["King's Justice"] = set_combine(sets.precast.WS, {})
-	sets.precast.WS["King's Justice"].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
-	sets.precast.WS["King's Justice"].Acc = set_combine(sets.precast.WS.Acc, {})
-	sets.precast.WS["King's Justice"].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
-	sets.precast.WS["King's Justice"].Fodder = set_combine(sets.precast.WS.Fodder, {})
+	sets.precast.WS["King's Justice"] = set_combine(sets.precast.WS, {
+		ring2 = "Niqmaddu Ring",
+	})
+	sets.precast.WS["King's Justice"].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {
+		ring2 = "Niqmaddu Ring",
+	})
+	sets.precast.WS["King's Justice"].Acc = set_combine(sets.precast.WS.Acc, {
+		ring2 = "Niqmaddu Ring",
+	})
+	sets.precast.WS["King's Justice"].FullAcc = set_combine(sets.precast.WS.FullAcc, {
+		ring2 = "Niqmaddu Ring",
+	})
+	sets.precast.WS["King's Justice"].Fodder = set_combine(sets.precast.WS.Fodder, {
+		ring2 = "Niqmaddu Ring",
+	})
 
 	-- Swap to these on Moonshade using WS if at 3000 TP
 	sets.MaxTP = { ear1 = "Lugra Earring +1", ear2 = "Lugra Earring", }

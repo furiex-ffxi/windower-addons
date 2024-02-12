@@ -209,7 +209,7 @@ function init_gear_sets()
 	sets.midcast.Cure = {
 		main = gear.gada_healing_club,
 		sub = "Sors Shield",
-		ammo = "Hasty Pinion +1",
+		-- ammo = "Hasty Pinion +1",
 		head = "Vanya Hood",
 		-- neck = "Incanter's Torque",
 		neck = "Deviant Necklace",
@@ -228,7 +228,7 @@ function init_gear_sets()
 	sets.midcast.LightWeatherCure = {
 		main = "Chatoyant Staff",
 		sub = "Curatio Grip",
-		ammo = "Hasty Pinion +1",
+		-- ammo = "Hasty Pinion +1",
 		head = "Amalric Coif +1",
 		neck = "Phalaina Locket",
 		ear1 = "Gifted Earring",
@@ -247,7 +247,7 @@ function init_gear_sets()
 	sets.midcast.LightDayCure = {
 		main = gear.gada_healing_club,
 		sub = "Sors Shield",
-		ammo = "Hasty Pinion +1",
+		-- ammo = "Hasty Pinion +1",
 		head = "Amalric Coif +1",
 		neck = "Incanter's Torque",
 		ear1 = "Gifted Earring",
@@ -313,7 +313,7 @@ function init_gear_sets()
 	sets.midcast['Elemental Magic'].Resistant = {
 		main = "Daybreak",
 		sub = "Ammurapi Shield",
-		ammo = "Pemphredo Tathlum",
+		-- ammo = "Pemphredo Tathlum",
 		head = gear.merlinic_nuke_head,
 		neck = "Sanctity Necklace",
 		ear1 = "Regal Earring",
@@ -367,7 +367,7 @@ function init_gear_sets()
 	sets.midcast['Elemental Magic'].HighTierNuke = {
 		main = "Daybreak",
 		sub = "Ammurapi Shield",
-		ammo = "Pemphredo Tathlum",
+		-- ammo = "Pemphredo Tathlum",
 		head = gear.merlinic_nuke_head,
 		neck = "Baetyl Pendant",
 		ear1 = "Regal Earring",
@@ -403,7 +403,7 @@ function init_gear_sets()
 	sets.midcast['Elemental Magic'].HighTierNuke.Fodder = {
 		main = "Daybreak",
 		sub = "Ammurapi Shield",
-		ammo = "Pemphredo Tathlum",
+		-- ammo = "Pemphredo Tathlum",
 		head = gear.merlinic_nuke_head,
 		neck = "Saevus Pendant +1",
 		ear1 = "Regal Earring",
@@ -439,7 +439,7 @@ function init_gear_sets()
 	sets.midcast.Drain = {
 		main = "Rubicundity",
 		sub = "Ammurapi Shield",
-		ammo = "Pemphredo Tathlum",
+		-- ammo = "Pemphredo Tathlum",
 		head = "Pixie Hairpin +1",
 		neck = "Erra Pendant",
 		ear1 = "Regal Earring",
@@ -459,7 +459,7 @@ function init_gear_sets()
 	sets.midcast.Stun = {
 		main = gear.grioavolr_fc_staff,
 		sub = "Clerisy Strap +1",
-		ammo = "Hasty Pinion +1",
+		-- ammo = "Hasty Pinion +1",
 		head = "Amalric Coif +1",
 		neck = "Voltsurge Torque",
 		ear1 = "Enchntr. Earring +1",
@@ -477,7 +477,7 @@ function init_gear_sets()
 	sets.midcast.Stun.Resistant = {
 		main = "Daybreak",
 		sub = "Ammurapi Shield",
-		ammo = "Pemphredo Tathlum",
+		-- ammo = "Pemphredo Tathlum",
 		head = "Amalric Coif +1",
 		neck = "Erra Pendant",
 		ear1 = "Regal Earring",
@@ -495,7 +495,7 @@ function init_gear_sets()
 	sets.midcast.Impact = {
 		main = "Daybreak",
 		sub = "Ammurapi Shield",
-		ammo = "Pemphredo Tathlum",
+		-- ammo = "Pemphredo Tathlum",
 		head = empty,
 		neck = "Erra Pendant",
 		ear1 = "Regal Earring",
@@ -513,7 +513,7 @@ function init_gear_sets()
 	sets.midcast.Dispel = {
 		main = "Daybreak",
 		sub = "Ammurapi Shield",
-		ammo = "Pemphredo Tathlum",
+		-- ammo = "Pemphredo Tathlum",
 		head = "Amalric Coif +1",
 		neck = "Erra Pendant",
 		ear1 = "Regal Earring",
@@ -533,7 +533,7 @@ function init_gear_sets()
 	sets.midcast['Enfeebling Magic'] = {
 		main = "Daybreak",
 		sub = "Ammurapi Shield",
-		ammo = "Pemphredo Tathlum",
+		-- ammo = "Pemphredo Tathlum",
 		-- head = "Befouled Crown",
 		head = empy.Head,
 		body = empy.Body,
@@ -556,7 +556,7 @@ function init_gear_sets()
 	sets.midcast['Enfeebling Magic'].Resistant = {
 		main = "Daybreak",
 		sub = "Ammurapi Shield",
-		ammo = "Pemphredo Tathlum",
+		-- ammo = "Pemphredo Tathlum",
 		head = "Befouled Crown",
 		neck = "Erra Pendant",
 		ear1 = "Regal Earring",
@@ -596,7 +596,7 @@ function init_gear_sets()
 	sets.midcast['Enhancing Magic'] = {
 		main = gear.gada_enhancing_club,
 		sub = "Ammurapi Shield",
-		ammo = "Hasty Pinion +1",
+		-- ammo = "Hasty Pinion +1",
 		head = "Telchine Cap",
 		neck = "Incanter's Torque",
 		ear1 = "Andoaa Earring",
@@ -867,7 +867,7 @@ function init_gear_sets()
 	}
 
 	sets.engaged.DW = {
-		ammo = "Hasty Pinion +1",
+		-- ammo = "Hasty Pinion +1",
 		head = "Befouled Crown",
 		neck = "Asperity Necklace",
 		ear1 = "Dudgeon Earring",

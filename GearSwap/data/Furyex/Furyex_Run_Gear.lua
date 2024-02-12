@@ -7,7 +7,7 @@ function user_job_setup()
 	state.MagicalDefenseMode:options('MDT_HP', 'MDT')
 	state.ResistDefenseMode:options('MEVA', 'MEVA_HP')
 	state.IdleMode:options('Tank', 'KiteTank') --,'Normal','Sphere'
-	state.Weapons:options('None', 'Montante', 'Aettir', 'Lionheart', 'DualWeapons')
+	state.Weapons:options('None', 'Montante', 'Aettir', 'Hepatizon','Lionheart', 'DualWeapons')
 
 	state.ExtraDefenseMode = M { ['description'] = 'Extra Defense Mode', 'None', 'MP' }
 
@@ -539,7 +539,8 @@ function init_gear_sets()
 		ring1 = "Stikini Ring +1",
 		ring2 = "Stikini Ring +1",
 		back = "Moonlight Cape",
-		waist = "Flume Belt +1",
+		waist = "Plat. Mog. Belt",
+		-- waist = "Flume Belt +1",
 		-- legs = "Rawhide Trousers",
 		legs = "Nyame Flanchard",
 		-- feet = gear.herculean_refresh_feet
@@ -598,6 +599,7 @@ function init_gear_sets()
 
 	-- Weapons sets
 	sets.weapons.Aettir = { main = "Aettir", sub = "Utu Grip" }
+	sets.weapons.Hepatizon = { main = "Hepatizon Axe +1", sub = "Utu Grip" }
 	sets.weapons.Lionheart = { main = "Lionheart", sub = "Utu Grip" }
 	sets.weapons.Montante = { main = "Montante +1", sub = "Utu Grip" }
 	sets.weapons.DualWeapons = { main = "Firangi", sub = "Reikiko" }

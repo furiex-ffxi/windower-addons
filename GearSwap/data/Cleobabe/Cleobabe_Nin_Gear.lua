@@ -5,7 +5,7 @@ function user_job_setup()
     state.RangedMode:options('Normal', 'Acc')
     state.WeaponskillMode:options('Match', 'Normal', 'SomeAcc', 'Acc', 'FullAcc', 'Fodder', 'Proc')
     state.CastingMode:options('Normal', 'Proc', 'Resistant')
-    state.IdleMode:options('Normal', 'Sphere')
+    state.IdleMode:options('Normal', 'DT', 'Sphere')
     state.PhysicalDefenseMode:options('PDT')
     state.MagicalDefenseMode:options('MDT')
     state.ResistDefenseMode:options('MEVA')
@@ -495,70 +495,42 @@ function init_gear_sets()
 
     -- Idle sets
     sets.idle = {
-        ammo = "Staunch Tathlum +1",
+        -- ammo = "Staunch Tathlum +1",
+        ammo = "Crepuscular Pebble",
         head = "Malignance Chapeau",
         neck = "Loricate Torque +1",
         ear1 = "Etiolation Earring",
-        ear2 = "Sanare Earring",
+        ear2 = "Assuage Earring",
         body = "Malignance Tabard",
         hands = "Malignance Gloves",
         ring1 = "Defending Ring",
         ring2 = "Shneddick Ring",
-        back = "Moonlight Cape",
-        waist = "Flume Belt +1",
+        -- back = "Moonlight Cape",
+        back = "Philidor Cape",
+        waist = "Platinum Moogle Belt",
         legs = "Malignance Tights",
         feet = "Malignance Boots"
     }
 
+    sets.idle.DT = set_combine(sets.idle, { 
+        head = sets.Nyame.Head,
+        body = sets.Nyame.Body,
+        hands = sets.Nyame.Hands,
+        legs = sets.Nyame.Legs,
+        feet = sets.Nyame.Feet
+    })
+
     sets.idle.Sphere = set_combine(sets.idle, { body = "Mekosu. Harness" })
 
-    sets.defense.PDT = {
-        ammo = "Togakushi Shuriken",
-        head = "Dampening Tam",
-        neck = "Loricate Torque +1",
-        ear1 = "Genmei Earring",
-        ear2 = "Sanare Earring",
-        body = "Emet Harness +1",
-        hands = "Malignance Gloves",
-        ring1 = "Defending Ring",
-        ring2 = "Dark Ring",
-        back = "Moonlight Cape",
-        waist = "Flume Belt +1",
-        legs = "Nyame Flanchard",
-        feet = "Malignance Boots"
-    }
+    sets.defense.PDT = set_combine(sets.idle.DT, { 
+    })
 
-    sets.defense.MDT = {
-        ammo = "Togakushi Shuriken",
-        head = "Dampening Tam",
-        neck = "Loricate Torque +1",
-        ear1 = "Etiolation Earring",
-        ear2 = "Sanare Earring",
-        body = "Emet Harness +1",
-        hands = "Malignance Gloves",
-        ring1 = "Defending Ring",
-        ring2 = "Shadow Ring",
-        back = "Engulfer Cape +1",
-        waist = "Engraved Belt",
-        legs = "Nyame Flanchard",
-        feet = "Ahosi Leggings"
-    }
+    sets.defense.MDT = set_combine(sets.idle.DT, { 
+    })
 
-    sets.defense.MEVA = {
-        ammo = "Yamarang",
-        head = "Dampening Tam",
-        neck = "Warder's Charm +1",
-        ear1 = "Etiolation Earring",
-        ear2 = "Sanare Earring",
-        body = "Mekosu. Harness",
-        hands = "Leyline Gloves",
-        ring1 = "Vengeful Ring",
-        Ring2 = "Purity Ring",
-        back = "Toro Cape",
-        waist = "Engraved Belt",
-        legs = "Samnuha Tights",
-        feet = "Ahosi Leggings"
-    }
+    sets.defense.MEVA = set_combine(sets.idle.DT, { 
+    })
+
 
 
     sets.Kiting = { feet = "Danzo Sune-Ate" }

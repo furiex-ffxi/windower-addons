@@ -510,17 +510,17 @@ function init_gear_sets()
         sub = empty,
         ammo = "Impatiens",
         head = "Vanya Hood",
-        -- neck = "Voltsurge Torque",
-        -- ear1 = "Enchntr. Earring +1",
-        ear2 = "Malignance Earring",
-        -- body = "Zendik Robe",
+        neck = "Orunmila's Torque",
+        ear1 = "Eabani Earring",
+        ear2 = "Etiolation Earring",
+        body = "Pinga Tunic +1",
         hands = "Gende. Gages +1",
         ring1 = "Kishar Ring",
-        -- ring2 = "Prolix Ring",
-        -- back = "Swith Cape +1",
+        ring2 = "Defending Ring",
+        back = "Perimede Cape",
         waist = "Witful Belt",
         legs = "Psycloth Lappas",
-        -- feet = "Regal Pumps +1"
+        feet = "Telchine Pigaches"
     }
 
     sets.midcast['Elemental Magic'].OccultAcumen = {
