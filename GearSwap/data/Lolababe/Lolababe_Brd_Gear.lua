@@ -129,8 +129,8 @@ function init_gear_sets()
 		feet="Bihu Slippers +3", --9
 	})
 
-	sets.precast.FC.SongDebuff = set_combine(sets.precast.FC.BardSong, { })
-	sets.precast.FC.SongDebuff.Resistant = set_combine(sets.precast.FC.BardSong, { })
+	sets.precast.FC.SongDebuff = set_combine(sets.precast.FC.BardSong, { range = "Marsyas" })
+	sets.precast.FC.SongDebuff.Resistant = set_combine(sets.precast.FC.BardSong, { range = "Gjallarhorn" })
 	sets.precast.FC.Lullaby = { range = "Marsyas" }
 	sets.precast.FC.Lullaby.Resistant = { range = "Gjallarhorn" }
 	sets.precast.FC['Horde Lullaby'] = { range = "Marsyas" }
