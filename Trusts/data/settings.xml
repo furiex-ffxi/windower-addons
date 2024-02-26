@@ -4,6 +4,10 @@
         <auto>true</auto>
         <language>English</language>
         <sets>
+            <alex>
+                <1>Valaineral</1>
+                <2>Kupipi</2>
+            </alex>
             <ambu>
                 <1>Sylvie (UC)</1>
                 <2>AAMR</2>

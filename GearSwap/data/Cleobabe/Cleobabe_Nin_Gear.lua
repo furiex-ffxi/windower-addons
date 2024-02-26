@@ -5,11 +5,11 @@ function user_job_setup()
     state.RangedMode:options('Normal', 'Acc')
     state.WeaponskillMode:options('Match', 'Normal', 'SomeAcc', 'Acc', 'FullAcc', 'Fodder', 'Proc')
     state.CastingMode:options('Normal', 'Proc', 'Resistant')
-    state.IdleMode:options('Normal', 'DT', 'Sphere')
+    state.IdleMode:options('Normal', 'DT', 'EVA', 'Sphere')
     state.PhysicalDefenseMode:options('PDT')
     state.MagicalDefenseMode:options('MDT')
     state.ResistDefenseMode:options('MEVA')
-    state.Weapons:options('Heishi', 'MagicWeapons', 'ProcDagger', 'ProcSword', 'ProcGreatSword', 'ProcScythe',
+    state.Weapons:options('SavageYagyu', 'Savage', 'Heishi', 'MagicWeapons', 'ProcDagger', 'ProcSword', 'ProcGreatSword', 'ProcScythe',
         'ProcPolearm', 'ProcGreatKatana', 'ProcKatana', 'ProcClub', 'ProcStaff')
     state.ExtraMeleeMode = M { ['description'] = 'Extra Melee Mode', 'None', 'SuppaBrutal', 'DWEarrings', 'DWMax' }
 
@@ -179,8 +179,6 @@ function init_gear_sets()
         -- ear2 = "Moonshade Earring",
         -- body = "Adhemar Jacket +1",
         -- hands = "Adhemar Wrist. +1",
-        -- ring1 = "Cornelia's Ring",
-        -- ring2 = "Epaminondas's Ring",
         -- back = gear.wsd_jse_back,
         -- waist = "Fotia Belt",
         -- feet = "Mochi. Hakama +3"
@@ -495,18 +493,16 @@ function init_gear_sets()
 
     -- Idle sets
     sets.idle = {
-        -- ammo = "Staunch Tathlum +1",
-        ammo = "Crepuscular Pebble",
+        ammo = "Staunch Tathlum +1",
         head = "Malignance Chapeau",
         neck = "Loricate Torque +1",
-        ear1 = "Etiolation Earring",
+        ear1 = "Eabani Earring",
         ear2 = "Assuage Earring",
         body = "Malignance Tabard",
         hands = "Malignance Gloves",
         ring1 = "Defending Ring",
         ring2 = "Shneddick Ring",
-        -- back = "Moonlight Cape",
-        back = "Philidor Cape",
+        back = "Moonlight Cape",
         waist = "Platinum Moogle Belt",
         legs = "Malignance Tights",
         feet = "Malignance Boots"
@@ -518,6 +514,10 @@ function init_gear_sets()
         hands = sets.Nyame.Hands,
         legs = sets.Nyame.Legs,
         feet = sets.Nyame.Feet
+    })
+
+    sets.idle.EVA= set_combine(sets.idle, { 
+        ring1 = "Vengeful Ring",
     })
 
     sets.idle.Sphere = set_combine(sets.idle, { body = "Mekosu. Harness" })
@@ -563,7 +563,7 @@ function init_gear_sets()
         right_ear="Cessance Earring",
         left_ring="Ilabrat Ring",
         right_ring="Epona's Ring",
-        back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Damage taken-5%',}},
+        back=gear.da_jse_back,
     }
 
     sets.engaged.SomeAcc = {
@@ -646,21 +646,18 @@ function init_gear_sets()
         feet = "Mummu Gamash. +2"
     }
 
-    sets.engaged.DT = {
+    sets.engaged.DT = set_combine(sets.engaged, {
         ammo = "Togakushi Shuriken",
         head = "Malignance Chapeau",
         neck = "Loricate Torque +1",
-        ear1 = "Cessance Earring",
-        ear2 = "Brutal Earring",
+        ear2 = "Eabani Earring",
         body = "Malignance Tabard",
         hands = "Malignance Gloves",
         ring1 = "Defending Ring",
-        ring2 = "Epona's Ring",
         back = gear.da_jse_back,
-        waist = "Windbuffet Belt +1",
         legs = "Malignance Tights",
         feet = "Malignance Boots"
-    }
+    })
 
     sets.engaged.SomeAcc.DT = {
         ammo = "Togakushi Shuriken",
@@ -751,9 +748,25 @@ function init_gear_sets()
     sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
     sets.Skillchain = { legs = "Ryuo Hakama" }
 
+    sets.HPCure = {
+		ear1 = "Odnowa Earring +1",
+		ear2 = "Etiolaion Earring",
+		neck = "Unmoving Collar +1",
+		waist = "Plat. Mog. Belt",
+		ring1 = "Gelatinous Ring +1",
+		ring2 = "Moonbeam Ring",
+		head = sets.Nyame.Head,
+		body = sets.Nyame.Body,
+		hands =sets.Nyame.Hands,
+		legs = sets.Nyame.Legs,
+		feet = sets.Nyame.Feet,
+		back = "Moonlight Cape",
+	}
+
     -- Weapons sets
     sets.weapons.Heishi = { main = "Heishi Shorinken", sub = "Kunimitsu" }
-    sets.weapons.Savage = { main = "Naegling", sub = "Kunimitsu" }
+    sets.weapons.SavageYagyu = { main = "Naegling", sub = "Yagyu Darkblade" }
+    sets.weapons.Savage = { main = "Naegling", sub = "Uzura +2" }
     sets.weapons.Evisceration = { main = "Tauret", sub = "Kunimitsu" }
     sets.weapons.MagicWeapons = { main = "Kunimitsu", sub = "Tauret" }
     sets.weapons.ProcDagger = { main = "Chicken Knife II", sub = empty }
@@ -779,4 +792,8 @@ function select_default_macro_book()
     else
         set_macro_page(1, 12)
     end
+end
+
+function user_job_lockstyle()
+	windower.chat.input('/lockstyleset 004')
 end

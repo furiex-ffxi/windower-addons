@@ -840,7 +840,7 @@ function init_gear_sets()
 		sub = "Clerisy Strap +1",
 		-- sub = "Umbra Strap",
 		-- ammo = "Homiliary",
-		ammo = "Hydrocera",
+		ammo = "Staunch Tathlum +1",
 		head = "Befouled Crown",
 		neck = "Loricate Torque +1",
 		ear1 = "Etiolation Earring",

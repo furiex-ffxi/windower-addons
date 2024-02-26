@@ -588,14 +588,16 @@ function init_gear_sets()
         ring1 = "Freke Ring",
         ring2 = "Metamor. Ring +1",
         back = gear.nuke_jse_back,
-        waist = "Hachirin-no-Obi",
+        waist = "Acuity Belt +1",
         legs = "Agwu's Slops",
         feet = "Arbatel Loafers +3"
     }
 
     sets.HelixBurst = set_combine(sets.MagicBurst, {
         head = "Arbatel Bonnet +3",
+        body = "Agwu's Robe",
         ring1 = "Mujin Band",
+        waist = "Acuity Belt +1",
         ear2 = "Arbatel Earring +2",
     })
 

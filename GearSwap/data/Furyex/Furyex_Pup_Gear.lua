@@ -8,10 +8,10 @@ function user_job_setup()
     state.Weapons:options('None', 'PetWeapons', 'PetWeaponsRanged', 'Godhands', 'Midnights')
     state.PetMode        = M { ['description'] = 'Pet Mode', 'None', 'Melee', 'Ranged', 'HybridRanged', 'Bruiser', 'Tank',
         'LightTank', 'Magic', 'Heal', 'Nuke' }
-    state.AutoRepairMode = M(true, 'Auto Repair Mode')
-    state.AutoDeployMode = M(true, 'Auto Deploy Mode')
+    state.AutoRepairMode = M(false, 'Auto Repair Mode')
+    state.AutoDeployMode = M(false, 'Auto Deploy Mode')
     state.AutoPetMode    = M(false, 'Auto Pet Mode')
-    state.PetWSGear      = M(true, 'Pet WS Gear')
+    state.PetWSGear      = M(false, 'Pet WS Gear')
     state.PetEnmityGear  = M(true, 'Pet Enmity Gear')
 
     -- Default/Automatic maneuvers for each pet mode.  Define at least 3.
@@ -92,11 +92,11 @@ function init_gear_sets()
     --Adjust to your reforge level
     --Sets up a Key, Value Pair
     Artifact_Foire = {}
-    Artifact_Foire.Head = "Foire Taj +1"
-    Artifact_Foire.Body = "Foire Tobe +1"
-    Artifact_Foire.Hands = "Foire Dastanas +1"
-    Artifact_Foire.Legs = "Foire Churidars +1"
-    Artifact_Foire.Feet = "Foire Babouches +1"
+    Artifact_Foire.Head = "Foire Taj +2"
+    Artifact_Foire.Body = "Foire Tobe +2"
+    Artifact_Foire.Hands = "Foire Dastanas +2"
+    Artifact_Foire.Legs = "Foire Churidars +2"
+    Artifact_Foire.Feet = "Foire Babouches +2"
 
     Relic_Pitre = {}
     Relic_Pitre.Head = "Pitre Taj +3" --Enhances Optimization
@@ -111,7 +111,7 @@ function init_gear_sets()
     Empy_Karagoz.Hands = "Karagoz Guanti +2"
     Empy_Karagoz.Legs = "Kara. Pantaloni +2"
     Empy_Karagoz.Feet = "Karagoz Scarpe +2"
-	Empy_Karagoz.Earring = "Karagoz Earring"
+	Empy_Karagoz.Earring = "Kara. Earring +1"
 
     -- Precast Sets
     sets.buff.Overdrive = {
@@ -181,61 +181,32 @@ function init_gear_sets()
         -- hands = "Ryuo Tekko",
         -- legs = "Hiza. Hizayoroi +2",
         -- feet = gear.herculean_ta_feet,
-        head="Nyame Helm",
-        body="Nyame Mail",
-        hands="Nyame Gauntlets",
-        legs = "Nyame Flanchard",
-        feet="Nyame Sollerets",
-        neck = "Caro Necklace",
-        ear1 = "Moonshade Earring",
-        ear2 = "Brutal Earring",
-        ring1 = "Niqmaddu Ring",
-        ring2 = "Regal Ring",
-        back = "Visucius's Mantle",
-        waist = "Grunfeld Rope",
-    }
-    sets.precast.WS.Acc = {
-        head = "Lilitu Headpiece",
+        head="Mpaca's Cap",
+        body="Mpaca's Doublet",
+        hands="Mpaca's Gloves",
+        legs = "Mpaca's Hose",
+        feet="Mpaca's Boots",
         neck = "Fotia Gorget",
-        ear1 = "Moonshade Earring",
-        ear2 = "Telos Earring",
-        body = gear.herculean_wsd_body,
-        hands = "Ryuo Tekko",
+        ear1 = "Schere Earring",
+        ear2 = "Kara. Earring +1",
         ring1 = "Niqmaddu Ring",
-        ring2 = "Regal Ring",
+        ring2 = "Gere Ring",
         back = "Visucius's Mantle",
-        waist = "Grunfeld Rope",
-        legs = "Hiza. Hizayoroi +2",
-        feet = "Malignance Boots"
+        waist = "Fotia Belt",
     }
-    sets.precast.WS.FullAcc = {
-        head = "Lilitu Headpiece",
+    sets.precast.WS.Acc = set_combine(sets.precast.WS, {
+    })
+
+    sets.precast.WS.FullAcc = set_combine(sets.precast.WS, {
         neck = "Combatant's Torque",
         ear1 = "Digni. Earring",
         ear2 = "Telos Earring",
-        body = gear.herculean_wsd_body,
-        hands = "Ryuo Tekko",
-        ring1 = "Ramuh Ring +1",
-        ring2 = "Ramuh Ring +1",
         back = "Visucius's Mantle",
-        waist = "Olseni Belt",
-        legs = "Hiza. Hizayoroi +2",
         feet = "Malignance Boots"
-    }
-    sets.precast.WS.Fodder = {
-        head = "Lilitu Headpiece",
-        neck = "Caro Necklace",
-        ear1 = "Moonshade Earring",
-        ear2 = "Brutal Earring",
-        body = gear.herculean_wsd_body,
-        hands = "Ryuo Tekko",
-        ring1 = "Niqmaddu Ring",
-        ring2 = "Regal Ring",
-        back = "Visucius's Mantle",
-        waist = "Grunfeld Rope",
-        legs = "Hiza. Hizayoroi +2",
-        feet = gear.herculean_ta_feet
-    }
+    })
+
+    sets.precast.WS.Fodder = set_combine(sets.precast.WS, {
+    })
 
     -- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
     sets.precast.WS['Victory Smite'] = set_combine(sets.precast.WS, { body = "Abnoba Kaftan" })
@@ -268,20 +239,56 @@ function init_gear_sets()
     sets.precast.WS['Tornado Kick'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
     sets.precast.WS['Tornado Kick'].Fodder = set_combine(sets.precast.WS.Fodder, {})
 
-    sets.precast.WS['Asuran Fists'] = set_combine(sets.precast.WS, {})
-    sets.precast.WS['Asuran Fists'].Acc = set_combine(sets.precast.WS.Acc, {})
-    sets.precast.WS['Asuran Fists'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
-    sets.precast.WS['Asuran Fists'].Fodder = set_combine(sets.precast.WS.Fodder, {})
+    sets.precast.WS['Asuran Fists'] = set_combine(sets.precast.WS, {
+        head = Empy_Karagoz.Head,
+        body = sets.Nyame.Body,
+        hands = sets.Nyame.Hands,
+        feet = sets.Nyame.Feet,
+    })
+    sets.precast.WS['Asuran Fists'].Acc = set_combine(sets.precast.WS.Acc, {
+        head = Empy_Karagoz.Head,
+        body = sets.Nyame.Body,
+        hands = sets.Nyame.Hands,
+        feet = sets.Nyame.Feet,
+    })
+    sets.precast.WS['Asuran Fists'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
+        head = Empy_Karagoz.Head,
+        body = sets.Nyame.Body,
+        hands = sets.Nyame.Hands,
+        feet = sets.Nyame.Feet,
+    })
+    sets.precast.WS['Asuran Fists'].Fodder = set_combine(sets.precast.WS.Fodder, {
+        head = Empy_Karagoz.Head,
+        body = sets.Nyame.Body,
+        hands = sets.Nyame.Hands,
+        feet = sets.Nyame.Feet,
+    })
 
     sets.precast.WS['Raging Fists'] = set_combine(sets.precast.WS, {})
     sets.precast.WS['Raging Fists'].Acc = set_combine(sets.precast.WS.Acc, {})
     sets.precast.WS['Raging Fists'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
     sets.precast.WS['Raging Fists'].Fodder = set_combine(sets.precast.WS.Fodder, {})
 
-    sets.precast.WS['Howling Fist'] = set_combine(sets.precast.WS, {})
-    sets.precast.WS['Howling Fist'].Acc = set_combine(sets.precast.WS.Acc, {})
-    sets.precast.WS['Howling Fist'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
-    sets.precast.WS['Howling Fist'].Fodder = set_combine(sets.precast.WS.Fodder, {})
+    sets.precast.WS['Howling Fist'] = set_combine(sets.precast.WS, {
+        body = sets.Nyame.Body,
+        hands = sets.Nyame.Hands,
+        feet = sets.Nyame.Feet,
+    })
+    sets.precast.WS['Howling Fist'].Acc = set_combine(sets.precast.WS.Acc, {
+        body = sets.Nyame.Body,
+        hands = sets.Nyame.Hands,
+        feet = sets.Nyame.Feet,
+    })
+    sets.precast.WS['Howling Fist'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
+        body = sets.Nyame.Body,
+        hands = sets.Nyame.Hands,
+        feet = sets.Nyame.Feet,
+    })
+    sets.precast.WS['Howling Fist'].Fodder = set_combine(sets.precast.WS.Fodder, {
+        body = sets.Nyame.Body,
+        hands = sets.Nyame.Hands,
+        feet = sets.Nyame.Feet,
+    })
 
     sets.precast.WS['Backhand Blow'] = set_combine(sets.precast.WS, {})
     sets.precast.WS['Backhand Blow'].Acc = set_combine(sets.precast.WS.Acc, {})
@@ -293,10 +300,34 @@ function init_gear_sets()
     sets.precast.WS['Spinning Attack'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
     sets.precast.WS['Spinning Attack'].Fodder = set_combine(sets.precast.WS.Fodder, {})
 
-    sets.precast.WS['Shoulder Tackle'] = set_combine(sets.precast.WS, {})
-    sets.precast.WS['Shoulder Tackle'].Acc = set_combine(sets.precast.WS.Acc, {})
-    sets.precast.WS['Shoulder Tackle'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
-    sets.precast.WS['Shoulder Tackle'].Fodder = set_combine(sets.precast.WS.Fodder, {})
+    sets.precast.WS['Shoulder Tackle'] = set_combine(sets.precast.WS, {
+        head = Empy_Karagoz.Head,
+        body = Empy_Karagoz.Body,
+        hands = Empy_Karagoz.Hands,
+        legs = Empy_Karagoz.Legs,
+        feet = Empy_Karagoz.Feet,
+    })
+    sets.precast.WS['Shoulder Tackle'].Acc = set_combine(sets.precast.WS.Acc, {
+        head = Empy_Karagoz.Head,
+        body = Empy_Karagoz.Body,
+        hands = Empy_Karagoz.Hands,
+        legs = Empy_Karagoz.Legs,
+        feet = Empy_Karagoz.Feet,
+    })
+    sets.precast.WS['Shoulder Tackle'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
+        head = Empy_Karagoz.Head,
+        body = Empy_Karagoz.Body,
+        hands = Empy_Karagoz.Hands,
+        legs = Empy_Karagoz.Legs,
+        feet = Empy_Karagoz.Feet,
+    })
+    sets.precast.WS['Shoulder Tackle'].Fodder = set_combine(sets.precast.WS.Fodder, {
+        head = Empy_Karagoz.Head,
+        body = Empy_Karagoz.Body,
+        hands = Empy_Karagoz.Hands,
+        legs = Empy_Karagoz.Legs,
+        feet = Empy_Karagoz.Feet,
+    })
     -- Midcast Sets
 
     sets.midcast.FastRecast = {
@@ -338,7 +369,7 @@ function init_gear_sets()
         neck = "Shulmanu Collar",
         -- ear1 = "Enmerkar Earring",
         ear1 = "Crep. Earring",
-        ear2 = "Karagoz Earring",
+        ear2 = "Kara. Earring +1",
         body={ name="Taeon Tabard", augments={'Pet: Accuracy+24 Pet: Rng. Acc.+24','Pet: "Dbl. Atk."+5','Pet: Damage taken -3%',}},
         legs = "Taeon Tights",
         hands = "Mpaca's Gloves",
@@ -427,7 +458,7 @@ function init_gear_sets()
         neck="Adad Amulet",
         waist="Klouskap Sash +1",
         left_ear="Rimeice Earring",
-        right_ear={ name="Karagoz Earring", augments={'System: 1 ID: 1676 Val: 0','Accuracy+6','Mag. Acc.+6',}},
+        right_ear="Kara. Earring +1",
         left_ring="C. Palug Ring",
         right_ring="Overbearing Ring",
         back={ name="Visucius's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Accuracy+20 Attack+20','Pet: Haste+10','System: 1 ID: 1246 Val: 4',}},        
@@ -458,7 +489,7 @@ function init_gear_sets()
         feet="Mpaca's Boots",
         waist="Klouskap Sash +1",
         ear1 = "Crepuscular Earring",
-        ear2={ name="Karagoz Earring", augments={'System: 1 ID: 1676 Val: 0','Accuracy+6','Mag. Acc.+6',}},
+        ear2="Kara. Earring +1",
         ring1="C. Palug Ring",
         ring2="Varar Ring +1",
         back={ name="Visucius's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Accuracy+20 Attack+20','Pet: Haste+10','System: 1 ID: 1246 Val: 4',}},
@@ -560,16 +591,17 @@ function init_gear_sets()
         -- hands = "Ryuo Tekko",
         neck = "Shulmanu Collar",
         head="Malignance Chapeau",
-        body="Malignance Tabard",
+        body="Mpaca's Doublet",
         hands="Malignance Gloves",
-        ear1 = "Crep. Earring",
-        ear2 = "Karagoz Earring",
-        ring1 = "Lehko's Ring",
+        ear1 = "Schere Earring",
+        ear2 = "Kara. Earring +1",
+        ring1 = "Niqmaddu Ring",
         ring2 = "Gere Ring",
         -- ring2 = "Epona's Ring",
         back = "Visucius's Mantle",
-        waist = "Windbuffet Belt +1",
-        legs = "Mpaca's Hose",
+        -- waist = "Windbuffet Belt +1",
+        waist="Klouskap Sash +1",
+        legs = "Samnuha Tights",
         -- legs = "Ryuo Hakama",
         feet="Malignance Boots",
         -- feet = gear.herculean_ta_feet
@@ -685,7 +717,7 @@ function init_gear_sets()
         neck="Adad Amulet",
         waist="Klouskap Sash +1",
         left_ear="Rimeice Earring",
-        right_ear={ name="Karagoz Earring", augments={'System: 1 ID: 1676 Val: 0','Accuracy+6','Mag. Acc.+6',}},
+        right_ear="Kara. Earring +1",
         left_ring="C. Palug Ring",
         right_ring="Overbearing Ring",
         back={ name="Visucius's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Accuracy+20 Attack+20','Pet: Haste+10','System: 1 ID: 1246 Val: 4',}},

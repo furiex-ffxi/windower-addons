@@ -424,7 +424,7 @@ function init_gear_sets()
 		head = "Boii Mask +3",
 		neck = "War. Beads +2",
 		body = "Boii Lorica +3",
-		hands="Tatenashi Gote +1",
+		hands="Sakpata's Gauntlets",
 		legs="Pumm. Cuisses +3",
 		feet="Pumm. Calligae +3",
 		-- waist="Ioskeha Belt +1",

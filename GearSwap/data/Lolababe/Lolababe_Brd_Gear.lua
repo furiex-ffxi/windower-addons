@@ -3,7 +3,7 @@ function user_job_setup()
 	state.UnlockWeapons = M(true, 'Unlock Weapons')
 	state.OffenseMode:options('Normal', 'Acc')
 	state.HybridMode:options('Normal', 'DT')
-	state.CastingMode:options('Normal', 'Resistant', 'AoE')
+	state.CastingMode:options('Normal', 'Duration', 'Resistant')
 	state.IdleMode:options('Normal', 'NoRefresh', 'DT')
 	state.Weapons:options('None', 'Naegling', 'Aeneas', 'Carnwenhan', 'Qutrub', 'DualCarnwenhan', 'DualWeapons', 'DualNaegling', 'DualTauret', 'DualAeolian')
 	-- Whether to use Carn (or song daggers in general) under a certain threshhold even when weapons are locked.
@@ -129,18 +129,6 @@ function init_gear_sets()
 		feet="Bihu Slippers +3", --9
 	})
 
-	sets.precast.FC.SongDebuff = set_combine(sets.precast.FC.BardSong, { range = "Marsyas" })
-	sets.precast.FC.SongDebuff.Resistant = set_combine(sets.precast.FC.BardSong, { range = "Gjallarhorn" })
-	sets.precast.FC.Lullaby = { range = "Marsyas" }
-	sets.precast.FC.Lullaby.Resistant = { range = "Gjallarhorn" }
-	sets.precast.FC['Horde Lullaby'] = { range = "Marsyas" }
-	sets.precast.FC['Horde Lullaby'].Resistant = { range = "Gjallarhorn" }
-	sets.precast.FC['Horde Lullaby'].AoE = { range = "Gjallarhorn" }
-	sets.precast.FC['Horde Lullaby II'] = { range = "Marsyas" }
-	sets.precast.FC['Horde Lullaby II'].Resistant = { range = "Gjallarhorn" }
-	sets.precast.FC['Horde Lullaby II'].AoE = { range = "Gjallarhorn" }
-
-	sets.precast.FC.Mazurka = set_combine(sets.precast.FC.BardSong, { range = "Marsyas" })
 	sets.precast.FC["Honor March"] = set_combine(sets.precast.FC.BardSong, { range = "Marsyas" })
 	sets.precast.FC["Aria of Passion"] = set_combine(sets.precast.FC, { 
 		range = "Loughnashade",
@@ -274,12 +262,7 @@ function init_gear_sets()
 		sub = "Kali" 
 	} --Only weapons in this set. This set is overlayed onto SongEffect
 
-	-- For song defbuffs (duration primary, accuracy secondary)
 	sets.midcast.SongDebuff = {
-		main = "Carnwenhan",
-		sub = "Ammurapi Shield",
-		range = "Gjallarhorn",
-		ammo = empty,
 		head = "Brioso Roundlet +3",
 		body = "Brioso Justau. +3",
 		hands = "Brioso Cuffs +3",
@@ -297,31 +280,31 @@ function init_gear_sets()
 	sets.midcast.SongDebuff.DW = { 
 	} --Only weapons in this set. This set is overlayed onto SongDebuff
 
+	sets.midcast.SongDebuff.DW.Duration = { 
+		main = "Carnwenhan", 
+		sub = "Kali" 
+	} --Only weapons in this set. This set is overlayed onto SongDebuff
 
 	sets.midcast.SongDebuff.DW.Resistant = { 
 		main = "Carnwenhan", 
 		sub = "Kali" 
 	} --Only weapons in this set. This set is overlayed onto SongDebuff
 
+	-- For song defbuffs (duration primary, accuracy secondary)
+	sets.midcast.SongDebuff.Duration = set_combine(sets.midcast.SongDebuff, {
+		main = "Carnwenhan", 
+		sub = "Ammurapi Shield",
+		range="Gjallarhorn",
+		ammo=empty,
+	})
+
 	-- For song defbuffs (accuracy primary, duration secondary)
-	sets.midcast.SongDebuff.Resistant = {
+	sets.midcast.SongDebuff.Resistant = set_combine(sets.midcast.SongDebuff, {
 		main = "Daybreak",
 		sub = "Ammurapi Shield",
 		range="Gjallarhorn",
 		ammo=empty,
-		head = "Inyanga Tiara +2",
-		neck = "Mnbw. Whistle +1",
-		ear1="Regal Earring",
-		ear2="Digni. Earring",
-		body = "Inyanga Jubbah +2",
-		hands = "Inyan. Dastanas +2",
-		ring1 = "Metamorph Ring +1",
-		ring2 = "Stikini Ring +1",
-		back = { name = "Intarabus's Cape", augments = { 'CHR+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'CHR+10', '"Fast Cast"+10', 'Phys. dmg. taken-10%', } },
-		waist = "Acuity Belt +1",
-		legs = "Inyanga Shalwar +2",
-		feet = "Aya. Gambieras +2"
-	}
+	})
 
 	-- Song-specific recast reduction
 	sets.midcast.SongRecast = {
@@ -487,8 +470,9 @@ function init_gear_sets()
 
 
 	-- Gear to enhance certain classes of songs
-	sets.midcast.Lullaby = { range = "Gjallarhorn" }
-	sets.midcast.Lullaby.Resistant = sets.midcast.Lullaby
+	sets.midcast.Lullaby = { }
+	sets.midcast.Lullaby.Resistant = { range = "Gjallarhorn" }
+	sets.midcast.Lullaby.Duration = sets.midcast.Lullaby
 
 	sets.midcast.Ballad = { legs = "Fili Rhingrave +2" }
 	sets.midcast.Carol = { hands = "Mousai Gages +1" }
@@ -499,7 +483,7 @@ function init_gear_sets()
 		range = "Gjallarhorn" 
 	} 
 	sets.midcast['Horde Lullaby'].Resistant = sets.midcast['Horde Lullaby']
-	sets.midcast['Horde Lullaby'].AoE = sets.midcast['Horde Lullaby']
+	sets.midcast['Horde Lullaby'].Duration = sets.midcast['Horde Lullaby']
 	sets.midcast['Horde Lullaby II'] = {
 		main = "Carnwenhan",
 		sub = "Ammurapi Shield",
@@ -509,7 +493,7 @@ function init_gear_sets()
 		ear1 = "Gersemi Earring",
 	}
 	sets.midcast['Horde Lullaby II'].Resistant = sets.midcast['Horde Lullaby II']
-	sets.midcast['Horde Lullaby II'].AoE = sets.midcast['Horde Lullaby II']
+	sets.midcast['Horde Lullaby II'].Duration = sets.midcast['Horde Lullaby II']
 	sets.midcast.Madrigal = { head = "Fili Calot +3" }
 	sets.midcast.Mambo = { feet = "Mou. Crackows +1" }
 	sets.midcast.March = { hands = "Fili Manchettes +3" }
@@ -712,10 +696,30 @@ function init_gear_sets()
 	sets.engaged.DT = set_combine(sets.engaged, {
 		
 	})
+
+-- 1383 eva, 1530 def
+-- Current best set: PDT:-35,  MDT:-50
+-- 	  main  Naegling
+--     sub  Crepuscular Knife
+--  ranged  Linos STP QA
+--    ammo  Empty
+--    head  Blistering Sallet +1 R15
+--    body  Ashera Harness
+--   hands  Bunzi's Gloves R0
+--    legs  Volte Tights
+--    feet  Volte Spats
+--    neck  Bard's Charm +2 R25
+--   waist  Reiki Yotai
+--    ear1  Brutal Earring
+--    ear2  Dedition Earring
+--   ring1  Moonlight Ring A
+--   ring2  Moonlight Ring B
+--    back  Intarabus's Cape DEX Dual Wield
 	sets.engaged.Acc = set_combine(sets.engaged, {
 		hands = "Gazu Bracelets +1",
 		ear1 = "Telos Earring",
 		ear2 = "Digni. Earring",
+		
 	})
 	sets.engaged.DW = set_combine(sets.engaged, {
 		ear1 = "Eabani Earring",

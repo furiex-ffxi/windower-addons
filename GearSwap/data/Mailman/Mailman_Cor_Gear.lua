@@ -7,7 +7,7 @@ function user_job_setup()
     state.IdleMode:options('Normal', 'PDT', 'Refresh')
     state.HybridMode:options('Normal', 'DT')
     state.ExtraMeleeMode = M { ['description'] = 'Extra Melee Mode', 'None', 'DWMax' }
-    state.Weapons:options('Default', 'Ranged', 'Savage', 'Evisceration', 'DualWeapons', 'DualSavageWeapons',
+    state.Weapons:options('Default', 'Ranged', 'RangedAcc', 'Savage', 'Evisceration', 'DualWeapons', 'DualSavageWeapons',
         'DualEvisceration', 'DualLeadenRanged', 'DualLeadenMelee', 'DualAeolian', 'DualLeadenMeleeAcc', 'DualRanged',
         'DualFermion', 'None')
     state.CompensatorMode:options('Always', '300', '1000', 'Never')
@@ -684,6 +684,11 @@ function init_gear_sets()
     sets.weapons.Default = { main = "Naegling", sub = "Nusku Shield", range = "Fomalhaut" }
     sets.weapons.Ranged = { 
         main = "Rostam", 
+        sub = "Nusku Shield", 
+        range = "Fomalhaut"
+    }
+    sets.weapons.RangedAcc = { 
+        main = "Kustawi +1", 
         sub = "Nusku Shield", 
         range = "Fomalhaut"
     }

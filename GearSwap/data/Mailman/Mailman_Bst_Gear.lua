@@ -531,18 +531,23 @@ function init_gear_sets()
         main = "Izizoeksi",
         sub = gear.PDTMABKumbha,
         ammo = "Staunch Tathlum +1",
-        head = "Jumalik Helm",
+        -- head = "Jumalik Helm",
         neck = "Loricate Torque +1",
         ear1 = "Sanare Earring",
         ear2 = "Genmei Earring",
-        body = "Jumalik Mail",
-        hands = "Macabre Gaunt. +1",
+        -- body = "Jumalik Mail",
+        -- hands = "Macabre Gaunt. +1",
         ring1 = "Defending Ring",
         ring2 = "C. Palug Ring",
         back = "Solemnity Cape",
         waist = "Flume Belt +1",
-        legs = "Tali'ah Sera. +2",
-        feet = "Skd. Jambeaux +1"
+        -- legs = "Tali'ah Sera. +2",
+        -- feet = "Skd. Jambeaux +1"
+        head = sets.Nyame.Head,
+        body = sets.Nyame.Body,
+        hands = sets.Nyame.Hands,
+        legs = sets.Nyame.Legs,
+        feet = sets.Nyame.Feet,
     }
 
     sets.idle.SingleWield = {

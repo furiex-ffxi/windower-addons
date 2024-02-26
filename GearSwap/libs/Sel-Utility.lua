@@ -1285,8 +1285,20 @@ end
 
 function check_nuke()
 	if state.AutoNukeMode.value and player.target.type == "MONSTER" then
-		local spell = res.spells:with('name',autonuke)
 		local spell_recasts = windower.ffxi.get_spell_recasts()
+
+		if player.main_job == 'NIN' then
+			local tiers = {'San','Ni','Ichi'}
+			for k in ipairs(tiers) do
+				if spell_recasts[get_spell_table_by_name(data.elements.ninjutsu_nuke_of[state.ElementalMode.value]..': '..tiers[k]..'').id] < spell_latency then
+					windower.chat.input('/ma "'..data.elements.ninjutsu_nuke_of[state.ElementalMode.value]..': '..tiers[k]..'" <t>')
+					return
+				end
+			end
+			add_to_chat(123,'Abort: All '..data.elements.nuke_of[state.ElementalMode.value]..' nukes on cooldown or or not enough MP.')
+		end
+
+		local spell = res.spells:with('name',autonuke)
 		if spell_recasts[spell.id] < spell_latency then
 			windower.chat.input('/ma '..autonuke..' <t>')
 			tickdelay = os.clock() + 1.5

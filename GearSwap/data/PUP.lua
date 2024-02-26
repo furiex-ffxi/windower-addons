@@ -62,7 +62,7 @@ function job_setup()
 
     -- Map automaton heads to combat roles
 
-	state.PartyChatWS = M(false, 'Report pet weaponskills in party chat.')
+	state.PartyChatWS = M(true, 'Report pet weaponskills in party chat.')
 
     -- Subset of modes that use magic
     magicPetModes = S{'Nuke','Heal','Magic'}
@@ -72,8 +72,8 @@ function job_setup()
 
 	state.AutoManeuvers = M{['description']='Auto Maneuver List', 'Default','Melee','Ranged','HybridRanged','Tank','LightTank','Magic','Heal','Nuke'}
 	state.AutoPuppetMode = M(false, 'Auto Puppet Mode')
-	state.AutoRepairMode = M(true, 'Auto Repair Mode')
-	state.AutoDeployMode = M(true, 'Auto Deploy Mode')
+	state.AutoRepairMode = M(false, 'Auto Repair Mode')
+	state.AutoDeployMode = M(false, 'Auto Deploy Mode')
 	state.AutoPetMode 	 = M(true, 'Auto Pet Mode')
 	state.PetWSGear		 = M(true, 'Pet WS Gear')
 	state.PetEnmityGear	 = M(true, 'Pet Enmity Gear')

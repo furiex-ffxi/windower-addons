@@ -437,7 +437,9 @@ function init_gear_sets()
     sets.weapons.DualWeapons = {
         main = "Kustawi +1",
         sub = "Kustawi",
-        range = "Fomalhaut"
+        -- range = "Fomalhaut"
+        range = "Shortbow",
+        ammo = "Stone Arrow"
     }
     sets.weapons.DualSavageWeapons = {
         main = "Naegling",

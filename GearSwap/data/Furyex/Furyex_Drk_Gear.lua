@@ -179,7 +179,7 @@ function init_gear_sets()
 		neck = "Unmoving Collar +1",
 		waist = "Plat. Mog. Belt",
 		ring1 = "Gelatinous Ring +1",
-		ring2 = "Moonbean Ring",
+		ring2 = "Moonbeam Ring",
 		head="Ratri Sallet +1",
 		body = gear.empy.Body,
 		hands="Rat. Gadlings +1",

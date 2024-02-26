@@ -9,8 +9,8 @@ function user_job_setup()
 	state.PhysicalDefenseMode:options('PDT', 'NukeLock')
 	state.MagicalDefenseMode:options('MDT')
 	state.ResistDefenseMode:options('MEVA')
-	state.Weapons:options('None', 'Naegling', 'Tauret', 'Club', 'DualWeapons', 'DualWeaponsAcc', 'DualEvisceration', 'DualClubs',
-	'DualAeolian', 'DualProcSwords', 'DualProcDaggers', 'EnspellOnly', 'EnspellDW')
+	state.Weapons:options('None', 'Naegling', 'Tauret', 'Club', 'Bow', 'DualWeapons', 'DualWeaponsAcc', 'DualEvisceration', 'DualClubs',
+	'DualAeolian', 'DualProcSwords', 'DualProcDaggers', 'EnspellOnly', 'EnspellDW', 'DualBow')
 
 	gear.stp_jse_back = { name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}}
 	gear.nuke_jse_back = { name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','Weapon skill damage +10%',}}
@@ -122,6 +122,9 @@ function init_gear_sets()
 	-- Don't need any special gear for Healing Waltz.
 	sets.precast.Waltz['Healing Waltz'] = {}
 
+	sets.precast.RA = {
+	}
+
 	-- Fast cast sets for spells
 
 	sets.precast.FC = {
@@ -224,7 +227,7 @@ function init_gear_sets()
 		ring1 = "Karieyh Ring",
 		ring2 = "Ilabrat Ring",
         back		=	RDMCape.MACC,		
-		-- waist = "Fotia Belt",
+		waist = "Fotia Belt",
 		legs = "Carmine Cuisses +1",
 		feet = "Thereoid Greaves"
 	})
@@ -834,7 +837,7 @@ function init_gear_sets()
 	-- Idle sets
 	sets.idle = {
         -- ammo		=	"Homiliary",
-        ammo		=	"Crepuscular Pebble",
+        ammo		=	"Staunch Tathlum +1",
         head		=	RELIC.Head,
 		neck = "Dls. Torque +2",
         body		=	AF.Body,
@@ -890,7 +893,7 @@ function init_gear_sets()
 		back = "Umbra Cape",
 		waist = "Flume Belt +1",
 		legs = "Lengo Pants",
-		feet = gear.chironic_refresh_feet
+		feet = "Volte Gaiters",
 	}
 
 	sets.idle.DTHippo = set_combine(sets.idle.PDT, { back = "Umbra Cape", legs = "Carmine Cuisses +1",
@@ -938,6 +941,7 @@ function init_gear_sets()
 	-- Weapons sets
 	-- sets.weapons.Naegling = { main = "Naegling", sub = "Sacro Bulwark", range = empty }
 	sets.weapons.Naegling = { main = "Naegling", sub = "Genmei Shield", range = empty }
+	sets.weapons.Bow = { main = "Qutrub Knife", sub = "Ceremonial Dagger", range = "Shortbow", ammo = "Stone Arrow" }
 	sets.weapons.DualWeapons = { main = "Naegling", sub = "Machaera +3", range = empty }
 	-- sets.weapons.DualWeaponsAcc = { main = "Naegling", sub = "Almace", range = empty }
 	sets.weapons.DualWeaponsAcc = { main = "Naegling", sub = "Ternion Dagger +1", range = empty }
@@ -950,9 +954,9 @@ function init_gear_sets()
 	sets.weapons.Tauret = { main = "Tauret", sub = "Genmei Shield"}
 	sets.weapons.Club = { main = "Maxentius", sub = "Genmei Shield"}
 	sets.weapons.EnspellOnly = { main = "Qutrub Knife", sub = "Ceremonial Dagger", range = "Ullr", ammo = "Beetle Arrow" }
-	sets.weapons.EnspellDW = { main = "Crocea Mors", sub = "Bunzi's Rod", range = empty }
+	sets.weapons.EnspellDW = { main = "Crocea Mors", sub = "Daybreak", range = empty }
 	sets.weapons.DualAlmace = { main = "Almace", sub = "Sequence", range = empty }
-	sets.weapons.DualBow = { main = "Naegling", sub = "Tauret", range = "Ullr" }
+	sets.weapons.DualBow = { main = "Naegling", sub = "Machaera +3", range = "Ullr", ammo = "Chapuli Arrow" }
 	sets.weapons.BowMacc = { main = "Naegling", sub = "Tauret", range = "Ullr", ammo = empty }
 
 	sets.buff.Sublimation = { waist = "Embla Sash" }

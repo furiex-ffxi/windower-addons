@@ -538,8 +538,7 @@ function init_gear_sets()
         -- ear2 = "Gelos Earring",
         -- body = "Con. Doublet +3",
         body = sets.Nyame.Body,
-        -- hands = gear.merlinic_physpact_hands,
-        hands = sets.Nyame.Hands,
+        hands = gear.merlinic_physpact_hands,
         ring1 = { name="Varar Ring +1", bag="wardrobe3" },
         ring2 = { name="Varar Ring +1", bag="wardrobe4" },
         back = gear.phys_jse_back,
@@ -554,7 +553,6 @@ function init_gear_sets()
     }
 
     sets.midcast.Pet.MagicalBloodPactRage = {
-        -- main = gear.grioavolr_pet_staff,
         main = "Grioavolr",
         sub = "Elan Strap +1",
         ammo = "Epitaph",
@@ -565,14 +563,12 @@ function init_gear_sets()
         -- ear2 = "Gelos Earring",
         -- body = "Con. Doublet +3",
         body = sets.Nyame.Body,
-        hands = sets.Nyame.Hands,
-        -- hands = gear.merlinic_magpact_hands,
+        hands = gear.merlinic_magpact_hands,
         ring1 = "Varar Ring +1",
         ring2 = "Varar Ring +1",
         back = gear.magic_jse_back,
         waist = "Regal Belt",
-        legs = sets.Nyame.Legs,
-        -- legs = "Enticer's Pants",
+        legs = "Apogee Slacks +1",
         feet = "Apogee Pumps +1"
     }
 
