@@ -50,14 +50,31 @@ local Var_Odyssey     = S{'Chest','Coffer', 'Aurum Strongbox'}
 
 
 windower.register_event('addon command', function(...)
-	target = windower.ffxi.get_mob_by_target('t')
-
-	if not target then
-		windower.send_command('input /targetnpc')
-		coroutine.sleep(0.5)
+	local commands = T{...}
+	local endless = false
+	if commands[1] ~= nil and commands[1] == 'endless' then
+		endless = true
+		print("endless" )
+	end	
+	
+	while(true) 
+	do
 		target = windower.ffxi.get_mob_by_target('t')
+
+		if not target then
+			windower.send_command('input /targetnpc')
+			coroutine.sleep(0.5)
+			target = windower.ffxi.get_mob_by_target('t')
+		end
+		TradeIt()
+
+		if not endless then
+			return
+		end
+
+		log("Retrying in 300 seconds")
+		coroutine.sleep(300)
 	end
-	TradeIt()
 end)
 
 
@@ -520,12 +537,12 @@ function TradeIt()
 			local ki = windower.ffxi.get_key_items()
 			for i, v in ipairs(ki) do
 				if v == 3212 then    -- Moglophone
-					has_moglophone = false
+					has_moglophone = true
 				end
 			end
 
 			if not has_moglophone then
-				windower.send_command('setkey enter down;wait 0.1;setkey enter up;wait 2;setkey enter down;wait 0.1;setkey enter up;wait 1;setkey enter down;wait 0.1;setkey enter up;wait 1;setkey escape down;wait 0.1;setkey escape up')
+				windower.send_command('setkey enter down;wait 0.2;setkey enter up;wait 3;setkey enter down;wait 0.2;setkey enter up;wait 2;setkey enter down;wait 0.2;setkey enter up;wait 2;setkey escape down;wait 0.2;setkey escape up')
 			end
 
 		end --			END OF ??? Section

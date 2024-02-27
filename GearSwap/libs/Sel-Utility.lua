@@ -1110,6 +1110,22 @@ function silent_check_silence()
 	end
 end
 
+function check_poison(spell, spellMap, eventArgs)
+	if buffactive.poison and state.AutoRemovePoisonMode.value then
+		if player.inventory['Antidote'] or player.satchel['Antidote'] then
+			send_command('input /item "Antidote" <me>')
+		elseif player.inventory["Remedy"] then
+			send_command('input /item "Remedy" <me>')
+		else
+			add_to_chat(123,'Abort: You are poisoned.')
+		end
+		eventArgs.cancel = true
+		return true
+	else
+		return false
+	end
+end
+
 function check_recast(spell, spellMap, eventArgs)
         if spell.action_type == 'Ability' and spell.type ~= 'WeaponSkill' then
 			if spell.recast_id == 231 or spell.recast_id == 255 or spell.recast_id == 102 or spell.recast_id == 195 then return false end

@@ -133,6 +133,7 @@ function init_include()
 	state.AutoContradanceMode = M(true, 'Auto Contradance Mode')
 	state.AutoHolyWaterMode   = M(true, 'Auto Holy Water Mode')
 	state.AutoRemoveDoomMode  = M(true, 'Auto Remove Doom Mode')
+	state.AutoRemovePoisonMode= M(false, 'Auto Remove Poison Mode')
 	state.AutoWSMode		  = M(false, 'Auto Weaponskill Mode')
 	state.AutoWSRestore		  = M(true, 'Auto Weaponskill Restore Mode')
 	state.AutoFoodMode		  = M(false, 'Auto Food Mode')
@@ -1322,6 +1323,7 @@ function filter_precast(spell, spellMap, eventArgs)
 	if check_midaction(spell, spellMap, eventArgs) then return end
 	if check_disable(spell, spellMap, eventArgs) then return end
 	if check_doom(spell, spellMap, eventArgs) then return end
+	if check_poison(spell, spellMap, eventArgs) then return end
 	
 	if spell.action_type == 'Magic' then
 		if check_silence(spell, spellMap, eventArgs) then return end

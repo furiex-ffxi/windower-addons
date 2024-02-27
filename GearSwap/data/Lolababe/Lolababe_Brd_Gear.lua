@@ -487,7 +487,7 @@ function init_gear_sets()
 	sets.midcast['Horde Lullaby II'] = {
 		main = "Carnwenhan",
 		sub = "Ammurapi Shield",
-		range = "Daurdabla",
+		range = "Blurred Harp +1",
 		hands = "Inyan. Dastanas +2",
 		feet = "Bihu Slippers +3",
 		ear1 = "Gersemi Earring",
