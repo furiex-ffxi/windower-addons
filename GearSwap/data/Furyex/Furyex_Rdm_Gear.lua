@@ -942,11 +942,11 @@ function init_gear_sets()
 	-- sets.weapons.Naegling = { main = "Naegling", sub = "Sacro Bulwark", range = empty }
 	sets.weapons.Naegling = { main = "Naegling", sub = "Genmei Shield", range = empty }
 	sets.weapons.Bow = { main = "Qutrub Knife", sub = "Ceremonial Dagger", range = "Shortbow", ammo = "Stone Arrow" }
-	sets.weapons.DualWeapons = { main = "Naegling", sub = "Machaera +3", range = empty }
+	sets.weapons.DualWeapons = { main = "Naegling", sub = "Thibron", range = empty }
 	-- sets.weapons.DualWeaponsAcc = { main = "Naegling", sub = "Almace", range = empty }
 	sets.weapons.DualWeaponsAcc = { main = "Naegling", sub = "Ternion Dagger +1", range = empty }
 	-- sets.weapons.DualEvisceration = { main = "Tauret", sub = "Almace", range = empty }
-	sets.weapons.DualClubs = { main = "Maxentius", sub = "Machaera +3", range = empty }
+	sets.weapons.DualClubs = { main = "Maxentius", sub = "Thibron", range = empty }
 	sets.weapons.DualEvisceration = { main = "Tauret", sub = "Ternion Dagger +1", range = empty }
 	sets.weapons.DualAeolian = { main = "Tauret", sub = "Daybreak", range = empty }
 	sets.weapons.DualProcSwords = { main = "Brunello", sub = "Soulflayer's Wand", range = empty }
@@ -956,7 +956,7 @@ function init_gear_sets()
 	sets.weapons.EnspellOnly = { main = "Qutrub Knife", sub = "Ceremonial Dagger", range = "Ullr", ammo = "Beetle Arrow" }
 	sets.weapons.EnspellDW = { main = "Crocea Mors", sub = "Daybreak", range = empty }
 	sets.weapons.DualAlmace = { main = "Almace", sub = "Sequence", range = empty }
-	sets.weapons.DualBow = { main = "Naegling", sub = "Machaera +3", range = "Ullr", ammo = "Chapuli Arrow" }
+	sets.weapons.DualBow = { main = "Naegling", sub = "Thibron", range = "Ullr", ammo = "Chapuli Arrow" }
 	sets.weapons.BowMacc = { main = "Naegling", sub = "Tauret", range = "Ullr", ammo = empty }
 
 	sets.buff.Sublimation = { waist = "Embla Sash" }

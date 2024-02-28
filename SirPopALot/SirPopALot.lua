@@ -30,7 +30,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 _addon.name = 'SirPopaLot'
 _addon.author = 'Daneblood'
-_addon.version = '22.03.17'
+_addon.version = '24.02.27'
 _addon.command = 'pop'
 
 require('coroutine')
@@ -54,7 +54,6 @@ windower.register_event('addon command', function(...)
 	local endless = false
 	if commands[1] ~= nil and commands[1] == 'endless' then
 		endless = true
-		print("endless" )
 	end	
 	
 	while(true) 
