@@ -521,8 +521,8 @@ function init_gear_sets()
         body = "Con. Doublet +3",
         hands = gear.merlinic_physpact_hands,
         legs = { name="Apogee Slacks +1", augments={'Pet: STR+20','Blood Pact Dmg.+14','Pet: "Dbl. Atk."+4'}},
-		ring1 = { name="Varar Ring +1", bag="wardrobe3" },
-        ring2 = "C. Palug Ring",
+        ring1 = { name="Varar Ring +1", bag="wardrobe3" },
+        ring2 = { name="Varar Ring +1", bag="wardrobe4" },
         back = gear.phys_jse_back,
         waist = "Incarnation Sash",
         feet = "Apogee Pumps +1"

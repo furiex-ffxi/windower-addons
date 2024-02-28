@@ -73,6 +73,7 @@ windower.register_event('addon command', function(...)
 		end
 
 		log("Retrying in 300 seconds")
+		target = nil
 		coroutine.sleep(300)
 	end
 end)
@@ -542,7 +543,7 @@ function TradeIt()
 			end
 
 			if not has_moglophone then
-				windower.send_command('setkey enter down;wait 0.2;setkey enter up;wait 3;setkey enter down;wait 0.2;setkey enter up;wait 2;setkey enter down;wait 0.2;setkey enter up;wait 2;setkey escape down;wait 0.2;setkey escape up')
+				windower.send_command('setkey enter down;wait 0.2;setkey enter up;wait 3;setkey enter down;wait 0.2;setkey enter up;wait 3;setkey enter down;wait 0.2;setkey enter up;wait 3;setkey escape down;wait 0.2;setkey escape up')
 			end
 
 		end --			END OF ??? Section
