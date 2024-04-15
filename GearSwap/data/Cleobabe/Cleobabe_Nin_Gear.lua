@@ -1,5 +1,6 @@
 -- Setup vars that are user-dependent.  Can override this function in a sidecar file.
 function user_job_setup()
+    state.YagyuMode:options('Always','300','1000','Never')
     state.OffenseMode:options('Normal', 'SomeAcc', 'Acc', 'FullAcc', 'Fodder', 'Crit')
     state.HybridMode:options('Normal', 'DT')
     state.RangedMode:options('Normal', 'Acc')
@@ -9,7 +10,7 @@ function user_job_setup()
     state.PhysicalDefenseMode:options('PDT')
     state.MagicalDefenseMode:options('MDT')
     state.ResistDefenseMode:options('MEVA')
-    state.Weapons:options('SavageYagyu', 'Savage', 'Heishi', 'MagicWeapons', 'ProcDagger', 'ProcSword', 'ProcGreatSword', 'ProcScythe',
+    state.Weapons:options('Savage', 'Heishi', 'MagicWeapons', 'ProcSword', 'ProcDagger', 'ProcGreatSword', 'ProcScythe',
         'ProcPolearm', 'ProcGreatKatana', 'ProcKatana', 'ProcClub', 'ProcStaff')
     state.ExtraMeleeMode = M { ['description'] = 'Extra Melee Mode', 'None', 'SuppaBrutal', 'DWEarrings', 'DWMax' }
 
@@ -19,8 +20,9 @@ function user_job_setup()
     send_command('bind ^` input /ja "Innin" <me>')
     send_command('bind !` input /ja "Yonin" <me>')
     send_command('bind @` gs c cycle SkillchainMode')
-    send_command('bind !r gs c set WeaponskillMode Proc;;gs c set CastingMode Proc;gs c update')
+    send_command('bind !r gs c set skipprocweapons false;gs c set weapons ProcSword;gs c set WeaponskillMode Proc;;gs c set CastingMode Proc;gs c update')
     send_command('bind ^r gs c weapons Default;gs c set WeaponskillMode Normal;gs c set CastingMode Normal;gs c update')
+    send_command('bind !f7 gs c cycle YagyuMode')
 
     utsusemi_cancel_delay = .3
     utsusemi_ni_cancel_delay = .06
@@ -34,11 +36,11 @@ function init_gear_sets()
     -- Precast sets
     --------------------------------------
     gear.af = {
-        Head = "Hachi. Hatsu. +1",
-        Body = "Hachi. Chain. +1",
-        Hands = "Hachiya Tekko +1",
-        Legs = "Hachi. Hakama +1",
-        Feet = "Hachi. Kyahan +1"
+        Head = "Hachi. Hatsu. +2",
+        Body = "Hachi. Chain. +2",
+        Hands = "Hachiya Tekko +2",
+        Legs = "Hachi. Hakama +2",
+        Feet = "Hachi. Kyahan +2"
     }
 
     gear.relic = {
@@ -60,19 +62,27 @@ function init_gear_sets()
     sets.Enmity = {
         -- ammo = "Date shuriken",
         -- head = "Canute's Helm",
-        -- neck = "Unmoving Collar +1",
+        neck = "Unmoving Collar +1",
         ear1 = "Cryptic Earring",
         -- ear2 = "Trux Earring",
-        -- body = "Passion Jacket", -- replace Emet Harness
-        body = "Emet Harness",
+        body = "Emet Harness +1",
         -- hands = "Kurys Gloves",
         ring1 = "Petrov Ring",
+        ring2 = "Odium Ring",
         -- ring2 = "Pernicious Ring",
-        -- back = "Agema Cape",
+        back = "Agema Cape",
         -- waist = "Sinew belt",
-        -- legs = "Zoar subligar +1",
+        legs = "Zoar Subligar +1",
         feet = gear.relic.Feet
     }
+
+    sets.Phalanx_Received = {
+		head = gear.taeon_phalanx_head,
+		body = gear.taeon_phalanx_body,
+		hands = gear.taeon_phalanx_hands,
+		legs = gear.taeon_phalanx_legs,
+		feet = gear.taeon_phalanx_feet,
+	}
 
     -- Precast sets to enhance JAs
     sets.precast.JA['Mijin Gakure'] = {
@@ -397,15 +407,15 @@ function init_gear_sets()
     --------------------------------------
 
     sets.midcast.FastRecast = {
-        head = gear.herculean_fc_head,
+        head = gear.empy.Head,
         neck = "Voltsurge Torque",
         ear1 = "Enchntr. Earring +1",
-        ear2 = "Loquac. Earring",
+        ear2 = "Etiolation Earring",
         body = "Dread Jupon",
-        hands = gear.relic.Hands,
+        hands = "Leyline Gloves",
         ring1 = "Defending Ring",
         ring2 = "Kishar Ring",
-        legs = "Rawhide Trousers",
+        legs = "Zoar Subligar +1",
         feet = "Malignance Boots"
     }
 
@@ -451,6 +461,7 @@ function init_gear_sets()
 
     sets.midcast.Utsusemi = set_combine(sets.midcast.NinjutsuBuff, {
         back = "Andartia's Mantle",
+        body = "Passion Jacket",
         feet = gear.empy.Feet
     })
 
@@ -765,19 +776,27 @@ function init_gear_sets()
 
     -- Weapons sets
     sets.weapons.Heishi = { main = "Heishi Shorinken", sub = "Kunimitsu" }
-    sets.weapons.SavageYagyu = { main = "Naegling", sub = "Yagyu Darkblade" }
     sets.weapons.Savage = { main = "Naegling", sub = "Uzura +2" }
     sets.weapons.Evisceration = { main = "Tauret", sub = "Kunimitsu" }
     sets.weapons.MagicWeapons = { main = "Kunimitsu", sub = "Tauret" }
-    sets.weapons.ProcDagger = { main = "Chicken Knife II", sub = empty }
-    sets.weapons.ProcSword = { main = "Ark Sword", sub = empty }
-    sets.weapons.ProcGreatSword = { main = "Lament", sub = empty }
-    sets.weapons.ProcScythe = { main = "Ark Scythe", sub = empty }
-    sets.weapons.ProcPolearm = { main = "Pitchfork +1", sub = empty }
-    sets.weapons.ProcGreatKatana = { main = "Hardwood Katana", sub = empty }
-    sets.weapons.ProcKatana = { main = "Kanaria", sub = empty }
-    sets.weapons.ProcClub = { main = "Dream Bell +1", sub = empty }
-    sets.weapons.ProcStaff = { main = "Terra's Staff", sub = empty }
+	sets.weapons.ProcDagger = { main = "Qutrub Knife", sub = empty }
+	sets.weapons.ProcSword = { main = "Wax Sword", sub = 'Qutrub Knife' }
+	sets.weapons.ProcKatana = { main = "Trainee Burin", sub = empty }
+	sets.weapons.ProcGreatSword = { main = "Goujian", sub = empty }
+	sets.weapons.ProcScythe = { main = "Bronze Zaghnal", sub = empty }
+	sets.weapons.ProcPolearm = { main = "Tzee Xicu's Blade", sub = empty }
+	sets.weapons.ProcGreatKatana = { main = "Mutsunokami", sub = empty }
+	sets.weapons.ProcClub = { main = "Kitty Rod", sub = empty }
+	sets.weapons.ProcStaff = { main = "Cobra Staff", sub = empty }	
+    -- sets.weapons.ProcDagger = { main = "Chicken Knife II", sub = empty }
+    -- sets.weapons.ProcSword = { main = "Ark Sword", sub = empty }
+    -- sets.weapons.ProcGreatSword = { main = "Lament", sub = empty }
+    -- sets.weapons.ProcScythe = { main = "Ark Scythe", sub = empty }
+    -- sets.weapons.ProcPolearm = { main = "Pitchfork +1", sub = empty }
+    -- sets.weapons.ProcGreatKatana = { main = "Hardwood Katana", sub = empty }
+    -- sets.weapons.ProcKatana = { main = "Kanaria", sub = empty }
+    -- sets.weapons.ProcClub = { main = "Dream Bell +1", sub = empty }
+    -- sets.weapons.ProcStaff = { main = "Terra's Staff", sub = empty }
 end
 
 -- Select default macro book on initial load or subjob change.

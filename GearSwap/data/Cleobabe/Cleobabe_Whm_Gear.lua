@@ -20,7 +20,7 @@ function user_job_setup()
 	gear.af.head = "Theophany Cap +3"
 	gear.af.body = "Theo. Bliaut +3"
 	gear.af.hands = "Theophany Mitts +3"
-	gear.af.legs = "Theo. Pant. +2"
+	gear.af.legs = "Th. Pant. +3"
 	gear.af.feet = "Theo. Duckbills +3"
 
 	gear.relic = {}
@@ -87,9 +87,9 @@ function init_gear_sets()
 		ring2 = "Lebeche Ring", -- 2 QM
 		back = "Alaunus's Cape", -- 10
 		waist = "Witful Belt", -- 3/3 QM
-		legs = "Ayanmo Cosciales +2", -- 6
-		feet = "Regal Pumps +1"  -- 4
-	} -- 79 FC / 7 QM
+		legs = "Volte Brais", -- 9
+		feet = "Volte Gaiters"  -- 6
+	} -- 84 FC / 7 QM
 
 	sets.precast.FC.DT = set_combine(sets.precast.FC, {
 		head = "Bunzi's Hat",
@@ -190,7 +190,7 @@ function init_gear_sets()
 
 	-- Midcast Sets
 
-	sets.Kiting = { feet = "Herald's Gaiters" }
+	sets.Kiting = { ring1 = "Shneddick Ring" }
 	sets.latent_refresh = { waist = "Fucho-no-obi" }
 	sets.latent_refresh_grip = { sub = "Oneiros Grip" }
 	sets.TPEat = { neck = "Chrys. Torque" }
@@ -252,10 +252,7 @@ function init_gear_sets()
 		-- ammo = "Hasty Pinion +1",
 		ammo = "Impatiens",
 		head = "Bunzi's Hat", -- 6 Haste, 10 FC
-		ear1 = "Enchntr. Earring +1", -- 2 FC
 		body = "Inyanga Jubbah +2", -- 2 Haste, 14 FC
-		hands = "Fanatic Gloves", -- 3 Haste, 2 FC
-		feet = "Regal Pumps +1",  -- 3 Haste, 7 FC
 		waist = "Channeler's Stone", -- 2 FC
 		ring2 = "Prolix Ring",  -- 2 FC
 	})
@@ -470,7 +467,7 @@ function init_gear_sets()
 
 	-- 110 total Enhancing Magic Skill; caps even without Light Arts
 	sets.midcast['Enhancing Magic'] = {
-		main = gear.gada_enhancing_club,
+		-- main = gear.gada_enhancing_club,
 		sub = "Ammurapi Shield",
 		ammo = "Hasty Pinion +1",
 		neck = "Incanter's Torque",
@@ -494,7 +491,7 @@ function init_gear_sets()
 
 	sets.midcast.Aquaveil = set_combine(sets.midcast['Enhancing Magic'],
 		{
-			main = "Vadose Rod",
+			-- main = "Vadose Rod",
 			sub = "Ammurapi Shield",
 			hands = "Regal Cuffs",
 			waist = "Emphatikos Rope",
@@ -836,9 +833,8 @@ function init_gear_sets()
 
 	-- Idle sets (default idle set not needed since the other three are defined, but leaving for testing purposes)
 	sets.idle = {
-		main = "Mpaca's Staff",
-		sub = "Clerisy Strap +1",
-		-- sub = "Umbra Strap",
+		main = "Malignance Pole",
+		sub = "Umbra Strap",
 		-- ammo = "Homiliary",
 		ammo = "Staunch Tathlum +1",
 		head = "Befouled Crown",
@@ -847,12 +843,12 @@ function init_gear_sets()
 		ear2 = "Ethereal Earring",
 		body = gear.empy.body,
 		hands = "Volte Gloves",
-		ring1 = "Stikini Ring +1",
-		ring2 = "Shneddick Ring",
-		back = "Moonlight Cape",
-		waist = "Carrier's Sash",
-		legs = "Assid. Pants +1",
-		feet = gear.chironic_refresh_feet
+		ring1={name="Stikini Ring +1", bag="wardrobe3"},
+		ring2={name="Stikini Ring +1", bag="wardrobe4"},
+		back = "Alaunus's Cape",
+		waist = "Plat. Mog. Belt",
+		legs = "Volte Brais",
+		feet = "Volte Gaiters"
 	}
 
 	sets.idle.PDT = set_combine(sets.idle, {
@@ -866,12 +862,11 @@ function init_gear_sets()
 		ear2 = "Ethereal Earring",
 		body = "Witching Robe",
 		hands = gear.chironic_refresh_hands,
-		ring1 = "Defending Ring",
+		-- ring1 = "Defending Ring",
+		ring1 = "Gelatinous Ring +1",
 		ring2 = "Stikini Ring +1",
 		back = "Moonlight Cape",
 		waist = "Carrier's Sash",
-		legs = "Assid. Pants +1",
-		feet = gear.chironic_refresh_feet
 	})
 
 	sets.idle.MDT = {
@@ -1054,7 +1049,7 @@ function init_gear_sets()
 	}
 
 	sets.HPCure = {
-		main = "Queller Rod",
+		main = "Raetic Rod +1",
 		sub = "Ammurapi Shield",
 		ammo = "Pemphredo Tathlum",
 		head = "Nyame Helm",

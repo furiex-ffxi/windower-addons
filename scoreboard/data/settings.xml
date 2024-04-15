@@ -80,6 +80,7 @@
                 <y>197</y>
             </pos>
         </display>
+        <visible>true</visible>
     </furyex>
     <liambear>
         <display>
@@ -90,6 +91,14 @@
         </display>
         <visible>true</visible>
     </liambear>
+    <lolababe>
+        <display>
+            <pos>
+                <x>2021</x>
+                <y>403</y>
+            </pos>
+        </display>
+    </lolababe>
     <mailman>
         <display>
             <pos>
@@ -97,5 +106,6 @@
                 <y>296</y>
             </pos>
         </display>
+        <visible>true</visible>
     </mailman>
 </settings>

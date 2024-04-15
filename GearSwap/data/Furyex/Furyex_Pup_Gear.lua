@@ -94,7 +94,7 @@ function init_gear_sets()
     Artifact_Foire = {}
     Artifact_Foire.Head = "Foire Taj +2"
     Artifact_Foire.Body = "Foire Tobe +2"
-    Artifact_Foire.Hands = "Foire Dastanas +2"
+    Artifact_Foire.Hands = "Foire Dastanas +3"
     Artifact_Foire.Legs = "Foire Churidars +2"
     Artifact_Foire.Feet = "Foire Babouches +2"
 
@@ -129,7 +129,7 @@ function init_gear_sets()
         hands = "Malignance Gloves",
         ring1 = "Lebeche Ring",
         ring2 = "Prolix Ring",
-        back = "Perimede Cape",
+        back = "Fi Follet Cape +1",
         waist = "Isa Belt",
         legs = "Rawhide Trousers",
         feet = "Regal Pumps +1"

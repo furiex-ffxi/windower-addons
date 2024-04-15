@@ -221,7 +221,7 @@ function init_gear_sets()
 		neck = "Fotia Gorget",
 		body = EMPY.Body,
 		ear1 = "Sherida Earring",
-        ear2 = "Lethargy Earring",
+        ear2 = "Leth. Earring +1",
 		hands = sets.Malignance.Hands,
 		-- ring1 = "Begrudging Ring",
 		ring1 = "Karieyh Ring",
@@ -237,7 +237,7 @@ function init_gear_sets()
 		neck = "Dls. Torque +2",
 		belt = "Acuity Belt +1",
 		ear1 = "Sherida Earring",
-		ear2 = "Lethargy Earring",
+		ear2 = "Leth. Earring +1",
 	})
 
 
@@ -386,8 +386,8 @@ function init_gear_sets()
 	}
 
 	sets.midcast.Cure = set_combine(sets.midcast.Casting,{
-		-- main = "Daybreak",
-		-- sub = "Sors Shield",
+		main = "Daybreak",
+		sub = "Sors Shield",
         head		=	"Vanya Hood",
         -- body		=	"Gende. Bilaut +1",
         -- hands		=	"Telchine Gloves", 
@@ -480,7 +480,7 @@ function init_gear_sets()
 		head = "Telchine Cap",
 		neck = "Dls. Torque +2",
 		ear1 = "Andoaa Earring",
-		ear2 = "Lethargy Earring",
+		ear2 = "Leth. Earring +1",
 		body = RELIC.Body,
 		hands = RELIC.Hands,
 		ring1 = "Stikini Ring +1",
@@ -540,7 +540,7 @@ function init_gear_sets()
 		neck		=	"Dls. Torque +2",
         head		=	RELIC.Head,
         body		=	AF.Body,
-		hands		=	EMPY.Hands,
+		hands		=	"Regal Cuffs",
 		waist       =   "Acuity Belt +1",
         legs		=	EMPY.Legs,
         feet		=	RELIC.Feet,
@@ -553,7 +553,7 @@ function init_gear_sets()
 	sets.midcast['Enfeebling Magic'].Resistant =  set_combine(sets.midcast['Enfeebling Magic'], {
 		main = "Daybreak",
 		sub = "Ammurapi Shield",
-		range =  "Ullr",
+		-- range =  "Ullr",
 		-- ear1 = "Regal Earring",
 		-- hands = gear.chironic_enfeeble_hands,
 		ring1 = "Metamor. Ring +1",
@@ -565,8 +565,8 @@ function init_gear_sets()
 	sets.midcast.DurationOnlyEnfeebling = set_combine(sets.midcast['Enfeebling Magic'],
 	{ 
 		main = "Bunzi's Rod", 
-		range =  "Ullr",
-		ammo = empty,
+		-- range =  "Ullr",
+		-- ammo = empty,
 		body = AF.Body, 
 		left_ear = "Snotra Earring",
 		left_ring = "Kishar Ring",
@@ -618,7 +618,7 @@ function init_gear_sets()
 		-- ear1 = "Crematio Earring",
 		-- ear2 = "Friomisi Earring",
 		ear1 = "Malignance Earring",
-		ear2 = "Lethargy Earring",
+		ear2 = "Leth. Earring +1",
 		-- body = gear.merlinic_nuke_body,
 		body = EMPY.Body,
 		-- hands = "Amalric Gages +1",
@@ -704,6 +704,8 @@ function init_gear_sets()
 		-- main = gear.grioavolr_nuke_staff, 
 		-- sub = "Alber Strap", 
 		-- head = "Ea Hat +1",
+		main = "Bunzi's Rod",
+		shield = "Ammurapi Shield",
 		neck = "Mizu. Kubikazari", 
 		hands = "Bunzi's Gloves",
 		-- body = "Ea Houppe. +1", 
@@ -841,9 +843,9 @@ function init_gear_sets()
         head		=	RELIC.Head,
 		neck = "Dls. Torque +2",
         body		=	AF.Body,
-        hands		=	EMPY.Hands,
+        hands		=	"Volte Gloves",
         -- legs		=	Carm.Legs.D,
-        feet		=	EMPY.Feet,
+        feet		=	"Volte Gaiters",
         -- neck		=	"Twilight Torque",
         waist		=	"Orpheus's Sash",
         left_ear	=	"Etiolation Earring",
@@ -939,9 +941,8 @@ function init_gear_sets()
 	sets.NightIdle = {}
 
 	-- Weapons sets
-	-- sets.weapons.Naegling = { main = "Naegling", sub = "Sacro Bulwark", range = empty }
-	sets.weapons.Naegling = { main = "Naegling", sub = "Genmei Shield", range = empty }
-	sets.weapons.Bow = { main = "Qutrub Knife", sub = "Ceremonial Dagger", range = "Shortbow", ammo = "Stone Arrow" }
+	sets.weapons.Naegling = { main = "Naegling", sub = "Sacro Bulwark", range = empty }
+	sets.weapons.Bow = { main = "Naegling", sub = "Sacro Bulwark", range = "Ullr", ammo = "Beetle Arrow" }
 	sets.weapons.DualWeapons = { main = "Naegling", sub = "Thibron", range = empty }
 	-- sets.weapons.DualWeaponsAcc = { main = "Naegling", sub = "Almace", range = empty }
 	sets.weapons.DualWeaponsAcc = { main = "Naegling", sub = "Ternion Dagger +1", range = empty }
@@ -951,10 +952,10 @@ function init_gear_sets()
 	sets.weapons.DualAeolian = { main = "Tauret", sub = "Daybreak", range = empty }
 	sets.weapons.DualProcSwords = { main = "Brunello", sub = "Soulflayer's Wand", range = empty }
 	sets.weapons.DualProcDaggers = { main = "Blurred Knife +1", sub = "Atoyac", range = empty }
-	sets.weapons.Tauret = { main = "Tauret", sub = "Genmei Shield"}
-	sets.weapons.Club = { main = "Maxentius", sub = "Genmei Shield"}
+	sets.weapons.Tauret = { main = "Tauret", sub = "Sacro Bulwark"}
+	sets.weapons.Club = { main = "Maxentius", sub = "Sacro Bulwark"}
 	sets.weapons.EnspellOnly = { main = "Qutrub Knife", sub = "Ceremonial Dagger", range = "Ullr", ammo = "Beetle Arrow" }
-	sets.weapons.EnspellDW = { main = "Crocea Mors", sub = "Daybreak", range = empty }
+	sets.weapons.EnspellDW = { main = "Crocea Mors", sub = "Daybreak", range = Ullr, ammo = "Chapuli Arrow" }
 	sets.weapons.DualAlmace = { main = "Almace", sub = "Sequence", range = empty }
 	sets.weapons.DualBow = { main = "Naegling", sub = "Thibron", range = "Ullr", ammo = "Chapuli Arrow" }
 	sets.weapons.BowMacc = { main = "Naegling", sub = "Tauret", range = "Ullr", ammo = empty }

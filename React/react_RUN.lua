@@ -45,4 +45,22 @@ return {
             ["ready_reaction"]="turnaround"
         }
     },    
+    ["Kei"]={
+        ["Dancing Fullers"]={
+            ["ready_reaction"]="runaway 12",
+            ["complete_reaction"]="runto 3"
+        }
+    },  
+    ["Ou"]={
+        ["Dancing Fullers"]={
+            ["ready_reaction"]="runaway 12",
+            ["complete_reaction"]="runto 3"
+        }
+    },
+    ["Locus Camelopard"]={
+        ["Cold Stare"]={
+            ["complete_reaction"]="facemob",
+            ["ready_reaction"]="turnaround"
+        },
+    },               
 }

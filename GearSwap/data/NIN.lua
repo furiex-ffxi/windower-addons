@@ -52,7 +52,7 @@ end
 
 -- Setup vars that are user-independent.  state.Buff vars initialized here will automatically be tracked.
 function job_setup()
-
+	state.YagyuMode = M{'Never','300','1000','Always'}
 	state.Buff['Aftermath: Lv.3'] = buffactive['Aftermath: Lv.3'] or false
     state.Buff.Migawari = buffactive.Migawari or false
     state.Buff.Yonin = buffactive.Yonin or false
@@ -93,6 +93,13 @@ function job_pretarget(spell, spellMap, eventArgs)
 end
 
 function job_precast(spell, spellMap, eventArgs)
+	if (spell.english == 'Utsusemi: Ichi' or spell.english == 'Utsusemi: Ni' or spell.english == 'Utsusemi: San') and state.YagyuMode.value ~= 'Never' then
+		if state.YagyuMode.value == 'Always' or tonumber(state.YagyuMode.value) > player.tp then
+			enable('sub')
+			equip({sub="Yagyu Darkblade"})
+		end
+	end
+	
 	if spell.english == 'Mijin Gakure' and windower.ffxi.get_ability_recasts()[0] < latency and not state.UnlockWeapons.value and not state.Weapons.value == 'None' then
 		local mijinmain = standardize_set(sets.precast.JA['Mijin Gakure'].main)
 		local equippedweapons = standardize_set(sets.weapons[state.Weapons.value])

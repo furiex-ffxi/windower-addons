@@ -45,9 +45,9 @@ function user_job_setup()
 	send_command('bind @` gs c cycle MagicBurstMode')
 	send_command('bind @f10 gs c cycle RecoverMode')
 	send_command('bind @f8 gs c toggle AutoNukeMode')
-	send_command('bind !r gs c weapons None;gs c update')
-	send_command('bind !q gs c weapons NukeWeapons;gs c update')
-	send_command('bind ^q gs c weapons Swords;gs c update')
+	send_command('bind !r gs c weapons DualNaegling;gs c update')
+	send_command('bind !q gs c weapons DualCarnwenhan;gs c update')
+	send_command('bind ^q gs c weapons None;gs c update')
 	send_command('bind !f7 gs c cycle CarnMode')
 	send_command('bind ^numpad7 input //sing on')
 
@@ -60,14 +60,14 @@ function init_gear_sets()
 	--------------------------------------
 
 	-- Weapons sets
-	sets.weapons.DualCarnwenhan = {main="Carnwenhan", sub="Centovente"}
 	sets.weapons.Naegling = { main = "Naegling", sub = "Genmei Shield" }
 	sets.weapons.Aeneas = { main = "Aeneas", sub = "Genmei Shield" }
 	sets.weapons.Carnwenhan = { main = "Carnwenhan", sub = "Genmei Shield" }
-	sets.weapons.DualWeapons = { main = "Aeneas", sub = "Centovente" }
-	sets.weapons.DualNaegling = { main = "Naegling", sub = "Centovente" }
 	sets.weapons.Naegling = { main = "Naegling", sub = "Genmei Shield" }
 	sets.weapons.Qutrub = { main = "Qutrub Knife", sub = "Genmei Shield" }
+	sets.weapons.DualCarnwenhan = {main="Carnwenhan", sub="Centovente"}	
+	sets.weapons.DualWeapons = { main = "Aeneas", sub = "Centovente" }
+	sets.weapons.DualNaegling = { main = "Naegling", sub = "Centovente" }
 	sets.weapons.DualTauret = { main = "Tauret", sub = "Blurred Knife +1" }
 	sets.weapons.DualAeolian = { main = "Tauret", sub = "Malevolence" }
 
@@ -716,6 +716,7 @@ function init_gear_sets()
 --   ring2  Moonlight Ring B
 --    back  Intarabus's Cape DEX Dual Wield
 	sets.engaged.Acc = set_combine(sets.engaged, {
+		head = "Blistering Sallet +1",
 		hands = "Gazu Bracelets +1",
 		ear1 = "Telos Earring",
 		ear2 = "Digni. Earring",

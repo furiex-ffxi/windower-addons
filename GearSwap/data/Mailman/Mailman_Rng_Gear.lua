@@ -5,8 +5,8 @@ function user_job_setup()
     state.RangedMode:options('Normal', 'Acc', 'Fodder')
     state.WeaponskillMode:options('Match', 'Normal', 'Acc')
     state.IdleMode:options('Normal', 'PDT')
-    state.Weapons:options('Default', 'DualWeapons', 'DualSavageWeapons', 'DualEviscerationWeapons', 'DualMagicWeapons',
-        'DualMalevolence')
+    state.Weapons:options('Default', 'DualEviscerationWeapons', 'DualWeapons', 'DualSavageWeapons', 'DualMagicWeapons',
+        'DualMalevolence', 'DualFermion')
 
     -- Ikenga_vest_bonus = 190  -- It is 190 at R20. Uncomment if you need to manually adjust because you are using below R20
 
@@ -149,6 +149,7 @@ function init_gear_sets()
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {
         -- head = "Orion Beret +3",
+        head = sets.Nyame.Head,
         neck = "Fotia Gorget",
         body = sets.Nyame.Body,
         hands = sets.Nyame.Hands,
@@ -198,20 +199,25 @@ function init_gear_sets()
         feet = gear.herculean_nuke_feet
     }
 
-    sets.precast.WS['Aeolian Edge'] = {
-        head = gear.herculean_nuke_head,
-        neck = "Sanctity Necklace",
-        ear1 = "Crematio Earring",
-        ear2 = "Friomisi Earring",
-        body = "Samnuha Coat",
-        hands = "Leyline Gloves",
-        ring1 = "Metamor. Ring +1",
-        ring2 = "Dingir Ring",
-        back = gear.wsd_ranger_jse_back,
-        waist = "Eschan Stone",
-        legs = "Gyve Trousers",
-        feet = gear.herculean_nuke_feet
-    }
+    sets.precast.WS.MAB = set_combine(sets.precast.WS, {
+        -- ammo = gear.MAbullet,
+		feet=sets.Nyame.Feet,
+		body=sets.Nyame.Body,
+        hands = sets.Nyame.Hands,
+		legs= sets.Nyame.Legs,
+		-- waist="Orpheus's Sash",
+        waist="Eschan Stone",
+		left_ear="Friomisi Earring",
+		right_ear="Hectate's Earring",
+		left_ring="Dingir Ring",
+		-- back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
+	})
+
+    sets.precast.WS['Aeolian Edge'] = set_combine(sets.precast.WS.MAB, {
+        right_ear="Hectate's Earring",
+		back=gear.magic_wsd_jse_back,
+		body=sets.Nyame.Body,
+    })
 
     sets.precast.WS['Trueflight'] = {
         head = "Orion Beret +3",
@@ -436,7 +442,7 @@ function init_gear_sets()
     }
     sets.weapons.DualWeapons = {
         main = "Kustawi +1",
-        sub = "Kustawi",
+        sub = "Malevolence",
         -- range = "Fomalhaut"
         range = "Shortbow",
         ammo = "Stone Arrow"
@@ -449,7 +455,7 @@ function init_gear_sets()
     }
     sets.weapons.DualEviscerationWeapons = {
         main = "Tauret",
-        sub = "Blurred Knife +1",
+        sub = "Malevolence",
         range = "Fomalhaut"
     }
     sets.weapons.DualMalevolence = {
@@ -461,6 +467,12 @@ function init_gear_sets()
         main = "Tauret",
         sub = "Naegling",
         range = "Fomalhaut"
+    }
+
+    sets.weapons.DualFermion = {
+        main="Fermion Sword",
+        sub="Qutrub Knife",
+        range="Fomalhaut",
     }
 
     --------------------------------------

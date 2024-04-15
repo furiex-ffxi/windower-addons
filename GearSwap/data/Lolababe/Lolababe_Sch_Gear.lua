@@ -4,7 +4,7 @@ function user_job_setup()
     state.CastingMode:options('Normal', 'Resistant', 'Proc', 'OccultAcumen', '9k')
     state.IdleMode:options('Normal', 'PDT')
     state.HybridMode:options('Normal', 'PDT')
-    state.Weapons:options('None', 'Grioavolr', 'Bunzi', 'Akademos', 'Khatvanga')
+    state.Weapons:options('None', 'Musa', 'Grioavolr', 'Bunzi', 'Akademos', 'Khatvanga')
 
     gear.nuke_jse_back = { name = "Lugh's Cape", augments = { 'INT+20', 'Mag. Acc+20 /Mag. Dmg.+20', '"Mag.Atk.Bns."+10' } }
     gear.fc_jse_back = { name="Lugh's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
@@ -108,7 +108,7 @@ function init_gear_sets()
     -- Midcast Sets
 
     sets.TreasureHunter = set_combine(sets.TreasureHunter, { 
-        -- feet = gear.chironic_treasure_feet
+        body = "Volte Jupon",
     })
 
     -- Gear that converts elemental damage done to recover MP.	
@@ -236,7 +236,8 @@ function init_gear_sets()
     }
 
     sets.midcast.Regen = set_combine(sets.midcast['Enhancing Magic'], { 
-        main = "Bolelabunga",
+        main = "Musa",
+        sub = "Enki Strap",
         head = "Arbatel Bonnet +3",
         back = gear.nuke_jse_back 
     })
@@ -975,6 +976,7 @@ function init_gear_sets()
     }
     sets.weapons.Bunzi = { main = "Bunzi's Rod", sub = "Genmei Shield" }
     sets.weapons.Grioavolr = { main = "Grioavolr", sub = "Enki Strap" }
+    sets.weapons.Musa = { main = "Musa", sub = "Enki Strap" }
 end
 
 -- Select default macro book on initial load or subjob change.

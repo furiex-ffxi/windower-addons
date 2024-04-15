@@ -32,8 +32,11 @@ gear.grioavolr_fc_staff = {name="Grioavolr",augments={'"Fast Cast"+7','MP+20','M
 gear.grioavolr_pet_staff = {name="Grioavolr",augments={'Blood Pact Dmg.+8','Pet: STR+10','Pet: Mag. Acc.+19','Pet: "Mag.Atk.Bns."+30',}}
 
 gear.taeon_pet_body = {name="Taeon Tabard",augments={'Pet: Accuracy+15 Pet: Rng. Acc.+15','Pet: "Dbl. Atk."+4','Pet: Damage taken -4%',}}
-gear.taeon_phalanx_body = {name="Taeon Tabard",augments={'Mag. Evasion+15','Spell interruption rate down -10%','Phalanx +3'}}
-
+gear.taeon_phalanx_head = { name="Taeon Chapeau", augments={'Phalanx +3',}}
+gear.taeon_phalanx_body = { name="Taeon Tabard", augments={'Phalanx +3',}}
+gear.taeon_phalanx_hands={ name="Taeon Gloves", augments={'Phalanx +3',}}
+gear.taeon_phalanx_legs={ name="Taeon Tights", augments={'Phalanx +3',}}
+gear.taeon_phalanx_feet={ name="Taeon Boots", augments={'Phalanx +3',}}
 gear.chironic_enfeeble_hands = {name="Chironic Gloves",augments={'Mag. Acc.+20 "Mag.Atk.Bns."+20','MND+10','Mag. Acc.+15',}}
 gear.chironic_refresh_hands = {name="Chironic Gloves",augments={'"Counter"+4','DEX+4','"Refresh"+2','Accuracy+19 Attack+19','Mag. Acc.+13 "Mag.Atk.Bns."+13',}}
 gear.chironic_treasure_feet = {name="Chironic Slippers",augments={'"Occult Acumen"+8','MND+7','"Treasure Hunter"+2',}}
@@ -71,7 +74,7 @@ gear.merlinic_occult_feet = {name="Merlinic Crackows",augments={'"Occult Acumen"
 
 gear.odyssean_wsd_hands = { name="Odyssean Gauntlets",augments={'Accuracy+26','Weapon skill damage +4%','STR+6','Attack+14',}}
 gear.odyssean_stp_legs = {name="Odyssean Cuisses",augments={'Accuracy+28','"Store TP"+6','DEX+9',}}
-gear.odyssean_fc_legs = {name="Odyssean Cuisses",augments={'"Fast Cast"+6','"Mag.Atk.Bns."+12',}}
+gear.odyssean_fc_legs = { name="Odyssean Cuisses", augments={'"Mag.Atk.Bns."+16','"Fast Cast"+6','INT+4',}}
 
 gear.valorous_magical_wsd_head = {name="Valorous Mask",augments={'"Mag.Atk.Bns."+17','Weapon skill damage +5%','Attack+10',}}
 gear.valorous_wsd_head = {name="Valorous Mask",augments={'Accuracy+10 Attack+10','Weapon skill damage +4%','STR+4','Attack+10',}}

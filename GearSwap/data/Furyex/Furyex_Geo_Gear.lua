@@ -48,7 +48,7 @@ function init_gear_sets()
 	af.Head = "Geo. Galero +2"
 	af.Body = "Geomancy Tunic +2"
 	af.Hands = "Geo. Mitaines +3"
-	af.Legs = "Geomancy Pants +2"
+	af.Legs = "Geomancy Pants +3"
 	af.Feet = "Geo. Sandals +2"
 
 	relic = {}
@@ -76,36 +76,43 @@ function init_gear_sets()
 	sets.buff.Entrust = {}
 
 	-- Relic hat for Blaze of Glory HP increase.
-	sets.buff['Blaze of Glory'] = {}
+	sets.buff['Blaze of Glory'] = {
+		head = relic.Head,
+	}
 
 	-- Fast cast sets for spells
 
 	sets.precast.FC = {
-		-- main = gear.grioavolr_fc_staff,
-		-- sub = "Clerisy Strap +1",
-		range = empty,
-		ammo = "Impatiens",
-		head = "C. Palug Crown",
+		-- main = gear.grioavolr_fc_staff, -- 11
+		-- sub = "Clerisy Strap +1", -- 3
+		main = "C. Palug Hammer", -- 7
+		sub = "Genmei Shield",
+		range = "Dunna", -- 3
+		ammo = empty,
+		head = "C. Palug Crown", -- 8
         neck = "Baetyl Pendant", --4
-		ear1 = "Loquac. Earring",
-		ear2 = "Etiolation Earring",
+		ear1 = "Loquac. Earring", -- 2
+		ear2 = "Malignance Earring", -- 4
 		-- body = "Zendik Robe",
-		body = "Merlinic Jubbah",
-		hands = "Volte Gloves",
-		ring1 = "Kishar Ring",
-		ring2 = "Lebeche Ring",
-		back = "Perimede Cape",
-		waist = "Witful Belt",
-		legs = af.Legs,
-		feet = "Regal Pumps +1"
-	}
+		body = "Merlinic Jubbah", -- 6
+		hands = "Volte Gloves", -- 6
+		ring1 = "Kishar Ring", -- 4
+		ring2 = "Lebeche Ring", -- 2 QM
+		back = "Fi Follet Cape", -- 10
+		waist = "Witful Belt", -- 3 / 3 QM
+		legs = af.Legs, -- 13 
+		feet = "Regal Pumps +1" -- 7
+	} -- 77
 
 	sets.precast.FC.Geomancy = set_combine(sets.precast.FC, { range = "Dunna", ammo = empty })
 
 	sets.precast.FC['Elemental Magic'] = set_combine(sets.precast.FC,
 		{ ear2 = "Malignance Earring", hands = relic.Hands })
 
-	sets.precast.FC.Cure = set_combine(sets.precast.FC, { main = "Serenity", sub = "Clerisy Strap +1" })
+	sets.precast.FC.Cure = set_combine(sets.precast.FC, { 
+		-- main = "Serenity", 
+		-- sub = "Clerisy Strap +1" 
+	})
 
 	sets.precast.FC.Curaga = sets.precast.FC.Cure
 
@@ -120,7 +127,7 @@ function init_gear_sets()
 	sets.precast.FC.Stoneskin = set_combine(sets.precast.FC['Enhancing Magic'], {})
 
 	sets.precast.FC.Impact = {
-		ammo = "Impatiens",
+		-- ammo = "Impatiens",
 		head = empty,
 		neck = "Voltsurge Torque",
 		ear1 = "Enchntr. Earring +1",
@@ -161,40 +168,30 @@ function init_gear_sets()
 	-- Midcast sets
 	--------------------------------------
 
-	sets.midcast.FastRecast = {
-		main = gear.grioavolr_fc_staff,
-		sub = "Clerisy Strap +1",
-		head = "Amalric Coif +1",
-		neck = "Voltsurge Torque",
-		ear1 = "Enchntr. Earring +1",
-		ear2 = "Malignance Earring",
-		body = "Zendik Robe",
-		hands = "Volte Gloves",
-		ring1 = "Kishar Ring",
-		ring2 = "Prolix Ring",
-		back = "Lifestream Cape",
-		waist = "Witful Belt",
-		legs = af.Legs,
-		feet = "Regal Pumps +1"
-	}
+	sets.midcast.FastRecast = set_combine(sets.precast.FC, {
+
+	})
 
 	sets.midcast.Geomancy = {
-		-- main = "Solstice",
-		-- sub = "Genmei Shield",
+		main = "Solstice",
+		sub = "Genmei Shield",
 		range = "Dunna",
 		ammo = empty,
 		head = "Vanya Hood",
 		neck = "Bagua Charm +2",
 		ear1 = "Gifted Earring",
 		ear2 = "Malignance Earring",
-		body = "Vedic Coat",
+		-- body = "Vedic Coat",
+		body = "Gyve Doublet",
 		hands = af.Hands,
 		ring1 = "Defending Ring",
 		ring2 = "Dark Ring",
 		back = "Solemnity Cape",
 		waist = "Austerity Belt +1",
-		legs = "Vanya Slops",
-		feet = "Medium's Sabots"
+		-- legs = "Vanya Slops",
+		legs = "Lengo Pants",
+		-- feet = "Medium's Sabots"
+		feet = "Merlinic Crackows"
 	}
 
 
@@ -204,7 +201,8 @@ function init_gear_sets()
 			neck = "Incanter's Torque", 
 			back = gear.idle_jse_back, 
 			legs = relic.Legs, 
-			feet = empy.Feet })
+			feet = empy.Feet 
+		})
 
 	sets.midcast.Cure = {
 		main = gear.gada_healing_club,
@@ -226,8 +224,8 @@ function init_gear_sets()
 	}
 
 	sets.midcast.LightWeatherCure = {
-		main = "Chatoyant Staff",
-		sub = "Curatio Grip",
+		-- main = "Chatoyant Staff",
+		-- sub = "Curatio Grip",
 		-- ammo = "Hasty Pinion +1",
 		head = "Amalric Coif +1",
 		neck = "Phalaina Locket",
@@ -331,7 +329,7 @@ function init_gear_sets()
 	sets.midcast['Elemental Magic'].Proc = {
 		main = empty,
 		sub = empty,
-		ammo = "Impatiens",
+		-- ammo = "Impatiens",
 		head = "Vanya Hood",
 		neck = "Loricate Torque +1",
 		ear1 = "Gifted Earring",
@@ -385,7 +383,7 @@ function init_gear_sets()
 	sets.midcast['Elemental Magic'].HighTierNuke.Resistant = {
 		main = "Daybreak",
 		sub = "Ammurapi Shield",
-		ammo = "Pemphredo Tathlum",
+		-- ammo = "Pemphredo Tathlum",
 		head = gear.merlinic_nuke_head,
 		neck = "Sanctity Necklace",
 		ear1 = "Regal Earring",
@@ -421,7 +419,7 @@ function init_gear_sets()
 	sets.midcast['Dark Magic'] = {
 		main = "Rubicundity",
 		sub = "Ammurapi Shield",
-		ammo = "Pemphredo Tathlum",
+		-- ammo = "Pemphredo Tathlum",
 		head = gear.merlinic_nuke_head,
 		neck = "Erra Pendant",
 		ear1 = "Regal Earring",
@@ -457,8 +455,8 @@ function init_gear_sets()
 	sets.midcast.Aspir = sets.midcast.Drain
 
 	sets.midcast.Stun = {
-		main = gear.grioavolr_fc_staff,
-		sub = "Clerisy Strap +1",
+		-- main = gear.grioavolr_fc_staff,
+		-- sub = "Clerisy Strap +1",
 		-- ammo = "Hasty Pinion +1",
 		head = "Amalric Coif +1",
 		neck = "Voltsurge Torque",
@@ -537,7 +535,7 @@ function init_gear_sets()
 		-- head = "Befouled Crown",
 		head = empy.Head,
 		body = empy.Body,
-		hands = empy.Hands,
+		hands = "Regal Cuffs",
 		legs = empy.Legs,
 		feet = empy.Feet,
 		neck = "Erra Pendant",
@@ -581,9 +579,14 @@ function init_gear_sets()
 	sets.midcast.IntEnfeebles.Resistant = set_combine(sets.midcast['Enfeebling Magic'].Resistant,
 		{ head = "Amalric Coif +1", ear2 = "Malignance Earring", waist = "Acuity Belt +1" })
 
-	sets.midcast.MndEnfeebles = set_combine(sets.midcast['Enfeebling Magic'], { range = empty, ring1 = "Stikini Ring +1" })
-	sets.midcast.MndEnfeebles.Resistant = set_combine(sets.midcast['Enfeebling Magic'].Resistant,
-		{ range = empty, ring1 = "Stikini Ring +1" })
+	sets.midcast.MndEnfeebles = set_combine(sets.midcast['Enfeebling Magic'], { 
+		-- range = empty, 
+		ring2 = "Stikini Ring +1" 
+	})
+	sets.midcast.MndEnfeebles.Resistant = set_combine(sets.midcast['Enfeebling Magic'].Resistant, { 
+		-- range = empty, 
+		ring2 = "Stikini Ring +1" 
+	})
 
 	sets.midcast.Dia = set_combine(sets.midcast['Enfeebling Magic'], sets.TreasureHunter)
 	sets.midcast['Dia II'] = set_combine(sets.midcast['Enfeebling Magic'], sets.TreasureHunter)
@@ -655,22 +658,22 @@ function init_gear_sets()
 	-- Idle sets
 
 	sets.idle = {
-		main = "Mpaca's Staff",
-		sub = "Umbra Strap",
+		main = "Solstice",
+		sub = "Genmei Shield",
 		range = empty,
 		ammo = "Staunch Tathlum +1",
 		neck = "Loricate Torque +1",
 		ear1 = "Genmei Earring",
 		ear2 = "Ethereal Earring",
 		head = "Befouled Crown",
-		body = "Jhakri Robe +2",
+		body = "Azimuth Coat +2",
 		hands = relic.Hands,
-		legs = "Assid. Pants +1",
-		-- feet = gear.merlinic_refresh_feet
+		legs = "Lengo Pants",
+		feet = "Volte Gaiters",
 		ring1 = "Stikini Ring +1",
 		ring2 = "Stikini Ring +1",
-		back = "Umbra Cape",
-		waist = "Carrier's Sash",
+		back = "Moonlight Cape",
+		waist = "Plat. Mog. Belt",
 	}
 
 	sets.idle.PDT = {

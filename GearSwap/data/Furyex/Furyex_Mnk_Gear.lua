@@ -127,18 +127,23 @@ function init_gear_sets()
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {
         ammo = "Voluspa Tathlum",
-        head = "Adhemar Bonnet +1",
+        -- head = "Adhemar Bonnet +1",
+        head = "Mpaca's Cap",
         neck = "Fotia Gorget",
         ear1 = "Brutal Earring",
         ear2 = "Sherida Earring",
-        body = "Ken. Samue",
-        hands = "Adhemar Wrist. +1",
+        -- body = "Ken. Samue",
+        body = "Mpaca's Doublet",
+        -- hands = "Adhemar Wrist. +1",
+        hands = "Mpaca's Gloves",
         ring1 = "Gere Ring",
         ring2 = "Niqmaddu Ring",
         back = "Segomo's Mantle",
         waist = "Fotia Belt",
-        legs = "Hiza. Hizayoroi +2",
-        feet = gear.herculean_ta_feet
+        -- legs = "Hiza. Hizayoroi +2",
+        legs = "Mpaca's Hose",
+        -- feet = gear.herculean_ta_feet
+        feet = "Mpaca's Boots",
     }
     sets.precast.WSAcc = {
         ammo = "Falcon Eye",
@@ -197,7 +202,8 @@ function init_gear_sets()
         feet = "Mummu Gamash. +2"
     })
     sets.precast.WS['Shijin Spiral'] = set_combine(sets.precast.WS, {
-        head = "Dampening Tam"
+        -- head = "Dampening Tam"
+        head = "Mpaca's Cap",
     })
     sets.precast.WS['Dragon Kick'] = set_combine(sets.precast.WS, {
         waist = "Grunfeld Rope"
@@ -306,18 +312,18 @@ function init_gear_sets()
     -- Idle sets
     sets.idle = {
         ammo = "Staunch Tathlum +1",
-        head = "Nyame Helm",
+        head = sets.Malignance.Head,
         neck = "Loricate Torque +1",
         ear1 = "Etiolation Earring",
         ear2 = "Sanare Earring",
-        body = "Hiza. Haramaki +2",
-        hands = "Nyame Gauntlets",
+        body = sets.Malignance.Body,
+        hands = sets.Malignance.Hands,
         ring1 = "Defending Ring",
-        ring2 = "Sheltered Ring",
+        ring2 = "Chirich Ring +1",
         back = "Moonlight Cape",
         waist = "Black Belt",
-        legs = "Nyame Flanchard",
-        feet = "Hippo. Socks +1"
+        legs = sets.Malignance.Legs,
+        feet = sets.Malignance.Feet,
     }
 
     -- Defense sets
@@ -387,12 +393,12 @@ function init_gear_sets()
 		head = "Malignance Chapeau",
 		-- neck = "Moonbeam Nodowa",
 		neck = "Anu Torque",
-        ear1 = "Telos Earring",
+        ear1 = "Schere Earring",
         ear2 = "Sherida Earring",
         -- body = "Ken. Samue",
         -- hands = "Adhemar Wrist. +1",
-        body = "Malignance Tabard",
-        hands = "Malignance Gloves",        
+        body = "Mpaca's Doublet",
+        hands = "Mpaca's Gloves",        
 		ring1 = "Gere Ring",
         ring2 = "Niqmaddu Ring",
         back = "Segomo's Mantle",
@@ -400,7 +406,7 @@ function init_gear_sets()
         waist = "Hurch'lan Sash",
         legs = "Samnuha Tights",
         -- feet = gear.herculean_ta_feet
-        feet = "Malignance Boots"
+        feet = "Mpaca's Boots"
     }
     sets.engaged.Acc = set_combine(sets.engaged, {
         ear1 = "Cessance Earring",

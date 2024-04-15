@@ -1,7 +1,25 @@
 <?xml version="1.1" ?>
 <settings>
     <global>
+        <a1>Aero</a1>
+        <a2>Aero II</a2>
+        <a3>Aero III</a3>
+        <a4>Aero IV</a4>
+        <a5>Aero V</a5>
+        <a6>Aero VI</a6>
+        <aga1>Aeroga</aga1>
+        <aga2>Aeroga II</aga2>
+        <aga3>Aeroga III</aga3>
         <altep>Teleport-Altep</altep>
+        <b1>Blizzard</b1>
+        <b2>Blizzard II</b2>
+        <b3>Blizzard III</b3>
+        <b4>Blizzard IV</b4>
+        <b5>Blizzard V</b5>
+        <b6>Blizzard VI</b6>
+        <bga1>Blizzaga</bga1>
+        <bga2>Blizzaga II</bga2>
+        <bga3>Blizzaga III</bga3>
         <bl>Blink</bl>
         <c1>Cure</c1>
         <c2>Cure II</c2>
@@ -19,6 +37,15 @@
         <dem>Teleport-Dem</dem>
         <ds>Divine Seal</ds>
         <es>Elemental Seal</es>
+        <f1>Fire</f1>
+        <f2>Fire II</f2>
+        <f3>Fire III</f3>
+        <f4>Fire IV</f4>
+        <f5>Fire V</f5>
+        <f6>Fire VI</f6>
+        <fga1>Firaga</fga1>
+        <fga2>Firaga II</fga2>
+        <fga3>Firaga III</fga3>
         <holla>Teleport-Holla</holla>
         <hw>Healing Waltz</hw>
         <ichi>Utsusemi: Ichi</ichi>
@@ -44,6 +71,15 @@
         <re3>Regen III</re3>
         <re4>Regen IV</re4>
         <re5>Regen V</re5>
+        <s1>Stone</s1>
+        <s2>Stone II</s2>
+        <s3>Stone III</s3>
+        <s4>Stone IV</s4>
+        <s5>Stone V</s5>
+        <s6>Stone VI</s6>
+        <sga1>Stonega</sga1>
+        <sga2>Stonega II</sga2>
+        <sga3>Stonega III</sga3>
         <sh1>Shellra</sh1>
         <sh2>Shellra II</sh2>
         <sh3>Shellra III</sh3>
@@ -55,10 +91,28 @@
         <she4>Shellra IV</she4>
         <she5>Shellra V</she5>
         <ss>Stoneskin</ss>
+        <t1>Thunder</t1>
+        <t2>Thunder II</t2>
+        <t3>Thunder III</t3>
+        <t4>Thunder IV</t4>
+        <t5>Thunder V</t5>
+        <t6>Thunder VI</t6>
+        <tga1>Thundaga</tga1>
+        <tga2>Thundaga II</tga2>
+        <tga3>Thundaga III</tga3>
         <utsu1>Utsusemi: Ichi</utsu1>
         <utsu2>Utsusemi: Ni</utsu2>
         <utsu3>Utsusemi: San</utsu3>
         <vahzl>Teleport-Vahzl</vahzl>
+        <w1>Water</w1>
+        <w2>Water II</w2>
+        <w3>Water III</w3>
+        <w4>Water IV</w4>
+        <w5>Water V</w5>
+        <w6>Water VI</w6>
+        <wga1>Waterga</wga1>
+        <wga2>Waterga II</wga2>
+        <wga3>Waterga III</wga3>
         <yhoat>Teleport-Yhoat</yhoat>
     </global>
 </settings>

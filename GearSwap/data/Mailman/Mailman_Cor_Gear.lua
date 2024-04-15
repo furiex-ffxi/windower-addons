@@ -693,22 +693,23 @@ function init_gear_sets()
         range = "Fomalhaut"
     }
     sets.weapons.Evisceration = { main = "Tauret", sub = "Nusku Shield", range = "Ataktos" }
-    sets.weapons.DualWeapons = { main = "Naegling", sub = "Rostam", range = "Fomalhaut" }
+    sets.weapons.DualWeapons = { main = "Naegling", sub = "Tauret", range = "Fomalhaut" }
     sets.weapons.DualSavageWeapons = { 
         main="Naegling",
-		sub="Rostam",
+		sub="Tauret",
 		range={ name="Anarchy +2", augments={'Delay:+60','TP Bonus +1000',}}, 
     }
     sets.weapons.DualEvisceration = { main = "Tauret", sub = "Blurred Knife +1", range = "Ataktos" }
     sets.weapons.Savage = { main = "Naegling", sub = "Nusku Shield", range = "Ataktos" }
     sets.weapons.DualLeadenRanged = { 
-		main={ name="Rostam", augments={'Path: A'}, bag="Wardrobe 4"},
+		main={ name="Rostam", augments={'Path: C'}, bag="Wardrobe 2"},
+		-- main={ name="Rostam", augments={'Path: A'}, bag="Wardrobe 2"},
 		sub="Kustawi +1",
 		range="Death Penalty", 
 		ammo="Living Bullet",
     }
     sets.weapons.DualLeadenMelee = { 
-        main = "Rostam", 
+		main={ name="Rostam", augments={'Path: C'}, bag="Wardrobe 2"},
         sub = "Tauret", 
         range = "Death Penalty",
         ammo="Living Bullet",
@@ -716,7 +717,8 @@ function init_gear_sets()
     sets.weapons.DualAeolian = { 
 		ammo="Living Bullet",
 		main="Tauret",
-		sub={ name="Rostam", augments={'Path: A'}, bag="Wardrobe 4"},
+		Sub="Naegling",
+		-- sub={ name="Rostam", augments={'Path: C'}, bag="Wardrobe 2"},
 		range={ name="Anarchy +2", augments={'Delay:+60','TP Bonus +1000',}},    
     }
     sets.weapons.DualLeadenMeleeAcc = { main = "Naegling", sub = "Blurred Knife +1", range = "Fomalhaut" }
@@ -810,6 +812,7 @@ function init_gear_sets()
 
     sets.engaged.DW = set_combine(sets.engaged, {
 		ear2 = "Suppanomimi",
+        waist = "Reiki Yotai",
     })
 
     sets.engaged.DW.Acc = set_combine(sets.engaged.DW, {
@@ -828,8 +831,7 @@ function init_gear_sets()
 		ring1="Lehko's Ring",
         ring2 = "Epona's Ring",
         back = gear.tp_jse_back,
-        -- waist = "Reiki Yotai",
-        waist = "Windbuffet Belt +1",
+        waist = "Reiki Yotai",
         legs = "Malignance Tights",
         feet = "Malignance Boots"
     }
@@ -844,8 +846,7 @@ function init_gear_sets()
         ring1="Lehko's Ring",
         ring2 = "Defending Ring",
         back = gear.tp_jse_back,
-        waist = "Kentarch Belt +1",
-        -- waist = "Reiki Yotai",
+        waist = "Reiki Yotai",
         legs = "Malignance Tights",
         feet = "Malignance Boots"
     }

@@ -1,8 +1,8 @@
 _addon.name = 'Sparks'
 
-_addon.author = 'Brax(orig) - Sammeh Modified - v 2.0.0.2'
+_addon.author = 'Brax(orig) - Sammeh Modified - Furyex Modified - v 2.0.0.3'
 
-_addon.version = '2.0.0.2'
+_addon.version = '2.0.0.3'
 
 _addon.command = 'sparks'
 
@@ -102,6 +102,7 @@ windower.register_event('addon command', function(...)
 			count_inv()
 			windower.add_to_chat(2,"You have "..freeslots.." free slots, buying "..item.. " until full") 
 			local currentloop = 0
+			local count_busy = 0
 			while currentloop < freeslots do
 				currentloop = currentloop + 1
 				windower.add_to_chat(8,"Buying Item: "..item.." Loop: "..currentloop)
@@ -115,6 +116,7 @@ windower.register_event('addon command', function(...)
 					end
 				else
 					windower.add_to_chat(2,"Still buying last item")
+					count_busy = count_busy + 1
 				end
 				sleepcounter = 0
 				while busy and sleepcounter < 5 do
@@ -124,6 +126,18 @@ windower.register_event('addon command', function(...)
 						windower.add_to_chat(2,"Probably lost a packet, waited too long!")
 					end
 				end
+
+				if count_busy >= 3 then
+					windower.add_to_chat(2,"Probably not busy now, trying again...")
+		
+					-- We might be in a different menu, let's exit that
+					windower.send_command('setkey escape down')
+					coroutine.sleep(.1)
+					windower.send_command('setkey escape up')
+		
+					busy = false
+					count_busy = 0
+				end				
 			end
 		else 
 			windower.add_to_chat(2,"You are not currently in a zone with a sparks NPC")

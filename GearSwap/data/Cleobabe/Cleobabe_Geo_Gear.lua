@@ -6,7 +6,7 @@ function user_job_setup()
 	state.PhysicalDefenseMode:options('PDT', 'NukeLock', 'GeoLock', 'PetPDT')
 	state.MagicalDefenseMode:options('MDT', 'NukeLock')
 	state.ResistDefenseMode:options('MEVA')
-	state.Weapons:options('None', 'Mpaca', 'Maxentius', 'Daybreak', 'DualWeapons')
+	state.Weapons:options('None', 'Mpaca', 'Maxentius', 'Ternion', 'Daybreak', 'DualWeapons')
 
 	gear.nuke_jse_back = { name = "Nantosuelta's Cape", augments = { 'INT+20', 'Mag. Acc+20 /Mag. Dmg.+20', '"Mag.Atk.Bns."+10' } }
 	gear.idle_jse_back = { name = "Nantosuelta's Cape", augments = { 'HP+60', 'Eva.+20 /Mag. Eva.+20', 'Pet: "Regen"+10' } }
@@ -48,8 +48,8 @@ function init_gear_sets()
 		Head = "Geo. Galero +2",
 		Body = "Geomancy Tunic +2",
 		Hands = "Geo. Mitaines +3",
-		Legs = "Geomancy Pants +2",
-		Feet = "Geo. Sandals +2",
+		Legs = "Geomancy Pants +3",
+		Feet = "Geo. Sandals +3",
 	}
 
 	gear.relic = {
@@ -141,7 +141,56 @@ function init_gear_sets()
 
 	-- Weaponskill sets
 	-- Default set for any weaponskill that isn't any more specifically defined
-	sets.precast.WS = {}
+	sets.precast.WS = {
+		head = sets.Nyame.Head,
+		ammo = "Oshasha's Treatise",
+		range = empty,
+		neck = "Combatant's Torque",
+		body = sets.Nyame.Body,        
+		hands = sets.Nyame.Hands,
+		legs = sets.Nyame.Legs,
+		feet = sets.Nyame.Feet,
+		waist =	"Sailfi Belt +1",
+		left_ear = { name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+		right_ear =	"Ishvara Earring",
+		left_ring = "Epaminondas's Ring",
+		right_ring = "Karieyh Ring",
+		-- back = RDMCape.MACC,
+	}
+
+	sets.precast.WS['Cataclysm'] = {
+		head = sets.Nyame.Head,
+		ammo = "Oshasha's Treatise",
+		range = empty,
+		neck = "Baetyl Pendant",
+		body = sets.Nyame.Body,        
+		hands = sets.Nyame.Hands,
+		legs = sets.Nyame.Legs,
+		feet = sets.Nyame.Feet,
+		waist =	"Eschan Stone",
+		left_ear = { name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+		right_ear =	"Ishvara Earring",
+		left_ring = "Epaminondas's Ring",
+		right_ring = "Karieyh Ring",
+		-- back = RDMCape.MACC,
+	}
+
+	sets.precast.WS['Aeolian Edge'] = {
+		head = sets.Nyame.Head,
+		ammo = "Oshasha's Treatise",
+		range = empty,
+		neck = "Baetyl Pendant",
+		body = sets.Nyame.Body,        
+		hands = sets.Nyame.Hands,
+		legs = sets.Nyame.Legs,
+		feet = sets.Nyame.Feet,
+		waist =	"Eschan Stone",
+		left_ear = { name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+		right_ear =	"Ishvara Earring",
+		left_ring = "Epaminondas's Ring",
+		right_ring = "Karieyh Ring",
+		-- back = RDMCape.MACC,
+	}
 
 
 	--------------------------------------
@@ -618,38 +667,37 @@ function init_gear_sets()
 	sets.idle = {
 		main = "Mpaca's Staff",
 		sub = "Umbra Strap",
+		-- ammo = "Homiliary",
 		ammo = "Staunch Tathlum +1",
 		head = "Befouled Crown",
 		neck = "Loricate Torque +1",
-		ear1 = "Genmei Earring",
+		ear1 = "Etiolation Earring",
 		ear2 = "Ethereal Earring",
-		body = "Jhakri Robe +2",
-		hands = gear.merlinic_refresh_hands,
+		body = gear.empy.Body,
+		hands = "Volte Gloves",
 		ring1 = "Stikini Ring +1",
 		ring2 = "Stikini Ring +1",
-		back = "Umbra Cape",
+		back = "Moonlight Cape",
 		waist = "Carrier's Sash",
-		legs = "Assid. Pants +1",
-		feet = gear.merlinic_refresh_feet
+		legs = "Volte Brais",
+		feet = "Volte Gaiters"
 	}
 
-	sets.idle.PDT = {
+	sets.idle.PDT = set_combine(sets.idle, {
 		main = "Malignance Pole",
-		sub = "Umbra Strap",
-		ammo = "Staunch Tathlum +1",
+		sub = "Clerisy Strap +1",
+		-- sub = "Umbra Strap",
+		ammo = "Homiliary",
 		head = "Nyame Helm",
 		neck = "Loricate Torque +1",
-		ear1 = "Genmei Earring",
+		ear1 = "Etiolation Earring",
 		ear2 = "Ethereal Earring",
-		body = "Nyame Mail",
-		hands = "Nyame Gauntlets",
-		ring1 = "Defending Ring",
-		ring2 = "Shadow Ring",
-		back = "Shadow Mantle",
+		-- ring1 = "Defending Ring",
+		ring1 = "Gelatinous Ring +1",
+		ring2 = "Stikini Ring +1",
+		back = "Moonlight Cape",
 		waist = "Carrier's Sash",
-		legs = "Nyame Flanchard",
-		feet = "Mallquis Clogs +2"
-	}
+	})
 
 	-- .Pet sets are for when Luopan is present.
 	sets.idle.Pet = {
@@ -874,6 +922,7 @@ function init_gear_sets()
 	-- Weapons sets
 	sets.weapons.Mpaca = { main = "Mpaca's Staff", sub = 'Umbra Strap' }
 	sets.weapons.Maxentius = { main = 'Maxentius', sub = 'Genmei Shield' }
+	sets.weapons.Ternion = { main = 'Ternion Dagger +1', sub = 'Genmei Shield' }
 	sets.weapons.Daybreak = { main = 'Daybreak', sub = 'Genmei Shield' }
 	sets.weapons.DualWeapons = { main = 'Maxentius', sub = 'Nehushtan' }
 end

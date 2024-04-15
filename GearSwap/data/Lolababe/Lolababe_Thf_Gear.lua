@@ -198,7 +198,7 @@ function init_gear_sets()
         ring2 = "Regal Ring",
         back = gear.da_jse_back,
         waist = "Grunfeld Rope",
-        legs = "Samnuha Tights",
+        legs = sets.Nymame.Legs,
         feet = sets.Nyame.Feet
     }
     sets.precast.WS.SomeAcc = set_combine(sets.precast.WS, { neck = "Combatant's Torque" })
@@ -434,21 +434,16 @@ function init_gear_sets()
         feet = "Malignance Boots"
     }
 
-    sets.precast.WS['Aeolian Edge'] = {
+    sets.precast.WS['Aeolian Edge'] = set_combine(sets.precast.WS, {
         ammo = "Seeth. Bomblet +1",
-        head = gear.herculean_nuke_head,
         neck = "Baetyl Pendant",
         ear1 = "Friomisi Earring",
         ear2 = "Crematio Earring",
-        body = "Nyame Mail",
-        hands = "Nyame Gauntlets",
         ring1 = "Metamor. Ring +1",
         ring2 = "Shiva Ring +1",
         back = gear.wsd_jse_back,
         waist = "Chaac Belt",
-        legs = "Nyame Flanchard",
-        feet = gear.herculean_nuke_feet
-    }
+    })
 
     sets.precast.WS['Aeolian Edge'].TH = set_combine(sets.precast.WS['Aeolian Edge'], sets.TreasureHunter)
 

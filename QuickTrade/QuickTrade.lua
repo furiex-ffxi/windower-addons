@@ -418,6 +418,7 @@ function quicktrade(arg)
 		{name = 'Shami', idTable = sealIDs, tableType = 'Seals', loopable = true, loopWait = 3},
 		{name = 'Ephemeral Moogle', idTable = crystalIDs, tableType = 'Crystals', loopable = true, loopWait = 9},
 		{name = 'Waypoint', idTable = crystalIDs, tableType = 'Crystals', loopable = true, loopWait = 3},
+		{name = 'Proto-Waypoint', idTable = crystalIDs, tableType = 'Crystals', loopable = true, loopWait = 3},
 		{name = 'Joulet', idTable = moatCarpIDs, tableType = 'Moat Carp', loopable = true, loopWait = 4},
 		{name = 'Gallijaux', idTable = moatCarpIDs, tableType = 'Moat Carp', loopable = true, loopWait = 4},
 		{name = 'Isakoth', idTable = copperVoucherIDs, tableType = 'Copper Vouchers', loopable = true, loopWait = 3},
