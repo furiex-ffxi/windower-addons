@@ -210,26 +210,31 @@ function init_gear_sets()
 	sets.precast.WS['Upheaval'] = set_combine(sets.precast.WS, {
 		back = gear.wsd_vit_jse_back,
 		legs = "Boii Cuisses +3",
+		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 	})
 	sets.precast.WS['Upheaval'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {
 		back = gear.wsd_vit_jse_back,
 		legs = "Boii Cuisses +3",
+		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 	})
 	sets.precast.WS['Upheaval'].Acc = set_combine(sets.precast.WS.Acc, {
 		back = gear.wsd_vit_jse_back,
 		legs = "Boii Cuisses +3",
+		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 	})
 	sets.precast.WS['Upheaval'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
 		back = gear.wsd_vit_jse_back,
 		legs = "Boii Cuisses +3",
+		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 	})
 	sets.precast.WS['Upheaval'].Fodder = set_combine(sets.precast.WS.Fodder, {
 		back = gear.wsd_vit_jse_back,
 		legs = "Boii Cuisses +3",
+		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 	})
 
@@ -299,18 +304,23 @@ function init_gear_sets()
 	})
 
 	sets.precast.WS["King's Justice"] = set_combine(sets.precast.WS, {
+		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 	})
 	sets.precast.WS["King's Justice"].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {
+		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 	})
 	sets.precast.WS["King's Justice"].Acc = set_combine(sets.precast.WS.Acc, {
+		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 	})
 	sets.precast.WS["King's Justice"].FullAcc = set_combine(sets.precast.WS.FullAcc, {
+		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 	})
 	sets.precast.WS["King's Justice"].Fodder = set_combine(sets.precast.WS.Fodder, {
+		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 	})
 

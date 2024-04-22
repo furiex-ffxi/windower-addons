@@ -410,7 +410,7 @@ function init_gear_sets()
         head = "Malignance Chapeau",
         neck = "Loricate Torque +1",
         ear1 = "Etiolation Earring",
-        ear2 = "Sanare Earring",
+        ear2 = "Karagoz Earring +1",
         body = "Malignance Tabard",
         hands = "Malignance Gloves",
         ring1 = "Defending Ring",

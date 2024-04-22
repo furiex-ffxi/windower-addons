@@ -442,24 +442,24 @@ function init_gear_sets()
 	sets.midcast['Blue Magic'].SIRD = set_combine(sets.Enmity.SIRD, {})
 
 	sets.midcast.Cure = {
-		ammo = "Staunch Tathlum +1",
-		head = "Carmine Mask +1",
+		ammo = "Sapience Orb",
+		head = sets.Nyame.Head,
 		neck = "Sacro Gorget",
 		ear1 = "Mendi. Earring",
-		ear2 = "Roundel Earring",
-		body = "Vrikodara Jupon",
-		hands = "Buremte Gloves",
-		ring1 = "Lebeche Ring",
-		ring2 = "Janniston Ring",
-		back = "Tempered Cape +1",
-		waist = "Luminary Sash",
-		legs = "Carmine Cuisses +1",
-		feet = "Skaoi Boots"
+		ear2 = "Cryptic Earring",
+		body = sets.Nyame.Body,
+		hands = gear.empy.Hands,
+		ring1 = "Moonlight Ring",
+		ring2 = "Eihwaz Ring",
+		back = gear.enmity_jse_back,
+		waist = "Sroda Belt",
+		legs = gear.empy.Legs,
+		feet = gear.empy.Feet
 	}
 
 	sets.midcast['Wild Carrot'] = set_combine(sets.midcast.Cure, {})
 
-	sets.Self_Healing = { hands = "Buremte Gloves", ring2 = "Kunaji Ring", waist = "Gishdubar Sash" }
+	sets.Self_Healing = { hands = "Buremte Gloves", ring2 = "Kunaji Ring" }
 	sets.Cure_Received = { hands = "Buremte Gloves", ring2 = "Kunaji Ring", waist = "Gishdubar Sash" }
 	sets.Self_Refresh = { waist = "Gishdubar Sash" }
 	sets.Phalanx_Received = {

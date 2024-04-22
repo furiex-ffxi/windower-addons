@@ -267,29 +267,49 @@ function init_gear_sets()
 	})
 
 	-- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.	
-	sets.precast.WS['Catastrophe'] = set_combine(sets.precast.WS, {})
-	sets.precast.WS['Catastrophe'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
-	sets.precast.WS['Catastrophe'].Acc = set_combine(sets.precast.WS.Acc, {})
-	sets.precast.WS['Catastrophe'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
-	sets.precast.WS['Catastrophe'].Fodder = set_combine(sets.precast.WS.Fodder, {})
+	sets.precast.WS['Catastrophe'] = set_combine(sets.precast.WS, {
+		ring1 = "Regal Ring",
+		ring2 = "Niqmaddu Ring",
+	})
+	sets.precast.WS['Catastrophe'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {
+		ring1 = "Regal Ring",
+		ring2 = "Niqmaddu Ring",
+	})
+	sets.precast.WS['Catastrophe'].Acc = set_combine(sets.precast.WS.Acc, {
+		ring1 = "Regal Ring",
+		ring2 = "Niqmaddu Ring",
+	})
+	sets.precast.WS['Catastrophe'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
+		ring1 = "Regal Ring",
+		ring2 = "Niqmaddu Ring",
+	})
+	sets.precast.WS['Catastrophe'].Fodder = set_combine(sets.precast.WS.Fodder, {
+		ring1 = "Regal Ring",
+		ring2 = "Niqmaddu Ring",
+	})
 
 	sets.precast.WS['Torcleaver'] = set_combine(sets.precast.WS, {
-		ring2 = "Niqmaddu Ring",		
+		ring1 = "Regal Ring",
+		ring2 = "Niqmaddu Ring",
 		back = DRKCape.VIT,
 	})
 	sets.precast.WS['Torcleaver'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {
+		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",	
 		back = DRKCape.VIT,	
 	})
 	sets.precast.WS['Torcleaver'].Acc = set_combine(sets.precast.WS.Acc, {
+		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 		back = DRKCape.VIT,		
 	})
 	sets.precast.WS['Torcleaver'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
+		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 		back = DRKCape.VIT,		
 	})
 	sets.precast.WS['Torcleaver'].Fodder = set_combine(sets.precast.WS.Fodder, {
+		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 		back = DRKCape.VIT,		
 	})
@@ -298,95 +318,135 @@ function init_gear_sets()
 	})
 
 	sets.precast.WS['Insurgency'] = set_combine(sets.precast.WS, {
+		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 		hands = "Sakpata's Gauntlets",
 	})
 	sets.precast.WS['Insurgency'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {
+		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 		hands = "Sakpata's Gauntlets",
 	})
 	sets.precast.WS['Insurgency'].Acc = set_combine(sets.precast.WS.Acc, {
+		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 		hands = "Sakpata's Gauntlets",
 	})
 	sets.precast.WS['Insurgency'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
+		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 		hands = "Sakpata's Gauntlets",
 	})
 	sets.precast.WS['Insurgency'].Fodder = set_combine(sets.precast.WS.Fodder, {
+		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 		hands = "Sakpata's Gauntlets",
 		legs = "Ratri Cuisses +1"
 	})
 
 	sets.precast.WS['Cross Reaper'] = set_combine(sets.precast.WS, {
+		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 	})
 	sets.precast.WS['Cross Reaper'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {
+		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 	})
 	sets.precast.WS['Cross Reaper'].Acc = set_combine(sets.precast.WS.Acc, {
+		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 	})
 	sets.precast.WS['Cross Reaper'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
+		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 	})
 	sets.precast.WS['Cross Reaper'].Fodder = set_combine(sets.precast.WS.Fodder, {
+		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 	})
 
 	sets.precast.WS['Quietus'] = set_combine(sets.precast.WS, {
+		ring1 = "Regal Ring",
+		ring2 = "Niqmaddu Ring",
 		waist = "Fotia Belt"
 	})
 	sets.precast.WS['Quietus'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {
+		ring1 = "Regal Ring",
+		ring2 = "Niqmaddu Ring",
 		waist = "Fotia Belt"
 	})
 	sets.precast.WS['Quietus'].Acc = set_combine(sets.precast.WS.Acc, {
+		ring1 = "Regal Ring",
+		ring2 = "Niqmaddu Ring",
 		waist = "Fotia Belt"
 	})
 	sets.precast.WS['Quietus'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
+		ring1 = "Regal Ring",
+		ring2 = "Niqmaddu Ring",
 		waist = "Fotia Belt"
 	})
 	sets.precast.WS['Quietus'].Fodder = set_combine(sets.precast.WS.Fodder, {
+		ring1 = "Regal Ring",
+		ring2 = "Niqmaddu Ring",
 		waist = "Fotia Belt"
 	})
 
 
 	sets.precast.WS['Entropy'] = set_combine(sets.precast.WS, {
 		head = "Hjarrandi Helm",
-		waist = "Fotia Belt"
+		waist = "Fotia Belt",
+		ring1 = "Regal Ring",
+		ring2 = "Niqmaddu Ring",
 	})
 	sets.precast.WS['Entropy'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {
 		head = "Hjarrandi Helm",
-		waist = "Fotia Belt"
+		waist = "Fotia Belt",
+		ring1 = "Regal Ring",
+		ring2 = "Niqmaddu Ring",
 	})
 	sets.precast.WS['Entropy'].Acc = set_combine(sets.precast.WS.Acc, {
 		head = "Hjarrandi Helm",
-		waist = "Fotia Belt"
+		waist = "Fotia Belt",
+		ring1 = "Regal Ring",
+		ring2 = "Niqmaddu Ring",
 	})
 	sets.precast.WS['Entropy'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
 		head = "Hjarrandi Helm",
-		waist = "Fotia Belt"
+		waist = "Fotia Belt",
+		ring1 = "Regal Ring",
+		ring2 = "Niqmaddu Ring",
 	})
 	sets.precast.WS['Entropy'].Fodder = set_combine(sets.precast.WS.Fodder, {
 		head = "Hjarrandi Helm",
-		waist = "Fotia Belt"
+		waist = "Fotia Belt",
+		ring1 = "Regal Ring",
+		ring2 = "Niqmaddu Ring",
 	})
 
 	sets.precast.WS['Resolution'] = set_combine(sets.precast.WS, {
 		neck = "Fotia Gorget",
+		ring1 = "Regal Ring",
+		ring2 = "Niqmaddu Ring",
 	})
 	sets.precast.WS['Resolution'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {
 		neck = "Fotia Gorget",
+		ring1 = "Regal Ring",
+		ring2 = "Niqmaddu Ring",
 	})
 	sets.precast.WS['Resolution'].Acc = set_combine(sets.precast.WS.Acc, {
 		neck = "Fotia Gorget",
+		ring1 = "Regal Ring",
+		ring2 = "Niqmaddu Ring",
 	})
 	sets.precast.WS['Resolution'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
 		neck = "Fotia Gorget",
+		ring1 = "Regal Ring",
+		ring2 = "Niqmaddu Ring",
 	})
 	sets.precast.WS['Resolution'].Fodder = set_combine(sets.precast.WS.Fodder, {
 		neck = "Fotia Gorget",
+		ring1 = "Regal Ring",
+		ring2 = "Niqmaddu Ring",
 	})
 
 	sets.precast.WS['Herculean Slash'] = set_combine(sets.precast.WS, {
@@ -549,7 +609,7 @@ function init_gear_sets()
 	sets.engaged = {
 		ammo="Aurgelmir Orb +1",
 		head="Flam. Zucchetto +2",
-		body="Hjarrandi Breastplate",
+		body="Sakpata's Plate",
 		hands="Sakpata's Gauntlets",
 		-- legs = gear.af.Legs,
 		legs = "Sakpata's Cuisses",
@@ -581,6 +641,8 @@ function init_gear_sets()
 	})
 
 	sets.engaged.DT = set_combine(sets.engaged, {
+		legs = "Sakpata's Cuisses",
+		feet = "Sakpata's Leggings",
 	})
 
 	sets.engaged.Subtle = set_combine(sets.engaged, {

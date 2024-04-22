@@ -3,7 +3,7 @@
 -- by Lili
 
 character_name = 'Furyex'
-character_job = 'RDM'
+character_job = windower.ffxi.get_player().main_job:upper()
 
 local slot_names = {
 	['main'] = true,
@@ -23,7 +23,6 @@ local slot_names = {
 	['back'] = true,
 	['waist'] = true,
 }
-print("David Chang")
 
 local file_path = windower.addon_path .. '../gearswap/data/' .. character_name .. '/' .. character_name .. '_' .. character_job .. '_Gear.lua'
 
@@ -71,12 +70,19 @@ sets = {
 		['WS'] = {},
 		['JA'] = {},
 	},
-	['midcast'] = {},
+	['midcast'] = {
+		['Pet'] = {},
+	},
 	['idle'] = {},
+	['element'] = {},
 	['defense'] = {},
 	['buff'] = {},
-	['engaged'] = {},
+	['engaged'] = {
+		['DW'] = {},
+	},
     ['passive'] = {},
+	['Nyame'] = {},
+	['Malignance'] = {},
 }
 
 f()
@@ -95,12 +101,12 @@ local item_names = {}
 
 function process_table(table)
 	for k, v in pairs(table) do
+		print(k)
+		print(v)
 		if slot_names[k] then
 			if type(v) == 'table' then
-				print(v.name)
 				item_names[#item_names +1] = v.name
 			else
-				print(v)
 				item_names[#item_names +1] = v
 			end
 		elseif type(v) == 'table' then

@@ -338,8 +338,8 @@ windower.register_event('addon command', function(...)
         notice('busy state: %d, status: %d':format(state, player.status))
     elseif (handled_commands.retrieve+handled_commands.store):contains(commands[1]) then
         if commands[2] or handled_commands.retrieve:contains(commands[1]) then
-            commands[2] = commands[2] or player.main_job
-            local item_ids = load_file(commands[2], '%s_%s':format(player.name, commands[2]))
+            commands[2] = commands[2] or ""
+            local item_ids = load_file(commands[2], player.name)
             if not item_ids then
                 return
             elseif handled_commands.retrieve:contains(commands[1]) then

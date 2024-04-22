@@ -27,7 +27,6 @@ profiles['junk'] = S{
     'dragon blood',
     'magic pot shard',
     'marid hair',
-    'flan meat',
     'puk wing',
     'Poroggo Hat',
     'manticore hair',

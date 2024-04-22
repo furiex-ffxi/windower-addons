@@ -856,11 +856,11 @@ function init_gear_sets()
 	}
 
 	sets.idle.Town = {
-		Head = AF.Head,
-        Body = AF.Body, 
-        Hands = AF.Hands,
-        Legs = AF.Legs,
-        Feet = AF.Feet,
+		head = AF.Head,
+    	body = AF.Body, 
+        hands = AF.Hands,
+        legs = AF.Legs,
+        feet = AF.Feet,
 	}
 
 	sets.idle.PDT = set_combine(sets.idle, {
@@ -955,7 +955,7 @@ function init_gear_sets()
 	sets.weapons.Tauret = { main = "Tauret", sub = "Sacro Bulwark"}
 	sets.weapons.Club = { main = "Maxentius", sub = "Sacro Bulwark"}
 	sets.weapons.EnspellOnly = { main = "Qutrub Knife", sub = "Ceremonial Dagger", range = "Ullr", ammo = "Beetle Arrow" }
-	sets.weapons.EnspellDW = { main = "Crocea Mors", sub = "Daybreak", range = Ullr, ammo = "Chapuli Arrow" }
+	sets.weapons.EnspellDW = { main = "Crocea Mors", sub = "Daybreak", range = Ullr, ammo = "Raetic Arrow" }
 	sets.weapons.DualAlmace = { main = "Almace", sub = "Sequence", range = empty }
 	sets.weapons.DualBow = { main = "Naegling", sub = "Thibron", range = "Ullr", ammo = "Chapuli Arrow" }
 	sets.weapons.BowMacc = { main = "Naegling", sub = "Tauret", range = "Ullr", ammo = empty }
@@ -1028,8 +1028,8 @@ function init_gear_sets()
 
 	sets.engaged.FullAcc = set_combine(sets.Acc, {
 		waist =	"Eschan Stone",
+        neck = "Combatant's Torque",
         --head		=	Carm.Head.D,
-        neck		=	"Combatant's Torque",
         -- right_ear	=	"Mache Earring +1",
         -- waist		=	"Grunfeld Rope",
     })
@@ -1049,11 +1049,12 @@ function init_gear_sets()
 		waist = "Reiki Yotai",
 		-- legs =Carm.Legs.D,
 	})
-	sets.engaged.DW.Acc = set_combine(sets.engaged.Acc, sets.engaged.DW)
-	sets.engaged.DW.FullAcc = set_combine(sets.engaged.FullAcc, sets.engaged.DW)
-	sets.engaged.DW.DT = set_combine(sets.engaged.DT, sets.engaged.DW)
-	sets.engaged.DW.Acc.DT = set_combine(sets.engaged.Acc, sets.engaged.DT, sets.engaged.DW)
-	sets.engaged.DW.FullAcc.DT = set_combine(sets.engaged.FullAcc, sets.engaged.DT, sets.engaged.DW)
+	sets.engaged.DW.Acc = set_combine(sets.engaged.DW, {
+	})
+	sets.engaged.DW.FullAcc = set_combine(sets.engaged.DW, {
+	})
+	sets.engaged.DW.DT = set_combine(sets.engaged.DW, {
+	})
 end
 
 -- Select default macro book on initial load or subjob change.
