@@ -13,8 +13,8 @@ function user_job_setup()
 	'DualAeolian', 'DualProcSwords', 'DualProcDaggers', 'EnspellOnly', 'EnspellDW', 'DualBow')
 
 	gear.stp_jse_back = { name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}}
-	gear.nuke_jse_back = { name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','Weapon skill damage +10%',}}
-	gear.wsd_jse_back = { name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','Weapon skill damage +10%',}}
+	gear.nuke_jse_back = { name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
+	gear.wsd_jse_back = { name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
 
 	-- Additional local binds
 	send_command('bind ^` gs c cycle ElementalMode')
@@ -531,10 +531,10 @@ function init_gear_sets()
 	sets.midcast.Shell = { ring2 = "Sheltered Ring" }
 
 	sets.midcast['Enfeebling Magic'] = {
-		main		=	"Maxentius",
+		main = "Daybreak",
         sub		=	"Ammurapi Shield",
-		ring1 = {name="Stikini Ring +1", bag="wardrobe"},
-		ring2 = {name="Stikini Ring +1", bag="wardrobe2"},
+		ring1 = { name="Stikini Ring +1", bag="wardrobe" },
+		ring2 = { name="Stikini Ring +1", bag="wardrobe2" },
         ammo		=	"Regal Gem",
 		range =  empty,
 		neck		=	"Dls. Torque +2",
@@ -545,8 +545,7 @@ function init_gear_sets()
         legs		=	EMPY.Legs,
         feet		=	RELIC.Feet,
         left_ear	=	"Snotra Earring",
-        right_ear	=	"Malignance Earring",
-        -- right_ear	=	"Regal Earring",
+        right_ear	=	"Regal Earring",
         back		=	RDMCape.MACC
 	}
 
@@ -567,7 +566,8 @@ function init_gear_sets()
 		main = "Bunzi's Rod", 
 		-- range =  "Ullr",
 		-- ammo = empty,
-		body = AF.Body, 
+		hands = "Regal Cuffs",
+		body = EMPY.Body, 
 		left_ear = "Snotra Earring",
 		left_ring = "Kishar Ring",
 		waist = "Obstinate Sash",

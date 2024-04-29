@@ -702,7 +702,7 @@ function init_gear_sets()
         feet = "Nyame Sollerets"
     }
 
-    sets.Kiting = { legs = "Carmine Cuisses +1" }
+    sets.Kiting = { ring1 = "Shneddick Ring" }
     sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
     sets.DWMax = { ear1 = "Dudgeon Earring", ear2 = "Heartseeker Earring", body = "Adhemar Jacket +1",
         hands = "Floral Gauntlets", waist = "Reiki Yotai" }

@@ -651,13 +651,13 @@ function init_gear_sets()
         ear1 = "C. Palug Earring",
         -- ear2 = "Ethereal Earring",
         -- body = "Shomonjijoe +1",
-        -- hands = gear.merlinic_refresh_hands,
+        hands = "Volte Gloves",
         ring1 = "Stikini Ring +1",
         ring2 = "Metamor. Ring +1",
         -- back = "Umbra Cape",
         waist = "Regal Belt",
         legs = "Assid. Pants +1",
-        -- feet = "Baayami Sabots"
+        feet = "Volte Gaiters"
     }
 
     sets.idle.PDT = {

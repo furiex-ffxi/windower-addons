@@ -269,8 +269,8 @@ function init_gear_sets()
 		legs = "Inyanga Shalwar +2",
 		feet = "Brioso Slippers +3",
 		neck = "Mnbw. Whistle +1",
-		ear1 = "Regal Earring",
-		ear2 = "Fili Earring +1",
+		ear1 = "Digni. Earring",
+		ear2 = "Regal Earring",
 		ring1 = { name = "Stikini Ring +1", bag = "wardrobe2" },
 		ring2 = { name = "Stikini Ring +1", bag = "wardrobe3" },
 		waist = "Acuity Belt +1",
@@ -545,8 +545,8 @@ function init_gear_sets()
 		feet = "Fili Cothurnes +3",
 		neck = "Warder's Charm +1",
 		waist = "Plat. Mog. Belt",
-		ear1 = "Etiolation Earring",
-		ear2 = "Fili Earring +1",
+		ear1 = "Eabani Earring",
+		ear2 = "Etiolation Earring",
 		ring1 = "Defending Ring",
 		ring2 = "Stikini Ring +1",
 		back = { name = "Intarabus's Cape", augments = { 'CHR+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'CHR+10', '"Fast Cast"+10', 'Phys. dmg. taken-10%', } },
@@ -694,8 +694,7 @@ function init_gear_sets()
 	}
 
 	sets.engaged.DT = set_combine(sets.engaged, {
-		legs = sets.Nyame.Legs,
-		feet = sets.Nyame.Feet,
+		
 	})
 
 -- 1383 eva, 1530 def
@@ -728,10 +727,7 @@ function init_gear_sets()
 		ear2 = "Suppanomimi",
 		waist = "Reiki Yotai",
 	})
-	sets.engaged.DW.DT = set_combine(sets.engaged.DW, {
-		legs = sets.Nyame.Legs,
-		feet = sets.Nyame.Feet,
-	})
+	sets.engaged.DW.DT = set_combine(sets.engaged.DW, sets.engaged.DT)
 	sets.engaged.DW.Acc = set_combine(sets.engaged.DW, sets.engaged.Acc, {
 		ear2 = "Suppanomimi",
 		waist = "Reiki Yotai",

@@ -33,7 +33,7 @@ function user_job_setup()
     gear.Empy.Body = "Chasseur's Frac +3"
     gear.Empy.Hands = "Chasseur's Gants +3"
     gear.Empy.Legs = "Chas. Culottes +3"
-    gear.Empy.Feet = "Chass. Bottes +2"
+    gear.Empy.Feet = "Chass. Bottes +3"
 
     -- Additional local binds
     send_command('bind ^` gs c cycle ElementalMode')
@@ -242,7 +242,7 @@ function init_gear_sets()
 		legs=sets.Nyame.Legs,
 		feet=sets.Nyame.Feet,
 		neck={ name="Comm. Charm +2", augments={'Path: A',}},
-		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+		waist="Sailfi Belt +1",
 		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 		right_ear="Ishvara Earring",
 		-- left_ring="Regal Ring",
@@ -785,7 +785,7 @@ function init_gear_sets()
     sets.engaged.DT = set_combine(sets.engaged, {
         head=sets.Malignance.Head,
         hands=sets.Malignance.Hands,
-        legs=sets.Malignance.Lets,
+        legs=gear.Empy.Legs,
         neck="Iskur Gorget",
         waist="Sailfi Belt +1",
         left_ear="Crep. Earring",
@@ -823,16 +823,16 @@ function init_gear_sets()
 
     sets.engaged.DW.DT = {
         head = "Malignance Chapeau",
-        neck = "Loricate Torque +1",
+        neck = "Iskur Gorget",
         ear1 = "Suppanomimi",
-        ear2 = "Brutal Earring",
+        ear2 = "Dedition Earring",
         body = "Malignance Tabard",
         hands = "Malignance Gloves",
-		ring1="Lehko's Ring",
+		ring1 = "Lehko's Ring",
         ring2 = "Epona's Ring",
         back = gear.tp_jse_back,
         waist = "Reiki Yotai",
-        legs = "Malignance Tights",
+        legs = gear.Empy.Legs,
         feet = "Malignance Boots"
     }
 

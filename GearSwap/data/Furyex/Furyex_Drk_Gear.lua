@@ -216,7 +216,7 @@ function init_gear_sets()
 	sets.DrainWeapon = { main = "Apocalypse", sub = "Niobid Strap" }
 
 	sets.AbsorbWeapon = {main="Liberator",sub="Niobid Strap",range="Ullr",ammo=empty}
-	--sets.DreadWeapon = {main="Crepuscular Scythe",sub="Utu Grip",} 	
+	sets.DreadWeapon = {main="Crepuscular Scythe",sub="Utu Grip",} 	
 
 	sets.midcast.Aspir = sets.midcast.Drain
 
@@ -507,11 +507,11 @@ function init_gear_sets()
 
 	sets.idle = {
 		ammo = "Staunch Tathlum +1",
-		head="Hjarrandi Helm",
-		body="Hjarrandi Breastplate",
-		hands={ name="Odyssean Gauntlets", augments={'Pet: Phys. dmg. taken -2%','STR+2','"Refresh"+2','Accuracy+20 Attack+20','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
-		legs="Sakpata's Cuisses",
-		feet="Sakpata's Leggings",
+		head = "Sakpata's Helm",
+		body = "Sakpata's Breastplate",
+		hands = "Sakpata's Gauntlets",
+		legs = "Sakpata's Cuisses",
+		feet = "Sakpata's Leggings",
 		neck = "Loricate Torque +1",
 		ear1 = "Genmei Earring",
 		ear2 = "Ethereal Earring",
@@ -522,25 +522,13 @@ function init_gear_sets()
 		-- waist = "Flume Belt +1",
 	}
 
-	sets.idle.PDT = {
-		ammo = "Staunch Tathlum +1",
-		neck = "Loricate Torque +1",
-		ear1 = "Genmei Earring",
-		ear2 = "Ethereal Earring",
-		-- head = "Jumalik Helm",
-		-- body = "Jumalik Mail",
-		-- hands = "Sulev. Gauntlets +2",
-		-- feet = "Amm Greaves",
-		head="Sakpata's Helm",
-		body="Sakpata's Plate",
-		hands="Sakpata's Gauntlets",
-		legs="Sakpata's Cuisses",
-		feet="Sakpata's Leggings",
-		ring1 = "Defending Ring",
-		ring2 = "Moonlight Ring",
-		back = "Shadow Mantle",
-		waist = "Plat. Mog. Belt",
-	}
+	sets.idle.PDT = set_combine(sets.idle, {
+		ring2 = "Shadow Ring",	
+	})
+
+	sets.idle.Refresh = set_combine(sets.idle, {
+		hands={ name="Odyssean Gauntlets", augments={'Pet: Phys. dmg. taken -2%','STR+2','"Refresh"+2','Accuracy+20 Attack+20','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
+	})
 
 	sets.idle.Weak = set_combine(sets.idle, { head = "Twilight Helm", body = "Twilight Mail" })
 
@@ -614,11 +602,12 @@ function init_gear_sets()
 		-- legs = gear.af.Legs,
 		legs = "Sakpata's Cuisses",
 		feet = "Flam. Gambieras +2",
-		neck = "Abyssal Beads +2",
+		-- neck = "Abyssal Beads +2",
+		neck = "Vim Torque +1",
 		waist = "Ioskeha Belt +1",
 		left_ear = "Telos Earring",
-		right_ear = "Cessance Earring",
-		-- right_ear = "Schere Earring",
+		-- right_ear = "Cessance Earring",
+		right_ear = "Schere Earring",
 		left_ring = "Lehko's Ring",
 		right_ring = "Niqmaddu Ring",
 		back = DRKCape.TP,
@@ -641,6 +630,7 @@ function init_gear_sets()
 	})
 
 	sets.engaged.DT = set_combine(sets.engaged, {
+		head="Sakpata's Helm",
 		legs = "Sakpata's Cuisses",
 		feet = "Sakpata's Leggings",
 	})

@@ -5,7 +5,7 @@ function user_job_setup()
     state.RangedMode:options('Normal', 'Acc', 'Fodder')
     state.WeaponskillMode:options('Match', 'Normal', 'Acc')
     state.IdleMode:options('Normal', 'PDT')
-    state.Weapons:options('Default', 'DualEviscerationWeapons', 'DualWeapons', 'DualSavageWeapons', 'DualMagicWeapons',
+    state.Weapons:options('Default', 'DualEviscerationWeapons', 'DualGastra', 'DualWeapons', 'DualSavageWeapons', 'DualMagicWeapons',
         'DualMalevolence', 'DualFermion')
 
     -- Ikenga_vest_bonus = 190  -- It is 190 at R20. Uncomment if you need to manually adjust because you are using below R20
@@ -446,6 +446,12 @@ function init_gear_sets()
         -- range = "Fomalhaut"
         range = "Shortbow",
         ammo = "Stone Arrow"
+    }
+    sets.weapons.DualGastra = {
+        main = "Qutrub Knife",
+        sub = "Fermion Sword",
+        range = "Gastraphetes",
+        ammo = "Eminent Bolt"
     }
     sets.weapons.DualSavageWeapons = {
         main = "Naegling",

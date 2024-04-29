@@ -445,8 +445,6 @@ function init_gear_sets()
         waist = "Chaac Belt",
     })
 
-    sets.precast.WS['Aeolian Edge'].TH = set_combine(sets.precast.WS['Aeolian Edge'], sets.TreasureHunter)
-
     -- Swap to these on Moonshade using WS if at 3000 TP
     sets.MaxTP = { ear1 = "Ishvara Earring", ear2 = "Sherida Earring" }
     sets.AccMaxTP = { ear1 = "Mache Earring +1", ear2 = "Sherida Earring" }
