@@ -55,8 +55,8 @@ function init_gear_sets()
         ear2 = "Malignance Earring",
         body = "Pinga Tunic +1",
         -- body = "Zendik Robe",
-        hands = "Volte Gloves",
-        -- hands = "Acad. Bracers +3",
+        -- hands = "Volte Gloves",
+        hands = "Acad. Bracers +3",
         ring1 = "Kishar Ring",
         -- ring2 = "Lebeche Ring",
         -- back = "Perimede Cape",
@@ -304,7 +304,7 @@ function init_gear_sets()
     sets.midcast['Enfeebling Magic'].Resistant =set_combine(sets.midcast['Enfeebling Magic'], {
         ear2 = "Digni. Earring",
         -- body = "Chironic Doublet",
-        -- hands = "Acad. Bracers +3",
+        hands = "Acad. Bracers +3",
         ring1 = "Metamor. Ring +1",
         ring2 = "Stikini Ring +1",
         back = gear.nuke_jse_back,
@@ -350,7 +350,7 @@ function init_gear_sets()
         ear1 = "Regal Earring",
         ear2 = "Malignance Earring",
         -- body = "Chironic Doublet",
-        -- hands = "Acad. Bracers +3",
+        hands = "Acad. Bracers +3",
         ring1 = "Stikini Ring +1",
         ring2 = "Stikini Ring +1",
         back = gear.nuke_jse_back,
@@ -404,7 +404,7 @@ function init_gear_sets()
         ear1 = "Regal Earring",
         ear2 = "Malignance Earring",
         -- body = "Chironic Doublet",
-        -- hands = "Acad. Bracers +3",
+        hands = "Acad. Bracers +3",
         -- ring1 = "Evanescence Ring",
         ring2 = "Archon Ring",
         back = gear.nuke_jse_back,
@@ -434,7 +434,7 @@ function init_gear_sets()
         -- ear1 = "Enchntr. Earring +1",
         ear2 = "Malignance Earring",
         -- body = "Zendik Robe",
-        -- hands = "Acad. Bracers +3",
+        hands = "Acad. Bracers +3",
         ring1 = "Metamor. Ring +1",
         ring2 = "Stikini Ring +1",
         back = gear.nuke_jse_back,
@@ -452,7 +452,7 @@ function init_gear_sets()
         ear1 = "Regal Earring",
         ear2 = "Malignance Earring",
         -- body = "Zendik Robe",
-        -- hands = "Acad. Bracers +3",
+        hands = "Acad. Bracers +3",
         ring1 = "Metamor. Ring +1",
         ring2 = "Stikini Ring +1",
         back = gear.nuke_jse_back,
@@ -706,7 +706,7 @@ function init_gear_sets()
         ear1 = "Regal Earring",
         ear2 = "Malignance Earring",
         -- body = "Twilight Cloak",
-        -- hands = "Acad. Bracers +3",
+        hands = "Acad. Bracers +3",
         ring1 = "Metamor. Ring +1",
         ring2 = "Stikini Ring +1",
         back = gear.nuke_jse_back,
@@ -961,8 +961,8 @@ function init_gear_sets()
     }
 
     sets.buff.Doom = set_combine(sets.buff.Doom, {})
-    sets.buff['Light Arts'] = {} --legs="Academic's Pants +3"
-    sets.buff['Dark Arts'] = {}  --body="Academic's Gown +3"
+    sets.buff['Light Arts'] = { legs="Acad. Pants +3" } 
+    sets.buff['Dark Arts'] = { body="Acad. Gown +3" }  
 
     sets.buff.Sublimation = { head = "Acad. Mortar. +3", waist = "Embla Sash" }
     sets.buff.DTSublimation = { waist = "Embla Sash" }

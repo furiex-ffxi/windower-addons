@@ -16,27 +16,6 @@ function user_job_setup()
 	gear.obi_high_nuke_waist = "Yamabuki-no-Obi"
 	gear.obi_nuke_back = "Toro Cape"
 
-	gear.af = {}
-	gear.af.head = "Theophany Cap +3"
-	gear.af.body = "Theo. Bliaut +3"
-	gear.af.hands = "Theophany Mitts +3"
-	gear.af.legs = "Th. Pant. +3"
-	gear.af.feet = "Theo. Duckbills +3"
-
-	gear.relic = {}
-	gear.relic.head = "Piety Cap +3"
-	gear.relic.body = "Piety Bliaut +3"
-	gear.relic.hands = "Piety Mitts +3"
-	gear.relic.legs = "Piety Pantaln. +3"
-	gear.relic.feet = "Piety Duckbills +3"
-
-	gear.empy = {}
-	gear.empy.head = "Ebers Cap +2"
-	gear.empy.body = "Ebers Bliaut +2"
-	gear.empy.hands = "Ebers Mitts +2"
-	gear.empy.legs = "Ebers Pant. +2"
-	gear.empy.feet = "Ebers Duckbills +2"
-
 	-- Additional local binds
 	send_command('bind ^` input /ma "Arise" <t>')
 	send_command('bind !` input /ja "Penury" <me>')
@@ -62,6 +41,29 @@ function init_gear_sets()
 	--------------------------------------
 	-- Start defining the sets
 	--------------------------------------
+	gear.af = {
+		head = "Theophany Cap +3",
+		body = "Theo. Bliaut +3",
+		hands = "Theophany Mitts +3",
+		legs = "Th. Pant. +3",
+		feet = "Theo. Duckbills +3"
+	}
+
+	gear.relic = {
+		head = "Piety Cap +3",
+		body = "Piety Bliaut +3",
+		hands = "Piety Mitts +3",
+		legs = "Piety Pantaln. +3",
+		feet = "Piety Duckbills +3"
+	}
+
+	gear.empy = {
+		head = "Ebers Cap +3",
+		body = "Ebers Bliaut +3",
+		hands = "Ebers Mitts +3",
+		legs = "Ebers Pant. +3",
+		feet = "Ebers Duckbills +3"
+	}
 
 	-- Weapons sets
 	sets.weapons.MeleeWeapons = { main = "Daybreak", sub = "Ammurapi Shield" }

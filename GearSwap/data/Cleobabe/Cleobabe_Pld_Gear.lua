@@ -10,7 +10,7 @@ function user_job_setup()
     state.MagicalDefenseMode:options('MDT_HP', 'MDT', 'MDT_Reraise')
     state.ResistDefenseMode:options('MEVA_HP', 'MEVA')
     state.IdleMode:options('Tank', 'Kiting', 'PDT', 'Block', 'MDT', 'Normal')
-    state.Weapons:options('None', 'SakpataAegis', 'SakpataOchain', 'NaeglingBlurred', 'ClubOchain')
+    state.Weapons:options('None', 'BurtAegis', 'SakpataOchain', 'NaeglingBlurred', 'ClubOchain')
 
     state.ExtraDefenseMode = M {
         ['description'] = 'Extra Defense Mode',
@@ -892,8 +892,8 @@ function init_gear_sets()
     sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
 
     -- Weapons sets
-    sets.weapons.SakpataAegis = {
-        main = "Sakpata's Sword",
+    sets.weapons.BurtAegis = {
+        main = "Burtgang",
         sub = "Aegis"
     }
     sets.weapons.NaeglingBlurred = {

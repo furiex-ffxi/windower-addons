@@ -3,7 +3,7 @@
 -- by Lili
 
 character_name = 'Cleobabe'
-character_job = 'WHM'
+character_job = windower.ffxi.get_player().main_job:upper()
 
 local slot_names = {
 	['main'] = true,
@@ -71,12 +71,19 @@ sets = {
 		['WS'] = {},
 		['JA'] = {},
 	},
-	['midcast'] = {},
+	['midcast'] = {
+		['Pet'] = {},
+	},
 	['idle'] = {},
+	['element'] = {},
 	['defense'] = {},
 	['buff'] = {},
-	['engaged'] = {},
+	['engaged'] = {
+		['DW'] = {},
+	},
     ['passive'] = {},
+	['Nyame'] = {},
+	['Malignance'] = {},
 }
 
 f()
@@ -108,5 +115,4 @@ function process_table(table)
 end
 
 process_table(sets)
-
 return item_names

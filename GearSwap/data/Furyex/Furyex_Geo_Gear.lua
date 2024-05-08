@@ -6,7 +6,7 @@ function user_job_setup()
 	state.PhysicalDefenseMode:options('PDT', 'NukeLock', 'GeoLock', 'PetPDT')
 	state.MagicalDefenseMode:options('MDT', 'NukeLock')
 	state.ResistDefenseMode:options('MEVA')
-	state.Weapons:options('None', 'Maxentius', 'DualWeapons')
+	state.Weapons:options('None', 'Idris', 'Maxentius', 'DualWeapons')
 
 	gear.nuke_jse_back = { name = "Nantosuelta's Cape", augments = { 'INT+20', 'Mag. Acc+20 /Mag. Dmg.+20', '"Mag.Atk.Bns."+10' } }
 	gear.idle_jse_back = { name = "Nantosuelta's Cape", augments = { 'HP+60', 'Eva.+20 /Mag. Eva.+20', 'Pet: "Regen"+10' } }
@@ -73,7 +73,12 @@ function init_gear_sets()
 	sets.precast.JA['Full Circle'] = { head = empy.Head, hands = relic.Hands }
 
 	-- Indi Duration in slots that would normally have skill here to make entrust more efficient.
-	sets.buff.Entrust = {}
+	sets.buff.Entrust = {
+		neck = "Incanter's Torque", 
+		back = gear.idle_jse_back, 
+		legs = relic.Legs, 
+		feet = empy.Feet 
+	}
 
 	-- Relic hat for Blaze of Glory HP increase.
 	sets.buff['Blaze of Glory'] = {
@@ -87,8 +92,8 @@ function init_gear_sets()
 		-- sub = "Clerisy Strap +1", -- 3
 		main = "C. Palug Hammer", -- 7
 		sub = "Genmei Shield",
-		range = "Dunna", -- 3
-		ammo = empty,
+		-- range = "Dunna", -- 3
+		-- ammo = empty,
 		head = "C. Palug Crown", -- 8
         neck = "Baetyl Pendant", --4
 		ear1 = "Loquac. Earring", -- 2
@@ -104,7 +109,8 @@ function init_gear_sets()
 		feet = "Regal Pumps +1" -- 7
 	} -- 77
 
-	sets.precast.FC.Geomancy = set_combine(sets.precast.FC, { range = "Dunna", ammo = empty })
+	sets.precast.FC.Geomancy = set_combine(sets.precast.FC, { 
+	})
 
 	sets.precast.FC['Elemental Magic'] = set_combine(sets.precast.FC,
 		{ ear2 = "Malignance Earring", hands = relic.Hands })
@@ -173,10 +179,10 @@ function init_gear_sets()
 	})
 
 	sets.midcast.Geomancy = {
-		main = "Solstice",
+		main = "Idris",
 		sub = "Genmei Shield",
-		range = "Dunna",
-		ammo = empty,
+		-- range = "Dunna",
+		-- ammo = empty,
 		head = "Vanya Hood",
 		neck = "Bagua Charm +2",
 		ear1 = "Gifted Earring",
@@ -658,7 +664,7 @@ function init_gear_sets()
 	-- Idle sets
 
 	sets.idle = {
-		main = "Solstice",
+		main = "Idris",
 		sub = "Genmei Shield",
 		range = empty,
 		ammo = "Staunch Tathlum +1",
@@ -670,19 +676,13 @@ function init_gear_sets()
 		hands = relic.Hands,
 		legs = "Lengo Pants",
 		feet = "Volte Gaiters",
-		ring1 = "Stikini Ring +1",
+		ring1 = "Defending Ring",
 		ring2 = "Stikini Ring +1",
 		back = "Moonlight Cape",
 		waist = "Plat. Mog. Belt",
 	}
 
-	sets.idle.PDT = {
-		main = "Malignance Pole",
-		sub = "Umbra Strap",
-		ammo = "Staunch Tathlum +1",
-		neck = "Loricate Torque +1",
-		ear1 = "Genmei Earring",
-		ear2 = "Ethereal Earring",
+	sets.idle.PDT = set_combine(sets.idle, {
 		ring1 = "Defending Ring",
 		ring2 = "Shadow Ring",
 		back = "Shadow Mantle",
@@ -692,46 +692,31 @@ function init_gear_sets()
 		hands = sets.Nyame.Hands,
 		legs = sets.Nyame.Legs,
 		feet = sets.Nyame.Feet,
-	}
+	})
 
 	-- .Pet sets are for when Luopan is present.
 	sets.idle.Pet = {
-		main = "Sucellus",
+		main = "Idris",
 		sub = "Genmei Shield",
-		range = "Dunna",
-		ammo = empty,
+		-- range = "Dunna",
+		-- ammo = empty,
 		head = empy.Head,
 		neck = "Loricate Torque +1",
-		ear1 = "Handler's Earring",
-		ear2 = "Handler's Earring +1",
-		body = "Jhakri Robe +2",
+		ear1 = "Etiolation Earring",
+		ear2 = "Odnowa Earring +1",
+		body = empy.Body,
 		hands = af.Hands,
 		ring1 = "Defending Ring",
-		ring2 = "Dark Ring",
+		ring2 = "Stikini Ring +1",
 		back = gear.idle_jse_back,
 		waist = "Isa Belt",
-		legs = "Psycloth Lappas",
+		legs = gear.Legs,
 		feet = relic.Feet
 	}
 
-	sets.idle.PDT.Pet = {
-		main = "Malignance Pole",
-		sub = "Umbra Strap",
-		range = "Dunna",
-		ammo = empty,
-		head = empy.Head,
-		neck = "Loricate Torque +1",
-		ear1 = "Handler's Earring",
-		ear2 = "Handler's Earring +1",
-		body = "Jhakri Robe +2",
-		hands = af.Hands,
-		ring1 = "Defending Ring",
-		ring2 = "Dark Ring",
-		back = gear.idle_jse_back,
-		waist = "Isa Belt",
-		legs = "Nyame Flanchard",
-		feet = relic.Feet
-	}
+	sets.idle.PDT.Pet = set_combine(sets.idle.Pet, {
+		legs = "Nyame Flanchard",	
+	})
 
 	-- .Indi sets are for when an Indi-spell is active.
 	sets.idle.Indi = set_combine(sets.idle, {})
@@ -759,59 +744,14 @@ function init_gear_sets()
 
 	-- Defense sets
 
-	sets.defense.PDT = {
-		main = "Malignance Pole",
-		sub = "Umbra Strap",
-		ammo = "Staunch Tathlum +1",
-		head = "Nyame Helm",
-		neck = "Loricate Torque +1",
-		ear1 = "Etiolation Earring",
-		ear2 = "Handler's Earring +1",
-		body = "Mallquis Saio +2",
-		hands = "Nyame Gauntlets",
-		ring1 = "Defending Ring",
-		ring2 = "Dark Ring",
-		back = "Umbra Cape",
-		waist = "Carrier's Sash",
-		legs = "Nyame Flanchard",
-		feet = empy.Feet
-	}
+	sets.defense.PDT = set_combine(sets.idle.PDT, {	
+	})
 
-	sets.defense.MDT = {
-		main = "Malignance Pole",
-		sub = "Umbra Strap",
-		ammo = "Staunch Tathlum +1",
-		head = empy.Head,
-		neck = "Loricate Torque +1",
-		ear1 = "Etiolation Earring",
-		ear2 = "Handler's Earring +1",
-		body = "Mallquis Saio +2",
-		hands = "Nyame Gauntlets",
-		ring1 = "Defending Ring",
-		ring2 = "Dark Ring",
-		back = "Umbra Cape",
-		waist = "Carrier's Sash",
-		legs = "Nyame Flanchard",
-		feet = empy.Feet
-	}
+	sets.defense.MDT = set_combine(sets.idle.PDT, {	
+	})
 
-	sets.defense.MEVA = {
-		main = "Malignance Pole",
-		sub = "Enki Strap",
-		ammo = "Staunch Tathlum +1",
-		head = empy.Head,
-		neck = "Warder's Charm +1",
-		ear1 = "Etiolation Earring",
-		ear2 = "Sanare Earring",
-		body = gear.merlinic_nuke_body,
-		hands = "Telchine Gloves",
-		ring1 = "Vengeful Ring",
-		Ring2 = "Purity Ring",
-		back = gear.idle_jse_back,
-		waist = "Luminary Sash",
-		legs = "Telchine Braconi",
-		feet = empy.Feet
-	}
+	sets.defense.MEVA = set_combine(sets.idle.PDT, {	
+	})
 
 	sets.defense.PetPDT = sets.idle.PDT.Pet
 
@@ -917,8 +857,13 @@ function init_gear_sets()
 	sets.buff.DTSublimation = { waist = "Embla Sash" }
 
 	-- Weapons sets
+	sets.weapons.Idris = { main = 'Idris', sub = 'Genmei Shield' }
 	sets.weapons.Maxentius = { main = 'Maxentius', sub = 'Genmei Shield' }
 	sets.weapons.DualWeapons = { main = 'Maxentius', sub = 'Nehushtan' }
+end
+
+function user_job_lockstyle()
+	windower.chat.input('/lockstyleset 005')
 end
 
 -- Select default macro book on initial load or subjob change.

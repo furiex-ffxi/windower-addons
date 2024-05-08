@@ -10,7 +10,7 @@ function user_job_setup()
 	state.MagicalDefenseMode:options('MDT')
 	state.ResistDefenseMode:options('MEVA')
 	state.Weapons:options('None', 'Naegling', 'Tauret', 'Club', 'Bow', 'DualWeapons', 'DualWeaponsAcc', 'DualEvisceration', 'DualClubs',
-	'DualAeolian', 'DualProcSwords', 'DualProcDaggers', 'EnspellOnly', 'EnspellDW', 'DualBow')
+	'DualAeolian', 'DualProcSwords', 'DualProcDaggers', 'EnspellOnly', 'Enspell', 'EnspellDW', 'DualBow')
 
 	gear.stp_jse_back = { name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}}
 	gear.nuke_jse_back = { name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
@@ -533,7 +533,7 @@ function init_gear_sets()
 	sets.midcast['Enfeebling Magic'] = {
 		main = "Daybreak",
         sub		=	"Ammurapi Shield",
-		ring1 = { name="Stikini Ring +1", bag="wardrobe" },
+		ring1 = "Kishar Ring",
 		ring2 = { name="Stikini Ring +1", bag="wardrobe2" },
         ammo		=	"Regal Gem",
 		range =  empty,
@@ -541,8 +541,8 @@ function init_gear_sets()
         head		=	RELIC.Head,
         body		=	AF.Body,
 		hands		=	"Regal Cuffs",
-		waist       =   "Acuity Belt +1",
-        legs		=	EMPY.Legs,
+		waist       =   "Obstin. Sash",
+        legs		=	"Chironic Hose",
         feet		=	RELIC.Feet,
         left_ear	=	"Snotra Earring",
         right_ear	=	"Regal Earring",
@@ -955,6 +955,7 @@ function init_gear_sets()
 	sets.weapons.Tauret = { main = "Tauret", sub = "Sacro Bulwark"}
 	sets.weapons.Club = { main = "Maxentius", sub = "Sacro Bulwark"}
 	sets.weapons.EnspellOnly = { main = "Qutrub Knife", sub = "Ceremonial Dagger", range = "Ullr", ammo = "Beetle Arrow" }
+	sets.weapons.Enspell = { main = "Crocea Mors", sub = "Sacro Bulwark", range = Ullr, ammo = "Raetic Arrow" }
 	sets.weapons.EnspellDW = { main = "Crocea Mors", sub = "Daybreak", range = Ullr, ammo = "Raetic Arrow" }
 	sets.weapons.DualAlmace = { main = "Almace", sub = "Sequence", range = empty }
 	sets.weapons.DualBow = { main = "Naegling", sub = "Thibron", range = "Ullr", ammo = "Chapuli Arrow" }

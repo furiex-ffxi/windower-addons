@@ -198,7 +198,7 @@ function init_gear_sets()
         ring2 = "Regal Ring",
         back = gear.da_jse_back,
         waist = "Grunfeld Rope",
-        legs = sets.Nymame.Legs,
+        legs = sets.Nyame.Legs,
         feet = sets.Nyame.Feet
     }
     sets.precast.WS.SomeAcc = set_combine(sets.precast.WS, { neck = "Combatant's Torque" })

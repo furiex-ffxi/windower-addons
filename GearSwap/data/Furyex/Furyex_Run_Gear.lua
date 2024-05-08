@@ -2,12 +2,12 @@ function user_job_setup()
 	state.OffenseMode:options('Normal', 'Acc', 'FullAcc')
 	state.HybridMode:options('Tank', 'Tank_HP', 'Normal', 'DTLite')
 	state.WeaponskillMode:options('Match', 'Normal', 'Acc', 'FullAcc')
-	state.CastingMode:options('SIRD', 'Normal')
+	state.CastingMode:options('SIRD', 'DT', 'Normal')
 	state.PhysicalDefenseMode:options('PDT_HP', 'PDT')
 	state.MagicalDefenseMode:options('MDT_HP', 'MDT')
 	state.ResistDefenseMode:options('MEVA', 'MEVA_HP')
 	state.IdleMode:options('Normal', 'Tank', 'KiteTank') --,'Normal','Sphere'
-	state.Weapons:options('None', 'Montante', 'Aettir', 'Hepatizon','Lionheart', 'DualWeapons')
+	state.Weapons:options('None', 'Epeo', 'Aettir', 'Hepatizon', 'Montante', 'DualWeapons')
 
 	state.ExtraDefenseMode = M { ['description'] = 'Extra Defense Mode', 'None', 'MP' }
 
@@ -101,15 +101,15 @@ function init_gear_sets()
 		sub = "Utu Grip",
 		ammo = "Staunch Tathlum +1",
 		head = "Nyame Helm",
-		neck = "Unmoving Collar +1",
+		neck = "Moonlight Necklace",
 		ear1 = "Odnowa Earring +1",
-		ear2 = "Tuisto Earring",
+		ear2 = "Cryptic Earring",
 		body = "Emet Harness +1",
 		hands = "Nyame Gauntlets",
-		ring1 = "Gelatinous Ring +1",
-		ring2 = "Moonlight Ring",
+		ring1 = "Eihwaz Ring",
+		ring2 = "Provocare Ring",
 		back = gear.enmity_jse_back,
-		waist = "Flume Belt +1",
+		waist = "Kasiri Belt",
 		legs = gear.empy.Legs,
 		feet = gear.empy.Feet
 	}
@@ -250,17 +250,19 @@ function init_gear_sets()
 		sub = "Chanter's Shield",
 		ammo = "Impatiens",
 		head = gear.af.Head,
-		neck = "Unmoving Collar +1",
+		neck = "Loricate Torque +1",
 		ear1 = "Odnowa Earring +1",
 		ear2 = "Tuisto Earring",
 		body = gear.af.Body,
 		hands = "Leyline Gloves",
-		ring1 = "Gelatinous Ring +1",
+		ring1 = "Defending Ring",
 		ring2 = "Moonlight Ring",
 		back = gear.enmity_jse_back,
-		waist = "Carrier's Sash",
+		waist = "Plat. Mog. Belt",
+		-- waist = "Carrier's Sash",
 		legs = "Nyame Flanchard",
-		feet = "Carmine Greaves +1"
+		feet = sets.Nyame.Feet,
+		-- feet = "Carmine Greaves +1"
 	}
 
 	sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC, {
@@ -393,13 +395,11 @@ function init_gear_sets()
 			head = gear.empy.Head,
 			neck = "Incanter's Torque",
 			ear1 = "Andoaa Earring",
-			ear2 =
-			"Mimir Earring",
+			ear2 = "Mimir Earring",
 			hands = "Regal Gauntlets",
 			back = "Merciful Cape",
 			waist = "Olympus Sash",
-			legs =
-			gear.relic.Legs
+			legs = gear.relic.Legs
 		})
 
 	sets.midcast['Enhancing Magic'].SIRD = set_combine(sets.midcast.FastRecast.SIRD, {})
@@ -485,13 +485,13 @@ function init_gear_sets()
 		sub = "Utu Grip",
 		ammo = "Staunch Tathlum +1",
 		head = "Nyame Helm",
-		neck = "Loricate Torque +1",
-		ear1 = "Genmei Earring",
-		ear2 = "Ethereal Earring",
+		neck = "Warder's Charm +1",
+		ear1 = "Ethereal Earring",
+		ear2 = "Erilaz Earring +2",
 		body = gear.af.Body,
 		-- hands = "Regal Gauntlets",
 		hands = sets.Nyame.Hands,
-		ring1 = "Defending Ring",
+		ring1 = "Stikini Ring +1",
 		ring2 = "Stikini Ring +1",
 		back = "Moonlight Cape",
 		waist = "Plat. Mog. Belt",
@@ -553,7 +553,7 @@ function init_gear_sets()
 	-- Refined Grip +1
 	sets.weapons.Aettir = { main = "Aettir", sub = "Utu Grip" }
 	sets.weapons.Hepatizon = { main = "Hepatizon Axe +1", sub = "Utu Grip" }
-	sets.weapons.Lionheart = { main = "Lionheart", sub = "Utu Grip" }
+	sets.weapons.Epeo = { main = "Epeolatry", sub = "Refined Grip +1" }
 	sets.weapons.Montante = { main = "Montante +1", sub = "Utu Grip" }
 	sets.weapons.DualWeapons = { main = "Firangi", sub = "Reikiko" }
 

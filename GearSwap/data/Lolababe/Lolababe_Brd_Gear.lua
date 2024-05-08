@@ -13,23 +13,26 @@ function user_job_setup()
 	gear.magic_jse_back      = { name = "Intarabus's Cape", augments = { 'CHR+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'Mag. Acc.+10', '"Fast Cast"+10', 'Damage taken-5%', } }
 	gear.idle_jse_back       = { name = "Intarabus's Cape", augments = { 'HP+60', 'Eva.+20 /Mag. Eva.+20', 'Mag. Evasion+10', '"Fast Cast"+10', 'Occ. inc. resist. to stat. ailments+8', } }
 
-	gear.af_head             = "Brioso Roundlet +1"
-	gear.af_body             = "Brioso Just. +1"
-	gear.af_hands            = "Brioso Cuffs +1"
-	gear.af_legs             = "Brioso Cann. +1"
-	gear.af_feet             = "Brioso Slippers +1"
+	gear.af = {}
+	gear.af.Head             = "Brioso Roundlet +3"
+	gear.af.Body             = "Brioso Justau. +3"
+	gear.af.Hands            = "Brioso Cuffs +3"
+	gear.af.Legs             = "Brioso Cannions +3"
+	gear.af.Feet             = "Brioso Slippers +3"
 
-	gear.relic_head          = "Bihu Roundlet +1"
-	gear.relic_body          = "Bihu Jstcorps +1"
-	gear.relic_hands         = "Bihu Cuffs +1"
-	gear.relic_legs          = "Bihu Cannions +1"
-	gear.relic_feet          = "Bihu Slippers +1"
+	gear.relic = {}
+	gear.relic.Head          = "Bihu Roundlet +3"
+	gear.relic.Body          = "Bihu Jstcorps. +3"
+	gear.relic.Hands         = "Bihu Cuffs +3"
+	gear.relic.Legs          = "Bihu Cannions +3"
+	gear.relic.Feet          = "Bihu Slippers +3"
 
-	gear.empy_head           = "Fili Calot +3"
-	gear.empy_body           = "Fili Hongreline +3"
-	gear.empy_hands          = "Fili Manchettes +3"
-	gear.empy_legs           = "Fili Rhingrave +3"
-	gear.empy_feet           = "Fili Cothurnes +3"
+	gear.empy = {}
+	gear.empy.Head           = "Fili Calot +3"
+	gear.empy.Body           = "Fili Hongreline +3"
+	gear.empy.Hands          = "Fili Manchettes +3"
+	gear.empy.Legs           = "Fili Rhingrave +3"
+	gear.empy.Feet           = "Fili Cothurnes +3"
 
 	-- Adjust this if using the Terpander (new +song instrument)
 	info.ExtraSongInstrument = "Daurdabla"
@@ -108,7 +111,7 @@ function init_gear_sets()
 		back = gear.idle_jse_back,
 		waist = "Witful Belt",
 		legs = "Kaykaus Tights +1",
-		feet = gear.empy_feet
+		feet = gear.empy.Feet
 	}
 
 	sets.precast.FC.Cure = set_combine(sets.precast.FC, {
@@ -322,7 +325,7 @@ function init_gear_sets()
 		ring2="Prolix Ring",
 		back = { name = "Intarabus's Cape", augments = { 'CHR+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'CHR+10', '"Fast Cast"+10', 'Phys. dmg. taken-10%', } },
 		waist="Witful Belt",
-		legs = gear.empy_legs,
+		legs = gear.empy.Legs,
 		feet = "Aya. Gambieras +2"
 	}
 
@@ -391,7 +394,7 @@ function init_gear_sets()
 		--back="Toro Cape",
 		--waist="Sekhmet Corset",
 		--legs="Gyve Trousers",
-		--feet=gear.chironic_nuke_feet
+		--feet=gear.chironic_nuke.Feet
 	}
 
 	sets.midcast['Elemental Magic'].Resistant = {}
@@ -474,7 +477,7 @@ function init_gear_sets()
 	sets.midcast.Lullaby.Resistant = { range = "Gjallarhorn" }
 	sets.midcast.Lullaby.Duration = sets.midcast.Lullaby
 
-	sets.midcast.Ballad = { legs = "Fili Rhingrave +2" }
+	sets.midcast.Ballad = { legs = "Fili Rhingrave +3" }
 	sets.midcast.Carol = { hands = "Mousai Gages +1" }
 	sets.midcast.Etude = { head = "Mousai Turban +1" }
 	sets.midcast['Horde Lullaby'] = { 
@@ -507,7 +510,7 @@ function init_gear_sets()
 	sets.midcast.Threnody = { body = "Mou. Manteel +1" }
 	sets.midcast['Adventurer\'s Dirge'] = { range = "Marsyas", hands = "Bihu Cuffs +3" }
 	sets.midcast['Foe Sirvente'] = { head = "Bihu Roundlet +3" }
-	sets.midcast['Magic Finale'] = { legs = "Fili Rhingrave +2" }
+	sets.midcast['Magic Finale'] = { legs = "Fili Rhingrave +3" }
 	sets.midcast["Sentinel's Scherzo"] = { feet = "Fili Cothurnes +3" }
 	sets.midcast["Chocobo Mazurka"] = { range = "Marsyas" }
 
@@ -533,7 +536,7 @@ function init_gear_sets()
 		--back="Umbra Cape",
 		waist = "Flume Belt +1",
 		--legs="Assid. Pants +1",
-		--feet=gear.chironic_refresh_feet
+		--feet=gear.chironic_refresh.Feet
 	}
 
 	sets.idle = {
@@ -541,13 +544,13 @@ function init_gear_sets()
 		head = "Fili Calot +3",
 		body = "Ashera Harness",
 		hands = "Fili Manchettes +3",
-		legs = "Brioso Cannions +3",
+		legs = gear.empy.Legs,
 		feet = "Fili Cothurnes +3",
 		neck = "Warder's Charm +1",
 		waist = "Plat. Mog. Belt",
 		ear1 = "Etiolation Earring",
 		ear2 = "Fili Earring +1",
-		ring1 = "Defending Ring",
+		ring1 = "Stikini Ring +1",
 		ring2 = "Stikini Ring +1",
 		back = { name = "Intarabus's Cape", augments = { 'CHR+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'CHR+10', '"Fast Cast"+10', 'Phys. dmg. taken-10%', } },
 	}
@@ -556,13 +559,10 @@ function init_gear_sets()
 		head = "Fili Calot +3",
 		body = "Ashera Harness",
 		hands = "Fili Manchettes +3",
-		legs = "Brioso Cannions +3",
 		feet = "Fili Cothurnes +3",
-		neck = "Warder's Charm +1",
-		waist = "Plat. Mog. Belt",
-		ear1 = "Eabani Earring",
-		ear2 = "Etiolation Earring",
-		ring1 = "Defending Ring",
+		ear1 = "Etiolation Earring",
+		ear2 = "Eabani Earring",
+		ring1 = "Stikini Ring +1",
 		ring2 = "Stikini Ring +1",
 		back = { name = "Intarabus's Cape", augments = { 'CHR+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'CHR+10', '"Fast Cast"+10', 'Phys. dmg. taken-10%', } },
 	})
@@ -582,7 +582,7 @@ function init_gear_sets()
 		back = gear.idle_jse_back,
 		waist = "Carrier's Sash",
 		legs="Nyame Flanchard",
-		feet = gear.empy_feet
+		feet = gear.empy.Feet
 	}
 
 	sets.idle.DT = {
@@ -659,7 +659,7 @@ function init_gear_sets()
 		feet="Nyame Sollerets"
 	}
 
-	sets.Kiting = { feet = gear.empy_feet }
+	sets.Kiting = { feet = gear.empy.Feet }
 	sets.latent_refresh = {
 		--waist="Fucho-no-obi"
 	}

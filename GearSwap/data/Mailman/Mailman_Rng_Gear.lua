@@ -448,8 +448,8 @@ function init_gear_sets()
         ammo = "Stone Arrow"
     }
     sets.weapons.DualGastra = {
-        main = "Qutrub Knife",
-        sub = "Fermion Sword",
+        main = "Kustawi +1",
+        sub = "Malevolence",
         range = "Gastraphetes",
         ammo = "Eminent Bolt"
     }

@@ -50,11 +50,11 @@ function init_gear_sets()
 	}
 
 	gear.empy = {
-		Head="Heath. Burgeon. +2",
-		Body="Heath. Cuirass +2",
-		Hands="Heath. Gauntlets +2",
-		Legs="Heath. Flanchard +2",
-		Feet="Heath. Sollerets +2",
+		Head="Heath. Bur. +3",
+		Body="Heath. Cuirass +3",
+		Hands="Heath. Gauntlets +3",
+		Legs="Heath. Flanchard +3",
+		Feet="Heath. Sollerets +3",
 	}
 
 	gear.sulevia = {
@@ -160,6 +160,22 @@ function init_gear_sets()
 		feet = gear.empy.Feet
 	}
 
+	sets.midcast['Elemental Magic'] = {
+		ammo = "Pemphredo Tathlum",
+		head = sets.Nyame.Head,
+		neck = "Baetyl Pendant",
+		ear1 = "Digni. Earring",
+		ear2 = "Malignance Earring",
+		body = gear.empy.Body,
+		hands = gear.relic.Hands,
+		ring1 = "Stikini Ring +1",
+		ring2 = "Stikini Ring +1",
+		back = DRKCape.FC,
+		waist = "Eschan Stone",
+		legs = gear.empy.Legs,
+		feet = gear.empy.Feet
+	}
+
 	sets.midcast['Enfeebling Magic'] = {
 		ammo = "Pemphredo Tathlum",
 		head = "Carmine Mask +1",
@@ -239,15 +255,15 @@ function init_gear_sets()
 	-- Default set for any weaponskill that isn't any more specifically defined
 	sets.precast.WS = {
         ammo="Knobkierrie",
-		head = sets.Nyame.Head,
+		head = gear.empy.Head,
 		neck = "Abyssal Beads +2",
 		-- ear1 = "Lugra Earring +1",
         ear1 = { name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
         ear2 = "Thrud Earring",
 		body = sets.Nyame.Body,
-		legs = sets.Nyame.Legs,
-		feet = sets.Nyame.Feet,
 		hands = sets.Nyame.Hands,
+		legs = sets.Nyame.Legs,
+		feet = gear.empy.Feet,
         ring1 = "Epaminondas's Ring",
         ring2 ="Karieyh Ring",		
 		-- ring1 = "Regal Ring",
@@ -606,8 +622,8 @@ function init_gear_sets()
 		neck = "Vim Torque +1",
 		waist = "Ioskeha Belt +1",
 		left_ear = "Telos Earring",
-		-- right_ear = "Cessance Earring",
-		right_ear = "Schere Earring",
+		right_ear = "Cessance Earring",
+		-- right_ear = "Schere Earring",
 		left_ring = "Lehko's Ring",
 		right_ring = "Niqmaddu Ring",
 		back = DRKCape.TP,

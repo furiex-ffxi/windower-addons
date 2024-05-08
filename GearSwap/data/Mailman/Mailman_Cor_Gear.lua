@@ -8,7 +8,7 @@ function user_job_setup()
     state.HybridMode:options('Normal', 'DT')
     state.ExtraMeleeMode = M { ['description'] = 'Extra Melee Mode', 'None', 'DWMax' }
     state.Weapons:options('Default', 'Ranged', 'RangedAcc', 'Savage', 'Evisceration', 'DualWeapons', 'DualSavageWeapons',
-        'DualEvisceration', 'DualLeadenRanged', 'DualLeadenMelee', 'DualAeolian', 'DualLeadenMeleeAcc', 'DualRanged',
+        'DualEvisceration', 'DualLeadenRanged', 'DualLeadenMelee', 'DualAeolian', 'DualLeadenMeleeAcc', 'DualRanged', 'DualRoll',
         'DualFermion', 'None')
     state.CompensatorMode:options('Always', '300', '1000', 'Never')
 
@@ -728,6 +728,12 @@ function init_gear_sets()
 		-- sub={ name="Rostam", augments={'Path: C'}, bag="Wardrobe 2"},
 		range={ name="Fomalhaut", augments={'Path: A',}},
 		ammo="Chrono Bullet",
+    }
+    sets.weapons.DualRoll = { 
+		main={ name="Rostam", augments={'Path: C'}, bag="Wardrobe 2"},
+        sub = "Tauret", 
+        range = "Compensator",
+        ammo="Living Bullet",
     }
     sets.weapons.DualFermion = {
         main="Fermion Sword",
