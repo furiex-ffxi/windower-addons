@@ -9,28 +9,6 @@ function user_job_setup()
 	-- Whether to use Carn (or song daggers in general) under a certain threshhold even when weapons are locked.
 	state.CarnMode           = M { 'Always', '300', '1000', 'Never' }
 
-	gear.melee_jse_back      = { name = "Intarabus's Cape", augments = { 'Accuracy+20 Attack+20' } }
-	gear.magic_jse_back      = { name = "Intarabus's Cape", augments = { 'CHR+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'Mag. Acc.+10', '"Fast Cast"+10', 'Damage taken-5%', } }
-	gear.idle_jse_back       = { name = "Intarabus's Cape", augments = { 'HP+60', 'Eva.+20 /Mag. Eva.+20', 'Mag. Evasion+10', '"Fast Cast"+10', 'Occ. inc. resist. to stat. ailments+8', } }
-
-	gear.af_head             = "Brioso Roundlet +1"
-	gear.af_body             = "Brioso Just. +1"
-	gear.af_hands            = "Brioso Cuffs +1"
-	gear.af_legs             = "Brioso Cann. +1"
-	gear.af_feet             = "Brioso Slippers +1"
-
-	gear.relic_head          = "Bihu Roundlet +1"
-	gear.relic_body          = "Bihu Jstcorps +1"
-	gear.relic_hands         = "Bihu Cuffs +1"
-	gear.relic_legs          = "Bihu Cannions +1"
-	gear.relic_feet          = "Bihu Slippers +1"
-
-	gear.empy_head           = "Fili Calot +3"
-	gear.empy_body           = "Fili Hongreline +3"
-	gear.empy_hands          = "Fili Manchettes +3"
-	gear.empy_legs           = "Fili Rhingrave +3"
-	gear.empy_feet           = "Fili Cothurnes +3"
-
 	-- Adjust this if using the Terpander (new +song instrument)
 	info.ExtraSongInstrument = "Daurdabla"
 	-- How many extra songs we can keep from Daurdabla/Terpander
@@ -58,6 +36,27 @@ function init_gear_sets()
 	--------------------------------------
 	-- Start defining the sets
 	--------------------------------------
+	gear.melee_jse_back      = { name = "Intarabus's Cape", augments = { 'Accuracy+20 Attack+20' } }
+	gear.magic_jse_back      = { name = "Intarabus's Cape", augments = { 'CHR+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'Mag. Acc.+10', '"Fast Cast"+10', 'Damage taken-5%', } }
+	gear.idle_jse_back       = { name = "Intarabus's Cape", augments = { 'HP+60', 'Eva.+20 /Mag. Eva.+20', 'Mag. Evasion+10', '"Fast Cast"+10', 'Occ. inc. resist. to stat. ailments+8', } }
+
+	gear.af_head             = "Brioso Roundlet +2"
+	gear.af_body             = "Brioso Justau. +2"
+	gear.af_hands            = "Brioso Cuffs +2"
+	gear.af_legs             = "Brioso Cann. +1"
+	gear.af_feet             = "Brioso Slippers +1"
+
+	gear.relic_head          = "Bihu Roundlet +3"
+	gear.relic_body          = "Bihu Jstcorps. +3"
+	gear.relic_hands         = "Bihu Cuffs +3"
+	gear.relic_legs          = "Bihu Cannions +3"
+	gear.relic_feet          = "Bihu Slippers +3"
+
+	gear.empy_head           = "Fili Calot +2"
+	gear.empy_body           = "Fili Hongreline +2"
+	gear.empy_hands          = "Fili Manchettes +2"
+	gear.empy_legs           = "Fili Rhingrave +2"
+	gear.empy_feet           = "Fili Cothurnes +2"
 
 	-- Weapons sets
 	sets.weapons.Naegling = { main = "Naegling", sub = "Genmei Shield" }
@@ -65,7 +64,7 @@ function init_gear_sets()
 	sets.weapons.Carnwenhan = { main = "Carnwenhan", sub = "Genmei Shield" }
 	sets.weapons.Naegling = { main = "Naegling", sub = "Genmei Shield" }
 	sets.weapons.Qutrub = { main = "Qutrub Knife", sub = "Genmei Shield" }
-	sets.weapons.DualCarnwenhan = {main="Carnwenhan", sub="Centovente"}	
+	sets.weapons.DualCarnwenhan = {main="Carnwenhan", sub="Ternion Dagger +1"}	
 	sets.weapons.DualWeapons = { main = "Aeneas", sub = "Centovente" }
 	sets.weapons.DualNaegling = { main = "Naegling", sub = "Centovente" }
 	sets.weapons.DualTauret = { main = "Tauret", sub = "Blurred Knife +1" }
@@ -84,10 +83,11 @@ function init_gear_sets()
 	sets.precast.FC = {
 		head = "Volte Beret",
 		body = "Inyanga Jubbah +2",
-		hands = { name = "Gende. Gages +1", augments = { 'Phys. dmg. taken -3%', 'Magic dmg. taken -2%', 'Song spellcasting time -4%', } },
+		hands = "Volte Gloves",
 		legs = "Volte Brais",
-		feet = "Fili Corthurnes +3",
-		neck = "Orunmila's Torque",
+		feet = gear.empy_feet,
+		-- neck = "Orunmila's Torque",
+		neck = "Baetyl Pendant",
 		waist = "Embla Sash",
 		ear1 = "Odnowa Earring +1",
 		ear2 = "Etiolation Earring",
@@ -124,9 +124,9 @@ function init_gear_sets()
 	sets.precast.FC.BardSong = set_combine(sets.precast.FC, {
 		--main="Kali",
 		--range="Gjallarhorn",
-		head = "Fili Calot +3", --14
-		body = "Brioso Justau. +3", --15
-		feet="Bihu Slippers +3", --9
+		head = gear.empy_head, --14
+		body = gear.af_body, --15
+		feet=gear.relic_feet, --9
 	})
 
 	sets.precast.FC["Honor March"] = set_combine(sets.precast.FC.BardSong, { range = "Marsyas" })
@@ -139,9 +139,9 @@ function init_gear_sets()
 
 	-- Precast sets to enhance JAs
 
-	sets.precast.JA.Nightingale = { feet = "Bihu Slippers +3" }
-	sets.precast.JA.Troubadour = { body = "Bihu Jstcorps. +3" }
-	sets.precast.JA['Soul Voice'] = { legs = "Bihu Cannions +3" }
+	sets.precast.JA.Nightingale = { feet = gear.relic_feet }
+	sets.precast.JA.Troubadour = { body = gear.relic_body }
+	sets.precast.JA['Soul Voice'] = { legs = gear.relic_legs }
 
 	-- Waltz set (chr and vit)
 	sets.precast.Waltz = {}
@@ -151,7 +151,7 @@ function init_gear_sets()
 	sets.precast.WS = {
 		range = { name = "Linos", augments = { 'Accuracy+16', 'Weapon skill damage +3%', 'STR+6 CHR+6', } },
 		head = { name = "Nyame Helm", augments = { 'Path: B', } },
-		body = { name = "Bihu Jstcorps. +3", augments = { 'Enhances "Troubadour" effect', } },
+		body = { name = gear.relic_body, augments = { 'Enhances "Troubadour" effect', } },
 		hands = { name = "Nyame Gauntlets", augments = { 'Path: B', } },
 		legs = { name = "Nyame Flanchard", augments = { 'Path: B', } },
 		feet = { name = "Nyame Sollerets", augments = { 'Path: B', } },
@@ -181,11 +181,11 @@ function init_gear_sets()
 	})
 
 	sets.precast.WS['Mordant Rime'] = set_combine(sets.precast.WS, {
-		head = "Bihu Roundlet +3",
-		body = "Bihu Jstcorps. +3",
-		hands = "Bihu Cuffs +3",
-		legs = "Bihu Cannions +3",
-		feet = "Bihu Slippers +3",
+		head = gear.relic_head,
+		body = gear.relic_body,
+		hands = gear.relic_hands,
+		legs = gear.relic_legs,
+		feet = gear.relic_feet,
 		ear1 = "Regal Earring",
 		ring2 = { name = "Metamor. Ring +1", augments = { 'Path: A', } },
 		waist = "Kentarch Belt +1",
@@ -243,11 +243,11 @@ function init_gear_sets()
 		sub = "Ammurapi Shield",
 		range = "Gjallarhorn",
 		ammo = empty,
-		head = "Fili Calot +3",
-		body = "Fili Hongreline +3",
-		hands = "Fili Manchettes +3",
+		head = gear.empy_head,
+		body = gear.empy_body,
+		hands = gear.empy_hands,
 		legs = "Inyanga Shalwar +2",
-		feet = "Brioso Slippers +3",
+		feet = gear.af_feet,
 		neck = "Mnbw. Whistle +1",
 		waist = "Flume Belt +1",
 		ear1 = { name = "Odnowa Earring +1", augments = { 'Path: A', } },
@@ -263,11 +263,11 @@ function init_gear_sets()
 	} --Only weapons in this set. This set is overlayed onto SongEffect
 
 	sets.midcast.SongDebuff = {
-		head = "Brioso Roundlet +3",
-		body = "Brioso Justau. +3",
-		hands = "Brioso Cuffs +3",
+		head = gear.af_head,
+		body = gear.af_body,
+		hands = gear.af_hands,
 		legs = "Inyanga Shalwar +2",
-		feet = "Brioso Slippers +3",
+		feet = gear.af_feet,
 		neck = "Mnbw. Whistle +1",
 		ear1 = "Digni. Earring",
 		ear2 = "Regal Earring",
@@ -455,7 +455,7 @@ function init_gear_sets()
 		body = "Inyanga Jubbah +2",
 		hands = "Inyan. Dastanas +2",
 		legs = "Inyanga Shalwar +2",
-		feet = "Brioso Slippers +3",
+		feet = gear.af_feet,
 		neck = "Mnbw. Whistle +1",
 		ear1 = "Digni. Earring",
 		ear2 = "Vor Earring",
@@ -472,43 +472,42 @@ function init_gear_sets()
 	-- Gear to enhance certain classes of songs
 	sets.midcast.Lullaby = { }
 	sets.midcast.Lullaby.Resistant = { range = "Gjallarhorn" }
-	sets.midcast.Lullaby.Duration = sets.midcast.Lullaby
+-- 	sets.midcast.Lullaby.Duration = sets.midcast.Lullaby
 
-	sets.midcast.Ballad = { legs = "Fili Rhingrave +2" }
+	sets.midcast.Ballad = { legs = gear.empy_legs }
 	sets.midcast.Carol = { hands = "Mousai Gages +1" }
 	sets.midcast.Etude = { head = "Mousai Turban +1" }
 	sets.midcast['Horde Lullaby'] = { 
 		main = "Carnwenhan",
 		sub = "Ammurapi Shield",
-		range = "Gjallarhorn" 
+		range = "Daurdabla" 
 	} 
-	sets.midcast['Horde Lullaby'].Resistant = sets.midcast['Horde Lullaby']
-	sets.midcast['Horde Lullaby'].Duration = sets.midcast['Horde Lullaby']
+	-- sets.midcast['Horde Lullaby'].Resistant = sets.midcast['Horde Lullaby']
+	-- sets.midcast['Horde Lullaby'].Duration = sets.midcast['Horde Lullaby']
 	sets.midcast['Horde Lullaby II'] = {
 		main = "Carnwenhan",
 		sub = "Ammurapi Shield",
-		range = "Blurred Harp +1",
+		range = "Daurdabla",
+		-- range = "Blurred Harp +1",
 		hands = "Inyan. Dastanas +2",
-		feet = "Bihu Slippers +3",
+		feet = gear.relic_feet,
 		ear1 = "Gersemi Earring",
 	}
-	sets.midcast['Horde Lullaby II'].Resistant = sets.midcast['Horde Lullaby II']
-	sets.midcast['Horde Lullaby II'].Duration = sets.midcast['Horde Lullaby II']
-	sets.midcast.Madrigal = { head = "Fili Calot +3" }
+	sets.midcast.Madrigal = { head = gear.empy_head }
 	sets.midcast.Mambo = { feet = "Mou. Crackows +1" }
-	sets.midcast.March = { hands = "Fili Manchettes +3" }
+	sets.midcast.March = { hands = gear.empy_hands }
 	sets.midcast['Honor March'] = set_combine(sets.midcast.March,{range="Marsyas"})
 	sets.midcast["Aria of Passion"] = {
 		range = "Loughnashade",
 	}
 	sets.midcast.Minne = { legs = "Mou. Seraweels +1" }
-	sets.midcast.Minuet = { body = "Fili Hongreline +3" }
-	sets.midcast.Prelude = { feet = "Fili Cothurnes +3" }
+	sets.midcast.Minuet = { body = gear.empy_body }
+	sets.midcast.Prelude = { feet = gear.empy_feet }
 	sets.midcast.Threnody = { body = "Mou. Manteel +1" }
-	sets.midcast['Adventurer\'s Dirge'] = { range = "Marsyas", hands = "Bihu Cuffs +3" }
-	sets.midcast['Foe Sirvente'] = { head = "Bihu Roundlet +3" }
-	sets.midcast['Magic Finale'] = { legs = "Fili Rhingrave +2" }
-	sets.midcast["Sentinel's Scherzo"] = { feet = "Fili Cothurnes +3" }
+	sets.midcast['Adventurer\'s Dirge'] = { range = "Marsyas", hands = gear.relic_hands }
+	sets.midcast['Foe Sirvente'] = { head = gear.relic_head }
+	sets.midcast['Magic Finale'] = { legs = gear.empy_legs }
+	sets.midcast["Sentinel's Scherzo"] = { feet = gear.empy_feet }
 	sets.midcast["Chocobo Mazurka"] = { range = "Marsyas" }
 
 	sets.midcast.Paeon = sets.midcast.DaurdablaDummy 
@@ -538,11 +537,11 @@ function init_gear_sets()
 
 	sets.idle = {
 		range = "Loughnashade",
-		head = "Fili Calot +3",
+		head = gear.empy_head,
 		body = "Ashera Harness",
-		hands = "Fili Manchettes +3",
-		legs = "Brioso Cannions +3",
-		feet = "Fili Cothurnes +3",
+		hands = gear.empy_hands,
+		legs = gear.af_legs,
+		feet = gear.empy_feet,
 		neck = "Warder's Charm +1",
 		waist = "Plat. Mog. Belt",
 		ear1 = "Eabani Earring",
@@ -553,11 +552,11 @@ function init_gear_sets()
 	}
 
 	sets.idle.Refresh = set_combine(sets.idle, {
-		head = "Fili Calot +3",
+		head = gear.empy_head,
 		body = "Ashera Harness",
-		hands = "Fili Manchettes +3",
-		legs = "Brioso Cannions +3",
-		feet = "Fili Cothurnes +3",
+		hands = gear.empy_hands,
+		legs = gear.af_legs,
+		feet = gear.empy_feet,
 		neck = "Warder's Charm +1",
 		waist = "Plat. Mog. Belt",
 		ear1 = "Eabani Earring",
@@ -727,12 +726,12 @@ function init_gear_sets()
 		ear2 = "Suppanomimi",
 		waist = "Reiki Yotai",
 	})
-	sets.engaged.DW.DT = set_combine(sets.engaged.DW, sets.engaged.DT)
-	sets.engaged.DW.Acc = set_combine(sets.engaged.DW, sets.engaged.Acc, {
+	-- sets.engaged.DW.DT = set_combine(sets.engaged.DW)
+	sets.engaged.DW.Acc = set_combine(sets.engaged.DW, {
 		ear2 = "Suppanomimi",
 		waist = "Reiki Yotai",
 	})
-	sets.engaged.DW.Acc.DT = set_combine(sets.engaged.DW, sets.engaged.Acc, sets.engaged.DT)
+	-- sets.engaged.DW.Acc.DT = set_combine(sets.engaged.DW)
 
 	sets.buff.Doom = {
 		neck="Nicander's Necklace", --20
@@ -747,8 +746,6 @@ function select_default_macro_book()
 	set_macro_page(1, 1)
 end
 
-state.Weapons:options('None', 'Naegling', 'Aeneas', 'Carnwenhan', 'Qutrub', 'DualCarnwenhan','DualWeapons', 'DualNaegling', 'DualTauret', 'DualAeolian')
-
 autows_list = {
 	['Naegling'] = 'Savage Blade',
 	['Aeneas'] = "Rudra's Storm",
@@ -758,4 +755,6 @@ autows_list = {
 	['DualAeolian'] = 'Aeolian Edge'
 }
 
-send_command('wait 10;input /lockstyleset 1')
+function user_job_lockstyle()
+	windower.chat.input('/lockstyleset 006')
+end

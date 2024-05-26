@@ -6,7 +6,7 @@ function user_job_setup()
 	state.PhysicalDefenseMode:options('PDT', 'NukeLock', 'GeoLock', 'PetPDT')
 	state.MagicalDefenseMode:options('MDT', 'NukeLock')
 	state.ResistDefenseMode:options('MEVA')
-	state.Weapons:options('None', 'Mpaca', 'Maxentius', 'Ternion', 'Daybreak', 'DualWeapons')
+	state.Weapons:options('None', 'Idris', 'Mpaca', 'Maxentius', 'Ternion', 'Daybreak', 'DualWeapons')
 
 	gear.nuke_jse_back = { name = "Nantosuelta's Cape", augments = { 'INT+20', 'Mag. Acc+20 /Mag. Dmg.+20', '"Mag.Atk.Bns."+10' } }
 	gear.idle_jse_back = { name = "Nantosuelta's Cape", augments = { 'HP+60', 'Eva.+20 /Mag. Eva.+20', 'Pet: "Regen"+10' } }
@@ -76,7 +76,13 @@ function init_gear_sets()
 	sets.precast.JA['Full Circle'] = { head = gear.empy.Head, hands = gear.relic.Hand }
 
 	-- Indi Duration in slots that would normally have skill here to make entrust more efficient.
-	sets.buff.Entrust = {}
+	sets.buff.Entrust = {
+		main = gear.gada_indi_club,
+		neck = "Incanter's Torque", 
+		back = gear.idle_jse_back, 
+		legs = gear.relic.Legs, 
+		feet = gear.empy.Feet 
+	}
 
 	-- Relic hat for Blaze of Glory HP increase.
 	sets.buff['Blaze of Glory'] = {}
@@ -215,7 +221,7 @@ function init_gear_sets()
 	}
 
 	sets.midcast.Geomancy = {
-		main = "Solstice",
+		main = "Idris",
 		sub = "Genmei Shield",
 		range = "Dunna",
 		head = "Vanya Hood",
@@ -275,7 +281,7 @@ function init_gear_sets()
 
 	--Cureset for if it's not light weather but is light day.
 	sets.midcast.LightDayCure = {
-		main = gear.gada_healing_club,
+		main = "Daybreak",
 		sub = "Sors Shield",
 		ammo = "Hasty Pinion +1",
 		head = "Amalric Coif +1",
@@ -862,8 +868,8 @@ function init_gear_sets()
 		ammo = "Amar Cluster",
 		head = "Blistering Sallet +1",
 		neck = "Combatant's Torque",
-		ear1 = "Cessance Earring",
-		ear2 = "Crep. Earring",
+		ear1 = "Crep. Earring",
+		ear2 = "Telos Earring",
 		body = gear.empy.Body,
 		hands = "Gazu Bracelets +1",
 		ring1 = "Petrov Ring",
@@ -920,6 +926,7 @@ function init_gear_sets()
 	sets.buff.DTSublimation = { waist = "Embla Sash" }
 
 	-- Weapons sets
+	sets.weapons.Idris = { main = 'Idris', sub = 'Genmei Shield' }
 	sets.weapons.Mpaca = { main = "Mpaca's Staff", sub = 'Umbra Strap' }
 	sets.weapons.Maxentius = { main = 'Maxentius', sub = 'Genmei Shield' }
 	sets.weapons.Ternion = { main = 'Ternion Dagger +1', sub = 'Genmei Shield' }

@@ -580,11 +580,11 @@ function init_gear_sets()
     -- Idle sets
     sets.idle = {
         ammo = gear.RAbullet,
-		head="Lanun Tricorne +3",
-		body="Lanun Frac +3",
-		hands=gear.Empy.Hands,
-		legs="Chasseur's Culottes +2",
-		feet="Lanun Bottes +3",
+		head=sets.Malignance.Head,
+		body=sets.Malignance.Body,
+		hands=sets.Malignance.Hands,
+		legs=gear.Empy.Legs,
+		feet=sets.Malignance.Feet,
 		neck={ name="Loricate Torque +1", augments={'Path: A',}},
 		waist="Sailfi Belt +1",
 		left_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
@@ -781,7 +781,8 @@ function init_gear_sets()
         back = gear.tp_jse_back,
         waist = "Windbuffet Belt +1",
         legs = "Samnuha Tights",
-        feet = sets.Malignance.Feet
+        feet = "Herculean Boots"
+        -- feet = sets.Malignance.Feet
     }
 
     sets.engaged.Acc = set_combine(sets.engaged, {

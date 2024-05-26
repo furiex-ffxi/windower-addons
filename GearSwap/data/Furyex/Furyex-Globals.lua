@@ -93,23 +93,47 @@ bayld_items = {'Tlalpoloani','Macoquetza','Camatlatia','Icoyoca','Tlamini','Suij
 'Uk\'uxkaj Cap'}
 ]]
 
+-- windower.register_event('incoming text',function(org)
+-- 	if string.find(org, "Flaming Kick") or string.find(org, "Demonfire") then
+-- 			windower.send_command('input /p NUKE! > WATER! <call14>!')
+-- 	end
+-- 	if string.find(org, "Flashflood") or string.find(org, "Torrential Pain") then
+-- 		windower.send_command('input /p NUKE! > THUNDER! <call14>!')
+-- 	end
+-- 	if string.find(org, "Icy Grasp") or string.find(org, "Frozen Blood") then
+-- 		windower.send_command('input /p NUKE! > FIRE! <call14>!')
+-- 	end
+-- 	if string.find(org, "Eroding Flesh") or string.find(org, "Ensepulcher") then
+-- 		windower.send_command('input /p NUKE! > AERO! <call14>!')
+-- 	end
+-- 	if string.find(org, "Fulminous Smash") or string.find(org, "Ceaseless Surge") then
+-- 		windower.send_command('input /p NUKE! > STONE! <call14>!')
+-- 	end
+-- 	if string.find(org, "Blast of Reticence") then
+-- 		windower.send_command('input /p NUKE! > BLIZZARD! <call14>!')
+-- 	end
+-- end)
+
 windower.register_event('incoming text',function(org)
-	if string.find(org, "Flaming Kick") or string.find(org, "Demonfire") then
-			windower.send_command('input /p NUKE! > WATER! <call14>!')
+	if string.find(org:lower(), "off") and string.find(org:lower(), "threnody") then
+		windower.send_command('input /t Furyex Bard Dark Stuff wore off!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! <call15>')
 	end
-	if string.find(org, "Flashflood") or string.find(org, "Torrential Pain") then
-		windower.send_command('input /p NUKE! > THUNDER! <call14>!')
+
+	indexstart, indexend = string.find(org:lower(),"effect wears off")
+	if indexstart and string.find(org:lower(), "magic") then
+		windower.send_command('input /t Furyex '..string.sub(org,1,indexstart)..' wore off!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! <call15>')
 	end
-	if string.find(org, "Icy Grasp") or string.find(org, "Frozen Blood") then
-		windower.send_command('input /p NUKE! > FIRE! <call14>!')
+	
+	if indexstart and string.find(org:lower(), "slow") then
+		windower.send_command('input /t Furyex '..string.sub(org,1,indexstart)..' wore off! <call15>')
 	end
-	if string.find(org, "Eroding Flesh") or string.find(org, "Ensepulcher") then
-		windower.send_command('input /p NUKE! > AERO! <call14>!')
+	
+	if indexstart and string.find(org:lower(), "dia") then
+		windower.send_command('input /t Furyex '..string.sub(org,1,indexstart)..' wore off! <call15>')
 	end
-	if string.find(org, "Fulminous Smash") or string.find(org, "Ceaseless Surge") then
-		windower.send_command('input /p NUKE! > STONE! <call14>!')
-	end
-	if string.find(org, "Blast of Reticence") then
-		windower.send_command('input /p NUKE! > BLIZZARD! <call14>!')
+	
+	indexstart, indexend = string.find(org:lower(),"is no longer")
+	if indexstart and string.find(org:lower(), "paralyzed") then
+		windower.send_command('input /t Furyex '..string.sub(org,1,indexstart)..' wore off! <call15>')
 	end
 end)

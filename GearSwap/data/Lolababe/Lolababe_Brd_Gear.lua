@@ -243,7 +243,7 @@ function init_gear_sets()
 	-- For song buffs (duration and AF3 set bonus)
 	sets.midcast.SongEffect = {
 		main = "Carnwenhan",
-		sub = "Ammurapi Shield",
+		-- sub = "Ammurapi Shield",
 		range = "Gjallarhorn",
 		ammo = empty,
 		head = "Fili Calot +3",
@@ -262,7 +262,7 @@ function init_gear_sets()
 
 	sets.midcast.SongEffect.DW = { 
 		main = "Carnwenhan", 
-		sub = "Kali" 
+		-- sub = "Kali" 
 	} --Only weapons in this set. This set is overlayed onto SongEffect
 
 	sets.midcast.SongDebuff = {

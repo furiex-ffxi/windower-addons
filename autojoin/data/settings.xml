@@ -4,12 +4,6 @@
         <autodecline>false</autodecline>
         <blacklist />
         <mode>whitelist</mode>
-        <whitelist>Furyex,Cyrite</whitelist>
+        <whitelist>Furyex,Mikamaru,Dimdragon,Lolababe,Cleobabe,Cyrite,Lilsouja,Mailman,Dudewtf</whitelist>
     </global>
-    <cleobabe>
-        <whitelist>Furyex,Lilsouja,Cyrite</whitelist>
-    </cleobabe>
-    <mailman>
-        <whitelist>Furyex,Cyrite,Wapiti</whitelist>
-    </mailman>
 </settings>

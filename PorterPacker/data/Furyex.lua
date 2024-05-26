@@ -72,6 +72,7 @@ sets = {
 	},
 	['midcast'] = {
 		['Pet'] = {},
+		['SongDebuff'] = {},
 	},
 	['idle'] = {},
 	['element'] = {},
@@ -83,6 +84,10 @@ sets = {
     ['passive'] = {},
 	['Nyame'] = {},
 	['Malignance'] = {},
+}
+state = {
+}
+info = {
 }
 
 f()

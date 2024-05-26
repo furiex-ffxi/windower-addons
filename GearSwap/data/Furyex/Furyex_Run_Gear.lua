@@ -483,7 +483,7 @@ function init_gear_sets()
 	sets.idle = {
 		main = "Aettir",
 		sub = "Utu Grip",
-		ammo = "Staunch Tathlum +1",
+		ammo = "Brigantia Pebble",
 		head = "Nyame Helm",
 		neck = "Warder's Charm +1",
 		ear1 = "Ethereal Earring",
@@ -504,7 +504,7 @@ function init_gear_sets()
 	sets.idle.Tank = {
 		main = "Aettir",
 		sub = "Utu Grip",
-		ammo = "Staunch Tathlum +1",
+		ammo = "Brigantia Pebble",
 		head = "Nyame Helm",
 		neck = "Loricate Torque +1",
 		ear1 = "Odnowa Earring +1",

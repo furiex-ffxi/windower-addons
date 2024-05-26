@@ -170,7 +170,7 @@ function init_gear_sets()
     }
 
     sets.midcast.Cure = {
-        main = gear.gada_healing_club,
+		main = "Daybreak",
         sub = "Sors Shield",
         ammo = "Hasty Pinion +1",
         head = "Vanya Hood",

@@ -74,6 +74,7 @@ function init_gear_sets()
 
 	-- Indi Duration in slots that would normally have skill here to make entrust more efficient.
 	sets.buff.Entrust = {
+		main = gear.gada_indi_club,
 		neck = "Incanter's Torque", 
 		back = gear.idle_jse_back, 
 		legs = relic.Legs, 
@@ -99,7 +100,7 @@ function init_gear_sets()
 		ear1 = "Loquac. Earring", -- 2
 		ear2 = "Malignance Earring", -- 4
 		-- body = "Zendik Robe",
-		body = "Merlinic Jubbah", -- 6
+		body = "Volte Doublet", -- 10
 		hands = "Volte Gloves", -- 6
 		ring1 = "Kishar Ring", -- 4
 		ring2 = "Lebeche Ring", -- 2 QM
@@ -107,7 +108,7 @@ function init_gear_sets()
 		waist = "Witful Belt", -- 3 / 3 QM
 		legs = af.Legs, -- 13 
 		feet = "Regal Pumps +1" -- 7
-	} -- 77
+	} -- 81
 
 	sets.precast.FC.Geomancy = set_combine(sets.precast.FC, { 
 	})
@@ -211,7 +212,7 @@ function init_gear_sets()
 		})
 
 	sets.midcast.Cure = {
-		main = gear.gada_healing_club,
+		main = "Daybreak",
 		sub = "Sors Shield",
 		-- ammo = "Hasty Pinion +1",
 		head = "Vanya Hood",
@@ -249,7 +250,7 @@ function init_gear_sets()
 
 	--Cureset for if it's not light weather but is light day.
 	sets.midcast.LightDayCure = {
-		main = gear.gada_healing_club,
+		main = "Daybreak",
 		sub = "Sors Shield",
 		-- ammo = "Hasty Pinion +1",
 		head = "Amalric Coif +1",
@@ -759,7 +760,7 @@ function init_gear_sets()
 
 	sets.defense.GeoLock = sets.midcast.Geomancy.Indi
 
-	sets.Kiting = { feet = "Herald's Gaiters" }
+	sets.Kiting = { feet = af.Feet }
 	sets.latent_refresh = { waist = "Fucho-no-obi" }
 	sets.latent_refresh_grip = { sub = "Oneiros Grip" }
 	sets.TPEat = { neck = "Chrys. Torque" }
@@ -794,8 +795,8 @@ function init_gear_sets()
 	-- Normal melee group
 	sets.engaged = {
 		ammo = "Staunch Tathlum +1",
-		-- head = "Blistering Sallet +1",
-		head = empy.Head,
+		head = "Blistering Sallet +1",
+		-- head = empy.Head,
 		neck = "Combatant's Torque",
 		ear1 = "Crep. Earring",
 		ear2 = "Telos Earring",

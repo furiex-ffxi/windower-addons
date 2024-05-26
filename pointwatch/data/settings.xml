@@ -65,8 +65,8 @@
     <furyex>
         <text_box_settings>
             <pos>
-                <x>914</x>
-                <y>-1</y>
+                <x>747</x>
+                <y>-3</y>
             </pos>
         </text_box_settings>
     </furyex>
@@ -89,8 +89,8 @@
     <mailman>
         <text_box_settings>
             <pos>
-                <x>886</x>
-                <y>1</y>
+                <x>901</x>
+                <y>-4</y>
             </pos>
         </text_box_settings>
     </mailman>

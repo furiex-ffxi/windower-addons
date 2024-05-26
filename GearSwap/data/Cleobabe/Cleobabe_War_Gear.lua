@@ -358,7 +358,7 @@ function init_gear_sets()
 		left_ear="Odnowa Earring +1",
 		right_ear="Etiolation Earring",
 		left_ring="Moonlight Ring",
-		right_ring="Shneddick Ring",
+		right_ring="Defending Ring",
 		-- ammo="Staunch Tathlum +1",
 		-- feet="Hermes' Sandals +1",
 		-- neck="Bathy Choker +1",
@@ -423,7 +423,9 @@ function init_gear_sets()
 		feet = "Amm Greaves"
 	}
 
-	sets.Kiting = {}
+	sets.Kiting = {
+		ring1 = "Shneddick Ring",
+	}
 	sets.Reraise = { head = "Twilight Helm", body = "Twilight Mail" }
 	sets.buff.Doom = set_combine(sets.buff.Doom, {})
 	sets.buff.Sleep = { head = "Frenzy Sallet" }

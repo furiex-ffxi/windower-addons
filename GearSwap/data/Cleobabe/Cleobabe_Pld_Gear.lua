@@ -10,7 +10,7 @@ function user_job_setup()
     state.MagicalDefenseMode:options('MDT_HP', 'MDT', 'MDT_Reraise')
     state.ResistDefenseMode:options('MEVA_HP', 'MEVA')
     state.IdleMode:options('Tank', 'Kiting', 'PDT', 'Block', 'MDT', 'Normal')
-    state.Weapons:options('None', 'BurtAegis', 'SakpataOchain', 'NaeglingBlurred', 'ClubOchain')
+    state.Weapons:options('None', 'BurtAegis', 'BurtDuban', 'SakpataOchain', 'NaeglingBlurred', 'ClubOchain', 'MalignancePole')
 
     state.ExtraDefenseMode = M {
         ['description'] = 'Extra Defense Mode',
@@ -747,7 +747,7 @@ function init_gear_sets()
         neck = "Coatl Gorget +1",
         ear1 = "Etiolation Earring",
         ear2 = "Ethereal Earring",
-        body = "Jumalik Mail",
+        body = "Sacro Breastplate",
         hands = "Regal Gauntlets",
         ring1 = "Stikini Ring +1",
         ring2 = "Stikini Ring +1",
@@ -848,7 +848,7 @@ function init_gear_sets()
     }
 
     sets.Kiting = {
-        legs = "Carmine Cuisses +1"
+        ring1 = "Shneddick Ring"
     }
 
     sets.latent_refresh = {
@@ -896,6 +896,10 @@ function init_gear_sets()
         main = "Burtgang",
         sub = "Aegis"
     }
+    sets.weapons.BurtDuban = {
+        main = "Burtgang",
+        sub = "Duban"
+    }
     sets.weapons.NaeglingBlurred = {
         main = "Naegling",
         sub = "Blurred Shield"
@@ -911,6 +915,11 @@ function init_gear_sets()
     sets.weapons.DualWeapons = {
         main = "Naegling",
         sub = "Demersal Degen +1"
+    }
+
+    sets.weapons.MalignancePole = {
+        main = "Malignance Pole",
+        sub = "Umbra Starp"
     }
 
     sets.defense.Block = {
@@ -1055,19 +1064,23 @@ function init_gear_sets()
     sets.engaged = {
         main = "Sakpata's Sword",
         sub = "Ochain",
-        ammo = "Aurgelmir Orb +1",
-        head = "Flam. Zucchetto +2",
-        neck = "Asperity Necklace",
-        ear1 = "Cessance Earring",
-        ear2 = "Brutal Earring",
-        body = gear.valorous_wsd_body,
+        -- ammo = "Aurgelmir Orb +1",
+        ammo = "Coiste Bodhar",
+        -- head = "Flam. Zucchetto +2",
+        head = "Sakpata's Helm",
+        neck = "Lissome Necklace",
+        ear1 = "Dedition Earring",
+        ear2 = "Telos Earring",
+        body = "Sakpata's Breastplate",
         hands = "Sakpata's Gauntlets",
-        ring1 = "Flamma Ring",
+        ring1 = "Moonlight Ring",
         ring2 = "Petrov Ring",
         back = "Bleating Mantle",
-        waist = "Windbuffet Belt +1",
-        legs = "Sulev. Cuisses +2",
-        feet = "Flam. Gambieras +2"
+        waist = "Sailfi Belt +1",
+        -- legs = "Sulev. Cuisses +2",
+        legs = "Odyssean Cuisses",
+        -- feet = "Flam. Gambieras +2"
+        feet = "Sakpata's Leggings"
     }
 
     sets.engaged.Acc = {
@@ -1095,19 +1108,19 @@ function init_gear_sets()
     sets.engaged.Tank = {
         main = "Sakpata's Sword",
         sub = "Ochain",
-        ammo = "Staunch Tathlum +1",
-        head = "Chev. Armet +1",
-        neck = "Loricate Torque +1",
-        ear1 = "Creed Earring",
-        ear2 = "Thureous Earring",
-        body = "Tartarus Platemail",
-        hands = "Souv. Handsch. +1",
-        ring1 = "Defending Ring",
-        ring2 = "Shadow Ring",
-        back = "Shadow Mantle",
-        waist = "Flume Belt +1",
-        legs = "Chev. Cuisses +1",
-        feet = "Souveran Schuhs +1"
+        ammo="Staunch Tathlum +1",
+        head={ name="Sakpata's Helm", augments={'Path: A',}},
+        body={ name="Sakpata's Plate", augments={'Path: A',}},
+        hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
+        legs={ name="Sakpata's Cuisses", augments={'Path: A',}},
+        feet={ name="Sakpata's Leggings", augments={'Path: A',}},
+        neck={ name="Loricate Torque +1", augments={'Path: A',}},
+        waist="Plat. Mog. Belt",
+        left_ear="Etiolation Earring",
+        right_ear="Ethereal Earring",
+        left_ring="Moonlight Ring",
+        right_ring="Stikini Ring +1",
+        back="Shadow Mantle",
     }
 
     sets.engaged.DDTank = {

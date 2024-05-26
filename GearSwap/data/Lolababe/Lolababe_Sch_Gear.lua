@@ -747,19 +747,18 @@ function init_gear_sets()
     sets.idle = {
         main = "Mpaca's Staff",
         -- sub = "Umbra Strap",
-        ammo = "Homiliary",
-        head = "Befouled Crown",
-        neck = "Loricate Torque +1",
-        ear1 = "Etiolation Earring",
-        -- ear2 = "Ethereal Earring",
-        body = "Jhakri Robe +1",
-        -- hands = gear.merlinic_refresh_hands,
-        ring1 = "Stikini Ring +1",
-        ring2 = "Stikini Ring +1",
-        -- back = "Umbra Cape",
-        -- waist = "Carrier's Sash",
-        legs = "Assid. Pants +1",
-        -- feet = gear.chironic_refresh_feet
+        ammo="Homiliary",
+        head="Befouled Crown",
+        body="Arbatel Gown +3",
+        hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+        legs={ name="Nyame Flanchard", augments={'Path: B',}},
+        feet="Volte Gaiters",
+        neck="Loricate Torque +1",
+        waist="Plat. Mog. Belt",
+        left_ear="Etiolation Earring",
+        right_ear="Malignance Earring",
+        left_ring="Stikini Ring +1",
+        right_ring="Stikini Ring +1",
     }
 
     sets.idle.PDT = {

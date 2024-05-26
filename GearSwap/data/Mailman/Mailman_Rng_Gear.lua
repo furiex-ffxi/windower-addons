@@ -81,7 +81,9 @@ function init_gear_sets()
     --------------------------------------
     -- Precast sets
     --------------------------------------
-
+    gear.da_jse_back = { name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
+    gear.str_wsd_jse_back = { name="Belenus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
+    
     -- Precast sets to enhance JAs
     sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
     sets.precast.JA['Bounty Shot'] = set_combine(sets.TreasureHunter, {
@@ -159,7 +161,7 @@ function init_gear_sets()
 		left_ring="Karieyh Ring",
         -- right_ring="Cornelia's ring",
         right_ring="Epaminondas's Ring",
-        back = gear.wsd_ranger_jse_back,
+        back = gear.str_wsd_jse_back,
         waist = "Sailfi Belt +1",
         legs = sets.Nyame.Legs,
         feet = sets.Nyame.Feet
@@ -457,7 +459,8 @@ function init_gear_sets()
         main = "Naegling",
         sub = "Tauret",
         -- sub = "Blurred Knife +1",
-        range = "Fomalhaut"
+        range = "Fomalhaut",
+        ammo = "Chrono Bullet"
     }
     sets.weapons.DualEviscerationWeapons = {
         main = "Tauret",
@@ -495,7 +498,7 @@ function init_gear_sets()
         hands = "Adhemar Wrist. +1",
         ring1 = "Epona's Ring",
         ring2 = "Petrov Ring",
-        -- back = gear.tp_ranger_jse_back,
+        back = gear.da_jse_back,
         waist = "Windbuffet Belt +1",
         legs = "Samnuha Tights",
         feet = "Malignance Boots"

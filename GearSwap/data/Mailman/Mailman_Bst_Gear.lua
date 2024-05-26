@@ -451,41 +451,35 @@ function init_gear_sets()
         main = "Agwu's Axe",
         sub = gear.PDTMABKumbha,
         ammo = "Hesperiidae",
-        head = sets.Nyame.Head,
         neck = "Adad Amulet",
         ear1 = "Enmerkar Earring",
         ear2 = "Crep. Earring",
-        body = sets.Nyame.Body,
-        hands = sets.Nyame.Hands,
         ring1 = "C. Palug Ring",
         ring2 = "Tali'ah Ring",
         back = "Artio's Mantle",
         waist = "Incarnation Sash",
-        legs = sets.Nyame.Legs,
-        feet = sets.Nyame.Feet,
-    }
+        head="Gleti's Mask",
+        body="Gleti's Cuirass",
+        hands="Gleti's Gauntlets",
+        legs="Gleti's Breeches",
+        feet="Gleti's Boots",    }
 
     sets.midcast.Pet.DebuffReady = {
         main = "Agwu's Axe",
         sub = gear.PDTMABKumbha,
         ammo = "Hesperiidae",
-        -- head = "Gleti's Mask",
-		head = sets.Nyame.Head,
+        head = "Gleti's Mask",
         neck = "Adad Amulet",
         ear1 = "Enmerkar Earring",
         ear2 = "Crep. Earring",
-        -- body = "Gleti's Cuirass",
-        -- hands = "Gleti's Gauntlets",
-		body = sets.Nyame.Body,
-        hands = sets.Nyame.Hands,
+        body = "Gleti's Cuirass",
+        hands = "Gleti's Gauntlets",
         ring1 = "C. Palug Ring",
         ring2 = "Tali'ah Ring",
         back = "Artio's Mantle",
         waist = "Incarnation Sash",
-        -- legs = "Gleti's Breeches",
-        -- feet = "Gleti's Boots"
-		legs = sets.Nyame.Legs,
-        feet = sets.Nyame.Feet,
+        legs = "Gleti's Breeches",
+        feet = "Gleti's Boots"
     }
 
     sets.midcast.Pet.PhysicalDebuffReady = {
