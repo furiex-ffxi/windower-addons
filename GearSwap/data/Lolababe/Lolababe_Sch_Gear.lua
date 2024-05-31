@@ -579,7 +579,8 @@ function init_gear_sets()
     sets.MagicBurst = {
         main = "Bunzi's Rod",
         sub = "Ammurapi Shield",
-        ammo = "Ghastly Tathlum +1",
+        -- ammo = "Ghastly Tathlum +1",
+        ammo = "Pemphredo Tathlum",
         head = "Agwu's Cap",
         neck = "Argute Stole +2",
         ear1 = "Malignance Earring",

@@ -158,24 +158,6 @@ function init_gear_sets()
 		-- sub = "Sacro Bulwark"
 	 })
 
-	-- Absorb TP set- Haste 25% and FC 43 Gear + 38 Job Traits = 81%
-	sets.precast.FC.Absorb = {
-		main = "Maxentius",
-		sub = "Ammurapi Shield",
-		ammo = "Pemphredo Tathlum",
-		head = { name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}}, -- 14 FC
-		body = EMPY.Body,
-		hands = EMPY.Hands,
-		legs = EMPY.Legs,
-		feet = EMPY.Feet,
-		neck = "Dls. Torque +2",
-		waist = "Witful Belt", -- 3 FC
-		left_ear = "Malignance Earring", -- 4 FC
-		right_ear = { name="Leth. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+13','Mag. Acc.+13','"Dbl.Atk."+4',}}, -- 8 FC
-		left_ring = "Kishar Ring", -- 4 FC
-		right_ring = { name="Metamor. Ring +1", augments={'Path: A',}},
-		back = RDMCape.FC, -- 10 FC
-	}
 	sets.precast.FC.Stun = set_combine(sets.precast.FC.Absorb)
 
 	-- Weaponskill sets
@@ -402,6 +384,25 @@ function init_gear_sets()
 		waist = "Witful Belt",
 		legs = "Psycloth Lappas",
 		feet = "Medium's Sabots"
+	}
+
+	-- Absorb TP set- Haste 25% and FC 43 Gear + 38 Job Traits = 81%
+	sets.midcast.Absorb = {
+		main = "Maxentius",
+		sub = "Ammurapi Shield",
+		ammo = "Pemphredo Tathlum",
+		head = { name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}}, -- 14 FC
+		body = EMPY.Body,
+		hands = EMPY.Hands,
+		legs = EMPY.Legs,
+		feet = EMPY.Feet,
+		neck = "Dls. Torque +2",
+		waist = "Witful Belt", -- 3 FC
+		left_ear = "Malignance Earring", -- 4 FC
+		right_ear = { name="Leth. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+13','Mag. Acc.+13','"Dbl.Atk."+4',}}, -- 8 FC
+		left_ring = "Kishar Ring", -- 4 FC
+		right_ring = { name="Metamor. Ring +1", augments={'Path: A',}},
+		back = RDMCape.FC, -- 10 FC
 	}
 
 	sets.midcast.Cure = set_combine(sets.midcast.Casting,{

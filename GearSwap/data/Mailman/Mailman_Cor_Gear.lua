@@ -702,35 +702,32 @@ function init_gear_sets()
     sets.weapons.DualEvisceration = { main = "Tauret", sub = "Blurred Knife +1", range = "Ataktos" }
     sets.weapons.Savage = { main = "Naegling", sub = "Nusku Shield", range = "Ataktos" }
     sets.weapons.DualLeadenRanged = { 
-		main={ name="Rostam", augments={'Path: C'}, bag="Wardrobe 2"},
-		-- main={ name="Rostam", augments={'Path: A'}, bag="Wardrobe 2"},
+		main={ name="Rostam", augments={'Path: A'}},
 		sub="Kustawi +1",
 		range="Death Penalty", 
 		ammo="Living Bullet",
     }
     sets.weapons.DualLeadenMelee = { 
-		main={ name="Rostam", augments={'Path: C'}, bag="Wardrobe 2"},
+		main={ name="Rostam", augments={'Path: A'}},
         sub = "Tauret", 
         range = "Death Penalty",
         ammo="Living Bullet",
     }
     sets.weapons.DualAeolian = { 
 		ammo="Living Bullet",
-		main="Tauret",
-		Sub="Naegling",
-		-- sub={ name="Rostam", augments={'Path: C'}, bag="Wardrobe 2"},
+        main={ name="Rostam", augments={'Path: A'}},
+        sub="Tauret",
 		range={ name="Anarchy +2", augments={'Delay:+60','TP Bonus +1000',}},    
     }
     sets.weapons.DualLeadenMeleeAcc = { main = "Naegling", sub = "Blurred Knife +1", range = "Fomalhaut" }
     sets.weapons.DualRanged = {
-		main="Rostam",
+		main={ name="Rostam", augments={'Path: A'}},
         sub="Tauret",
-		-- sub={ name="Rostam", augments={'Path: C'}, bag="Wardrobe 2"},
 		range={ name="Fomalhaut", augments={'Path: A',}},
 		ammo="Chrono Bullet",
     }
     sets.weapons.DualRoll = { 
-		main={ name="Rostam", augments={'Path: C'}, bag="Wardrobe 2"},
+		main={ name="Rostam", augments={'Path: C'}},
         sub = "Tauret", 
         range = "Compensator",
         ammo="Living Bullet",
