@@ -48,8 +48,8 @@
             </flags>
             <padding>8</padding>
             <pos>
-                <x>3</x>
-                <y>951</y>
+                <x>0</x>
+                <y>539</y>
             </pos>
             <text>
                 <alpha>255</alpha>
@@ -70,16 +70,20 @@
                 </stroke>
             </text>
         </text>
-        <tracking>carabosse</tracking>
+        <tracking>chloris</tracking>
         <visible>true</visible>
     </global>
-    <cleobabe>
-        <visible>false</visible>
-    </cleobabe>
-    <lolababe>
-        <visible>false</visible>
-    </lolababe>
     <mailman>
+        <text>
+            <text>
+                <fonts>
+
+                </fonts>
+            </text>
+        </text>
         <visible>false</visible>
     </mailman>
+</settings>
+visible>
+    </lolababe>
 </settings>

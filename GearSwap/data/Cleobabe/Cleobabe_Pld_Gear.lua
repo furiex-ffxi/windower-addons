@@ -14,9 +14,6 @@ function user_job_setup()
 	
     state.ExtraDefenseMode = M{['description']='Extra Defense Mode','None','MP','Twilight'}
 	
-	gear.fastcast_jse_back = {name="Rudianos's Mantle",augments={'INT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','"Fast Cast"+10',}}
-	gear.enmity_jse_back = {name="Rudianos's Mantle",augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','Enmity+10',}}
-
 	-- Additional local binds
 	send_command('bind !` gs c SubJobEnmity')
 	send_command('bind ^backspace input /ja "Shield Bash" <t>')
@@ -45,7 +42,13 @@ function init_gear_sets()
 	--------------------------------------
 	-- Precast sets
 	--------------------------------------
-	
+    gear.jse_fc_back = { name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','"Fast Cast"+10','Spell interruption rate down-10%',}}
+    gear.jse_block_back = { name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Chance of successful block +5',}}
+	gear.jse_cure_back = { name="Rudianos's Mantle", augments={'MND+20','Eva.+20 /Mag. Eva.+20','"Cure" potency +10%','Spell interruption rate down-10%',}}
+    gear.jse_enmity_back = { name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','Enmity+10','Spell interruption rate down-10%',}}
+    gear.jse_str_back = { name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
+    gear.jse_def_back = { name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','VIT+10','Enmity+10','DEF+50',}}
+
     sets.Enmity = {
         ammo="Sapience Orb",
         head={ name="Loess Barbuta +1", augments={'Path: A',}},
@@ -59,13 +62,14 @@ function init_gear_sets()
         right_ear="Cryptic Earring",
         left_ring="Gelatinous Ring +1",
         right_ring={ name="Apeile Ring +1", augments={'Path: A',}},
-        back={ name="Rudianos's Mantle", augments={'MND+20','Eva.+20 /Mag. Eva.+20','"Cure" potency +10%','Spell interruption rate down-10%',}},
+        back=gear.jse_cure_back,
     }
             
     sets.Enmity.SIRD = {
         ammo="Staunch Tathlum +1",
         head={ name="Loess Barbuta +1", augments={'Path: A',},priority=1},
-        body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
+        body={ name="Souv. Cuirass +1", augments={'VIT+12','Attack+25','"Refresh"+3',}},
+        -- body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
         hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
         legs="Founder's Hose",
         feet="Odyssean Greaves",
@@ -75,13 +79,14 @@ function init_gear_sets()
         right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
         left_ring="Gelatinous Ring +1",
         right_ring={ name="Apeile Ring +1", augments={'Path: A',}},
-        back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','Enmity+10','Spell interruption rate down-10%',}},
+        back=gear.jse_enmity_back,
     }
             
     sets.Enmity.DT = {
         ammo="Staunch Tathlum +1",
         head={ name="Loess Barbuta +1", augments={'Path: A',},priority=1},
-        body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
+        body={ name="Souv. Cuirass +1", augments={'VIT+12','Attack+25','"Refresh"+3',}},
+        -- body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
         hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
         legs="Founder's Hose",
         feet="Odyssean Greaves",
@@ -91,16 +96,17 @@ function init_gear_sets()
         right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
         left_ring="Gelatinous Ring +1",
         right_ring={ name="Apeile Ring +1", augments={'Path: A',}},
-        back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','Enmity+10','Spell interruption rate down-10%',}},
+        back=gear.jse_enmity_back,
     }
             
     -- Precast sets to enhance JAs
     sets.precast.JA['Invincible'] = set_combine(sets.Enmity,{legs={ name="Cab. Breeches +3", augments={'Enhances "Invincible" effect',}},})
     sets.precast.JA['Holy Circle'] = set_combine(sets.Enmity,{feet="Rev. Leggings +2",})
     sets.precast.JA['Sentinel'] = set_combine(sets.Enmity,{feet={ name="Cab. Leggings +3", augments={'Enhances "Guardian" effect',}},})
-    sets.precast.JA['Rampart'] = set_combine(sets.Enmity,{head={ name="Cab. Coronet +3", augments={'Enhances "Iron Will" effect',}},}) --head="Valor Coronet" (Also Vit?)
+    sets.precast.JA['Rampart'] = set_combine(sets.Enmity,{head={ name="Cab. Coronet +3", augments={'Enhances "Iron Will" effect',}},}) 
     sets.precast.JA['Fealty'] = set_combine(sets.Enmity,{body={ name="Cab. Surcoat +3", augments={'Enhances "Fealty" effect',}},})
     sets.precast.JA['Divine Emblem'] = set_combine(sets.Enmity,{ feet="Chev. Sabatons +2", })
+    sets.precast.JA['Majesty'] = set_combine(sets.Enmity)
     sets.precast.JA['Cover'] = set_combine(sets.Enmity, {
         head="Rev. Coronet +2",
         body={ name="Cab. Surcoat +3", augments={'Enhances "Fealty" effect',}},}
@@ -109,11 +115,12 @@ function init_gear_sets()
     sets.precast.JA['Invincible'].DT = set_combine(sets.Enmity.DT,{legs={ name="Cab. Breeches +3", augments={'Enhances "Invincible" effect',}},})
     sets.precast.JA['Holy Circle'].DT = set_combine(sets.Enmity.DT,{feet="Rev. Leggings +2",})
     sets.precast.JA['Sentinel'].DT = set_combine(sets.Enmity.DT,{feet={ name="Cab. Leggings +3", augments={'Enhances "Guardian" effect',}},})
-    sets.precast.JA['Rampart'].DT = set_combine(sets.Enmity.DT,{head={ name="Cab. Coronet +3", augments={'Enhances "Iron Will" effect',}},}) --head="Valor Coronet" (Also Vit?)
+    sets.precast.JA['Rampart'].DT = set_combine(sets.Enmity.DT,{head={ name="Cab. Coronet +3", augments={'Enhances "Iron Will" effect',}},})
     sets.precast.JA['Fealty'].DT = set_combine(sets.Enmity.DT,{body={ name="Cab. Surcoat +3", augments={'Enhances "Fealty" effect',}},})
     sets.precast.JA['Divine Emblem'].DT = set_combine(sets.Enmity.DT,{feet="Chev. Sabatons +2",})
+    sets.precast.JA['Majesty'] = set_combine(sets.Enmity)
     sets.precast.JA['Cover'].DT = set_combine(sets.Enmity.DT, {head="Rev. Coronet +2",
-    body={ name="Cab. Surcoat +3", augments={'Enhances "Fealty" effect',}},}) --head="Rev. Coronet +1",
+    body={ name="Cab. Surcoat +3", augments={'Enhances "Fealty" effect',}},})
 	
     -- add mnd for Chivalry
     sets.precast.JA['Chivalry'] = {
@@ -129,7 +136,7 @@ function init_gear_sets()
         right_ear={ name="Nourish. Earring +1", augments={'Path: A',}},
         left_ring="Gelatinous Ring +1",
         right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
-        back={ name="Rudianos's Mantle", augments={'MND+20','Eva.+20 /Mag. Eva.+20','"Cure" potency +10%','Spell interruption rate down-10%',}},
+        back=gear.jse_cure_back,
     }
             
     sets.precast.JA['Chivalry'].DT = {
@@ -145,7 +152,7 @@ function init_gear_sets()
         right_ear={ name="Nourish. Earring +1", augments={'Path: A',}},
         left_ring="Gelatinous Ring +1",
         right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
-        back={ name="Rudianos's Mantle", augments={'MND+20','Eva.+20 /Mag. Eva.+20','"Cure" potency +10%','Spell interruption rate down-10%',}},
+        back=gear.jse_cure_back,
     }
 
 	sets.precast.JA['Shield Bash'] = set_combine(sets.Enmity, {hands="Cab. Gauntlets +3"})		
@@ -167,23 +174,23 @@ function init_gear_sets()
 	sets.precast.JA['Aggressor'].DT = set_combine(sets.Enmity.DT, {})
 
     -- Waltz set (chr and vit)
-    sets.precast.Waltz = {ammo="Aurgelmir Orb +1",
-		head="Nyame Helm",neck="Unmoving Collar +1",ear1="Odnowa Earring +1",ear2="Tuisto Earring",
-		body="Rev. Surcoat +2",hands="Regal Gauntlets",ring1="Asklepian Ring",ring2="Valseur's Ring",
-		back="Moonlight Cape",waist="Chaac Belt",legs="Nyame Flanchard",feet="Nyame Sollerets"}
+    -- sets.precast.Waltz = {ammo="Aurgelmir Orb +1",
+	-- 	head="Nyame Helm",neck="Unmoving Collar +1",ear1="Odnowa Earring +1",ear2="Tuisto Earring",
+	-- 	body="Rev. Surcoat +2",hands="Regal Gauntlets",ring1="Asklepian Ring",ring2="Valseur's Ring",
+	-- 	back="Moonlight Cape",waist="Chaac Belt",legs="Nyame Flanchard",feet="Nyame Sollerets"}
         
     -- Don't need any special gear for Healing Waltz.
-    sets.precast.Waltz['Healing Waltz'] = {}
+    -- sets.precast.Waltz['Healing Waltz'] = {}
     
-    sets.precast.Step = {ammo="Aurgelmir Orb +1",
-        head="Carmine Mask +1",neck="Combatant's Torque",ear1="Mache Earring +1",ear2="Telos Earring",
-        body="Flamma Korazin +2",hands="Regal Gauntlets",ring1="Ramuh Ring +1",ring2="Ramuh Ring +1",
-        back="Ground. Mantle +1",waist="Olseni Belt",legs="Carmine Cuisses +1",feet="Flam. Gambieras +2"}
+    -- sets.precast.Step = {ammo="Aurgelmir Orb +1",
+    --     head="Carmine Mask +1",neck="Combatant's Torque",ear1="Mache Earring +1",ear2="Telos Earring",
+    --     body="Flamma Korazin +2",hands="Regal Gauntlets",ring1="Ramuh Ring +1",ring2="Ramuh Ring +1",
+    --     back="Ground. Mantle +1",waist="Olseni Belt",legs="Carmine Cuisses +1",feet="Flam. Gambieras +2"}
 		
-	sets.precast.JA['Violent Flourish'] = {ammo="Aurgelmir Orb +1",
-        head="Flam. Zucchetto +2",neck="Erra Pendant",ear1="Gwati Earring",ear2="Digni. Earring",
-        body="Flamma Korazin +2",hands="Flam. Manopolas +2",ring1="Defending Ring",ring2="Stikini Ring +1",
-        back="Ground. Mantle +1",waist="Olseni Belt",legs="Flamma Dirs +2",feet="Flam. Gambieras +2"}
+	-- sets.precast.JA['Violent Flourish'] = {ammo="Aurgelmir Orb +1",
+    --     head="Flam. Zucchetto +2",neck="Erra Pendant",ear1="Gwati Earring",ear2="Digni. Earring",
+    --     body="Flamma Korazin +2",hands="Flam. Manopolas +2",ring1="Defending Ring",ring2="Stikini Ring +1",
+    --     back="Ground. Mantle +1",waist="Olseni Belt",legs="Flamma Dirs +2",feet="Flam. Gambieras +2"}
 		
 	sets.precast.JA['Animated Flourish'] = set_combine(sets.Enmity, {})
 
@@ -203,7 +210,7 @@ function init_gear_sets()
         right_ear="Loquac. Earring",
         left_ring="Gelatinous Ring +1",
         right_ring="Kishar Ring",
-        back={ name="Rudianos's Mantle", augments={'HP+60','HP+20','"Fast Cast"+10','Spell interruption rate down-10%',}},
+        back=gear.jse_fc_back,
     }
 		
     sets.precast.FC.DT = {
@@ -220,7 +227,7 @@ function init_gear_sets()
         right_ear="Loquac. Earring",
         left_ring="Gelatinous Ring +1",
         right_ring="Kishar Ring",
-        back={ name="Rudianos's Mantle", augments={'HP+60','HP+20','"Fast Cast"+10','Spell interruption rate down-10%',}},
+        back=gear.jse_fc_back,
     }
             
     sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC, {waist="Siegel Sash"})
@@ -256,7 +263,7 @@ function init_gear_sets()
         right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
         left_ring="Gelatinous Ring +1",
         right_ring="Moonlight Ring",
-        back={ name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},}
+        back=gear.jse_str_back,}
     )
     
     sets.precast.WS['Savage Blade'].Acc = set_combine(sets.precast.WS.Acc, {})
@@ -268,7 +275,8 @@ function init_gear_sets()
     sets.precast.WS['Atonement'] = {
         ammo="Sapience Orb",
         head={ name="Loess Barbuta +1", augments={'Path: A',}},
-        body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+        body={ name="Souv. Cuirass +1", augments={'VIT+12','Attack+25','"Refresh"+3',}},
+        -- body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
         hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
         legs={ name="Souv. Diechlings +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
         feet="Chev. Sabatons +2",
@@ -278,7 +286,7 @@ function init_gear_sets()
         right_ear="Cryptic Earring",
         left_ring="Apeile Ring",
         right_ring={ name="Apeile Ring +1", augments={'Path: A',}},
-        back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','Enmity+10','Spell interruption rate down-10%',}},
+        back=gear.jse_enmity_back,
     }
 
 	-- Swap to these on Moonshade using WS if at 3000 TP
@@ -303,7 +311,7 @@ function init_gear_sets()
         right_ear="Loquac. Earring",
         left_ring="Gelatinous Ring +1",
         right_ring="Kishar Ring",
-        back={ name="Rudianos's Mantle", augments={'HP+60','HP+20','"Fast Cast"+10','Spell interruption rate down-10%',}},
+        back=gear.jse_fc_back,
     }
 		
 	sets.midcast.FastRecast.DT = {
@@ -319,7 +327,7 @@ function init_gear_sets()
         right_ear="Loquac. Earring",
         left_ring="Gelatinous Ring +1",
         right_ring="Kishar Ring",
-        back={ name="Rudianos's Mantle", augments={'HP+60','HP+20','"Fast Cast"+10','Spell interruption rate down-10%',}},
+        back=gear.jse_fc_back,
     }
 
     sets.midcast.Flash = set_combine(sets.Enmity, {})
@@ -332,9 +340,10 @@ function init_gear_sets()
 
     sets.midcast.Cure = {
         ammo="Staunch Tathlum +1",
-        head={ name="Souv. Schaller +1", augments={'HP+105','VIT+12','Phys. dmg. taken -4',}},
+        head="Souv. Schaller +1",
         body="Adamantite Armor",
-        hands="Regal Gauntlets",
+        hands="Chev. Gauntlets +2",
+        -- hands="Regal Gauntlets",
         legs={ name="Cab. Breeches +3", augments={'Enhances "Invincible" effect',}},
         feet="Odyssean Greaves",
         neck="Moonlight Necklace",
@@ -343,14 +352,15 @@ function init_gear_sets()
         right_ear="Chev. Earring +1",
         left_ring="Gelatinous Ring +1",
         right_ring="Eihwaz Ring",
-        back={ name="Rudianos's Mantle", augments={'MND+20','Eva.+20 /Mag. Eva.+20','"Cure" potency +10%','Spell interruption rate down-10%',}},
+        back=gear.jse_cure_back,
     }
             
     sets.midcast.Cure.SIRD = {
         ammo="Staunch Tathlum +1",
-        head={ name="Souv. Schaller +1", augments={'HP+105','VIT+12','Phys. dmg. taken -4',}},
+        head="Souv. Schaller +1",
         body="Chev. Cuirass +2",
-        hands="Regal Gauntlets",
+        hands="Chev. Gauntlets +2",
+        -- hands="Regal Gauntlets",
         legs="Founder's Hose",
         feet="Odyssean Greaves",
         neck="Moonlight Necklace",
@@ -359,13 +369,14 @@ function init_gear_sets()
         right_ear="Chev. Earring +1",
         left_ring="Gelatinous Ring +1",
         right_ring="Eihwaz Ring",
-        back={ name="Rudianos's Mantle", augments={'MND+20','Eva.+20 /Mag. Eva.+20','"Cure" potency +10%','Spell interruption rate down-10%',}},
+        back=gear.jse_cure_back,
     }
             
     sets.midcast.Cure.DT = {
         ammo="Staunch Tathlum +1",
         head={ name="Loess Barbuta +1", augments={'Path: A',},priority=1},
-        body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
+        body={ name="Souv. Cuirass +1", augments={'VIT+12','Attack+25','"Refresh"+3',}},
+        -- body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
         hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
         legs="Founder's Hose",
         feet="Odyssean Greaves",
@@ -375,7 +386,7 @@ function init_gear_sets()
         right_ear={ name="Nourish. Earring +1", augments={'Path: A',}},
         left_ring={ name="Moonlight Ring",priority=1},
         right_ring={ name="Apeile Ring +1", augments={'Path: A',}},
-        back={ name="Rudianos's Mantle", augments={'MND+20','Eva.+20 /Mag. Eva.+20','"Cure" potency +10%','Spell interruption rate down-10%',}},
+        back=gear.jse_cure_back,
     }
 		
     sets.midcast.Reprisal = {
@@ -391,13 +402,14 @@ function init_gear_sets()
         right_ear={ name="Odnowa Earring +1", augments={'Path: A',},priority=1},
         left_ring="Gelatinous Ring +1",
         right_ring="Moonlight Ring",
-        back={ name="Rudianos's Mantle", augments={'HP+60','HP+20','"Fast Cast"+10','Spell interruption rate down-10%',}},
+        back=gear.jse_fc_back,
     }
 
 	sets.Self_Healing = {
         ammo="Staunch Tathlum +1",
         head={ name="Loess Barbuta +1", augments={'Path: A',},priority=1},
-        body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
+        body={ name="Souv. Cuirass +1", augments={'VIT+12','Attack+25','"Refresh"+3',}},
+        -- body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
         hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
         legs="Founder's Hose",
         feet="Odyssean Greaves",
@@ -407,13 +419,14 @@ function init_gear_sets()
         right_ear={ name="Nourish. Earring +1", augments={'Path: A',}},
         left_ring={ name="Moonlight Ring",priority=1},
         right_ring={ name="Apeile Ring +1", augments={'Path: A',}},
-        back={ name="Rudianos's Mantle", augments={'MND+20','Eva.+20 /Mag. Eva.+20','"Cure" potency +10%','Spell interruption rate down-10%',}},
+        back=gear.jse_cure_back,
     }
             
 	sets.Self_Healing.SIRD = {
         ammo="Staunch Tathlum +1",
         head={ name="Loess Barbuta +1", augments={'Path: A',},priority=1},
-        body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
+        body={ name="Souv. Cuirass +1", augments={'VIT+12','Attack+25','"Refresh"+3',}},
+        -- body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
         hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
         legs="Founder's Hose",
         feet="Odyssean Greaves",
@@ -423,13 +436,14 @@ function init_gear_sets()
         right_ear={ name="Nourish. Earring +1", augments={'Path: A',}},
         left_ring={ name="Moonlight Ring",priority=1},
         right_ring={ name="Apeile Ring +1", augments={'Path: A',}},
-        back={ name="Rudianos's Mantle", augments={'MND+20','Eva.+20 /Mag. Eva.+20','"Cure" potency +10%','Spell interruption rate down-10%',}},
+        back=gear.jse_cure_back,
 }
 		
 	sets.Self_Healing.DT = {
         ammo="Staunch Tathlum +1",
         head={ name="Loess Barbuta +1", augments={'Path: A',},priority=1},
-        body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
+        body={ name="Souv. Cuirass +1", augments={'VIT+12','Attack+25','"Refresh"+3',}},
+        -- body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
         hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
         legs="Founder's Hose",
         feet="Odyssean Greaves",
@@ -439,7 +453,7 @@ function init_gear_sets()
         right_ear={ name="Nourish. Earring +1", augments={'Path: A',}},
         left_ring={ name="Moonlight Ring",priority=1},
         right_ring={ name="Apeile Ring +1", augments={'Path: A',}},
-        back={ name="Rudianos's Mantle", augments={'MND+20','Eva.+20 /Mag. Eva.+20','"Cure" potency +10%','Spell interruption rate down-10%',}},
+        back=gear.jse_cure_back,
     }
 
 	sets.Cure_Received = {}
@@ -458,7 +472,7 @@ function init_gear_sets()
         right_ear={ name="Odnowa Earring +1", augments={'Path: A',},priority=1},
         left_ring="Gelatinous Ring +1",
         right_ring={ name="Moonlight Ring",priority=1},
-        back={ name="Rudianos's Mantle", augments={'HP+60','HP+20','"Fast Cast"+10','Spell interruption rate down-10%',}},
+        back=gear.jse_fc_back,
     }
             
     sets.midcast['Enhancing Magic'].SIRD = {
@@ -474,7 +488,7 @@ function init_gear_sets()
         right_ear={ name="Odnowa Earring +1", augments={'Path: A',},priority=1},
         left_ring="Gelatinous Ring +1",
         right_ring={ name="Moonlight Ring",priority=1},
-        back={ name="Rudianos's Mantle", augments={'HP+60','HP+20','"Fast Cast"+10','Spell interruption rate down-10%',}},
+        back=gear.jse_fc_back,
     }
 
 	sets.midcast.Stoneskin = set_combine(sets.midcast['Enhancing Magic'], {waist="Siegel Sash"})
@@ -556,10 +570,11 @@ function init_gear_sets()
         main={ name="Moralltach", augments={'Path: C',},priority=1},
         sub="Srivatsa",
         ammo="Staunch Tathlum +1",
-        head={ name="Odyssean Helm", augments={'"Fast Cast"+2','DEX+9','"Refresh"+2','Accuracy+7 Attack+7',}},
+        head={ name="Odyssean Helm", augments={'Mag. Acc.+3','"Mag.Atk.Bns."+20','"Refresh"+2','Accuracy+1 Attack+1',}},
         body={ name="Souv. Cuirass +1", augments={'VIT+12','Attack+25','"Refresh"+3',}},
-        hands={ name="Regal Gauntlets",priority=1},
-        legs={ name="Carmine Cuisses +1", augments={'Accuracy+20','Attack+12','"Dual Wield"+6',}},
+        hands="Chev. Gauntlets +2",
+        -- hands={ name="Regal Gauntlets",priority=1},
+        legs={ name="Sakpata's Cuisses", augments={'Path: A',},priority=1},
         feet={ name="Sakpata's Leggings", augments={'Path: A',}},
         neck="Coatl Gorget +1",
         waist="Audumbla Sash",
@@ -567,11 +582,11 @@ function init_gear_sets()
         right_ear={ name="Odnowa Earring +1", augments={'Path: A',},priority=1},
         left_ring="Stikini Ring +1",
         right_ring="Stikini Ring +1",
-        back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','VIT+10','Enmity+10','DEF+50',}},
+        back=gear.jse_def_back,
     }
 	
     sets.idle.MDT = {
-        main={ name="Burtgang", augments={'Path: A',}},
+        main="Burtgang",
         sub="Aegis",
         ammo="Brigantia Pebble",
         head={ name="Sakpata's Helm", augments={'Path: A',}},
@@ -585,11 +600,11 @@ function init_gear_sets()
         right_ear={ name="Odnowa Earring +1", augments={'Path: A',},priority=1},
         left_ring="Gelatinous Ring +1",
         right_ring="Shneddick Ring",
-        back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','VIT+10','Enmity+10','DEF+50',}},
+        back=gear.jse_def_back,
     }
 
 	sets.idle.Tank = {
-        main={ name="Burtgang", augments={'Path: A',}},
+        main="Burtgang",
         sub={ name="Srivatsa",priority=1},
         ammo="Brigantia Pebble",
         head={ name="Sakpata's Helm", augments={'Path: A',}},
@@ -603,7 +618,7 @@ function init_gear_sets()
         right_ear={ name="Odnowa Earring +1", augments={'Path: A',},priority=1},
         left_ring="Gelatinous Ring +1",
         right_ring="Shneddick Ring",
-        back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','VIT+10','Enmity+10','DEF+50',}},
+        back=gear.jse_def_back,
     }
 		
 
@@ -656,7 +671,7 @@ function init_gear_sets()
 	--------------------------------------
     
 	sets.engaged.Tank = {
-        main={ name="Burtgang", augments={'Path: A',}},
+        main="Burtgang",
         sub= {name="Srivatsa",priority=1},
         ammo="Staunch Tathlum +1",
         head="Chev. Armet +2",
@@ -670,11 +685,11 @@ function init_gear_sets()
         right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
         left_ring="Moonlight Ring",
         right_ring="Fortified Ring",
-        back={ name="Rudianos's Mantle", augments={'MND+20','Eva.+20 /Mag. Eva.+20','"Cure" potency +10%','Spell interruption rate down-10%',}},
+        back=gear.jse_cure_back,
     }
 		
 	sets.engaged.TankMagic = {
-        main={ name="Burtgang", augments={'Path: A',}},
+        main="Burtgang",
         sub="Aegis",
         ammo="Brigantia Pebble",
         head={ name="Sakpata's Helm", augments={'Path: A',}},
@@ -688,7 +703,7 @@ function init_gear_sets()
         right_ear={ name="Odnowa Earring +1", augments={'Path: A',},priority=1},
         left_ring="Gelatinous Ring +1",
         right_ring={ name="Moonlight Ring",priority=1},
-        back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Chance of successful block +5',}},
+        back=gear.jse_block_back,
     }
             
     sets.engaged.Reraise = set_combine(sets.engaged.Tank, sets.Reraise)

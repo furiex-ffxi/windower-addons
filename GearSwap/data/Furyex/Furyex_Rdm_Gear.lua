@@ -128,14 +128,14 @@ function init_gear_sets()
         neck = "Loricate Torque +1",
 		head  = AF.Head,  -- 16
         body = RELIC.Body, -- 15
-        hands = sets.Malignance.Hands,
-        legs = sets.Malignance.Legs,
-        feet = sets.Malignance.Feet,
+        hands = sets.Nyame.Hands,
+        legs = sets.Nyame.Legs,
+        feet = sets.Nyame.Feet,
         waist =	"Embla Sash", -- 5
         left_ear ="Malignance Earring", -- 1
         right_ear =	"Etiolation Earring", -- 1
-        left_ring =	"Kishar Ring", -- 4
-        right_ring = "Defending Ring",
+        left_ring = "Defending Ring",
+        right_ring =	"Kishar Ring", -- 4
 		back = "Perimede Cape",
         ammo = "Staunch Tathlum +1",
 		range =  empty,
@@ -408,19 +408,19 @@ function init_gear_sets()
 	sets.midcast.Cure = set_combine(sets.midcast.Casting,{
 		main = "Daybreak",
 		sub = "Sors Shield",
-        head		=	"Vanya Hood",
+        head = "Vanya Hood",
         -- body		=	"Gende. Bilaut +1",
         -- hands		=	"Telchine Gloves", 
-        legs		=	AF.Legs,
-        feet		=	"Vanya Clogs",
+        legs = AF.Legs,
+        feet = "Vanya Clogs",
         -- feet		=	RELIC.Feet,
         -- neck		=	"Fylgja Torque +1",
         -- waist		=	"Porous Rope",
-        left_ear	=	"Mendi. Earring",
+        left_ear = "Mendi. Earring",
         -- right_ear	=	"Roundel Earring",
-        left_ring	=	"Stikini Ring +1",
-        right_ring	=	"Stikini Ring +1",
-        back		=	RDMCape.MACC,
+        left_ring = { name="Stikini Ring +1", bag="wardrobe1" },
+        right_ring = { name="Stikini Ring +1", bag="wardrobe2" },
+        back = RDMCape.MACC,
         -- sub		=	"Enki Strap",
     })
 
@@ -503,8 +503,8 @@ function init_gear_sets()
 		ear2 = "Leth. Earring +1",
 		body = RELIC.Body,
 		hands = RELIC.Hands,
-		ring1 = "Stikini Ring +1",
-		ring2 = "Stikini Ring +1",
+		ring1 = { name="Stikini Ring +1", bag="wardrobe1" },
+		ring2 = { name="Stikini Ring +1", bag="wardrobe2" },
 		back = "Perimede Cape",
 		waist = "Embla Sash",
 		legs = AF.Legs,
@@ -531,8 +531,8 @@ function init_gear_sets()
 		legs = AF.Legs,
 		ear1 = "Andoaa Earring",
 		-- ear2 = "Mimir Earring", 
-		ring1 = "Stikini Ring +1",
-		ring2 = "Stikini Ring +1",
+		ring1 = { name="Stikini Ring +1", bag="wardrobe1" },
+		ring2 = { name="Stikini Ring +1", bag="wardrobe2" },
 		-- waist = "Olympus Sash",
 		back = "Ghostfyre Cape", 
 	}
@@ -552,33 +552,30 @@ function init_gear_sets()
 
 	sets.midcast['Enfeebling Magic'] = {
 		main = "Daybreak",
-        sub		=	"Ammurapi Shield",
+        sub	= "Ammurapi Shield",
 		ring1 = "Kishar Ring",
 		ring2 = { name="Stikini Ring +1", bag="wardrobe2" },
-        ammo		=	"Regal Gem",
-		range =  empty,
-		neck		=	"Dls. Torque +2",
-        head		=	RELIC.Head,
-        body		=	AF.Body,
-		hands		=	"Regal Cuffs",
-		waist       =   "Obstin. Sash",
-        legs		=	"Chironic Hose",
-        feet		=	RELIC.Feet,
-        left_ear	=	"Snotra Earring",
-        right_ear	=	"Regal Earring",
-        back		=	RDMCape.MACC
+        ammo = "Regal Gem",
+		range = empty,
+		neck = "Dls. Torque +2",
+        head = RELIC.Head,
+        body = EMPY.Body,
+		hands = "Regal Cuffs",
+		waist = "Obstin. Sash",
+        legs = "Chironic Hose",
+        feet = RELIC.Feet,
+        left_ear = "Snotra Earring",
+        right_ear = "Malignance Earring",
+        back = RDMCape.MACC
 	}
 
 	sets.midcast['Enfeebling Magic'].Resistant =  set_combine(sets.midcast['Enfeebling Magic'], {
 		main = "Daybreak",
 		sub = "Ammurapi Shield",
-		-- range =  "Ullr",
 		-- ear1 = "Regal Earring",
-		-- hands = gear.chironic_enfeeble_hands,
+		hands = EMPY.Hands,
 		ring1 = "Metamor. Ring +1",
 		ring2 = {name="Stikini Ring +1", bag="wardrobe2"},
-		-- back = gear.nuke_jse_back,
-		waist = "Luminary Sash",
 	})
 
 	sets.midcast.DurationOnlyEnfeebling = set_combine(sets.midcast['Enfeebling Magic'],
@@ -608,10 +605,20 @@ function init_gear_sets()
 	sets.midcast.Dispel = sets.midcast['Enfeebling Magic'].Resistant
 
 	sets.midcast.SkillBasedEnfeebling = set_combine(sets.midcast['Enfeebling Magic'],
-	{ ear1 = "Vor Earring", hands = EMPY.Hands, ring1 = "Stikini Ring +1", ring2 = "Stikini Ring +1", legs = "Psycloth Lappas" })
+	{ 
+		ear1 = "Vor Earring", 
+		hands = EMPY.Hands, 
+		body = AF.Body,
+		ear2 = "Regal Earring",
+		ring1 = { name="Stikini Ring +1", bag="wardrobe1" },
+		ring2 = { name="Stikini Ring +1", bag="wardrobe2" },
+	})
 
 	sets.midcast['Frazzle II'] = sets.midcast['Enfeebling Magic'].Resistant
-	sets.midcast['Frazzle III'] = sets.midcast.SkillBasedEnfeebling
+	sets.midcast['Frazzle III'] = set_combine(sets.midcast.SkillBasedEnfeebling, 
+	{
+		hands = "Regal Cuffs"
+	})
 	sets.midcast['Frazzle III'].Resistant = sets.midcast['Enfeebling Magic'].Resistant
 
 	sets.midcast['Distract III'] = sets.midcast.SkillBasedEnfeebling
@@ -741,7 +748,7 @@ function init_gear_sets()
 		neck = "Dls. Torque +2",
 		back = "Aurist's Cape +1",
 		ring1 = "Metamor. Ring +1",
-		ring2 = "Stikini Ring +1",
+		ring2 = { name="Stikini Ring +1", bag="wardrobe2" },
 	})
 
 	sets.midcast.Impact.OccultAcumen = set_combine(sets.midcast.Impact, {
@@ -784,7 +791,7 @@ function init_gear_sets()
 		neck = "Erra Pendant",
 		ear1 = "Regal Earring",
 		ear2 = "Malignance Earring",
-		waist = "Luminary Sash",
+		back = RDMCape.FC,
 	})
 
 	sets.midcast.Drain = set_combine(sets.midcast['Dark Magic'], {
@@ -796,7 +803,8 @@ function init_gear_sets()
 		ear2 = "Malignance Earring",
 		ring1 = "Evanescence Ring",
 		ring2 = "Archon Ring",
-		waist = "Fucho-no-obi",
+		-- waist = "Fucho-no-obi",
+		waist = "Austerity Belt +1",
 	})
 
 	sets.midcast.Aspir = sets.midcast.Drain
@@ -884,30 +892,31 @@ function init_gear_sets()
 
 	-- Idle sets
 	sets.idle = {
-        -- ammo		=	"Homiliary",
-        ammo		=	"Staunch Tathlum +1",
-        head		=	RELIC.Head,
+        -- ammo	= "Homiliary",
+        ammo = "Staunch Tathlum +1",
+        head = RELIC.Head,
 		neck = "Dls. Torque +2",
-        body		=	AF.Body,
-        hands		=	"Volte Gloves",
-        -- legs		=	Carm.Legs.D,
-        feet		=	"Volte Gaiters",
-        -- neck		=	"Twilight Torque",
-        waist		=	"Orpheus's Sash",
-        left_ear	=	"Etiolation Earring",
-        right_ear	=	"Ethereal Earring",
-        left_ring	=	"Defending Ring",
-        right_ring	=	"Stikini Ring +1",
-        back		=	RDMCape.TP,
+        body = EMPY.Body,
+        hands =	sets.VolteSandoria.Hands,
+        legs = sets.VolteSandoria.Legs,
+        feet = sets.VolteSandoria.Feete,
+		waist =	"Plat. Mog. Belt",
+        -- neck = "Twilight Torque",
+        left_ear = "Etiolation Earring",
+        right_ear = "Ethereal Earring",
+        left_ring = "Defending Ring",
+        right_ring = { name="Stikini Ring +1", bag="wardrobe2" },
+        back = RDMCape.TP,
 	}
 
-	sets.idle.Town = {
-		head = AF.Head,
-    	body = AF.Body, 
-        hands = AF.Hands,
-        legs = AF.Legs,
-        feet = AF.Feet,
-	}
+	sets.idle.Town = set_combine({sets.idle,
+		head = sets.VolteSandoria.Head,
+    	body = sets.VolteSandoria.Body, 
+        hands = sets.VolteSandoria.Hands,
+        legs = sets.VolteSandoria.Legs,
+        feet = sets.VolteSandoria.Feet,
+		waist =	"Orpheus's Sash",
+	})
 
 	sets.idle.PDT = set_combine(sets.idle, {
         -- neck		=	"Twilight Torque",
@@ -1000,9 +1009,9 @@ function init_gear_sets()
 	sets.weapons.DualProcDaggers = { main = "Blurred Knife +1", sub = "Atoyac", range = empty }
 	sets.weapons.Tauret = { main = "Tauret", sub = "Ammurapi Shield"}
 	sets.weapons.Club = { main = "Maxentius", sub = "Ammurapi Shield"}
-	sets.weapons.EnspellOnly = { main = "Qutrub Knife", sub = "Ceremonial Dagger", range = "Ullr", ammo = "Beetle Arrow" }
-	sets.weapons.Enspell = { main = "Crocea Mors", sub = "Ammurapi Shield", range = Ullr, ammo = "Raetic Arrow" }
-	sets.weapons.EnspellDW = { main = "Crocea Mors", sub = "Daybreak", range = Ullr, ammo = "Raetic Arrow" }
+	sets.weapons.EnspellOnly = { main = "Qutrub Knife", sub = "Ceremonial Dagger", range = empty }
+	sets.weapons.Enspell = { main = "Crocea Mors", sub = "Ammurapi Shield",  range = empty }
+	sets.weapons.EnspellDW = { main = "Crocea Mors", sub = "Daybreak",  range = empty }
 	sets.weapons.DualAlmace = { main = "Almace", sub = "Sequence", range = empty }
 	sets.weapons.DualBow = { main = "Naegling", sub = "Thibron", range = "Ullr", ammo = "Chapuli Arrow" }
 	sets.weapons.BowMacc = { main = "Naegling", sub = "Tauret", range = "Ullr", ammo = empty }

@@ -16,6 +16,13 @@ sets.Malignance = {
     Legs="Malignance Tights",
     Feet="Malignance Boots",
 }
+sets.VolteSandoria = {
+    Head="Volte Beret",
+    Body="Volte Doublet",
+    Hands="Volte Gloves",
+    Legs="Volte Brais",
+    Feet="Volte Gaiters",
+}
 
 sets.buff.Doom = {neck="Nicander's Necklace",waist="Gishdubar Sash",ring1="Eshmun's Ring",ring2="Eshmun's Ring"}
 sets.TreasureHunter = {head="Wh. Rarab Cap +1",waist="Chaac Belt"}
