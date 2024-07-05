@@ -36,8 +36,8 @@ function init_gear_sets()
 	gear.af = {
 		Head="Ig. Burgeonet +3",
 		Body="Ignominy Cuirass +3",
-		Hands="Ig. Gauntlets +2",
-		Legs="Ig. Flanchard +2",
+		Hands="Ig. Gauntlets +3",
+		Legs="Ig. Flanchard +3",
 		Feet="Ig. Sollerets +2",
 	}
 
@@ -58,11 +58,11 @@ function init_gear_sets()
 	}
 
 	gear.sulevia = {
-		head="Sulevia's Mask +2",
-		body="Sulevia's Plate. +2",
-		hands="Sulev. Gauntlets +2",
-		legs="Sulev. Cuisses +2",
-		feet="Sulev. Leggings +2",
+		Head="Sulevia's Mask +2",
+		Body="Sulevia's Plate. +2",
+		Hands="Sulev. Gauntlets +2",
+		Legs="Sulev. Cuisses +2",
+		Feet="Sulev. Leggings +2",
 	}
 
 	sets.enmity = {
@@ -164,15 +164,15 @@ function init_gear_sets()
 		ammo = "Pemphredo Tathlum",
 		head = sets.Nyame.Head,
 		neck = "Baetyl Pendant",
-		ear1 = "Digni. Earring",
+		ear1 = "Friomisi Earring",
 		ear2 = "Malignance Earring",
-		body = gear.empy.Body,
-		hands = gear.relic.Hands,
+		body = sets.Nyame.Body,
+		hands = sets.Nyame.Hands,
 		ring1 = "Stikini Ring +1",
 		ring2 = "Stikini Ring +1",
 		back = DRKCape.FC,
 		waist = "Eschan Stone",
-		legs = gear.empy.Legs,
+		legs = sets.Nyame.Legs,
 		feet = gear.empy.Feet
 	}
 
@@ -229,9 +229,9 @@ function init_gear_sets()
 		back = "Niht Mantle",
 	})
 
-	sets.DrainWeapon = { main = "Apocalypse", sub = "Niobid Strap" }
+	sets.DrainWeapon = { main = "Apocalypse", sub = "Utu Strap" }
 
-	sets.AbsorbWeapon = {main="Liberator",sub="Niobid Strap",range="Ullr",ammo=empty}
+	sets.AbsorbWeapon = {main="Liberator",sub="Utu Strap"}
 	sets.DreadWeapon = {main="Crepuscular Scythe",sub="Utu Grip",} 	
 
 	sets.midcast.Aspir = sets.midcast.Drain
@@ -259,7 +259,7 @@ function init_gear_sets()
 		neck = "Abyssal Beads +2",
 		-- ear1 = "Lugra Earring +1",
         ear1 = { name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-        ear2 = "Thrud Earring",
+        ear2 = "Heath. Earring +1",
 		body = sets.Nyame.Body,
 		hands = sets.Nyame.Hands,
 		legs = sets.Nyame.Legs,
@@ -615,11 +615,9 @@ function init_gear_sets()
 		head="Flam. Zucchetto +2",
 		body="Sakpata's Plate",
 		hands="Sakpata's Gauntlets",
-		-- legs = gear.af.Legs,
-		legs = "Sakpata's Cuisses",
+		legs = gear.af.Legs,
 		feet = "Flam. Gambieras +2",
-		-- neck = "Abyssal Beads +2",
-		neck = "Vim Torque +1",
+		neck = "Abyssal Beads +2",
 		waist = "Ioskeha Belt +1",
 		left_ear = "Telos Earring",
 		right_ear = "Cessance Earring",
@@ -653,7 +651,7 @@ function init_gear_sets()
 
 	sets.engaged.Subtle = set_combine(sets.engaged, {
 		head = "Sakpata's Helm",
-		body = "Sakpata's Breastplate",
+		body = "Dagon Breast.",
 		feet = "Sakpata's Leggings",
 		neck = "Bathy Choker +1",
 		right_ear = "Digni. Earring",
@@ -661,22 +659,19 @@ function init_gear_sets()
 		right_ring = "Chirich Ring +1",
 	})
 
-	sets.engaged.Liberator = set_combine(sets.engaged, {
-		-- right_ear="Schere Earring",
-	})
+	sets.engaged.Liberator = set_combine(sets.engaged, {})
 
-	sets.engaged.Liberator.DT = set_combine(sets.engaged.Liberator, {
-	})
+	sets.engaged.Liberator.DT = set_combine(sets.engaged, {})
 
 	sets.engaged.Liberator.AM = {
 		ammo="Aurgelmir Orb +1",
-		waist="Sailfi Belt +1",
+		waist="Goading Belt",
 		neck="Vim Torque +1",
 		head = "Hjarrandi Helm",
 		body = "Hjarrandi Breastplate",
-		hands = "Flam. Manopolas +2",
-		legs = gear.sulevia.Legs,
-		feet = "Flam. Gambieras +2",
+		hands = "Sakpata's Gauntlets",
+		legs = "Ratri Cuisses +1",
+		feet = "Sakpata's Leggings",
 		left_ear="Dedition Earring",
 		right_ear="Crep. Earring",
 		left_ring="Lehko's Ring",
@@ -684,8 +679,7 @@ function init_gear_sets()
 		back = DRKCape.STP,
 	}
 	sets.engaged.Liberator.DT.AM = set_combine(sets.engaged.Liberator.AM, {
-		neck = "Loricate Torque +1",
-		ammo = "Crepuscular Pebble",
+		legs = "Sakpata's Cuisses",
 	})
 
 	--Example sets:

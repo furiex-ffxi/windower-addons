@@ -77,7 +77,7 @@ function init_gear_sets()
     -- Weapons sets
     sets.weapons.Aeneas = { main = "Aeneas", sub = "Gleti's Knife" }
     sets.weapons.Aeolian = { main = "Malevolence", sub = "Malevolence" }
-    sets.weapons.Savage = { main = "Naegling", sub = "Gleti's Knife" }
+    sets.weapons.Savage = { main = "Naegling", sub = "Centovente" }
     sets.weapons.ProcWeapons = { main = "Blurred Knife +1", sub = "Atoyac" }
     sets.weapons.Evisceration = { main = "Tauret", sub = "Gleti's Knife" }
     sets.weapons.Throwing = { main = "Aeneas", sub = "Gleti's Knife", range = "Raider's Bmrng.", ammo = empty }

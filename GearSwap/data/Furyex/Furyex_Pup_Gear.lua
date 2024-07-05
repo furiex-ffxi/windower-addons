@@ -96,7 +96,7 @@ function init_gear_sets()
     Artifact_Foire.Body = "Foire Tobe +2"
     Artifact_Foire.Hands = "Foire Dastanas +3"
     Artifact_Foire.Legs = "Foire Churidars +2"
-    Artifact_Foire.Feet = "Foire Babouches +2"
+    Artifact_Foire.Feet = "Foire Babouches +3"
 
     Relic_Pitre = {}
     Relic_Pitre.Head = "Pitre Taj +3" --Enhances Optimization
@@ -364,7 +364,7 @@ function init_gear_sets()
     -- the fact that start of ability packets are too late in the case of Pup abilities, WS, and certain spells.
     sets.midcast.Pet.PetEnmityGear = {}
     sets.midcast.Pet.PetWSGear = {
-        main = "Ohtas",
+        main = "Xiucoatl",
         head = "Taeon Chapeau",
         neck = "Shulmanu Collar",
         -- ear1 = "Enmerkar Earring",
@@ -414,11 +414,11 @@ function init_gear_sets()
         body = "Malignance Tabard",
         hands = "Malignance Gloves",
         ring1 = "Defending Ring",
-        ring2 = "Dark Ring",
-        back = "Moonlight Cape",
-        waist = "Carrier Sash",
-        legs = "Nyame Flanchard",
-        feet = "Malignance Boots"
+        ring2 = "Shadow Ring",
+        waist = "Plat. Mog. Belt",
+        legs = "Malignance Tights",
+        feet = "Malignance Boots",
+        back={ name="Visucius's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Accuracy+20 Attack+20','Pet: Haste+10','System: 1 ID: 1246 Val: 4',}},        
     }
 
     sets.idle.Refresh = {
@@ -437,32 +437,9 @@ function init_gear_sets()
     }
 
     -- Set for idle while pet is out (eg: pet regen gear)
-    sets.idle.Pet = {
-        -- head = "Anwig Salade",
-        -- neck = "Loricate Torque +1",
-        -- ear1 = "Enmerkar Earring",
-        -- ear2 = "Handler's Earring +1",
-        -- body = gear.taeon_pet_body,
-        -- hands = "Taeon Gloves",
-        -- ring1 = "Defending Ring",
-        -- ring2 = "Dark Ring",
-        -- back = "Moonlight Cape",
-        -- waist = "Isa Belt",
-        -- legs = "Tali'ah Sera. +2",
-        -- feet = "Taeon Boots"
-        head={ name="Taeon Chapeau", augments={'Pet: Accuracy+23 Pet: Rng. Acc.+23','Pet: "Dbl. Atk."+4','Pet: Damage taken -3%',}},
-        body={ name="Taeon Tabard", augments={'Pet: Accuracy+24 Pet: Rng. Acc.+24','Pet: "Dbl. Atk."+5','Pet: Damage taken -3%',}},
-        hands={ name="Taeon Gloves", augments={'Pet: Accuracy+20 Pet: Rng. Acc.+20','Pet: "Dbl. Atk."+4','Pet: Damage taken -3%',}},
-        legs={ name="Taeon Tights", augments={'Pet: Accuracy+23 Pet: Rng. Acc.+23','Pet: "Dbl. Atk."+4','Pet: Damage taken -4%',}},
-        feet={ name="Taeon Boots", augments={'Pet: Accuracy+25 Pet: Rng. Acc.+25','Pet: "Dbl. Atk."+5','Pet: Damage taken -3%',}},
-        neck="Adad Amulet",
-        waist="Klouskap Sash +1",
-        left_ear="Rimeice Earring",
-        right_ear="Kara. Earring +1",
-        left_ring="C. Palug Ring",
-        right_ring="Overbearing Ring",
+    sets.idle.Pet = set_combine(sets.idle, {
         back={ name="Visucius's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Accuracy+20 Attack+20','Pet: Haste+10','System: 1 ID: 1246 Val: 4',}},        
-    }
+    })
 
     sets.idle.Pet.Tank = set_combine(sets.idle.Pet, {
         head = "Rao Kabuto +1",
@@ -488,7 +465,7 @@ function init_gear_sets()
         legs={ name="Taeon Tights", augments={'Pet: Accuracy+23 Pet: Rng. Acc.+23','Pet: "Dbl. Atk."+4','Pet: Damage taken -4%',}},
         feet="Mpaca's Boots",
         waist="Klouskap Sash +1",
-        ear1 = "Crepuscular Earring",
+        ear1 = "Enmerkar Earring",
         ear2="Kara. Earring +1",
         ring1="C. Palug Ring",
         ring2="Varar Ring +1",
@@ -498,7 +475,7 @@ function init_gear_sets()
     sets.idle.Pet.Engaged.Ranged = set_combine(sets.idle.Pet.Engaged, {
         head = Relic_Pitre.Head,
         body = Relic_Pitre.Body,
-        gloves = "Mpaca's Gloves",
+        hands = "Mpaca's Gloves",
         legs = Empy_Karagoz.Legs,
         ring1 = "Varar Ring +1",
         ring2 = "Varar Ring +1",
@@ -606,6 +583,7 @@ function init_gear_sets()
         feet="Malignance Boots",
         -- feet = gear.herculean_ta_feet
     }
+
     sets.engaged.Acc = {
         head = "Mpaca's Cap",
         neck = "Shulmanu Collar",
@@ -620,6 +598,7 @@ function init_gear_sets()
         legs = "Ryuo Hakama",
         feet = gear.herculean_ta_feet
     }
+
     sets.engaged.FullAcc = {
         head = "Mpaca's Cap",
         neck = "Shulmanu Collar",
@@ -634,6 +613,7 @@ function init_gear_sets()
         legs = "Hiza. Hizayoroi +2",
         feet = "Malignance Boots"
     }
+
     sets.engaged.Fodder = {
         head = "Mpaca's Cap",
         neck = "Shulmanu Collar",
@@ -648,20 +628,11 @@ function init_gear_sets()
         legs = "Ryuo Hakama",
         feet = gear.herculean_ta_feet
     }
-    sets.engaged.DT = {
-        head = "Mpaca's Cap",
-        neck = "Caro Necklace",
-        ear1 = "Moonshade Earring",
-        ear2 = "Brutal Earring",
-        body = gear.herculean_wsd_body,
-        hands = "Ryuo Tekko",
-        ring1 = "Niqmaddu Ring",
-        ring2 = "Regal Ring",
-        back = "Visucius's Mantle",
-        waist = "Grunfeld Rope",
-        legs = "Hiza. Hizayoroi +2",
-        feet = gear.herculean_ta_feet
-    }
+
+    sets.engaged.DT = set_combine(sets.engaged, {
+        legs = "Malignance Tights",
+    })
+
     sets.engaged.Acc.DT = {
         head = "Mpaca's Cap",
         neck = "Caro Necklace",
@@ -676,6 +647,7 @@ function init_gear_sets()
         legs = "Hiza. Hizayoroi +2",
         feet = gear.herculean_ta_feet
     }
+
     sets.engaged.FullAcc.DT = {
         head = "Mpaca's Cap",
         neck = "Caro Necklace",
@@ -690,6 +662,7 @@ function init_gear_sets()
         legs = "Hiza. Hizayoroi +2",
         feet = gear.herculean_ta_feet
     }
+
     sets.engaged.Fodder.DT = {
         head = "Mpaca's Cap",
         neck = "Caro Necklace",
@@ -704,6 +677,7 @@ function init_gear_sets()
         legs = "Hiza. Hizayoroi +2",
         feet = gear.herculean_ta_feet
     }
+
     sets.engaged.Pet = {
         -- head = "Mpaca's Cap",
         -- body = "Sayadio's Kaftan",
@@ -725,6 +699,7 @@ function init_gear_sets()
         -- legs = "Ryuo Hakama",
         -- feet = gear.herculean_ta_feet
     }
+
     sets.engaged.Acc.Pet = {
         head = "Mpaca's Cap",
         neck = "Shulmanu Collar",
@@ -739,6 +714,7 @@ function init_gear_sets()
         legs = "Ryuo Hakama",
         feet = gear.herculean_ta_feet
     }
+
     sets.engaged.FullAcc.Pet = {
         head = "Mpaca's Cap",
         neck = "Shulmanu Collar",
@@ -753,6 +729,7 @@ function init_gear_sets()
         legs = "Ryuo Hakama",
         feet = gear.herculean_ta_feet
     }
+
     sets.engaged.Fodder.Pet = {
         head = "Mpaca's Cap",
         neck = "Shulmanu Collar",
@@ -771,8 +748,8 @@ function init_gear_sets()
     -- Weapons sets
     sets.weapons.Godhands = { main = "Godhands", range = "Animator P +1", }
     sets.weapons.Midnights = { main = "Midnights", range = "Animator P +1", }
-    sets.weapons.PetWeapons = { main = "Ohtas", range = "Animator P +1", }
-    sets.weapons.PetWeaponsRanged = { main = "Ohtas", range = "Animator P II +1", }
+    sets.weapons.PetWeapons = { main = "Xiucoatl", range = "Animator P +1", }
+    sets.weapons.PetWeaponsRanged = { main = "Xiucoatl", range = "Animator P II +1", }
 end
 
 -- Select default macro book on initial load or subjob change.

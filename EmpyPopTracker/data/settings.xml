@@ -73,6 +73,22 @@
         <tracking>chloris</tracking>
         <visible>true</visible>
     </global>
+    <furyex>
+        <text>
+            <bg>
+                <green>75</green>
+            </bg>
+        </text>
+        <visible>false</visible>
+    </furyex>
+    <lolababe>
+        <text>
+            <pos>
+                <y>0</y>
+            </pos>
+        </text>
+        <tracking>glavoid</tracking>
+    </lolababe>
     <mailman>
         <text>
             <text>
@@ -84,6 +100,4 @@
         <visible>false</visible>
     </mailman>
 </settings>
-visible>
-    </lolababe>
-</settings>
+tings>

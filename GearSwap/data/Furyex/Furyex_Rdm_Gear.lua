@@ -9,7 +9,7 @@ function user_job_setup()
 	state.PhysicalDefenseMode:options('PDT', 'NukeLock')
 	state.MagicalDefenseMode:options('MDT')
 	state.ResistDefenseMode:options('MEVA')
-	state.Weapons:options('None', 'Naegling', 'Tauret', 'Club', 'Bow', 'DualWeapons', 'DualWeaponsAcc', 'DualEvisceration', 'DualClubs',
+	state.Weapons:options('None', 'Mpu', 'Naegling', 'Tauret', 'Club', 'Bow', 'DualWeapons', 'DualMpu', 'DualWeaponsAcc', 'DualEvisceration', 'DualClubs',
 	'DualAeolian', 'DualProcSwords', 'DualProcDaggers', 'EnspellOnly', 'Enspell', 'EnspellDW', 'DualBow')
 
 	gear.nuke_jse_back = { name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
@@ -166,14 +166,14 @@ function init_gear_sets()
 		head = sets.Nyame.Head,
 		ammo = "Oshasha's Treatise",
 		range = empty,
-		neck = "Anu Torque",
+		neck = "Rep. Plat. Medal",
 		body = sets.Nyame.Body,        
 		hands = sets.Nyame.Hands,
 		legs = sets.Nyame.Legs,
 		feet = EMPY.Feet,
 		waist =	"Sailfi Belt +1",
 		left_ear = { name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-		right_ear =	"Ishvara Earring",
+		right_ear =	"Sherida Earring",
 		left_ring = "Epaminondas's Ring",
 		right_ring = "Karieyh Ring",
 		back = RDMCape.STRWSD,		
@@ -232,11 +232,16 @@ function init_gear_sets()
 	})
 	sets.precast.WS['Evisceration'] = sets.precast.WS['Chant Du Cygne']
 
+-- Weaponskill sets
+	-- Default set for any weaponskill that isn't any more specifically defined
+	sets.precast.WS["Ruthless Stroke"] = set_combine(sets.precast.WS, {
+		waist={ name="Kentarch Belt +1", augments={'Path: A',}},
+		ammo={ name="Coiste Bodhar", augments={'Path: A',}},
+	})
+
 	sets.precast.WS['Black Halo'] = set_combine(sets.precast.WS, {
 		ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-		neck="Rep. Plat. Medal",
 		waist={ name="Kentarch Belt +1", augments={'Path: A',}},
-		belt = "Acuity Belt +1",
 		left_ear = { name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 		right_ear = "Leth. Earring +1",
 	})
@@ -273,7 +278,7 @@ function init_gear_sets()
         feet = EMPY.Feet,
         left_ear = "Malignance Earring",
         right_ear = "Snotra Earring",
-        waist = "Orpheus's Sash ",
+        waist = "Orpheus's Sash",
         ammo = "Sroda Tathlum",
 		range =  empty,
         back = RDMCape.STRWSD,	
@@ -286,7 +291,7 @@ function init_gear_sets()
         feet = EMPY.Feet,
         left_ear = "Malignance Earring",
         right_ear = "Snotra Earring",
-        waist = "Orpheus's Sash ",
+        waist = "Orpheus's Sash",
         ammo = "Sroda Tathlum",
 		range =  empty,
         back = RDMCape.STRWSD,
@@ -502,10 +507,10 @@ function init_gear_sets()
 		ear1 = "Andoaa Earring",
 		ear2 = "Leth. Earring +1",
 		body = RELIC.Body,
-		hands = RELIC.Hands,
+		hands = AF.Hands,
 		ring1 = { name="Stikini Ring +1", bag="wardrobe1" },
 		ring2 = { name="Stikini Ring +1", bag="wardrobe2" },
-		back = "Perimede Cape",
+		back = RDMCape.FC,
 		waist = "Embla Sash",
 		legs = AF.Legs,
 		feet = EMPY.Feet
@@ -515,7 +520,7 @@ function init_gear_sets()
 	sets.buff.ComposureOther = {
 		head = EMPY.Head,
 		body = EMPY.Body,
-		hands = EMPY.Hands,
+		hands = AF.Hands,
 		legs = EMPY.Legs,
 		feet = EMPY.Feet
 	}
@@ -775,7 +780,7 @@ function init_gear_sets()
     	body={ name="Merlinic Jubbah", augments={'"Occult Acumen"+11','INT+9',}},
     	hands={ name="Merlinic Dastanas", augments={'"Occult Acumen"+11','INT+9',}},
 		legs="Perdition Slops",
-		feet={ name="Merlinic Crackows", augments={'"Occult Acumen"+11','"Mag.Atk.Bns."+13',}},
+		feet={ name="Merlinic Crackows", augments={'"Occult Acumen"+11','MND+9',}},
 		neck="Anu Torque",
 		waist="Oneiros Rope",
 		left_ear="Sherida Earring",
@@ -805,6 +810,7 @@ function init_gear_sets()
 		ring2 = "Archon Ring",
 		-- waist = "Fucho-no-obi",
 		waist = "Austerity Belt +1",
+		feet = "Merlinic Crackows",
 	})
 
 	sets.midcast.Aspir = sets.midcast.Drain
@@ -899,7 +905,7 @@ function init_gear_sets()
         body = EMPY.Body,
         hands =	sets.VolteSandoria.Hands,
         legs = sets.VolteSandoria.Legs,
-        feet = sets.VolteSandoria.Feete,
+        feet = sets.VolteSandoria.Feet,
 		waist =	"Plat. Mog. Belt",
         -- neck = "Twilight Torque",
         left_ear = "Etiolation Earring",
@@ -909,14 +915,14 @@ function init_gear_sets()
         back = RDMCape.TP,
 	}
 
-	sets.idle.Town = set_combine({sets.idle,
+	sets.idle.Town = {
 		head = sets.VolteSandoria.Head,
     	body = sets.VolteSandoria.Body, 
         hands = sets.VolteSandoria.Hands,
         legs = sets.VolteSandoria.Legs,
         feet = sets.VolteSandoria.Feet,
 		waist =	"Orpheus's Sash",
-	})
+	}
 
 	sets.idle.PDT = set_combine(sets.idle, {
         -- neck		=	"Twilight Torque",
@@ -996,8 +1002,10 @@ function init_gear_sets()
 	sets.NightIdle = {}
 
 	-- Weapons sets
-	sets.weapons.Naegling = { main = "Naegling", sub = "Sacro Bulwark", range = empty }
+	sets.weapons.Mpu = { main = "Mpu Gandring", sub = "Ammurapi Shield", range = empty }
+	sets.weapons.Naegling = { main = "Naegling", sub = "Ammurapi Shield", range = empty }
 	sets.weapons.Bow = { main = "Naegling", sub = "Sacro Bulwark", range = "Ullr", ammo = "Beetle Arrow" }
+	sets.weapons.DualMpu = { main = "Mpu Gandring", sub = "Thibron", range = empty }
 	sets.weapons.DualWeapons = { main = "Naegling", sub = "Thibron", range = empty }
 	-- sets.weapons.DualWeaponsAcc = { main = "Naegling", sub = "Almace", range = empty }
 	sets.weapons.DualWeaponsAcc = { main = "Naegling", sub = "Ternion Dagger +1", range = empty }
@@ -1061,14 +1069,15 @@ function init_gear_sets()
 	sets.engaged.EnspellOnly = set_combine(sets.engaged, {
 		head = sets.Malignance.Head,
 		neck = "Dls. Torque +2",
+		ammo = "Sroda Tathlum",
 		ear1 = "Suppanomimi",
-		ear2 = "Digni. Earring",
+		ear2 = "Regal Earring",
 		body = sets.Malignance.Body,
 		hands = "Aya. Manopolas +2",
 		ring1 = "Metamor. Ring +1",
-		ring2 = "Ramuh Ring +1",
+		ring2 = "Lehko's Ring",
+		waist = "Orpheus's Sash",
 		back = "Ghostfyre Cape",
-		waist = "Windbuffet Belt +1",
 		legs = RELIC.Legs,
 		feet = sets.Malignance.Feet
 	})
@@ -1087,7 +1096,6 @@ function init_gear_sets()
 
 	sets.engaged.DT = set_combine(sets.engaged,{
         neck		=	"Loricate Torque +1",
-		legs 		=   RELIC.Legs,
 	    -- left_ring	=	"Ayanmo Ring",
         -- right_ring	=	"Defending Ring",
     })
@@ -1105,6 +1113,7 @@ function init_gear_sets()
 	sets.engaged.DW.FullAcc = set_combine(sets.engaged.DW, {
 	})
 	sets.engaged.DW.DT = set_combine(sets.engaged.DW, {
+		ring1 = "Defending Ring"
 	})
 end
 

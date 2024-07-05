@@ -60,16 +60,28 @@
             </stroke>
         </text>
     </global>
+    <cleobabe>
+        <pos>
+            <x>2328</x>
+            <y>951</y>
+        </pos>
+    </cleobabe>
     <furyex>
         <pos>
             <x>2325</x>
             <y>831</y>
         </pos>
     </furyex>
+    <lolababe>
+        <pos>
+            <x>2313</x>
+            <y>923</y>
+        </pos>
+    </lolababe>
     <mailman>
         <pos>
-            <x>2314</x>
-            <y>924</y>
+            <x>2318</x>
+            <y>933</y>
         </pos>
     </mailman>
 </settings>

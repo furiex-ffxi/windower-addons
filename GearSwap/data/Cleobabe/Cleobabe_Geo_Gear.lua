@@ -46,7 +46,7 @@ function init_gear_sets()
 	--------------------------------------
 	gear.af = {
 		Head = "Geo. Galero +2",
-		Body = "Geomancy Tunic +2",
+		Body = "Geomancy Tunic +3",
 		Hands = "Geo. Mitaines +3",
 		Legs = "Geomancy Pants +3",
 		Feet = "Geo. Sandals +3",
@@ -73,7 +73,7 @@ function init_gear_sets()
 	sets.precast.JA['Life Cycle'] = { body = gear.af.Body, back = gear.idle_jse_back }
 	sets.precast.JA['Radial Arcana'] = { feet = gear.relic.Feet }
 	sets.precast.JA['Mending Halation'] = { legs = gear.relic.Legs }
-	sets.precast.JA['Full Circle'] = { head = gear.empy.Head, hands = gear.relic.Hand }
+	sets.precast.JA['Full Circle'] = { head = gear.empy.Head, hands = gear.relic.Hands }
 
 	-- Indi Duration in slots that would normally have skill here to make entrust more efficient.
 	sets.buff.Entrust = {
@@ -85,7 +85,9 @@ function init_gear_sets()
 	}
 
 	-- Relic hat for Blaze of Glory HP increase.
-	sets.buff['Blaze of Glory'] = {}
+	sets.buff['Blaze of Glory'] = {
+		head = gear.relic.Head,
+	}
 
 	-- Fast cast sets for spells
 
@@ -671,22 +673,22 @@ function init_gear_sets()
 	-- Idle sets
 
 	sets.idle = {
-		main = "Mpaca's Staff",
-		sub = "Umbra Strap",
-		-- ammo = "Homiliary",
+		main = "Idris",
+		sub = "Genmei Shield",
+		range = empty,
 		ammo = "Staunch Tathlum +1",
-		head = "Befouled Crown",
 		neck = "Loricate Torque +1",
-		ear1 = "Etiolation Earring",
+		ear1 = "Odnowa Earring +1",
 		ear2 = "Ethereal Earring",
-		body = gear.empy.Body,
-		hands = "Volte Gloves",
-		ring1 = "Stikini Ring +1",
+		head = "Befouled Crown",
+		body = "Azimuth Coat +2",
+		hands = gear.relic.Hands,
+		legs = "Volte Brais",
+		feet = "Volte Gaiters",
+		ring1 = "Defending Ring",
 		ring2 = "Stikini Ring +1",
 		back = "Moonlight Cape",
-		waist = "Carrier's Sash",
-		legs = "Volte Brais",
-		feet = "Volte Gaiters"
+		waist = "Plat. Mog. Belt",
 	}
 
 	sets.idle.PDT = set_combine(sets.idle, {
@@ -829,8 +831,7 @@ function init_gear_sets()
 	sets.defense.GeoLock = sets.midcast.Geomancy.Indi
 
 	sets.Kiting = { 
-		feet = "Herald's Gaiters", 
-		ring1 = "Shneddick Ring"
+		feet = gear.af.Feet, 
 	}
 	sets.latent_refresh = { waist = "Fucho-no-obi" }
 	sets.latent_refresh_grip = { sub = "Oneiros Grip" }

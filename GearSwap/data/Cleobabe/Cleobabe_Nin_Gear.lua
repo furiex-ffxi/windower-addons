@@ -39,7 +39,7 @@ function init_gear_sets()
         Head = "Hachi. Hatsu. +2",
         Body = "Hachi. Chain. +2",
         Hands = "Hachiya Tekko +2",
-        Legs = "Hachi. Hakama +2",
+        Legs = "Hachiya Hakama +3",
         Feet = "Hachi. Kyahan +2"
     }
 

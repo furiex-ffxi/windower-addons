@@ -40,11 +40,11 @@ function init_gear_sets()
 	gear.magic_jse_back      = { name = "Intarabus's Cape", augments = { 'CHR+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'Mag. Acc.+10', '"Fast Cast"+10', 'Damage taken-5%', } }
 	gear.idle_jse_back       = { name = "Intarabus's Cape", augments = { 'HP+60', 'Eva.+20 /Mag. Eva.+20', 'Mag. Evasion+10', '"Fast Cast"+10', 'Occ. inc. resist. to stat. ailments+8', } }
 
-	gear.af_head             = "Brioso Roundlet +2"
-	gear.af_body             = "Brioso Justau. +2"
-	gear.af_hands            = "Brioso Cuffs +2"
-	gear.af_legs             = "Brioso Cann. +1"
-	gear.af_feet             = "Brioso Slippers +1"
+	gear.af_head             = "Brioso Roundlet +3"
+	gear.af_body             = "Brioso Justau. +3"
+	gear.af_hands            = "Brioso Cuffs +3"
+	gear.af_legs             = "Brioso Cannions +1"
+	gear.af_feet             = "Brioso Slippers +3"
 
 	gear.relic_head          = "Bihu Roundlet +3"
 	gear.relic_body          = "Bihu Jstcorps. +3"

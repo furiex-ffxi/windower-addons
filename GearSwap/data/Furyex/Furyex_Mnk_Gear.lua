@@ -6,7 +6,7 @@ function user_job_setup()
     state.PhysicalDefenseMode:options('PDT')
     state.MagicalDefenseMode:options('MDT')
     state.ResistDefenseMode:options('MEVA')
-    state.Weapons:options('Godhands', 'Staff', 'ProcStaff', 'ProcClub', 'Barehanded', 'ProcSword', 'ProcGreatSword',
+    state.Weapons:options('None', 'Godhands', 'Staff', 'ProcStaff', 'ProcClub', 'Barehanded', 'ProcSword', 'ProcGreatSword',
         'ProcScythe', 'ProcPolearm', 'ProcGreatKatana')
 
     state.ExtraMeleeMode = M {

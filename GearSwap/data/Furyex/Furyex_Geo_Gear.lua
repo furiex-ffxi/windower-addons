@@ -49,7 +49,7 @@ function init_gear_sets()
 	af.Body = "Geomancy Tunic +2"
 	af.Hands = "Geo. Mitaines +3"
 	af.Legs = "Geomancy Pants +3"
-	af.Feet = "Geo. Sandals +2"
+	af.Feet = "Geo. Sandals +3"
 
 	relic = {}
 	relic.Head = "Bagua Galero +3"
@@ -309,7 +309,7 @@ function init_gear_sets()
 		neck = "Mizu. Kubikazari",
 		waist = { name="Acuity Belt +1", augments={'Path: A',}},
 		left_ear = "Friomisi Earring",
-		right_ear = "Azimuth Earring",
+		right_ear = "Azimuth Earring +2",
 		left_ring = "Stikini Ring +1",
 		right_ring = "Stikini Ring +1",
 		back = "Aurist's Cape +1",
@@ -547,7 +547,7 @@ function init_gear_sets()
 		feet = empy.Feet,
 		neck = "Erra Pendant",
 		ear1 = "Regal Earring",
-		ear2 = "Digni. Earring",
+		ear2 = "Azimuth Earring +2",
 		-- body = gear.merlinic_nuke_body,
 		-- hands = "Regal Cuffs",
 		ring1 = "Kishar Ring",
@@ -670,12 +670,12 @@ function init_gear_sets()
 		range = empty,
 		ammo = "Staunch Tathlum +1",
 		neck = "Loricate Torque +1",
-		ear1 = "Genmei Earring",
+		ear1 = "Odnowa Earring +1",
 		ear2 = "Ethereal Earring",
-		head = "Befouled Crown",
+		head = "Volte Beret",
 		body = "Azimuth Coat +2",
 		hands = relic.Hands,
-		legs = "Lengo Pants",
+		legs = "Volte Brais",
 		feet = "Volte Gaiters",
 		ring1 = "Defending Ring",
 		ring2 = "Stikini Ring +1",
@@ -794,6 +794,7 @@ function init_gear_sets()
 
 	-- Normal melee group
 	sets.engaged = {
+		main = "Maxentius",
 		ammo = "Staunch Tathlum +1",
 		head = "Blistering Sallet +1",
 		-- head = empy.Head,

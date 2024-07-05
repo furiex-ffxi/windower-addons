@@ -462,7 +462,8 @@ function init_gear_sets()
         body="Gleti's Cuirass",
         hands="Gleti's Gauntlets",
         legs="Gleti's Breeches",
-        feet="Gleti's Boots",    }
+        feet="Gleti's Boots",    
+    }
 
     sets.midcast.Pet.DebuffReady = {
         main = "Agwu's Axe",

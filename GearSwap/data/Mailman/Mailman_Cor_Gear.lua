@@ -284,14 +284,14 @@ function init_gear_sets()
 
     sets.precast.WS.MAB = set_combine(sets.precast.WS, {
         ammo = gear.MAbullet,
+        head = "Nyame Helm",
 		feet={ name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
 		body="Lanun Frac +3",
-        hands = gear.Empy.Hands,
-		legs="Nyame Flanchard", augments={'Attack++6 Rng. Atk. +6','Weapon skill damage +2%',},
-		-- waist="Orpheus's Sash",
-        waist="Eschan Stone",
+        hands = "Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		waist="Orpheus's Sash",
 		left_ear="Friomisi Earring",
-		right_ear="Hectate's Earring",
+		right_ear="Crematio Earring",
 		left_ring="Dingir Ring",
 		back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
 	})
@@ -436,7 +436,6 @@ function init_gear_sets()
 
     sets.precast.WS['Wildfire'] = set_combine(sets.precast.WS.MAB, {
         ammo = gear.MAbullet,
-        head = gear.herculean_nuke_head,
         neck = "Comm. Charm +2",
         ear1 = "Crematio Earring",
         ear2 = "Friomisi Earring",
@@ -692,15 +691,27 @@ function init_gear_sets()
         sub = "Nusku Shield", 
         range = "Fomalhaut"
     }
-    sets.weapons.Evisceration = { main = "Tauret", sub = "Nusku Shield", range = "Ataktos" }
+    sets.weapons.Evisceration = { 
+        main = "Tauret", 
+        sub = "Nusku Shield", 
+        range={ name="Anarchy +2", augments={'Delay:+60','TP Bonus +1000',}}, 
+    }
     sets.weapons.DualWeapons = { main = "Naegling", sub = "Tauret", range = "Fomalhaut" }
     sets.weapons.DualSavageWeapons = { 
         main="Naegling",
 		sub="Tauret",
 		range={ name="Anarchy +2", augments={'Delay:+60','TP Bonus +1000',}}, 
     }
-    sets.weapons.DualEvisceration = { main = "Tauret", sub = "Blurred Knife +1", range = "Ataktos" }
-    sets.weapons.Savage = { main = "Naegling", sub = "Nusku Shield", range = "Ataktos" }
+    sets.weapons.DualEvisceration = { 
+        main = "Tauret", 
+        sub = "Blurred Knife +1", 
+        range={ name="Anarchy +2", augments={'Delay:+60','TP Bonus +1000',}},
+    }
+    sets.weapons.Savage = {
+        main = "Naegling", 
+        sub = "Nusku Shield", 
+        range={ name="Anarchy +2", augments={'Delay:+60','TP Bonus +1000',}}, 
+    }
     sets.weapons.DualLeadenRanged = { 
 		main={ name="Rostam", augments={'Path: A'}},
 		sub="Kustawi +1",

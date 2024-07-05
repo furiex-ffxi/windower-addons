@@ -167,6 +167,22 @@
                 <slot11>attuner</slot11>
                 <slot12>speedloader ii</slot12>
             </sortie>
+            <overdrive>
+                <frame>sharpshot frame</frame>
+                <head>valoredge head</head>
+                <slot01>auto-repair kit iv</slot01>
+                <slot02>optic fiber</slot02>
+                <slot03>optic fiber ii</slot03>
+                <slot04>coiler ii</slot04>
+                <slot05>inhibitor</slot05>
+                <slot06>inhibitor ii</slot06>
+                <slot07>magniplug</slot07>
+                <slot08>magniplug ii</slot08>
+                <slot09>attuner</slot09>
+                <slot10>speedloader ii</slot10>
+                <slot11>turbo charger ii</slot11>
+                <slot12>truesights</slot12>
+            </overdrive>            
         </autosets>
         <bg>
             <alpha>255</alpha>

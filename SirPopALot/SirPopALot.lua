@@ -140,7 +140,8 @@ function TradeIt()
 				windower.send_command('TradeNPC 1 "Smooth Whisker" 1 "Resilient Mane"')
 			elseif math.modf(target.x) == -218 then
 				windower.send_command('TradeNPC 1 "Moaning Vestige"')
-
+			elseif math.modf(target.x) == 403 then
+				windower.send_command('TradeNPC 1 "Eft Egg"')
 			end
 			
 		elseif var_thiszone == 132 then		-- Abyssea-La_Theine

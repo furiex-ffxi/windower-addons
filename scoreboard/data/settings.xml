@@ -71,12 +71,13 @@
                 <y>391</y>
             </pos>
         </display>
+        <visible>true</visible>
     </cleobabe>
     <furyex>
         <display>
             <pos>
-                <x>2054</x>
-                <y>197</y>
+                <x>1766</x>
+                <y>170</y>
             </pos>
         </display>
         <visible>true</visible>
@@ -97,6 +98,7 @@
                 <y>403</y>
             </pos>
         </display>
+        <visible>true</visible>
     </lolababe>
     <mailman>
         <display>

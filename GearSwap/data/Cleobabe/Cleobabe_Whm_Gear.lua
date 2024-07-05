@@ -6,7 +6,7 @@ function user_job_setup()
 	state.PhysicalDefenseMode:options('PDT')
 	state.MagicalDefenseMode:options('MDT')
 	state.ResistDefenseMode:options('MEVA')
-	state.Weapons:options('None', 'DualWeapons', 'MeleeWeapons')
+	state.Weapons:options('None', 'DualWeapons', 'MeleeWeapons', 'Yagrush')
 	state.WeaponskillMode:options('Normal', 'Fodder')
 
 	gear.obi_cure_waist = "Austerity Belt +1"
@@ -67,6 +67,7 @@ function init_gear_sets()
 
 	-- Weapons sets
 	sets.weapons.MeleeWeapons = { main = "Daybreak", sub = "Ammurapi Shield" }
+	sets.weapons.Yagrush = { main = "Yagrush", sub = "Ammurapi Shield" }
 	sets.weapons.DualWeapons = { main = "Daybreak", sub = "Nehushtan" }
 
 	sets.buff.Sublimation = { waist = "Embla Sash" }
@@ -265,21 +266,22 @@ function init_gear_sets()
 
 	sets.midcast.Cure = {
 		main = "Raetic Rod +1",
-		sub = "Sors Shield",
+		sub = "Genmei Shield",
 		ammo = "Pemphredo Tathlum",
-		head = gear.af.head,
-		neck = "Cleric's Torque +2",
+		head = "Kaykaus Mitra +1",
+		neck = "Loricate Torque +1",
 		-- ear1 = "Regal Earring",
 		-- ear2 = "Glorious Earring",
-		ear1 = "Mendicant's Earring",
+		ear1 = "Nourish. Earring +1",
 		ear2 = "Ebers Earring +1",
 		body = gear.af.body,
 		hands = gear.af.hands,
 		legs = gear.empy.legs,
 		ring1 = "Lebeche Ring",
-		ring2 = "Mephitas's Ring",
+		ring2 = "Stikini Ring +1",
 		back = "Alaunus's Cape",
-		waist = "Luminary Sash",
+		-- waist = "Luminary Sash",
+		waist = "Rumination Sash",
 		feet = "Kaykaus Boots"
 	}
 
@@ -290,6 +292,16 @@ function init_gear_sets()
 		body = gear.empy.body,
 		waist = "Luminary Sash",
 		feet = "Kaykaus Boots"
+	})
+
+	sets.midcast.Cure.SIRD = set_combine(sets.midcast.Cure, {
+		hands = "Chironic Gloves",
+		feet = gear.af.feet
+	})
+
+	sets.midcast.CureSolace.SIRD = set_combine(sets.midcast.CureSolace, {
+		hands = "Chironic Gloves",
+		feet = gear.af.feet
 	})
 
 	sets.midcast.LightWeatherCure = set_combine(sets.midcast.Cure, {
@@ -586,7 +598,7 @@ function init_gear_sets()
 		body = sets.Nyame.Body,
 		hands = "Volte Gloves",
 		ring1 = "Stikini Ring +1",
-		ring2 = "Stikini Ring +1",
+		ring2 = "Freke Ring",
 		-- ring2 = "Freke Ring",
 		-- back = "Toro Cape",
 		back = "Alaunus's Cape",
@@ -817,7 +829,7 @@ function init_gear_sets()
 		sub = "Umbra Strap",
 		-- ammo = "Homiliary",
 		ammo = "Staunch Tathlum +1",
-		head = "Befouled Crown",
+		head = "Volte Beret",
 		neck = "Loricate Torque +1",
 		ear1 = "Etiolation Earring",
 		ear2 = "Ethereal Earring",

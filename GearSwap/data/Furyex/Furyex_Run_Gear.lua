@@ -12,7 +12,8 @@ function user_job_setup()
 	state.ExtraDefenseMode = M { ['description'] = 'Extra Defense Mode', 'None', 'MP' }
 
 	gear.enmity_jse_back = { name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}}
-	gear.sird_jse_back ={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Spell interruption rate down-10%',}}
+	gear.sird_jse_back = { name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Spell interruption rate down-10%',}}
+	gear.def_jse_back= { name="Ogma's Cape", augments={'VIT+20','Eva.+20 /Mag. Eva.+20','VIT+10','Enmity+10','DEF+50',}}
 
 	gear.stp_jse_back = { name = "Ogma's cape", augments = { 'DEX+20', 'Accuracy+20 Attack+20', '"Store TP"+10', } }
 	gear.da_jse_back = { name = "Ogma's cape", augments = { 'STR+20', 'Accuracy+20 Attack+20', '"Dbl.Atk."+10', } }
@@ -62,8 +63,6 @@ function init_gear_sets()
 	gear.empy.Feet = "Erilaz Greaves +2"
 
 	sets.Enmity = {
-		main = "Aettir",
-		sub = "Utu Grip",
 		ammo = "Staunch Tathlum +1",
 		head = "Halitus Helm",
 		neck = "Moonlight Necklace",
@@ -81,8 +80,6 @@ function init_gear_sets()
 	}
 
 	sets.Enmity.SIRD = set_combine(sets.Enmity, {
-		main = "Aettir",
-		sub = "Utu Grip",
 		ammo = "Staunch Tathlum +1", -- 12
 		head = gear.empy.Head, -- 15
 		neck = "Moonlight Necklace", -- 15
@@ -97,8 +94,6 @@ function init_gear_sets()
 	}) -- 97 gear + 10 merit, 43 DT
 
 	sets.Enmity.DT = {
-		main = "Aettir",
-		sub = "Utu Grip",
 		ammo = "Staunch Tathlum +1",
 		head = "Nyame Helm",
 		neck = "Moonlight Necklace",
@@ -354,8 +349,6 @@ function init_gear_sets()
 	}
 
 	sets.midcast.FastRecast.DT = {
-		main = "Aettir",
-		sub = "Utu Grip",
 		ammo = "Staunch Tathlum +1",
 		head = "Nyame Helm",
 		neck = "Loricate Torque +1",
@@ -372,8 +365,6 @@ function init_gear_sets()
 	}
 
 	sets.midcast.FastRecast.SIRD = {
-		main = "Aettir",
-		sub = "Utu Grip",
 		ammo = "Staunch Tathlum +1",
 		head = "Agwu's Cap",
 		neck = "Moonlight Necklace",
@@ -481,7 +472,7 @@ function init_gear_sets()
 	sets.resting = {}
 
 	sets.idle = {
-		main = "Aettir",
+		main = "Epeolatry",
 		sub = "Utu Grip",
 		ammo = "Brigantia Pebble",
 		head = "Nyame Helm",
@@ -502,21 +493,21 @@ function init_gear_sets()
 	sets.idle.Sphere = set_combine(sets.idle, { body = "Mekosu. Harness" })
 
 	sets.idle.Tank = {
-		main = "Aettir",
-		sub = "Utu Grip",
+		main={ name="Epeolatry", augments={'Path: A',}},
+		sub={ name="Refined Grip +1", augments={'Path: A',}},
 		ammo = "Brigantia Pebble",
-		head = "Nyame Helm",
+		head = sets.Nyame.Head,
 		neck = "Loricate Torque +1",
 		ear1 = "Odnowa Earring +1",
 		ear2 = "Tuisto Earring",
-		body = gear.empy.Body,
-		hands = "Nyame Gauntlets",
+		body = "Adamantite Armor",
+		hands = sets.Nyame.Hands,
 		ring1 = "Gelatinous Ring +1",
-		ring2 = "Moonlight Ring",
-		back = "Shadow Mantle",
-		waist = "Plat. Mog. Belt",
-		legs = "Nyame Flanchard",
-		feet = gear.empy.Feet
+		ring2 = "Fortified Ring",
+		waist="Flume Belt +1",
+		legs = sets.Nyame.Legs,
+		feet = sets.Nyame.Feet,
+		back = gear.def_jse_back,
 	}
 
 	sets.idle.KiteTank = {
@@ -560,7 +551,7 @@ function init_gear_sets()
 	-- Defense Sets
 
 	sets.defense.PDT = {
-		main = "Aettir",
+		main = "Epeolatry",
 		sub = "Utu Grip",
 		ammo = "Staunch Tathlum +1",
 		head = "Nyame Helm",
@@ -577,7 +568,7 @@ function init_gear_sets()
 		feet = "Nyame Sollerets"
 	}
 	sets.defense.PDT_HP = {
-		main = "Aettir",
+		main = "Epeolatry",
 		sub = "Utu Grip",
 		ammo = "Staunch Tathlum +1",
 		head = "Nyame Helm",
@@ -594,7 +585,7 @@ function init_gear_sets()
 		feet = "Nyame Sollerets"
 	}
 	sets.defense.MDT = {
-		main = "Aettir",
+		main = "Epeolatry",
 		sub = "Utu Grip",
 		ammo = "Yamarang",
 		head = "Nyame Helm",
@@ -611,7 +602,7 @@ function init_gear_sets()
 		feet = "Nyame Sollerets"
 	}
 	sets.defense.MDT_HP = {
-		main = "Aettir",
+		main = "Epeolatry",
 		sub = "Utu Grip",
 		ammo = "Yamarang",
 		head = "Nyame Helm",
@@ -671,7 +662,7 @@ function init_gear_sets()
 	--------------------------------------
 
 	sets.engaged = {
-		main = "Montante +1", -- Lionheart
+		main = "Epeolatry", -- Lionheart
 		sub = "Utu Grip",
 		ammo = "Aurgelmir Orb +1",
 		-- head = "Dampening Tam",
@@ -692,7 +683,7 @@ function init_gear_sets()
 		feet = gear.herculean_ta_feet
 	}
 	sets.engaged.Acc = {
-		main = "Aettir", -- Lionheart
+		main = "Epeolatry", -- Lionheart
 		sub = "Utu Grip",
 		ammo = "Yamarang",
 		head = "Dampening Tam",
@@ -710,7 +701,7 @@ function init_gear_sets()
 		feet = gear.herculean_ta_feet
 	}
 	sets.engaged.FullAcc = {
-		main = "Aettir", -- Lionheart
+		main = "Epeolatry", -- Lionheart
 		sub = "Utu Grip",
 		ammo = "C. Palug Stone",
 		head = "Carmine Mask +1",
@@ -729,7 +720,7 @@ function init_gear_sets()
 	}
 
 	sets.engaged.DTLite = {
-		main = "Aettir", -- Lionheart
+		main = "Epeolatry", -- Lionheart
 		sub = "Utu Grip",
 		ammo = "Aurgelmir Orb +1",
 		head = "Aya. Zucchetto +2",
@@ -747,7 +738,7 @@ function init_gear_sets()
 		feet = "Nyame Sollerets"
 	}
 	sets.engaged.Acc.DTLite = {
-		main = "Aettir", -- Lionheart
+		main = "Epeolatry", -- Lionheart
 		sub = "Utu Grip",
 		ammo = "Yamarang",
 		head = "Aya. Zucchetto +2",
@@ -765,7 +756,7 @@ function init_gear_sets()
 		feet = "Nyame Sollerets"
 	}
 	sets.engaged.FullAcc.DTLite = {
-		main = "Aettir", -- Lionheart
+		main = "Epeolatry", -- Lionheart
 		sub = "Utu Grip",
 		ammo = "C. Palug Stone",
 		head = "Aya. Zucchetto +2",
@@ -784,8 +775,8 @@ function init_gear_sets()
 	}
 
 	sets.engaged.Tank = {
-		main = "Aettir",
-		sub = "Utu Grip",
+		main = "Epeolatry",
+		sub = "Refined Grip +1",
 		ammo = "Staunch Tathlum +1",
 		head = gear.empy.Head,
 		neck = "Warder's Charm +1",
@@ -805,8 +796,8 @@ function init_gear_sets()
 	}
 
 	sets.engaged.Tank_HP = {
-		main = "Aettir",
-		sub = "Utu Grip",
+		main = "Epeolatry",
+		sub = "Refined Grip +1",
 		ammo = "Staunch Tathlum +1",
 		head = "Nyame Helm",
 		neck = "Unmoving Collar +1",

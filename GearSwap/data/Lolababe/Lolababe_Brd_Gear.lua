@@ -729,7 +729,9 @@ function init_gear_sets()
 		waist = "Reiki Yotai",
 	})
 	sets.engaged.DW.DT = set_combine(sets.engaged.DW, {
-		legs = sets.Nyame.Legs,
+		head = "Bunzi's Hat",
+		ring1 = "Moonlight Ring",
+		ring2 = "Moonlight Ring",
 		feet = sets.Nyame.Feet,
 	})
 	sets.engaged.DW.Acc = set_combine(sets.engaged.DW, sets.engaged.Acc, {

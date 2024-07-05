@@ -84,6 +84,7 @@ sets = {
     ['passive'] = {},
 	['Nyame'] = {},
 	['Malignance'] = {},
+	['VolteSandoria'] = {},
 }
 state = {
 }

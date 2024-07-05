@@ -464,7 +464,7 @@ function init_gear_sets()
     })
 	sets.engaged.Fodder = set_combine(sets.engaged, {
     })
-	sets.engaged.Fencer = set_combine(sets.engaged, {
+	sets.engaged.Naegling = set_combine(sets.engaged, {
 		hands = "Sakpata's Gauntlets",
 		body="Hjarrandi Breast.", 
 		legs = "Boii Cuisses +3",
