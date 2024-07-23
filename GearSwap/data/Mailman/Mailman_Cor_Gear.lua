@@ -539,8 +539,8 @@ function init_gear_sets()
 		neck="Iskur Gorget",
 		waist="Yemaya Belt",
 		left_ear="Crep. Earring",
-        -- right_ear = "Telos Earring",
-		right_ear="Chas. Earring +1",
+        right_ear = "Telos Earring",
+		-- right_ear="Chas. Earring +1",
 		left_ring="Ilabrat Ring",
 		right_ring="Crepuscular Ring",
         back=gear.tp_ranger_jse_back
@@ -780,7 +780,7 @@ function init_gear_sets()
     sets.engaged = {
         head=sets.Malignance.Head,
         neck = "Iskur Gorget",
-        ear1 = "Crep. Earring",
+        ear1 = "Telos Earring",
         ear2 = "Dedition Earring",
         body = "Adhemar Jacket +1",
         hands = "Adhemar Wrist. +1",

@@ -452,11 +452,9 @@ function init_gear_sets()
 	
 	sets.engaged.SomeAcc = set_combine(sets.engaged, {
         body="Agoge Lorica +3",
-		feet = "Flamma Gambieras +2",
     })
 	sets.engaged.Acc = set_combine(sets.engaged.SomeAcc, {
         body="Agoge Lorica +3",
-		legs = "Flamma Dirs +2"
     })
 	sets.engaged.FullAcc = set_combine(sets.engaged.Acc, {
         body="Agoge Lorica +3",

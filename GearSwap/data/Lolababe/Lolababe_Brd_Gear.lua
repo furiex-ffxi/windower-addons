@@ -86,7 +86,7 @@ function init_gear_sets()
 	-- Fast cast sets for spells
 	sets.precast.FC = {
 		head = "Volte Beret",
-		body = "Inyanga Jubbah +2",
+		body = "Zendik Robe",
 		hands = { name = "Gende. Gages +1", augments = { 'Phys. dmg. taken -3%', 'Magic dmg. taken -2%', 'Song spellcasting time -4%', } },
 		legs = "Volte Brais",
 		feet = "Fili Corthurnes +3",
@@ -104,7 +104,7 @@ function init_gear_sets()
 		--neck="Voltsurge Torque",
 		ear1 = "Enchntr. Earring +1",
 		ear2 = "Loquac. Earring",
-		body = "Inyanga Jubbah +2",
+		body = "Zendik Robe",
 		hands = "Gende. Gages +1",
 		ring1 = "Weather. Ring",
 		--ring2="Kishar Ring",
@@ -210,6 +210,7 @@ function init_gear_sets()
 	})
 
 	sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {
+		waist = "Sailfi Belt +1",
 	})
 
 	sets.precast.WS['Exenterator'] = set_combine(sets.precast.WS, {
@@ -311,22 +312,20 @@ function init_gear_sets()
 
 	-- Song-specific recast reduction
 	sets.midcast.SongRecast = {
-		--main=gear.grioavolr_fc_staff,
-		--sub="Clerisy Strap +1",
 		range="Gjallarhorn",
 		ammo=empty,
 		head = "Bunzi's Hat",
-		--neck="Voltsurge Torque",
+		neck="Orunmila's Torque",
 		ear1 = "Enchntr. Earring +1",
 		ear2 = "Loquac. Earring",
-		body = "Inyanga Jubbah +2",
+		body = "Zendik Robe",
 		hands = "Gendewitha Gages +1",
 		ring1="Kishar Ring",
 		ring2="Prolix Ring",
 		back = { name = "Intarabus's Cape", augments = { 'CHR+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'CHR+10', '"Fast Cast"+10', 'Phys. dmg. taken-10%', } },
 		waist="Witful Belt",
 		legs = gear.empy.Legs,
-		feet = "Aya. Gambieras +2"
+		feet = sets.Nyame.Feet
 	}
 
 	-- Cast spell with normal gear, except using Daurdabla instead
@@ -455,7 +454,7 @@ function init_gear_sets()
 		main = "Carnwenhan",
 		sub = "Ammurapi Shield",
 		head = "C. Palug Crown",
-		body = "Inyanga Jubbah +2",
+		body = "Zendik Robe",
 		hands = "Inyan. Dastanas +2",
 		legs = "Inyanga Shalwar +2",
 		feet = "Brioso Slippers +3",
@@ -542,7 +541,7 @@ function init_gear_sets()
 	sets.idle = {
 		range = "Loughnashade",
 		head = "Fili Calot +3",
-		body = "Ashera Harness",
+		body = "Zendik Robe",
 		hands = "Fili Manchettes +3",
 		legs = gear.empy.Legs,
 		feet = "Fili Cothurnes +3",

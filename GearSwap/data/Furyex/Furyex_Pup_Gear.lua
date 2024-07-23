@@ -93,7 +93,7 @@ function init_gear_sets()
     --Sets up a Key, Value Pair
     Artifact_Foire = {}
     Artifact_Foire.Head = "Foire Taj +2"
-    Artifact_Foire.Body = "Foire Tobe +2"
+    Artifact_Foire.Body = "Foire Tobe +3"
     Artifact_Foire.Hands = "Foire Dastanas +3"
     Artifact_Foire.Legs = "Foire Churidars +2"
     Artifact_Foire.Feet = "Foire Babouches +3"
@@ -576,8 +576,7 @@ function init_gear_sets()
         ring2 = "Gere Ring",
         -- ring2 = "Epona's Ring",
         back = "Visucius's Mantle",
-        -- waist = "Windbuffet Belt +1",
-        waist="Klouskap Sash +1",
+        waist="Moonbow Belt +1",
         legs = "Samnuha Tights",
         -- legs = "Ryuo Hakama",
         feet="Malignance Boots",

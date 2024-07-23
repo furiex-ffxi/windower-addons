@@ -599,7 +599,6 @@ function init_gear_sets()
 		hands = "Volte Gloves",
 		ring1 = "Stikini Ring +1",
 		ring2 = "Freke Ring",
-		-- ring2 = "Freke Ring",
 		-- back = "Toro Cape",
 		back = "Alaunus's Cape",
 		waist = "Eschan Stone",

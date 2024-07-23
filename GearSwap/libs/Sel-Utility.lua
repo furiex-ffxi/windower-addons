@@ -2416,7 +2416,6 @@ windower.raw_register_event('outgoing chunk',function(id,data,modified,is_inject
 		local currentlocation = {X=modified:sub(5,8), Y=modified:sub(13,16)}
         moving = currentlocation.X ~= lastlocation.X or currentlocation.Y ~= lastlocation.Y
         lastlocation = currentlocation
-
 		if moving then
 			if sets.Kiting and not (player.status == 'Event' or (os.clock() < (next_cast + 1)) or pet_midaction() or (os.clock() < (petWillAct + 2))) then
 				send_command('gs c forceequip')

@@ -16,7 +16,7 @@ function user_job_setup()
 
 	-- Additional local binds
 	send_command('bind ^` gs c cycle ElementalMode')
-	send_command('bind @` gs c cycle MagicBurstMode')
+	send_command('bind !` gs c cycle MagicBurstMode')
 	send_command('bind ^@!` input /ja "Accession" <me>')
 	send_command('bind ^backspace input /ja "Saboteur" <me>')
 	send_command('bind !backspace input /ja "Spontaneity" <t>')
@@ -725,21 +725,13 @@ function init_gear_sets()
 
 	-- Gear for Magic Burst mode.
 	sets.MagicBurst = set_combine(sets.midcast['Elemental Magic'],{
-		-- main = gear.grioavolr_nuke_staff, 
-		-- sub = "Alber Strap", 
-		-- head = "Ea Hat +1",
 		main = "Bunzi's Rod",
 		shield = "Ammurapi Shield",
-		neck = "Mizu. Kubikazari", 
+		head = "Ea Hat +1",
 		hands = "Bunzi's Gloves",
-		-- body = "Ea Houppe. +1", 
-		-- hands = "Amalric Gages +1", 
-		waist = "Acuity Belt +1",
+		body = "Ea Houppe. +1", 
 		ammo = "Ghastly Tathlum +1",
-		ring1 = "Jhakri Ring",
-		ring2 = "Mujin Band",
-		-- legs = "Ea Slops +1", 
-		feet = "Jhakri Pigaches +2" 
+		feet = EMPY.Feet,
 	})
 	
 	sets.midcast.Impact = set_combine(sets.midcast['Elemental Magic'], {

@@ -104,7 +104,7 @@ function init_gear_sets()
 		hands = "Volte Gloves",
 		ring1 = "Kishar Ring",
 		ring2 = "Lebeche Ring",
-		back = "Perimede Cape",
+		back = "Moonlight Cape",
 		waist = "Witful Belt",
 		legs = gear.af.Legs,
 		feet = "Regal Pumps +1"
@@ -680,7 +680,7 @@ function init_gear_sets()
 		neck = "Loricate Torque +1",
 		ear1 = "Odnowa Earring +1",
 		ear2 = "Ethereal Earring",
-		head = "Befouled Crown",
+		head = "Volte Beret",
 		body = "Azimuth Coat +2",
 		hands = gear.relic.Hands,
 		legs = "Volte Brais",
@@ -866,6 +866,7 @@ function init_gear_sets()
 
 	-- Normal melee group
 	sets.engaged = {
+		main = "Maxentius",
 		ammo = "Amar Cluster",
 		head = "Blistering Sallet +1",
 		neck = "Combatant's Torque",

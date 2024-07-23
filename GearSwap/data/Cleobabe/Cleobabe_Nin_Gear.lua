@@ -776,7 +776,7 @@ function init_gear_sets()
 
     -- Weapons sets
     sets.weapons.Heishi = { main = "Heishi Shorinken", sub = "Kunimitsu" }
-    sets.weapons.Savage = { main = "Naegling", sub = "Uzura +2" }
+    sets.weapons.Savage = { main = "Sasuke Katana", sub = "Uzura +2" }
     sets.weapons.Evisceration = { main = "Tauret", sub = "Kunimitsu" }
     sets.weapons.MagicWeapons = { main = "Kunimitsu", sub = "Tauret" }
 	sets.weapons.ProcDagger = { main = "Qutrub Knife", sub = empty }

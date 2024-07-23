@@ -29,7 +29,7 @@ function init_gear_sets()
     --------------------------------------
     -- Start defining the sets
     --------------------------------------
-
+    gear.tp_jse_back = { name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
     -- Precast Sets
 
     -- Precast sets to enhance JAs on use
@@ -401,9 +401,9 @@ function init_gear_sets()
         hands = "Mpaca's Gloves",        
 		ring1 = "Gere Ring",
         ring2 = "Niqmaddu Ring",
-        back = "Segomo's Mantle",
+        back = gear.tp_jse_back,
         -- waist = "Windbuffet Belt +1",
-        waist = "Hurch'lan Sash",
+        waist = "Moonbow Belt +1",
         legs = "Samnuha Tights",
         -- feet = gear.herculean_ta_feet
         feet = "Mpaca's Boots"

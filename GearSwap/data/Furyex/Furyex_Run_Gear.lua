@@ -158,21 +158,21 @@ function init_gear_sets()
 	sets.precast.JA['Aggressor'].DT = set_combine(sets.Enmity.DT, {})
 	sets.precast.JA['Animated Flourish'].DT = set_combine(sets.Enmity.DT, {})
 
-	sets.precast.JA['Lunge'] = {
-		ammo = "Seeth. Bomblet +1",
-		head = gear.herculean_nuke_head,
-		neck = "Baetyl Pendant",
-		ear1 = "Friomisi Earring",
-		ear2 = "Crematio Earring",
-		body = "Samnuha Coat",
-		hands = "Carmine Fin. Ga. +1",
-		ring1 = "Shiva Ring +1",
-		ring2 = "Metamor. Ring +1",
-		back = "Toro Cape",
-		waist = "Eschan Stone",
-		legs = "Augury Cuisses +1",
-		feet = gear.herculean_nuke_feet
+    sets.precast.JA['Lunge'] = {ammo={ name="Ghastly Tathlum +1", augments={'Path: A',}},
+		head={ name="Agwu's Cap", augments={'Path: A',}},
+		body={ name="Agwu's Robe", augments={'Path: A',}},
+		hands={ name="Agwu's Gages", augments={'Path: A',}},
+		legs={ name="Agwu's Slops", augments={'Path: A',}},
+		feet={ name="Agwu's Pigaches", augments={'Path: A',}},
+		neck="Sibyl Scarf",
+		waist="Orpheus's Sash",
+		left_ear="Sortiarius Earring",
+		right_ear="Friomisi Earring",
+		left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+		right_ring="Shiva Ring +1",
+		back={ name="Ogma's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
 	}
+
 
 	sets.precast.JA['Swipe'] = sets.precast.JA['Lunge']
 
@@ -484,7 +484,7 @@ function init_gear_sets()
 		hands = sets.Nyame.Hands,
 		ring1 = "Stikini Ring +1",
 		ring2 = "Stikini Ring +1",
-		back = "Moonlight Cape",
+		back = gear.def_jse_back,
 		waist = "Plat. Mog. Belt",
 		legs = "Nyame Flanchard",
 		feet = "Nyame Sollerets"
@@ -544,7 +544,7 @@ function init_gear_sets()
 	-- Refined Grip +1
 	sets.weapons.Aettir = { main = "Aettir", sub = "Utu Grip" }
 	sets.weapons.Hepatizon = { main = "Hepatizon Axe +1", sub = "Utu Grip" }
-	sets.weapons.Epeo = { main = "Epeolatry", sub = "Refined Grip +1" }
+	sets.weapons.Epeo = { main = "Epeolatry", sub = "Utu Grip" }
 	sets.weapons.Montante = { main = "Montante +1", sub = "Utu Grip" }
 	sets.weapons.DualWeapons = { main = "Firangi", sub = "Reikiko" }
 

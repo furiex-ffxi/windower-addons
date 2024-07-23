@@ -730,30 +730,18 @@ function init_gear_sets()
 
     -- Normal melee group
     sets.engaged = {
-        -- head = "Dampening Tam",
-        -- neck = "Iskur Gorget",
-        -- ear1 = "Cessance Earring",
-        -- ear2 = "Brutal Earring",
-        -- body = "Meg. Cuirie +2",
-        -- hands = "Adhemar Wrist. +1",
-        -- ring1 = "Petrov Ring",
-        -- ring2 = "Epona's Ring",
-        -- back = gear.tp_jse_back,
-        -- waist = "Windbuffet Belt +1",
-        -- legs = "Samnuha Tights",
-        -- feet = gear.herculean_ta_feet
         head = sets.Malignance.Head,
-        neck = "Combatant's Torque",
-        ear1 = "Cessance Earring",
-        ear2 = "Brutal Earring",
+        neck = "Iskur Gorget",
+        ear1 = "Telos Earring",
+        ear2 = "Dedition Earring",
         body = sets.Malignance.Body,
         hands = sets.Malignance.Hands,
-        ring1 = "Petrov Ring",
-        ring2 = "Crepuscular Ring",
+		ring1="Lehko's Ring",
+        ring2 = "Epona's Ring",
         back = gear.tp_jse_back,
-        waist = "Sailfi Belt +1",
+        waist = "Windbuffet Belt +1",
         legs = "Samnuha Tights",
-        feet = "Nyame Sollerets"        
+        feet = sets.Malignance.Feet
     }
 
     sets.engaged.Acc = {

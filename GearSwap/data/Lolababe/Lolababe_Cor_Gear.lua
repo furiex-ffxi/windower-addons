@@ -12,9 +12,9 @@ function user_job_setup()
         'DualProcWeapons', 'None')
     state.CompensatorMode:options('Always', '300', '1000', 'Never')
 
-    gear.RAbullet = "Eminent Bullet"
-    gear.WSbullet = "Eminent Bullet"
-    gear.MAbullet = "Orichalc. Bullet" --For MAB WS, do not put single-use bullets here.
+    gear.RAbullet = "Bronze Bullet"
+    gear.WSbullet = "Chrono Bullet"
+    gear.MAbullet = "Chrono Bullet" --For MAB WS, do not put single-use bullets here.
     gear.QDbullet = "Animikii Bullet"
     options.ammo_warning_limit = 15
     --Ikenga_vest_bonus = 190  -- It is 190 at R20. Uncomment if you need to manually adjust because you are using below R20
@@ -23,11 +23,11 @@ function user_job_setup()
         augments = { 'AGI+20', 'Rng.Acc.+20 Rng.Atk.+20', 'Rng.Acc.+10', '"Store TP"+10', } }
     gear.snapshot_jse_back = { name = "Camulus's Mantle", augments = { '"Snapshot"+10', } }
     gear.tp_jse_back = { name = "Camulus's Mantle",
-        augments = { 'DEX+20', 'Accuracy+20 Attack+20', 'Accuracy+10', '"Store TP"+10', } }
+        augments = { 'DEX+20', 'Accuracy+20 Attack+20', 'Accuracy+10', '"Dual Wield"+10', 'Phys. dmg. taken-10%' } }
     gear.ranger_wsd_jse_back = { name = "Camulus's Mantle",
         augments = { 'AGI+20', 'Rng.Acc.+20 Rng.Atk.+20', 'AGI+10', 'Weapon skill damage +10%', } }
-    gear.magic_wsd_jse_back = { name = "Camulus's Mantle",
-        augments = { 'AGI+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'AGI+10', 'Weapon skill damage +10%', } }
+    gear.magic_wsd_jse_back = { name = "Camulus's Mantle", 
+        augments = { 'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%','Phys. dmg. taken-10%',} }
     gear.str_wsd_jse_back = { name = "Camulus's Mantle",
         augments = { 'STR+20', 'Accuracy+20 Attack+20', 'STR+10', 'Weapon skill damage +10%', } }
 
@@ -206,37 +206,44 @@ function init_gear_sets()
 
     sets.precast.RA = {
         ammo = gear.RAbullet,
-        head = "Chass. Tricorne +1",
-        neck = "Comm. Charm +2",
-        body = "Laksa. Frac +1",
-        hands = "Carmine Fin. Ga. +1",
-        ring1 = "Crepuscular Ring",
-        back = gear.snapshot_jse_back,
-        waist = "Impulse Belt",
-        legs = "Laksa. Trews +1",
-        feet = "Meg. Jam. +2"
-    }
+		-- head=gear.Empy.Head, -- 0/14
+        body="Laksa. Frac +3", -- 18/0
+		hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}}, -- 8/11
+		legs={ name="Adhemar Kecks +1", augments={'AGI+12','"Rapid Shot"+13','Enmity-6',}}, -- 10/13
+		feet="Meg. Jam. +2", -- 10/0
+		-- left_ear={ name="Tuisto Earring", priority=2},
+		-- right_ear={ name="Etiolation Earring", priority=1},
+		left_ring="Dingir Ring",
+		right_ring="Crepuscular Ring", -- 3/0
+		neck={ name="Comm. Charm +2", augments={'Path: A',}}, -- 4/0
+		waist="Yemaya Belt", -- 0/5
+		-- back=gear.snapshot_jse_back, -- 10/0
+    } -- Totals 50/43
 
-    sets.precast.RA.Flurry = set_combine(sets.precast.RA, { waist = "Yemaya Belt", legs = "Adhemar Kecks +1" })
-    sets.precast.RA.Flurry2 = set_combine(sets.precast.RA, { waist = "Yemaya Belt", legs = "Adhemar Kecks +1" })
+    sets.precast.RA.Flurry = set_combine(sets.precast.RA, { body="Laksa. Frac +3", }) -- Totals 45/63
+    sets.precast.RA.Flurry2 = set_combine(sets.precast.RA.Flurry, { feet={ name="Pursuer's Gaiters", augments={'Rng.Acc.+10','"Rapid Shot"+10','"Recycle"+15',}} }) -- Totals 35/73
 
 
     -- Weaponskill sets
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {
-        head = "Meghanada Visor +2",
-        neck = "Fotia Gorget",
-        ear1 = "Moonshade Earring",
-        ear2 = "Telos Earring",
-        body = "Laksa. Frac +1",
-        hands = "Meg. Gloves +2",
-        ring1 = "Regal Ring",
-        -- ring2 = "Ifrit Ring +1",
-        ring2 = "Cornelia's Ring",
-        back = gear.str_wsd_jse_back,
-        waist = "Fotia Belt",
-        legs = "Meg. Chausses +2",
-        feet = "Lanun Bottes +1"
+        ammo = gear.WSbullet,
+		head=sets.Nyame.Head,
+		body=sets.Nyame.Body,
+		-- hands=gear.Empy.Hands,
+		hands=sets.Nyame.Hands,
+		legs=sets.Nyame.Legs,
+		feet=sets.Nyame.Feet,
+		neck={ name="Comm. Charm +2", augments={'Path: A',}},
+		waist="Sailfi Belt +1",
+		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+		right_ear="Ishvara Earring",
+		-- left_ring="Regal Ring",
+		left_ring="Karieyh Ring",
+        -- right_ring="Cornelia's ring",
+        right_ring="Epaminondas's Ring",
+        back=gear.magic_wsd_jse_back,
+		-- back=gear.str_wsd_jse_back,
     }
 
     sets.precast.WS.Acc = {
@@ -268,6 +275,20 @@ function init_gear_sets()
         legs = "Carmine Cuisses +1",
         feet = "Malignance Boots"
     }
+
+    sets.precast.WS.MAB = set_combine(sets.precast.WS, {
+        ammo = gear.MAbullet,
+        head = "Nyame Helm",
+		-- feet={ name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
+		-- body="Lanun Frac +3",
+        hands = "Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		waist="Orpheus's Sash",
+		left_ear="Friomisi Earring",
+		right_ear="Crematio Earring",
+		left_ring="Dingir Ring",
+		back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
+	})
 
     -- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
 
@@ -306,37 +327,12 @@ function init_gear_sets()
         feet = "Mummu Gamash. +2"
     }
 
-    sets.precast.WS['Savage Blade'] = {
-        ammo = gear.WSbullet,
-        head = "Lilitu Headpiece",
-        neck = "Comm. Charm +2",
-        ear1 = "Moonshade Earring",
-        ear2 = "Ishvara Earring",
-        body = "Laksa. Frac +1",
-        hands = "Meg. Gloves +2",
-        ring1 = "Regal Ring",
-        ring2 = "Rufescent Ring",
-        back = gear.str_wsd_jse_back,
-        waist = "Sailfi Belt +1",
-        legs = gear.herculean_wsd_legs,
-        feet = "Lanun Bottes +1"
-    }
+    sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {
+    })
 
-    sets.precast.WS['Savage Blade'].Acc = {
-        ammo = gear.WSbullet,
-        head = "Carmine Mask +1",
-        neck = "Combatant's Torque",
-        ear1 = "Moonshade Earring",
-        ear2 = "Telos Earring",
-        body = "Meg. Cuirie +2",
-        hands = "Meg. Gloves +2",
-        ring1 = "Regal Ring",
-        ring2 = "Rufescent Ring",
-        back = gear.str_wsd_jse_back,
-        waist = "Grunfeld Rope",
-        legs = "Carmine Cuisses +1",
-        feet = "Lanun Bottes +1"
-    }
+    sets.precast.WS['Savage Blade'].Acc = set_combine(sets.precast.WS['Savage Blade'], {
+        
+    })
 
     sets.precast.WS['Last Stand'] = {
         ammo = gear.WSbullet,
@@ -413,21 +409,17 @@ function init_gear_sets()
     sets.precast.WS['Split Shot'] = sets.precast.WS['Last Stand']
     sets.precast.WS['Split Shot'].Acc = sets.precast.WS['Last Stand'].Acc
 
-    sets.precast.WS['Leaden Salute'] = {
-        ammo = gear.MAbullet,
-        head = "Pixie Hairpin +1",
-        neck = "Comm. Charm +2",
-        ear1 = "Moonshade Earring",
-        ear2 = "Friomisi Earring",
-        body = "Laksa. Frac +1",
-        hands = "Carmine Fin. Ga. +1",
-        ring1 = "Archon Ring",
-        ring2 = "Dingir Ring",
-        back = gear.magic_wsd_jse_back,
-        waist = "Eschan Stone",
-        legs = "Nyame Flanchard",
-        feet = "Lanun Bottes +1"
-    }
+    sets.precast.WS['Leaden Salute'] = set_combine(sets.precast.WS.MAB, {
+		head="Pixie Hairpin +1",
+		left_ear="Friomisi Earring",
+		feet={ name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
+		right_ring="Archon Ring",
+		left_ring="Dingir Ring",
+		right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+		-- waist="Orpheus's Sash",   -- Changes based off elemental function
+        waist="Eschan Stone",
+		back=gear.magic_wsd_jse_back,
+	})
 
     sets.precast.WS['Leaden Salute'].Acc = {
         ammo = gear.MAbullet,
@@ -709,16 +701,16 @@ function init_gear_sets()
 
     -- Weapons sets
     sets.weapons.Default = { main = "Naegling", sub = "Nusku Shield", range = "Anarchy" }
-    sets.weapons.Ranged = { main = "Naegling", sub = "Nusku Shield", range = "Anarchy" }
+    sets.weapons.Ranged = { main = "Qutrub Knife", sub = "Nusku Shield", range = "Troll Gun" }
     sets.weapons.Evisceration = { main = "Tauret", sub = "Nusku Shield", range = "Ataktos" }
-    sets.weapons.DualWeapons = { main = "Naegling", sub = "Blurred Knife +1", range = "Fomalhaut" }
-    sets.weapons.DualSavageWeapons = { main = "Naegling", sub = "Blurred Knife +1", range = "Ataktos" }
+    sets.weapons.DualWeapons = { main = "Naegling", sub = "Gleti's Knife", range = "Fomalhaut" }
+    sets.weapons.DualSavageWeapons = { main = "Naegling", sub = "Gleti's Knife", range = "Ataktos" }
     sets.weapons.DualEvisceration = { main = "Tauret", sub = "Blurred Knife +1", range = "Ataktos" }
     sets.weapons.Savage = { main = "Naegling", sub = "Nusku Shield", range = "Ataktos" }
     sets.weapons.DualLeadenRanged = { main = "Rostam", sub = "Tauret", range = "Fomalhaut" }
-    sets.weapons.DualLeadenMelee = { main = "Naegling", sub = "Atoyac", range = "Fomalhaut" }
+    sets.weapons.DualLeadenMelee = { main = "Naegling", sub = "Atoyac", range = "Quicksilver" }
     sets.weapons.DualAeolian = { main = "Rostam", sub = "Tauret", range = "Ataktos" }
-    sets.weapons.DualLeadenMeleeAcc = { main = "Naegling", sub = "Blurred Knife +1", range = "Fomalhaut" }
+    sets.weapons.DualLeadenMeleeAcc = { main = "Naegling", sub = "Gleti's Knife", range = "Fomalhaut" }
     sets.weapons.DualRanged = { main = "Qutrub Knife", sub = "Burrower's Wand", range = "Anarchy" }
 
     -- Engaged sets
@@ -730,30 +722,18 @@ function init_gear_sets()
 
     -- Normal melee group
     sets.engaged = {
-        -- head = "Dampening Tam",
-        -- neck = "Iskur Gorget",
-        -- ear1 = "Cessance Earring",
-        -- ear2 = "Brutal Earring",
-        -- body = "Meg. Cuirie +2",
-        -- hands = "Adhemar Wrist. +1",
-        -- ring1 = "Petrov Ring",
-        -- ring2 = "Epona's Ring",
-        -- back = gear.tp_jse_back,
-        -- waist = "Windbuffet Belt +1",
-        -- legs = "Samnuha Tights",
-        -- feet = gear.herculean_ta_feet
         head = sets.Malignance.Head,
-        neck = "Combatant's Torque",
+        neck = "Lissome Necklace",
         ear1 = "Cessance Earring",
         ear2 = "Brutal Earring",
         body = sets.Malignance.Body,
         hands = sets.Malignance.Hands,
         ring1 = "Petrov Ring",
-        ring2 = "Crepuscular Ring",
+        ring2 = "Ilabrat Ring",
         back = gear.tp_jse_back,
         waist = "Sailfi Belt +1",
         legs = "Samnuha Tights",
-        feet = "Nyame Sollerets"        
+        feet = sets.Malignance.Feet        
     }
 
     sets.engaged.Acc = {
@@ -802,18 +782,12 @@ function init_gear_sets()
     }
 
     sets.engaged.DW = set_combine(sets.engaged, {
-        -- head = "Dampening Tam",
         neck = "Iskur Gorget",
         ear1 = "Suppanomimi",
-        ear2 = "Brutal Earring",
-        -- body = "Adhemar Jacket +1",
-        -- hands = "Adhemar Wrist. +1",
-        ring1 = "Petrov Ring",
-        ring2 = "Epona's Ring",
+        ear2 = "Telos Earring",
         back = gear.tp_jse_back,
-        waist = "Windbuffet Belt +1",
+        waist = "Reiki Yotai",
         legs = "Samnuha Tights",
-        -- feet = gear.herculean_ta_feet
     })
 
     sets.engaged.DW.Acc = {
@@ -878,31 +852,32 @@ function select_default_macro_book()
 end
 
 function user_job_lockstyle()
-    if player.equipment.main == nil or player.equipment.main == 'empty' then
-        windower.chat.input('/lockstyleset 001')
-    elseif res.items[item_name_to_id(player.equipment.main)].skill == 3 then --Sword in main hand.
-        if player.equipment.sub == nil or player.equipment.sub == 'empty' then --Sword/Nothing.
-            windower.chat.input('/lockstyleset 001')
-        elseif res.items[item_name_to_id(player.equipment.sub)].shield_size then --Sword/Shield
-            windower.chat.input('/lockstyleset 002')
-        elseif res.items[item_name_to_id(player.equipment.sub)].skill == 3 then --Sword/Sword.
-            windower.chat.input('/lockstyleset 003')
-        elseif res.items[item_name_to_id(player.equipment.sub)].skill == 2 then --Sword/Dagger.
-            windower.chat.input('/lockstyleset 001')
-        else
-            windower.chat.input('/lockstyleset 001')                       --Catchall just in case something's weird.
-        end
-    elseif res.items[item_name_to_id(player.equipment.main)].skill == 2 then --Dagger in main hand.
-        if player.equipment.sub == nil or player.equipment.sub == 'empty' then --Dagger/Nothing.
-            windower.chat.input('/lockstyleset 001')
-        elseif res.items[item_name_to_id(player.equipment.sub)].shield_size then --Dagger/Shield
-            windower.chat.input('/lockstyleset 002')
-        elseif res.items[item_name_to_id(player.equipment.sub)].skill == 2 then --Dagger/Dagger.
-            windower.chat.input('/lockstyleset 004')
-        else
-            windower.chat.input('/lockstyleset 001') --Catchall just in case something's weird.
-        end
-    end
+    windower.chat.input('/lockstyleset')
+    -- if player.equipment.main == nil or player.equipment.main == 'empty' then
+    --     windower.chat.input('/lockstyleset 001')
+    -- elseif res.items[item_name_to_id(player.equipment.main)].skill == 3 then --Sword in main hand.
+    --     if player.equipment.sub == nil or player.equipment.sub == 'empty' then --Sword/Nothing.
+    --         windower.chat.input('/lockstyleset 001')
+    --     elseif res.items[item_name_to_id(player.equipment.sub)].shield_size then --Sword/Shield
+    --         windower.chat.input('/lockstyleset 002')
+    --     elseif res.items[item_name_to_id(player.equipment.sub)].skill == 3 then --Sword/Sword.
+    --         windower.chat.input('/lockstyleset 003')
+    --     elseif res.items[item_name_to_id(player.equipment.sub)].skill == 2 then --Sword/Dagger.
+    --         windower.chat.input('/lockstyleset 001')
+    --     else
+    --         windower.chat.input('/lockstyleset 001')                       --Catchall just in case something's weird.
+    --     end
+    -- elseif res.items[item_name_to_id(player.equipment.main)].skill == 2 then --Dagger in main hand.
+    --     if player.equipment.sub == nil or player.equipment.sub == 'empty' then --Dagger/Nothing.
+    --         windower.chat.input('/lockstyleset 001')
+    --     elseif res.items[item_name_to_id(player.equipment.sub)].shield_size then --Dagger/Shield
+    --         windower.chat.input('/lockstyleset 002')
+    --     elseif res.items[item_name_to_id(player.equipment.sub)].skill == 2 then --Dagger/Dagger.
+    --         windower.chat.input('/lockstyleset 004')
+    --     else
+    --         windower.chat.input('/lockstyleset 001') --Catchall just in case something's weird.
+    --     end
+    -- end
 end
 
 autows_list = { ['Default'] = 'Savage Blade', ['Evisceration'] = 'Evisceration', ['Savage'] = 'Savage Blade',

@@ -43,7 +43,7 @@ function init_gear_sets()
 	gear.af_head             = "Brioso Roundlet +3"
 	gear.af_body             = "Brioso Justau. +3"
 	gear.af_hands            = "Brioso Cuffs +3"
-	gear.af_legs             = "Brioso Cannions +1"
+	gear.af_legs             = "Brioso Cannions +3"
 	gear.af_feet             = "Brioso Slippers +3"
 
 	gear.relic_head          = "Bihu Roundlet +3"
@@ -64,9 +64,9 @@ function init_gear_sets()
 	sets.weapons.Carnwenhan = { main = "Carnwenhan", sub = "Genmei Shield" }
 	sets.weapons.Naegling = { main = "Naegling", sub = "Genmei Shield" }
 	sets.weapons.Qutrub = { main = "Qutrub Knife", sub = "Genmei Shield" }
-	sets.weapons.DualCarnwenhan = {main="Carnwenhan", sub="Ternion Dagger +1"}	
+	sets.weapons.DualCarnwenhan = {main="Dancing Dagger", sub="Ternion Dagger +1"}	
 	sets.weapons.DualWeapons = { main = "Aeneas", sub = "Centovente" }
-	sets.weapons.DualNaegling = { main = "Naegling", sub = "Centovente" }
+	sets.weapons.DualNaegling = { main = "Naegling", sub = "Ternion Dagger +1" }
 	sets.weapons.DualTauret = { main = "Tauret", sub = "Blurred Knife +1" }
 	sets.weapons.DualAeolian = { main = "Tauret", sub = "Malevolence" }
 
