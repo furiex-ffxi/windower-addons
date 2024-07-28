@@ -224,19 +224,23 @@ function init_gear_sets()
     -- Weaponskill sets
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {
-        head = "Meghanada Visor +2",
-        neck = "Fotia Gorget",
-        ear1 = "Moonshade Earring",
-        ear2 = "Telos Earring",
-        body = "Laksa. Frac +1",
-        hands = "Meg. Gloves +2",
-        ring1 = "Regal Ring",
-        -- ring2 = "Ifrit Ring +1",
-        ring2 = "Cornelia's Ring",
-        back = gear.str_wsd_jse_back,
-        waist = "Fotia Belt",
-        legs = "Meg. Chausses +2",
-        feet = "Lanun Bottes +1"
+        ammo = gear.WSbullet,
+		head=sets.Nyame.Head,
+		body=sets.Nyame.Body,
+		-- hands=gear.Empy.Hands,
+		hands=sets.Nyame.Hands,
+		legs=sets.Nyame.Legs,
+		feet=sets.Nyame.Feet,
+		neck={ name="Comm. Charm +2", augments={'Path: A',}},
+		waist="Sailfi Belt +1",
+		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+		right_ear="Ishvara Earring",
+		-- left_ring="Regal Ring",
+		left_ring="Karieyh Ring",
+        -- right_ring="Cornelia's ring",
+        right_ring="Epaminondas's Ring",
+        back=gear.magic_wsd_jse_back,
+		-- back=gear.str_wsd_jse_back,
     }
 
     sets.precast.WS.Acc = {
@@ -306,37 +310,12 @@ function init_gear_sets()
         feet = "Mummu Gamash. +2"
     }
 
-    sets.precast.WS['Savage Blade'] = {
-        ammo = gear.WSbullet,
-        head = "Lilitu Headpiece",
-        neck = "Comm. Charm +2",
-        ear1 = "Moonshade Earring",
-        ear2 = "Ishvara Earring",
-        body = "Laksa. Frac +1",
-        hands = "Meg. Gloves +2",
-        ring1 = "Regal Ring",
-        ring2 = "Rufescent Ring",
-        back = gear.str_wsd_jse_back,
-        waist = "Sailfi Belt +1",
-        legs = gear.herculean_wsd_legs,
-        feet = "Lanun Bottes +1"
-    }
+    sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {
+    })
 
-    sets.precast.WS['Savage Blade'].Acc = {
-        ammo = gear.WSbullet,
-        head = "Carmine Mask +1",
-        neck = "Combatant's Torque",
-        ear1 = "Moonshade Earring",
-        ear2 = "Telos Earring",
-        body = "Meg. Cuirie +2",
-        hands = "Meg. Gloves +2",
-        ring1 = "Regal Ring",
-        ring2 = "Rufescent Ring",
-        back = gear.str_wsd_jse_back,
-        waist = "Grunfeld Rope",
-        legs = "Carmine Cuisses +1",
-        feet = "Lanun Bottes +1"
-    }
+    sets.precast.WS['Savage Blade'].Acc = set_combine(sets.precast.WS['Savage Blade'], {
+        
+    })
 
     sets.precast.WS['Last Stand'] = {
         ammo = gear.WSbullet,
@@ -711,14 +690,14 @@ function init_gear_sets()
     sets.weapons.Default = { main = "Naegling", sub = "Nusku Shield", range = "Anarchy" }
     sets.weapons.Ranged = { main = "Naegling", sub = "Nusku Shield", range = "Anarchy" }
     sets.weapons.Evisceration = { main = "Tauret", sub = "Nusku Shield", range = "Ataktos" }
-    sets.weapons.DualWeapons = { main = "Naegling", sub = "Blurred Knife +1", range = "Fomalhaut" }
-    sets.weapons.DualSavageWeapons = { main = "Naegling", sub = "Blurred Knife +1", range = "Ataktos" }
-    sets.weapons.DualEvisceration = { main = "Tauret", sub = "Blurred Knife +1", range = "Ataktos" }
+    sets.weapons.DualWeapons = { main = "Naegling", sub = "Tauret", range = "Fomalhaut" }
+    sets.weapons.DualSavageWeapons = { main = "Naegling", sub = "Tauret", range = "Ataktos" }
+    sets.weapons.DualEvisceration = { main = "Tauret", sub = "Savage Blade", range = "Ataktos" }
     sets.weapons.Savage = { main = "Naegling", sub = "Nusku Shield", range = "Ataktos" }
     sets.weapons.DualLeadenRanged = { main = "Rostam", sub = "Tauret", range = "Fomalhaut" }
     sets.weapons.DualLeadenMelee = { main = "Naegling", sub = "Atoyac", range = "Fomalhaut" }
     sets.weapons.DualAeolian = { main = "Rostam", sub = "Tauret", range = "Ataktos" }
-    sets.weapons.DualLeadenMeleeAcc = { main = "Naegling", sub = "Blurred Knife +1", range = "Fomalhaut" }
+    sets.weapons.DualLeadenMeleeAcc = { main = "Naegling", sub = "Tauret", range = "Fomalhaut" }
     sets.weapons.DualRanged = { main = "Qutrub Knife", sub = "Burrower's Wand", range = "Anarchy" }
 
     -- Engaged sets

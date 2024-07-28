@@ -453,21 +453,18 @@ function init_gear_sets()
         feet = "Lanun Bottes +1"
     }
 
-    sets.precast.WS['Wildfire'] = {
+    sets.precast.WS['Wildfire'] = set_combine(sets.precast.WS.MAB, {
         ammo = gear.MAbullet,
-        head = gear.herculean_nuke_head,
         neck = "Comm. Charm +2",
         ear1 = "Crematio Earring",
         ear2 = "Friomisi Earring",
-        body = "Laksa. Frac +1",
-        hands = "Carmine Fin. Ga. +1",
-        ring1 = "Regal Ring",
+        ring1 = "Epaminondas's Ring",
         ring2 = "Dingir Ring",
         back = gear.magic_wsd_jse_back,
         waist = "Eschan Stone",
         legs = "Nyame Flanchard",
-        feet = "Lanun Bottes +1"
-    }
+        -- feet = "Lanun Bottes +3"
+    })
 
     sets.precast.WS['Wildfire'].Acc = {
         ammo = gear.MAbullet,
@@ -708,7 +705,7 @@ function init_gear_sets()
     sets.weapons.DualEvisceration = { main = "Tauret", sub = "Blurred Knife +1", range = "Ataktos" }
     sets.weapons.Savage = { main = "Naegling", sub = "Nusku Shield", range = "Ataktos" }
     sets.weapons.DualLeadenRanged = { main = "Rostam", sub = "Tauret", range = "Fomalhaut" }
-    sets.weapons.DualLeadenMelee = { main = "Naegling", sub = "Atoyac", range = "Quicksilver" }
+    sets.weapons.DualLeadenMelee = { main = "Naegling", sub = "Atoyac", range = "Fomalhaut" }
     sets.weapons.DualAeolian = { main = "Rostam", sub = "Tauret", range = "Ataktos" }
     sets.weapons.DualLeadenMeleeAcc = { main = "Naegling", sub = "Gleti's Knife", range = "Fomalhaut" }
     sets.weapons.DualRanged = { main = "Qutrub Knife", sub = "Burrower's Wand", range = "Anarchy" }

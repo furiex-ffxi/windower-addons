@@ -107,8 +107,6 @@ local item_names = {}
 
 function process_table(table)
 	for k, v in pairs(table) do
-		print(k)
-		print(v)
 		if slot_names[k] then
 			if type(v) == 'table' then
 				item_names[#item_names +1] = v.name

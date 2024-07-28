@@ -73,31 +73,57 @@
         <tracking>chloris</tracking>
         <visible>true</visible>
     </global>
+    <cleobabe>
+        <text>
+            <bg>
+                <green>75</green>
+            </bg>
+            <pos>
+                <x>76</x>
+                <y>503</y>
+            </pos>
+        </text>
+        <tracking>briareus</tracking>
+        <visible>false</visible>
+    </cleobabe>
     <furyex>
         <text>
             <bg>
                 <green>75</green>
             </bg>
+            <pos>
+                <x>76</x>
+                <y>503</y>
+            </pos>
         </text>
+        <tracking>itzpapalotl</tracking>
         <visible>false</visible>
     </furyex>
     <lolababe>
         <text>
+            <bg>
+                <green>75</green>
+            </bg>
             <pos>
-                <y>0</y>
+                <x>76</x>
+                <y>503</y>
             </pos>
         </text>
         <tracking>glavoid</tracking>
+        <visible>false</visible>
     </lolababe>
     <mailman>
         <text>
+            <pos>
+                <x>76</x>
+                <y>503</y>
+            </pos>
             <text>
                 <fonts>
 
                 </fonts>
             </text>
         </text>
-        <visible>false</visible>
+        <tracking>itzpapalotl</tracking>
     </mailman>
 </settings>
-tings>

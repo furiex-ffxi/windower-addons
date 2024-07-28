@@ -36,11 +36,11 @@ function init_gear_sets()
     -- Precast sets
     --------------------------------------
     gear.af = {
-        Head = "Hachi. Hatsu. +2",
-        Body = "Hachi. Chain. +2",
-        Hands = "Hachiya Tekko +2",
+        Head = "Hachiya Hatsu. +3",
+        Body = "Hachiya Chain. +3",
+        Hands = "Hachiya Tekko +3",
         Legs = "Hachiya Hakama +3",
-        Feet = "Hachi. Kyahan +2"
+        Feet = "Hachiya Kyahan +3"
     }
 
     gear.relic = {
@@ -776,7 +776,7 @@ function init_gear_sets()
 
     -- Weapons sets
     sets.weapons.Heishi = { main = "Heishi Shorinken", sub = "Kunimitsu" }
-    sets.weapons.Savage = { main = "Sasuke Katana", sub = "Uzura +2" }
+    sets.weapons.Savage = { main = "Naegling", sub = "Uzura +2" }
     sets.weapons.Evisceration = { main = "Tauret", sub = "Kunimitsu" }
     sets.weapons.MagicWeapons = { main = "Kunimitsu", sub = "Tauret" }
 	sets.weapons.ProcDagger = { main = "Qutrub Knife", sub = empty }

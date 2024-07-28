@@ -64,7 +64,7 @@ function init_gear_sets()
 	sets.weapons.Carnwenhan = { main = "Carnwenhan", sub = "Genmei Shield" }
 	sets.weapons.Naegling = { main = "Naegling", sub = "Genmei Shield" }
 	sets.weapons.Qutrub = { main = "Qutrub Knife", sub = "Genmei Shield" }
-	sets.weapons.DualCarnwenhan = {main="Dancing Dagger", sub="Ternion Dagger +1"}	
+	sets.weapons.DualCarnwenhan = {main="Carnwenhan", sub="Ternion Dagger +1"}	
 	sets.weapons.DualWeapons = { main = "Aeneas", sub = "Centovente" }
 	sets.weapons.DualNaegling = { main = "Naegling", sub = "Ternion Dagger +1" }
 	sets.weapons.DualTauret = { main = "Tauret", sub = "Blurred Knife +1" }

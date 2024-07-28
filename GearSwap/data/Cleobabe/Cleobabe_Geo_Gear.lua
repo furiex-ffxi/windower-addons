@@ -45,7 +45,7 @@ function init_gear_sets()
 	-- Precast sets
 	--------------------------------------
 	gear.af = {
-		Head = "Geo. Galero +2",
+		Head = "Geo. Galero +3",
 		Body = "Geomancy Tunic +3",
 		Hands = "Geo. Mitaines +3",
 		Legs = "Geomancy Pants +3",

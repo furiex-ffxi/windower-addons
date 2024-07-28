@@ -513,7 +513,11 @@ function init_gear_sets()
 	sets.midcast["Sentinel's Scherzo"] = { feet = "Fili Cothurnes +3" }
 	sets.midcast["Chocobo Mazurka"] = { range = "Marsyas" }
 
-	sets.midcast.Paeon = sets.midcast.DaurdablaDummy 
+	sets.midcast['Army\'s Paeon'] = sets.midcast.DaurdablaDummy
+	sets.midcast['Army\'s Paeon II'] = sets.midcast.DaurdablaDummy
+	sets.midcast['Army\'s Paeon III'] = sets.midcast.DaurdablaDummy
+	sets.midcast['Army\'s Paeon IV'] = sets.midcast.DaurdablaDummy
+
 	sets.midcast['Scop\'s Operetta'] = sets.midcast.DaurdablaDummy
 	sets.midcast['Goblin Gavotte'] = sets.midcast.DaurdablaDummy
 	sets.midcast['Sheepfoe Mambo'] = sets.midcast.DaurdablaDummy		
