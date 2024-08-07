@@ -1,7 +1,7 @@
 function user_job_setup()
 	-- Options: Override default values
-	state.OffenseMode:options('Normal','SomeAcc', 'Acc', 'FullAcc', 'Fodder', 'Subtle')
-	state.WeaponskillMode:options('Match', 'Normal', 'SomeAcc', 'Acc', 'FullAcc', 'Fodder')
+	state.OffenseMode:options('Normal', 'Acc', 'Pdl', 'Fodder', 'Subtle')
+	state.WeaponskillMode:options('Match', 'Normal', 'Acc', 'Pdl', 'Fodder')
 	state.HybridMode:options('Normal', 'DT')
 	state.PhysicalDefenseMode:options('PDT', 'PDTReraise')
 	state.MagicalDefenseMode:options('MDT', 'MDTReraise')
@@ -273,9 +273,8 @@ function init_gear_sets()
 		-- legs = sets.Nyame.Legs,
 	}
 
-	sets.precast.WS.SomeAcc = set_combine(sets.precast.WS, {})
-	sets.precast.WS.Acc = set_combine(sets.precast.WS, {})
-	sets.precast.WS.FullAcc = set_combine(sets.precast.WS, { neck = "Combatant's Torque" })
+	sets.precast.WS.Acc = set_combine(sets.precast.WS, { neck = "Combatant's Torque" })
+	sets.precast.WS.Pdl = set_combine(sets.precast.WS, { legs = "Sakpata's Cuisses" })
 	sets.precast.WS.Fodder = set_combine(sets.precast.WS, {})
 	sets.precast.WS.Subtle = set_combine(sets.precast.WS, {
 		ring1 = "Chirich Ring +1",
@@ -287,18 +286,14 @@ function init_gear_sets()
 		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 	})
-	sets.precast.WS['Catastrophe'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {
-		ring1 = "Regal Ring",
-		ring2 = "Niqmaddu Ring",
-	})
 	sets.precast.WS['Catastrophe'].Acc = set_combine(sets.precast.WS.Acc, {
 		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 	})
-	sets.precast.WS['Catastrophe'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
+	sets.precast.WS['Catastrophe'].Pdl = set_combine(sets.precast.WS.Pdl, {
 		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
-	})
+	})	
 	sets.precast.WS['Catastrophe'].Fodder = set_combine(sets.precast.WS.Fodder, {
 		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
@@ -309,21 +304,16 @@ function init_gear_sets()
 		ring2 = "Niqmaddu Ring",
 		back = DRKCape.VIT,
 	})
-	sets.precast.WS['Torcleaver'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {
-		ring1 = "Regal Ring",
-		ring2 = "Niqmaddu Ring",	
-		back = DRKCape.VIT,	
-	})
 	sets.precast.WS['Torcleaver'].Acc = set_combine(sets.precast.WS.Acc, {
 		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 		back = DRKCape.VIT,		
 	})
-	sets.precast.WS['Torcleaver'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
+	sets.precast.WS['Torcleaver'].Pdl = set_combine(sets.precast.WS.Pdl, {
 		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 		back = DRKCape.VIT,		
-	})
+	})	
 	sets.precast.WS['Torcleaver'].Fodder = set_combine(sets.precast.WS.Fodder, {
 		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
@@ -338,21 +328,16 @@ function init_gear_sets()
 		ring2 = "Niqmaddu Ring",
 		hands = "Sakpata's Gauntlets",
 	})
-	sets.precast.WS['Insurgency'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {
-		ring1 = "Regal Ring",
-		ring2 = "Niqmaddu Ring",
-		hands = "Sakpata's Gauntlets",
-	})
 	sets.precast.WS['Insurgency'].Acc = set_combine(sets.precast.WS.Acc, {
 		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 		hands = "Sakpata's Gauntlets",
 	})
-	sets.precast.WS['Insurgency'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
+	sets.precast.WS['Insurgency'].Pdl = set_combine(sets.precast.WS.Pdl, {
 		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 		hands = "Sakpata's Gauntlets",
-	})
+	})	
 	sets.precast.WS['Insurgency'].Fodder = set_combine(sets.precast.WS.Fodder, {
 		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
@@ -364,15 +349,11 @@ function init_gear_sets()
 		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 	})
-	sets.precast.WS['Cross Reaper'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {
-		ring1 = "Regal Ring",
-		ring2 = "Niqmaddu Ring",
-	})
 	sets.precast.WS['Cross Reaper'].Acc = set_combine(sets.precast.WS.Acc, {
 		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 	})
-	sets.precast.WS['Cross Reaper'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
+	sets.precast.WS['Cross Reaper'].Pdl = set_combine(sets.precast.WS.Pdl, {
 		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 	})
@@ -386,17 +367,12 @@ function init_gear_sets()
 		ring2 = "Niqmaddu Ring",
 		waist = "Fotia Belt"
 	})
-	sets.precast.WS['Quietus'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {
-		ring1 = "Regal Ring",
-		ring2 = "Niqmaddu Ring",
-		waist = "Fotia Belt"
-	})
 	sets.precast.WS['Quietus'].Acc = set_combine(sets.precast.WS.Acc, {
 		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 		waist = "Fotia Belt"
 	})
-	sets.precast.WS['Quietus'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
+	sets.precast.WS['Quietus'].Pdl = set_combine(sets.precast.WS.Pdl, {
 		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 		waist = "Fotia Belt"
@@ -407,14 +383,7 @@ function init_gear_sets()
 		waist = "Fotia Belt"
 	})
 
-
 	sets.precast.WS['Entropy'] = set_combine(sets.precast.WS, {
-		head = "Hjarrandi Helm",
-		waist = "Fotia Belt",
-		ring1 = "Regal Ring",
-		ring2 = "Niqmaddu Ring",
-	})
-	sets.precast.WS['Entropy'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {
 		head = "Hjarrandi Helm",
 		waist = "Fotia Belt",
 		ring1 = "Regal Ring",
@@ -426,12 +395,12 @@ function init_gear_sets()
 		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 	})
-	sets.precast.WS['Entropy'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
+	sets.precast.WS['Entropy'].Pdl = set_combine(sets.precast.WS.Pdl, {
 		head = "Hjarrandi Helm",
 		waist = "Fotia Belt",
 		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
-	})
+	})	
 	sets.precast.WS['Entropy'].Fodder = set_combine(sets.precast.WS.Fodder, {
 		head = "Hjarrandi Helm",
 		waist = "Fotia Belt",
@@ -444,17 +413,12 @@ function init_gear_sets()
 		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 	})
-	sets.precast.WS['Resolution'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {
-		neck = "Fotia Gorget",
-		ring1 = "Regal Ring",
-		ring2 = "Niqmaddu Ring",
-	})
 	sets.precast.WS['Resolution'].Acc = set_combine(sets.precast.WS.Acc, {
 		neck = "Fotia Gorget",
 		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 	})
-	sets.precast.WS['Resolution'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
+	sets.precast.WS['Resolution'].Pdl = set_combine(sets.precast.WS.Pdl, {
 		neck = "Fotia Gorget",
 		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
@@ -473,14 +437,6 @@ function init_gear_sets()
 		ring2 = "Metamor. Ring +1",
 		back = DRKCape.VIT,
 	})
-	sets.precast.WS['Herculean Slash'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {
-		-- neck = "Sanctity Necklace",
-		ear1 = "Friomisi Earring",
-		ear2 = "Malignance Earring",
-		waist = "Eschan Stone",
-		ring2 = "Metamor. Ring +1",
-		back = DRKCape.VIT,
-	})
 	sets.precast.WS['Herculean Slash'].Acc = set_combine(sets.precast.WS.Acc, {
 		-- neck = "Sanctity Necklace",
 		ear1 = "Friomisi Earring",
@@ -489,7 +445,7 @@ function init_gear_sets()
 		ring2 = "Metamor. Ring +1",
 		back = DRKCape.VIT,
 	})
-	sets.precast.WS['Herculean Slash'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
+	sets.precast.WS['Herculean Slash'].Pdl = set_combine(sets.precast.WS.Pdl, {
 		-- neck = "Sanctity Necklace",
 		ear1 = "Friomisi Earring",
 		ear2 = "Malignance Earring",
@@ -627,16 +583,12 @@ function init_gear_sets()
 		back = DRKCape.TP,
 	}
 	
-	sets.engaged.SomeAcc = set_combine(sets.engaged, {
-
-	})
-
-	sets.engaged.Acc = set_combine(sets.engaged.SomeAcc, {
-		right_ear = "Domin. Earring +1",
-	})
-
-	sets.engaged.FullAcc = set_combine(sets.engaged.Acc, {
+	sets.engaged.Acc = set_combine(sets.engaged, {
 		hands = "Gazu Bracelets +1",
+	})
+
+	sets.engaged.Pdl = set_combine(sets.engaged, {
+		
 	})
 
 	sets.engaged.Fodder = set_combine(sets.engaged, {
@@ -685,33 +637,23 @@ function init_gear_sets()
 	--Example sets:
 	--[[
     sets.engaged.Adoulin = {}
-	sets.engaged.SomeAcc.Adoulin = {}
 	sets.engaged.Acc.Adoulin = {}
-	sets.engaged.FullAcc.Adoulin = {}
 	sets.engaged.Fodder.Adoulin = {}
 	
 	sets.engaged.PDT = {}
-	sets.engaged.SomeAcc.PDT = {}
 	sets.engaged.Acc.PDT = {}
-	sets.engaged.FullAcc.PDT = {}
 	sets.engaged.Fodder.PDT = {}
 	
 	sets.engaged.PDT.Adoulin = {}
-	sets.engaged.SomeAcc.PDT.Adoulin = {}
 	sets.engaged.Acc.PDT.Adoulin = {}
-	sets.engaged.FullAcc.PDT.Adoulin = {}
 	sets.engaged.Fodder.PDT.Adoulin = {}
 	
 	sets.engaged.MDT = {}
-	sets.engaged.SomeAcc.MDT = {}
 	sets.engaged.Acc.MDT = {}
-	sets.engaged.FullAcc.MDT = {}
 	sets.engaged.Fodder.MDT = {}
 	
 	sets.engaged.MDT.Adoulin = {}
-	sets.engaged.SomeAcc.MDT.Adoulin = {}
 	sets.engaged.Acc.MDT.Adoulin = {}
-	sets.engaged.FullAcc.MDT.Adoulin = {}
 	sets.engaged.Fodder.MDT.Adoulin = {}
 	
             -- Variations for TP weapon and (optional) offense/defense modes.  Code will fall back on previous
@@ -721,75 +663,51 @@ function init_gear_sets()
 
 -- Liberator melee sets
     sets.engaged.Liberator = {}
-	sets.engaged.Liberator.SomeAcc = {}
 	sets.engaged.Liberator.Acc = {}
-	sets.engaged.Liberator.FullAcc = {}
 	sets.engaged.Liberator.Fodder = {}
 	
     sets.engaged.Liberator.Adoulin = {}
-	sets.engaged.Liberator.SomeAcc.Adoulin = {}
 	sets.engaged.Liberator.Acc.Adoulin = {}
-	sets.engaged.Liberator.FullAcc.Adoulin = {}
 	sets.engaged.Liberator.Fodder.Adoulin = {}
 	
     sets.engaged.Liberator.AM = {}
-	sets.engaged.Liberator.SomeAcc.AM = {}
 	sets.engaged.Liberator.Acc.AM = {}
-	sets.engaged.Liberator.FullAcc.AM = {}
 	sets.engaged.Liberator.Fodder.AM = {}
 	
     sets.engaged.Liberator.Adoulin.AM = {}
-	sets.engaged.Liberator.SomeAcc.Adoulin.AM = {}
 	sets.engaged.Liberator.Acc.Adoulin.AM = {}
-	sets.engaged.Liberator.FullAcc.Adoulin.AM = {}
 	sets.engaged.Liberator.Fodder.Adoulin.AM = {}
 
 	sets.engaged.Liberator.PDT = {}
-	sets.engaged.Liberator.SomeAcc.PDT = {}
 	sets.engaged.Liberator.Acc.PDT = {}
-	sets.engaged.Liberator.FullAcc.PDT = {}
 	sets.engaged.Liberator.Fodder.PDT = {}
 	
 	sets.engaged.Liberator.PDT.Adoulin = {}
-	sets.engaged.Liberator.SomeAcc.PDT.Adoulin = {}
 	sets.engaged.Liberator.Acc.PDT.Adoulin = {}
-	sets.engaged.Liberator.FullAcc.PDT.Adoulin = {}
 	sets.engaged.Liberator.Fodder.PDT.Adoulin = {}
 	
 	sets.engaged.Liberator.PDT.AM = {}
-	sets.engaged.Liberator.SomeAcc.PDT.AM = {}
 	sets.engaged.Liberator.Acc.PDT.AM = {}
-	sets.engaged.Liberator.FullAcc.PDT.AM = {}
 	sets.engaged.Liberator.Fodder.PDT.AM = {}
 	
 	sets.engaged.Liberator.PDT.Adoulin.AM = {}
-	sets.engaged.Liberator.SomeAcc.PDT.Adoulin.AM = {}
 	sets.engaged.Liberator.Acc.PDT.Adoulin.AM = {}
-	sets.engaged.Liberator.FullAcc.PDT.Adoulin.AM = {}
 	sets.engaged.Liberator.Fodder.PDT.Adoulin.AM = {}
 	
 	sets.engaged.Liberator.MDT = {}
-	sets.engaged.Liberator.SomeAcc.MDT = {}
 	sets.engaged.Liberator.Acc.MDT = {}
-	sets.engaged.Liberator.FullAcc.MDT = {}
 	sets.engaged.Liberator.Fodder.MDT = {}
 	
 	sets.engaged.Liberator.MDT.Adoulin = {}
-	sets.engaged.Liberator.SomeAcc.MDT.Adoulin = {}
 	sets.engaged.Liberator.Acc.MDT.Adoulin = {}
-	sets.engaged.Liberator.FullAcc.MDT.Adoulin = {}
 	sets.engaged.Liberator.Fodder.MDT.Adoulin = {}
 	
 	sets.engaged.Liberator.MDT.AM = {}
-	sets.engaged.Liberator.SomeAcc.MDT.AM = {}
 	sets.engaged.Liberator.Acc.MDT.AM = {}
-	sets.engaged.Liberator.FullAcc.MDT.AM = {}
 	sets.engaged.Liberator.Fodder.MDT.AM = {}
 	
 	sets.engaged.Liberator.MDT.Adoulin.AM = {}
-	sets.engaged.Liberator.SomeAcc.MDT.Adoulin.AM = {}
 	sets.engaged.Liberator.Acc.MDT.Adoulin.AM = {}
-	sets.engaged.Liberator.FullAcc.MDT.Adoulin.AM = {}
 	sets.engaged.Liberator.Fodder.MDT.Adoulin.AM = {}
 ]]
 	--

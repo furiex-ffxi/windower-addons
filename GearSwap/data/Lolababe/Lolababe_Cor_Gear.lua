@@ -12,8 +12,8 @@ function user_job_setup()
         'DualProcWeapons', 'None')
     state.CompensatorMode:options('Always', '300', '1000', 'Never')
 
-    gear.RAbullet = "Bronze Bullet"
-    gear.WSbullet = "Chrono Bullet"
+    gear.RAbullet = "Eminent Bullet"
+    gear.WSbullet = "Eminent Bullet"
     gear.MAbullet = "Chrono Bullet" --For MAB WS, do not put single-use bullets here.
     gear.QDbullet = "Animikii Bullet"
     options.ammo_warning_limit = 15
@@ -335,35 +335,39 @@ function init_gear_sets()
     })
 
     sets.precast.WS['Last Stand'] = {
-        ammo = gear.WSbullet,
-        head = "Meghanada Visor +2",
+        ammo=gear.RAbullet,
+        -- head={ name="Lanun Tricorne +3", augments={'Enhances "Winning Streak" effect',}},
+        -- body="Ikenga's Vest",
+        -- hands="Chasseur's Gants +3",
+        head = sets.Nyame.Head,
+        body = sets.Nyame.Body,
+        hands = sets.Nyame.Hands,
+        legs = sets.Nyame.Legs,
+        feet = sets.Nyame.Feet,
+        -- feet = { name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
         neck = "Fotia Gorget",
-        ear1 = "Moonshade Earring",
-        ear2 = "Telos Earring",
-        body = "Laksa. Frac +1",
-        hands = "Meg. Gloves +2",
-        ring1 = "Regal Ring",
-        ring2 = "Dingir Ring",
-        back = gear.ranger_wsd_jse_back,
         waist = "Fotia Belt",
-        legs = "Meg. Chausses +2",
-        feet = "Lanun Bottes +1"
+        left_ear = { name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+        right_ear = "Ishvara Earring",
+        left_ring = "Regal Ring",
+        right_ring = "Dingir Ring",
+        back = { name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%','Damage taken-5%',}},
     }
 
     sets.precast.WS['Last Stand'].Acc = {
-        ammo = gear.WSbullet,
-        head = "Meghanada Visor +2",
-        neck = "Iskur Gorget",
-        ear1 = "Moonshade Earring",
-        ear2 = "Telos Earring",
-        body = "Laksa. Frac +1",
-        hands = "Meg. Gloves +2",
-        ring1 = "Regal Ring",
-        ring2 = "Dingir Ring",
-        back = gear.ranger_wsd_jse_back,
-        waist = "Fotia Belt",
-        legs = "Meg. Chausses +2",
-        feet = "Lanun Bottes +1"
+        ammo=gear.WSbullet,
+        head={ name={ name="Nyame Helm", augments={'Path: B',}}, augments={'Path: B',}},
+        body={ name="Nyame Mail", augments={'Path: B',}},
+        hands="Chasseur's Gants +3",
+        legs={ name="Nyame Flanchard", augments={'Path: B',}},
+        feet={ name="Nyame Sollerets", augments={'Path: B',}},
+        neck={ name="Comm. Charm +2", augments={'Path: A',}},
+        waist="Yemaya Belt",
+        left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+        right_ear="Telos Earring",
+        left_ring="Hajduk Ring +1",
+        right_ring="Cornelia's Ring",
+        back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%','Damage taken-5%',}},
     }
 
     sets.precast.WS['Split Shot'] = {
@@ -468,18 +472,18 @@ function init_gear_sets()
 
     sets.precast.WS['Wildfire'].Acc = {
         ammo = gear.MAbullet,
-        head = gear.herculean_nuke_head,
+        head = "Nyame Helm",
         neck = "Comm. Charm +2",
         ear1 = "Crematio Earring",
         ear2 = "Friomisi Earring",
-        body = "Laksa. Frac +1",
-        hands = "Leyline Gloves",
+        body = "Nyame Mail",
+        hands = "Nyame Gauntlets",
         ring1 = "Regal Ring",
         ring2 = "Dingir Ring",
         back = gear.magic_wsd_jse_back,
         waist = "Eschan Stone",
         legs = "Nyame Flanchard",
-        feet = "Lanun Bottes +1"
+        feet = "Nyame Sollerets"
     }
 
     sets.precast.WS['Hot Shot'] = sets.precast.WS['Wildfire']
@@ -697,18 +701,18 @@ function init_gear_sets()
         hands = "Floral Gauntlets", waist = "Reiki Yotai" }
 
     -- Weapons sets
-    sets.weapons.Default = { main = "Naegling", sub = "Nusku Shield", range = "Anarchy" }
-    sets.weapons.Ranged = { main = "Qutrub Knife", sub = "Nusku Shield", range = "Troll Gun" }
-    sets.weapons.Evisceration = { main = "Tauret", sub = "Nusku Shield", range = "Ataktos" }
+    sets.weapons.Default = { main = "Qutrub Knife", sub = "Nusku Shield", range = "Anarchy +2" }
+    sets.weapons.Ranged = { main = "Qutrub Knife", sub = "Nusku Shield", range = "Anarchy +2" }
+    sets.weapons.Evisceration = { main = "Tauret", sub = "Nusku Shield", range = "Anarchy +2" }
     sets.weapons.DualWeapons = { main = "Naegling", sub = "Gleti's Knife", range = "Fomalhaut" }
-    sets.weapons.DualSavageWeapons = { main = "Naegling", sub = "Gleti's Knife", range = "Ataktos" }
-    sets.weapons.DualEvisceration = { main = "Tauret", sub = "Blurred Knife +1", range = "Ataktos" }
-    sets.weapons.Savage = { main = "Naegling", sub = "Nusku Shield", range = "Ataktos" }
+    sets.weapons.DualSavageWeapons = { main = "Naegling", sub = "Gleti's Knife", range = "Anarchy +2" }
+    sets.weapons.DualEvisceration = { main = "Tauret", sub = "Blurred Knife +1", range = "Anarchy +2" }
+    sets.weapons.Savage = { main = "Naegling", sub = "Nusku Shield", range = "Anarchy +2" }
     sets.weapons.DualLeadenRanged = { main = "Rostam", sub = "Tauret", range = "Fomalhaut" }
     sets.weapons.DualLeadenMelee = { main = "Naegling", sub = "Atoyac", range = "Fomalhaut" }
-    sets.weapons.DualAeolian = { main = "Rostam", sub = "Tauret", range = "Ataktos" }
+    sets.weapons.DualAeolian = { main = "Rostam", sub = "Tauret", range = "Anarchy +2" }
     sets.weapons.DualLeadenMeleeAcc = { main = "Naegling", sub = "Gleti's Knife", range = "Fomalhaut" }
-    sets.weapons.DualRanged = { main = "Qutrub Knife", sub = "Burrower's Wand", range = "Anarchy" }
+    sets.weapons.DualRanged = { main = "Qutrub Knife", sub = "Gleti's Knife", range = "Anarchy +2" }
 
     -- Engaged sets
 

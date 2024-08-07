@@ -64,10 +64,10 @@ function init_gear_sets()
 	sets.weapons.Carnwenhan = { main = "Carnwenhan", sub = "Genmei Shield" }
 	sets.weapons.Naegling = { main = "Naegling", sub = "Genmei Shield" }
 	sets.weapons.Qutrub = { main = "Qutrub Knife", sub = "Genmei Shield" }
-	sets.weapons.DualCarnwenhan = {main="Carnwenhan", sub="Ternion Dagger +1"}	
-	sets.weapons.DualWeapons = { main = "Aeneas", sub = "Centovente" }
-	sets.weapons.DualNaegling = { main = "Naegling", sub = "Ternion Dagger +1" }
-	sets.weapons.DualTauret = { main = "Tauret", sub = "Blurred Knife +1" }
+	sets.weapons.DualCarnwenhan = {main="Carnwenhan", sub="Fusetto +2"}	
+	sets.weapons.DualWeapons = { main = "Aeneas", sub = "Fusetto +2" }
+	sets.weapons.DualNaegling = { main = "Naegling", sub = "Fusetto +2" }
+	sets.weapons.DualTauret = { main = "Tauret", sub = "Fusetto +2" }
 	sets.weapons.DualAeolian = { main = "Tauret", sub = "Malevolence" }
 
 	sets.buff.Sublimation = {
@@ -683,12 +683,13 @@ function init_gear_sets()
 		hands = "Bunzi's Gloves",
 		legs = "Volte Tights",
 		feet = "Volte Spats",
-		neck = { name = "Bard's Charm +2", augments = { 'Path: A', } },
+		neck = "Combatant's Torque",
+		-- neck = { name = "Bard's Charm +2", augments = { 'Path: A', } },
 		waist = { name = "Sailfi Belt +1", augments = { 'Path: A', } },
 		ear1 = "Telos Earring",
 		ear2 = "Digni. Earring",
 		ring1 = "Chirich Ring +1",
-		ring2 = "Chirich Ring +1",
+		ring2 = "Lehko's Ring",
 		back = { name = "Intarabus's Cape", augments = { 'DEX+20', 'Accuracy+20 Attack+20', 'Accuracy+10', '"Dbl.Atk."+10', 'Phys. dmg. taken-10%', } },
 	}
 
@@ -722,7 +723,7 @@ function init_gear_sets()
 		
 	})
 	sets.engaged.DW = set_combine(sets.engaged, {
-		ear1 = "Eabani Earring",
+		-- ear1 = "Eabani Earring",
 		ear2 = "Suppanomimi",
 		waist = "Reiki Yotai",
 	})

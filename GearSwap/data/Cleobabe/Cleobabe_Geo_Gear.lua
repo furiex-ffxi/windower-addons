@@ -100,7 +100,7 @@ function init_gear_sets()
 		ear1 = "Enchntr. Earring +1",
 		ear2 = "Malignance Earring",
 		-- body = "Zendik Robe",
-		body = "Shango Robe",
+		body = "Volte Doublet",
 		hands = "Volte Gloves",
 		ring1 = "Kishar Ring",
 		ring2 = "Lebeche Ring",
@@ -687,7 +687,7 @@ function init_gear_sets()
 		feet = "Volte Gaiters",
 		ring1 = "Defending Ring",
 		ring2 = "Stikini Ring +1",
-		back = "Moonlight Cape",
+		back = "Shadow Mantle",
 		waist = "Plat. Mog. Belt",
 	}
 
@@ -883,18 +883,20 @@ function init_gear_sets()
 	}
 
 	sets.engaged.DW = {
-		ammo = "Hasty Pinion +1",
-		head = "Befouled Crown",
-		neck = "Asperity Necklace",
-		ear1 = "Dudgeon Earring",
-		ear2 = "Heartseeker Earring",
-		body = "Jhakri Robe +2",
-		hands = "Regal Cuffs",
-		ring1 = "Ramuh Ring +1",
-		ring2 = "Ramuh Ring +1",
+		main = "Maxentius",
+		sub = "C. Palug Hammer",
+		ammo = "Amar Cluster",
+		head = "Blistering Sallet +1",
+		neck = "Combatant's Torque",
+		ear1 = "Crep. Earring",
+		ear2 = "Telos Earring",
+		body = gear.empy.Body,
+		hands = "Gazu Bracelets +1",
+		ring1 = "Petrov Ring",
+		ring2 = "Cacoethic Ring",
 		back = "Moonlight Cape",
-		waist = "Witful Belt",
-		legs = "Assid. Pants +1",
+		waist = "Eschan Stone",
+		legs = gear.empy.Legs,
 		feet = "Battlecast Gaiters"
 	}
 
@@ -933,7 +935,7 @@ function init_gear_sets()
 	sets.weapons.Maxentius = { main = 'Maxentius', sub = 'Genmei Shield' }
 	sets.weapons.Ternion = { main = 'Ternion Dagger +1', sub = 'Genmei Shield' }
 	sets.weapons.Daybreak = { main = 'Daybreak', sub = 'Genmei Shield' }
-	sets.weapons.DualWeapons = { main = 'Maxentius', sub = 'Nehushtan' }
+	sets.weapons.DualWeapons = { main = 'Idris', sub = 'C. Palug Hammer' }
 end
 
 -- Select default macro book on initial load or subjob change.

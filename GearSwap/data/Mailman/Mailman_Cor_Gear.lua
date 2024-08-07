@@ -8,11 +8,11 @@ function user_job_setup()
     state.HybridMode:options('Normal', 'DT')
     state.ExtraMeleeMode = M { ['description'] = 'Extra Melee Mode', 'None', 'DWMax' }
     state.Weapons:options('Default', 'Ranged', 'RangedAcc', 'Savage', 'Evisceration', 'DualWeapons', 'DualSavageWeapons',
-        'DualEvisceration', 'DualLeadenRanged', 'DualLeadenMelee', 'DualAeolian', 'DualLeadenMeleeAcc', 'DualRanged', 'DualRoll',
+        'DualEvisceration', 'DualLeadenRanged', 'DualLeadenMelee', 'DualAeolian', 'DualRanged', 'DualRoll',
         'DualFermion', 'None')
     state.CompensatorMode:options('Always', '300', '1000', 'Never')
 
-    gear.RAbullet = "Living Bullet"
+    gear.RAbullet = "Chrono Bullet"
     gear.WSbullet = "Chrono Bullet"
     gear.MAbullet = "Living Bullet" --For MAB WS, do not put single-use bullets here.
     gear.QDbullet = "Living Bullet" -- "Animikii Bullet"
@@ -22,11 +22,11 @@ function user_job_setup()
     -- Needs more racc
     gear.tp_ranger_jse_back = { name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','"Store TP"+10','Damage taken-5%',}}
     gear.snapshot_jse_back = { name = "Camulus's Mantle", augments = { '"Snapshot"+10', } }
-    gear.tp_jse_back = { name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dual Wield"+10','Phys. dmg. taken-10%',}}
-    gear.ranger_wsd_jse_back = { name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%',}}
+    gear.tp_jse_back = { name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dual Wield"+10','Phys. dmg. taken-10%',}}
+    gear.ranger_wsd_jse_back = { name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%','Damage taken-5%',}}
     -- needs more agi
     gear.magic_wsd_jse_back = { name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','Weapon skill damage +10%','Mag. Evasion+15',}}
-    gear.str_wsd_jse_back = { name="Camulus's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}}
+    gear.str_wsd_jse_back = { name="Camulus's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
 
     gear.Empy = {}
     gear.Empy.Head = "Chass. Tricorne +3"
@@ -101,19 +101,19 @@ function init_gear_sets()
     sets.precast.CorsairRoll["Allies' Roll"] = set_combine(sets.precast.CorsairRoll, { hands = gear.Empy.Hands })
 
     sets.precast.CorsairShot = {
-        ammo = gear.QDbullet,
-        head = gear.herculean_nuke_head,
-        neck = "Iskur Gorget",
-        ear1 = "Dedition Earring",
-        ear2 = "Telos Earring",
-        body = "Mummu Jacket +2",
-        hands = "Adhemar Wristbands +1",
-        ring1 = "Crepuscular Ring",
-        ring2 = "Dingir Ring",
-        back = gear.tp_ranger_jse_back,
-        waist = "Goading Belt",
-        legs = gear.Empy.Legs,
-        feet = "Carmine Greaves +1"
+        ammo=gear.QDbullet,
+        head={ name="Nyame Helm", augments={'Path: B',}},
+        body={ name="Nyame Mail", augments={'Path: B',}},
+        hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},
+        legs={ name="Nyame Flanchard", augments={'Path: B',}},
+        feet="Chass. Bottes +3",
+        neck="Sibyl Scarf",
+        waist="Eschan Stone",
+        left_ear="Friomisi Earring",
+        right_ear="Hecate's Earring",
+        left_ring="Acumen Ring",
+        right_ring="Dingir Ring",
+        back=gear.ranger_wsd_jse_back,
     }
 
     sets.precast.CorsairShot.Damage = {
@@ -696,10 +696,10 @@ function init_gear_sets()
         sub = "Nusku Shield", 
         range={ name="Anarchy +2", augments={'Delay:+60','TP Bonus +1000',}}, 
     }
-    sets.weapons.DualWeapons = { main = "Naegling", sub = "Tauret", range = "Fomalhaut" }
+    sets.weapons.DualWeapons = { main = "Naegling", sub = "Gleti's Knife", range = "Fomalhaut" }
     sets.weapons.DualSavageWeapons = { 
         main="Naegling",
-		sub="Tauret",
+		sub="Gleti's Knife",
 		range={ name="Anarchy +2", augments={'Delay:+60','TP Bonus +1000',}}, 
     }
     sets.weapons.DualEvisceration = { 
@@ -720,26 +720,25 @@ function init_gear_sets()
     }
     sets.weapons.DualLeadenMelee = { 
 		main={ name="Rostam", augments={'Path: A'}},
-        sub = "Tauret", 
+        sub = "Gleti's Knife", 
         range = "Death Penalty",
         ammo="Living Bullet",
     }
     sets.weapons.DualAeolian = { 
 		ammo="Living Bullet",
         main={ name="Rostam", augments={'Path: A'}},
-        sub="Tauret",
+        sub="Gleti's Knife",
 		range={ name="Anarchy +2", augments={'Delay:+60','TP Bonus +1000',}},    
     }
-    sets.weapons.DualLeadenMeleeAcc = { main = "Naegling", sub = "Blurred Knife +1", range = "Fomalhaut" }
     sets.weapons.DualRanged = {
 		main={ name="Rostam", augments={'Path: A'}},
-        sub="Tauret",
+        sub="Gleti's Knife",
 		range={ name="Fomalhaut", augments={'Path: A',}},
 		ammo="Chrono Bullet",
     }
     sets.weapons.DualRoll = { 
 		main={ name="Rostam", augments={'Path: C'}},
-        sub = "Tauret", 
+        sub = "Gleti's Knife", 
         range = "Compensator",
         ammo="Living Bullet",
     }

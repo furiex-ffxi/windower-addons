@@ -193,18 +193,23 @@ function init_gear_sets()
 	-- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.	
 	sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {
 		head = sets.Nyame.Head,
+		legs = "Boii Cuisses +3",
 	})
 	sets.precast.WS['Savage Blade'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {
 		head = sets.Nyame.Head,
+		legs = "Boii Cuisses +3",
 	})
 	sets.precast.WS['Savage Blade'].Acc = set_combine(sets.precast.WS.Acc, {
 		head = sets.Nyame.Head,
+		legs = "Boii Cuisses +3",
 	})
 	sets.precast.WS['Savage Blade'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
 		head = sets.Nyame.Head,
+		legs = "Boii Cuisses +3",
 	})
 	sets.precast.WS['Savage Blade'].Fodder = set_combine(sets.precast.WS.Fodder, {
 		head = sets.Nyame.Head,
+		legs = "Boii Cuisses +3",
 	})
 
 	sets.precast.WS['Upheaval'] = set_combine(sets.precast.WS, {
@@ -435,14 +440,14 @@ function init_gear_sets()
 		ammo="Coiste Bodhar",
 		head = "Boii Mask +3",
 		neck = "War. Beads +2",
-		body = "Boii Lorica +3",
+		body = "Sakpata's Breastplate",
 		hands="Sakpata's Gauntlets",
 		legs="Pumm. Cuisses +3",
 		feet="Pumm. Calligae +3",
 		-- waist="Ioskeha Belt +1",
 		waist="Sailfi Belt +1",
 		left_ear="Cessance Earring",
-		right_ear="Boii Earring",
+		right_ear="Boii Earring +1",
 		-- left_ear="Schere Earring",
 		left_ring="Moonlight Ring",
 		-- right_ring="Petrov Ring",

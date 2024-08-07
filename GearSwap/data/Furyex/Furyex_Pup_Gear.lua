@@ -454,10 +454,7 @@ function init_gear_sets()
 
     -- Idle sets to wear while pet is engaged
     sets.idle.Pet.Engaged = {
-        -- head = "Anwig Salade",
         neck = "Shulmanu Collar",
-        -- ear1 = "Enmerkar Earring",
-        -- waist = "Incarnation Sash",
         head={ name="Taeon Chapeau", augments={'Pet: Accuracy+23 Pet: Rng. Acc.+23','Pet: "Dbl. Atk."+4','Pet: Damage taken -3%',}},
         body={ name="Taeon Tabard", augments={'Pet: Accuracy+24 Pet: Rng. Acc.+24','Pet: "Dbl. Atk."+5','Pet: Damage taken -3%',}},
         hands={ name="Taeon Gloves", augments={'Pet: Accuracy+20 Pet: Rng. Acc.+20','Pet: "Dbl. Atk."+4','Pet: Damage taken -3%',}},

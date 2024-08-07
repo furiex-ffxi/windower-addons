@@ -93,10 +93,12 @@ bayld_items = {'Tlalpoloani','Macoquetza','Camatlatia','Icoyoca','Tlamini','Suij
 'Uk\'uxkaj Cap'}
 ]]
 
-windower.register_event('incoming text',function(org)
-	aita_debuffs(org)
-	aminon_debuffs(org)
-end)
+if string.find(world.area, "Outer Ra'Kaznar") then
+	windower.register_event('incoming text',function(org)
+		aita_debuffs(org)
+		aminon_debuffs(org)
+	end)
+end
 
 function aita_debuffs(org)
 	if not string.find(org:lower(), "aita") and not string.find(org:lower(), "degei") then
@@ -128,25 +130,21 @@ function aminon_debuffs(org)
 		return
 	end
 
-	if string.find(org:lower(), "off") and string.find(org:lower(), "threnody") then
-		windower.send_command('input /t Furyex Dark Threnody wore off!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! <call15>')
-	end
-
 	indexstart, indexend = string.find(org:lower(),"effect wears off")
 	if indexstart and string.find(org:lower(), "magic") then
-		windower.send_command('input /t Furyex '..string.sub(org,1,indexstart)..' wore off!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! <call15>')
+		windower.send_command('input /t Furyex Frazzle wore off!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! <call15>')
 	end
 	
 	if indexstart and string.find(org:lower(), "slow") then
-		windower.send_command('input /t Furyex '..string.sub(org,1,indexstart)..' wore off! <call15>')
+		windower.send_command('input /t Furyex Slow wore off! <call15>')
 	end
 	
 	if indexstart and string.find(org:lower(), "dia") then
-		windower.send_command('input /t Furyex '..string.sub(org,1,indexstart)..' wore off! <call15>')
+		windower.send_command('input /t Furyex Dia wore off! <call15>')
 	end
 	
 	indexstart, indexend = string.find(org:lower(),"is no longer")
 	if indexstart and string.find(org:lower(), "paralyzed") then
-		windower.send_command('input /t Furyex '..string.sub(org,1,indexstart)..' wore off! <call15>')
+		windower.send_command('input /t Furyex Paralyze wore off! <call15>')
 	end
 end

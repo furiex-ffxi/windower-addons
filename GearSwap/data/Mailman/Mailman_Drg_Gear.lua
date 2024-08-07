@@ -35,82 +35,78 @@ function init_gear_sets()
     --------------------------------------
     -- Start defining the sets
     --------------------------------------
-    gear.str_wsd_jse_back = { name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
-    gear.tp_jse_back = { name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
+    gear.af = {
+        Head = "Vishap Armet +2",
+        Body = "Vishap Mail +2",
+        Hands = "Vis. Fing. Gaunt. +2",
+        Legs = "Vishap Brais +2",
+        Feet = "Vishap Greaves +2",
+    }
+
+    gear.empy = {
+        Head = "Peltast's Mezail +2",
+        Body = "Pelt. Plackart +2",
+        Hands = "Pel. Vambraces +2",
+        Legs = "Pelt. Cuissots +2",
+        Feet = "Pelt. Schyn. +2",
+    }
     
+    gear.relic = {
+        Head = "Ptero. Armet +3",
+        Body = "Ptero. Mail +3",
+        Hands = "Ptero. Fin. G. +3",
+        Legs = "Ptero. Brais +3",
+        Feet = "Ptero. Greaves +3",
+    }
+
+    gear.str_wsd_jse_back = {
+        name = "Brigantia's Mantle",
+        augments = {'STR+20', 'Accuracy+20 Attack+20', 'STR+10', 'Weapon skill damage +10%', 'Phys. dmg. taken-10%'}
+    }
+    gear.tp_jse_back = {
+        name = "Brigantia's Mantle",
+        augments = {'DEX+20', 'Accuracy+20 Attack+20', 'Accuracy+10', '"Dbl.Atk."+10', 'Phys. dmg. taken-10%'}
+    }
+
     -- Precast Sets
     -- Precast sets to enhance JAs
     sets.precast.JA.Angon = {
-        ammo = "Angon"
-    } -- hands="Ptero. Fin. G. +1"
+        ammo = "Angon",
+        hands = gear.relic.Hands,
+    }
     sets.precast.JA.Jump = {
-        ammo = "Aurgelmir Orb +1",
-        head = "Flam. Zucchetto +2",
-        neck = "Ganesha's Mala",
-        ear1 = "Brutal Earring",
+        ammo = "Coiste Bodhar",
+        head = gear.relic.Head,
+        neck = "Dgn. Collar +2",
+        ear1 = "Crep. Earring",
         ear2 = "Sherida Earring",
-        body = gear.valorous_wsd_body,
-        hands = gear.valorous_acc_hands,
+        body = gear.relic.Body,
+        hands = gear.empy.Hands,
         ring1 = "Petrov Ring",
         ring2 = "Niqmaddu Ring",
-        back = "Brigantia's Mantle",
-        waist = "Windbuffet Belt +1",
-        legs = "Sulev. Cuisses +2",
+        back = gear.tp_jse_back,
+        waist = "Sailfi Belt +1",
+        legs = gear.relic.Legs,
         feet = "Flam. Gambieras +2"
     }
-    sets.precast.JA['Ancient Circle'] = {} -- legs="Vishap Brais"
-    sets.precast.JA['High Jump'] = {
-        ammo = "Aurgelmir Orb +1",
-        head = "Flam. Zucchetto +2",
-        neck = "Ganesha's Mala",
-        ear1 = "Brutal Earring",
-        ear2 = "Sherida Earring",
-        body = gear.valorous_wsd_body,
-        hands = gear.valorous_acc_hands,
-        ring1 = "Petrov Ring",
-        ring2 = "Niqmaddu Ring",
-        back = "Brigantia's Mantle",
-        waist = "Windbuffet Belt +1",
-        legs = "Sulev. Cuisses +2",
-        feet = "Flam. Gambieras +2"
+    sets.precast.JA['Ancient Circle'] = {
+        legs = gear.af.Legs,
     }
-    sets.precast.JA['Soul Jump'] = {
-        ammo = "Aurgelmir Orb +1",
-        head = "Flam. Zucchetto +2",
-        neck = "Ganesha's Mala",
-        ear1 = "Brutal Earring",
-        ear2 = "Sherida Earring",
-        body = gear.valorous_wsd_body,
-        hands = gear.valorous_acc_hands,
-        ring1 = "Petrov Ring",
-        ring2 = "Niqmaddu Ring",
-        back = "Brigantia's Mantle",
-        waist = "Windbuffet Belt +1",
-        legs = "Sulev. Cuisses +2",
-        feet = "Flam. Gambieras +2"
-    }
-    sets.precast.JA['Spirit Jump'] = {
-        ammo = "Aurgelmir Orb +1",
-        head = "Flam. Zucchetto +2",
-        neck = "Ganesha's Mala",
-        ear1 = "Brutal Earring",
-        ear2 = "Sherida Earring",
-        body = gear.valorous_wsd_body,
-        hands = gear.valorous_acc_hands,
-        ring1 = "Petrov Ring",
-        ring2 = "Niqmaddu Ring",
-        back = "Brigantia's Mantle",
-        waist = "Windbuffet Belt +1",
-        legs = "Sulev. Cuisses +2",
-        feet = "Flam. Gambieras +2"
-    }
+    sets.precast.JA['High Jump'] = sets.precast.JA.Jump
+    sets.precast.JA['Soul Jump'] = set_combine(sets.precast.JA.Jump, {
+        feet = gear.empy.Feet,
+    })
+    sets.precast.JA['Spirit Jump'] = set_combine(sets.precast.JA.Jump, {
+        feet = gear.empy.Feet,
+    })
     sets.precast.JA['Super Jump'] = {}
     sets.precast.JA['Spirit Link'] = {
-        head = "Vishap Armet +1"
-    } -- head="Vishap Armet",hands="Lnc. Vmbrc. +2"
-    sets.precast.JA['Call Wyvern'] = {} -- body="Ptero. Mail +1"
-    sets.precast.JA['Deep Breathing'] = {} -- hands="Ptero. Armet +1"
-    sets.precast.JA['Spirit Surge'] = {} -- body="Ptero. Mail +1"
+        head = gear.af.Head,
+        hands = gear.relic.Hands,
+    }
+    sets.precast.JA['Call Wyvern'] = { body = gear.relic.Body, } 
+    sets.precast.JA['Deep Breathing'] = { hands = gear.relic.Hands, }
+    sets.precast.JA['Spirit Surge'] = { body = gear.relic.Body, }
     sets.precast.JA['Steady Wing'] = {}
 
     -- Breath sets
@@ -186,7 +182,7 @@ function init_gear_sets()
 
     -- Put HP+ gear and the AF head to make healing breath trigger more easily with this set.
     sets.midcast.HB_Trigger = set_combine(sets.midcast.FastRecast, {
-        head = "Vishap Armet +1"
+        head = gear.af.Head,
     })
 
     -- Weaponskill sets
@@ -195,18 +191,21 @@ function init_gear_sets()
 
     sets.precast.WS = {
         ammo = "Knobkierrie",
-        head=sets.Nyame.Head,
-		body=sets.Nyame.Body,
-		hands=sets.Nyame.Hands,
-		legs=sets.Nyame.Legs,
-		feet=sets.Nyame.Feet,
-		waist="Sailfi Belt +1",
-		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-		right_ear="Ishvara Earring",
-		-- left_ring="Regal Ring",
-		left_ring="Karieyh Ring",
-        right_ring="Epaminondas's Ring",
-		back=gear.str_wsd_jse_back,
+        head = sets.Nyame.Head,
+        body = sets.Nyame.Body,
+        hands = sets.Nyame.Hands,
+        legs = sets.Nyame.Legs,
+        feet = sets.Nyame.Feet,
+        waist = "Sailfi Belt +1",
+        left_ear = {
+            name = "Moonshade Earring",
+            augments = {'Accuracy+4', 'TP Bonus +250'}
+        },
+        right_ear = "Ishvara Earring",
+        -- left_ring="Regal Ring",
+        left_ring = "Karieyh Ring",
+        right_ring = "Epaminondas's Ring",
+        back = gear.str_wsd_jse_back
     }
 
     sets.precast.WS.SomeAcc = set_combine(sets.precast.WS, {})
@@ -237,35 +236,21 @@ function init_gear_sets()
     -- Idle sets
     sets.idle = {
         ammo = "Staunch Tathlum +1",
-        head = "Loess Barbuta +1",
-        neck = "Loricate Torque +1",
+        head = gear.empy.Head,
+        neck = "Dgn. Collar +2",
         ear1 = "Genmei Earring",
         ear2 = "Ethereal Earring",
-        body = "Tartarus Platemail",
-        hands = "Sulev. Gauntlets +2",
+        body = gear.relic.Body,
+        hands = "Gleti's Gauntlets",
         ring1 = "Defending Ring",
-        ring2 = "Dark Ring",
-        back = "Shadow Mantle",
-        waist = "Flume Belt +1",
-        legs = "Carmine Cuisses +1",
-        feet = "Amm Greaves"
+        ring2 = "Shadow Ring",
+        back = gear.tp_jse_back,
+        waist = "Plat. Mog. Belt",
+        legs = "Gleti's Breeches",
+        feet = "Gleti's Boots"
     }
 
-    sets.idle.Refresh = {
-        ammo = "Staunch Tathlum +1",
-        head = "Jumalik Helm",
-        neck = "Loricate Torque +1",
-        ear1 = "Genmei Earring",
-        ear2 = "Ethereal Earring",
-        body = "Jumalik Mail",
-        hands = "Sulev. Gauntlets +2",
-        ring1 = "Defending Ring",
-        ring2 = "Dark Ring",
-        back = "Shadow Mantle",
-        waist = "Flume Belt +1",
-        legs = "Carmine Cuisses +1",
-        feet = "Amm Greaves"
-    }
+    sets.idle.Refresh = sets.idle
 
     sets.idle.Weak = set_combine(sets.idle, {
         head = "Twilight Helm",
@@ -278,63 +263,21 @@ function init_gear_sets()
     })
 
     -- Defense sets
-    sets.defense.PDT = {
-        ammo = "Staunch Tathlum +1",
-        head = "Loess Barbuta +1",
-        neck = "Loricate Torque +1",
-        ear1 = "Genmei Earring",
-        ear2 = "Ethereal Earring",
-        body = "Tartarus Platemail",
-        hands = "Sulev. Gauntlets +2",
-        ring1 = "Gelatinous Ring +1",
-        ring2 = "Moonlight Ring",
-        back = "Shadow Mantle",
-        waist = "Flume Belt +1",
-        legs = "Arke Cosc. +1",
-        feet = "Amm Greaves"
-    }
+    sets.defense.PDT = sets.idle
 
     sets.defense.PDTReraise = set_combine(sets.defense.PDT, {
         head = "Twilight Helm",
         body = "Twilight Mail"
     })
 
-    sets.defense.MDT = {
-        ammo = "Staunch Tathlum +1",
-        head = "Loess Barbuta +1",
-        neck = "Warder's Charm +1",
-        ear1 = "Genmei Earring",
-        ear2 = "Ethereal Earring",
-        body = "Tartarus Platemail",
-        hands = "Sulev. Gauntlets +2",
-        ring1 = "Gelatinous Ring +1",
-        ring2 = "Moonlight Ring",
-        back = "Moonlight Cape",
-        waist = "Flume Belt +1",
-        legs = "Arke Cosc. +1",
-        feet = "Amm Greaves"
-    }
+    sets.defense.MDT = sets.idle
 
     sets.defense.MDTReraise = set_combine(sets.defense.MDT, {
         head = "Twilight Helm",
         body = "Twilight Mail"
     })
 
-    sets.defense.MEVA = {
-        ammo = "Staunch Tathlum +1",
-        head = "Loess Barbuta +1",
-        neck = "Warder's Charm +1",
-        ear1 = "Genmei Earring",
-        ear2 = "Ethereal Earring",
-        body = "Tartarus Platemail",
-        hands = "Sulev. Gauntlets +2",
-        ring1 = "Gelatinous Ring +1",
-        ring2 = "Moonlight Ring",
-        back = "Moonlight Cape",
-        waist = "Flume Belt +1",
-        legs = "Arke Cosc. +1",
-        feet = "Amm Greaves"
-    }
+    sets.defense.MEVA = sets.idle
 
     sets.Kiting = {
         legs = "Carmine Cuisses +1"
@@ -401,80 +344,34 @@ function init_gear_sets()
     -- Normal melee group
 
     sets.engaged = {
-        ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-        head="Flam. Zucchetto +2",
-        body="Hjarrandi Breast.",
-        hands="Gleti's Gauntlets",
-        legs="Gleti's Breeches",
-        feet="Flam. Gambieras +2",
-        neck="Shulmanu Collar",
-        waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-        left_ear="Sherida Earring",
-        right_ear="Telos Earring",
-        left_ring="Lehko's Ring",
-        right_ring="Niqmaddu Ring",
+        ammo = {
+            name = "Coiste Bodhar",
+            augments = {'Path: A'}
+        },
+        head = "Flam. Zucchetto +2",
+        body = gear.empy.Body,
+        hands = gear.empy.Hands,
+        legs = gear.relic.Legs,
+        feet = "Flam. Gambieras +2",
+        neck = "Shulmanu Collar",
+        waist = {
+            name = "Sailfi Belt +1",
+            augments = {'Path: A'}
+        },
+        left_ear = "Sherida Earring",
+        right_ear = "Telos Earring",
+        left_ring = "Lehko's Ring",
+        right_ring = "Niqmaddu Ring",
         back = gear.tp_jse_back
     }
-    sets.engaged.SomeAcc = {
-        ammo = "Aurgelmir Orb +1",
-        head = "Flam. Zucchetto +2",
-        neck = "Shulmanu Collar",
-        ear1 = "Brutal Earring",
-        ear2 = "Sherida Earring",
-        body = gear.valorous_wsd_body,
-        hands = gear.valorous_acc_hands,
-        ring1 = "Regal Ring",
-        ring2 = "Niqmaddu Ring",
-        back = "Brigantia's Mantle",
-        waist = "Ioskeha Belt",
-        legs = "Sulev. Cuisses +2",
-        feet = "Flam. Gambieras +2"
-    }
-    sets.engaged.Acc = {
-        ammo = "Aurgelmir Orb +1",
-        head = "Flam. Zucchetto +2",
-        neck = "Shulmanu Collar",
-        ear1 = "Digni. Earring",
-        ear2 = "Telos Earring",
-        body = gear.valorous_wsd_body,
-        hands = gear.valorous_acc_hands,
-        ring1 = "Ramuh Ring +1",
-        ring2 = "Niqmaddu Ring",
-        back = "Brigantia's Mantle",
-        waist = "Ioskeha Belt",
-        legs = "Sulev. Cuisses +2",
-        feet = "Flam. Gambieras +2"
-    }
-    sets.engaged.FullAcc = {
-        ammo = "Aurgelmir Orb +1",
-        head = "Flam. Zucchetto +2",
-        neck = "Shulmanu Collar",
-        ear1 = "Mache Earring +1",
-        ear2 = "Telos Earring",
-        body = gear.valorous_wsd_body,
-        hands = gear.valorous_acc_hands,
-        ring1 = "Ramuh Ring +1",
-        ring2 = "Ramuh Ring +1",
-        back = "Brigantia's Mantle",
-        waist = "Ioskeha Belt",
-        legs = "Sulev. Cuisses +2",
-        feet = "Flam. Gambieras +2"
-    }
-    sets.engaged.Fodder = {
-        ammo = "Aurgelmir Orb +1",
-        head = "Flam. Zucchetto +2",
-        neck = "Ganesha's Mala",
-        ear1 = "Brutal Earring",
-        ear2 = "Sherida Earring",
-        body = gear.valorous_wsd_body,
-        hands = gear.valorous_acc_hands,
-        ring1 = "Petrov Ring",
-        ring2 = "Niqmaddu Ring",
-        back = "Brigantia's Mantle",
-        waist = "Ioskeha Belt",
-        legs = "Sulev. Cuisses +2",
-        feet = "Flam. Gambieras +2"
-    }
+    sets.engaged.SomeAcc = set_combine(sets.engaged, {
+    })
+    sets.engaged.Acc = set_combine(sets.engaged, {
+    })
+    sets.engaged.FullAcc = set_combine(sets.engaged, {
+    })
+    sets.engaged.Fodder = set_combine(sets.engaged, {
+    })
 
     sets.engaged.AM = {}
     sets.engaged.AM.SomeAcc = {}
