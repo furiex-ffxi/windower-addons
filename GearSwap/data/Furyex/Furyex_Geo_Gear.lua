@@ -45,8 +45,8 @@ function init_gear_sets()
 	-- Precast sets
 	--------------------------------------
 	af = {}
-	af.Head = "Geo. Galero +2"
-	af.Body = "Geomancy Tunic +2"
+	af.Head = "Geo. Galero +3"
+	af.Body = "Geomancy Tunic +3"
 	af.Hands = "Geo. Mitaines +3"
 	af.Legs = "Geomancy Pants +3"
 	af.Feet = "Geo. Sandals +3"
@@ -89,39 +89,27 @@ function init_gear_sets()
 	-- Fast cast sets for spells
 
 	sets.precast.FC = {
-		-- main = gear.grioavolr_fc_staff, -- 11
-		-- sub = "Clerisy Strap +1", -- 3
-		main = "C. Palug Hammer", -- 7
-		sub = "Genmei Shield",
-		-- range = "Dunna", -- 3
-		-- ammo = empty,
-		head = "C. Palug Crown", -- 8
+		range = "Dunna", -- 3
+		head = "Amalric Coif +1", -- 11
         neck = "Baetyl Pendant", --4
 		ear1 = "Loquac. Earring", -- 2
 		ear2 = "Malignance Earring", -- 4
-		-- body = "Zendik Robe",
+		-- body = "Zendik Robe", -- 13
 		body = "Volte Doublet", -- 10
 		hands = "Volte Gloves", -- 6
 		ring1 = "Kishar Ring", -- 4
-		ring2 = "Lebeche Ring", -- 2 QM
+		ring2 = "Prolix Ring", -- 2
 		back = "Fi Follet Cape", -- 10
 		waist = "Witful Belt", -- 3 / 3 QM
-		legs = af.Legs, -- 13 
-		feet = "Regal Pumps +1" -- 7
+		legs = af.Legs, -- 15
+		feet = "Volte Gaiters"
 	} -- 81
 
-	sets.precast.FC.Geomancy = set_combine(sets.precast.FC, { 
-	})
-
-	sets.precast.FC['Elemental Magic'] = set_combine(sets.precast.FC,
-		{ ear2 = "Malignance Earring", hands = relic.Hands })
-
-	sets.precast.FC.Cure = set_combine(sets.precast.FC, { 
-		-- main = "Serenity", 
-		-- sub = "Clerisy Strap +1" 
-	})
-
-	sets.precast.FC.Curaga = sets.precast.FC.Cure
+	sets.precast.FC['Elemental Magic'] = set_combine(sets.precast.FC, { 
+		hands = relic.Hands, -- 14
+		ring2 = "Defending Ring",
+		feet = "Nyame Sollerets"
+	}) -- 80
 
 	sets.Self_Healing = { neck = "Phalaina Locket", ring1 = "Kunaji Ring", ring2 = "Asklepian Ring", waist =
 	"Gishdubar Sash" }
@@ -155,20 +143,23 @@ function init_gear_sets()
 	-- Default set for any weaponskill that isn't any more specifically defined
 	sets.precast.WS = {
 		head = sets.Nyame.Head,
-		ammo = "Oshasha's Treatise",
-		range = empty,
-		neck = "Combatant's Torque",
+		neck = "Rep. Plat. Medal",
 		body = sets.Nyame.Body,        
 		hands = sets.Nyame.Hands,
 		legs = sets.Nyame.Legs,
 		feet = sets.Nyame.Feet,
 		waist =	"Sailfi Belt +1",
 		left_ear = { name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-		right_ear =	"Ishvara Earring",
+		right_ear =	"Regal Earring",
 		left_ring = "Epaminondas's Ring",
 		right_ring = "Karieyh Ring",
 		back = gear.nuke_jse_back,
 	}
+
+	sets.precast.WS["Black Halo"] = set_combine(sets.precast.WS, {
+		right_ring = "Metamor. Ring +1",
+		back = "Aurist's Cape +1"
+	})
 
 
 	--------------------------------------
@@ -198,7 +189,7 @@ function init_gear_sets()
 	}
 
 
-	--Extra Indi duration as long as you can keep your 900 skill cap.
+	-- --Extra Indi duration as long as you can keep your 900 skill cap.
 	sets.midcast.Geomancy.Indi = set_combine(sets.midcast.Geomancy,
 		{ 
 			back = "Lifestream Cape", 
@@ -294,12 +285,12 @@ function init_gear_sets()
 		back = gear.nuke_jse_back,
 	}
 
-	sets.midcast['Elemental Magic'].Resistant = sets.midcast['Elemental Magic']
-	sets.midcast['Elemental Magic'].Proc = sets.midcast['Elemental Magic']
-	sets.midcast['Elemental Magic'].Fodder = sets.midcast['Elemental Magic']
-	sets.midcast['Elemental Magic'].HighTierNuke = sets.midcast['Elemental Magic']
-	sets.midcast['Elemental Magic'].HighTierNuke.Resistant = sets.midcast['Elemental Magic']
-	sets.midcast['Elemental Magic'].HighTierNuke.Fodder = sets.midcast['Elemental Magic']
+	-- sets.midcast['Elemental Magic'].Resistant = sets.midcast['Elemental Magic']
+	-- sets.midcast['Elemental Magic'].Proc = sets.midcast['Elemental Magic']
+	-- sets.midcast['Elemental Magic'].Fodder = sets.midcast['Elemental Magic']
+	-- sets.midcast['Elemental Magic'].HighTierNuke = sets.midcast['Elemental Magic']
+	-- sets.midcast['Elemental Magic'].HighTierNuke.Resistant = sets.midcast['Elemental Magic']
+	-- sets.midcast['Elemental Magic'].HighTierNuke.Fodder = sets.midcast['Elemental Magic']
 
 	sets.midcast['Dark Magic'] = {
 		main = "Bunzi's Rod",
@@ -337,10 +328,26 @@ function init_gear_sets()
 		feet = "Agwu's Pigaches"
 	}
 
-	sets.midcast.Aspir = sets.midcast.Drain
+	sets.midcast.Aspir = {
+		main = "Rubicundity",
+		sub = "Ammurapi Shield",
+		ammo = "Ghastly Tathlum +1",
+		head = "Pixie Hairpin +1",
+		neck = "Erra Pendant",
+		ear1 = "Malignance Earring",
+		ear2 = "Azimuth Earring +2",
+		body = af.Body,
+		hands = "Agwu's Gages",
+		ring1 = "Archon Ring",
+		ring2 = "Evanescence Ring",
+		back = "Aurist's Cape +1",
+		waist = "Fucho-no-obi",
+		legs = empy.Legs,
+		feet = "Agwu's Pigaches"
+	}
 
-	sets.midcast.Stun = sets.midcast['Dark Magic']
-	sets.midcast.Stun.Resistant = sets.midcast['Dark Magic']
+	sets.midcast.Stun = set_combine(sets.midcast['Dark Magic'], {})
+	sets.midcast.Stun.Resistant = set_combine(sets.midcast['Dark Magic'], {})
 
 	sets.midcast.Impact = {
 		main = "Idris",
@@ -381,9 +388,6 @@ function init_gear_sets()
 	sets.midcast.Dispelga = set_combine(sets.midcast.Dispel, { main = "Daybreak", sub = "Ammurapi Shield" })
 
 	sets.midcast['Enfeebling Magic'] = {
-		main = "Idris",
-		sub = "Ammurapi Shield",
-		range = "Dunna",
 		head = empy.Head,
 		body = empy.Body,
 		neck = "Bagua Charm +2",
@@ -397,18 +401,17 @@ function init_gear_sets()
 		legs = empy.Legs,
 		feet = empy.Feet
 	}
+	sets.midcast['Enfeebling Magic'].Resistant = set_combine(sets.midcast['Enfeebling Magic'], {}
+	)
 
-	sets.midcast['Enfeebling Magic'].Resistant = sets.midcast['Enfeebling Magic']
-
-	sets.midcast.ElementalEnfeeble = set_combine(sets.midcast['Enfeebling Magic'],
-		{ legs = "Agwu's Slops" })
-	sets.midcast.ElementalEnfeeble.Resistant = sets.midcast.ElementalEnfeeble
+	sets.midcast.ElementalEnfeeble = set_combine(sets.midcast['Enfeebling Magic'], { legs = "Agwu's Slops" })
+	sets.midcast.ElementalEnfeeble.Resistant = set_combine(sets.midcast.ElementalEnfeeble, {})
 
 	sets.midcast.IntEnfeebles = set_combine(sets.midcast['Enfeebling Magic'], {})
-	sets.midcast.IntEnfeebles.Resistant = sets.midcast.IntEnfeebles
+	sets.midcast.IntEnfeebles.Resistant = set_combine(sets.midcast.IntEnfeebles, {})
 
 	sets.midcast.MndEnfeebles = set_combine(sets.midcast['Enfeebling Magic'], {})
-	sets.midcast.MndEnfeebles.Resistant = sets.midcast.MndEnfeebles
+	sets.midcast.MndEnfeebles.Resistant = set_combine(sets.midcast.MndEnfeebles, {})
 
 	sets.midcast.Dia = set_combine(sets.midcast['Enfeebling Magic'], sets.TreasureHunter)
 	sets.midcast['Dia II'] = set_combine(sets.midcast['Enfeebling Magic'], sets.TreasureHunter)
@@ -452,18 +455,16 @@ function init_gear_sets()
 	sets.midcast.Shell = set_combine(sets.midcast['Enhancing Magic'], {ring2="Sheltered Ring"})
 	sets.midcast.Shellra = set_combine(sets.midcast['Enhancing Magic'], {ring2="Sheltered Ring"})
 
-	--------------------------------------
-	-- Idle/resting/defense/etc sets
-	--------------------------------------
+	-- --------------------------------------
+	-- -- Idle/resting/defense/etc sets
+	-- --------------------------------------
 
-	-- Resting sets
+	-- -- Resting sets
 	sets.resting = {}
 
-	-- Idle sets
+	-- -- Idle sets
 
 	sets.idle = {
-		main = "Idris",
-		sub = "Genmei Shield",
 		range = "Dunna",
 		neck = "Bagua Charm +2",
 		ear1 = "Odnowa Earring +1",
@@ -499,6 +500,7 @@ function init_gear_sets()
 	})
 
 	sets.idle.PDT.Pet = set_combine(sets.idle.Pet, {
+		main = "Idris",
 		legs = "Nyame Flanchard",
 		feeet = "Nyame Sollerets",
 	})
@@ -564,20 +566,20 @@ function init_gear_sets()
 
 	-- Normal melee group
 	sets.engaged = {
-		main = "Idris",
-		sub = "Genmei Shield",
+		main = "Maxentius",
+		sub = "Ammurapi Shield",
 		range = "Dunna",
 		head = "Blistering Sallet +1",
 		neck = "Combatant's Torque",
-		ear1 = "Crep. Earring",
+		ear1 = "Cessance Earring",
 		ear2 = "Telos Earring",
 		body = sets.Nyame.Head,
 		hands = "Gazu Bracelets +1",
 		ring1 = "Petrov Ring",
 		ring2 = "Lehko's Ring",
 		back = "Moonlight Cape",
-		waist = "Eschan Stone",
-		legs = empy.Legs,
+		waist = "Goading Belt",
+		legs = sets.Nyame.Legs,
 		feet = sets.Nyame.Feet
 	}
 
@@ -607,8 +609,8 @@ function init_gear_sets()
 	sets.buff.DTSublimation = { waist = "Embla Sash" }
 
 	-- Weapons sets
-	sets.weapons.Idris = { main = 'Idris', sub = 'Genmei Shield' }
-	sets.weapons.Maxentius = { main = 'Maxentius', sub = 'Genmei Shield' }
+	sets.weapons.Idris = { main = 'Idris', sub = 'Ammurapi Shield' }
+	sets.weapons.Maxentius = { main = 'Maxentius', sub = 'Ammurapi Shield' }
 	sets.weapons.DualWeapons = { main = 'Maxentius', sub = 'Nehushtan' }
 end
 

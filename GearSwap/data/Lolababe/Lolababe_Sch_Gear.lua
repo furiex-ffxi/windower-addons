@@ -5,9 +5,7 @@ function user_job_setup()
     state.IdleMode:options('Normal', 'PDT')
     state.HybridMode:options('Normal', 'PDT')
     state.Weapons:options('None', 'Musa', 'Grioavolr', 'Bunzi', 'Akademos', 'Khatvanga')
-
-    gear.nuke_jse_back = { name = "Lugh's Cape", augments = { 'INT+20', 'Mag. Acc+20 /Mag. Dmg.+20', '"Mag.Atk.Bns."+10' } }
-    gear.fc_jse_back = { name="Lugh's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
+  
     -- Additional local binds
     send_command('bind ^` gs c cycle ElementalMode')
     send_command('bind !` gs c scholar power')
@@ -35,7 +33,9 @@ function init_gear_sets()
     --------------------------------------
     -- Start defining the sets
     --------------------------------------
-
+    gear.nuke_jse_back = { name = "Lugh's Cape", augments = { 'INT+20', 'Mag. Acc+20 /Mag. Dmg.+20', '"Mag.Atk.Bns."+10' } }
+    gear.fc_jse_back = { name="Lugh's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10','Phys. dmg. taken-10%',}}
+  
     -- Precast Sets
 
     -- Precast sets to enhance JAs
@@ -142,6 +142,7 @@ function init_gear_sets()
 
     sets.midcast.Cure = {
         main = "Daybreak",
+        sub = "Ammurapi Shield",
         -- main = "Serenity",
         -- sub = "Curatio Grip",
         -- ammo = "Hasty Pinion +1",
@@ -972,7 +973,7 @@ function init_gear_sets()
     sets.weapons.Khatvanga = 
     { 
         main = "Khatvanga", 
-        sub = "Bloodrain Strap"
+        sub = "Enki Strap"
     }
     sets.weapons.Bunzi = { main = "Bunzi's Rod", sub = "Genmei Shield" }
     sets.weapons.Grioavolr = { main = "Grioavolr", sub = "Enki Strap" }

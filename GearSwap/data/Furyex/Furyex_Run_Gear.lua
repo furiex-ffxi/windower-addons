@@ -56,11 +56,11 @@ function init_gear_sets()
 	gear.relic.Feet = "Futhark Boots +3"
 
 	gear.empy = {}
-	gear.empy.Head = "Erilaz Galea +2"
-	gear.empy.Body = "Erilaz Surcoat +2"
-	gear.empy.Hands = "Erilaz Gauntlets +2"
-	gear.empy.Legs = "Eri. Leg Guards +2"
-	gear.empy.Feet = "Erilaz Greaves +2"
+	gear.empy.Head = "Erilaz Galea +3"
+	gear.empy.Body = "Erilaz Surcoat +3"
+	gear.empy.Hands = "Erilaz Gauntlets +3"
+	gear.empy.Legs = "Eri. Leg Guards +3"
+	gear.empy.Feet = "Erilaz Greaves +3"
 
 	sets.Enmity = {
 		ammo = "Staunch Tathlum +1",
@@ -69,8 +69,7 @@ function init_gear_sets()
 		ear1 = "Friomisi Earring",
 		ear2 = "Cryptic Earring",
 		body = "Emet Harness +1",
-		-- hands = "Kurys Gloves",
-		hands = gear.relic.Hands,
+		hands = "Kurys Gloves",
 		ring1 = "Eihwaz Ring",
 		ring2 = "Provocare Ring",
 		back = gear.enmity_jse_back,
@@ -81,7 +80,7 @@ function init_gear_sets()
 
 	sets.Enmity.SIRD = set_combine(sets.Enmity, {
 		ammo = "Staunch Tathlum +1", -- 12
-		head = gear.empy.Head, -- 15
+		head = gear.empy.Head, -- 20
 		neck = "Moonlight Necklace", -- 15
 		body = sets.Nyame.Body,
 		hands = "Rawhide Gloves", -- 15
@@ -91,7 +90,7 @@ function init_gear_sets()
 		waist = "Audumbla Sash", -- 10
 		legs = "Carmine Cuisses +1", -- 20
 		feet = gear.empy.Feet
-	}) -- 97 gear + 10 merit, 43 DT
+	}) -- 102 gear + 10 merit, 43 DT
 
 	sets.Enmity.DT = {
 		ammo = "Staunch Tathlum +1",

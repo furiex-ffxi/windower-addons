@@ -5,7 +5,7 @@ function user_job_setup()
 	state.HybridMode:options('Normal', 'DT')
 	state.CastingMode:options('Normal', 'Duration', 'Resistant')
 	state.IdleMode:options('Normal', 'NoRefresh', 'DT')
-	state.Weapons:options('None', 'Naegling', 'Aeneas', 'Carnwenhan', 'Qutrub', 'DualCarnwenhan', 'DualWeapons', 'DualNaegling', 'DualTauret', 'DualAeolian')
+	state.Weapons:options('None', 'Naegling', 'Aeneas', 'Carnwenhan', 'Qutrub', 'DualCarnwenhan', 'DualMpu', 'DualWeapons', 'DualNaegling', 'DualTauret', 'DualAeolian')
 	-- Whether to use Carn (or song daggers in general) under a certain threshhold even when weapons are locked.
 	state.CarnMode           = M { 'Always', '300', '1000', 'Never' }
 
@@ -23,9 +23,9 @@ function user_job_setup()
 	send_command('bind @` gs c cycle MagicBurstMode')
 	send_command('bind @f10 gs c cycle RecoverMode')
 	send_command('bind @f8 gs c toggle AutoNukeMode')
-	send_command('bind !r gs c weapons DualNaegling;gs c update')
-	send_command('bind !q gs c weapons DualCarnwenhan;gs c update')
-	send_command('bind ^q gs c weapons None;gs c update')
+	send_command('bind !r gs c weapons DualNaegling;gs c update;gs c set unlockweapons true')
+	send_command('bind !q gs c weapons DualCarnwenhan;gs c update;gs c set unlockweapons true')
+	send_command('bind ^q gs c weapons None;gs c update;gs c set unlockweapons true')
 	send_command('bind !f7 gs c cycle CarnMode')
 	send_command('bind ^numpad7 input //sing on')
 
@@ -36,9 +36,12 @@ function init_gear_sets()
 	--------------------------------------
 	-- Start defining the sets
 	--------------------------------------
-	gear.melee_jse_back      = { name = "Intarabus's Cape", augments = { 'Accuracy+20 Attack+20' } }
-	gear.magic_jse_back      = { name = "Intarabus's Cape", augments = { 'CHR+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'Mag. Acc.+10', '"Fast Cast"+10', 'Damage taken-5%', } }
-	gear.idle_jse_back       = { name = "Intarabus's Cape", augments = { 'HP+60', 'Eva.+20 /Mag. Eva.+20', 'Mag. Evasion+10', '"Fast Cast"+10', 'Occ. inc. resist. to stat. ailments+8', } }
+	gear.fc_jse_back = { name = "Intarabus's Cape", augments = { 'CHR+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'CHR+10', '"Fast Cast"+10', 'Phys. dmg. taken-10%', } }
+	gear.str_wsd_jse_back = { name = "Intarabus's Cape", augments = { 'STR+20', 'Accuracy+20 Attack+20', 'STR+10', 'Weapon skill damage +10%', 'Phys. dmg. taken-10%', } }
+	gear.dex_wsd_jse_back = gear.str_wsd_jse_back-- { name = "Intarabus's Cape", augments = { 'DEX+20', 'Accuracy+20 Attack+20', 'DEX+10', 'Weapon skill damage +10%', 'Phys. dmg. taken-10%', } }
+	gear.chr_wsd_jse_back = gear.str_wsd_jse_back -- { name = "Intarabus's Cape", augments = { 'CHR+20', 'Accuracy+20 Attack+20', 'CHR+10', 'Weapon skill damage +10%', 'Phys. dmg. taken-10%', } }
+	gear.int_wsd_jse_back = gear.str_wsd_jse_back -- { name = "Intarabus's Cape", augments = { 'INT+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'INT+10', 'Weapon skill damage +10%', 'Phys. dmg. taken-10%', } }
+	gear.tp_jse_back = { name = "Intarabus's Cape", augments = { 'DEX+20', 'Accuracy+20 Attack+20', 'Accuracy+10', '"Dbl.Atk."+10', 'Phys. dmg. taken-10%', } }
 
 	gear.af_head             = "Brioso Roundlet +3"
 	gear.af_body             = "Brioso Justau. +3"
@@ -52,11 +55,11 @@ function init_gear_sets()
 	gear.relic_legs          = "Bihu Cannions +3"
 	gear.relic_feet          = "Bihu Slippers +3"
 
-	gear.empy_head           = "Fili Calot +2"
-	gear.empy_body           = "Fili Hongreline +2"
-	gear.empy_hands          = "Fili Manchettes +2"
-	gear.empy_legs           = "Fili Rhingrave +2"
-	gear.empy_feet           = "Fili Cothurnes +2"
+	gear.empy_head           = "Fili Calot +3"
+	gear.empy_body           = "Fili Hongreline +3"
+	gear.empy_hands          = "Fili Manchettes +3"
+	gear.empy_legs           = "Fili Rhingrave +3"
+	gear.empy_feet           = "Fili Cothurnes +3"
 
 	-- Weapons sets
 	sets.weapons.Naegling = { main = "Naegling", sub = "Genmei Shield" }
@@ -64,17 +67,18 @@ function init_gear_sets()
 	sets.weapons.Carnwenhan = { main = "Carnwenhan", sub = "Genmei Shield" }
 	sets.weapons.Naegling = { main = "Naegling", sub = "Genmei Shield" }
 	sets.weapons.Qutrub = { main = "Qutrub Knife", sub = "Genmei Shield" }
-	sets.weapons.DualCarnwenhan = {main="Carnwenhan", sub="Fusetto +2"}	
-	sets.weapons.DualWeapons = { main = "Aeneas", sub = "Fusetto +2" }
+	sets.weapons.DualCarnwenhan = {main = "Carnwenhan", sub = "Fusetto +2"}	
+	sets.weapons.DualWeapons = { main = "Mpu Gandring", sub = "Fusetto +2" } -- Aenas
+	sets.weapons.DualMpu = {main = "Mpu Gandring", sub= "Fusetto +2"}	
 	sets.weapons.DualNaegling = { main = "Naegling", sub = "Fusetto +2" }
 	sets.weapons.DualTauret = { main = "Tauret", sub = "Fusetto +2" }
 	sets.weapons.DualAeolian = { main = "Tauret", sub = "Malevolence" }
 
 	sets.buff.Sublimation = {
-		--waist="Embla Sash"
+		waist="Embla Sash"
 	}
 	sets.buff.DTSublimation = {
-		--waist="Embla Sash"
+		waist="Embla Sash"
 	}
 
 	-- Precast Sets
@@ -93,18 +97,18 @@ function init_gear_sets()
 		ear2 = "Etiolation Earring",
 		ring1 = "Weather. Ring",
 		ring2 = "Kishar Ring",
-		back = { name = "Intarabus's Cape", augments = { 'CHR+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'CHR+10', '"Fast Cast"+10', 'Phys. dmg. taken-10%', } },
+		back = "Fi Follet Cape +1",
 	}
 
 	sets.precast.FC.DT = {
 		head = "Bunzi's Hat",
-		--neck="Voltsurge Torque",
+		neck="Baetyl Pendant",
 		ear1 = "Enchntr. Earring +1",
 		ear2 = "Loquac. Earring",
 		body = "Inyanga Jubbah +2",
 		hands = "Gende. Gages +1",
 		ring1 = "Weather. Ring",
-		--ring2="Kishar Ring",
+		ring2="Kishar Ring",
 		back = gear.idle_jse_back,
 		waist = "Witful Belt",
 		legs = "Kaykaus Tights +1",
@@ -149,7 +153,7 @@ function init_gear_sets()
 	-- Weaponskill sets
 	-- Default set for any weaponskill that isn't any more specifically defined
 	sets.precast.WS = {
-		range = { name = "Linos", augments = { 'Accuracy+16', 'Weapon skill damage +3%', 'STR+6 CHR+6', } },
+		range = { name = "Linos", augments = { 'Attack+20', 'Weapon skill damage +3%', 'STR+6 CHR+6', } },
 		head = { name = "Nyame Helm", augments = { 'Path: B', } },
 		body = { name = gear.relic_body, augments = { 'Enhances "Troubadour" effect', } },
 		hands = { name = "Nyame Gauntlets", augments = { 'Path: B', } },
@@ -161,7 +165,7 @@ function init_gear_sets()
 		ear2 = "Ishvara Earring",
 		ring1 = "Ilabrat Ring",
 		ring2 = "Cornelia's Ring",
-		back = { name = "Intarabus's Cape", augments = { 'STR+20', 'Accuracy+20 Attack+20', 'STR+10', 'Weapon skill damage +10%', 'Phys. dmg. taken-10%', } },
+		back = gear.str_wsd_jse_back,
 	}
 
 	sets.precast.WS.Acc = set_combine(sets.precast.WS, {
@@ -177,7 +181,7 @@ function init_gear_sets()
 		ring1 = "Begrudging Ring",
 		ring2 = "Hetairoi Ring",
 		waist = "Fotia Belt",
-		back = { name = "Intarabus's Cape", augments = { 'DEX+20', 'Accuracy+20 Attack+20', 'DEX+10', 'Weapon skill damage +10%', } },
+		back = gear.dex_wsd_jse_back,
 	})
 
 	sets.precast.WS['Mordant Rime'] = set_combine(sets.precast.WS, {
@@ -189,13 +193,14 @@ function init_gear_sets()
 		ear1 = "Regal Earring",
 		ring2 = { name = "Metamor. Ring +1", augments = { 'Path: A', } },
 		waist = "Kentarch Belt +1",
-		back = { name = "Intarabus's Cape", augments = { 'CHR+20', 'Accuracy+20 Attack+20', 'CHR+10', 'Weapon skill damage +10%', 'Phys. dmg. taken-10%', } },
+		back = gear.chr_wsd_jse_back,
 	})
 
 	sets.precast.WS['Rudra\'s Storm'] = set_combine(sets.precast.WS, {
+		range = { name = "Linos", augments = { 'Accuracy+15 Attack+15', 'Weapon skill damage +3%', 'DEX+8', } },
 		waist = "Kentarch Belt +1",
 		ring1 = "Ilabrat Ring",
-		back = { name = "Intarabus's Cape", augments = { 'DEX+20', 'Accuracy+20 Attack+20', 'DEX+10', 'Weapon skill damage +10%', } },
+		back = gear.dex_wsd_jse_back,
 	})
 
 	sets.precast.WS['Aeolian Edge'] = set_combine(sets.precast.WS, {
@@ -203,10 +208,11 @@ function init_gear_sets()
 		neck = "Sibyl Scarf",
 		ear2 = "Friomisi Earring",
 		ring2 = { name = "Metamor. Ring +1", augments = { 'Path: A', } },
-		back = { name = "Intarabus's Cape", augments = { 'INT+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'INT+10', 'Weapon skill damage +10%', 'Phys. dmg. taken-10%', } },
+		back = gear.int_wsd_jse_back,
 	})
 
 	sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {
+		waist = "Sailfi Belt +1",
 	})
 
 	sets.precast.WS['Exenterator'] = set_combine(sets.precast.WS, {
@@ -254,7 +260,7 @@ function init_gear_sets()
 		ear2 = "Genmei Earring",
 		ring1 = "Defending Ring",
 		ring2 = { name = "Gelatinous Ring +1", augments = { 'Path: A', } },
-		back = { name = "Intarabus's Cape", augments = { 'DEX+20', 'Accuracy+20 Attack+20', 'Accuracy+10', '"Dbl.Atk."+10', 'Phys. dmg. taken-10%', } },
+		back = gear.tp_jse_back,
 	}
 
 	sets.midcast.SongEffect.DW = { 
@@ -271,10 +277,11 @@ function init_gear_sets()
 		neck = "Mnbw. Whistle +1",
 		ear1 = "Regal Earring",
 		ear2 = "Fili Earring +1",
-		ring1 = { name = "Stikini Ring +1", bag = "wardrobe2" },
-		ring2 = { name = "Stikini Ring +1", bag = "wardrobe3" },
+		ring1 = { name = "Stikini Ring +1", bag = "wardrobe1" },
+		ring2 = { name = "Stikini Ring +1", bag = "wardrobe2" },
 		waist = "Acuity Belt +1",
-		back = { name = "Intarabus's Cape", augments = { 'CHR+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'CHR+10', '"Fast Cast"+10', 'Phys. dmg. taken-10%', } }
+		back = "Aurist's Cape +1"
+		-- back = gear.fc_jse_back
 	}
 
 	sets.midcast.SongDebuff.DW = { 
@@ -313,14 +320,15 @@ function init_gear_sets()
 		range="Gjallarhorn",
 		ammo=empty,
 		head = "Bunzi's Hat",
-		--neck="Voltsurge Torque",
+		neck="Baetyl Pendant",
 		ear1 = "Enchntr. Earring +1",
 		ear2 = "Loquac. Earring",
 		body = "Inyanga Jubbah +2",
 		hands = "Gendewitha Gages +1",
 		ring1="Kishar Ring",
 		ring2="Prolix Ring",
-		back = { name = "Intarabus's Cape", augments = { 'CHR+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'CHR+10', '"Fast Cast"+10', 'Phys. dmg. taken-10%', } },
+		-- back = gear.fc_jse_back,
+		back = "Fi Follet Cape +1",
 		waist="Witful Belt",
 		legs = gear.empy_legs,
 		feet = "Aya. Gambieras +2"
@@ -536,8 +544,8 @@ function init_gear_sets()
 	}
 
 	sets.idle = {
-		range = "Loughnashade",
-		head = gear.empy_head,
+		-- range = "Loughnashade",
+		range = { name = "Linos", augments = { 'Accuracy+15 Attack+15', '"Store TP"+4', 'Quadruple Attack +3', } },		head = gear.empy_head,
 		body = "Ashera Harness",
 		hands = gear.empy_hands,
 		legs = gear.af_legs,
@@ -548,7 +556,7 @@ function init_gear_sets()
 		ear2 = "Etiolation Earring",
 		ring1 = "Defending Ring",
 		ring2 = "Stikini Ring +1",
-		back = { name = "Intarabus's Cape", augments = { 'CHR+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'CHR+10', '"Fast Cast"+10', 'Phys. dmg. taken-10%', } },
+		back = gear.tp_jse_back,
 	}
 
 	sets.idle.Refresh = set_combine(sets.idle, {
@@ -563,7 +571,7 @@ function init_gear_sets()
 		ear2 = "Etiolation Earring",
 		ring1 = "Defending Ring",
 		ring2 = "Stikini Ring +1",
-		back = { name = "Intarabus's Cape", augments = { 'CHR+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'CHR+10', '"Fast Cast"+10', 'Phys. dmg. taken-10%', } },
+		back = gear.tp_jse_back,
 	})
 
 	sets.idle.NoRefresh = {
@@ -660,7 +668,7 @@ function init_gear_sets()
 
 	sets.Kiting = { feet = gear.empy_feet }
 	sets.latent_refresh = {
-		--waist="Fucho-no-obi"
+		waist="Fucho-no-obi"
 	}
 	sets.latent_refresh_grip = {
 		--sub="Oneiros Grip"
@@ -677,8 +685,8 @@ function init_gear_sets()
 	-- EG: sets.engaged.Dagger.Accuracy.Evasion
 
 	sets.engaged = {
-		range = { name = "Linos", augments = { 'Accuracy+15 Attack+15', '"Store TP"+3', 'Quadruple Attack +3', } },
-		head = "Volte Tiara",
+		range = { name = "Linos", augments = { 'Accuracy+15 Attack+15', '"Store TP"+4', 'Quadruple Attack +3', } },
+		head = "Bunzi's Hat",
 		body = "Ashera Harness",
 		hands = "Bunzi's Gloves",
 		legs = "Volte Tights",
@@ -688,9 +696,9 @@ function init_gear_sets()
 		waist = { name = "Sailfi Belt +1", augments = { 'Path: A', } },
 		ear1 = "Telos Earring",
 		ear2 = "Digni. Earring",
-		ring1 = "Chirich Ring +1",
+		ring1 = "Chirich Ring +1",	
 		ring2 = "Lehko's Ring",
-		back = { name = "Intarabus's Cape", augments = { 'DEX+20', 'Accuracy+20 Attack+20', 'Accuracy+10', '"Dbl.Atk."+10', 'Phys. dmg. taken-10%', } },
+		back = gear.tp_jse_back,
 	}
 
 	sets.engaged.DT = set_combine(sets.engaged, {
@@ -720,16 +728,16 @@ function init_gear_sets()
 		hands = "Gazu Bracelets +1",
 		ear1 = "Telos Earring",
 		ear2 = "Digni. Earring",
-		
 	})
 	sets.engaged.DW = set_combine(sets.engaged, {
-		-- ear1 = "Eabani Earring",
-		ear2 = "Suppanomimi",
+		ear2 = "Eabani Earring",
 		waist = "Reiki Yotai",
 	})
 	-- sets.engaged.DW.DT = set_combine(sets.engaged.DW)
 	sets.engaged.DW.Acc = set_combine(sets.engaged.DW, {
-		ear2 = "Suppanomimi",
+		head = "Blistering Sallet +1",
+		hands = "Gazu Bracelets +1",
+		ear2 = "Eabani Earring",
 		waist = "Reiki Yotai",
 	})
 	-- sets.engaged.DW.Acc.DT = set_combine(sets.engaged.DW)

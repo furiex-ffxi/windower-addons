@@ -71,12 +71,13 @@
                 <y>391</y>
             </pos>
         </display>
+        <visible>true</visible>
     </cleobabe>
     <furyex>
         <display>
             <pos>
-                <x>1984</x>
-                <y>313</y>
+                <x>1935</x>
+                <y>275</y>
             </pos>
         </display>
         <visible>true</visible>

@@ -14,7 +14,7 @@ function user_job_setup()
 
 	gear.da_jse_back = { name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
 	gear.wsd_str_jse_back = { name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
-	gear.wsd_vit_jse_back = {name="Cichol's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}}
+	gear.wsd_vit_jse_back = {name="Cichol's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
 	-- gear.crit_jse_back = { name = "Cichol's Mantle", augments = { 'STR+20', 'Accuracy+20 Attack+20', 'Crit.hit rate+10' } }
 
 	-- Additional local binds
@@ -139,6 +139,19 @@ function init_gear_sets()
 		--  ring2 = "Kunaji Ring",
 		-- waist = "Gishdubar Sash"
 	 }
+
+	 sets.Phalanx_Received = {
+        ammo="Staunch Tathlum +1",
+        head={ name="Yorium Barbuta", augments={'DEF+22','Spell interruption rate down -10%','Phalanx +3',}},
+        body={ name="Yorium Cuirass", augments={'DEF+23','Spell interruption rate down -10%','Phalanx +3',}},
+        hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+        legs={ name="Sakpata's Cuisses", augments={'Path: A',}},
+        feet={ name="Souveran Schuhs +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+        right_ear={ name="Nourish. Earring +1", augments={'Path: A',}},
+        left_ring="Gelatinous Ring +1",
+        right_ring="Moonlight Ring",
+        back="Weard Mantle"
+    }
 
 	-- Weaponskill sets
 	-- Default set for any weaponskill that isn't any more specifically defined
@@ -353,7 +366,7 @@ function init_gear_sets()
 	-- Idle sets
 	sets.idle = {
 		ammo="Coiste Bodhar",
-		head="Hjarrandi Helm",
+		head="Sakpata's Helm",
 		body="Sacro Breastplate",
 		hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
 		legs="Pumm. Cuisses +3",

@@ -57,7 +57,11 @@ function init_gear_sets()
 
     sets.precast.FC['Elemental Magic'] = set_combine(sets.precast.FC, {ear1="Malignance Earring"})
 
-    sets.precast.FC.Cure = set_combine(sets.precast.FC, {main="Serenity",sub="Clerisy Strap +1",body="Heka's Kalasiris"})
+    sets.precast.FC.Cure = set_combine(sets.precast.FC, {
+        -- main="Serenity",
+        -- sub="Clerisy Strap +1",
+        -- body="Heka's Kalasiris"
+    })
 
     sets.precast.FC.Curaga = sets.precast.FC.Cure
 

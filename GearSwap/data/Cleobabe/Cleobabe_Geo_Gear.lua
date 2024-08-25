@@ -92,23 +92,22 @@ function init_gear_sets()
 	-- Fast cast sets for spells
 
 	sets.precast.FC = {
-		main = "Mpaca's Staff",
-		sub = "Clerisy Strap +1",
-		ammo = "Impatiens",
+		range = "Dunna", -- 3
 		head = "C. Palug Crown",
-		neck = "Voltsurge Torque",
-		ear1 = "Enchntr. Earring +1",
-		ear2 = "Malignance Earring",
-		-- body = "Zendik Robe",
-		body = "Volte Doublet",
-		hands = "Volte Gloves",
-		ring1 = "Kishar Ring",
-		ring2 = "Lebeche Ring",
-		back = "Moonlight Cape",
-		waist = "Witful Belt",
-		legs = gear.af.Legs,
-		feet = "Regal Pumps +1"
-	}
+		-- head = "Amalric Coif +1", -- 11
+        neck = "Baetyl Pendant", --4
+		ear1 = "Loquac. Earring", -- 2
+		ear2 = "Malignance Earring", -- 4
+		-- body = "Zendik Robe", -- 13
+		body = "Volte Doublet", -- 10
+		hands = "Volte Gloves", -- 6
+		ring1 = "Kishar Ring", -- 4
+		ring2 = "Prolix Ring", -- 2
+		back = "Fi Follet Cape", -- 10
+		waist = "Witful Belt", -- 3 / 3 QM
+		legs = gear.af.Legs, -- 15
+		feet = "Volte Gaiters"
+	} -- 81
 
 	sets.precast.FC.Geomancy = set_combine(sets.precast.FC, { range = "Dunna", ammo = empty })
 
@@ -151,8 +150,6 @@ function init_gear_sets()
 	-- Default set for any weaponskill that isn't any more specifically defined
 	sets.precast.WS = {
 		head = sets.Nyame.Head,
-		ammo = "Oshasha's Treatise",
-		range = empty,
 		neck = "Combatant's Torque",
 		body = sets.Nyame.Body,        
 		hands = sets.Nyame.Hands,
@@ -166,10 +163,12 @@ function init_gear_sets()
 		-- back = RDMCape.MACC,
 	}
 
+	sets.precast.WS["Flash Nova"] = set_combine(sets.precast.WS, {
+		right_ear = "Malignance Earring",
+	})
+
 	sets.precast.WS['Cataclysm'] = {
 		head = sets.Nyame.Head,
-		ammo = "Oshasha's Treatise",
-		range = empty,
 		neck = "Baetyl Pendant",
 		body = sets.Nyame.Body,        
 		hands = sets.Nyame.Hands,
@@ -185,8 +184,6 @@ function init_gear_sets()
 
 	sets.precast.WS['Aeolian Edge'] = {
 		head = sets.Nyame.Head,
-		ammo = "Oshasha's Treatise",
-		range = empty,
 		neck = "Baetyl Pendant",
 		body = sets.Nyame.Body,        
 		hands = sets.Nyame.Hands,
@@ -316,40 +313,30 @@ function init_gear_sets()
 	"Clemency Grip" })
 
 	sets.midcast['Elemental Magic'] = {
-		main = "Daybreak",
+		main = "Bunzi's Rod",
 		sub = "Ammurapi Shield",
 		ammo = "Ghastly Tathlum +1",
+		-- head = "Ea Hat +1",
 		head = gear.empy.Head,
 		body = gear.empy.Body,
 		hands = gear.empy.Hands,
 		legs = gear.empy.Legs,
 		feet = gear.empy.Feet,
-		neck = "Mizu. Kubikazari",
-		waist = "Acuity Belt +1",
-		left_ear = "Friomisi Earring",
-		right_ear = "Azimuth Earring",
-		left_ring = "Stikini Ring +1",
-		right_ring = "Stikini Ring +1",
+		-- hands = "Agwu's Gages",
+		-- legs = "Agwu's Slops",
+		-- feet = "Agwu's Pigaches",
+		neck = "Sibyl Scarf",
+		waist = "Sacro Cord",
+		left_ear = "Malignance Earring",
+		right_ear = "Azimuth Earring +2",
+		left_ring = "Freke Ring",
+		right_ring = "Metamor. Ring +1",
+		-- back = gear.nuke_jse_back,
 		back = "Aurist's Cape +1",
 	}
 
-	sets.midcast['Elemental Magic'].Resistant = {
-		main = "Daybreak",
-		sub = "Ammurapi Shield",
-		ammo = "Pemphredo Tathlum",
-		head = gear.merlinic_nuke_head,
-		neck = "Sanctity Necklace",
-		ear1 = "Regal Earring",
-		ear2 = "Malignance Earring",
-		body = gear.merlinic_nuke_body,
-		hands = "Mallquis Cuffs +2",
-		ring1 = "Shiva Ring +1",
-		ring2 = "Freke Ring",
-		back = gear.nuke_jse_back,
-		waist = "Yamabuki-no-Obi",
-		legs = "Merlinic Shalwar",
-		feet = "Amalric Nails +1"
-	}
+	sets.midcast['Elemental Magic'].Resistant = set_combine(sets.midcast['Elemental Magic'], {
+	})
 
 	sets.midcast['Elemental Magic'].Proc = {
 		main = empty,
@@ -369,77 +356,14 @@ function init_gear_sets()
 		feet = "Regal Pumps +1"
 	}
 
-	sets.midcast['Elemental Magic'].Fodder = {
-		main = "Daybreak",
-		sub = "Ammurapi Shield",
-		ammo = "Ghastly Tathlum +1",
-		head = gear.merlinic_nuke_head,
-		neck = "Saevus Pendant +1",
-		ear1 = "Crematio Earring",
-		ear2 = "Friomisi Earring",
-		body = gear.merlinic_nuke_body,
-		hands = "Mallquis Cuffs +2",
-		ring1 = "Shiva Ring +1",
-		ring2 = "Freke Ring",
-		back = gear.nuke_jse_back,
-		waist = gear.ElementalObi,
-		legs = "Merlinic Shalwar",
-		feet = "Amalric Nails +1"
-	}
-
-	sets.midcast['Elemental Magic'].HighTierNuke = {
-		main = "Daybreak",
-		sub = "Ammurapi Shield",
-		ammo = "Pemphredo Tathlum",
-		head = gear.merlinic_nuke_head,
-		neck = "Baetyl Pendant",
-		ear1 = "Regal Earring",
-		ear2 = "Malignance Earring",
-		body = gear.merlinic_nuke_body,
-		hands = "Amalric Gages +1",
-		ring1 = "Metamor. Ring +1",
-		ring2 = "Freke Ring",
-		back = gear.nuke_jse_back,
-		waist = gear.ElementalObi,
-		legs = "Merlinic Shalwar",
-		feet = "Amalric Nails +1"
-	}
-
-	sets.midcast['Elemental Magic'].HighTierNuke.Resistant = {
-		main = "Daybreak",
-		sub = "Ammurapi Shield",
-		ammo = "Pemphredo Tathlum",
-		head = gear.merlinic_nuke_head,
-		neck = "Sanctity Necklace",
-		ear1 = "Regal Earring",
-		ear2 = "Malignance Earring",
-		body = gear.merlinic_nuke_body,
-		hands = "Amalric Gages +1",
-		ring1 = "Metamor. Ring +1",
-		ring2 = "Freke Ring",
-		back = gear.nuke_jse_back,
-		waist = "Yamabuki-no-Obi",
-		legs = "Merlinic Shalwar",
-		feet = "Amalric Nails +1"
-	}
-
-	sets.midcast['Elemental Magic'].HighTierNuke.Fodder = {
-		main = "Daybreak",
-		sub = "Ammurapi Shield",
-		ammo = "Pemphredo Tathlum",
-		head = gear.merlinic_nuke_head,
-		neck = "Saevus Pendant +1",
-		ear1 = "Regal Earring",
-		ear2 = "Malignance Earring",
-		body = gear.merlinic_nuke_body,
-		hands = "Amalric Gages +1",
-		ring1 = "Metamor. Ring +1",
-		ring2 = "Freke Ring",
-		back = gear.nuke_jse_back,
-		waist = gear.ElementalObi,
-		legs = "Merlinic Shalwar",
-		feet = "Amalric Nails +1"
-	}
+	sets.midcast['Elemental Magic'].Fodder = set_combine(sets.midcast['Elemental Magic'], {
+	})
+	sets.midcast['Elemental Magic'].HighTierNuke = set_combine(sets.midcast['Elemental Magic'], {
+	})
+	sets.midcast['Elemental Magic'].HighTierNuke.Resistant = set_combine(sets.midcast['Elemental Magic'], {
+	})
+	sets.midcast['Elemental Magic'].HighTierNuke.Fodder = set_combine(sets.midcast['Elemental Magic'], {
+	})
 
 	sets.midcast['Dark Magic'] = {
 		main = "Rubicundity",
@@ -599,9 +523,9 @@ function init_gear_sets()
 	sets.midcast.IntEnfeebles.Resistant = set_combine(sets.midcast['Enfeebling Magic'].Resistant,
 		{ head = "Amalric Coif +1", ear2 = "Malignance Earring", waist = "Acuity Belt +1" })
 
-	sets.midcast.MndEnfeebles = set_combine(sets.midcast['Enfeebling Magic'], { range = empty, ring1 = "Stikini Ring +1" })
+	sets.midcast.MndEnfeebles = set_combine(sets.midcast['Enfeebling Magic'], { ring1 = "Stikini Ring +1" })
 	sets.midcast.MndEnfeebles.Resistant = set_combine(sets.midcast['Enfeebling Magic'].Resistant,
-		{ range = empty, ring1 = "Stikini Ring +1" })
+		{ ring1 = "Stikini Ring +1" })
 
 	sets.midcast.Dia = set_combine(sets.midcast['Enfeebling Magic'], sets.TreasureHunter)
 	sets.midcast['Dia II'] = set_combine(sets.midcast['Enfeebling Magic'], sets.TreasureHunter)
@@ -675,8 +599,6 @@ function init_gear_sets()
 	sets.idle = {
 		main = "Idris",
 		sub = "Genmei Shield",
-		range = empty,
-		ammo = "Staunch Tathlum +1",
 		neck = "Loricate Torque +1",
 		ear1 = "Odnowa Earring +1",
 		ear2 = "Ethereal Earring",
@@ -867,7 +789,6 @@ function init_gear_sets()
 	-- Normal melee group
 	sets.engaged = {
 		main = "Maxentius",
-		ammo = "Amar Cluster",
 		head = "Blistering Sallet +1",
 		neck = "Combatant's Torque",
 		ear1 = "Crep. Earring",
@@ -926,6 +847,7 @@ function init_gear_sets()
 		legs = gear.empy.Legs, 
 		feet = gear.empy.Feet,
 	}
+	
 	sets.buff.Sublimation = { waist = "Embla Sash" }
 	sets.buff.DTSublimation = { waist = "Embla Sash" }
 

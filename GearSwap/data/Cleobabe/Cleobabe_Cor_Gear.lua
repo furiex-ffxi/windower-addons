@@ -37,7 +37,6 @@ function user_job_setup()
 
     send_command('bind ^backspace input /ja "Double-up" <me>')
     send_command('bind @backspace input /ja "Snake Eye" <me>')
-    send_command('bind !backspace input /ja "Fold" <me>')
     send_command('bind ^@!backspace input /ja "Crooked Cards" <me>')
 
     send_command('bind ^\\\\ input /ja "Random Deal" <me>')

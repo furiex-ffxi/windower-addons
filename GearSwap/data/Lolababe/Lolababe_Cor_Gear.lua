@@ -12,8 +12,8 @@ function user_job_setup()
         'DualProcWeapons', 'None')
     state.CompensatorMode:options('Always', '300', '1000', 'Never')
 
-    gear.RAbullet = "Eminent Bullet"
-    gear.WSbullet = "Eminent Bullet"
+    gear.RAbullet = "Chrono Bullet"
+    gear.WSbullet = "Chrono Bullet"
     gear.MAbullet = "Chrono Bullet" --For MAB WS, do not put single-use bullets here.
     gear.QDbullet = "Animikii Bullet"
     options.ammo_warning_limit = 15
@@ -37,7 +37,6 @@ function user_job_setup()
 
     send_command('bind ^backspace input /ja "Double-up" <me>')
     send_command('bind @backspace input /ja "Snake Eye" <me>')
-    send_command('bind !backspace input /ja "Fold" <me>')
     send_command('bind ^@!backspace input /ja "Crooked Cards" <me>')
 
     send_command('bind ^\\\\ input /ja "Random Deal" <me>')
@@ -59,6 +58,12 @@ function init_gear_sets()
     --------------------------------------
     -- Start defining the sets
     --------------------------------------
+    gear.Empy = {}
+    gear.Empy.Head = "Chass. Tricorne +3"
+    gear.Empy.Body = "Chasseur's Frac +3"
+    gear.Empy.Hands = "Chasseur's Gants +3"
+    gear.Empy.Legs = "Chas. Culottes +3"
+    gear.Empy.Feet = "Chass. Bottes +3"
 
     -- Precast Sets
 
@@ -238,9 +243,7 @@ function init_gear_sets()
 		waist="Sailfi Belt +1",
 		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 		right_ear="Ishvara Earring",
-		-- left_ring="Regal Ring",
-		left_ring="Karieyh Ring",
-        -- right_ring="Cornelia's ring",
+		left_ring="Regal Ring",
         right_ring="Epaminondas's Ring",
         back=gear.magic_wsd_jse_back,
 		-- back=gear.str_wsd_jse_back,
@@ -328,10 +331,11 @@ function init_gear_sets()
     }
 
     sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {
+        neck = "Rep. Plat. Medal"
     })
 
     sets.precast.WS['Savage Blade'].Acc = set_combine(sets.precast.WS['Savage Blade'], {
-        
+        neck = "Rep. Plat. Medal"        
     })
 
     sets.precast.WS['Last Stand'] = {
@@ -354,21 +358,8 @@ function init_gear_sets()
         back = { name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%','Damage taken-5%',}},
     }
 
-    sets.precast.WS['Last Stand'].Acc = {
-        ammo=gear.WSbullet,
-        head={ name={ name="Nyame Helm", augments={'Path: B',}}, augments={'Path: B',}},
-        body={ name="Nyame Mail", augments={'Path: B',}},
-        hands="Chasseur's Gants +3",
-        legs={ name="Nyame Flanchard", augments={'Path: B',}},
-        feet={ name="Nyame Sollerets", augments={'Path: B',}},
-        neck={ name="Comm. Charm +2", augments={'Path: A',}},
-        waist="Yemaya Belt",
-        left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-        right_ear="Telos Earring",
-        left_ring="Hajduk Ring +1",
-        right_ring="Cornelia's Ring",
-        back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%','Damage taken-5%',}},
-    }
+    sets.precast.WS['Last Stand'].Acc = set_combine(sets.precast.WS['Last Stand'], {
+    })
 
     sets.precast.WS['Split Shot'] = {
         ammo = gear.WSbullet,
@@ -420,7 +411,6 @@ function init_gear_sets()
 		right_ring="Archon Ring",
 		left_ring="Dingir Ring",
 		right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-		-- waist="Orpheus's Sash",   -- Changes based off elemental function
         waist="Eschan Stone",
 		back=gear.magic_wsd_jse_back,
 	})
@@ -708,10 +698,10 @@ function init_gear_sets()
     sets.weapons.DualSavageWeapons = { main = "Naegling", sub = "Gleti's Knife", range = "Anarchy +2" }
     sets.weapons.DualEvisceration = { main = "Tauret", sub = "Blurred Knife +1", range = "Anarchy +2" }
     sets.weapons.Savage = { main = "Naegling", sub = "Nusku Shield", range = "Anarchy +2" }
-    sets.weapons.DualLeadenRanged = { main = "Rostam", sub = "Tauret", range = "Fomalhaut" }
-    sets.weapons.DualLeadenMelee = { main = "Naegling", sub = "Atoyac", range = "Fomalhaut" }
+    sets.weapons.DualLeadenRanged = { main = "Tauret", sub = "Gleti's Knife", range = "Fomalhaut" }
+    sets.weapons.DualLeadenMelee = { main = "Tauret", sub = "Gleti's Knife", range = "Fomalhaut" }
     sets.weapons.DualAeolian = { main = "Rostam", sub = "Tauret", range = "Anarchy +2" }
-    sets.weapons.DualLeadenMeleeAcc = { main = "Naegling", sub = "Gleti's Knife", range = "Fomalhaut" }
+    sets.weapons.DualLeadenMeleeAcc = { main = "Tauret", sub = "Gleti's Knife", range = "Fomalhaut" }
     sets.weapons.DualRanged = { main = "Qutrub Knife", sub = "Gleti's Knife", range = "Anarchy +2" }
 
     -- Engaged sets
@@ -724,9 +714,9 @@ function init_gear_sets()
     -- Normal melee group
     sets.engaged = {
         head = sets.Malignance.Head,
-        neck = "Lissome Necklace",
-        ear1 = "Cessance Earring",
-        ear2 = "Brutal Earring",
+        neck = "Iskur Gorget",
+        ear1 = "Telos Earring",
+        ear2 = "Dedition Earring",
         body = sets.Malignance.Body,
         hands = sets.Malignance.Hands,
         ring1 = "Petrov Ring",
@@ -737,35 +727,22 @@ function init_gear_sets()
         feet = sets.Malignance.Feet        
     }
 
-    sets.engaged.Acc = {
-        head = "Carmine Mask +1",
-        neck = "Combatant's Torque",
-        ear1 = "Cessance Earring",
-        ear2 = "Telos Earring",
-        body = "Meg. Cuirie +2",
-        hands = "Adhemar Wrist. +1",
-        ring1 = "Ramuh Ring +1",
-        ring2 = "Epona's Ring",
-        back = gear.tp_jse_back,
-        waist = "Olseni Belt",
-        legs = "Carmine Cuisses +1",
-        feet = "Malignance Boots"
-    }
+    sets.engaged.Acc = set_combine(sets.engaged, {
+        hands = "Gazu Bracelets +1",
+    })
 
-    sets.engaged.DT = {
-        head = "Malignance Chapeau",
-        neck = "Loricate Torque +1",
-        ear1 = "Cessance Earring",
-        ear2 = "Brutal Earring",
-        body = "Malignance Tabard",
-        hands = "Malignance Gloves",
-        ring1 = "Defending Ring",
-        ring2 = "Petrov Ring",
+    sets.engaged.DT = set_combine(sets.engaged, {
+        head=sets.Malignance.Head,
+        hands=sets.Malignance.Hands,
+        legs=gear.Empy.Legs,
+        neck="Iskur Gorget",
+        waist="Sailfi Belt +1",
+        left_ear="Crep. Earring",
+        right_ear="Dedition Earring",
+		ring1="Lehko's Ring",
+        right_ring="Epona's Ring",
         back = gear.tp_jse_back,
-        waist = "Windbuffet Belt +1",
-        legs = "Malignance Tights",
-        feet = "Malignance Boots"
-    }
+    })
 
     sets.engaged.Acc.DT = {
         head = "Malignance Chapeau",
@@ -782,29 +759,17 @@ function init_gear_sets()
         feet = "Malignance Boots"
     }
 
+
     sets.engaged.DW = set_combine(sets.engaged, {
-        neck = "Iskur Gorget",
-        ear1 = "Suppanomimi",
-        ear2 = "Telos Earring",
-        back = gear.tp_jse_back,
+		ear2 = "Suppanomimi",
         waist = "Reiki Yotai",
-        legs = "Samnuha Tights",
     })
 
-    sets.engaged.DW.Acc = {
-        head = "Carmine Mask +1",
-        neck = "Combatant's Torque",
-        ear1 = "Odr Earring",
-        ear2 = "Telos Earring",
-        body = "Malignance Tabard",
-        hands = "Floral Gauntlets",
-        ring1 = "Ramuh Ring +1",
-        ring2 = "Ramuh Ring +1",
-        back = gear.tp_jse_back,
-        waist = "Olseni Belt",
+    sets.engaged.DW.Acc = set_combine(sets.engaged.DW, {
+        hands = "Gazu Bracelets +1",
         legs = "Carmine Cuisses +1",
-        feet = "Malignance Boots"
-    }
+        waist = "Kentarch Belt +1",
+    })
 
     sets.engaged.DW.DT = {
         head = "Malignance Chapeau",

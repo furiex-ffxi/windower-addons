@@ -12,7 +12,7 @@ function user_job_setup()
         ['description'] = 'Extra Melee Mode',
         'None'
     }
-    state.Weapons:options('Trishula')
+    state.Weapons:options('Shining One', 'Naegling') -- 'Trishula', 
     state.Passive = M {
         ['description'] = 'Passive Mode',
         'None',
@@ -87,7 +87,7 @@ function init_gear_sets()
         back = gear.tp_jse_back,
         waist = "Sailfi Belt +1",
         legs = gear.relic.Legs,
-        feet = "Flam. Gambieras +2"
+        feet = "Maenadic Gambieras"
     }
     sets.precast.JA['Ancient Circle'] = {
         legs = gear.af.Legs,
@@ -228,6 +228,19 @@ function init_gear_sets()
     sets.precast.WS['Drakesbane'].Acc = set_combine(sets.precast.WS.Acc, {})
     sets.precast.WS['Drakesbane'].Fodder = set_combine(sets.precast.WS.Fodder, {})
 
+    sets.precast.WS['Impulse Drive'] = set_combine(sets.precast.WS, {
+        body = "Gleti's Cuirass"
+    })
+    sets.precast.WS['Impulse Drive'].SomeAcc = set_combine(sets.precast.WS.Acc, {
+        body = "Gleti's Cuirass"
+    })
+    sets.precast.WS['Impulse Drive'].Acc = set_combine(sets.precast.WS.Acc, {
+        body = "Gleti's Cuirass"
+    })
+    sets.precast.WS['Impulse Drive'].Fodder = set_combine(sets.precast.WS.Fodder, {
+        body = "Gleti's Cuirass"
+    })    
+
     -- Sets to return to when not performing an action.
 
     -- Resting sets
@@ -306,6 +319,16 @@ function init_gear_sets()
     sets.weapons.Trishula = {
         main = "Trishula",
         sub = "Utu Grip"
+    }
+
+    sets.weapons["Shining One"] = {
+        main = "Shining One",
+        sub = "Utu Grip"
+    }
+
+    sets.weapons.Naegling = {
+        main = "Naegling",
+        sub = "Legion Scutum"
     }
 
     -- Swap to these on Moonshade using WS if at 3000 TP

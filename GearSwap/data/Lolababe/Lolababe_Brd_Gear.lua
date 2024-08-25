@@ -9,9 +9,12 @@ function user_job_setup()
 	-- Whether to use Carn (or song daggers in general) under a certain threshhold even when weapons are locked.
 	state.CarnMode           = M { 'Always', '300', '1000', 'Never' }
 
-	gear.melee_jse_back      = { name = "Intarabus's Cape", augments = { 'Accuracy+20 Attack+20' } }
-	gear.magic_jse_back      = { name = "Intarabus's Cape", augments = { 'CHR+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'Mag. Acc.+10', '"Fast Cast"+10', 'Damage taken-5%', } }
-	gear.idle_jse_back       = { name = "Intarabus's Cape", augments = { 'HP+60', 'Eva.+20 /Mag. Eva.+20', 'Mag. Evasion+10', '"Fast Cast"+10', 'Occ. inc. resist. to stat. ailments+8', } }
+	gear.fc_jse_back = { name = "Intarabus's Cape", augments = { 'CHR+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'CHR+10', '"Fast Cast"+10', 'Phys. dmg. taken-10%', } }
+	gear.str_wsd_jse_back = { name = "Intarabus's Cape", augments = { 'STR+20', 'Accuracy+20 Attack+20', 'STR+10', 'Weapon skill damage +10%', 'Phys. dmg. taken-10%', } }
+	gear.dex_wsd_jse_back = { name = "Intarabus's Cape", augments = { 'DEX+20', 'Accuracy+20 Attack+20', 'DEX+10', 'Weapon skill damage +10%', 'Phys. dmg. taken-10%', } }
+	gear.chr_wsd_jse_back = { name = "Intarabus's Cape", augments = { 'CHR+20', 'Accuracy+20 Attack+20', 'CHR+10', 'Weapon skill damage +10%', 'Phys. dmg. taken-10%', } }
+	gear.int_wsd_jse_back = { name = "Intarabus's Cape", augments = { 'INT+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'INT+10', 'Weapon skill damage +10%', 'Phys. dmg. taken-10%', } }
+	gear.tp_jse_back = { name = "Intarabus's Cape", augments = { 'DEX+20', 'Accuracy+20 Attack+20', 'Accuracy+10', '"Dbl.Atk."+10', 'Phys. dmg. taken-10%', } }
 
 	gear.af = {}
 	gear.af.Head             = "Brioso Roundlet +3"
@@ -96,7 +99,7 @@ function init_gear_sets()
 		ear2 = "Etiolation Earring",
 		ring1 = "Weather. Ring",
 		ring2 = "Kishar Ring",
-		back = { name = "Intarabus's Cape", augments = { 'CHR+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'CHR+10', '"Fast Cast"+10', 'Phys. dmg. taken-10%', } },
+		back = gear.fc_jse_back,
 	}
 
 	sets.precast.FC.DT = {
@@ -163,8 +166,8 @@ function init_gear_sets()
 		ear1 = "Moonshade Earring",
 		ear2 = "Ishvara Earring",
 		ring1 = "Ilabrat Ring",
-		ring2 = "Cornelia's Ring",
-		back = { name = "Intarabus's Cape", augments = { 'STR+20', 'Accuracy+20 Attack+20', 'STR+10', 'Weapon skill damage +10%', 'Phys. dmg. taken-10%', } },
+		ring2 = "Epaminondas's Ring",
+		back = gear.str_wsd_jse_back,
 	}
 
 	sets.precast.WS.Acc = set_combine(sets.precast.WS, {
@@ -180,7 +183,7 @@ function init_gear_sets()
 		ring1 = "Begrudging Ring",
 		ring2 = "Hetairoi Ring",
 		waist = "Fotia Belt",
-		back = { name = "Intarabus's Cape", augments = { 'DEX+20', 'Accuracy+20 Attack+20', 'DEX+10', 'Weapon skill damage +10%', } },
+		back = gear.dex_wsd_jse_back,
 	})
 
 	sets.precast.WS['Mordant Rime'] = set_combine(sets.precast.WS, {
@@ -192,13 +195,13 @@ function init_gear_sets()
 		ear1 = "Regal Earring",
 		ring2 = { name = "Metamor. Ring +1", augments = { 'Path: A', } },
 		waist = "Kentarch Belt +1",
-		back = { name = "Intarabus's Cape", augments = { 'CHR+20', 'Accuracy+20 Attack+20', 'CHR+10', 'Weapon skill damage +10%', 'Phys. dmg. taken-10%', } },
+		back = gear.chr_wsd_jse_back,
 	})
 
 	sets.precast.WS['Rudra\'s Storm'] = set_combine(sets.precast.WS, {
 		waist = "Kentarch Belt +1",
 		ring1 = "Ilabrat Ring",
-		back = { name = "Intarabus's Cape", augments = { 'DEX+20', 'Accuracy+20 Attack+20', 'DEX+10', 'Weapon skill damage +10%', } },
+		back = gear.dex_wsd_jse_back,
 	})
 
 	sets.precast.WS['Aeolian Edge'] = set_combine(sets.precast.WS, {
@@ -206,7 +209,7 @@ function init_gear_sets()
 		neck = "Sibyl Scarf",
 		ear2 = "Friomisi Earring",
 		ring2 = { name = "Metamor. Ring +1", augments = { 'Path: A', } },
-		back = { name = "Intarabus's Cape", augments = { 'INT+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'INT+10', 'Weapon skill damage +10%', 'Phys. dmg. taken-10%', } },
+		back = gear.int_wsd_jse_back,
 	})
 
 	sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {
@@ -258,7 +261,7 @@ function init_gear_sets()
 		ear2 = "Genmei Earring",
 		ring1 = "Defending Ring",
 		ring2 = { name = "Gelatinous Ring +1", augments = { 'Path: A', } },
-		back = { name = "Intarabus's Cape", augments = { 'DEX+20', 'Accuracy+20 Attack+20', 'Accuracy+10', '"Dbl.Atk."+10', 'Phys. dmg. taken-10%', } },
+		back = gear.fc_jse_back,
 	}
 
 	sets.midcast.SongEffect.DW = { 
@@ -278,7 +281,7 @@ function init_gear_sets()
 		ring1 = { name = "Stikini Ring +1", bag = "wardrobe2" },
 		ring2 = { name = "Stikini Ring +1", bag = "wardrobe3" },
 		waist = "Acuity Belt +1",
-		back = { name = "Intarabus's Cape", augments = { 'CHR+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'CHR+10', '"Fast Cast"+10', 'Phys. dmg. taken-10%', } }
+		back = gear.fc_jse_back
 	}
 
 	sets.midcast.SongDebuff.DW = { 
@@ -322,7 +325,7 @@ function init_gear_sets()
 		hands = "Gendewitha Gages +1",
 		ring1="Kishar Ring",
 		ring2="Prolix Ring",
-		back = { name = "Intarabus's Cape", augments = { 'CHR+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'CHR+10', '"Fast Cast"+10', 'Phys. dmg. taken-10%', } },
+		back = gear.fc_jse_back,
 		waist="Witful Belt",
 		legs = gear.empy.Legs,
 		feet = sets.Nyame.Feet
@@ -555,7 +558,7 @@ function init_gear_sets()
 		ear2 = "Fili Earring +1",
 		ring1 = "Stikini Ring +1",
 		ring2 = "Stikini Ring +1",
-		back = { name = "Intarabus's Cape", augments = { 'CHR+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'CHR+10', '"Fast Cast"+10', 'Phys. dmg. taken-10%', } },
+		back = gear.fc_jse_back,
 	}
 
 	sets.idle.Refresh = set_combine(sets.idle, {
@@ -567,7 +570,7 @@ function init_gear_sets()
 		ear2 = "Eabani Earring",
 		ring1 = "Stikini Ring +1",
 		ring2 = "Stikini Ring +1",
-		back = { name = "Intarabus's Cape", augments = { 'CHR+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'CHR+10', '"Fast Cast"+10', 'Phys. dmg. taken-10%', } },
+		back = gear.fc_jse_back,
 	})
 
 	sets.idle.NoRefresh = {
@@ -693,7 +696,7 @@ function init_gear_sets()
 		ear2 = "Digni. Earring",
 		ring1 = "Chirich Ring +1",
 		ring2 = "Chirich Ring +1",
-		back = { name = "Intarabus's Cape", augments = { 'DEX+20', 'Accuracy+20 Attack+20', 'Accuracy+10', '"Dbl.Atk."+10', 'Phys. dmg. taken-10%', } },
+		back = gear.tp_jse_back,
 	}
 
 	sets.engaged.DT = set_combine(sets.engaged, {

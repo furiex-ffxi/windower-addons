@@ -15,7 +15,7 @@ function user_job_setup()
     gear.RAbullet = "Chrono Bullet"
     gear.WSbullet = "Chrono Bullet"
     gear.MAbullet = "Living Bullet" --For MAB WS, do not put single-use bullets here.
-    gear.QDbullet = "Living Bullet" -- "Animikii Bullet"
+    gear.QDbullet = "Animikii Bullet"
     options.ammo_warning_limit = 15
     --Ikenga_vest_bonus = 190  -- It is 190 at R20. Uncomment if you need to manually adjust because you are using below R20
 
@@ -41,7 +41,6 @@ function user_job_setup()
 
     send_command('bind ^backspace input /ja "Double-up" <me>')
     send_command('bind @backspace input /ja "Snake Eye" <me>')
-    send_command('bind !backspace input /ja "Fold" <me>')
     send_command('bind ^@!backspace input /ja "Crooked Cards" <me>')
 
     send_command('bind ^\\\\ input /ja "Random Deal" <me>')
@@ -71,7 +70,7 @@ function init_gear_sets()
     sets.precast.JA['Triple Shot'] = { 
         head="Oshosi Mask +1", -- Missing
         body=gear.Empy.Body, --14
-        hands="Lanun Gants +3", -- Tripple shot becomes Quad shot
+        hands="Lanun Gants +3", -- Triple shot becomes Quad shot
         legs="Osh. Trousers +1", -- Missing
         feet="Osh. Leggings +1", --3
     }
@@ -429,6 +428,7 @@ function init_gear_sets()
     }
 
     sets.precast.WS['Aeolian Edge'] = set_combine(sets.precast.WS.MAB, {
+        ammo="Animikii Bullet",
         right_ear="Hectate's Earring",
 		back=gear.magic_wsd_jse_back,
 		body="Lanun Frac +3",
@@ -789,7 +789,6 @@ function init_gear_sets()
         waist = "Windbuffet Belt +1",
         legs = "Samnuha Tights",
         feet = "Herculean Boots"
-        -- feet = sets.Malignance.Feet
     }
 
     sets.engaged.Acc = set_combine(sets.engaged, {
@@ -798,8 +797,10 @@ function init_gear_sets()
 
     sets.engaged.DT = set_combine(sets.engaged, {
         head=sets.Malignance.Head,
+        body=sets.Malignance.Body,
         hands=sets.Malignance.Hands,
         legs=gear.Empy.Legs,
+        feet = sets.Malignance.Feet,
         neck="Iskur Gorget",
         waist="Sailfi Belt +1",
         left_ear="Crep. Earring",
@@ -836,33 +837,33 @@ function init_gear_sets()
     })
 
     sets.engaged.DW.DT = {
-        head = "Malignance Chapeau",
+        head=sets.Malignance.Head,
+        body=sets.Malignance.Body,
+        hands=sets.Malignance.Hands,
+        legs=gear.Empy.Legs,
+        feet = sets.Malignance.Feet,
         neck = "Iskur Gorget",
         ear1 = "Suppanomimi",
         ear2 = "Dedition Earring",
-        body = "Malignance Tabard",
-        hands = "Malignance Gloves",
 		ring1 = "Lehko's Ring",
         ring2 = "Epona's Ring",
         back = gear.tp_jse_back,
         waist = "Reiki Yotai",
-        legs = gear.Empy.Legs,
-        feet = "Malignance Boots"
     }
 
     sets.engaged.DW.Acc.DT = {
-        head = "Malignance Chapeau",
+        head=sets.Malignance.Head,
+        body=sets.Malignance.Body,
+        hands=sets.Malignance.Hands,
+        legs=gear.Empy.Legs,
+        feet = sets.Malignance.Feet,
         neck = "Loricate Torque +1",
         ear1 = "Suppanomimi",
         ear2 = "Telos Earring",
-        body = "Malignance Tabard",
-        hands = "Malignance Gloves",
         ring1="Lehko's Ring",
         ring2 = "Defending Ring",
         back = gear.tp_jse_back,
         waist = "Reiki Yotai",
-        legs = "Malignance Tights",
-        feet = "Malignance Boots"
     }
 end
 

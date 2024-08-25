@@ -93,12 +93,10 @@ bayld_items = {'Tlalpoloani','Macoquetza','Camatlatia','Icoyoca','Tlamini','Suij
 'Uk\'uxkaj Cap'}
 ]]
 
-if string.find(world.area, "Outer Ra'Kaznar") then
-	windower.register_event('incoming text',function(org)
-		aita_debuffs(org)
-		aminon_debuffs(org)
-	end)
-end
+windower.register_event('incoming text',function(org)
+	aita_debuffs(org)
+	aminon_debuffs(org)
+end)
 
 function aita_debuffs(org)
 	if not string.find(org:lower(), "aita") and not string.find(org:lower(), "degei") then
