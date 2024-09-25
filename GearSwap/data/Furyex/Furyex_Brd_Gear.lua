@@ -5,7 +5,7 @@ function user_job_setup()
 	state.HybridMode:options('Normal', 'DT')
 	state.CastingMode:options('Normal', 'Duration', 'Resistant')
 	state.IdleMode:options('Normal', 'NoRefresh', 'DT')
-	state.Weapons:options('None', 'Naegling', 'Aeneas', 'Carnwenhan', 'Qutrub', 'DualCarnwenhan', 'DualMpu', 'DualWeapons', 'DualNaegling', 'DualTauret', 'DualAeolian')
+	state.Weapons:options('None', 'Naegling', 'Aeneas', 'Carnwenhan', 'Qutrub', 'DualCarnwenhan', 'DualMpu', 'DualWeapons', 'DualNaegling', 'DualNaeglingAcc', 'DualTauret', 'DualAeolian')
 	-- Whether to use Carn (or song daggers in general) under a certain threshhold even when weapons are locked.
 	state.CarnMode           = M { 'Always', '300', '1000', 'Never' }
 
@@ -68,9 +68,10 @@ function init_gear_sets()
 	sets.weapons.Naegling = { main = "Naegling", sub = "Genmei Shield" }
 	sets.weapons.Qutrub = { main = "Qutrub Knife", sub = "Genmei Shield" }
 	sets.weapons.DualCarnwenhan = {main = "Carnwenhan", sub = "Fusetto +2"}	
-	sets.weapons.DualWeapons = { main = "Mpu Gandring", sub = "Fusetto +2" } -- Aenas
+	sets.weapons.DualWeapons = { main = "Kartika", sub = "Gleti's Knife" } -- Aenas
 	sets.weapons.DualMpu = {main = "Mpu Gandring", sub= "Fusetto +2"}	
 	sets.weapons.DualNaegling = { main = "Naegling", sub = "Fusetto +2" }
+	sets.weapons.DualNaeglingAcc = { main = "Naegling", sub = "Gleti's Knife" }
 	sets.weapons.DualTauret = { main = "Tauret", sub = "Fusetto +2" }
 	sets.weapons.DualAeolian = { main = "Tauret", sub = "Malevolence" }
 
@@ -93,7 +94,7 @@ function init_gear_sets()
 		-- neck = "Orunmila's Torque",
 		neck = "Baetyl Pendant",
 		waist = "Embla Sash",
-		ear1 = "Odnowa Earring +1",
+		ear1 = "Enchntr. Earring +1",
 		ear2 = "Etiolation Earring",
 		ring1 = "Weather. Ring",
 		ring2 = "Kishar Ring",
@@ -154,12 +155,13 @@ function init_gear_sets()
 	-- Default set for any weaponskill that isn't any more specifically defined
 	sets.precast.WS = {
 		range = { name = "Linos", augments = { 'Attack+20', 'Weapon skill damage +3%', 'STR+6 CHR+6', } },
-		head = { name = "Nyame Helm", augments = { 'Path: B', } },
+		head = sets.Nyame.Head,
 		body = { name = gear.relic_body, augments = { 'Enhances "Troubadour" effect', } },
-		hands = { name = "Nyame Gauntlets", augments = { 'Path: B', } },
-		legs = { name = "Nyame Flanchard", augments = { 'Path: B', } },
-		feet = { name = "Nyame Sollerets", augments = { 'Path: B', } },
-		neck = { name = "Bard's Charm +2", augments = { 'Path: A', } },
+		hands = sets.Nyame.Hands,
+		legs = sets.Nyame.Legs,
+		feet = sets.Nyame.Feet,
+		neck = "Combatant's Torque",
+		-- neck = { name = "Bard's Charm +2", augments = { 'Path: A', } },
 		waist = "Fotia Belt",
 		ear1 = "Moonshade Earring",
 		ear2 = "Ishvara Earring",
@@ -169,31 +171,41 @@ function init_gear_sets()
 	}
 
 	sets.precast.WS.Acc = set_combine(sets.precast.WS, {
-
 	})
 
 	-- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
 	sets.precast.WS['Evisceration'] = set_combine(sets.precast.WS, {
 		head = { name = "Blistering Sallet +1", augments = { 'Path: A', } },
-		body = "Ayanmo Corazza +2",
+		body = gear.relic_body,
 		neck = "Fotia Gorget",
+		ear1 = "Moonshade Earring",
 		ear2 = "Mache Earring +1",
-		ring1 = "Begrudging Ring",
-		ring2 = "Hetairoi Ring",
+		ring1 = { name="Cacoethic Ring +1", augments={'Path: A',}},
+		ring2 ="Ilabrat Ring",
 		waist = "Fotia Belt",
+		leg = "Zoar Subligar +1",
 		back = gear.dex_wsd_jse_back,
 	})
 
 	sets.precast.WS['Mordant Rime'] = set_combine(sets.precast.WS, {
-		head = gear.relic_head,
-		body = gear.relic_body,
-		hands = gear.relic_hands,
-		legs = gear.relic_legs,
-		feet = gear.relic_feet,
+		body = sets.Nyame.Body,
 		ear1 = "Regal Earring",
-		ring2 = { name = "Metamor. Ring +1", augments = { 'Path: A', } },
-		waist = "Kentarch Belt +1",
+		ear2 = "Enchntr. Earring +1", -- Fili Earring +2
+		waist = { name="Sailfi Belt +1", augments={'Path: A',}},
+		ring1 = "Epaminondas's Ring",
+		ring2 = { name="Metamor. Ring +1", augments={'Path: A',}},
 		back = gear.chr_wsd_jse_back,
+	})
+
+	sets.precast.WS['Ruthless Stroke'] = set_combine(sets.precast.WS, {
+		range = { name = "Linos", augments = { 'Accuracy+15 Attack+15', 'Weapon skill damage +3%', 'DEX+8', } }, 
+		body = sets.Nyame.Body,
+		ear1 = "Moonshade Earring",
+		ear2 = "Mache Earring +1",
+		waist = { name="Kentarch Belt +1", augments={'Path: A',}},
+		ring1 = "Epaminondas's Ring",
+		ring2 = "Ilabrat Ring",
+		back = gear.dex_wsd_jse_back,
 	})
 
 	sets.precast.WS['Rudra\'s Storm'] = set_combine(sets.precast.WS, {
@@ -204,15 +216,21 @@ function init_gear_sets()
 	})
 
 	sets.precast.WS['Aeolian Edge'] = set_combine(sets.precast.WS, {
+		body = sets.Nyame.Body,
 		waist = "Orpheus's Sash",
 		neck = "Sibyl Scarf",
-		ear2 = "Friomisi Earring",
+		ear1 = "Moonshade Earring",
+		ear2 = "Regal Earring",
+		ring1 = "Epaminondas's Ring",
 		ring2 = { name = "Metamor. Ring +1", augments = { 'Path: A', } },
 		back = gear.int_wsd_jse_back,
 	})
 
 	sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {
+		body = sets.Nyame.Body,
 		waist = "Sailfi Belt +1",
+		ring1 = "Epaminondas's Ring",
+		ring2 = "Cornelia's Ring",
 	})
 
 	sets.precast.WS['Exenterator'] = set_combine(sets.precast.WS, {
@@ -220,7 +238,7 @@ function init_gear_sets()
 
 	-- Swap to these on Moonshade using WS if at 3000 TP
 	--sets.MaxTP = {ear1="Ishvara Earring",ear2="Telos Earring",}
-	--sets.AccMaxTP = {ear1="Mache Earring +1",ear2="Telos Earring"}
+	sets.AccMaxTP = { ear1="Mache Earring +1", ear2="Telos Earring" }
 
 	-- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
 
@@ -546,7 +564,7 @@ function init_gear_sets()
 	sets.idle = {
 		-- range = "Loughnashade",
 		range = { name = "Linos", augments = { 'Accuracy+15 Attack+15', '"Store TP"+4', 'Quadruple Attack +3', } },		head = gear.empy_head,
-		body = "Ashera Harness",
+		body = "Adamantite Armor",
 		hands = gear.empy_hands,
 		legs = gear.af_legs,
 		feet = gear.empy_feet,
@@ -554,8 +572,8 @@ function init_gear_sets()
 		waist = "Plat. Mog. Belt",
 		ear1 = "Eabani Earring",
 		ear2 = "Etiolation Earring",
-		ring1 = "Defending Ring",
-		ring2 = "Stikini Ring +1",
+		ring1 = "Karieyh Ring",
+		ring2 = "Fortified Ring",
 		back = gear.tp_jse_back,
 	}
 
@@ -760,6 +778,7 @@ autows_list = {
 	['Aeneas'] = "Rudra's Storm",
 	['DualWeapons'] = "Rudra's Storm",
 	['DualNaegling'] = 'Savage Blade',
+	['DualNaeglingAcc'] = 'Savage Blade',
 	['DualTauret'] = 'Evisceration',
 	['DualAeolian'] = 'Aeolian Edge'
 }

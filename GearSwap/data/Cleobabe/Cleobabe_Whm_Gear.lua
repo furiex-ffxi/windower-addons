@@ -88,7 +88,7 @@ function init_gear_sets()
 		hands = "Fanatic Gloves", -- 7
 		ring1 = "Kishar Ring", -- 4
 		ring2 = "Lebeche Ring", -- 2 QM
-		back = "Alaunus's Cape", -- 10
+		back = "Fi Follet Cape +1", -- 10
 		waist = "Witful Belt", -- 3/3 QM
 		legs = "Volte Brais", -- 9
 		feet = "Volte Gaiters"  -- 6
@@ -514,9 +514,14 @@ function init_gear_sets()
 
 	sets.midcast.Regen = set_combine(sets.midcast['Enhancing Magic'],
 		{ 
+			main = "Bolelabunga",
+			sub = "Ammurapi Shield",
+			head = "Inyanga Tiara +2",
+			waist = "Embla Sash",
 			body = gear.relic.body,
 			hands = gear.empy.hands, 
 			legs = gear.af.legs, 
+			feet = "Bunzi's Sabots",
 		})
 
 	sets.midcast.Protect = set_combine(sets.midcast['Enhancing Magic'],
@@ -591,10 +596,8 @@ function init_gear_sets()
 		-- head = "Bunzi's Hat",
 		head = "C. Palug Crown",
 		neck = "Baetyl Pendant",
-		-- ear1 = "Regal Earring",
-		-- ear2 = "Friomisi Earring",
-		ear1 = "Malignance Earring",
-		ear2 = "Ebers Earring +1",
+		ear1 = "Regal Earring",
+		ear2 = "Malignance Earring",
 		body = sets.Nyame.Body,
 		hands = "Volte Gloves",
 		ring1 = "Stikini Ring +1",

@@ -5,7 +5,7 @@ function user_job_setup()
     state.RangedMode:options('Normal', 'Acc', 'Fodder')
     state.WeaponskillMode:options('Match', 'Normal', 'Acc')
     state.IdleMode:options('Normal', 'PDT')
-    state.Weapons:options('Default', 'DualEviscerationWeapons', 'DualGastra', 'DualWeapons', 'DualSavageWeapons', 'DualMagicWeapons',
+    state.Weapons:options('Default', 'DualEviscerationWeapons', 'DualGastra', 'DualAnni', 'DualWeapons', 'DualSavageWeapons', 'DualMagicWeapons',
         'DualMalevolence', 'DualFermion')
 
     -- Ikenga_vest_bonus = 190  -- It is 190 at R20. Uncomment if you need to manually adjust because you are using below R20
@@ -13,7 +13,8 @@ function user_job_setup()
     WeaponType = {
         ['Fail-Not'] = "Bow",
         ['Fomalhaut'] = "Gun",
-        ['Ataktos'] = "Gun"
+        ['Ataktos'] = "Gun",
+        ['Annihilator'] = "Gun"
     }
 
     DefaultAmmo = {
@@ -150,26 +151,40 @@ function init_gear_sets()
     -- Weaponskill sets
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {
-        -- head = "Orion Beret +3",
-        head = sets.Nyame.Head,
-        neck = "Fotia Gorget",
+        head = "Orion Beret +3",
+        -- neck = "Fotia Gorget",
+        neck = "Iskur Gorget",
         body = sets.Nyame.Body,
         hands = sets.Nyame.Hands,
 		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 		right_ear="Ishvara Earring",
-		-- left_ring="Regal Ring",
-		left_ring="Karieyh Ring",
-        -- right_ring="Cornelia's ring",
+		left_ring="Regal Ring",
         right_ring="Epaminondas's Ring",
         back = gear.str_wsd_jse_back,
         waist = "Sailfi Belt +1",
         legs = sets.Nyame.Legs,
         feet = sets.Nyame.Feet
     }
+    
 
     sets.precast.WS.Acc = set_combine(sets.precast.WS, {
 
 	})
+
+    sets.precast.WS['Savage Blade'] = {
+        head = sets.Nyame.Head,
+        neck = "Fotia Gorget",
+        body = sets.Nyame.Body,
+        hands = sets.Nyame.Hands,
+        left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+        right_ear="Ishvara Earring",
+		left_ring="Regal Ring",
+        right_ring="Epaminondas's Ring",
+        back = gear.str_wsd_jse_back,
+        waist = "Sailfi Belt +1",
+        legs = sets.Nyame.Legs,
+        feet = sets.Nyame.Feet
+    }
 
     sets.precast.WS['Wildfire'] = {
         head = "Orion Beret +3",
@@ -440,14 +455,14 @@ function init_gear_sets()
     sets.weapons.Default = {
         main = "Kustawi +1",
         sub = "Nusku Shield",
-        range = "Fomalhaut"
+        range = "Sparrowhawk",
     }
     sets.weapons.DualWeapons = {
         main = "Kustawi +1",
         sub = "Malevolence",
         -- range = "Fomalhaut"
-        range = "Shortbow",
-        ammo = "Stone Arrow"
+        range = "Bow of Trials",
+        ammo = "Chrono Arrow"
     }
     sets.weapons.DualGastra = {
         main = "Kustawi +1",
@@ -455,6 +470,12 @@ function init_gear_sets()
         range = "Gastraphetes",
         ammo = "Eminent Bolt"
     }
+    sets.weapons.DualAnni = {
+        main = "Xiphos",
+        sub = "Xiphos",
+        range = "Annihilator",
+        ammo = "Chrono Bullet"
+    }    
     sets.weapons.DualSavageWeapons = {
         main = "Naegling",
         sub = "Tauret",

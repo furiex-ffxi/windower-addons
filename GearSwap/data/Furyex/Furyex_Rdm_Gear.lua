@@ -635,7 +635,7 @@ function init_gear_sets()
 	sets.midcast.Bio = set_combine(sets.midcast['Enfeebling Magic'], sets.TreasureHunter)
 
 	sets.midcast['Elemental Magic'] = {
-		main = "Maxentius",
+		main = "Bunzi's Rod",
 		sub = "Ammurapi Shield",
 		ammo = { name="Ghastly Tathlum +1", augments={'Path: A',}},
 		head = EMPY.Head,

@@ -747,10 +747,8 @@ function init_gear_sets()
     -- Idle sets (default idle set not needed since the other three are defined, but leaving for testing purposes)
 
     sets.idle = {
-        main = "Mpaca's Staff",
-        -- sub = "Umbra Strap",
         ammo="Homiliary",
-        head="Befouled Crown",
+        head="Volte Beret",
         body="Arbatel Gown +3",
         hands={ name="Nyame Gauntlets", augments={'Path: B',}},
         legs={ name="Nyame Flanchard", augments={'Path: B',}},

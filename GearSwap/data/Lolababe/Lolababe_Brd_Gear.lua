@@ -177,24 +177,24 @@ function init_gear_sets()
 	-- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
 	sets.precast.WS['Evisceration'] = set_combine(sets.precast.WS, {
 		head = { name = "Blistering Sallet +1", augments = { 'Path: A', } },
-		body = "Ayanmo Corazza +2",
+		body = gear.relic_body,
 		neck = "Fotia Gorget",
+		ear1 = "Moonshade Earring",
 		ear2 = "Mache Earring +1",
-		ring1 = "Begrudging Ring",
-		ring2 = "Hetairoi Ring",
+		ring1 = { name="Cacoethic Ring +1", augments={'Path: A',}},
+		ring2 ="Ilabrat Ring",
 		waist = "Fotia Belt",
+		leg = "Zoar Subligar +1",
 		back = gear.dex_wsd_jse_back,
 	})
 
 	sets.precast.WS['Mordant Rime'] = set_combine(sets.precast.WS, {
-		head = "Bihu Roundlet +3",
-		body = "Bihu Jstcorps. +3",
-		hands = "Bihu Cuffs +3",
-		legs = "Bihu Cannions +3",
-		feet = "Bihu Slippers +3",
+		body = sets.Nyame.Body,
 		ear1 = "Regal Earring",
-		ring2 = { name = "Metamor. Ring +1", augments = { 'Path: A', } },
-		waist = "Kentarch Belt +1",
+		ear2 = "Domin. Earring +1", -- Fili Earring +2 or Enchanting Earring +1
+		waist = { name="Sailfi Belt +1", augments={'Path: A',}},
+		ring1 = "Epaminondas's Ring",
+		ring2 = { name="Metamor. Ring +1", augments={'Path: A',}},
 		back = gear.chr_wsd_jse_back,
 	})
 
@@ -213,6 +213,7 @@ function init_gear_sets()
 	})
 
 	sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {
+		body = sets.Nyame.Body,
 		waist = "Sailfi Belt +1",
 	})
 

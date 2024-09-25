@@ -96,14 +96,14 @@ function init_gear_sets()
 		ear2 = "Malignance Earring", -- 4
 		-- body = "Zendik Robe", -- 13
 		body = "Volte Doublet", -- 10
-		hands = "Volte Gloves", -- 6
+		hands = "Agwu's Gages", -- 6
 		ring1 = "Kishar Ring", -- 4
 		ring2 = "Prolix Ring", -- 2
 		back = "Fi Follet Cape", -- 10
 		waist = "Witful Belt", -- 3 / 3 QM
 		legs = af.Legs, -- 15
-		feet = "Volte Gaiters"
-	} -- 81
+		feet = "Volte Gaiters" -- 6
+	} -- 80 FC
 
 	sets.precast.FC['Elemental Magic'] = set_combine(sets.precast.FC, { 
 		hands = relic.Hands, -- 14
@@ -193,7 +193,7 @@ function init_gear_sets()
 	sets.midcast.Geomancy.Indi = set_combine(sets.midcast.Geomancy,
 		{ 
 			back = "Lifestream Cape", 
-			legs = relic.Legs, 
+			legs = relic.Legs,
 		})
 
 	sets.midcast.Cure = {
@@ -501,6 +501,7 @@ function init_gear_sets()
 
 	sets.idle.PDT.Pet = set_combine(sets.idle.Pet, {
 		main = "Idris",
+		body = "Adamantite Armor",
 		legs = "Nyame Flanchard",
 		feeet = "Nyame Sollerets",
 	})
@@ -611,7 +612,7 @@ function init_gear_sets()
 	-- Weapons sets
 	sets.weapons.Idris = { main = 'Idris', sub = 'Ammurapi Shield' }
 	sets.weapons.Maxentius = { main = 'Maxentius', sub = 'Ammurapi Shield' }
-	sets.weapons.DualWeapons = { main = 'Maxentius', sub = 'Nehushtan' }
+	sets.weapons.DualWeapons = { main = 'Idris', sub = 'C. Palug Hammer' }
 end
 
 function user_job_lockstyle()

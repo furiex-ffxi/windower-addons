@@ -95,15 +95,15 @@ function init_gear_sets()
 		range = "Dunna", -- 3
 		head = "C. Palug Crown",
 		-- head = "Amalric Coif +1", -- 11
-        neck = "Baetyl Pendant", --4
-		ear1 = "Loquac. Earring", -- 2
+        neck = "Voltsurge Torque", --4
+		ear1 = "Enchntr. Earring +1", -- 2
 		ear2 = "Malignance Earring", -- 4
 		-- body = "Zendik Robe", -- 13
 		body = "Volte Doublet", -- 10
 		hands = "Volte Gloves", -- 6
 		ring1 = "Kishar Ring", -- 4
 		ring2 = "Prolix Ring", -- 2
-		back = "Fi Follet Cape", -- 10
+		back = "Fi Follet Cape +1", -- 10
 		waist = "Witful Belt", -- 3 / 3 QM
 		legs = gear.af.Legs, -- 15
 		feet = "Volte Gaiters"
@@ -478,39 +478,33 @@ function init_gear_sets()
 	sets.midcast.Dispelga = set_combine(sets.midcast.Dispel, { main = "Daybreak", sub = "Ammurapi Shield" })
 
 	sets.midcast['Enfeebling Magic'] = {
-		main = "Daybreak",
-		sub = "Ammurapi Shield",
-		ammo = "Pemphredo Tathlum",
-		head = "Befouled Crown",
-		neck = "Erra Pendant",
-		ear1 = "Regal Earring",
-		ear2 = "Digni. Earring",
-		body = gear.merlinic_nuke_body,
+		head = gear.empy.Head,
+		body = gear.empy.Body,
+		neck = "Bagua Charm +2",
+		ear1 = "Malignance Earring",
+		ear2 = "Azimuth Earring +2",
 		hands = "Regal Cuffs",
-		ring1 = "Kishar Ring",
-		ring2 = "Stikini Ring +1",
-		back = gear.nuke_jse_back,
-		waist = "Luminary Sash",
-		legs = "Psycloth Lappas",
-		feet = "Uk'uxkaj Boots"
+		ring1 = "Metamor. Ring +1",
+		ring2 = "Kishar Ring",
+		back = "Aurist's Cape +1",
+		waist = "Acuity Belt +1",
+		legs = gear.empy.Legs,
+		feet = gear.empy.Feet
 	}
 
 	sets.midcast['Enfeebling Magic'].Resistant = {
-		main = "Daybreak",
-		sub = "Ammurapi Shield",
-		ammo = "Pemphredo Tathlum",
-		head = "Befouled Crown",
-		neck = "Erra Pendant",
-		ear1 = "Regal Earring",
-		ear2 = "Digni. Earring",
-		body = gear.merlinic_nuke_body,
+		head = gear.empy.Head,
+		body = gear.empy.Body,
+		neck = "Bagua Charm +2",
+		ear1 = "Malignance Earring",
+		ear2 = "Azimuth Earring +2",
 		hands = "Regal Cuffs",
 		ring1 = "Metamor. Ring +1",
-		ring2 = "Stikini Ring +1",
-		back = gear.nuke_jse_back,
-		waist = "Luminary Sash",
-		legs = "Psycloth Lappas",
-		feet = "Skaoi Boots"
+		ring2 = "Kishar Ring",
+		back = "Aurist's Cape +1",
+		waist = "Acuity Belt +1",
+		legs = gear.empy.Legs,
+		feet = gear.empy.Feet
 	}
 
 	sets.midcast.ElementalEnfeeble = set_combine(sets.midcast['Enfeebling Magic'],

@@ -115,6 +115,8 @@ function init_gear_sets()
 
     -- Precast Sets
     sets.buff.Overdrive = {
+        head = Empy_Karagoz.Head,
+        hands = "Mpaca's Gloves",
         legs = Empy_Karagoz.Legs,
         waist = "Klouskap Sash +1",
     }

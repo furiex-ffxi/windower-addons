@@ -371,8 +371,9 @@ function init_gear_sets()
             name = "Coiste Bodhar",
             augments = {'Path: A'}
         },
-        head = "Flam. Zucchetto +2",
+        head = "Hjarrandi Helm",
         body = gear.empy.Body,
+        -- body = "Hjarrandi Breast.",
         hands = gear.empy.Hands,
         legs = gear.relic.Legs,
         feet = "Flam. Gambieras +2",

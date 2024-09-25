@@ -449,7 +449,7 @@ function init_gear_sets()
 
     sets.midcast.Pet.MagicReady = {
         main = "Agwu's Axe",
-        sub = gear.PDTMABKumbha,
+        sub = "Legion Scutum",
         ammo = "Hesperiidae",
         neck = "Adad Amulet",
         ear1 = "Enmerkar Earring",

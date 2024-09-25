@@ -7,7 +7,7 @@ function user_job_setup()
 	state.MagicalDefenseMode:options('MDT_HP', 'MDT')
 	state.ResistDefenseMode:options('MEVA', 'MEVA_HP')
 	state.IdleMode:options('Normal', 'Tank', 'KiteTank') --,'Normal','Sphere'
-	state.Weapons:options('None', 'Epeo', 'Aettir', 'Hepatizon', 'Montante', 'DualWeapons')
+	state.Weapons:options('None', 'Epeo', 'Aettir', 'Hepatizon', 'Doli', 'DualWeapons')
 
 	state.ExtraDefenseMode = M { ['description'] = 'Extra Defense Mode', 'None', 'MP' }
 
@@ -234,7 +234,7 @@ function init_gear_sets()
 		ring1 = "Lebeche Ring",
 		ring2 = "Kishar Ring",
 		back = "Moonlight Cape",
-		waist = "Plat. Mog. Belt",
+		waist = "Carrier's Sash",
 		legs = sets.Nyame.Legs,
 		feet = sets.Nyame.Feet,
 	}
@@ -252,8 +252,7 @@ function init_gear_sets()
 		ring1 = "Defending Ring",
 		ring2 = "Moonlight Ring",
 		back = gear.enmity_jse_back,
-		waist = "Plat. Mog. Belt",
-		-- waist = "Carrier's Sash",
+		waist = "Carrier's Sash",
 		legs = "Nyame Flanchard",
 		feet = sets.Nyame.Feet,
 		-- feet = "Carmine Greaves +1"
@@ -321,6 +320,31 @@ function init_gear_sets()
 	sets.precast.WS['Ground Strike'].Acc = set_combine(sets.precast.WS.Acc, {})
 	sets.precast.WS['Ground Strike'].HighAcc = set_combine(sets.precast.WS.HighAcc, {})
 	sets.precast.WS['Ground Strike'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
+
+	sets.precast.WS['Ruinator'] = set_combine(sets.precast.WS, {
+		neck = "Combatant's Torque",
+		ammo = "C. Palug Stone",
+		ear1 = "Crep. Earring",
+		ear2 = "Erilaz Earring +2",
+		ring1 = "Lehko's Ring",
+		ring2 = "Cacoethic Ring +1",
+		head = gear.empy.Head,
+		body = "Adamantite Armor",
+		hands = gear.empy.Hands,
+		legs = gear.empy.Legs,
+		feet = gear.empy.Feet,
+		waist = "Carrier's Sash",
+		back = gear.enmity_jse_back,
+	})
+	sets.precast.WS['Ruinator'].Acc = set_combine(sets.precast.WS.Acc, {
+
+	})
+	sets.precast.WS['Ruinator'].HighAcc = set_combine(sets.precast.WS.HighAcc, {
+
+	})
+	sets.precast.WS['Ruinator'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
+
+	})
 
 	sets.precast.WS['Herculean Slash'] = set_combine(sets.precast.JA['Lunge'], {})
 	sets.precast.WS['Sanguine Blade'] = set_combine(sets.precast.JA['Lunge'], {})
@@ -527,6 +551,11 @@ function init_gear_sets()
 		feet = "Hippo. Socks +1"
 	}
 
+	sets.idle.Town = set_combine(sets.idle.Tank, {
+		ear1 = "Erilaz Earring +2",
+		ear2 = "Erilaz Earring +2",
+	})
+
 	sets.Kiting = { legs = "Carmine Cuisses +1" }
 
 	sets.latent_refresh = { waist = "Fucho-no-obi" }
@@ -544,7 +573,7 @@ function init_gear_sets()
 	sets.weapons.Aettir = { main = "Aettir", sub = "Utu Grip" }
 	sets.weapons.Hepatizon = { main = "Hepatizon Axe +1", sub = "Utu Grip" }
 	sets.weapons.Epeo = { main = "Epeolatry", sub = "Utu Grip" }
-	sets.weapons.Montante = { main = "Montante +1", sub = "Utu Grip" }
+	sets.weapons.Doli = { main = "Dolichenus", sub = "Chanter's Shield" }
 	sets.weapons.DualWeapons = { main = "Firangi", sub = "Reikiko" }
 
 	-- Defense Sets
@@ -736,6 +765,7 @@ function init_gear_sets()
 		legs = "Meg. Chausses +2",
 		feet = "Nyame Sollerets"
 	}
+
 	sets.engaged.Acc.DTLite = {
 		main = "Epeolatry", -- Lionheart
 		sub = "Utu Grip",
@@ -754,6 +784,7 @@ function init_gear_sets()
 		legs = "Meg. Chausses +2",
 		feet = "Nyame Sollerets"
 	}
+	
 	sets.engaged.FullAcc.DTLite = {
 		main = "Epeolatry", -- Lionheart
 		sub = "Utu Grip",
@@ -781,17 +812,15 @@ function init_gear_sets()
 		neck = "Warder's Charm +1",
 		ear1 = "Odnowa Earring +1",
 		ear2 = "Erilaz Earring +2",
-		body = gear.empy.Body,
+		body = "Adamantite Armor",
 		hands = gear.empy.Hands,
-		-- hands = "Turms Mittens +1",
 		ring1 = "Shadow Ring",
 		ring2 = "Defending Ring",
 		back = gear.enmity_jse_back,
 		-- waist = "Engraved Belt",
-		waist = "Plat. Mog. Belt",
+		waist = "Carrier's Sash",
 		legs = gear.empy.Legs,
 		feet = gear.empy.Feet,
-		-- feet = "Turms Leggings +1",
 	}
 
 	sets.engaged.Tank_HP = {
@@ -811,6 +840,13 @@ function init_gear_sets()
 		legs = "Nyame Flanchard",
 		feet = "Nyame Sollerets"
 	}
+
+	sets.engaged.Doli = set_combine(sets.engaged.Tank, {
+		head = "Turms Cap +1",
+		neck = "Rep. Plat. Medal",
+		waist = "Carrier's Sash",
+		ring2 = "Karieyh Ring",
+	})
 
 	sets.engaged.Acc.Tank = sets.engaged.Tank
 	sets.engaged.FullAcc.Tank = sets.engaged.Tank

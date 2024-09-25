@@ -7,7 +7,7 @@ function user_job_setup()
     state.IdleMode:options('Normal', 'PDT', 'Refresh')
     state.HybridMode:options('Normal', 'DT')
     state.ExtraMeleeMode = M { ['description'] = 'Extra Melee Mode', 'None', 'DWMax' }
-    state.Weapons:options('Default', 'Ranged', 'RangedAcc', 'Savage', 'Evisceration', 'DualWeapons', 'DualSavageWeapons',
+    state.Weapons:options('Default', 'Ranged', 'RangedAcc', 'Savage', 'Evisceration', 'LeadenMelee', 'DualWeapons', 'DualSavageWeapons',
         'DualEvisceration', 'DualLeadenRanged', 'DualLeadenMelee', 'DualAeolian', 'DualRanged', 'DualRoll',
         'DualFermion', 'None')
     state.CompensatorMode:options('Always', '300', '1000', 'Never')
@@ -244,8 +244,7 @@ function init_gear_sets()
 		waist="Sailfi Belt +1",
 		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 		right_ear="Ishvara Earring",
-		-- left_ring="Regal Ring",
-		left_ring="Karieyh Ring",
+		left_ring="Regal Ring",
         -- right_ring="Cornelia's ring",
         right_ring="Epaminondas's Ring",
 		back=gear.str_wsd_jse_back,
@@ -682,7 +681,7 @@ function init_gear_sets()
     -- Weapons sets
     sets.weapons.Default = { main = "Naegling", sub = "Nusku Shield", range = "Fomalhaut" }
     sets.weapons.Ranged = { 
-        main = "Rostam", 
+		main={ name="Rostam", augments={'Path: A'}},
         sub = "Nusku Shield", 
         range = "Fomalhaut"
     }
@@ -696,7 +695,13 @@ function init_gear_sets()
         sub = "Nusku Shield", 
         range={ name="Anarchy +2", augments={'Delay:+60','TP Bonus +1000',}}, 
     }
-    sets.weapons.DualWeapons = { main = "Naegling", sub = "Gleti's Knife", range = "Fomalhaut" }
+    sets.weapons.LeadenMelee = { 
+		main={ name="Rostam", augments={'Path: A'}},
+        sub = "Nusku Shield", 
+		range="Death Penalty", 
+		ammo="Living Bullet",
+    }
+    sets.weapons.DualWeapons = { main = "Naegling", sub = "Gleti's Knife", range = "Magnatus" }
     sets.weapons.DualSavageWeapons = { 
         main="Naegling",
 		sub="Gleti's Knife",
@@ -787,7 +792,7 @@ function init_gear_sets()
         ring2 = "Epona's Ring",
         back = gear.tp_jse_back,
         waist = "Windbuffet Belt +1",
-        legs = "Samnuha Tights",
+        legs = gear.Empy.Legs,
         feet = "Herculean Boots"
     }
 

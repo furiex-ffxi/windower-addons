@@ -1,6 +1,6 @@
 function user_job_setup()
 	-- Options: Override default values
-	state.OffenseMode:options('Normal', 'SomeAcc', 'Acc', 'FullAcc', 'Fodder', 'Fencer')
+	state.OffenseMode:options('Normal', 'SomeAcc', 'Acc', 'FullAcc', 'Fodder', 'Fencer', 'Subtle')
 	state.WeaponskillMode:options('Match', 'AttackCap', 'Normal', 'SomeAcc', 'Acc', 'FullAcc', 'Fodder', 'Proc')
 	state.HybridMode:options('Normal')
 	state.PhysicalDefenseMode:options('PDT', 'PDTReraise')
@@ -9,7 +9,7 @@ function user_job_setup()
 	state.IdleMode:options('Normal', 'PDT', 'Refresh', 'Reraise')
 	state.ExtraMeleeMode = M { ['description'] = 'Extra Melee Mode', 'None' }
 	state.Passive = M { ['description'] = 'Passive Mode', 'None', 'Twilight' }
-	state.Weapons:options('None', 'Chango', 'Lycurgos', 'ShiningOne', 'DualWeapons', 'Greatsword', 'Naegling', 'Loxotic', 'ProcSword', 'ProcDagger', 'ProcKatana', 'ProcGreatSword',
+	state.Weapons:options('None', 'Chango', 'ShiningOne', 'DualWeapons', 'Greatsword', 'Naegling', 'Loxotic', 'ProcSword', 'ProcDagger', 'ProcKatana', 'ProcGreatSword',
 	'ProcScythe', 'ProcPolearm', 'ProcGreatKatana', 'ProcClub', 'ProcStaff')
 
 	gear.da_jse_back = { name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
@@ -224,6 +224,12 @@ function init_gear_sets()
 		head = sets.Nyame.Head,
 		legs = "Boii Cuisses +3",
 	})
+	sets.precast.WS['Savage Blade'].Subtle = set_combine(sets.precast.WS, {
+		body = "Dagon Breast.",
+		left_ring = "Chirich Ring +1",
+		right_ring = "Chirich Ring +1",
+		neck = "Bathy Choker +1",
+	})
 
 	sets.precast.WS['Upheaval'] = set_combine(sets.precast.WS, {
 		back = gear.wsd_vit_jse_back,
@@ -372,8 +378,8 @@ function init_gear_sets()
 		legs="Pumm. Cuisses +3",
 		feet="Boii Calligae +3",
 		neck={ name="War. Beads +2", augments={'Path: A',}},
-		waist="Plat. Mog. Belt",
-		left_ear="Odnowa Earring +1",
+		waist="Asklepian Belt",
+		left_ear="Tuisto Earring",
 		right_ear="Etiolation Earring",
 		left_ring="Moonlight Ring",
 		right_ring="Defending Ring",
@@ -480,13 +486,22 @@ function init_gear_sets()
     })
 	sets.engaged.Fodder = set_combine(sets.engaged, {
     })
+
+	-- Engaged sets
+	sets.engaged.Subtle = set_combine(sets.engaged, {
+		body = "Dagon Breast.",
+		left_ring = "Chirich Ring +1",
+		right_ring = "Chirich Ring +1",
+		legs = "Boii Cuisses +3",
+		feet = "Sakpata's Leggings"
+    })
+
 	sets.engaged.Naegling = set_combine(sets.engaged, {
 		hands = "Sakpata's Gauntlets",
 		body="Hjarrandi Breast.", 
 		legs = "Boii Cuisses +3",
 		left_ring = "Petrov Ring",
     })
-
 
 	--[[
     sets.engaged.Charge = {}
@@ -1510,7 +1525,6 @@ function init_gear_sets()
 	sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
 
 	-- Weapons sets
-	sets.weapons.Lycurgos = { main = "Lycurgos", sub = "Utu Grip" }
 	sets.weapons.ShiningOne = { main = "Shining One", sub = "Utu Grip" }
 	sets.weapons.Naegling = { main = "Naegling", sub = "Blurred Shield +1" }
 	sets.weapons.Loxotic = { main = "Loxotic Mace +1", sub = "Blurred Shield +1" }

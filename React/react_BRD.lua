@@ -73,4 +73,14 @@ return {
             ["ready_reaction"]="turnaround"
         }
     },
+    ["Bozzetto Bigwig"]={
+        ["Gen'ei Ryodan"]={
+            ["complete_reaction"]="", 
+            ["ready_reaction"]="/flatblade"
+        },
+        ["Unblest Jambiya"]={
+            ["complete_reaction"]="", 
+            ["ready_reaction"]="/flatblade"
+        },        
+    },       
 }

@@ -663,7 +663,7 @@ function init_gear_sets()
     sets.weapons.Default = { main = "Qutrub Knife", sub = "Nusku Shield", range = "Anarchy +2" }
     sets.weapons.Ranged = { main = "Naegling", sub = "Nusku Shield", range = "Anarchy +2" }
     sets.weapons.Evisceration = { main = "Tauret", sub = "Nusku Shield", range = "Anarchy +2" }
-    sets.weapons.DualWeapons = { main = "Naegling", sub = "Kustawi", range = "Fomalhaut" }
+    sets.weapons.DualWeapons = { main = "Naegling", sub = "Kustawi", range = "Magnatus" }
     sets.weapons.DualSavageWeapons = { main = "Naegling", sub = "Kustawi", range = "Anarchy +2" }
     sets.weapons.DualEvisceration = { main = "Tauret", sub = "Savage Blade", range = "Anarchy +2" }
     sets.weapons.Savage = { main = "Naegling", sub = "Nusku Shield", range = "Anarchy +2" }

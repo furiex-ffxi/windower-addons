@@ -101,19 +101,6 @@
     </furyex>
     <lolababe>
         <text>
-            <bg>
-                <green>75</green>
-            </bg>
-            <pos>
-                <x>76</x>
-                <y>503</y>
-            </pos>
-        </text>
-        <tracking>glavoid</tracking>
-        <visible>false</visible>
-    </lolababe>
-    <mailman>
-        <text>
             <pos>
                 <x>76</x>
                 <y>503</y>
@@ -124,6 +111,19 @@
                 </fonts>
             </text>
         </text>
-        <tracking>itzpapalotl</tracking>
+        <tracking>orthrus</tracking>
+    </lolababe>
+    <mailman>
+        <text>
+            <bg>
+                <green>75</green>
+            </bg>
+            <pos>
+                <x>76</x>
+                <y>503</y>
+            </pos>
+        </text>
+        <tracking>orthrus</tracking>
+        <visible>false</visible>
     </mailman>
 </settings>
