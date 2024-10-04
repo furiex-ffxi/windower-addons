@@ -71,6 +71,7 @@
                 <y>251</y>
             </pos>
         </display>
+        <visible>true</visible>
     </cleobabe>
     <furyex>
         <display>
@@ -79,6 +80,7 @@
                 <y>275</y>
             </pos>
         </display>
+        <visible>true</visible>
     </furyex>
     <liambear>
         <display>
@@ -105,5 +107,6 @@
                 <y>296</y>
             </pos>
         </display>
+        <visible>true</visible>
     </mailman>
 </settings>

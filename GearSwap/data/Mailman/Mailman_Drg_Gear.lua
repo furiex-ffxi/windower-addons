@@ -1,9 +1,9 @@
 -- Setup vars that are user-dependent.  Can override this function in a sidecar file.
 function user_job_setup()
     -- Options: Override default values
-    state.OffenseMode:options('Normal', 'SomeAcc', 'Acc', 'FullAcc', 'Fodder')
-    state.WeaponskillMode:options('Match', 'Normal', 'SomeAcc', 'Acc', 'FullAcc', 'Fodder')
-    state.HybridMode:options('Normal')
+    state.OffenseMode:options('Normal', 'SomeAcc', 'Acc', 'FullAcc')
+    state.WeaponskillMode:options('Match', 'Normal', 'SomeAcc', 'Acc', 'FullAcc')
+    state.HybridMode:options('Normal', 'DT')
     state.PhysicalDefenseMode:options('PDT', 'PDTReraise')
     state.MagicalDefenseMode:options('MDT', 'MDTReraise')
     state.ResistDefenseMode:options('MEVA')
@@ -44,11 +44,11 @@ function init_gear_sets()
     }
 
     gear.empy = {
-        Head = "Peltast's Mezail +2",
-        Body = "Pelt. Plackart +2",
-        Hands = "Pel. Vambraces +2",
-        Legs = "Pelt. Cuissots +2",
-        Feet = "Pelt. Schyn. +2",
+        Head = "Peltast's Mezail +3",
+        Body = "Pelt. Plackart +3",
+        Hands = "Pel. Vambraces +3",
+        Legs = "Pelt. Cuissots +3",
+        Feet = "Pelt. Schyn. +3",
     }
     
     gear.relic = {
@@ -191,19 +191,19 @@ function init_gear_sets()
 
     sets.precast.WS = {
         ammo = "Knobkierrie",
-        head = sets.Nyame.Head,
+        head = gear.empy.Head,
         body = sets.Nyame.Body,
-        hands = sets.Nyame.Hands,
+        hands = gear.relic.Hands,
         legs = sets.Nyame.Legs,
         feet = sets.Nyame.Feet,
+        neck = "Dgn. Collar +2",
         waist = "Sailfi Belt +1",
         left_ear = {
             name = "Moonshade Earring",
             augments = {'Accuracy+4', 'TP Bonus +250'}
         },
-        right_ear = "Ishvara Earring",
-        -- left_ring="Regal Ring",
-        left_ring = "Karieyh Ring",
+        right_ear = "Thrud Earring",
+        left_ring="Regal Ring",
         right_ring = "Epaminondas's Ring",
         back = gear.str_wsd_jse_back
     }
@@ -215,31 +215,39 @@ function init_gear_sets()
     sets.precast.WS.FullAcc = set_combine(sets.precast.WS, {
         neck = "Shulmanu Collar"
     })
-    sets.precast.WS.Fodder = set_combine(sets.precast.WS, {})
 
     -- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
     sets.precast.WS['Stardiver'] = set_combine(sets.precast.WS, {})
     sets.precast.WS['Stardiver'].SomeAcc = set_combine(sets.precast.WS.Acc, {})
     sets.precast.WS['Stardiver'].Acc = set_combine(sets.precast.WS.Acc, {})
-    sets.precast.WS['Stardiver'].Fodder = set_combine(sets.precast.WS.Fodder, {})
 
     sets.precast.WS['Drakesbane'] = set_combine(sets.precast.WS, {})
     sets.precast.WS['Drakesbane'].SomeAcc = set_combine(sets.precast.WS.Acc, {})
     sets.precast.WS['Drakesbane'].Acc = set_combine(sets.precast.WS.Acc, {})
-    sets.precast.WS['Drakesbane'].Fodder = set_combine(sets.precast.WS.Fodder, {})
 
     sets.precast.WS['Impulse Drive'] = set_combine(sets.precast.WS, {
-        body = "Gleti's Cuirass"
+        body = "Gleti's Cuirass",
+        left_ring="Regal Ring",
+        right_ring = "Lehko's Ring",
+        legs = gear.empy.Legs
     })
     sets.precast.WS['Impulse Drive'].SomeAcc = set_combine(sets.precast.WS.Acc, {
-        body = "Gleti's Cuirass"
+        body = "Gleti's Cuirass",
+        left_ring="Regal Ring",
+        right_ring = "Lehko's Ring",
+        legs = gear.empy.Legs
     })
     sets.precast.WS['Impulse Drive'].Acc = set_combine(sets.precast.WS.Acc, {
-        body = "Gleti's Cuirass"
+        body = "Gleti's Cuirass",
+        left_ring="Regal Ring",
+        right_ring = "Lehko's Ring",
+        legs = gear.empy.Legs
     })
-    sets.precast.WS['Impulse Drive'].Fodder = set_combine(sets.precast.WS.Fodder, {
-        body = "Gleti's Cuirass"
-    })    
+
+    sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {})
+    sets.precast.WS['Savage Blade'].SomeAcc = set_combine(sets.precast.WS.Acc, {})
+    sets.precast.WS['Savage Blade'].Acc = set_combine(sets.precast.WS.Acc, {})
+
 
     -- Sets to return to when not performing an action.
 
@@ -373,17 +381,16 @@ function init_gear_sets()
         },
         head = "Hjarrandi Helm",
         body = gear.empy.Body,
-        -- body = "Hjarrandi Breast.",
         hands = gear.empy.Hands,
         legs = gear.relic.Legs,
-        feet = "Flam. Gambieras +2",
-        neck = "Shulmanu Collar",
+		feet="Flam. Gambieras +2",
+        neck = "Vim Torque +1",
         waist = {
             name = "Sailfi Belt +1",
             augments = {'Path: A'}
         },
         left_ear = "Sherida Earring",
-        right_ear = "Telos Earring",
+        right_ear = "Sroda Earring",
         left_ring = "Lehko's Ring",
         right_ring = "Niqmaddu Ring",
         back = gear.tp_jse_back
@@ -391,29 +398,30 @@ function init_gear_sets()
     sets.engaged.SomeAcc = set_combine(sets.engaged, {
     })
     sets.engaged.Acc = set_combine(sets.engaged, {
+        neck={ name="Dgn. Collar +2", augments={'Path: A',}},
+		waist={ name="Kentarch Belt +1", augments={'Path: A',}},
     })
     sets.engaged.FullAcc = set_combine(sets.engaged, {
     })
-    sets.engaged.Fodder = set_combine(sets.engaged, {
+    sets.engaged.DT = set_combine(sets.engaged, {
+        right_ring = "Moonlight Ring",
+        feet = sets.Nyame.Feet,
     })
 
     sets.engaged.AM = {}
     sets.engaged.AM.SomeAcc = {}
     sets.engaged.AM.Acc = {}
     sets.engaged.AM.FullAcc = {}
-    sets.engaged.AM.Fodder = {}
 
     sets.engaged.PDT = {}
     sets.engaged.SomeAcc.PDT = {}
     sets.engaged.Acc.PDT = {}
     sets.engaged.FullAcc.PDT = {}
-    sets.engaged.Fodder.PDT = {}
 
     sets.engaged.AM.PDT = {}
     sets.engaged.AM.SomeAcc.PDT = {}
     sets.engaged.AM.Acc.PDT = {}
     sets.engaged.AM.FullAcc.PDT = {}
-    sets.engaged.AM.Fodder.PDT = {}
 
     --[[ Melee sets for in Adoulin, which has an extra 2% Haste from Ionis.
 	
@@ -421,25 +429,21 @@ function init_gear_sets()
     sets.engaged.Adoulin.SomeAcc = {}
 	sets.engaged.Adoulin.Acc = {}
     sets.engaged.Adoulin.FullAcc = {}
-    sets.engaged.Adoulin.Fodder = {}
 
     sets.engaged.Adoulin.AM = {}
     sets.engaged.Adoulin.AM.SomeAcc = {}
 	sets.engaged.Adoulin.AM.Acc = {}
     sets.engaged.Adoulin.AM.FullAcc = {}
-    sets.engaged.Adoulin.AM.Fodder = {}
 	
     sets.engaged.Adoulin.PDT = {}
     sets.engaged.Adoulin.SomeAcc.PDT = {}
 	sets.engaged.Adoulin.Acc.PDT = {}
     sets.engaged.Adoulin.FullAcc.PDT = {}
-    sets.engaged.Adoulin.Fodder.PDT = {}
 	
     sets.engaged.Adoulin.AM.PDT = {}
     sets.engaged.Adoulin.AM.SomeAcc.PDT = {}
 	sets.engaged.Adoulin.AM.Acc.PDT = {}
     sets.engaged.Adoulin.AM.FullAcc.PDT = {}
-    sets.engaged.Adoulin.AM.Fodder.PDT = {}
 	]]
 
 end

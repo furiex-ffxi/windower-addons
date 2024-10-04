@@ -19,8 +19,7 @@ function user_job_setup()
     options.ammo_warning_limit = 15
     --Ikenga_vest_bonus = 190  -- It is 190 at R20. Uncomment if you need to manually adjust because you are using below R20
 
-    gear.tp_ranger_jse_back = { name = "Camulus's Mantle",
-        augments = { 'AGI+20', 'Rng.Acc.+20 Rng.Atk.+20', 'Rng.Acc.+10', '"Store TP"+10', } }
+    gear.tp_ranger_jse_back = { name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}}
     gear.snapshot_jse_back = { name = "Camulus's Mantle", augments = { '"Snapshot"+10', } }
     gear.tp_jse_back = { name = "Camulus's Mantle",
         augments = { 'DEX+20', 'Accuracy+20 Attack+20', 'Accuracy+10', '"Store TP"+10', } }
@@ -63,21 +62,21 @@ function init_gear_sets()
 
     -- Precast sets to enhance JAs
 
-    sets.precast.JA['Triple Shot'] = { body = "Chasseur's Frac +1" }
-    sets.precast.JA['Snake Eye'] = { legs = "Lanun Trews +1" }
-    sets.precast.JA['Wild Card'] = { feet = "Lanun Bottes +1" }
-    sets.precast.JA['Random Deal'] = { body = "Lanun Frac +1" }
-    sets.precast.FoldDoubleBust = { hands = "Lanun Gants +1" }
+    sets.precast.JA['Triple Shot'] = { body = "Chasseur's Frac +2" }
+    sets.precast.JA['Snake Eye'] = { legs = "Lanun Trews +3" }
+    sets.precast.JA['Wild Card'] = { feet = "Lanun Bottes +3" }
+    sets.precast.JA['Random Deal'] = { body = "Lanun Frac +3" }
+    sets.precast.FoldDoubleBust = { hands = "Lanun Gants +3" }
 
     sets.precast.CorsairRoll = {
         main = "Rostam",
         range = "Compensator",
-        head = "Lanun Tricorne +1",
+        head = "Lanun Tricorne +3",
         neck = "Regal Necklace",
         ear1 = "Etiolation Earring",
         ear2 = "Sanare Earring",
-        body = "Lanun Frac +1",
-        hands = "Chasseur's Gants +1",
+        body = "Lanun Frac +3",
+        hands = "Chasseur's Gants +2",
         ring1 = "Defending Ring",
         ring2 = "Dark Ring",
         back = gear.tp_jse_back,
@@ -88,11 +87,11 @@ function init_gear_sets()
 
     sets.precast.LuzafRing = { ring2 = "Luzaf's Ring" }
 
-    sets.precast.CorsairRoll["Caster's Roll"] = set_combine(sets.precast.CorsairRoll, { legs = "Chas. Culottes +1" })
-    sets.precast.CorsairRoll["Courser's Roll"] = set_combine(sets.precast.CorsairRoll, { feet = "Chass. Bottes +1" })
-    sets.precast.CorsairRoll["Blitzer's Roll"] = set_combine(sets.precast.CorsairRoll, { head = "Chass. Tricorne +1" })
-    sets.precast.CorsairRoll["Tactician's Roll"] = set_combine(sets.precast.CorsairRoll, { body = "Chasseur's Frac +1" })
-    sets.precast.CorsairRoll["Allies' Roll"] = set_combine(sets.precast.CorsairRoll, { hands = "Chasseur's Gants +1" })
+    sets.precast.CorsairRoll["Caster's Roll"] = set_combine(sets.precast.CorsairRoll, { legs = "Chas. Culottes +2" })
+    sets.precast.CorsairRoll["Courser's Roll"] = set_combine(sets.precast.CorsairRoll, { feet = "Chass. Bottes +2" })
+    sets.precast.CorsairRoll["Blitzer's Roll"] = set_combine(sets.precast.CorsairRoll, { head = "Chass. Tricorne +2" })
+    sets.precast.CorsairRoll["Tactician's Roll"] = set_combine(sets.precast.CorsairRoll, { body = "Chasseur's Frac +2" })
+    sets.precast.CorsairRoll["Allies' Roll"] = set_combine(sets.precast.CorsairRoll, { hands = "Chasseur's Gants +2" })
 
     sets.precast.CorsairShot = {
         ammo = gear.QDbullet,
@@ -106,7 +105,7 @@ function init_gear_sets()
         ring2 = "Dingir Ring",
         back = gear.tp_ranger_jse_back,
         waist = "Goading Belt",
-        legs = "Chas. Culottes +1",
+        legs = "Chas. Culottes +2",
         feet = "Carmine Greaves +1"
     }
 
@@ -123,7 +122,7 @@ function init_gear_sets()
         back = gear.ranger_wsd_jse_back,
         waist = "Eschan Stone",
         legs = "Malignance Tights",
-        feet = "Chass. Bottes +1"
+        feet = "Chass. Bottes +2"
     }
 
     sets.precast.CorsairShot.Proc = {
@@ -139,7 +138,7 @@ function init_gear_sets()
         back = "Moonlight Cape",
         waist = "Flume Belt +1",
         legs = "Carmine Cuisses +1",
-        feet = "Chass. Bottes +1"
+        feet = "Chass. Bottes +2"
     }
 
     sets.precast.CorsairShot['Light Shot'] = {
@@ -159,7 +158,7 @@ function init_gear_sets()
     }
 
     sets.precast.CorsairShot['Dark Shot'] = set_combine(sets.precast.CorsairShot['Light Shot'], { feet =
-    "Chass. Bottes +1" })
+    "Chass. Bottes +2" })
 
     -- Waltz set (chr and vit)
     sets.precast.Waltz = {
@@ -205,7 +204,7 @@ function init_gear_sets()
 
     sets.precast.RA = {
         ammo = gear.RAbullet,
-        head = "Chass. Tricorne +1",
+        head = "Chass. Tricorne +2",
         neck = "Comm. Charm +2",
         body = "Laksa. Frac +1",
         hands = "Carmine Fin. Ga. +1",
@@ -238,8 +237,7 @@ function init_gear_sets()
 		left_ring="Karieyh Ring",
         -- right_ring="Cornelia's ring",
         right_ring="Epaminondas's Ring",
-        back=gear.magic_wsd_jse_back,
-		-- back=gear.str_wsd_jse_back,
+		back=gear.str_wsd_jse_back,
     }
 
     sets.precast.WS.Acc = {
@@ -254,7 +252,7 @@ function init_gear_sets()
         back = gear.str_wsd_jse_back,
         waist = "Grunfeld Rope",
         legs = "Carmine Cuisses +1",
-        feet = "Lanun Bottes +1"
+        feet = "Lanun Bottes +3"
     }
 
     sets.precast.WS.Proc = {
@@ -318,15 +316,13 @@ function init_gear_sets()
 
     sets.precast.WS['Last Stand'] = {
         ammo=gear.RAbullet,
-        -- head={ name="Lanun Tricorne +3", augments={'Enhances "Winning Streak" effect',}},
+        head={ name="Lanun Tricorne +3", augments={'Enhances "Winning Streak" effect',}},
         -- body="Ikenga's Vest",
         -- hands="Chasseur's Gants +3",
-        head = sets.Nyame.Head,
         body = sets.Nyame.Body,
         hands = sets.Nyame.Hands,
         legs = sets.Nyame.Legs,
-        feet = sets.Nyame.Feet,
-        -- feet = { name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
+        feet = { name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
         neck = "Fotia Gorget",
         waist = "Fotia Belt",
         left_ear = "Moonshade Earring",
@@ -340,7 +336,7 @@ function init_gear_sets()
         ammo=gear.WSbullet,
         head = sets.Nyame.Head,
         body = sets.Nyame.Body,
-        hands="Chasseur's Gants +1",
+        hands="Chasseur's Gants +2",
         legs = sets.Nyame.Legs,
         feet = sets.Nyame.Feet,        
         waist="Yemaya Belt",
@@ -378,7 +374,7 @@ function init_gear_sets()
         back = gear.magic_wsd_jse_back,
         waist = "Eschan Stone",
         legs = "Nyame Flanchard",
-        feet = "Lanun Bottes +1"
+        feet = "Lanun Bottes +3"
     }
 
     sets.precast.WS['Leaden Salute'].Acc = {
@@ -394,7 +390,7 @@ function init_gear_sets()
         back = gear.magic_wsd_jse_back,
         waist = "Eschan Stone",
         legs = "Nyame Flanchard",
-        feet = "Lanun Bottes +1"
+        feet = "Lanun Bottes +3"
     }
 
     sets.precast.WS['Aeolian Edge'] = {
@@ -410,7 +406,7 @@ function init_gear_sets()
         back = gear.magic_wsd_jse_back,
         waist = "Eschan Stone",
         legs = "Nyame Flanchard",
-        feet = "Lanun Bottes +1"
+        feet = "Lanun Bottes +3"
     }
 
     sets.precast.WS['Wildfire'] = {
@@ -426,7 +422,7 @@ function init_gear_sets()
         back = gear.magic_wsd_jse_back,
         waist = "Eschan Stone",
         legs = "Nyame Flanchard",
-        feet = "Lanun Bottes +1"
+        feet = "Lanun Bottes +3"
     }
 
     sets.precast.WS['Wildfire'].Acc = {
@@ -543,7 +539,7 @@ function init_gear_sets()
         feet = "Malignance Boots"
     }
 
-    sets.buff['Triple Shot'] = { body = "Chasseur's Frac +1" }
+    sets.buff['Triple Shot'] = { body = "Chasseur's Frac +2" }
 
     -- Sets to return to when not performing an action.
 
@@ -567,7 +563,7 @@ function init_gear_sets()
         hands = "Nyame Gauntlets",
         ring1 = "Defending Ring",
         ring2 = "Shadow Ring",
-        back = "Moonlight Cape",
+        back = { name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
         waist = "Carrier's Sash",
         legs = "Carmine Cuisses +1",
         feet = "Nyame Sollerets"

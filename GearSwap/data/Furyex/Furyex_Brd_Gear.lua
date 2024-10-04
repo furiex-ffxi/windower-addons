@@ -501,8 +501,12 @@ function init_gear_sets()
 -- 	sets.midcast.Lullaby.Duration = sets.midcast.Lullaby
 
 	sets.midcast.Ballad = { legs = gear.empy_legs }
-	sets.midcast.Carol = { hands = "Mousai Gages +1" }
-	sets.midcast.Etude = { head = "Mousai Turban +1" }
+	sets.midcast.Minne = {legs="Mousai Seraweels +1"}
+	sets.midcast.Carol = {hands="Mousai Gages +1"}
+	sets.midcast.Etude = { head="Mousai Turban +1" }
+	sets.midcast.Mambo = { feet="Mousai Crackows +1" }
+	sets.midcast.Threnody = { body="Mousai Manteels +1" }
+
 	sets.midcast['Horde Lullaby'] = { 
 		main = "Carnwenhan",
 		sub = "Ammurapi Shield",

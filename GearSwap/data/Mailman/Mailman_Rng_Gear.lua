@@ -455,14 +455,14 @@ function init_gear_sets()
     sets.weapons.Default = {
         main = "Kustawi +1",
         sub = "Nusku Shield",
-        range = "Sparrowhawk",
+        range = "Sparrowhawk +3",
+        ammo = "Chrono Arrow"
     }
     sets.weapons.DualWeapons = {
         main = "Kustawi +1",
         sub = "Malevolence",
-        -- range = "Fomalhaut"
-        range = "Bow of Trials",
-        ammo = "Chrono Arrow"
+        range = "Fomalhaut",
+        ammo = "Chrono Bullet"
     }
     sets.weapons.DualGastra = {
         main = "Kustawi +1",
@@ -480,8 +480,8 @@ function init_gear_sets()
         main = "Naegling",
         sub = "Tauret",
         -- sub = "Blurred Knife +1",
-        range = "Fomalhaut",
-        ammo = "Chrono Bullet"
+        range = "Sparrowhawk +3",
+        ammo = "Chrono Arrow"
     }
     sets.weapons.DualEviscerationWeapons = {
         main = "Tauret",
@@ -534,7 +534,9 @@ function init_gear_sets()
     })
 
     sets.engaged.DT = set_combine(sets.engaged, {
-       
+        body = "Malignance Tabard",
+        hands = "Malignance Gloves",
+        legs = "Malignance Tights",   
     })
 
     sets.engaged.DW = set_combine(sets.engaged, {

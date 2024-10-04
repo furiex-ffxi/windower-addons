@@ -59,11 +59,11 @@ function init_gear_sets()
 	relic.Feet = "Bagua Sandals +3"
 
 	empy = {}
-	empy.Head = "Azimuth Hood +2"
-	empy.Body = "Azimuth Coat +2"
-	empy.Hands = "Azimuth Gloves +2"
-	empy.Legs = "Azimuth Tights +2"
-	empy.Feet = "Azimuth Gaiters +2"
+	empy.Head = "Azimuth Hood +3"
+	empy.Body = "Azimuth Coat +3"
+	empy.Hands = "Azimuth Gloves +3"
+	empy.Legs = "Azimuth Tights +3"
+	empy.Feet = "Azimuth Gaiters +3"
 
 	-- Precast sets to enhance JAs
 	sets.precast.JA.Bolster = { body = relic.Body }
@@ -595,14 +595,21 @@ function init_gear_sets()
 
 	-- Gear for Magic Burst mode.
 	sets.MagicBurst = {
-		main=gear.grioavolr_nuke_staff, 
-		sub="Enki Strap",
-		head="Ea Hat +1", 
-		neck="Mizu. Kubikazari", 
-		body="Ea Houppe. +1", 
-		ring1="Mujin Band", 
-		legs="Ea Slops +1", 
-		feet="Jhakri Pigaches +2"
+		main = "Bunzi's Rod",
+		sub = "Ammurapi Shield",
+		ammo = "Ghastly Tathlum +1",
+		head = "Ea Hat +1",
+		body = empy.Body,
+		hands = "Agwu's Gages",
+		legs = "Agwu's Slops",
+		feet = "Agwu's Pigaches",
+		neck = "Sibyl Scarf",
+		waist = "Sacro Cord",
+		left_ear = "Malignance Earring",
+		right_ear = "Azimuth Earring +2",
+		left_ring = "Freke Ring",
+		right_ring = "Metamor. Ring +1",
+		back = gear.nuke_jse_back,
 	}
 	sets.ResistantMagicBurst = sets.MagicBurst
 

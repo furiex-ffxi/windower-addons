@@ -9,7 +9,7 @@ function user_job_setup()
 	state.PhysicalDefenseMode:options('PDT', 'NukeLock')
 	state.MagicalDefenseMode:options('MDT')
 	state.ResistDefenseMode:options('MEVA')
-	state.Weapons:options('None', 'Mpu', 'Naegling', 'Tauret', 'Club', 'Bow', 'DualWeapons', 'DualMpu', 'DualWeaponsAcc', 'DualEvisceration', 'DualClubs',
+	state.Weapons:options('None', 'Mpu', 'Naegling', 'Club', 'Tauret', 'Bow', 'DualWeapons', 'DualMpu', 'DualWeaponsAcc', 'DualEvisceration', 'DualClubs',
 	'DualAeolian', 'EnspellOnly', 'Enspell', 'EnspellDW', 'DualSeraph', 'DualBow')
 
 	gear.nuke_jse_back = { name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
@@ -195,7 +195,7 @@ function init_gear_sets()
 		right_ear =	"Sherida Earring",
 		left_ring = "Epaminondas's Ring",
 		right_ring = "Karieyh Ring",
-		back = RDMCape.STRWSD,		
+		back = RDMCape.STRWSD,
 	}
 
 	sets.precast.WS.Proc = {
@@ -221,6 +221,7 @@ function init_gear_sets()
 
 	sets.precast.WS['Chant Du Cygne'] = set_combine(sets.precast.WS, {
 		range = empty,
+		ammo = "Coiste Bodhar",
 		head = sets.Malignance.Head,
 		neck = "Fotia Gorget",
 		body = EMPY.Body,
@@ -253,8 +254,6 @@ function init_gear_sets()
 	})
 
 	sets.precast.WS['Black Halo'].Acc = set_combine(sets.precast.WS['Black Halo'], {
-		neck = "Fotia Gorget",
-		ammo = "Crepuscular Pebble",
 		right_ear = "Dominance Earring +1"
 	})
 	
@@ -985,7 +984,7 @@ function init_gear_sets()
 	sets.weapons.DualEvisceration = { main = "Tauret", sub = "Ternion Dagger +1", range = empty }
 	sets.weapons.DualAeolian = { main = "Tauret", sub = "Daybreak", range = empty }
 	sets.weapons.Tauret = { main = "Tauret", sub = "Ammurapi Shield"}
-	sets.weapons.Club = { main = "Maxentius", sub = "Ammurapi Shield"}
+	sets.weapons.Club = { main = "Maxentius", sub = "Forfend +1"}
 	sets.weapons.EnspellOnly = { main = "Qutrub Knife", sub = "Ceremonial Dagger", range = empty }
 	sets.weapons.Enspell = { main = "Crocea Mors", sub = "Ammurapi Shield",  range = empty }
 	sets.weapons.EnspellDW = { main = "Crocea Mors", sub = "Bunzi's Rod",  range = empty }

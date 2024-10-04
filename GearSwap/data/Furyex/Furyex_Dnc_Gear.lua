@@ -216,19 +216,19 @@ function init_gear_sets()
     -- Weaponskill sets
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {
-        ammo = "Voluspa Tathlum",
-        head = "Dampening Tam",
-        neck = "Asperity Necklace",
-        ear1 = "Brutal Earring",
-        ear2 = "Sherida Earring",
-        body = "Adhemar Jacket +1",
-        hands = "Meg. Gloves +2",
-        ring1 = "Ilabrat Ring",
-        ring2 = "Regal Ring",
-        back = gear.wsd_jse_back,
-        waist = "Grunfeld Rope",
-        legs = "Samnuha Tights",
-        feet = gear.herculean_wsd_feet
+		head = sets.Nyame.Head,
+		ammo = "Oshasha's Treatise",
+		neck = "Rep. Plat. Medal",
+		body = sets.Nyame.Body,        
+		hands = sets.Nyame.Hands,
+		legs = sets.Nyame.Legs,
+		feet = sets.Nyame.Feet,
+		waist =	"Sailfi Belt +1",
+		left_ear = { name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+		right_ear =	"Sherida Earring",
+		left_ring = "Epaminondas's Ring",
+		right_ring = "Karieyh Ring",
+		-- back = RDMCape.STRWSD,		
     }
 
     sets.precast.WS.SomeAcc = set_combine(sets.precast.WS, {
@@ -513,16 +513,16 @@ function init_gear_sets()
         ammo = "Yamarang",
         head = "Dampening Tam",
         neck = "Anu Torque",
-        ear1 = "Brutal Earring",
+        ear1 = "Cessance Earring",
         ear2 = "Sherida Earring",
-        body = "Adhemar Jacket +1",
-        hands = "Adhemar Wrist. +1",
+        body = "Malignance Tabard",
+        hands = "Malignance Gloves",
         ring1 = "Gere Ring",
         ring2 = "Epona's Ring",
         back = gear.stp_jse_back,
-        waist = "Windbuffet Belt +1",
+        waist = "Sailfi Belt +1",
         legs = "Samnuha Tights",
-        feet = gear.herculean_ta_feet
+        feet = "Malignance Boots"
     }
 
     sets.engaged.DTLite = {

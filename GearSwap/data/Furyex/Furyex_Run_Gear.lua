@@ -2,7 +2,7 @@ function user_job_setup()
 	state.OffenseMode:options('Normal', 'Acc', 'FullAcc')
 	state.HybridMode:options('Tank', 'Tank_HP', 'Normal', 'DTLite')
 	state.WeaponskillMode:options('Match', 'Normal', 'Acc', 'FullAcc')
-	state.CastingMode:options('SIRD', 'DT', 'Normal')
+	state.CastingMode:options('SIRD', 'DT', 'Bumba', 'Normal')
 	state.PhysicalDefenseMode:options('PDT_HP', 'PDT')
 	state.MagicalDefenseMode:options('MDT_HP', 'MDT')
 	state.ResistDefenseMode:options('MEVA', 'MEVA_HP')
@@ -46,7 +46,7 @@ function init_gear_sets()
 	gear.af.Body = "Runeist Coat +3"
 	gear.af.Hands = "Runeist Mitons +3"
 	gear.af.Legs = "Rune. Trousers +2"
-	gear.af.Feet = "Runeist Bottes +2"
+	gear.af.Feet = "Runeist Bottes +3"
 
 	gear.relic = {}
 	gear.relic.Head = "Fu. Bandeau +3"
@@ -113,15 +113,31 @@ function init_gear_sets()
 	--------------------------------------
 
 	-- Item sets.
-
+	sets.EnmityDown = {
+		main={ name="Epeolatry", augments={'Path: A',}},
+		sub="Khonsu",
+		ammo="Staunch Tathlum +1",
+		head=gear.empy.Head,
+		body="Adamantite Armor",
+		hands=gear.empy.Hands,
+		legs=sets.Nyame.Legs,
+		feet=sets.Nyame.Feet,
+		neck="Phrenic Torque",
+		waist="Acerbic Sash",
+		left_ear="Novia Earring",
+		right_ear={ name="Erilaz Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','Damage taken-6%','STR+7 MND+7',}},
+		left_ring={ name="Mephitas's Ring +1", augments={'Path: A',}},
+		right_ring="Kuchekula Ring",
+		back={ name="Ogma's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','Enmity-10',}},
+	}
 	-- Precast sets to enhance JAs
 	sets.precast.JA['Vallation'] = set_combine(sets.Enmity, { body = gear.af.Body, legs = gear.relic.Legs })
 	sets.precast.JA['Valiance'] = sets.precast.JA['Vallation']
 	sets.precast.JA['Pflug'] = set_combine(sets.Enmity, { feet = gear.af.Feet })
 	sets.precast.JA['Battuta'] = set_combine(sets.Enmity, { head = gear.relic.Head })
 	sets.precast.JA['Liement'] = set_combine(sets.Enmity, { body = gear.relic.Body })
-	sets.precast.JA['Gambit'] = set_combine(sets.Enmity, { hands = gear.af.Hands })
-	sets.precast.JA['Rayke'] = set_combine(sets.Enmity, { feet = gear.relic.Feet })
+	sets.precast.JA['Gambit'] = set_combine(sets.EnmityDown, { hands = gear.af.Hands })
+	sets.precast.JA['Rayke'] = set_combine(sets.EnmityDown, { feet = gear.relic.Feet })
 	sets.precast.JA['Elemental Sforzo'] = set_combine(sets.Enmity, { body = gear.relic.Body })
 	sets.precast.JA['Swordplay'] = set_combine(sets.Enmity, { hands = gear.relic.Hands })
 	sets.precast.JA['Embolden'] = set_combine(sets.Enmity, {})
@@ -171,8 +187,6 @@ function init_gear_sets()
 		right_ring="Shiva Ring +1",
 		back={ name="Ogma's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
 	}
-
-
 	sets.precast.JA['Swipe'] = sets.precast.JA['Lunge']
 
 	-- Gear for specific elemental nukes.

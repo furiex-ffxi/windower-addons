@@ -169,16 +169,7 @@ function init_gear_sets()
 		left_ear = "Thrud Earring",
         right_ear = "Moonshade Earring",
 		back=gear.wsd_str_jse_back,
-        -- head="Sakpata's Helm",
-        -- body="Sakpata's Breastplate",
-        -- hands="Sakpata's Gauntlets",
-        -- legs="Sakpata's Cuisses",
-        -- feet="Sakpata's Leggings",
-        -- neck="Fotia Gorget",
-        -- waist="Fotia Belt",
-        -- right_ear="Schere Earring",
         -- left_ring="Regal Ring",
-        -- right_ring="Niqmaddu Ring",
 	}
 
 	sets.precast.WS.AttackCap = set_combine(sets.precast.WS, { 
@@ -465,9 +456,8 @@ function init_gear_sets()
 		feet="Pumm. Calligae +3",
 		-- waist="Ioskeha Belt +1",
 		waist="Sailfi Belt +1",
-		left_ear="Cessance Earring",
 		right_ear="Boii Earring +1",
-		-- left_ear="Schere Earring",
+		left_ear="Schere Earring",
 		left_ring="Moonlight Ring",
 		-- right_ring="Petrov Ring",
 		right_ring="Niqmaddu Ring",

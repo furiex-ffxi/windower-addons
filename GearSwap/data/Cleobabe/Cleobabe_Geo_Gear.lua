@@ -61,11 +61,11 @@ function init_gear_sets()
 	}
 
 	gear.empy = {
-		Head = "Azimuth Hood +2",
-		Body = "Azimuth Coat +2",
-		Hands = "Azimuth Gloves +2",
-		Legs = "Azimuth Tights +2",
-		Feet = "Azimuth Gaiters +2",
+		Head = "Azimuth Hood +3",
+		Body = "Azimuth Coat +3",
+		Hands = "Azimuth Gloves +3",
+		Legs = "Azimuth Tights +3",
+		Feet = "Azimuth Gaiters +3",
 	}
 
 	-- Precast sets to enhance JAs
@@ -114,7 +114,9 @@ function init_gear_sets()
 	sets.precast.FC['Elemental Magic'] = set_combine(sets.precast.FC,
 		{ ear2 = "Malignance Earring", hands = gear.relic.Hand })
 
-	sets.precast.FC.Cure = set_combine(sets.precast.FC, { main = "Serenity", sub = "Clerisy Strap +1" })
+	sets.precast.FC.Cure = set_combine(
+		sets.precast.FC, { main = "Serenity", sub = "Clerisy Strap +1" 
+	})
 
 	sets.precast.FC.Curaga = sets.precast.FC.Cure
 
@@ -597,7 +599,7 @@ function init_gear_sets()
 		ear1 = "Odnowa Earring +1",
 		ear2 = "Ethereal Earring",
 		head = "Volte Beret",
-		body = "Azimuth Coat +2",
+		body = gear.empy.Body,
 		hands = gear.relic.Hands,
 		legs = "Volte Brais",
 		feet = "Volte Gaiters",
@@ -609,8 +611,7 @@ function init_gear_sets()
 
 	sets.idle.PDT = set_combine(sets.idle, {
 		main = "Malignance Pole",
-		sub = "Clerisy Strap +1",
-		-- sub = "Umbra Strap",
+		sub = "Umbra Strap",
 		ammo = "Homiliary",
 		head = "Nyame Helm",
 		neck = "Loricate Torque +1",
@@ -829,7 +830,7 @@ function init_gear_sets()
 		range = empty,
 		ammo = "Ghastly Tathlum +1",
 		head = gear.empy.Head, 
-		neck = "Mizu. Kubikazari", 
+		neck = "Sibyl Scarf",
 		hands = gear.empy.Hands,
 		body = gear.empy.Body, 
 		waist = "Refoccilation Stone",
