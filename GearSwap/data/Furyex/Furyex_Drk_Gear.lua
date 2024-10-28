@@ -1,13 +1,13 @@
 function user_job_setup()
 	-- Options: Override default values
-	state.OffenseMode:options('Normal', 'Acc', 'Pdl', 'Fodder', 'Subtle')
-	state.WeaponskillMode:options('Match', 'Normal', 'Acc', 'Pdl', 'Fodder')
+	state.OffenseMode:options('Normal', 'Acc', 'Crit', 'Fodder', 'Subtle')
+	state.WeaponskillMode:options('Match', 'Normal', 'Acc', 'Crit', 'Fodder', 'Subtle')
 	state.HybridMode:options('Normal', 'DT')
 	state.PhysicalDefenseMode:options('PDT', 'PDTReraise')
 	state.MagicalDefenseMode:options('MDT', 'MDTReraise')
 	state.ResistDefenseMode:options('MEVA')
 	state.IdleMode:options('Normal', 'PDT', 'Refresh', 'Reraise')
-	state.Weapons:options('Caladbolg', 'Apocalypse', 'Liberator', 'Montante', 'Anguta', 'Hepatizon', 'Loxotic')
+	state.Weapons:options('Caladbolg', 'Apocalypse', 'Liberator', 'Montante', 'Anguta', 'Lycurgos', 'Loxotic')
 	state.ExtraMeleeMode = M { ['description'] = 'Extra Melee Mode', 'None' }
 	state.Passive = M { ['description'] = 'Passive Mode', 'None', 'MP', 'Twilight' }
 	state.DrainSwapWeaponMode = M { 'Always', 'Never', '300', '1000' }
@@ -255,7 +255,7 @@ function init_gear_sets()
 	-- Default set for any weaponskill that isn't any more specifically defined
 	sets.precast.WS = {
         ammo="Knobkierrie",
-		head = gear.empy.Head,
+		head = sets.Nyame.Head,
 		neck = "Abyssal Beads +2",
 		-- ear1 = "Lugra Earring +1",
         ear1 = { name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
@@ -265,18 +265,16 @@ function init_gear_sets()
 		legs = sets.Nyame.Legs,
 		feet = gear.empy.Feet,
         ring1 = "Epaminondas's Ring",
-        ring2 ="Karieyh Ring",		
-		-- ring1 = "Regal Ring",
-		-- ring2 = "Niqmaddu Ring",
+		ring2 = "Regal Ring",
 		back = DRKCape.STR,
 		waist = "Sailfi Belt +1",
-		-- legs = sets.Nyame.Legs,
 	}
 
 	sets.precast.WS.Acc = set_combine(sets.precast.WS, { neck = "Combatant's Torque" })
-	sets.precast.WS.Pdl = set_combine(sets.precast.WS, { legs = "Sakpata's Cuisses" })
+	sets.precast.WS.Crit = set_combine(sets.precast.WS, {})
 	sets.precast.WS.Fodder = set_combine(sets.precast.WS, {})
 	sets.precast.WS.Subtle = set_combine(sets.precast.WS, {
+		ear2 = "Schere Earring",
 		ring1 = "Chirich Ring +1",
 		ring2 = "Niqmaddu Ring",
 	})
@@ -290,7 +288,7 @@ function init_gear_sets()
 		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 	})
-	sets.precast.WS['Catastrophe'].Pdl = set_combine(sets.precast.WS.Pdl, {
+	sets.precast.WS['Catastrophe'].Crit = set_combine(sets.precast.WS.Crit, {
 		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 	})	
@@ -309,7 +307,7 @@ function init_gear_sets()
 		ring2 = "Niqmaddu Ring",
 		back = DRKCape.VIT,		
 	})
-	sets.precast.WS['Torcleaver'].Pdl = set_combine(sets.precast.WS.Pdl, {
+	sets.precast.WS['Torcleaver'].Crit = set_combine(sets.precast.WS.Crit, {
 		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 		back = DRKCape.VIT,		
@@ -320,6 +318,7 @@ function init_gear_sets()
 		back = DRKCape.VIT,		
 	})
 	sets.precast.WS['Torcleaver'].Subtle = set_combine(sets.precast.WS.Subtle, {
+		ear2 = "Schere Earring",
 		back = DRKCape.VIT,				
 	})
 
@@ -333,7 +332,7 @@ function init_gear_sets()
 		ring2 = "Niqmaddu Ring",
 		hands = "Sakpata's Gauntlets",
 	})
-	sets.precast.WS['Insurgency'].Pdl = set_combine(sets.precast.WS.Pdl, {
+	sets.precast.WS['Insurgency'].Crit = set_combine(sets.precast.WS.Crit, {
 		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 		hands = "Sakpata's Gauntlets",
@@ -353,7 +352,7 @@ function init_gear_sets()
 		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 	})
-	sets.precast.WS['Cross Reaper'].Pdl = set_combine(sets.precast.WS.Pdl, {
+	sets.precast.WS['Cross Reaper'].Crit = set_combine(sets.precast.WS.Crit, {
 		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 	})
@@ -372,7 +371,7 @@ function init_gear_sets()
 		ring2 = "Niqmaddu Ring",
 		waist = "Fotia Belt"
 	})
-	sets.precast.WS['Quietus'].Pdl = set_combine(sets.precast.WS.Pdl, {
+	sets.precast.WS['Quietus'].Crit = set_combine(sets.precast.WS.Crit, {
 		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 		waist = "Fotia Belt"
@@ -395,7 +394,7 @@ function init_gear_sets()
 		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 	})
-	sets.precast.WS['Entropy'].Pdl = set_combine(sets.precast.WS.Pdl, {
+	sets.precast.WS['Entropy'].Crit = set_combine(sets.precast.WS.Crit, {
 		head = "Hjarrandi Helm",
 		waist = "Fotia Belt",
 		ring1 = "Regal Ring",
@@ -418,13 +417,19 @@ function init_gear_sets()
 		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 	})
-	sets.precast.WS['Resolution'].Pdl = set_combine(sets.precast.WS.Pdl, {
+	sets.precast.WS['Resolution'].Crit = set_combine(sets.precast.WS.Crit, {
 		neck = "Fotia Gorget",
 		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 	})
 	sets.precast.WS['Resolution'].Fodder = set_combine(sets.precast.WS.Fodder, {
 		neck = "Fotia Gorget",
+		ring1 = "Regal Ring",
+		ring2 = "Niqmaddu Ring",
+	})
+	sets.precast.WS['Resolution'].Subtle = set_combine(sets.precast.WS.Subtle, {
+		neck = "Fotia Gorget",
+		ear2 = "Schere Earring",
 		ring1 = "Regal Ring",
 		ring2 = "Niqmaddu Ring",
 	})
@@ -445,7 +450,7 @@ function init_gear_sets()
 		ring2 = "Metamor. Ring +1",
 		back = DRKCape.VIT,
 	})
-	sets.precast.WS['Herculean Slash'].Pdl = set_combine(sets.precast.WS.Pdl, {
+	sets.precast.WS['Herculean Slash'].Crit = set_combine(sets.precast.WS.Crit, {
 		-- neck = "Sanctity Necklace",
 		ear1 = "Friomisi Earring",
 		ear2 = "Malignance Earring",
@@ -502,7 +507,13 @@ function init_gear_sets()
 		hands={ name="Odyssean Gauntlets", augments={'Pet: Phys. dmg. taken -2%','STR+2','"Refresh"+2','Accuracy+20 Attack+20','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
 	})
 
-	sets.idle.Weak = set_combine(sets.idle, { head = "Twilight Helm", body = "Twilight Mail" })
+	sets.idle.Weak = set_combine(sets.midcast['Dread Spikes'], {
+		head="Sakpata's Helm",
+		body="Sakpata's Plate",
+		hands="Sakpata's Gauntlets",
+		legs="Sakpata's Cuisses",
+		feet="Sakpata's Leggings",
+	})
 
 	sets.idle.Reraise = set_combine(sets.idle, { head = "Twilight Helm", body = "Twilight Mail" })
 
@@ -517,11 +528,6 @@ function init_gear_sets()
 		hands="Sakpata's Gauntlets",
 		legs="Sakpata's Cuisses",
 		feet="Sakpata's Leggings",
-		-- head = "Loess Barbuta +1",
-		-- body = "Tartarus Platemail",
-		-- hands = "Sulev. Gauntlets +2",
-		-- legs = "Sulev. Cuisses +2",
-		-- feet = "Amm Greaves",
 		ring1 = "Gelatinous Ring +1",
 		ring2 = "Moonlight Ring",
 		back = "Shadow Mantle",
@@ -531,24 +537,14 @@ function init_gear_sets()
 	sets.defense.PDTReraise = set_combine(sets.defense.PDT, { head = "Twilight Helm", body = "Twilight Mail" })
 
 	sets.defense.MDT = {
-		ammo = "Staunch Tathlum +1",
-		-- head = "Loess Barbuta +1",
-		-- body = "Tartarus Platemail",
-		-- hands = "Sulev. Gauntlets +2",
-		-- legs = "Sulev. Cuisses +2",
-		-- feet = "Amm Greaves"
 		head="Sakpata's Helm",
-		body="Sakpata's Plate",
+		body="Adamantite Armor",
 		hands="Sakpata's Gauntlets",
 		legs="Sakpata's Cuisses",
 		feet="Sakpata's Leggings",
 		neck = "Warder's Charm +1",
-		-- ear1 = "Genmei Earring",
-		ear1 = "Ethereal Earring",
 		ear2 = "Odnowa Earring +1",
-		ring2 = "Moonlight Ring",
-		back = "Moonlight Cape",
-		waist = "Flume Belt +1",		
+		ring2 = "Shadow Ring",
 	}
 
 	sets.defense.MDTReraise = set_combine(sets.defense.MDT, { head = "Twilight Helm", body = "Twilight Mail" })
@@ -567,7 +563,7 @@ function init_gear_sets()
 
 	-- Engaged sets
 	sets.engaged = {
-		ammo="Aurgelmir Orb +1",
+		ammo="Coiste Bodhar",
 		head="Flam. Zucchetto +2",
 		body="Sakpata's Plate",
 		hands="Sakpata's Gauntlets",
@@ -577,18 +573,27 @@ function init_gear_sets()
 		waist = "Ioskeha Belt +1",
 		left_ear = "Telos Earring",
 		right_ear = "Cessance Earring",
-		-- right_ear = "Schere Earring",
 		left_ring = "Lehko's Ring",
 		right_ring = "Niqmaddu Ring",
 		back = DRKCape.TP,
 	}
+
+	sets.engaged.Weak = set_combine(sets.midcast['Dread Spikes'], {
+		head="Sakpata's Helm",
+		body="Sakpata's Plate",
+		hands="Sakpata's Gauntlets",
+		legs="Sakpata's Cuisses",
+		feet="Sakpata's Leggings",
+	})
 	
 	sets.engaged.Acc = set_combine(sets.engaged, {
 		hands = "Gazu Bracelets +1",
 	})
 
-	sets.engaged.Pdl = set_combine(sets.engaged, {
-		
+	sets.engaged.Crit = set_combine(sets.engaged, {
+		body = "Hjarrandi Breastplate",
+        hands = "Flam. Manopolas +2",
+		-- ring2 = "Hetairoi Ring"
 	})
 
 	sets.engaged.Fodder = set_combine(sets.engaged, {
@@ -602,13 +607,14 @@ function init_gear_sets()
 	})
 
 	sets.engaged.Subtle = set_combine(sets.engaged, {
-		head = "Sakpata's Helm",
-		body = "Dagon Breast.",
+		-- body = "Dagon Breast.",
+		head="Sakpata's Helm",
+		hands = "Sakpata's Gauntlets",
+		legs = "Sakpata's Cuisses",
 		feet = "Sakpata's Leggings",
-		neck = "Bathy Choker +1",
-		right_ear = "Digni. Earring",
 		left_ring = "Niqmaddu Ring",
 		right_ring = "Chirich Ring +1",
+		ear2 = "Schere Earring",
 	})
 
 	sets.engaged.Liberator = set_combine(sets.engaged, {})
@@ -726,7 +732,7 @@ function init_gear_sets()
 	sets.weapons.Liberator = { main = "Liberator", sub = "Utu Grip" }
 	sets.weapons.Montante = { main = "Montante +1", sub = "Utu Grip" }
 	sets.weapons.Anguta = { main = "Anguta", sub = "Utu Grip" }
-	sets.weapons.Hepatizon = { main = "Hepatizon Axe +1", sub = "Utu Grip" }
+	sets.weapons.Lycurgos = { main = "Lycurgos", sub = "Utu Grip" }
 	sets.weapons.Loxotic = { main = "Loxotic Mace +1", sub = "Blurred Shield +1" }
 end
 

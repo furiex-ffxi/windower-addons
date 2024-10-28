@@ -525,10 +525,10 @@ function init_gear_sets()
 		hands = RELIC.Hands, 
 		legs = AF.Legs,
 		ear1 = "Andoaa Earring",
-		-- ear2 = "Mimir Earring", 
+		ear2 = "Mimir Earring", 
 		ring1 = { name="Stikini Ring +1", bag="wardrobe1" },
 		ring2 = { name="Stikini Ring +1", bag="wardrobe2" },
-		-- waist = "Olympus Sash",
+		waist = "Olympus Sash",
 		back = "Ghostfyre Cape", 
 	}
 	sets.midcast.Refresh = { head = "Amalric Coif +1", body = AF.Body, legs = EMPY.Feet }
@@ -788,6 +788,7 @@ function init_gear_sets()
 	sets.midcast.Drain = set_combine(sets.midcast['Dark Magic'], {
 		main = "Rubicundity",
 		sub = "Ammurapi Shield",
+		ammo = "Regal Gem",
 		head = "Pixie Hairpin +1",
 		ring1 = "Evanescence Ring",
 		ring2 = "Archon Ring",

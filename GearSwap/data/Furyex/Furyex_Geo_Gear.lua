@@ -2,7 +2,7 @@ function user_job_setup()
 	-- Options: Override default values
 	state.OffenseMode:options('Normal')
 	state.CastingMode:options('Normal', 'Resistant', 'Fodder', 'Proc')
-	state.IdleMode:options('Normal', 'PDT')
+	state.IdleMode:options('Normal', 'DT')
 	state.PhysicalDefenseMode:options('PDT', 'NukeLock', 'GeoLock', 'PetPDT')
 	state.MagicalDefenseMode:options('MDT', 'NukeLock')
 	state.ResistDefenseMode:options('MEVA')
@@ -137,7 +137,7 @@ function init_gear_sets()
 		feet = "Regal Pumps +1"
 	}
 
-	sets.precast.FC.Dispelga = set_combine(sets.precast.FC, { main = "Daybreak", sub = "Genmei Shield" })
+	sets.precast.FC.Dispelga = set_combine(sets.precast.FC, { main = "Daybreak", sub = "Ammurapi Shield" })
 
 	-- Weaponskill sets
 	-- Default set for any weaponskill that isn't any more specifically defined
@@ -172,7 +172,6 @@ function init_gear_sets()
 
 	sets.midcast.Geomancy = {
 		main = "Idris",
-		sub = "Genmei Shield",
 		range = "Dunna",
 		head = empy.Head,
 		neck = "Incanter's Torque",
@@ -445,8 +444,14 @@ function init_gear_sets()
 	sets.midcast.Refresh = set_combine(sets.midcast['Enhancing Magic'], { head = "Amalric Coif +1" })
 
 	sets.midcast.Aquaveil = set_combine(sets.midcast['Enhancing Magic'],
-		{ main = "Vadose Rod", sub = "Genmei Shield", head = "Amalric Coif +1", hands = "Regal Cuffs", waist =
-		"Emphatikos Rope", legs = "Shedir Seraweels" })
+		{ 
+			main = "Vadose Rod", 
+			sub = "Ammurapi Shield", 
+			head = "Amalric Coif +1", 
+			hands = "Regal Cuffs", 
+			waist = "Emphatikos Rope", 
+			legs = "Shedir Seraweels" 
+		})
 
 	sets.midcast.BarElement = set_combine(sets.precast.FC['Enhancing Magic'], { legs = "Shedir Seraweels" })
 
@@ -472,20 +477,17 @@ function init_gear_sets()
 		head = "Volte Beret",
 		body = empy.Body,
 		hands = relic.Hands,
-		legs = "Volte Brais",
-		feet = "Volte Gaiters",
-		ring1 = "Stikini Ring +1",
+		legs = sets.Nyame.Legs,
+		feet = sets.Nyame.Feet,
+		ring1 = "Defending Ring",
 		ring2 = "Stikini Ring +1",
 		back = gear.idle_jse_back,
 		waist = "Plat. Mog. Belt", 
 	}
 
-	sets.idle.PDT = set_combine(sets.idle, {
-		head = sets.Nyame.Head,
-		body = "Adamantite Armor",
-		hands = sets.Nyame.Hands,
-		legs = sets.Nyame.Legs,
-		feet = sets.Nyame.Feet,
+	sets.idle.DT = set_combine(sets.idle, {
+		left_ring="Defending Ring",
+		back = gear.nuke_jse_back,
 	})
 
 	-- .Pet sets are for when Luopan is present.
@@ -499,7 +501,7 @@ function init_gear_sets()
 		feet = relic.Feet
 	})
 
-	sets.idle.PDT.Pet = set_combine(sets.idle.Pet, {
+	sets.idle.DT.Pet = set_combine(sets.idle.Pet, {
 		main = "Idris",
 		body = "Adamantite Armor",
 		legs = "Nyame Flanchard",
@@ -509,25 +511,25 @@ function init_gear_sets()
 	-- .Indi sets are for when an Indi-spell is active.
 	sets.idle.Indi = set_combine(sets.idle, {})
 	sets.idle.Pet.Indi = set_combine(sets.idle.Pet, {})
-	sets.idle.PDT.Indi = set_combine(sets.idle.PDT, {})
-	sets.idle.PDT.Pet.Indi = set_combine(sets.idle.PDT.Pet, {})
+	sets.idle.DT.Indi = set_combine(sets.idle.DT, {})
+	sets.idle.DT.Pet.Indi = set_combine(sets.idle.DT.Pet, {})
 
-	sets.idle.Weak = set_combine(sets.idle.PDT, {
+	sets.idle.Weak = set_combine(sets.idle.DT, {
 		back = "Moonlight Cape"
 	})
 
 	-- Defense sets
 
-	sets.defense.PDT = set_combine(sets.idle.PDT, {	
+	sets.defense.PDT = set_combine(sets.idle.DT, {	
 	})
 
-	sets.defense.MDT = set_combine(sets.idle.PDT, {	
+	sets.defense.MDT = set_combine(sets.idle.DT, {	
 	})
 
-	sets.defense.MEVA = set_combine(sets.idle.PDT, {	
+	sets.defense.MEVA = set_combine(sets.idle.DT, {	
 	})
 
-	sets.defense.PetPDT = sets.idle.PDT.Pet
+	sets.defense.PetPDT = sets.idle.DT.Pet
 
 	sets.defense.NukeLock = sets.midcast['Elemental Magic']
 
@@ -574,7 +576,7 @@ function init_gear_sets()
 		neck = "Combatant's Torque",
 		ear1 = "Cessance Earring",
 		ear2 = "Telos Earring",
-		body = sets.Nyame.Head,
+		body = sets.Nyame.Body,
 		hands = "Gazu Bracelets +1",
 		ring1 = "Petrov Ring",
 		ring2 = "Lehko's Ring",

@@ -7,14 +7,14 @@ function user_job_setup()
     state.IdleMode:options('Normal', 'PDT', 'Refresh')
     state.HybridMode:options('Normal', 'DT')
     state.ExtraMeleeMode = M { ['description'] = 'Extra Melee Mode', 'None', 'DWMax' }
-    state.Weapons:options('Default', 'Ranged', 'Savage', 'Evisceration', 'DualWeapons', 'DualSavageWeapons',
+    state.Weapons:options('Default', 'Ranged', 'Savage', 'Evisceration', 'Fermion', 'DualWeapons', 'DualSavageWeapons',
         'DualEvisceration', 'DualLeadenRanged', 'DualLeadenMelee', 'DualAeolian', 'DualLeadenMeleeAcc', 'DualRanged',
         'DualProcWeapons', 'None')
     state.CompensatorMode:options('Always', '300', '1000', 'Never')
 
-    gear.RAbullet = "Eminent Bullet"
-    gear.WSbullet = "Eminent Bullet"
-    gear.MAbullet = "Orichalc. Bullet" --For MAB WS, do not put single-use bullets here.
+    gear.RAbullet = "Chrono Bullet"
+    gear.WSbullet = "Chrono Bullet"
+    gear.MAbullet = "Chrono Bullet" --For MAB WS, do not put single-use bullets here.
     gear.QDbullet = "Animikii Bullet"
     options.ammo_warning_limit = 15
     --Ikenga_vest_bonus = 190  -- It is 190 at R20. Uncomment if you need to manually adjust because you are using below R20
@@ -565,7 +565,7 @@ function init_gear_sets()
         ring2 = "Shadow Ring",
         back = { name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
         waist = "Carrier's Sash",
-        legs = "Carmine Cuisses +1",
+        legs = "Nyame Flanchard",
         feet = "Nyame Sollerets"
     }
 
@@ -659,15 +659,15 @@ function init_gear_sets()
     sets.weapons.Default = { main = "Qutrub Knife", sub = "Nusku Shield", range = "Anarchy +2" }
     sets.weapons.Ranged = { main = "Naegling", sub = "Nusku Shield", range = "Anarchy +2" }
     sets.weapons.Evisceration = { main = "Tauret", sub = "Nusku Shield", range = "Anarchy +2" }
-    sets.weapons.DualWeapons = { main = "Naegling", sub = "Kustawi", range = "Magnatus" }
-    sets.weapons.DualSavageWeapons = { main = "Naegling", sub = "Kustawi", range = "Anarchy +2" }
+    sets.weapons.DualWeapons = { main = "Naegling", sub = "Gleti's Knife", range = "Fomalhaut" }
+    sets.weapons.DualSavageWeapons = { main = "Naegling", sub = "Gleti's Knife", range = "Anarchy +2" }
     sets.weapons.DualEvisceration = { main = "Tauret", sub = "Savage Blade", range = "Anarchy +2" }
     sets.weapons.Savage = { main = "Naegling", sub = "Nusku Shield", range = "Anarchy +2" }
+    sets.weapons.Fermion = { main = "Fermion Sword", sub = "Nusku Shield", range = "Anarchy +2" }
     sets.weapons.DualLeadenRanged = { main = "Rostam", sub = "Kustawi", range = "Fomalhaut" }
-    sets.weapons.DualLeadenMelee = { main = "Naegling", sub = "Kustawi", range = "Fomalhaut" }
-    sets.weapons.DualAeolian = { main = "Tauret", sub = "Kustawi", range = "Anarchy +2" }
-    sets.weapons.DualLeadenMeleeAcc = { main = "Naegling", sub = "Kustawi", range = "Fomalhaut" }
-    sets.weapons.DualRanged = { main = "Qutrub Knife", sub = "Kustawi", range = "Anarchy +2" }
+    sets.weapons.DualLeadenMelee = { main = "Naegling", sub = "Gleti's Knife", range = "Fomalhaut" }
+    sets.weapons.DualAeolian = { main = "Tauret", sub = "Gleti's Knife", range = "Anarchy +2" }
+    sets.weapons.DualLeadenMeleeAcc = { main = "Fermion Sword", sub = "Kustawi", range = "Fomalhaut" }
 
     -- Engaged sets
 

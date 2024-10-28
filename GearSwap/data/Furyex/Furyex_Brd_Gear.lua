@@ -4,7 +4,7 @@ function user_job_setup()
 	state.OffenseMode:options('Normal', 'Acc')
 	state.HybridMode:options('Normal', 'DT')
 	state.CastingMode:options('Normal', 'Duration', 'Resistant')
-	state.IdleMode:options('Normal', 'NoRefresh', 'DT')
+	state.IdleMode:options('Normal', 'PDT', 'NoRefresh')
 	state.Weapons:options('None', 'Naegling', 'Aeneas', 'Carnwenhan', 'Qutrub', 'DualCarnwenhan', 'DualMpu', 'DualWeapons', 'DualNaegling', 'DualNaeglingAcc', 'DualTauret', 'DualAeolian')
 	-- Whether to use Carn (or song daggers in general) under a certain threshhold even when weapons are locked.
 	state.CarnMode           = M { 'Always', '300', '1000', 'Never' }
@@ -229,7 +229,7 @@ function init_gear_sets()
 		body = sets.Nyame.Body,
 		waist = "Sailfi Belt +1",
 		ring1 = "Epaminondas's Ring",
-		ring2 = "Cornelia's Ring",
+		ring2 = "Sroda Ring",
 	})
 
 	sets.precast.WS['Exenterator'] = set_combine(sets.precast.WS, {
@@ -539,7 +539,9 @@ function init_gear_sets()
 	sets.midcast["Sentinel's Scherzo"] = { feet = gear.empy_feet }
 	sets.midcast["Chocobo Mazurka"] = { range = "Marsyas" }
 
-	sets.midcast.Paeon = sets.midcast.DaurdablaDummy 
+	sets.midcast['Army\'s Paeon'] = sets.midcast.DaurdablaDummy
+	sets.midcast['Army\'s Paeon II'] = sets.midcast.DaurdablaDummy
+	sets.midcast['Army\'s Paeon III'] = sets.midcast.DaurdablaDummy
 	sets.midcast['Scop\'s Operetta'] = sets.midcast.DaurdablaDummy
 	sets.midcast['Goblin Gavotte'] = sets.midcast.DaurdablaDummy
 	sets.midcast['Sheepfoe Mambo'] = sets.midcast.DaurdablaDummy		
@@ -613,7 +615,7 @@ function init_gear_sets()
 		feet = gear.empy_feet
 	}
 
-	sets.idle.DT = {
+	sets.idle.PDT = {
 		main="Daybreak",
 		sub = "Genmei Shield",
 		ammo = "Staunch Tathlum +1",
@@ -715,14 +717,15 @@ function init_gear_sets()
 		neck = { name = "Bard's Charm +2", augments = { 'Path: A', } },
 		waist = { name = "Sailfi Belt +1", augments = { 'Path: A', } },
 		ear1 = "Telos Earring",
-		ear2 = "Digni. Earring",
+		ear2 = "Cessance Earring",
 		ring1 = "Chirich Ring +1",	
 		ring2 = "Lehko's Ring",
 		back = gear.tp_jse_back,
 	}
 
 	sets.engaged.DT = set_combine(sets.engaged, {
-		
+		ring1 = "Moonlight Ring",	
+		feet={ name="Nyame Sollerets", augments={'Path: B',}},
 	})
 
 -- 1383 eva, 1530 def
@@ -772,7 +775,7 @@ end
 
 -- Select default macro book on initial load or subjob change.
 function select_default_macro_book()
-	set_macro_page(1, 1)
+	set_macro_page(1, 2)
 end
 
 autows_list = {

@@ -45,17 +45,12 @@ function init_gear_sets()
     -- Fast cast sets for spells
 
     sets.precast.FC = {
-        main = gear.grioavolr_fc_staff,
-        -- sub = "Clerisy Strap +1",
         ammo = "Sapience Orb",
         head = gear.merlinic_fc_head,
         neck = "Orunmila's Torque",
-        -- ear1 = "Enchntr. Earring +1",
         ear1 = "Etiolation Earring",
         ear2 = "Malignance Earring",
-        body = "Pinga Tunic +1",
-        -- body = "Zendik Robe",
-        -- hands = "Volte Gloves",
+        body = "Zendik Robe",
         hands = "Acad. Bracers +3",
         ring1 = "Kishar Ring",
         -- ring2 = "Lebeche Ring",
@@ -220,8 +215,8 @@ function init_gear_sets()
     })
 
     sets.midcast['Enhancing Magic'] = {
-        -- main = gear.gada_enhancing_club,
-        sub = "Ammurapi Shield",
+        main = "Musa",
+        sub = "Enki Strap",
         head = "Telchine Cap",
         -- neck = "Incanter's Torque",
         ear1 = "Andoaa Earring",
@@ -747,6 +742,8 @@ function init_gear_sets()
     -- Idle sets (default idle set not needed since the other three are defined, but leaving for testing purposes)
 
     sets.idle = {
+        main = "Malignance Pole",
+        sub = "Enki Strap",
         ammo="Homiliary",
         head="Volte Beret",
         body="Arbatel Gown +3",
@@ -763,6 +760,7 @@ function init_gear_sets()
 
     sets.idle.PDT = {
         main = "Malignance Pole",
+        sub = "Enki Strap",
         -- sub = "Umbra Strap",
         ammo = "Staunch Tathlum +1",
         -- head = "Gende. Caubeen +1",
@@ -805,6 +803,7 @@ function init_gear_sets()
 
     sets.defense.PDT = {
         main = "Malignance Pole",
+        sub = "Enki Strap",
         -- sub = "Umbra Strap",
         ammo = "Staunch Tathlum +1",
         head = "Gende. Caubeen +1",
@@ -823,6 +822,7 @@ function init_gear_sets()
 
     sets.defense.MDT = {
         main = "Malignance Pole",
+        sub = "Enki Strap",
         -- sub = "Umbra Strap",
         ammo = "Staunch Tathlum +1",
         head = "Gende. Caubeen +1",

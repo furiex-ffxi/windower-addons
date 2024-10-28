@@ -63,20 +63,22 @@ function init_gear_sets()
 	gear.empy.Feet = "Erilaz Greaves +3"
 
 	sets.Enmity = {
-		ammo = "Staunch Tathlum +1",
-		head = "Halitus Helm",
-		neck = "Moonlight Necklace",
-		ear1 = "Friomisi Earring",
-		ear2 = "Cryptic Earring",
-		body = "Emet Harness +1",
-		hands = "Kurys Gloves",
-		ring1 = "Eihwaz Ring",
-		ring2 = "Provocare Ring",
-		back = gear.enmity_jse_back,
-		waist = "Kasiri Belt",
-		legs = gear.empy.Legs,
-		feet = gear.empy.Feet
-	}
+		main = "Epeolatry", -- 23
+		sub = "Alber Strap", -- 5
+		ammo = "Sapience Orb", -- 2
+		head = "Halitus Helm", -- 8
+		neck = "Moonlight Necklace", -- 15
+		ear1 = "Rimeice Earring", -- 5
+		ear2 = "Cryptic Earring", -- 4
+		body = "Emet Harness +1", -- 10
+		hands = "Kurys Gloves", -- 9
+		ring1 = "Eihwaz Ring", --5 
+		ring2 = "Provocare Ring", -- 5
+		back = gear.enmity_jse_back, -- 10
+		waist = "Goading Belt", -- 5 
+		legs = gear.empy.Legs, -- 13
+		feet = gear.empy.Feet -- 8
+	} -- +127 enmity
 
 	sets.Enmity.SIRD = set_combine(sets.Enmity, {
 		ammo = "Staunch Tathlum +1", -- 12
@@ -114,7 +116,7 @@ function init_gear_sets()
 
 	-- Item sets.
 	sets.EnmityDown = {
-		main={ name="Epeolatry", augments={'Path: A',}},
+		main="Hepatizon Axe +1",
 		sub="Khonsu",
 		ammo="Staunch Tathlum +1",
 		head=gear.empy.Head,

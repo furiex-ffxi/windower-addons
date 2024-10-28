@@ -8,7 +8,7 @@ function user_job_setup()
     state.Weapons:options('Default', 'DualEviscerationWeapons', 'DualGastra', 'DualAnni', 'DualWeapons', 'DualSavageWeapons', 'DualMagicWeapons',
         'DualMalevolence', 'DualFermion')
 
-    -- Ikenga_vest_bonus = 190  -- It is 190 at R20. Uncomment if you need to manually adjust because you are using below R20
+    Ikenga_vest_bonus = 100  -- It is 190 at R20. Uncomment if you need to manually adjust because you are using below R20
 
     WeaponType = {
         ['Fail-Not'] = "Bow",
@@ -131,12 +131,15 @@ function init_gear_sets()
     -- Ranged sets (snapshot)
 
     sets.precast.RA = {
-        head = "Amini Gapette +1", -- 7
-        body = "Amini Caban +1",
-        hands = "Carmine Fin. Ga. +1",
+        neck="Scout's Gorget +2",
+        right_ear="Etiolation Earring",
+        left_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
+        head = "Amini Gapette +2", -- 7
+        body = "Amini Caban +2",
         ring1 = "Crepuscular Ring", -- 11
+        ring2="Ilabrat Ring",
         back = gear.snapshot_jse_back,
-        waist = "Impulse Belt",
+        waist="Yemaya Belt",
         legs = "Orion Braccae +3",
         feet = "Meg. Jam. +2"
     } -- 38
@@ -296,18 +299,18 @@ function init_gear_sets()
     -- Ranged sets
 
     sets.midcast.RA = {
-        head = "Malignance Chapeau",
-        neck = "Iskur Gorget",
-        ear1 = "Enervating Earring",
-        ear2 = "Telos Earring",
-        body = "Malignance Tabard",
-        hands = "Malignance Gloves",
-        ring1 = "Crepuscular Ring",
-        ring2 = "Ilabrat Ring",
+        head="Arcadian Beret +3",
+        neck="Iskur Gorget",
+        right_ear="Dedition Earring",
+        left_ear="Crep. Earring",
+        body="Ikenga's Vest",
+        hands="Ikenga's Gloves",
+        left_ring="Lehko's Ring",
+        right_ring="Ilabrat Ring",
+        waist="Tellen Belt",
+        legs="Amini Bragues +2",
+        feet="Ikenga's Clogs",
         back = gear.tp_ranger_jse_back,
-        waist = "Yemaya Belt",
-        legs = "Malignance Tights",
-        feet = "Malignance Boots"
     }
 
     sets.midcast.RA.Acc = {
@@ -471,8 +474,8 @@ function init_gear_sets()
         ammo = "Eminent Bolt"
     }
     sets.weapons.DualAnni = {
-        main = "Xiphos",
-        sub = "Xiphos",
+        main = "Perun +1",
+        sub = "Kustawi +1",
         range = "Annihilator",
         ammo = "Chrono Bullet"
     }    

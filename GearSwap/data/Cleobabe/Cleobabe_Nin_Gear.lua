@@ -285,19 +285,20 @@ function init_gear_sets()
     }
 
     sets.midcast.ElementalNinjutsu = {
-        ammo = "Pemphredo Tathlum",
-        head = gear.herculean_nuke_head,
-        neck = "Baetyl Pendant",
-        ear1 = "Crematio Earring",
-        ear2 = "Friomisi Earring",
-        body = "Samnuha Coat",
-        hands = gear.empy.Hands,
-        ring1 = "Shiva Ring +1",
-        ring2 = "Metamor. Ring +1",
-        back = "Toro Cape",
+		ammo = { name="Ghastly Tathlum +1", augments={'Path: A',}},
+		head = { name="Mochi. Hatsuburi +3", augments={'Enhances "Yonin" and "Innin" effect',}},
+		body = { name="Nyame Mail", augments={'Path: B',}},
+		hands = "Hattori Tekko +2",
+		legs = { name="Nyame Flanchard", augments={'Path: B',}},
+		feet = { name="Mochi. Kyahan +3", augments={'Enh. Ninj. Mag. Acc/Cast Time Red.',}},
+		neck = "Sibyl Scarf",
         waist = "Eschan Stone",
-        legs = "Gyve Trousers",
-        feet = gear.herculean_nuke_feet
+		-- waist="Orpheus's sash",
+		left_ear = { name="Lugra Earring"},
+		-- right_ear="Friomisi Earring",
+		left_ring = { name="Metamor. Ring +1", augments={'Path: A',}},
+		-- right_ring="Mujin Band",
+        -- back={ name="Andartia's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
     }
 
     sets.midcast.ElementalNinjutsu.Proc = sets.midcast.FastRecast
@@ -369,15 +370,15 @@ function init_gear_sets()
 
     -- Idle sets
     sets.idle = {
-        ammo = "Staunch Tathlum +1",
+        ammo = "Brigantia Pebble",
         head = "Malignance Chapeau",
         neck = "Loricate Torque +1",
         ear1 = "Eabani Earring",
         ear2 = "Assuage Earring",
         body = "Malignance Tabard",
         hands = "Malignance Gloves",
-        ring1 = "Defending Ring",
-        ring2 = "Shneddick Ring",
+        ring1 = "Gelatinous Ring +1",
+        ring2 = "Fortified Ring",
         back = "Moonlight Cape",
         waist = "Platinum Moogle Belt",
         legs = "Malignance Tights",
@@ -394,7 +395,9 @@ function init_gear_sets()
         body = sets.Nyame.Body,
         hands = sets.Nyame.Hands,
         legs = sets.Nyame.Legs,
-        feet = sets.Nyame.Feet
+        feet = sets.Nyame.Feet,
+        waist = "Flume Belt +1",
+        ear2 = "Tuisto Earring",
     })
 
     sets.idle.EVA= set_combine(sets.idle, { 
@@ -522,7 +525,7 @@ function init_gear_sets()
     sets.weapons.HeishiYag = { main = "Heishi Shorinken", sub = "Yagyu Darkblade" }
     sets.weapons.Savage = { main = "Naegling", sub = "Uzura +2" }
     sets.weapons.Evisceration = { main = "Tauret", sub = "Kunimitsu" }
-    sets.weapons.MagicWeapons = { main = "Kunimitsu", sub = "Tauret" }
+    sets.weapons.MagicWeapons = { main = "Gokotai", sub = "Kunimitsu" }
 	sets.weapons.ProcDagger = { main = "Qutrub Knife", sub = empty }
 	sets.weapons.ProcSword = { main = "Wax Sword", sub = 'Qutrub Knife' }
 	sets.weapons.ProcKatana = { main = "Trainee Burin", sub = empty }

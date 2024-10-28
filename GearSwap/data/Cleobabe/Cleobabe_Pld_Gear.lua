@@ -109,7 +109,7 @@ function init_gear_sets()
     sets.precast.JA['Divine Emblem'] = set_combine(sets.Enmity,{ feet="Chev. Sabatons +3", })
     sets.precast.JA['Majesty'] = set_combine(sets.Enmity)
     sets.precast.JA['Cover'] = set_combine(sets.Enmity, {
-        head="Rev. Coronet +2",
+        head="Rev. Coronet +3",
         body={ name="Cab. Surcoat +3", augments={'Enhances "Fealty" effect',}},}
     ) 
 	
@@ -120,7 +120,7 @@ function init_gear_sets()
     sets.precast.JA['Fealty'].DT = set_combine(sets.Enmity.DT,{body={ name="Cab. Surcoat +3", augments={'Enhances "Fealty" effect',}},})
     sets.precast.JA['Divine Emblem'].DT = set_combine(sets.Enmity.DT,{feet="Chev. Sabatons +3",})
     sets.precast.JA['Majesty'] = set_combine(sets.Enmity)
-    sets.precast.JA['Cover'].DT = set_combine(sets.Enmity.DT, {head="Rev. Coronet +2",
+    sets.precast.JA['Cover'].DT = set_combine(sets.Enmity.DT, {head="Rev. Coronet +3",
     body={ name="Cab. Surcoat +3", augments={'Enhances "Fealty" effect',}},})
 	
     -- add mnd for Chivalry

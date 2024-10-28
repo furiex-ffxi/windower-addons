@@ -9,7 +9,7 @@ function user_job_setup()
 	state.Weapons:options('None', 'Idris', 'Mpaca', 'Maxentius', 'Ternion', 'Daybreak', 'DualWeapons')
 
 	gear.nuke_jse_back = { name = "Nantosuelta's Cape", augments = { 'INT+20', 'Mag. Acc+20 /Mag. Dmg.+20', '"Mag.Atk.Bns."+10' } }
-	gear.idle_jse_back = { name = "Nantosuelta's Cape", augments = { 'HP+60', 'Eva.+20 /Mag. Eva.+20', 'Pet: "Regen"+10' } }
+	gear.idle_jse_back = { name="Nantosuelta's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Pet: "Regen"+10','Pet: "Regen"+5',}}
 
 	gear.obi_cure_back = "Tempered Cape +1"
 	gear.obi_cure_waist = "Witful Belt"
@@ -605,7 +605,7 @@ function init_gear_sets()
 		feet = "Volte Gaiters",
 		ring1 = "Defending Ring",
 		ring2 = "Stikini Ring +1",
-		back = "Shadow Mantle",
+		back = gear.idle_jse_back,
 		waist = "Plat. Mog. Belt",
 	}
 
@@ -620,7 +620,7 @@ function init_gear_sets()
 		-- ring1 = "Defending Ring",
 		ring1 = "Gelatinous Ring +1",
 		ring2 = "Stikini Ring +1",
-		back = "Moonlight Cape",
+		back = gear.idle_jse_back,
 		waist = "Carrier's Sash",
 	})
 
@@ -792,7 +792,7 @@ function init_gear_sets()
 		hands = "Gazu Bracelets +1",
 		ring1 = "Petrov Ring",
 		ring2 = "Cacoethic Ring",
-		back = "Moonlight Cape",
+		back = gear.idle_jse_back,
 		waist = "Eschan Stone",
 		legs = gear.empy.Legs,
 		feet = "Battlecast Gaiters"
@@ -810,7 +810,7 @@ function init_gear_sets()
 		hands = "Gazu Bracelets +1",
 		ring1 = "Petrov Ring",
 		ring2 = "Cacoethic Ring",
-		back = "Moonlight Cape",
+		back = gear.idle_jse_back,
 		waist = "Eschan Stone",
 		legs = gear.empy.Legs,
 		feet = "Battlecast Gaiters"

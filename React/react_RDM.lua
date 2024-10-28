@@ -1,4 +1,18 @@
 return {
+    ["Bozzetto Retributionist"]={
+        ["Splashing Assault"]={
+            ["complete_reaction"]="",
+            ["ready_reaction"]="/stun"
+        },
+        ["Drill Claw"]={
+            ["complete_reaction"]="",
+            ["ready_reaction"]="/stun"
+        },
+        ["Nether Castigation"]={
+            ["complete_reaction"]="",
+            ["ready_reaction"]="/stun"
+        },                
+    },  
     ["Albumen"]={
         ["Petalback Spin"]={
             ["complete_reaction"]="",

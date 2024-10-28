@@ -1,4 +1,26 @@
 return {
+    ["Bozzetto Retributionist"]={
+        ["Splashing Assault"]={
+            ["complete_reaction"]="",
+            ["ready_reaction"]=""
+        },
+        ["Drill Claw"]={
+            ["complete_reaction"]="",
+            ["ready_reaction"]=""
+        },
+        ["Nether Castigation"]={
+            ["complete_reaction"]="",
+            ["ready_reaction"]=""
+        },  
+        ["Charging Up"]={
+            ["complete_reaction"]="",
+            ["ready_reaction"]="/p <t> is Charging Up."
+        }, 
+        ["Eisenschneider"]={
+            ["complete_reaction"]="",
+            ["ready_reaction"]="/flatblade"
+        },                            
+    },      
     ["Lady Lilith"]={
         ["Dark Thorn"]={
             ["complete_reaction"]="/magicfinale",

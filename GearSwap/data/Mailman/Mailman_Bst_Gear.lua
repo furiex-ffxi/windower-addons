@@ -39,6 +39,7 @@ function user_job_setup()
     state.JugMode = M {
         ['description'] = 'Jug Mode',
         'FatsoFargann',
+        'GenerousArthur',
         'ScissorlegXerin',
         'BlackbeardRandy',
         'AttentiveIbuki',

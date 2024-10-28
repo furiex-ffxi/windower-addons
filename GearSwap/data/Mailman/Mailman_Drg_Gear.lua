@@ -12,7 +12,7 @@ function user_job_setup()
         ['description'] = 'Extra Melee Mode',
         'None'
     }
-    state.Weapons:options('Shining One', 'Naegling') -- 'Trishula', 
+    state.Weapons:options('Trishula', 'Shining One', 'Naegling', 'Fermion') -- 'Trishula', 
     state.Passive = M {
         ['description'] = 'Passive Mode',
         'None',
@@ -339,6 +339,11 @@ function init_gear_sets()
         sub = "Legion Scutum"
     }
 
+    sets.weapons.Fermion = {
+        main = "Fermion Sword",
+        sub = "Legion Scutum"
+    }
+
     -- Swap to these on Moonshade using WS if at 3000 TP
     sets.MaxTP = {
         ear1 = "Lugra Earring +1",
@@ -380,7 +385,7 @@ function init_gear_sets()
             augments = {'Path: A'}
         },
         head = "Hjarrandi Helm",
-        body = gear.empy.Body,
+        body = "Gleti's Cuirass",
         hands = gear.empy.Hands,
         legs = gear.relic.Legs,
 		feet="Flam. Gambieras +2",

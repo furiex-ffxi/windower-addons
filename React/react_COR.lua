@@ -1,4 +1,26 @@
 return {
+    ["Bozzetto Retributionist"]={
+        ["Splashing Assault"]={
+            ["complete_reaction"]="",
+            ["ready_reaction"]="/flatblade"
+        },
+        ["Drill Claw"]={
+            ["complete_reaction"]="",
+            ["ready_reaction"]="/flatblade"
+        },
+        ["Nether Castigation"]={
+            ["complete_reaction"]="",
+            ["ready_reaction"]="/flatblade"
+        },  
+        ["Charging Up"]={
+            ["complete_reaction"]="",
+            ["ready_reaction"]="/p <t> is Charging Up."
+        },    
+        ["Eisenschneider"]={
+            ["complete_reaction"]="",
+            ["ready_reaction"]="/flatblade"
+        },                         
+    },      
     ["Lady Lilith"]={
         ["Dark Thorn"]={
             ["complete_reaction"]="",
@@ -67,4 +89,14 @@ return {
             ["ready_reaction"]="turnaround"
         }
     },
+    ["Bozzetto Bigwig"]={
+        ["Gen'ei Ryodan"]={
+            ["complete_reaction"]="", 
+            ["ready_reaction"]="/flatblade"
+        },
+        ["Unblest Jambiya"]={
+            ["complete_reaction"]="", 
+            ["ready_reaction"]="/flatblade"
+        },        
+    },      
 }
