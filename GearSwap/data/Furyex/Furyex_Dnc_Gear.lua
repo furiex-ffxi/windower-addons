@@ -117,7 +117,7 @@ function init_gear_sets()
     sets.precast.Waltz['Healing Waltz'] = {}
 
     sets.precast.Samba = {
-        head = "Maxixi Tiara +2"
+        head = "Maxixi Tiara +3"
     }
     
     sets.precast.Jig = {
@@ -125,15 +125,15 @@ function init_gear_sets()
             name = "Horos Tights +3",
             augments = {'Enhances "Saber Dance" effect'}
         },
-        feet = "Maxixi Toe Shoes +2"
+        feet = "Maxixi Toe Shoes +3"
     }
 
     sets.precast.Step = {
         ammo = "C. Palug Stone",
-        head = "Maxixi Tiara +2",
-        body = "Maxixi Casaque +2",
-        hands = "Maxixi Bangles +2",
-        legs = "Maculele Tights +2",
+        head = "Maxixi Tiara +3",
+        body = "Maxixi Casaque +3",
+        hands = "Maxixi Bangles +3",
+        legs = "Maculele Tights +3",
         feet = {
             name = "Horos T. Shoes +3",
             augments = {'Enhances "Closed Position" effect'}

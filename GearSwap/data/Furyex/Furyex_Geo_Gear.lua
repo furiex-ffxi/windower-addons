@@ -10,6 +10,7 @@ function user_job_setup()
 
 	gear.nuke_jse_back = { name="Nantosuelta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}}
 	gear.idle_jse_back = { name="Nantosuelta's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Pet: "Regen"+10','Pet: "Regen"+5',}}
+    gear.tp_jse_back = { name="Nantosuelta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
 
 	gear.obi_cure_back = "Tempered Cape +1"
 	gear.obi_cure_waist = "Witful Belt"
@@ -580,7 +581,7 @@ function init_gear_sets()
 		hands = "Gazu Bracelets +1",
 		ring1 = "Petrov Ring",
 		ring2 = "Lehko's Ring",
-		back = "Moonlight Cape",
+		back = gear.tp_jse_back,
 		waist = "Goading Belt",
 		legs = sets.Nyame.Legs,
 		feet = sets.Nyame.Feet
@@ -606,7 +607,7 @@ function init_gear_sets()
 		legs = "Agwu's Slops",
 		feet = "Agwu's Pigaches",
 		neck = "Sibyl Scarf",
-		waist = "Sacro Cord",
+		waist = "Acuity Belt +1",
 		left_ear = "Malignance Earring",
 		right_ear = "Azimuth Earring +2",
 		left_ring = "Freke Ring",

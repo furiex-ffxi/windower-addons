@@ -93,4 +93,10 @@
             <y>678</y>
         </pos>
     </mailman>
+    <tuckme>
+        <pos>
+            <x>89</x>
+            <y>611</y>
+        </pos>
+    </tuckme>
 </settings>

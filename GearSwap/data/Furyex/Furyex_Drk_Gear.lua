@@ -38,7 +38,7 @@ function init_gear_sets()
 		Body="Ignominy Cuirass +3",
 		Hands="Ig. Gauntlets +3",
 		Legs="Ig. Flanchard +3",
-		Feet="Ig. Sollerets +2",
+		Feet="Ig. Sollerets +3",
 	}
 
 	gear.relic = {
@@ -614,7 +614,6 @@ function init_gear_sets()
 		feet = "Sakpata's Leggings",
 		left_ring = "Niqmaddu Ring",
 		right_ring = "Chirich Ring +1",
-		ear2 = "Schere Earring",
 	})
 
 	sets.engaged.Liberator = set_combine(sets.engaged, {})

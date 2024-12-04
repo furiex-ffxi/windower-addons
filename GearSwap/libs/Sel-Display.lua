@@ -190,6 +190,7 @@ function update_job_states()
 		CompensatorMode = "Compensator",
 		YagyuMode = "Yagyu",
 		CarnMode = "Carn Mode",
+		ConvertMode = "Convert Mode",
 		DrainSwapWeaponMode = "Drain Swap",
 		AutoRuneMode = "Auto Rune: "..state.RuneElement.value.."",
 		AutoSambaMode = "Auto Samba: "..state.AutoSambaMode.value.."",
@@ -366,6 +367,10 @@ function update_job_states()
 			if state.CarnMode.value ~= 'Never' then
 				stateBox:append(string.format("%sCarn Mode: %s%s    ", clr.w, clr.h, state.CarnMode.value))
 			end
+		elseif n == 'ConvertMode' then
+			if state.ConvertMode.value ~= 'Never' then
+				stateBox:append(string.format("%sConvert Mode: %s%s    ", clr.w, clr.h, state.ConvertMode.value))
+			end			
 		elseif n == 'DrainSwapWeaponMode' then
 			if state.DrainSwapWeaponMode.value ~= 'Never' then
 				stateBox:append(string.format("%sDrain Swap: %s%s    ", clr.w, clr.h, state.DrainSwapWeaponMode.value))

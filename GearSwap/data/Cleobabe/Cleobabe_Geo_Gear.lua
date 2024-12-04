@@ -8,7 +8,7 @@ function user_job_setup()
 	state.ResistDefenseMode:options('MEVA')
 	state.Weapons:options('None', 'Idris', 'Mpaca', 'Maxentius', 'Ternion', 'Daybreak', 'DualWeapons')
 
-	gear.nuke_jse_back = { name = "Nantosuelta's Cape", augments = { 'INT+20', 'Mag. Acc+20 /Mag. Dmg.+20', '"Mag.Atk.Bns."+10' } }
+	gear.nuke_jse_back = { name="Nantosuelta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}}
 	gear.idle_jse_back = { name="Nantosuelta's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Pet: "Regen"+10','Pet: "Regen"+5',}}
 
 	gear.obi_cure_back = "Tempered Cape +1"
@@ -318,23 +318,19 @@ function init_gear_sets()
 		main = "Bunzi's Rod",
 		sub = "Ammurapi Shield",
 		ammo = "Ghastly Tathlum +1",
-		-- head = "Ea Hat +1",
-		head = gear.empy.Head,
+		head = "Ea Hat +1",
 		body = gear.empy.Body,
-		hands = gear.empy.Hands,
+		hands = "Agwu's Gages",
+		-- legs = "Agwu's Slops", -- swap at r30
 		legs = gear.empy.Legs,
-		feet = gear.empy.Feet,
-		-- hands = "Agwu's Gages",
-		-- legs = "Agwu's Slops",
-		-- feet = "Agwu's Pigaches",
+		feet = "Agwu's Pigaches",
 		neck = "Sibyl Scarf",
-		waist = "Sacro Cord",
+		waist = "Acuity Belt +1",
 		left_ear = "Malignance Earring",
-		right_ear = "Azimuth Earring +2",
+		right_ear = "Azimuth Earring +1",
 		left_ring = "Freke Ring",
 		right_ring = "Metamor. Ring +1",
-		-- back = gear.nuke_jse_back,
-		back = "Aurist's Cape +1",
+		back = gear.nuke_jse_back,
 	}
 
 	sets.midcast['Elemental Magic'].Resistant = set_combine(sets.midcast['Elemental Magic'], {
@@ -484,7 +480,7 @@ function init_gear_sets()
 		body = gear.empy.Body,
 		neck = "Bagua Charm +2",
 		ear1 = "Malignance Earring",
-		ear2 = "Azimuth Earring +2",
+		ear2 = "Azimuth Earring +1",
 		hands = "Regal Cuffs",
 		ring1 = "Metamor. Ring +1",
 		ring2 = "Kishar Ring",
@@ -499,7 +495,7 @@ function init_gear_sets()
 		body = gear.empy.Body,
 		neck = "Bagua Charm +2",
 		ear1 = "Malignance Earring",
-		ear2 = "Azimuth Earring +2",
+		ear2 = "Azimuth Earring +1",
 		hands = "Regal Cuffs",
 		ring1 = "Metamor. Ring +1",
 		ring2 = "Kishar Ring",
@@ -825,22 +821,22 @@ function init_gear_sets()
 
 	-- Gear for Magic Burst mode.
 	sets.MagicBurst = { 
-		-- main = gear.grioavolr_nuke_staff, 
-		-- sub = "Alber Strap", 
-		range = empty,
+		main = "Bunzi's Rod",
+		sub = "Ammurapi Shield",
 		ammo = "Ghastly Tathlum +1",
-		head = gear.empy.Head, 
+		head = "Ea Hat +1",
+		body = gear.empy.Body,
+		hands = "Agwu's Gages",
+		-- legs = "Agwu's Slops", -- swap at r30
+		legs = gear.empy.Legs,
+		feet = "Agwu's Pigaches",
 		neck = "Sibyl Scarf",
-		hands = gear.empy.Hands,
-		body = gear.empy.Body, 
-		waist = "Refoccilation Stone",
-		earring1 = "Malignance Earring",
-		earring2 = "Azimuth Earring",
-		-- earring2 = "Friomisi Earring",
-		ring1 = "Mujin Band", 
-		ring2 = "Freke Ring",
-		legs = gear.empy.Legs, 
-		feet = gear.empy.Feet,
+		waist = "Acuity Belt +1",
+		left_ear = "Malignance Earring",
+		right_ear = "Regal Earring",
+		left_ring = "Freke Ring",
+		right_ring = "Metamor. Ring +1",
+		back = gear.nuke_jse_back,
 	}
 	
 	sets.buff.Sublimation = { waist = "Embla Sash" }

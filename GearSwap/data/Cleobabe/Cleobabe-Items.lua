@@ -44,7 +44,9 @@ gear.chironic_treasure_feet = {name="Chironic Slippers",augments={'"Occult Acume
 gear.chironic_nuke_feet = {name="Chironic Slippers",augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','"Drain" and "Aspir" potency +10','CHR+6','"Mag.Atk.Bns."+15',}}
 gear.chironic_refresh_feet ={name="Chironic Slippers", augments={'Pet: Attack+23 Pet: Rng.Atk.+23','Pet: Haste+1','"Refresh"+2','Accuracy+10 Attack+10',}}
 
-gear.herculean_fc_head = {name="Herculean Helm",augments={'"Fast Cast"+6','"Mag.Atk.Bns."+13',}}
+gear.herculean_fc_head = {name="Herculean Helm", augments={'"Fast Cast"+6','Mag. Acc.+6',}}
+gear.herculean_fc_legs = {name="Herculean Trousers", augments={'Mag. Acc.+6','"Fast Cast"+6',}}
+gear.herculean_fc_feet = {name="Herculean Boots", augments={'Mag. Acc.+18','"Fast Cast"+6','MND+9',}}
 gear.herculean_nuke_head = {name="Herculean Helm",augments={'Mag. Acc.+16 "Mag.Atk.Bns."+16','Enmity-3','INT+9','"Mag.Atk.Bns."+13',}}
 gear.herculean_phalanx_hands = {name="Herculean Gloves", augments={'INT+6','MND+7','Phalanx +4','Accuracy+10 Attack+10','Mag. Acc.+13 "Mag.Atk.Bns."+13',}}
 gear.herculean_treasure_hands = {name="Herculean Gloves", augments={'"Store TP"+7','INT+6','"Treasure Hunter"+2','Accuracy+17 Attack+17','Mag. Acc.+17 "Mag.Atk.Bns."+17',}}

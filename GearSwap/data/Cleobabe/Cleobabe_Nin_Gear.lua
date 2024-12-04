@@ -14,8 +14,8 @@ function user_job_setup()
         'ProcPolearm', 'ProcGreatKatana', 'ProcKatana', 'ProcClub', 'ProcStaff')
     state.ExtraMeleeMode = M { ['description'] = 'Extra Melee Mode', 'None', 'SuppaBrutal', 'DWEarrings', 'DWMax' }
 
-    gear.wsd_jse_back = { name = "Andartia's Mantle", augments = { 'STR+20', 'Accuracy+20 Attack+20', 'Weapon skill damage +10%', 'Phys. dmg. taken-10%',} }
-    gear.da_jse_back = { name = "Andartia's Mantle", augments = { 'DEX+20', 'Accuracy+20 Attack+20', '"Dbl.Atk."+10', 'Phys. dmg. taken-10%',} }
+    gear.wsd_jse_back = { name="Andartia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
+    gear.da_jse_back = { name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
 
     send_command('bind ^` input /ja "Innin" <me>')
     send_command('bind !` input /ja "Yonin" <me>')
@@ -66,7 +66,7 @@ function init_gear_sets()
         ear1 = "Cryptic Earring",
         ear2 = "Trux Earring",
         body = "Emet Harness +1",
-        -- hands = "Kurys Gloves",
+        hands = "Kurys Gloves",
         ring1 = "Petrov Ring",
         ring2 = "Odium Ring",
         -- ring2 = "Pernicious Ring",
@@ -103,8 +103,8 @@ function init_gear_sets()
         ammo = "Yamarang",
         head = "Mummu Bonnet +2",
         neck = "Unmoving Collar +1",
-        ear1 = "Enchntr. Earring +1",
-        ear2 = "Handler's Earring +1",
+        ear1 = "Handler's Earring +1",
+        ear2 = "Enchntr. Earring +1",
         body = gear.herculean_waltz_body,
         hands = gear.herculean_waltz_hands,
         ring1 = "Defending Ring",
@@ -154,29 +154,27 @@ function init_gear_sets()
     -- Fast cast sets for spells
 
     sets.precast.FC = {
-        ammo = "Impatiens",
-        -- head = gear.herculean_fc_head,
-        neck = "Voltsurge Torque",
-        ear1 = "Enchntr. Earring +1",
-        ear2 = "Etiolation Earring",
-        -- ear2 = "Loquac. Earring",
-        body = "Taeon Tabard",
-        hands = "Leyline Gloves",
-        ring1 = "Lebeche Ring",
-        ring2 = "Kishar Ring",
-        legs = "Gyve Trousers",
-        feet = gear.relic.Feet
-    }
+        ammo = "Sapience Orb", -- 2
+        head = gear.herculean_fc_head, -- 13
+        neck = "Voltsurge Torque", -- 4
+        ear1 = "Etiolation Earring", -- 1
+        ear2 = "Enchntr. Earring +1", -- 2
+        body = "Taeon Tabard", -- 4
+        hands = "Leyline Gloves", -- 13
+        ring1 = "Prolix Ring", -- 2
+        ring2 = "Kishar Ring", -- 4
+        legs = gear.herculean_fc_legs, -- 6
+        feet = gear.herculean_fc_feet -- 6
+    } -- 57
 
     sets.precast.FC.Utsusemi = set_combine(sets.precast.FC,
         {
-            -- neck = "Magoraga Beads",
-            -- body = "Passion Jacket",
+            neck = "Magoraga Beads",
+            body = "Passion Jacket",
             feet = gear.empy.Feet
         })
     sets.precast.FC.Shadows = set_combine(sets.precast.FC.Utsusemi, {
         -- ammo = "Staunch Tathlum +1",
-        ring1 = "Prolix Ring"
     })
 
     -- Snapshot for ranged
@@ -184,22 +182,23 @@ function init_gear_sets()
     -- Weaponskill sets
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {
-        ammo = "Oshasha's Treatise",
-        neck = "Fotia Gorget",
-        head = sets.Nyame.Head,
+        ammo = "Coiste Bodhar",
+        neck = "Rep. Plat. Medal",
+        head = "Mpaca's Cap",
         body = sets.Nyame.Body,
         hands = sets.Nyame.Hands,
         legs = sets.Nyame.Legs,
         feet = sets.Nyame.Feet,
         waist = { name="Sailfi Belt +1", augments={'Path: A',}},
-        left_ear = { name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-        right_ear = "Lugra Earring",
+        ear1 = { name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+        ear2 = "Lugra Earring +1",
         left_ring = "Epaminondas's Ring",
         right_ring = "Cornelia's Ring",        
-        back = { name="Andartia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Damage taken-5%',}},
+        back = gear.wsd_jse_back
     }
     sets.precast.WS.MAB = set_combine(sets.precast.WS,{ 
         ammo = "Seeth. Bomblet +1",
+        neck = "Fotia Gorget",
         head = gear.relic.Head,
         waist = "Orpheus's Sash",
         ring2 = "Gere Ring"
@@ -237,12 +236,66 @@ function init_gear_sets()
     sets.precast.WS['Blade: Hi'].Fodder = set_combine(sets.precast.WS['Blade: Hi'], {
     })
     sets.precast.WS['Blade: Shun'] = set_combine(sets.precast.WS, { 
+        ammo = "Coiste Bodhar",
+        head = "Mpaca's Cap",
+        body = "Malignance Tabard",
+        hands = "Malignance Gloves",
+        legs = "Mpaca's Hose",
+        ear2 = "Hattori Earring +1",
+        ring1 = "Gere Ring",
+        ring2 = "Regal Ring",
+        neck = "Fotia Gorget",
+        waist = "Fotia Belt",
+
     })
     sets.precast.WS['Blade: Shun'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {
+        ammo = "Coiste Bodhar",
+        head = "Mpaca's Cap",
+        body = "Malignance Tabard",
+        hands = "Malignance Gloves",
+        legs = "Mpaca's Hose",
+        ear2 = "Hattori Earring +1",
+        ring1 = "Gere Ring",
+        ring2 = "Regal Ring",
+        neck = "Fotia Gorget",
+        waist = "Fotia Belt",
     })
-    sets.precast.WS['Blade: Shun'].Acc = set_combine(sets.precast.WS.Acc, {})
-    sets.precast.WS['Blade: Shun'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
-    sets.precast.WS['Blade: Shun'].Fodder = set_combine(sets.precast.WS['Blade: Shun'], {})
+    sets.precast.WS['Blade: Shun'].Acc = set_combine(sets.precast.WS.Acc, {
+        ammo = "Coiste Bodhar",
+        head = "Mpaca's Cap",
+        body = "Malignance Tabard",
+        hands = "Malignance Gloves",
+        legs = "Mpaca's Hose",
+        ear2 = "Hattori Earring +1",
+        ring1 = "Gere Ring",
+        ring2 = "Regal Ring",
+        neck = "Fotia Gorget",
+        waist = "Fotia Belt",
+    })
+    sets.precast.WS['Blade: Shun'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
+        ammo = "Coiste Bodhar",
+        head = "Mpaca's Cap",
+        body = "Malignance Tabard",
+        hands = "Malignance Gloves",
+        legs = "Mpaca's Hose",
+        ear2 = "Hattori Earring +1",
+        ring1 = "Gere Ring",
+        ring2 = "Regal Ring",
+        neck = "Fotia Gorget",
+        waist = "Fotia Belt",
+    })
+    sets.precast.WS['Blade: Shun'].Fodder = set_combine(sets.precast.WS['Blade: Shun'], {
+        ammo = "Coiste Bodhar",
+        head = "Mpaca's Cap",
+        body = "Malignance Tabard",
+        hands = "Malignance Gloves",
+        legs = "Mpaca's Hose",
+        ear2 = "Hattori Earring +1",
+        ring1 = "Gere Ring",
+        ring2 = "Regal Ring",
+        neck = "Fotia Gorget",
+        waist = "Fotia Belt",
+    })
 
     sets.precast.WS['Blade: Ten'] = set_combine(sets.precast.WS, {
     })
@@ -253,10 +306,11 @@ function init_gear_sets()
     sets.precast.WS['Blade: Ten'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
     sets.precast.WS['Blade: Ten'].Fodder = set_combine(sets.precast.WS['Blade: Ten'], {})
 
-    sets.precast.WS['Aeolian Edge'] = set_combine(sets.precast.WS.MAB, {
-    })
-    sets.precast.WS['Blade: To'] = set_combine(sets.precast.WS.MAB, {
-    })
+    sets.precast.WS['Aeolian Edge'] = set_combine(sets.precast.WS.MAB, {})
+    sets.precast.WS['Blade: Chi'] = set_combine(sets.precast.WS.MAB, {})
+    sets.precast.WS['Blade: Teki'] = set_combine(sets.precast.WS.MAB, {})
+    sets.precast.WS['Blade: To'] = set_combine(sets.precast.WS.MAB, {})
+
 
     -- Swap to these on Moonshade using WS if at 3000 TP
     sets.MaxTP = { ear1 = "Lugra Earring", ear2 = "Lugra Earring +1", }
@@ -272,10 +326,11 @@ function init_gear_sets()
     --------------------------------------
 
     sets.midcast.FastRecast = {
+        ammo = "Sapience Orb",
         head = gear.empy.Head,
         neck = "Voltsurge Torque",
-        ear1 = "Enchntr. Earring +1",
-        ear2 = "Etiolation Earring",
+        ear1 = "Etiolation Earring",
+        ear2 = "Enchntr. Earring +1",
         body = "Dread Jupon",
         hands = "Leyline Gloves",
         ring1 = "Defending Ring",
@@ -294,8 +349,8 @@ function init_gear_sets()
 		neck = "Sibyl Scarf",
         waist = "Eschan Stone",
 		-- waist="Orpheus's sash",
-		left_ear = { name="Lugra Earring"},
-		-- right_ear="Friomisi Earring",
+		ear2 = { name="Lugra Earring +1"},
+		-- ear1="Friomisi Earring",
 		left_ring = { name="Metamor. Ring +1", augments={'Path: A',}},
 		-- right_ring="Mujin Band",
         -- back={ name="Andartia's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
@@ -506,8 +561,8 @@ function init_gear_sets()
     sets.Skillchain = { legs = "Ryuo Hakama" }
 
     sets.HPCure = {
-		ear1 = "Odnowa Earring +1",
-		ear2 = "Etiolaion Earring",
+		ear1 = "Etiolaion Earring",
+		ear2 = "Odnowa Earring +1",
 		neck = "Unmoving Collar +1",
 		waist = "Plat. Mog. Belt",
 		ring1 = "Gelatinous Ring +1",

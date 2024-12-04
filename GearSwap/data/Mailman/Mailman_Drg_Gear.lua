@@ -12,7 +12,7 @@ function user_job_setup()
         ['description'] = 'Extra Melee Mode',
         'None'
     }
-    state.Weapons:options('Trishula', 'Shining One', 'Naegling', 'Fermion') -- 'Trishula', 
+    state.Weapons:options('Trishula', 'Shining One', 'Naegling', 'Mafic', 'Fermion') -- 'Trishula', 
     state.Passive = M {
         ['description'] = 'Passive Mode',
         'None',
@@ -36,11 +36,11 @@ function init_gear_sets()
     -- Start defining the sets
     --------------------------------------
     gear.af = {
-        Head = "Vishap Armet +2",
-        Body = "Vishap Mail +2",
-        Hands = "Vis. Fing. Gaunt. +2",
-        Legs = "Vishap Brais +2",
-        Feet = "Vishap Greaves +2",
+        Head = "Vishap Armet +3",
+        Body = "Vishap Mail +3",
+        Hands = "Vis. Fing. Gaunt. +3",
+        Legs = "Vishap Brais +3",
+        Feet = "Vishap Greaves +3",
     }
 
     gear.empy = {
@@ -92,7 +92,7 @@ function init_gear_sets()
     sets.precast.JA['Ancient Circle'] = {
         legs = gear.af.Legs,
     }
-    sets.precast.JA['High Jump'] = sets.precast.JA.Jump
+    sets.precast.JA['High Jump'] = set_combine(sets.precast.JA.Jump, {})
     sets.precast.JA['Soul Jump'] = set_combine(sets.precast.JA.Jump, {
         feet = gear.empy.Feet,
     })
@@ -271,7 +271,7 @@ function init_gear_sets()
         feet = "Gleti's Boots"
     }
 
-    sets.idle.Refresh = sets.idle
+    sets.idle.Refresh = set_combine(sets.idle, {})
 
     sets.idle.Weak = set_combine(sets.idle, {
         head = "Twilight Helm",
@@ -338,6 +338,11 @@ function init_gear_sets()
         main = "Naegling",
         sub = "Legion Scutum"
     }
+
+    sets.weapons.Mafic = {
+        main = "Mafic Cudgel",
+        sub = "Legion Scutum"
+    }    
 
     sets.weapons.Fermion = {
         main = "Fermion Sword",

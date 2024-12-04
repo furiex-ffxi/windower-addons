@@ -66,219 +66,44 @@
     </global>
     <cleobabe>
         <display>
-            <bg>
-                <alpha>200</alpha>
-                <blue>0</blue>
-                <green>0</green>
-                <red>0</red>
-                <visible>true</visible>
-            </bg>
-            <flags>
-                <bold>false</bold>
-                <bottom>false</bottom>
-                <draggable>true</draggable>
-                <italic>false</italic>
-                <right>false</right>
-            </flags>
-            <padding>0</padding>
             <pos>
                 <x>2003</x>
                 <y>251</y>
             </pos>
-            <text>
-                <alpha>255</alpha>
-                <blue>255</blue>
-                <font>Courier New</font>
-                <fonts>
-                    <1>consolas</1>
-                    <2>courier new</2>
-                    <3>monospace</3>
-                </fonts>
-                <green>255</green>
-                <red>255</red>
-                <size>10</size>
-                <stroke>
-                    <alpha>255</alpha>
-                    <blue>0</blue>
-                    <green>0</green>
-                    <red>0</red>
-                    <width>0</width>
-                </stroke>
-            </text>
         </display>
     </cleobabe>
     <furyex>
         <display>
-            <bg>
-                <alpha>200</alpha>
-                <blue>0</blue>
-                <green>0</green>
-                <red>0</red>
-                <visible>true</visible>
-            </bg>
-            <flags>
-                <bold>false</bold>
-                <bottom>false</bottom>
-                <draggable>true</draggable>
-                <italic>false</italic>
-                <right>false</right>
-            </flags>
-            <padding>0</padding>
             <pos>
-                <x>1935</x>
-                <y>275</y>
+                <x>1637</x>
+                <y>241</y>
             </pos>
-            <text>
-                <alpha>255</alpha>
-                <blue>255</blue>
-                <font>Courier New</font>
-                <fonts>
-                    <1>consolas</1>
-                    <2>courier new</2>
-                    <3>monospace</3>
-                </fonts>
-                <green>255</green>
-                <red>255</red>
-                <size>10</size>
-                <stroke>
-                    <alpha>255</alpha>
-                    <blue>0</blue>
-                    <green>0</green>
-                    <red>0</red>
-                    <width>0</width>
-                </stroke>
-            </text>
         </display>
+        <visible>true</visible>
     </furyex>
     <liambear>
         <display>
-            <bg>
-                <alpha>200</alpha>
-                <blue>0</blue>
-                <green>0</green>
-                <red>0</red>
-                <visible>true</visible>
-            </bg>
-            <flags>
-                <bold>false</bold>
-                <bottom>false</bottom>
-                <draggable>true</draggable>
-                <italic>false</italic>
-                <right>false</right>
-            </flags>
-            <padding>0</padding>
             <pos>
                 <x>2125</x>
                 <y>994</y>
             </pos>
-            <text>
-                <alpha>255</alpha>
-                <blue>255</blue>
-                <font>Courier New</font>
-                <fonts>
-                    <1>consolas</1>
-                    <2>courier new</2>
-                    <3>monospace</3>
-                </fonts>
-                <green>255</green>
-                <red>255</red>
-                <size>10</size>
-                <stroke>
-                    <alpha>255</alpha>
-                    <blue>0</blue>
-                    <green>0</green>
-                    <red>0</red>
-                    <width>0</width>
-                </stroke>
-            </text>
         </display>
         <visible>true</visible>
     </liambear>
     <lolababe>
         <display>
-            <bg>
-                <alpha>200</alpha>
-                <blue>0</blue>
-                <green>0</green>
-                <red>0</red>
-                <visible>true</visible>
-            </bg>
-            <flags>
-                <bold>false</bold>
-                <bottom>false</bottom>
-                <draggable>true</draggable>
-                <italic>false</italic>
-                <right>false</right>
-            </flags>
-            <padding>0</padding>
             <pos>
                 <x>2021</x>
                 <y>403</y>
             </pos>
-            <text>
-                <alpha>255</alpha>
-                <blue>255</blue>
-                <font>Courier New</font>
-                <fonts>
-                    <1>consolas</1>
-                    <2>courier new</2>
-                    <3>monospace</3>
-                </fonts>
-                <green>255</green>
-                <red>255</red>
-                <size>10</size>
-                <stroke>
-                    <alpha>255</alpha>
-                    <blue>0</blue>
-                    <green>0</green>
-                    <red>0</red>
-                    <width>0</width>
-                </stroke>
-            </text>
         </display>
     </lolababe>
     <mailman>
         <display>
-            <bg>
-                <alpha>200</alpha>
-                <blue>0</blue>
-                <green>0</green>
-                <red>0</red>
-                <visible>true</visible>
-            </bg>
-            <flags>
-                <bold>false</bold>
-                <bottom>false</bottom>
-                <draggable>true</draggable>
-                <italic>false</italic>
-                <right>false</right>
-            </flags>
-            <padding>0</padding>
             <pos>
                 <x>2075</x>
                 <y>296</y>
             </pos>
-            <text>
-                <alpha>255</alpha>
-                <blue>255</blue>
-                <font>Courier New</font>
-                <fonts>
-                    <1>consolas</1>
-                    <2>courier new</2>
-                    <3>monospace</3>
-                </fonts>
-                <green>255</green>
-                <red>255</red>
-                <size>10</size>
-                <stroke>
-                    <alpha>255</alpha>
-                    <blue>0</blue>
-                    <green>0</green>
-                    <red>0</red>
-                    <width>0</width>
-                </stroke>
-            </text>
         </display>
-        <visible>true</visible>
     </mailman>
 </settings>

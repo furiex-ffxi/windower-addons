@@ -124,25 +124,32 @@ function aita_debuffs(org)
 end
 
 function aminon_debuffs(org)
-	if not string.find(org:lower(), "aminon") then
+	if not string.find(org:lower(), "aminon") or not string.find(org:lower(), "mboze") then
 		return
 	end
 
 	indexstart, indexend = string.find(org:lower(),"effect wears off")
 	if indexstart and string.find(org:lower(), "magic") then
-		windower.send_command('input /t Furyex Frazzle wore off!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! <call15>')
+		windower.send_command('input /p Frazzle wore off!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! <call15>')
 	end
 	
 	if indexstart and string.find(org:lower(), "slow") then
-		windower.send_command('input /t Furyex Slow wore off! <call15>')
+		windower.send_command('input /p Slow wore off! <call15>')
 	end
 	
 	if indexstart and string.find(org:lower(), "dia") then
-		windower.send_command('input /t Furyex Dia wore off! <call15>')
+		windower.send_command('input /p Dia wore off! <call15>')
+	end
+
+	if indexstart and string.find(org:lower(), "threnody") then
+		windower.send_command('input /p Threnody wore off! <call15>')
 	end
 	
 	indexstart, indexend = string.find(org:lower(),"is no longer")
 	if indexstart and string.find(org:lower(), "paralyzed") then
-		windower.send_command('input /t Furyex Paralyze wore off! <call15>')
+		windower.send_command('input /p Paralyze wore off! <call15>')
+	end
+	if indexstart and string.find(org:lower(), "silenced") then
+		windower.send_command('input /p Silence wore off! <call15>')
 	end
 end

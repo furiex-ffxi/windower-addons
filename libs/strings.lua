@@ -84,7 +84,7 @@ do
                 end
 
                 local length = fn(str:byte(index, index))
-                if length == nil then
+                if length == false then
                     _raw.error('Invalid code point')
                 end
 
@@ -544,9 +544,11 @@ do
             if first.type == types.boundary and first.value == '^' then
                 matches = pack(1, iterate, pattern, 1)
             else
-                for i = 1, length do
-                    matches = pack(i, iterate, pattern)
-                    if matches then
+                local from = 1
+                for c in iterate(1) do
+                    matches = pack(from, iterate, pattern)
+                    from = from + #c
+                    if matches or from > length then
                         break
                     end
                 end
@@ -597,6 +599,8 @@ do
                 else
                     encoding, from, to, plain = string.encoding.ascii, encoding, from, to
                 end
+            elseif type(from) == 'boolean' then
+                from, to, plain = to, plain, from
             end
 
             if encoding == string.encoding.ascii and to == nil then

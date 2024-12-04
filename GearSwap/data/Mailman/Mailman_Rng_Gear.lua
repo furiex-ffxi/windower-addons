@@ -176,12 +176,12 @@ function init_gear_sets()
 
     sets.precast.WS['Savage Blade'] = {
         head = sets.Nyame.Head,
-        neck = "Fotia Gorget",
+        neck = "Rep. Plat. Medal",
         body = sets.Nyame.Body,
         hands = sets.Nyame.Hands,
         left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
         right_ear="Ishvara Earring",
-		left_ring="Regal Ring",
+		left_ring="Sroda Ring",
         right_ring="Epaminondas's Ring",
         back = gear.str_wsd_jse_back,
         waist = "Sailfi Belt +1",
@@ -458,12 +458,12 @@ function init_gear_sets()
     sets.weapons.Default = {
         main = "Kustawi +1",
         sub = "Nusku Shield",
-        range = "Sparrowhawk +3",
+        range = "Fail-Not",
         ammo = "Chrono Arrow"
     }
     sets.weapons.DualWeapons = {
         main = "Kustawi +1",
-        sub = "Malevolence",
+        sub = "Gleti's Knife",
         range = "Fomalhaut",
         ammo = "Chrono Bullet"
     }
@@ -471,7 +471,7 @@ function init_gear_sets()
         main = "Kustawi +1",
         sub = "Malevolence",
         range = "Gastraphetes",
-        ammo = "Eminent Bolt"
+        ammo = "Quelling Bolt"
     }
     sets.weapons.DualAnni = {
         main = "Perun +1",
@@ -481,10 +481,9 @@ function init_gear_sets()
     }    
     sets.weapons.DualSavageWeapons = {
         main = "Naegling",
-        sub = "Tauret",
-        -- sub = "Blurred Knife +1",
+        sub = "Gleti's Knife",
         range = "Sparrowhawk +3",
-        ammo = "Chrono Arrow"
+        ammo = "Hauksbok Arrow"
     }
     sets.weapons.DualEviscerationWeapons = {
         main = "Tauret",
@@ -498,8 +497,9 @@ function init_gear_sets()
     }
     sets.weapons.DualMagicWeapons = {
         main = "Tauret",
-        sub = "Naegling",
-        range = "Fomalhaut"
+        sub = "Gleti's Knife",
+        range = "Sparrowhawk +3",
+        ammo = "Hauksbok Arrow"
     }
 
     sets.weapons.DualFermion = {
@@ -515,17 +515,17 @@ function init_gear_sets()
     -- Normal melee group
     sets.engaged = {
         head = sets.Malignance.Head,
-        neck = "Iskur Gorget",
+        neck = "Anu Torque",
         ear1 = "Dedition Earring",
         ear2 = "Sherida Earring",
         body = "Adhemar Jacket +1",
         hands = "Adhemar Wrist. +1",
         ring1 = "Epona's Ring",
-        ring2 = "Petrov Ring",
+        ring2 = "Lehko's Ring",
         back = gear.da_jse_back,
         waist = "Windbuffet Belt +1",
         legs = "Samnuha Tights",
-        feet = "Malignance Boots"
+        feet = "Herculean Boots"
     }
 
     sets.engaged.Acc = set_combine(sets.engaged, {
@@ -543,7 +543,7 @@ function init_gear_sets()
     })
 
     sets.engaged.DW = set_combine(sets.engaged, {
-       
+        ear1 = "Suppanomimi"
     })
 
     sets.engaged.DW.DT = set_combine(sets.engaged.DW, {

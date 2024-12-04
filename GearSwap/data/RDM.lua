@@ -63,7 +63,8 @@ function job_setup()
         'Stonega', 'Waterga', 'Aeroga', 'Firaga', 'Blizzaga', 'Thundaga'}
 	
 	state.RecoverMode = M('35%', '60%', 'Always', 'Never')
-	
+	state.ConvertMode = M{'Never','300','1000','Always'}
+
 	autows = "Fast Blade"
 	autofood = 'Pear Crepe'
 	enspell = ''
@@ -87,6 +88,12 @@ function job_pretarget(spell, spellMap, eventArgs)
 end
 
 function job_precast(spell, spellMap, eventArgs)
+	if (spell.english == 'Convert') and state.ConvertMode.value ~= 'Never' then
+		if state.ConvertMode.value == 'Always' or tonumber(state.ConvertMode.value) > player.tp then
+			enable('main')
+			equip({main="Murgleis"})
+		end
+	end
 
 	if spell.action_type == 'Magic' then
 		if state.Buff.Chainspell then

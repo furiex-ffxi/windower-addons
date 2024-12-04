@@ -6,7 +6,7 @@ function user_job_setup()
 	state.PhysicalDefenseMode:options('PDT_HP', 'PDT')
 	state.MagicalDefenseMode:options('MDT_HP', 'MDT')
 	state.ResistDefenseMode:options('MEVA', 'MEVA_HP')
-	state.IdleMode:options('Normal', 'Tank', 'KiteTank') --,'Normal','Sphere'
+	state.IdleMode:options('Tank', 'Normal', 'KiteTank')
 	state.Weapons:options('None', 'Epeo', 'Aettir', 'Hepatizon', 'Doli', 'DualWeapons')
 
 	state.ExtraDefenseMode = M { ['description'] = 'Extra Defense Mode', 'None', 'MP' }
@@ -81,10 +81,10 @@ function init_gear_sets()
 	} -- +127 enmity
 
 	sets.Enmity.SIRD = set_combine(sets.Enmity, {
-		ammo = "Staunch Tathlum +1", -- 12
+		ammo = "Staunch Tathlum +1", -- 11
 		head = gear.empy.Head, -- 20
 		neck = "Moonlight Necklace", -- 15
-		body = sets.Nyame.Body,
+		body = "Adamantite Armor",
 		hands = "Rawhide Gloves", -- 15
 		ring1 = "Defending Ring",
 		ring2 = "Moonlight Ring",
@@ -92,7 +92,7 @@ function init_gear_sets()
 		waist = "Audumbla Sash", -- 10
 		legs = "Carmine Cuisses +1", -- 20
 		feet = gear.empy.Feet
-	}) -- 102 gear + 10 merit, 43 DT
+	}) -- 101 gear + 10 merit, 54 DT
 
 	sets.Enmity.DT = {
 		ammo = "Staunch Tathlum +1",
@@ -138,8 +138,8 @@ function init_gear_sets()
 	sets.precast.JA['Pflug'] = set_combine(sets.Enmity, { feet = gear.af.Feet })
 	sets.precast.JA['Battuta'] = set_combine(sets.Enmity, { head = gear.relic.Head })
 	sets.precast.JA['Liement'] = set_combine(sets.Enmity, { body = gear.relic.Body })
-	sets.precast.JA['Gambit'] = set_combine(sets.EnmityDown, { hands = gear.af.Hands })
-	sets.precast.JA['Rayke'] = set_combine(sets.EnmityDown, { feet = gear.relic.Feet })
+	sets.precast.JA['Gambit'] = set_combine(sets.Enmity, { hands = gear.af.Hands })
+	sets.precast.JA['Rayke'] = set_combine(sets.Enmity, { feet = gear.relic.Feet })
 	sets.precast.JA['Elemental Sforzo'] = set_combine(sets.Enmity, { body = gear.relic.Body })
 	sets.precast.JA['Swordplay'] = set_combine(sets.Enmity, { hands = gear.relic.Hands })
 	sets.precast.JA['Embolden'] = set_combine(sets.Enmity, {})
@@ -439,9 +439,9 @@ function init_gear_sets()
 			main = "Deacon Sword",
 			sub = "Chanter's Shield",
 			head = gear.relic.Head,
-			body = gear.taeon_phalanx_body,
+			body={ name="Herculean Vest", augments={'Attack+23','CHR+3','Phalanx +4',}},
 			hands = gear.taeon_phalanx_hands,
-			legs = gear.taeon_phalanx_legs,
+			legs={ name="Herculean Trousers", augments={'Damage taken-1%','Accuracy+21 Attack+21','Phalanx +4','Mag. Acc.+13 "Mag.Atk.Bns."+13',}},
 			feet = gear.taeon_phalanx_feet
 		})
 
@@ -494,6 +494,7 @@ function init_gear_sets()
 	sets.Self_Refresh = { waist = "Gishdubar Sash" }
 	sets.Phalanx_Received = {
 		main = "Deacon Sword",
+		sub = "Chanter's Shield",
 		head = gear.relic.Head,
 		body = gear.taeon_phalanx_body,
 		hands = gear.taeon_phalanx_hands,

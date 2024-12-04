@@ -68,8 +68,8 @@
     </cleobabe>
     <furyex>
         <pos>
-            <x>2319</x>
-            <y>828</y>
+            <x>2077</x>
+            <y>691</y>
         </pos>
     </furyex>
     <lolababe>
@@ -84,4 +84,16 @@
             <y>933</y>
         </pos>
     </mailman>
+    <suckme>
+        <pos>
+            <x>51</x>
+            <y>393</y>
+        </pos>
+    </suckme>
+    <tuckme>
+        <pos>
+            <x>184</x>
+            <y>473</y>
+        </pos>
+    </tuckme>
 </settings>

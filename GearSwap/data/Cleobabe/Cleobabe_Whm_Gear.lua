@@ -767,10 +767,10 @@ function init_gear_sets()
 	sets.midcast['Enfeebling Magic'] = {
 		main = "Daybreak",
 		sub = "Ammurapi Shield",
-		ammo = "Hydrocera",
-		head = "C. Palug Crown",
+		ammo = "Pemphredo Tathlum",
+		head = gear.empy.head,
 		neck = "Erra Pendant",
-		ear1 = "Malignance Earring",
+		ear1 = "Regal Earring",
 		ear2 = "Ebers Earring +1",
 		body = gear.af.body,
 		hands = "Regal Cuffs",
@@ -779,10 +779,11 @@ function init_gear_sets()
 		back = "Aurist's Cape +1",
 		waist = "Obstin. Sash",
 		legs = "Chironic Hose",
-		feet = "Volte Gaiters"
+		feet = gear.af.feet
 	}
 
 	sets.midcast['Enfeebling Magic'].Resistant = set_combine(sets.midcast['Enfeebling Magic'], {
+		ring1 = "Stikini Ring +1",
 	})
 
 	sets.midcast.Dia = set_combine(sets.midcast['Enfeebling Magic'], sets.TreasureHunter)

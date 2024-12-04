@@ -329,6 +329,8 @@ function TradeIt()
 		elseif var_thiszone == 52 then		-- Bhaflau_Thickets
 			if math.modf(target.x) == -32 then
 				windower.send_command('TradeNPC 1 "Olzhiryan Cactus"')
+			elseif math.modf(target.x) == 331 then
+				windower.send_command('TradeNPC 1 "Oily Blood"')
 			end
 		elseif var_thiszone == 54 then		-- Arrapago_Reef
 			if math.modf(target.x) == -453 then

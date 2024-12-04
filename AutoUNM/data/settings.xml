@@ -41,25 +41,10 @@
         </text>
     </global>
     <cleobabe>
-        <bg>
-            <alpha>160</alpha>
-            <blue>1</blue>
-            <green>1</green>
-            <red>3</red>
-        </bg>
         <pos>
             <x>2184</x>
             <y>139</y>
         </pos>
-        <text>
-            <alpha>255</alpha>
-            <blue>200</blue>
-            <font>Constantia</font>
-            <green>200</green>
-            <red>100</red>
-            <set_stroke_width>1</set_stroke_width>
-            <size>12</size>
-        </text>
     </cleobabe>
     <furyex>
         <pos>

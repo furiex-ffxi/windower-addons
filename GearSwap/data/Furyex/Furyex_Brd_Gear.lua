@@ -5,7 +5,7 @@ function user_job_setup()
 	state.HybridMode:options('Normal', 'DT')
 	state.CastingMode:options('Normal', 'Duration', 'Resistant')
 	state.IdleMode:options('Normal', 'PDT', 'NoRefresh')
-	state.Weapons:options('None', 'Naegling', 'Aeneas', 'Carnwenhan', 'Qutrub', 'DualCarnwenhan', 'DualMpu', 'DualWeapons', 'DualNaegling', 'DualNaeglingAcc', 'DualTauret', 'DualAeolian')
+	state.Weapons:options('None', 'Naegling', 'Aeneas', 'Carnwenhan', 'Mpu', 'Twash', 'Qutrub', 'DualCarnwenhan', 'DualMpu', 'DualWeapons', 'DualNaegling', 'DualNaeglingAcc', 'DualTwash', 'DualAeolian')
 	-- Whether to use Carn (or song daggers in general) under a certain threshhold even when weapons are locked.
 	state.CarnMode           = M { 'Always', '300', '1000', 'Never' }
 
@@ -65,6 +65,8 @@ function init_gear_sets()
 	sets.weapons.Naegling = { main = "Naegling", sub = "Genmei Shield" }
 	sets.weapons.Aeneas = { main = "Aeneas", sub = "Genmei Shield" }
 	sets.weapons.Carnwenhan = { main = "Carnwenhan", sub = "Genmei Shield" }
+	sets.weapons.Mpu = { main = "Mpu Gandring", sub = "Genmei Shield" }
+	sets.weapons.Twash = { main = "Twashtar", sub = "Genmei Shield" }
 	sets.weapons.Naegling = { main = "Naegling", sub = "Genmei Shield" }
 	sets.weapons.Qutrub = { main = "Qutrub Knife", sub = "Genmei Shield" }
 	sets.weapons.DualCarnwenhan = {main = "Carnwenhan", sub = "Fusetto +2"}	
@@ -72,7 +74,7 @@ function init_gear_sets()
 	sets.weapons.DualMpu = {main = "Mpu Gandring", sub= "Fusetto +2"}	
 	sets.weapons.DualNaegling = { main = "Naegling", sub = "Fusetto +2" }
 	sets.weapons.DualNaeglingAcc = { main = "Naegling", sub = "Gleti's Knife" }
-	sets.weapons.DualTauret = { main = "Tauret", sub = "Fusetto +2" }
+	sets.weapons.DualTwash = { main = "Twashtar", sub = "Fusetto +2" }
 	sets.weapons.DualAeolian = { main = "Tauret", sub = "Malevolence" }
 
 	sets.buff.Sublimation = {
@@ -287,7 +289,7 @@ function init_gear_sets()
 
 	sets.midcast.SongDebuff = {
 		head = gear.af_head,
-		body = gear.af_body,
+		body = gear.empy_body,
 		hands = gear.af_hands,
 		legs = "Inyanga Shalwar +2",
 		feet = gear.af_feet,

@@ -457,14 +457,14 @@ function init_gear_sets()
 	sets.midcast['Enfeebling Magic'] = {
 		main = "Carnwenhan",
 		sub = "Ammurapi Shield",
-		head = "C. Palug Crown",
-		body = "Zendik Robe",
-		hands = "Inyan. Dastanas +2",
-		legs = "Inyanga Shalwar +2",
-		feet = "Brioso Slippers +3",
+		head = gear.empy.Head,
+		body = gear.empy.Head,
+		hands = gear.empy.Hands,
+		legs = gear.empy.Legs,
+		feet = gear.empy.Feet,
 		neck = "Mnbw. Whistle +1",
 		ear1 = "Digni. Earring",
-		ear2 = "Vor Earring",
+		ear2 = "Fili Earring +1",
 		ring1 = "Kishar Ring",
 		ring2 = "Metamor. Ring +1",
 		waist = "Acuity Belt +1",
@@ -472,7 +472,7 @@ function init_gear_sets()
 	}
 
 	sets.midcast.Dispelga = set_combine(sets.midcast['Enfeebling Magic'],
-		{ main = "Daybreak", sub = "Ammurapi Shield", waist = "Shinjutsu-no-Obi +1" })
+		{ main = "Daybreak", sub = "Ammurapi Shield", ring1 = "Stikini Ring +1" })
 
 
 	-- Gear to enhance certain classes of songs

@@ -393,6 +393,8 @@ function init_gear_sets()
     }
 		
     sets.midcast.Reprisal = {
+        main="Burtgang",
+        sub="Priwen",
         ammo="Sapience Orb",
         head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}},
         body="Shab. Cuirass +1",
@@ -501,6 +503,8 @@ function init_gear_sets()
     sets.midcast.Shell = set_combine(sets.midcast['Enhancing Magic'], {ring2="Sheltered Ring"})
 	
 	sets.midcast.Phalanx = set_combine(sets.midcast['Enhancing Magic'], {
+        main="Burtgang",
+        sub="Priwen",
         ammo="Staunch Tathlum +1",
         head={ name="Yorium Barbuta", augments={'DEF+22','Spell interruption rate down -10%','Phalanx +3',}},
         body={ name="Yorium Cuirass", augments={'DEF+23','Spell interruption rate down -10%','Phalanx +3',}},
@@ -517,6 +521,8 @@ function init_gear_sets()
     })
         
 	sets.midcast.Phalanx.SIRD = set_combine(sets.midcast['Enhancing Magic'].SIRD, {
+        main="Burtgang",
+        sub="Priwen",
         ammo="Staunch Tathlum +1",
         head={ name="Yorium Barbuta", augments={'DEF+22','Spell interruption rate down -10%','Phalanx +3',}},
         body={ name="Yorium Cuirass", augments={'DEF+23','Spell interruption rate down -10%','Phalanx +3',}},
@@ -533,6 +539,8 @@ function init_gear_sets()
     })
 	
     sets.midcast.Phalanx.DT = set_combine(sets.midcast.Phalanx.SIRD, {
+        main="Burtgang",
+        sub="Priwen",
         ammo="Staunch Tathlum +1",
         head={ name="Yorium Barbuta", augments={'DEF+22','Spell interruption rate down -10%','Phalanx +3',}},
         body={ name="Yorium Cuirass", augments={'DEF+23','Spell interruption rate down -10%','Phalanx +3',}},
@@ -549,6 +557,8 @@ function init_gear_sets()
     })	
         
     sets.Phalanx_Received = {
+        main="Burtgang",
+        sub="Priwen",
         ammo="Staunch Tathlum +1",
         head={ name="Yorium Barbuta", augments={'DEF+22','Spell interruption rate down -10%','Phalanx +3',}},
         body={ name="Yorium Cuirass", augments={'DEF+23','Spell interruption rate down -10%','Phalanx +3',}},

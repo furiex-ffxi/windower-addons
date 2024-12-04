@@ -11,6 +11,7 @@ function user_job_setup()
 	state.ResistDefenseMode:options('MEVA')
 	state.Weapons:options('None', 'Mpu', 'Naegling', 'Club', 'Tauret', 'Bow', 'DualWeapons', 'DualMpu', 'DualWeaponsAcc', 'DualEvisceration', 'DualClubs',
 	'DualAeolian', 'EnspellOnly', 'Enspell', 'EnspellDW', 'DualSeraph', 'DualBow')
+	state.ConvertMode = M{'Always','300','1000','Never'}
 
 	gear.nuke_jse_back = { name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
 
@@ -32,10 +33,11 @@ function user_job_setup()
 	send_command('bind !\\\\ input /ma "Reraise" <me>')
 	send_command('bind @f10 gs c cycle RecoverMode')
 	send_command(
-	'bind ^r gs c set skipprocweapons true;gs c reset weaponskillmode;gs c weapons Default;gs c set unlockweapons false')
+	'bind ^r gs c set skipprocweapons true;gs c reset weaponskillmode;gs c weapons Default;gs c set unlockweapons false; gs c set weapons none')
 	send_command('bind ^q gs c set weapons enspellonly;gs c set unlockweapons true')
 	send_command('bind !r gs c set skipprocweapons true;gs c reset weaponskillmode;gs c set weapons dualweapons')
 	send_command('bind !q gs c set skipprocweapons false;gs c set weapons DualProcSwords;gs c set weaponskillmode proc')
+    send_command('bind !f7 gs c cycle ConvertMode')
 
 	select_default_macro_book()
 end
@@ -121,7 +123,7 @@ function init_gear_sets()
 	sets.precast.Waltz['Healing Waltz'] = {}
 
 	sets.precast.RA = {
-	}
+	}	
 
 	-- Fast cast sets for spells
 
@@ -145,12 +147,10 @@ function init_gear_sets()
 
 	-- Curing Precast, Cure Spell Casting time -
 	sets.precast.FC.Cure = set_combine(sets.precast.FC,{
-		-- back		=	"Pahtli Cape",
-		-- feet		=	"Telchine Pigaches",
-		neck        =   "Diemer Gorget",
-		-- left_ring	=	"Lebeche Ring",		
-		left_ear    =   "Mendi. Earring",
-		})
+		right_ear = "Mendi. Earring",
+		waist = "Plat. Mog. Belt"
+		--Total: 44 gear + 38 job
+	})
 	sets.precast.FC.Impact = set_combine(sets.precast.FC, { 
 		head = empty, body = "Crepuscular Cloak" 
 	})
@@ -331,7 +331,6 @@ function init_gear_sets()
         ammo        =   "Regal Gem",
 		left_ring= { name="Metamor. Ring +1", augments={'Path: A',}},
         right_ring	=	"Freke Ring",
-        -- -- ammo		=	"Pemphredo Tathlum",
         -- left_ear	=	"Friomisi Earring",
         -- right_ear	=	"Enchntr. Earring +1",
     }
@@ -371,58 +370,58 @@ function init_gear_sets()
 	} 
 
 	sets.midcast.Cure = set_combine(sets.midcast.Casting,{
-		main = "Daybreak",
-		sub = "Sors Shield",
-        head = "Vanya Hood",
-        -- body		=	"Gende. Bilaut +1",
-        -- hands		=	"Telchine Gloves", 
-        legs = AF.Legs,
-        feet = "Vanya Clogs",
-        -- feet		=	RELIC.Feet,
-        -- neck		=	"Fylgja Torque +1",
-        -- waist		=	"Porous Rope",
+		ammo = "Pemphredo Tathlum",
+		main = "Sakpata's Sword",
+		sub = "Sacro Bulwark",
+        head = "Kaykaus Mitra +1",
+        body = "Kaykaus Bliaut +1",
+        hands =	"Kaykaus Cuffs +1", 
+        legs = "Kaykaus Tights +1",
+        feet = "Kaykaus Boots +1",
+        neck ="Loricate Torque +1",
+        waist =	"Shinjutsu no-Obi +1",
         left_ear = "Mendi. Earring",
-        -- right_ear	=	"Roundel Earring",
+        right_ear =	"Meili Earring",
         left_ring = { name="Stikini Ring +1", bag="wardrobe1" },
-        right_ring = { name="Stikini Ring +1", bag="wardrobe2" },
+        right_ring = "Mephitas's Ring +1",
         back = RDMCape.MACC,
     })
 
 	sets.midcast.LightWeatherCure = {
-		main = "Chatoyant Staff",
-		sub = "Curatio Grip",
-		-- ammo = "Hasty Pinion +1",
-		head = "Gende. Caubeen +1",
-		neck = "Incanter's Torque",
-		ear1 = "Meili Earring",
-		ear2 = "Mendi. Earring",
-		body = "Kaykaus Bliaut",
-		hands = "Kaykaus Cuffs",
-		ring1 = "Janniston Ring",
-		ring2 = "Menelaus's Ring",
-		back = "Twilight Cape",
+		ammo = "Pemphredo Tathlum",
+		main = "Sakpata's Sword",
+		sub = "Sacro Bulwark",
+        head = "Kaykaus Mitra +1",
+        body = "Kaykaus Bliaut +1",
+        hands =	"Kaykaus Cuffs +1", 
+        legs = "Kaykaus Tights +1",
+        feet = "Kaykaus Boots +1",
+        neck ="Loricate Torque +1",
 		waist = "Hachirin-no-Obi",
-		legs = "Carmine Cuisses +1",
-		feet = "Kaykaus Boots"
+        left_ear = "Mendi. Earring",
+        right_ear =	"Meili Earring",
+        left_ring = { name="Stikini Ring +1", bag="wardrobe1" },
+        right_ring = "Mephitas's Ring +1",
+        back = RDMCape.MACC,
 	}
 
 	--Cureset for if it's not light weather but is light day.
 	sets.midcast.LightDayCure = {
-		-- main = "Daybreak",
-		sub = "Sors Shield",
-		-- ammo = "Hasty Pinion +1",
-		head = "Gende. Caubeen +1",
-		neck = "Incanter's Torque",
-		ear1 = "Meili Earring",
-		ear2 = "Mendi. Earring",
-		body = "Kaykaus Bliaut",
-		hands = "Kaykaus Cuffs",
-		ring1 = "Janniston Ring",
-		ring2 = "Menelaus's Ring",
-		back = "Twilight Cape",
+		ammo = "Pemphredo Tathlum",
+		main = "Sakpata's Sword",
+		sub = "Sacro Bulwark",
+        head = "Kaykaus Mitra +1",
+        body = "Kaykaus Bliaut +1",
+        hands =	"Kaykaus Cuffs +1", 
+        legs = "Kaykaus Tights +1",
+        feet = "Kaykaus Boots +1",
+        neck ="Loricate Torque +1",
 		waist = "Hachirin-no-Obi",
-		legs = "Carmine Cuisses +1",
-		feet = "Kaykaus Boots"
+        left_ear = "Mendi. Earring",
+        right_ear =	"Meili Earring",
+        left_ring = { name="Stikini Ring +1", bag="wardrobe1" },
+        right_ring = "Mephitas's Ring +1",
+        back = RDMCape.MACC,
 	}
 
 	sets.midcast.Cursna = {
@@ -447,14 +446,14 @@ function init_gear_sets()
 		sub = "Clemency Grip" })
 
 	sets.midcast.Curaga = sets.midcast.Cure
-	sets.Self_Healing = { neck = "Phalaina Locket", ear1 = "Etiolation Earring", hands = "Buremte Gloves",
+	sets.Self_Healing = { neck = "Phalaina Locket", ear1 = "Etiolation Earring",
 		ring2 = "Kunaji Ring", waist = "Gishdubar Sash" }
-	sets.Cure_Received = { neck = "Phalaina Locket", hands = "Buremte Gloves", ring2 = "Kunaji Ring",
+	sets.Cure_Received = { neck = "Phalaina Locket", ring2 = "Kunaji Ring",
 		waist = "Gishdubar Sash" }
 	sets.Self_Refresh = { back = "Grapevine Cape", waist = "Gishdubar Sash" }
 	
 	sets.Phalanx_Received = {
-		main={ name="Sakpata's Sword", augments={'Path: A',}},
+		main = "Sakpata's Sword",
 		head = gear.taeon_phalanx_head,
 		body = gear.taeon_phalanx_body,
 		hands = gear.taeon_phalanx_hands,
@@ -463,9 +462,9 @@ function init_gear_sets()
 	}
 
 	sets.Self_Phalanx = {
-		main={ name="Sakpata's Sword", augments={'Path: A',}},
-		sub="Ammurapi Shield",
-		ammo="Sapience Orb",
+		main = "Sakpata's Sword",
+		sub= " Ammurapi Shield",
+		ammo = "Sapience Orb",
 		head = gear.taeon_phalanx_head,
 		body = gear.taeon_phalanx_body,
 		hands = gear.taeon_phalanx_hands,
@@ -484,7 +483,7 @@ function init_gear_sets()
 		main = "Colada",
 		sub = "Ammurapi Shield",
 		ammo="Sapience Orb",
-		head = "Telchine Cap",
+		head={ name="Telchine Cap", augments={'"Regen"+2','Enh. Mag. eff. dur. +10',}},
 		neck = "Dls. Torque +2",
 		ear1 = "Andoaa Earring",
 		ear2 = "Leth. Earring +1",
@@ -494,11 +493,13 @@ function init_gear_sets()
 		ring2 = { name="Stikini Ring +1", bag="wardrobe2" },
 		back = "Ghostfyre Cape",
 		waist = "Embla Sash",
-		legs = AF.Legs,
+		legs={ name="Telchine Braconi", augments={'"Regen"+2','Enh. Mag. eff. dur. +10',}},	
 		feet = EMPY.Feet
 	}
 
 	sets.midcast.Phalanx = set_combine(sets.midcast['Enhancing Magic'], {
+		main = "Sakpata's Sword",
+		sub= " Ammurapi Shield",
 		head = gear.taeon_phalanx_head,
 		body = gear.taeon_phalanx_body,
 		hands = gear.taeon_phalanx_hands,
@@ -532,6 +533,9 @@ function init_gear_sets()
 		back = "Ghostfyre Cape", 
 	}
 	sets.midcast.Refresh = { head = "Amalric Coif +1", body = AF.Body, legs = EMPY.Feet }
+	sets.midcast.Regen = { 
+		main = "Bolelabunga", 
+		feet = "Bunzi's Sabots" }
 	sets.midcast.Aquaveil = { head = "Amalric Coif +1", hands = "Regal Cuffs", waist = "Emphatikos Rope",
 		legs = "Shedir Seraweels" }
 	sets.midcast.BarElement = { legs = "Shedir Seraweels" }
@@ -800,7 +804,7 @@ function init_gear_sets()
 
 	sets.midcast.Stun = set_combine(sets.midcast['Dark Magic'], {
 		main = "Bunzi's Rod",
-		-- sub = "Ammurapi Shield",
+		sub = "Ammurapi Shield",
 		-- ammo = empty,
 		-- head = AF.Head,
 		-- body = "Zendik Robe",
@@ -903,11 +907,11 @@ function init_gear_sets()
 	})
 
 	sets.idle.Town = {
-		head = sets.VolteSandoria.Head,
-    	body = sets.VolteSandoria.Body, 
-        hands = sets.VolteSandoria.Hands,
-        legs = sets.VolteSandoria.Legs,
-        feet = sets.VolteSandoria.Feet,
+        head		=	sets.Nyame.Head,
+        hands		=	sets.Nyame.Hands,
+        body        =   sets.Nyame.Body,
+        legs        =   sets.Nyame.Legs,
+        feet		=	sets.Nyame.Feet,
 		waist =	"Orpheus's Sash",
 	}
 
