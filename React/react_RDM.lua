@@ -123,4 +123,18 @@ return {
             ["ready_reaction"]="turnaround"
         },
     },   
+    ["Cloud of Darkness"]={
+        ["Primordial Surge"]={
+            ["complete_reaction"]="",
+            ["ready_reaction"]="trust set autofacemobmode away"
+        },
+        ["Waning Vigor"]={
+            ["complete_reaction"]="trust set autofacemobmode auto",
+            ["ready_reaction"]=""
+        },
+        ["Expunge"]={
+            ["complete_reaction"]="trust set autofacemobmode auto",
+            ["ready_reaction"]=""
+        }        
+    }    
 }

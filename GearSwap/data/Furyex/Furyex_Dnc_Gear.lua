@@ -1,13 +1,13 @@
 -- Setup vars that are user-dependent.  Can override this function in a sidecar file.
 function user_job_setup()
     state.OffenseMode:options('Normal', 'SomeAcc', 'Acc', 'FullAcc', 'Fodder')
-    state.HybridMode:options('Normal', 'DTLite', 'PDT', 'MDT')
+    state.HybridMode:options('Normal', 'DT')
     state.WeaponskillMode:options('Match', 'Normal', 'SomeAcc', 'Acc', 'FullAcc', 'Fodder', 'Proc')
     state.IdleMode:options('Normal', 'Sphere')
     state.PhysicalDefenseMode:options('PDT')
     state.MagicalDefenseMode:options('MDT')
     state.ResistDefenseMode:options('MEVA')
-    state.Weapons:options('Mpu', 'Twash', 'Qutrub')
+    state.Weapons:options('Mpu', 'Twash', 'TwashGleti', 'Qutrub')
     state.ExtraMeleeMode = M {
         ['description'] = 'Extra Melee Mode',
         'None',
@@ -85,6 +85,14 @@ function init_gear_sets()
         }
     }
 
+    sets.weapons.TwashGleti = {
+        main = {
+            name = "Twashtar",
+            augments = {'Path: A'}
+        },
+        sub = "Gleti's Knife",
+    }
+
     sets.weapons.Qutrub = {
         main = "Qutrub Knife",
         sub = "Fusetto +2"
@@ -160,7 +168,7 @@ function init_gear_sets()
     }
 
     sets.precast.Step['Feather Step'] = set_combine(sets.precast.step, {
-        feet = "Macu. Toe Sh. +2"
+        feet = "Macu. Toe Sh. +3"
     })
 
     sets.Enmity = {}
@@ -177,11 +185,11 @@ function init_gear_sets()
     sets.precast.Flourish2 = {}
     sets.precast.Flourish2['Reverse Flourish'] = {
         back = { name="Toetapper Mantle", augments={'"Store TP"+2','"Dual Wield"+2','"Rev. Flourish"+30',}},
-        hands = "Macu. Bangles +2"
+        hands = "Macu. Bangles +3"
     } 
 
     sets.precast.Flourish3 = {}
-    sets.precast.Flourish3['Striking Flourish'] = {body = "Macu. Casaque +2"} -- body="Charis Casaque +2"
+    sets.precast.Flourish3['Striking Flourish'] = { body = "Macu. Casaque +3" } 
     sets.precast.Flourish3['Climactic Flourish'] = {}
 
     -- Fast cast sets for spells
@@ -204,7 +212,7 @@ function init_gear_sets()
             name = "Herculean Trousers",
             augments = {'Pet: "Regen"+1', 'Accuracy+22', '"Fast Cast"+8', 'Mag. Acc.+1 "Mag.Atk.Bns."+1'}
         },
-        feet = "Macu. Toe Sh. +2",
+        feet = "Macu. Toe Sh. +3",
         neck = "Baetyl Pendant",
         waist = "Plat. Mog. Belt",
         left_ear = "Enchntr. Earring +1",
@@ -228,7 +236,7 @@ function init_gear_sets()
             name = "Coiste Bodhar",
             augments = {'Path: A'}
         },
-        head = "Maculele Tiara +2",
+        head = "Maculele Tiara +3",
         body = {
             name = "Nyame Mail",
             augments = {'Path: B'}
@@ -272,7 +280,7 @@ function init_gear_sets()
             name = "Coiste Bodhar",
             augments = {'Path: A'}
         },
-        head = "Maculele Tiara +2",
+        head = "Maculele Tiara +3",
         body = {
             name = "Gleti's Cuirass",
             augments = {'Path: A'}
@@ -317,7 +325,7 @@ function init_gear_sets()
             name = "Coiste Bodhar",
             augments = {'Path: A'}
         },
-        head = "Maculele Tiara +2",
+        head = "Maculele Tiara +3",
         body = {
             name = "Nyame Mail",
             augments = {'Path: B'}
@@ -360,7 +368,7 @@ function init_gear_sets()
             name = "Coiste Bodhar",
             augments = {'Path: A'}
         },
-        head = "Maculele Tiara +2",
+        head = "Maculele Tiara +3",
         body = {
             name = "Gleti's Cuirass",
             augments = {'Path: A'}
@@ -404,7 +412,7 @@ function init_gear_sets()
             name = "Coiste Bodhar",
             augments = {'Path: A'}
         },
-        head = "Maculele Tiara +2",
+        head = "Maculele Tiara +3",
         body = {
             name = "Nyame Mail",
             augments = {'Path: B'}
@@ -447,7 +455,7 @@ function init_gear_sets()
             name = "Coiste Bodhar",
             augments = {'Path: A'}
         },
-        head = "Maculele Tiara +2",
+        head = "Maculele Tiara +3",
         body = {
             name = "Gleti's Cuirass",
             augments = {'Path: A'}
@@ -531,7 +539,7 @@ function init_gear_sets()
             name = "Coiste Bodhar",
             augments = {'Path: A'}
         },
-        head = "Maculele Tiara +2",
+        head = "Maculele Tiara +3",
         body = {
             name = "Gleti's Cuirass",
             augments = {'Path: A'}
@@ -621,7 +629,10 @@ function init_gear_sets()
         }
     }
 
-    sets.Skillchain = {} -- hands="Charis Bangles +2"
+    sets.Skillchain = { 
+        neck = "Warder Charm +1",
+        hands = "Macu. Bangles +3" 
+    }
 
     -- Midcast Sets
 
@@ -643,7 +654,7 @@ function init_gear_sets()
         --     name = "Herculean Trousers",
         --     augments = {'Pet: "Regen"+1', 'Accuracy+22', '"Fast Cast"+8', 'Mag. Acc.+1 "Mag.Atk.Bns."+1'}
         -- },
-        feet = "Macu. Toe Sh. +2",
+        feet = "Macu. Toe Sh. +3",
         neck = "Baetyl Pendant",
         waist = "Plat. Mog. Belt",
         left_ear = "Enchntr. Earring +1",
@@ -687,8 +698,7 @@ function init_gear_sets()
             augments = {'Path: A'}
         },
         neck = "Rep. Plat. Medal",
-        waist = "Carrier's Sash",
-        -- waist = "Engraved Belt",
+        waist = "Engraved Belt",
         -- left_ear = "Infused Earring",
         left_ear = "Odnawa Earring +1",
         right_ear = "Eabani Earring",
@@ -706,14 +716,32 @@ function init_gear_sets()
 
     -- Defense sets
 
-    sets.defense.PDT = {}
+    sets.defense.PDT = {
+        head = "Malignance Chapeau",
+        body = "Malignance Tabard",
+        hands = "Malignance Gloves",
+        legs = "Malignance Tights",
+        feet = "Macu. Toe Sh. +3",
+    }
 
-    sets.defense.MDT = {}
+    sets.defense.MDT = {
+        head = "Malignance Chapeau",
+        body = "Malignance Tabard",
+        hands = "Malignance Gloves",
+        legs = "Malignance Tights",
+        feet = "Macu. Toe Sh. +3",
+    }
 
-    sets.defense.MEVA = {}
+    sets.defense.MEVA = {
+        head = "Malignance Chapeau",
+        body = "Malignance Tabard",
+        hands = "Malignance Gloves",
+        legs = "Malignance Tights",
+        feet = "Macu. Toe Sh. +3",
+    }
 
     sets.Kiting = {
-        -- feet = "Tandava Crackows"
+        feet = "Tandava Crackows"
     }
 
     -- Engaged sets
@@ -729,7 +757,7 @@ function init_gear_sets()
             name = "Coiste Bodhar",
             augments = {'Path: A'}
         },
-        head = "Maculele Tiara +2",
+        head = "Maculele Tiara +3",
         body = {
             name = "Gleti's Cuirass",
             augments = {'Path: A'}
@@ -739,7 +767,7 @@ function init_gear_sets()
             name = "Gleti's Breeches",
             augments = {'Path: A'}
         },
-        feet = "Macu. Toe Sh. +2",
+        feet = "Macu. Toe Sh. +3",
         neck = {
             name = "Etoile Gorget +2",
             augments = {'Path: A'}
@@ -767,7 +795,7 @@ function init_gear_sets()
         body = "Malignance Tabard",
         hands = "Malignance Gloves",
         legs = "Malignance Tights",
-        feet = "Macu. Toe Sh. +2",
+        feet = "Macu. Toe Sh. +3",
         neck = {
             name = "Etoile Gorget +2",
             augments = {'Path: A'}
@@ -779,7 +807,7 @@ function init_gear_sets()
         left_ear = "Sherida Earring",
         right_ear = "Telos Earring",
         left_ring = "Gere Ring",
-        right_ring = "Defending Ring",
+        right_ring = "Lehko's Ring",        
         back = {
             name = "Senuna's Mantle",
             augments = {'DEX+20', 'Accuracy+20 Attack+20', 'DEX+10', '"Dbl.Atk."+10', 'Phys. dmg. taken-10%'}
@@ -863,11 +891,11 @@ function init_gear_sets()
     }
 
     -- Buff sets: Gear that needs to be worn to actively enhance a current player buff.
-    sets.buff['Saber Dance'] = {} -- legs="Horos Tights"
+    sets.buff['Saber Dance'] = { legs="Horos Tights +3" }
     sets.buff['Climactic Flourish'] = {
         ammo = "Charis Feather",
-        head = "Maculele Tiara +2"
-    } -- head="Charis Tiara +2"
+        head = "Maculele Tiara +3"
+    } 
     sets.buff.Doom = set_combine(sets.buff.Doom, {
         neck = "Nicander's Necklace",
         waist = "Gishdubar Sash",

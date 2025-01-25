@@ -4,7 +4,7 @@ function user_job_setup()
 	state.HybridMode:options('Normal', 'DT')
 	state.CastingMode:options('Normal', 'Resistant', 'AoE')
 	state.IdleMode:options('Normal', 'NoRefresh', 'DT')
-	state.Weapons:options('None', 'Naegling', 'Aeneas', 'Carnwenhan', 'Daybreak', 'DualWeapons', 'DualNaegling', 'DualTauret', 'DualAeolian', 'DualCarnwenhan')
+	state.Weapons:options('None', 'Naegling', 'Aeneas', 'Carnwenhan', 'Daybreak', 'Staff', 'DualWeapons', 'DualNaegling', 'DualTauret', 'DualAeolian', 'DualCarnwenhan')
 	-- Whether to use Carn (or song daggers in general) under a certain threshhold even when weapons are locked.
 	state.CarnMode = M { 'Always', '300', '1000', 'Never' }
 
@@ -52,7 +52,7 @@ function init_gear_sets()
 	sets.weapons.DualTauret = { main = "Tauret", sub = "Blurred Knife +1" }
 	sets.weapons.DualAeolian = { main = "Tauret", sub = "Malevolence" }
 	sets.weapons.Daybreak = { main = "Daybreak", sub = "Ammurapi Shield" }
-
+	sets.weapons.Staff = {main="Xoanon", sub="Bloodrain Strap",}
 	sets.buff.Sublimation = { waist = "Embla Sash" }
 	sets.buff.DTSublimation = { waist = "Embla Sash" }
 

@@ -12,7 +12,7 @@ function user_job_setup()
         ['description'] = 'Extra Melee Mode',
         'None'
     }
-    state.Weapons:options('Trishula', 'Shining One', 'Naegling', 'Mafic', 'Fermion') -- 'Trishula', 
+    state.Weapons:options('Trishula', 'Shining One', 'Rhongomiant', 'Naegling', 'Mafic', 'Fermion')
     state.Passive = M {
         ['description'] = 'Passive Mode',
         'None',
@@ -334,6 +334,11 @@ function init_gear_sets()
         sub = "Utu Grip"
     }
 
+    sets.weapons.Rhongomiant = {
+        main = "Rhongomiant",
+        sub = "Utu Grip"
+    }    
+
     sets.weapons.Naegling = {
         main = "Naegling",
         sub = "Legion Scutum"
@@ -470,4 +475,8 @@ function select_default_macro_book()
     else
         set_macro_page(5, 13)
     end
+end
+
+function user_job_lockstyle()
+    windower.chat.input('/lockstyleset 002')
 end

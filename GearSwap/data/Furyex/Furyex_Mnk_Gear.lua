@@ -6,7 +6,7 @@ function user_job_setup()
     state.PhysicalDefenseMode:options('PDT')
     state.MagicalDefenseMode:options('MDT')
     state.ResistDefenseMode:options('MEVA')
-    state.Weapons:options('Godhands', 'Verethragna')
+    state.Weapons:options('Godhands', 'Verethragna', 'Barehanded')
 
     state.ExtraMeleeMode = M {
         ['description'] = 'Extra Melee Mode',
@@ -169,6 +169,29 @@ function init_gear_sets()
             augments = {'DEX+20', 'Accuracy+20 Attack+20', 'DEX+10', '"Dbl.Atk."+10', 'Phys. dmg. taken-10%'}
         }
     }
+    sets.precast.WS.Barehanded = {
+        ammo = "Pemphredo Tathlum",
+        head={ name="Taeon Chapeau", augments={'Phalanx +3',}},
+        body={ name="Taeon Tabard", augments={'Phalanx +3',}},
+        hands={ name="Taeon Gloves", augments={'Phalanx +3',}},
+        legs={ name="Taeon Tights", augments={'Phalanx +3',}},
+        feet={ name="Taeon Boots", augments={'Phalanx +3',}},
+        neck = "Sanctity Necklace",
+        waist = "Eschan Stone",
+        left_ear = "Crep. Earring",
+        right_ear = {
+            name = "Bhikku Earring +1",
+        },
+		left_ring = "Epaminondas's Ring",
+        right_ring = {
+            name = "Metamor. Ring +1",
+            augments = {'Path: A'}
+        },
+        back = {
+            name = "Segomo's Mantle",
+            augments = {'DEX+20', 'Accuracy+20 Attack+20', 'DEX+10', '"Dbl.Atk."+10', 'Phys. dmg. taken-10%'}
+        }
+    }    
     sets.precast.WSAcc = {}
     sets.precast.WSFullAcc = {}
     sets.precast.WS.Acc = set_combine(sets.precast.WS, sets.precast.WSAcc)
@@ -310,7 +333,7 @@ function init_gear_sets()
         right_ear = {
             name = "Bhikku Earring +1",
         },
-        left_ring = "Medada's Ring",
+        -- left_ring = "Medada's Ring",
         right_ring = {
             name = "Metamor. Ring +1",
             augments = {'Path: A'}
@@ -567,10 +590,7 @@ function init_gear_sets()
     -- Idle sets
     sets.idle = {
         ammo = "Crepuscular Pebble",
-        head = {
-            name = "Nyame Helm",
-            augments = {'Path: B'}
-        },
+        head = "Null Masque",
         body = {
             name = "Nyame Mail",
             augments = {'Path: B'}
@@ -772,7 +792,9 @@ function init_gear_sets()
     sets.NightIdle = {}
     sets.Knockback = {}
     sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
-    sets.Skillchain = {}
+    sets.Skillchain = {
+        neck = "Warder's Charm +1",
+    }
 
     -- Weapons sets
     sets.weapons.Godhands = {
@@ -780,6 +802,9 @@ function init_gear_sets()
     }
     sets.weapons.Verethragna = {
         main = "Verethragna"
+    }
+    sets.weapons.Barehanded = {
+        main = empty
     }
 
     -- Select default macro book on initial load or subjob change.

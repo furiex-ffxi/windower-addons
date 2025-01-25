@@ -149,9 +149,9 @@ function init_gear_sets()
 		hands = sets.Nyame.Hands,
 		legs = sets.Nyame.Legs,
 		feet = sets.Nyame.Feet,
-		waist =	"Sailfi Belt +1",
+		waist =	"Prosilio Belt +1",
 		left_ear = { name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-		right_ear =	"Regal Earring",
+		right_ear =	"Ishvara Earring",
 		left_ring = "Epaminondas's Ring",
 		right_ring = "Karieyh Ring",
 		back = gear.nuke_jse_back,
@@ -201,14 +201,13 @@ function init_gear_sets()
 		sub = "Sors Shield",
 		-- ammo = "Hasty Pinion +1",
 		head = "Vanya Hood",
-		-- neck = "Incanter's Torque",
-		neck = "Deviant Necklace",
+		neck = "Incanter's Torque",
 		ear1 = "Gifted Earring",
-		ear2 = "Etiolation Earring",
+		ear2 = "Mendi. Earring",
 		body = "Zendik Robe",
 		hands = "Telchine Gloves",
 		ring1 = "Janniston Ring",
-		ring2 = "Menelaus's Ring",
+		-- ring2 = "Menelaus's Ring",
 		back = "Tempered Cape +1",
 		waist = "Witful Belt",
 		legs = af.Legs,
@@ -504,9 +503,10 @@ function init_gear_sets()
 
 	sets.idle.DT.Pet = set_combine(sets.idle.Pet, {
 		main = "Idris",
+		sub = "Genmei Shield",
 		body = "Adamantite Armor",
 		legs = "Nyame Flanchard",
-		feeet = "Nyame Sollerets",
+		feet = "Nyame Sollerets",
 	})
 
 	-- .Indi sets are for when an Indi-spell is active.

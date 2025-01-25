@@ -75,17 +75,15 @@
     </global>
     <cleobabe>
         <text>
+            <bg>
+                <green>75</green>
+            </bg>
             <pos>
                 <x>76</x>
                 <y>503</y>
             </pos>
-            <text>
-                <fonts>
-
-                </fonts>
-            </text>
         </text>
-        <tracking>orthrus</tracking>
+        <tracking>ulhuadshi</tracking>
         <visible>false</visible>
     </cleobabe>
     <furyex>
@@ -98,7 +96,7 @@
                 <y>503</y>
             </pos>
         </text>
-        <tracking>itzpapalotl</tracking>
+        <tracking>orthrus</tracking>
         <visible>false</visible>
     </furyex>
     <lolababe>
@@ -111,20 +109,22 @@
                 <y>503</y>
             </pos>
         </text>
-        <tracking>glavoid</tracking>
+        <tracking>briareus</tracking>
         <visible>false</visible>
     </lolababe>
     <mailman>
         <text>
-            <bg>
-                <green>75</green>
-            </bg>
             <pos>
                 <x>76</x>
                 <y>503</y>
             </pos>
+            <text>
+                <fonts>
+
+                </fonts>
+            </text>
         </text>
-        <tracking>orthrus</tracking>
+        <tracking>ulhuadshi</tracking>
         <visible>false</visible>
     </mailman>
 </settings>

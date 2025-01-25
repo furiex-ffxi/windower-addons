@@ -88,16 +88,16 @@ function init_gear_sets()
     -- Precast sets to enhance JAs
     sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
     sets.precast.JA['Bounty Shot'] = set_combine(sets.TreasureHunter, {
-        hands = "Amini Glove. +1"
+        hands = "Amini Glove. +2"
     })
     sets.precast.JA['Camouflage'] = {
-        body = "Orion Jerkin +1"
+        body = "Orion Jerkin +3"
     }
     sets.precast.JA['Scavenge'] = {
-        feet = "Orion Socks +1"
+        feet = "Orion Socks +3"
     }
     sets.precast.JA['Shadowbind'] = {
-        hands = "Orion Bracers +1"
+        hands = "Orion Bracers +3"
     }
     sets.precast.JA['Sharpshot'] = {
         legs = "Orion Braccae +3"
@@ -345,7 +345,7 @@ function init_gear_sets()
 
     -- These sets will overlay based on accuracy level, regardless of other options.
     sets.buff.Camouflage = {
-        body = "Orion Jerkin +1"
+        body = "Orion Jerkin +3"
     }
     sets.buff.Camouflage.Acc = {}
     sets.buff['Double Shot'] = {
@@ -353,7 +353,7 @@ function init_gear_sets()
     }
     sets.buff['Double Shot'].Acc = {}
     sets.buff.Barrage = {
-        hands = "Orion Bracers +1"
+        hands = "Orion Bracers +3"
     }
 
     sets.Self_Healing = {
@@ -537,9 +537,9 @@ function init_gear_sets()
     })
 
     sets.engaged.DT = set_combine(sets.engaged, {
-        body = "Malignance Tabard",
-        hands = "Malignance Gloves",
-        legs = "Malignance Tights",   
+        body = sets.Malignance.Body,
+        hands = sets.Malignance.Hands,
+        legs = sets.Malignance.Legs,   
     })
 
     sets.engaged.DW = set_combine(sets.engaged, {
@@ -547,7 +547,9 @@ function init_gear_sets()
     })
 
     sets.engaged.DW.DT = set_combine(sets.engaged.DW, {
-       
+        body = sets.Malignance.Body,
+        hands = sets.Malignance.Hands,
+        legs = sets.Malignance.Legs,   
     })
 
     sets.engaged.DW.Acc = set_combine(sets.engaged.DW, {

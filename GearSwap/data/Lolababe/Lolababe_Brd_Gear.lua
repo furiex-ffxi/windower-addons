@@ -694,7 +694,7 @@ function init_gear_sets()
 		neck = { name = "Bard's Charm +2", augments = { 'Path: A', } },
 		waist = { name = "Sailfi Belt +1", augments = { 'Path: A', } },
 		ear1 = "Telos Earring",
-		ear2 = "Digni. Earring",
+		ear2 = "Cessance Earring",
 		ring1 = "Chirich Ring +1",
 		ring2 = "Chirich Ring +1",
 		back = gear.tp_jse_back,
@@ -731,8 +731,7 @@ function init_gear_sets()
 		
 	})
 	sets.engaged.DW = set_combine(sets.engaged, {
-		ear1 = "Eabani Earring",
-		ear2 = "Suppanomimi",
+		ear2 = "Eabani Earring",
 		waist = "Reiki Yotai",
 	})
 	sets.engaged.DW.DT = set_combine(sets.engaged.DW, {

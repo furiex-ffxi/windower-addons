@@ -150,7 +150,6 @@ function init_gear_sets()
         right_ear={ name="Nourish. Earring +1", augments={'Path: A',}},
         left_ring="Gelatinous Ring +1",
         right_ring="Moonlight Ring",
-        back="Weard Mantle"
     }
 
 	-- Weaponskill sets
@@ -165,11 +164,10 @@ function init_gear_sets()
         feet = sets.Nyame.Feet,
 		waist="Sailfi Belt +1",
 		left_ring="Cornelia's Ring",
-        right_ring="Epaminondas's Ring",
+        right_ring="Regal Ring",
 		left_ear = "Thrud Earring",
         right_ear = "Moonshade Earring",
 		back=gear.wsd_str_jse_back,
-        -- left_ring="Regal Ring",
 	}
 
 	sets.precast.WS.AttackCap = set_combine(sets.precast.WS, { 
@@ -178,6 +176,11 @@ function init_gear_sets()
 	})
 
 	sets.precast.WS.Proc = {
+		head="Souv. Schaller +1",
+        body={ name="Souv. Cuirass +1", augments={'VIT+12','Attack+25','"Refresh"+3',}},
+		hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
+		legs={ name="Souv. Diechlings +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+        feet={ name="Souveran Schuhs +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
 	}	
 
 	sets.precast.WS.SomeAcc = set_combine(sets.precast.WS, { 
@@ -438,6 +441,10 @@ function init_gear_sets()
 		feet = "Amm Greaves"
 	}
 
+	sets.Skillchain = {
+		neck = "Warder Charm +1",
+	}
+
 	sets.Kiting = {
 		ring1 = "Shneddick Ring",
 	}
@@ -482,7 +489,7 @@ function init_gear_sets()
 		body = "Dagon Breast.",
 		left_ring = "Chirich Ring +1",
 		right_ring = "Chirich Ring +1",
-		legs = "Boii Cuisses +3",
+		legs = "Sakpata's Cuisses",
 		feet = "Sakpata's Leggings"
     })
 

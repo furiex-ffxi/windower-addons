@@ -426,18 +426,18 @@ function init_gear_sets()
     -- Idle sets
     sets.idle = {
         ammo = "Brigantia Pebble",
-        head = "Malignance Chapeau",
+        head = sets.Nyame.Head,
         neck = "Loricate Torque +1",
         ear1 = "Eabani Earring",
         ear2 = "Assuage Earring",
-        body = "Malignance Tabard",
-        hands = "Malignance Gloves",
+        body = sets.Nyame.Body,
+        hands = sets.Nyame.Hands,
         ring1 = "Gelatinous Ring +1",
         ring2 = "Fortified Ring",
         back = "Moonlight Cape",
         waist = "Platinum Moogle Belt",
-        legs = "Malignance Tights",
-        feet = "Malignance Boots"
+        legs = sets.Nyame.Legs,
+        feet = sets.Nyame.Feet,
     }
 
     sets.idle.Town = set_combine(sets.idle, { 
@@ -446,11 +446,6 @@ function init_gear_sets()
     })
 
     sets.idle.DT = set_combine(sets.idle, { 
-        head = sets.Nyame.Head,
-        body = sets.Nyame.Body,
-        hands = sets.Nyame.Hands,
-        legs = sets.Nyame.Legs,
-        feet = sets.Nyame.Feet,
         waist = "Flume Belt +1",
         ear2 = "Tuisto Earring",
     })

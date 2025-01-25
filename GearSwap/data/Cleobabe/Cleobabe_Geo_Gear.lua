@@ -152,7 +152,7 @@ function init_gear_sets()
 	-- Default set for any weaponskill that isn't any more specifically defined
 	sets.precast.WS = {
 		head = sets.Nyame.Head,
-		neck = "Combatant's Torque",
+		neck = "Null Loop",
 		body = sets.Nyame.Body,        
 		hands = sets.Nyame.Hands,
 		legs = sets.Nyame.Legs,
@@ -162,7 +162,7 @@ function init_gear_sets()
 		right_ear =	"Ishvara Earring",
 		left_ring = "Epaminondas's Ring",
 		right_ring = "Karieyh Ring",
-		-- back = RDMCape.MACC,
+		back = "Null Shawl",
 	}
 
 	sets.precast.WS["Flash Nova"] = set_combine(sets.precast.WS, {
@@ -245,17 +245,17 @@ function init_gear_sets()
 		{ back = gear.idle_jse_back, legs = gear.relic.Legs, feet = gear.empy.Feet })
 
 	sets.midcast.Cure = {
-		main = "Daybreak",
-		sub = "Sors Shield",
+		-- main = "Daybreak",
+		-- sub = "Sors Shield",
 		ammo = "Hasty Pinion +1",
 		head = "Amalric Coif +1",
 		neck = "Incanter's Torque",
 		ear1 = "Gifted Earring",
-		ear2 = "Etiolation Earring",
+		ear2 = "Mendi. Earring",
 		body = "Zendik Robe",
 		hands = "Telchine Gloves",
-		ring1 = "Janniston Ring",
-		ring2 = "Menelaus's Ring",
+		ring1 = "Lebeche Ring",
+		-- ring2 = "Menelaus's Ring",
 		back = "Tempered Cape +1",
 		waist = "Witful Belt",
 		legs = gear.af.Legs,
@@ -263,8 +263,8 @@ function init_gear_sets()
 	}
 
 	sets.midcast.LightWeatherCure = {
-		main = "Chatoyant Staff",
-		sub = "Curatio Grip",
+		-- main = "Chatoyant Staff",
+		-- sub = "Curatio Grip",
 		ammo = "Hasty Pinion +1",
 		head = "Amalric Coif +1",
 		neck = "Phalaina Locket",
@@ -282,8 +282,8 @@ function init_gear_sets()
 
 	--Cureset for if it's not light weather but is light day.
 	sets.midcast.LightDayCure = {
-		main = "Daybreak",
-		sub = "Sors Shield",
+		-- main = "Daybreak",
+		-- sub = "Sors Shield",
 		ammo = "Hasty Pinion +1",
 		head = "Amalric Coif +1",
 		neck = "Incanter's Torque",
@@ -299,7 +299,8 @@ function init_gear_sets()
 		feet = "Vanya Clogs"
 	}
 
-	sets.midcast.Curaga = set_combine(sets.midcast.Cure, { main = "Daybreak", sub = "Sors Shield" })
+	sets.midcast.Curaga = set_combine(sets.midcast.Cure, { 
+	})
 
 	sets.midcast.Cursna = set_combine(sets.midcast.Cure, {
 		neck = "Debilis Medallion",
@@ -781,15 +782,15 @@ function init_gear_sets()
 	sets.engaged = {
 		main = "Maxentius",
 		head = "Blistering Sallet +1",
-		neck = "Combatant's Torque",
+		neck = "Null Loop",
 		ear1 = "Crep. Earring",
 		ear2 = "Telos Earring",
 		body = gear.empy.Body,
 		hands = "Gazu Bracelets +1",
 		ring1 = "Petrov Ring",
 		ring2 = "Cacoethic Ring",
-		back = gear.idle_jse_back,
-		waist = "Eschan Stone",
+		back = "Null Shawl",
+		waist = "Null Belt",
 		legs = gear.empy.Legs,
 		feet = "Battlecast Gaiters"
 	}
@@ -799,15 +800,15 @@ function init_gear_sets()
 		sub = "C. Palug Hammer",
 		ammo = "Amar Cluster",
 		head = "Blistering Sallet +1",
-		neck = "Combatant's Torque",
+		neck = "Null Loop",
 		ear1 = "Crep. Earring",
 		ear2 = "Telos Earring",
 		body = gear.empy.Body,
 		hands = "Gazu Bracelets +1",
 		ring1 = "Petrov Ring",
 		ring2 = "Cacoethic Ring",
-		back = gear.idle_jse_back,
-		waist = "Eschan Stone",
+		back = "Null Shawl",
+		waist = "Null Belt",
 		legs = gear.empy.Legs,
 		feet = "Battlecast Gaiters"
 	}

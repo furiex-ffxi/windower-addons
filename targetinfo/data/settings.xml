@@ -45,4 +45,36 @@
             </text>
         </display>
     </global>
+    <cleobabe>
+        <display>
+            <pos>
+                <x>2337</x>
+                <y>78</y>
+            </pos>
+        </display>
+    </cleobabe>
+    <furyex>
+        <display>
+            <pos>
+                <x>2323</x>
+                <y>101</y>
+            </pos>
+        </display>
+    </furyex>
+    <lolababe>
+        <display>
+            <pos>
+                <x>2281</x>
+                <y>129</y>
+            </pos>
+        </display>
+    </lolababe>
+    <mailman>
+        <display>
+            <pos>
+                <x>2330</x>
+                <y>72</y>
+            </pos>
+        </display>
+    </mailman>
 </settings>

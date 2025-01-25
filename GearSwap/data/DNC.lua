@@ -90,7 +90,7 @@ function job_setup()
     state.UseAltStep = M(true, 'Use Alt Step')
     state.CurrentStep = M{['description']='Current Step', 'Main', 'Alt'}
 
-	state.AutoPrestoMode = M(true, 'Auto Presto Mode')
+	state.AutoPrestoMode = M(false, 'Auto Presto Mode')
 	state.DanceStance = M{['description']='Dance Stance','None','Saber Dance','Fan Dance'}
 
 

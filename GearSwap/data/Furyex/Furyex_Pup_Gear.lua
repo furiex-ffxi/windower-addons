@@ -5,7 +5,7 @@ function user_job_setup()
     state.WeaponskillMode:options('Match', 'Normal', 'Acc', 'FullAcc', 'Fodder')
     state.PhysicalDefenseMode:options('PDT')
     state.IdleMode:options('Normal', 'PDT', 'Refresh')
-    state.Weapons:options('None', 'PetWeapons', 'PetWeaponsRanged', 'Godhands', 'Midnights')
+    state.Weapons:options('None', 'PetWeapons', 'PetWeaponsRanged', 'Verethragna', 'Godhands', 'Midnights')
     state.PetMode        = M { ['description'] = 'Pet Mode', 'None', 'Melee', 'Ranged', 'HybridRanged', 'Bruiser', 'Tank',
         'LightTank', 'Magic', 'Heal', 'Nuke' }
     state.AutoRepairMode = M(false, 'Auto Repair Mode')
@@ -178,13 +178,14 @@ function init_gear_sets()
     -- Weaponskill sets
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {
-        head="Mpaca's Cap",
-        body="Mpaca's Doublet",
-        hands="Mpaca's Gloves",
+        ammo = "Neo Animator",
+        head = "Mpaca's Cap",
+        body = "Mpaca's Doublet",
+        hands = "Mpaca's Gloves",
         legs = "Mpaca's Hose",
-        feet="Mpaca's Boots",
+        feet = "Mpaca's Boots",
         neck = "Fotia Gorget",
-        ear1 = "Schere Earring",
+        ear1 = "Mache Earring +1",
         ear2 = "Kara. Earring +1",
         ring1 = "Niqmaddu Ring",
         ring2 = "Gere Ring",
@@ -415,7 +416,7 @@ function init_gear_sets()
     -- Idle sets
 
     sets.idle = {
-        head = "Malignance Chapeau",
+        head = "Null Masque",
         neck = "Loricate Torque +1",
         ear1 = "Etiolation Earring",
         ear2 = "Karagoz Earring +1",
@@ -429,20 +430,12 @@ function init_gear_sets()
         back={ name="Visucius's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Accuracy+20 Attack+20','Pet: Haste+10','System: 1 ID: 1246 Val: 4',}},        
     }
 
-    sets.idle.Refresh = {
-        head = "Rawhide Mask",
-        neck = "Loricate Torque +1",
-        ear1 = "Etiolation Earring",
-        ear2 = "Sanare Earring",
-        body = "Vrikodara Jupon",
-        hands = gear.herculean_refresh_hands,
-        ring1 = "Defending Ring",
-        ring2 = "Dark Ring",
-        back = "Moonlight Cape",
+    sets.idle.Refresh = set_combine(sets.idle, {
+        ring1 = "Stikini Ring +1",
+        ring2 = "Stikini Ring +1",
         waist = "Fucho-no-Obi",
-        legs = "Rawhide Trousers",
         feet = "Hippo. Socks +1"
-    }
+    })
 
     -- Set for idle while pet is out (eg: pet regen gear)
     sets.idle.Pet = set_combine(sets.idle, {
@@ -573,17 +566,19 @@ function init_gear_sets()
         head="Malignance Chapeau",
         body = "Mpaca's Doublet",
         hands = gear.herculean_qa_hands,
-        ear1 = "Schere Earring",
+        ear1 = "Mache Earring +1",
         ear2 = "Kara. Earring +1",
         ring1 = "Niqmaddu Ring",
         ring2 = "Gere Ring",
-        back = "Visucius's Mantle",
+        back = "Null Shawl",
         waist="Moonbow Belt +1",
         legs = "Samnuha Tights",
         feet = gear.herculean_ta_feet
     }
 
-    sets.engaged.Acc = set_combine(sets.engaged, {})
+    sets.engaged.Acc = set_combine(sets.engaged, {
+        ear1 = "Mache Earring +1",
+    })
     sets.engaged.FullAcc = set_combine(sets.engaged, {})
     sets.engaged.Fodder = set_combine(sets.engaged, {})
 
@@ -619,6 +614,7 @@ function init_gear_sets()
 
     -- Weapons sets
     sets.weapons.Godhands = { main = "Godhands", range = "Animator P +1", }
+    sets.weapons.Verethragna = { main = "Verethragna", range = "Animator P +1", }
     sets.weapons.Midnights = { main = "Midnights", range = "Animator P +1", }
     sets.weapons.PetWeapons = { main = "Xiucoatl", range = "Animator P +1", }
     sets.weapons.PetWeaponsRanged = { main = "Xiucoatl", range = "Animator P II +1", }

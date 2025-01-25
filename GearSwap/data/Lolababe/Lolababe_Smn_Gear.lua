@@ -643,8 +643,8 @@ function init_gear_sets()
 
     -- Idle sets
     sets.idle = {
-        -- main = "Mpaca's Staff",
-        -- sub = "Umbra Strap",
+        main = "Mpaca's Staff",
+        sub = "Enki Strap",
         ammo = "Staunch Tathlum +1",
         -- head = "Convoker's Horn +3",
         neck = "Loricate Torque +1",
@@ -692,14 +692,14 @@ function init_gear_sets()
 
     sets.idle.Avatar = {
         main = "Nirvana",
-        -- sub = "Umbra Strap",
+        sub = "Enki Strap",
         ammo = "Epitaph",
         head = "Beckoner's Horn +3",
         neck = "Caller's Pendant",
         ear1 = "C. Palug Earring",
         ear2 = "Evans Earring",
-        -- body = "Shomonjijoe +1",
-        -- hands = gear.merlinic_refresh_hands,
+        body = "Nyame Mail",
+        hands = "Nyame Gauntlets",
         ring1 = "Evoker's Ring",
         ring2 = "Stikini Ring +1",
         -- back = "Moonlight Cape",
@@ -728,6 +728,7 @@ function init_gear_sets()
 
     sets.idle.Spirit = {
         main = "Nirvana",
+        sub = "Emki Strap",
         -- sub = "Umbra Strap",
         ammo = "Epitaph",
         head = "Convoker's Horn +3",

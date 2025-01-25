@@ -699,8 +699,12 @@ function init_gear_sets()
     sets.weapons.DualLeadenMelee = { main = "Tauret", sub = "Gleti's Knife", range = "Fomalhaut" }
     sets.weapons.DualAeolian = { main = "Rostam", sub = "Tauret", range = "Anarchy +2" }
     sets.weapons.DualLeadenMeleeAcc = { main = "Tauret", sub = "Gleti's Knife", range = "Fomalhaut" }
-    sets.weapons.DualRanged = { main = "Qutrub Knife", sub = "Gleti's Knife", range = "Anarchy +2" }
-
+    sets.weapons.DualRanged = {
+		main={ name="Rostam"},
+        sub="Gleti's Knife",
+		range={ name="Fomalhaut", augments={'Path: A',}},
+		ammo="Chrono Bullet",
+    }
     -- Engaged sets
 
     -- Variations for TP weapon and (optional) offense/defense modes.  Code will fall back on previous

@@ -17,7 +17,7 @@ function user_job_setup()
     gear.MAbullet = "Living Bullet" --For MAB WS, do not put single-use bullets here.
     gear.QDbullet = "Animikii Bullet"
     options.ammo_warning_limit = 15
-    Ikenga_vest_bonus = 100  -- It is 190 at R20. Uncomment if you need to manually adjust because you are using below R20
+    Ikenga_vest_bonus = 180  -- It is 190 at R20. Uncomment if you need to manually adjust because you are using below R20
 
     gear.tp_ranger_jse_back = { name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Store TP"+10','Damage taken-5%',}}
     gear.snapshot_jse_back = { name = "Camulus's Mantle", augments = { '"Snapshot"+10', } }

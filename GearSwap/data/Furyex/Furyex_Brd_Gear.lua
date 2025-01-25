@@ -336,8 +336,6 @@ function init_gear_sets()
 	sets.midcast.SongRecast = {
 		--main=gear.grioavolr_fc_staff,
 		--sub="Clerisy Strap +1",
-		range="Gjallarhorn",
-		ammo=empty,
 		head = "Bunzi's Hat",
 		neck="Baetyl Pendant",
 		ear1 = "Enchntr. Earring +1",
@@ -499,8 +497,12 @@ function init_gear_sets()
 	-- Gear to enhance certain classes of songs
 	sets.midcast.Lullaby = { }
 	sets.midcast.Lullaby.Resistant = { range = "Gjallarhorn" }
--- 	sets.midcast.Lullaby.Duration = sets.midcast.Lullaby
+	sets.midcast.Lullaby.Duration = set_combine(
+		sets.midcast.Lullaby,
+		{
 
+		}
+	)
 	sets.midcast.Ballad = { legs = gear.empy_legs }
 	sets.midcast.Minne = {legs="Mousai Seraweels +1"}
 	sets.midcast.Carol = {hands="Mousai Gages +1"}
@@ -569,19 +571,19 @@ function init_gear_sets()
 	}
 
 	sets.idle = {
-		-- range = "Loughnashade",
-		range = { name = "Linos", augments = { 'Accuracy+15 Attack+15', '"Store TP"+4', 'Quadruple Attack +3', } },		head = gear.empy_head,
+		range = "Loughnashade",
+		head="Null Masque",
 		body = "Adamantite Armor",
-		hands = gear.empy_hands,
-		legs = gear.af_legs,
-		feet = gear.empy_feet,
+		hands = sets.Nyame.Hands,
+		legs = sets.Nyame.Legs,
+		feet = sets.Nyame.Feet,
 		neck = "Warder's Charm +1",
 		waist = "Plat. Mog. Belt",
 		ear1 = "Eabani Earring",
 		ear2 = "Etiolation Earring",
 		ring1 = "Karieyh Ring",
 		ring2 = "Fortified Ring",
-		back = gear.tp_jse_back,
+		back = "Null Shawl",
 	}
 
 	sets.idle.Refresh = set_combine(sets.idle, {
@@ -621,11 +623,11 @@ function init_gear_sets()
 		main="Daybreak",
 		sub = "Genmei Shield",
 		ammo = "Staunch Tathlum +1",
-		head="Nyame Helm",
+		head="Null Masque",
 		neck="Loricate Torque +1",
 		ear1="Etiolation Earring",
 		ear2="Sanare Earring",
-		body="Nyame Mail",
+		body = "Adamantite Armor",
 		hands="Nyame Gauntlets",
 		ring1="Defending Ring",
 		ring2="Shadow Ring",
@@ -715,7 +717,7 @@ function init_gear_sets()
 		body = "Ashera Harness",
 		hands = "Bunzi's Gloves",
 		legs = "Volte Tights",
-		feet = "Volte Spats",
+		feet={ name="Nyame Sollerets", augments={'Path: B',}},
 		neck = { name = "Bard's Charm +2", augments = { 'Path: A', } },
 		waist = { name = "Sailfi Belt +1", augments = { 'Path: A', } },
 		ear1 = "Telos Earring",
@@ -755,7 +757,7 @@ function init_gear_sets()
 		ear2 = "Digni. Earring",
 	})
 	sets.engaged.DW = set_combine(sets.engaged, {
-		ear2 = "Eabani Earring",
+		ear1 = "Eabani Earring",
 		waist = "Reiki Yotai",
 	})
 	-- sets.engaged.DW.DT = set_combine(sets.engaged.DW)
