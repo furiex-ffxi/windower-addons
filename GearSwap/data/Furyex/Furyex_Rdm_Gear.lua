@@ -491,8 +491,8 @@ function init_gear_sets()
 		ear2 = "Leth. Earring +1",
 		body = RELIC.Body,
 		hands = AF.Hands,
-		ring1 = { name="Stikini Ring +1", bag="wardrobe1" },
-		ring2 = { name="Stikini Ring +1", bag="wardrobe2" },
+		ring1 = { name="Stikini Ring +1", bag="wardrobe2" },
+		ring2 = "Lehko's Ring",
 		back = "Ghostfyre Cape",
 		waist = "Embla Sash",
 		legs={ name="Telchine Braconi", augments={'"Regen"+2','Enh. Mag. eff. dur. +10',}},	
@@ -895,7 +895,7 @@ function init_gear_sets()
 	sets.idle.Town = {
 		main = "Murgleis",
 		sub = "Mpu Gandring",
-        head = sets.Nyame.Head,
+        head = "Null Masque",
         hands =	sets.Nyame.Hands,
         body = sets.Nyame.Body,
         legs = sets.Nyame.Legs,
@@ -1023,7 +1023,6 @@ function init_gear_sets()
 	}
 
 	sets.engaged.Subtle = set_combine(sets.engaged, {
-		neck="Subtlety Spec.",
 		left_ear="Sherida Earring",
 		left_ring="Apate Ring",
 	})	

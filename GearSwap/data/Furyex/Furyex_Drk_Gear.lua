@@ -607,7 +607,7 @@ function init_gear_sets()
 	})
 
 	sets.engaged.Subtle = set_combine(sets.engaged, {
-		-- body = "Dagon Breast.",
+		body = "Dagon Breast.",
 		head="Sakpata's Helm",
 		hands = "Sakpata's Gauntlets",
 		legs = "Sakpata's Cuisses",

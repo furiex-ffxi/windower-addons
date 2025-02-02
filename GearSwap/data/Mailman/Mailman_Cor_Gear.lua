@@ -472,7 +472,7 @@ function init_gear_sets()
 		legs=gear.Empy.Legs,
 		feet=sets.Malignance.Feet,
 		neck={ name="Loricate Torque +1", augments={'Path: A',}},
-		waist="Sailfi Belt +1",
+		waist="Null Belt",
 		left_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
 		right_ear="Etiolation Earring",
 		left_ring="Defending Ring",
@@ -498,7 +498,7 @@ function init_gear_sets()
 
     sets.idle.Refresh = {
         ammo = gear.RAbullet,
-        head = "Rawhide Mask",
+        head = "Null Masque",
         neck = "Loricate Torque +1",
         ear1 = "Genmei Earring",
         ear2 = "Ethereal Earring",
@@ -670,7 +670,7 @@ function init_gear_sets()
         back  Camulus's Mantle DEX Dual Wield
     ]]
     sets.engaged = {
-        head=sets.Malignance.Head,
+        head= sets.Malignance.Head,
         neck = "Iskur Gorget",
         ear1 = "Telos Earring",
         ear2 = "Dedition Earring",
@@ -681,7 +681,8 @@ function init_gear_sets()
         back = gear.tp_jse_back,
         waist = "Windbuffet Belt +1",
         legs = gear.Empy.Legs,
-        feet = "Herculean Boots"
+        feet = "Herculean Boots",
+        back = gear.tp_jse_back,
     }
 
     sets.engaged.Acc = set_combine(sets.engaged, {
@@ -696,7 +697,7 @@ function init_gear_sets()
         feet = sets.Malignance.Feet,
         neck="Iskur Gorget",
         waist="Sailfi Belt +1",
-        left_ear="Crep. Earring",
+        left_ear = "Telos Earring",
         right_ear="Dedition Earring",
 		ring1="Lehko's Ring",
         right_ring="Epona's Ring",

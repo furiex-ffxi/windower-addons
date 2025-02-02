@@ -178,7 +178,7 @@ function init_gear_sets()
     -- Weaponskill sets
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {
-        ammo = "Neo Animator",
+        range = "Neo Animator",
         head = "Mpaca's Cap",
         body = "Mpaca's Doublet",
         hands = "Mpaca's Gloves",

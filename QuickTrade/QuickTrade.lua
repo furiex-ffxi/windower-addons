@@ -144,6 +144,8 @@ function quicktrade(arg)
 	}
 	
 	local silverVoucherIDs = {
+		{id = 9275, name = 'Mars Orb', count = 0, stacks = 0, stacksize = 1},
+		{id = 9276, name = 'Venus Orb', count = 0, stacks = 0, stacksize = 1},
 		{id = 9277, name = 'Silver voucher', count = 0, stacks = 0, stacksize = 99},
 	}
 

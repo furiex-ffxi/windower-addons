@@ -47,7 +47,7 @@ function init_gear_sets()
 	gear.af.Head = "Rune. Bandeau +3"
 	gear.af.Body = "Runeist Coat +3"
 	gear.af.Hands = "Runeist Mitons +3"
-	gear.af.Legs = "Rune. Trousers +2"
+	gear.af.Legs = "Rune. Trousers +3"
 	gear.af.Feet = "Runeist Bottes +3"
 
 	gear.relic = {}
@@ -263,7 +263,7 @@ function init_gear_sets()
 		sub = "Chanter's Shield",
 		ammo = "Impatiens",
 		head = gear.af.Head,
-		neck = "Loricate Torque +1",
+		neck = "Warder's Charm +1",
 		ear1 = "Odnowa Earring +1",
 		ear2 = "Tuisto Earring",
 		body = gear.af.Body,
@@ -447,7 +447,7 @@ function init_gear_sets()
 		ring2 = "Shadow Ring",
 		hands = gear.empy.Hands,
 		back = gear.sird_jse_back,
-		waist = "Plat. Mog. Belt",
+		waist = "Engraved Belt",
 		legs = gear.relic.Legs,
 		feet = gear.empy.Feet,
 	})
@@ -775,7 +775,7 @@ function init_gear_sets()
 		neck = "Warder's Charm +1",
 		ear1 = "Odnowa Earring +1",
 		ear2 = "Erilaz Earring +2",
-		body = "Adamantite Armor",
+		body = gear.empy.Body,
 		hands = gear.empy.Hands,
 		ring1 = "Shadow Ring",
 		ring2 = "Defending Ring",

@@ -6,7 +6,7 @@ function user_job_setup()
     state.PhysicalDefenseMode:options('PDT')
     state.MagicalDefenseMode:options('MDT')
     state.ResistDefenseMode:options('MEVA')
-    state.Weapons:options('Godhands', 'Verethragna', 'Barehanded')
+    state.Weapons:options( 'Verethragna','Godhands','Barehanded')
 
     state.ExtraMeleeMode = M {
         ['description'] = 'Extra Melee Mode',
@@ -34,16 +34,16 @@ function init_gear_sets()
     sets.precast.JA['Hundred Fists'] = {
         legs = "Hes. Hose +3"
     }
-    sets.precast.JA['Boost'] = { hands = "Anchor. Gloves +2" }
+    sets.precast.JA['Boost'] = { hands = "Anchor. Gloves +3" }
     sets.precast.JA['Boost'].OutOfCombat = {
         waist = "Ask Sash",
-        hands = "Anchor. Gloves +2"
+        hands = "Anchor. Gloves +3"
     } -- Remove Haste and Add Slow Gear.
     sets.precast.JA['Dodge'] = {
         feet = "Anch. Gaiters +2"
     }
     sets.precast.JA['Focus'] = {
-        head = "Anch. Crown +2"
+        head = "Anch. Crown +3"
     }
     sets.precast.JA['Counterstance'] = {
         feet = "Hes. Gaiters +3"
@@ -65,7 +65,7 @@ function init_gear_sets()
     }
 
     sets.precast.JA['Chakra'] = {
-        body = "Anch. Cyclas +2",
+        body = "Anch. Cyclas +3",
         hands = {
             name = "Hes. Gloves +3",
             augments = {'Enhances "Invigorate" effect'}
@@ -748,7 +748,7 @@ function init_gear_sets()
             augments = {'Path: A'}
         },
         hands = "Malignance Gloves",
-        legs = "Anch. Hose +2",
+        legs = "Anch. Hose +3",
         feet = {
             name = "Hes. Gaiters +3",
             augments = {'Enhances "Mantra" effect'}

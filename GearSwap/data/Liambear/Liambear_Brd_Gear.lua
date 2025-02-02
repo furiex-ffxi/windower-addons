@@ -306,12 +306,12 @@ function init_gear_sets()
 	sets.midcast.Paeon = { range = info.ExtraSongInstrument }
 	sets.midcast.Threnody = {body="Mou. Manteel +1"}
 	sets.midcast['Honor March'] = set_combine(sets.midcast.March, { range = "Marsyas" })
-	sets.midcast['Horde Lullaby II'] = { range = "Marsyas", hands="Brioso Cuffs +3" }
-	sets.midcast['Horde Lullaby II'].AoE = { range = "Daurdabla", hands="Brioso Cuffs +3" }
-	sets.midcast['Horde Lullaby II'].Resistant = { range = "Gjallarhorn", hands="Brioso Cuffs +3" }
-	sets.midcast['Horde Lullaby'] = { range = "Marsyas", hands="Brioso Cuffs +3" }
-	sets.midcast['Horde Lullaby'].AoE = { range = "Daurdabla", hands="Brioso Cuffs +3" }
-	sets.midcast['Horde Lullaby'].Resistant = { range = "Gjallarhorn", hands="Brioso Cuffs +3" }
+	sets.midcast['Horde Lullaby II'] = { range = "Blurred Harp +1", hands="Brioso Cuffs +3" }
+	sets.midcast['Horde Lullaby II'].AoE = { range = "Blurred Harp +1", hands="Brioso Cuffs +3" }
+	sets.midcast['Horde Lullaby II'].Resistant = { range = "Blurred Harp +1", hands="Brioso Cuffs +3" }
+	sets.midcast['Horde Lullaby'] = { range = "Blurred Harp +1", hands="Brioso Cuffs +3" }
+	sets.midcast['Horde Lullaby'].AoE = { range = "Blurred Harp +1", hands="Brioso Cuffs +3" }
+	sets.midcast['Horde Lullaby'].Resistant = { range = "Blurred Harp +1", hands="Brioso Cuffs +3" }
 	sets.midcast['Magic Finale'] = { range = "Gjallarhorn" }
 	sets.midcast["Goblin Gavotte"] = { range = info.ExtraSongInstrument }
 	sets.midcast["Goddess's Hymnus"] = { range = info.ExtraSongInstrument }
@@ -357,7 +357,7 @@ function init_gear_sets()
         ear2="Regal Earring",
         ring1={name="Stikini Ring +1", bag="wardrobe3"},
         ring2="Metamor. Ring +1",
-        waist="Acuity Belt +1",
+        waist="Null Belt",
 		back = gear.magic_jse_back,
 	}
 

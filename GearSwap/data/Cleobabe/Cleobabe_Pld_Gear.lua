@@ -4,7 +4,7 @@ function user_job_setup()
 	state.OffenseMode:options('Normal','Acc')
     state.HybridMode:options('Tank','TankMagic','Normal')
     state.WeaponskillMode:options('Match','Normal', 'Acc')
-    state.CastingMode:options('Normal','SIRD')
+    state.CastingMode:options('Normal','SIRD', 'DT')
 	state.Passive:options('None','AbsorbMP')
     state.PhysicalDefenseMode:options('PDT_HP','PDT','PDT_Reraise')
     state.MagicalDefenseMode:options('MDT_HP','MDT','MDT_Reraise')
@@ -351,7 +351,7 @@ function init_gear_sets()
         left_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
         right_ear="Chev. Earring +1",
         left_ring="Gelatinous Ring +1",
-        right_ring="Eihwaz Ring",
+        right_ring="Begrudging Ring",
         back=gear.jse_cure_back,
     }
             
@@ -367,7 +367,7 @@ function init_gear_sets()
         left_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
         right_ear="Chev. Earring +1",
         left_ring="Gelatinous Ring +1",
-        right_ring="Eihwaz Ring",
+        right_ring="Begrudging Ring",
         back=gear.jse_cure_back,
     }
 
@@ -379,14 +379,15 @@ function init_gear_sets()
         body={ name="Souv. Cuirass +1", augments={'VIT+12','Attack+25','"Refresh"+3',}},
         -- body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
         hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
-        legs="Founder's Hose",
+        legs={ name="Sakpata's Cuisses", augments={'Path: A',},priority=1},
         feet="Odyssean Greaves",
         neck="Moonlight Necklace",
         waist="Creed Baudrier",
         left_ear="Knightly Earring",
         right_ear={ name="Nourish. Earring +1", augments={'Path: A',}},
         left_ring={ name="Moonlight Ring",priority=1},
-        right_ring={ name="Apeile Ring +1", augments={'Path: A',}},
+        right_ring = "Defending Ring",
+        -- right_ring={ name="Apeile Ring +1", augments={'Path: A',}},
         back=gear.jse_cure_back,
     }
 		
@@ -496,8 +497,7 @@ function init_gear_sets()
 
 	sets.midcast.Stoneskin = set_combine(sets.midcast['Enhancing Magic'], {waist="Siegel Sash"})
 
-    -- should be Srivatsa
-    sets.midcast.Protect = set_combine(sets.midcast['Enhancing Magic'], {sub="Duban",ring2="Sheltered Ring"}) 
+    sets.midcast.Protect = set_combine(sets.midcast['Enhancing Magic'], {sub="Srivatsa",ring2="Sheltered Ring"}) 
     sets.midcast.Shell = set_combine(sets.midcast['Enhancing Magic'], {ring2="Sheltered Ring"})
 	
 	sets.midcast.Phalanx = set_combine(sets.midcast['Enhancing Magic'], {
