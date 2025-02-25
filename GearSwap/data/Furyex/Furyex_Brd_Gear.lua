@@ -5,7 +5,7 @@ function user_job_setup()
 	state.HybridMode:options('Normal', 'DT')
 	state.CastingMode:options('Normal', 'Duration', 'Resistant')
 	state.IdleMode:options('Normal', 'PDT', 'NoRefresh')
-	state.Weapons:options('None', 'Naegling', 'Aeneas', 'Carnwenhan', 'Mpu', 'Twash', 'Qutrub', 'DualCarnwenhan', 'DualMpu', 'DualWeapons', 'DualNaegling', 'DualNaeglingAcc', 'DualTwash', 'DualAeolian')
+	state.Weapons:options('None', 'Naegling', 'Aeneas', 'Carnwenhan', 'Mpu', 'Twash', 'Xoanon', 'Qutrub', 'DualCarnwenhan', 'DualMpu', 'DualWeapons', 'DualNaegling', 'DualNaeglingAcc', 'DualTwash', 'DualAeolian')
 	-- Whether to use Carn (or song daggers in general) under a certain threshhold even when weapons are locked.
 	state.CarnMode           = M { 'Always', '300', '1000', 'Never' }
 
@@ -68,6 +68,7 @@ function init_gear_sets()
 	sets.weapons.Mpu = { main = "Mpu Gandring", sub = "Genmei Shield" }
 	sets.weapons.Twash = { main = "Twashtar", sub = "Genmei Shield" }
 	sets.weapons.Naegling = { main = "Naegling", sub = "Genmei Shield" }
+	sets.weapons.Xoanon = { main = "Xoanon", sub = "Enki Strap" }
 	sets.weapons.Qutrub = { main = "Qutrub Knife", sub = "Genmei Shield" }
 	sets.weapons.DualCarnwenhan = {main = "Carnwenhan", sub = "Fusetto +2"}	
 	sets.weapons.DualWeapons = { main = "Kartika", sub = "Gleti's Knife" } -- Aenas

@@ -13,6 +13,12 @@ profiles['powder'] = S{
 
 -- //sellnpc junk
 profiles['junk'] = S{
+    'Earth Spirit',
+    'Mithran Tomato',
+    'Herb Seeds',
+    'Little Worm',
+    'Twitherym Wing',
+    'Wind Cluster',
     'Carrier Crab Carapace',
     'Kazham Peppers',
     'Mhaura Garlic',

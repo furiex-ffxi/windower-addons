@@ -526,6 +526,7 @@ function init_gear_sets()
 
 	sets.midcast.Protect = set_combine(sets.midcast['Enhancing Magic'],
 		{
+			ring1 = "Mephitas' Ring +1",
 			ring2 = "Sheltered Ring",
 			feet = gear.relic.feet,
 			ear1 = "Gifted Earring",
@@ -830,8 +831,7 @@ function init_gear_sets()
 	sets.idle = {
 		main = "Malignance Pole",
 		sub = "Umbra Strap",
-		-- ammo = "Homiliary",
-		ammo = "Staunch Tathlum +1",
+		ammo = "Homiliary",
 		head = "Volte Beret",
 		neck = "Loricate Torque +1",
 		ear1 = "Etiolation Earring",

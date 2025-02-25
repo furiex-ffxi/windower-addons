@@ -8,7 +8,13 @@ return {
             ["complete_reaction"]="facemob",
             ["ready_reaction"]="turnaround"
         }
-    },   
+    },
+    ["Locus Camelopard"] = {
+        ["Cold Stare"] = {
+            ["complete_reaction"] = "facemob",
+            ["ready_reaction"] = "turnaround"
+        }
+    },       
     ["Bozzetto Skathi"]={
         ["Blight Dance"]={
             ["complete_reaction"]="facemob", 

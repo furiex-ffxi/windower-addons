@@ -34,9 +34,9 @@ function user_job_setup()
     send_command('bind @backspace input /ja "Snake Eye" <me>')
     send_command('bind ^@!backspace input /ja "Crooked Cards" <me>')
 
-    send_command('bind ^\\\\ input /ja "Random Deal" <me>')
+    send_command('bind ^\\ input /ja "Random Deal" <me>')
     send_command('bind !\\\\ input /ja "Bolter\'s Roll" <me>')
-    send_command('bind ^@!\\\\ gs c toggle LuzafRing')
+    send_command('bind ^@!\\ gs c toggle LuzafRing')
     send_command('bind @f7 gs c toggle RngHelper')
     send_command('bind !f7 gs c cycle CompensatorMode')
 
@@ -678,7 +678,6 @@ function init_gear_sets()
         hands = "Adhemar Wrist. +1",
 		ring1="Lehko's Ring",
         ring2 = "Epona's Ring",
-        back = gear.tp_jse_back,
         waist = "Windbuffet Belt +1",
         legs = gear.Empy.Legs,
         feet = "Herculean Boots",

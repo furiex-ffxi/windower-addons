@@ -38,5 +38,11 @@ return {
             ["complete_reaction"]="trust set autofacemobmode auto",
             ["ready_reaction"]=""
         }        
-    }    
+    },
+    ["Kei"]={
+        ["Dancing Fullers"]={
+            ["ready_reaction"]="runaway 12",
+            ["complete_reaction"]="runto 3"
+        }
+    },
 }

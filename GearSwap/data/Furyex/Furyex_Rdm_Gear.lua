@@ -860,8 +860,7 @@ function init_gear_sets()
 
 	-- Idle sets
 	sets.idle = {
-        -- ammo	= "Homiliary",
-        ammo = "Staunch Tathlum +1",
+        ammo = "Homiliary",
         head = RELIC.Head,
 		neck = "Null Loop",
         body = EMPY.Body,

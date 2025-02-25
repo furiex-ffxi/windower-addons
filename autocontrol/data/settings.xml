@@ -183,6 +183,22 @@
                 <slot11>attuner</slot11>
                 <slot12>speedloader ii</slot12>
             </sortie>
+            <upinarms>
+                <frame>valoredge frame</frame>
+                <head>valoredge head</head>
+                <slot01>steam jacket</slot01>
+                <slot02>magniplug</slot02>
+                <slot03>magniplug ii</slot03>
+                <slot04>tension spring iv</slot04>
+                <slot05>optic fiber</slot05>
+                <slot06>heatsink</slot06>
+                <slot07>turbo charger</slot07>
+                <slot08>turbo charger ii</slot08>
+                <slot09>auto-repair kit iii</slot09>
+                <slot10>armor plate ii</slot10>
+                <slot11>armor plate iii</slot11>
+                <slot12>stabilizer v</slot12>
+            </upinarms>
         </autosets>
         <bg>
             <alpha>255</alpha>

@@ -495,8 +495,7 @@ function init_gear_sets()
 		ring1 = "Stikini Ring +1",
 		ring2 = "Stikini Ring +1",
 		back = "Shadow Mantle",
-		waist = "Plat. Mog. Belt",
-		-- waist = "Flume Belt +1",
+		waist = "Null Belt",
 	}
 
 	sets.idle.PDT = set_combine(sets.idle, {
