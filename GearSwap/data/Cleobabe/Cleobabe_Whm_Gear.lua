@@ -829,15 +829,15 @@ function init_gear_sets()
 
 	-- Idle sets (default idle set not needed since the other three are defined, but leaving for testing purposes)
 	sets.idle = {
-		main = "Malignance Pole",
-		sub = "Umbra Strap",
+		main = "Daybreak",
+		sub = "Genmei Shield",
 		ammo = "Homiliary",
-		head = "Volte Beret",
+		head = "Null Masque",
 		neck = "Loricate Torque +1",
 		ear1 = "Etiolation Earring",
 		ear2 = "Ebers Earring +1",
 		body = gear.empy.body,
-		hands = "Volte Gloves",
+		hands = "Nyame Gauntlets",
 		ring1={name="Stikini Ring +1", bag="wardrobe3"},
 		ring2={name="Stikini Ring +1", bag="wardrobe4"},
 		back = "Alaunus's Cape",

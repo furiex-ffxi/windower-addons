@@ -680,7 +680,7 @@ function init_gear_sets()
 
     sets.idle = {
         ammo = "Crepuscular Pebble",
-        head = "Turms Cap +1",
+        head = "Null Masque",
         body = {
             name = "Gleti's Cuirass",
             augments = {'Path: A'}

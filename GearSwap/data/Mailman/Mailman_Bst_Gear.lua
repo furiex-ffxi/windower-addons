@@ -91,18 +91,18 @@ function init_gear_sets()
     sets.precast.JA['Killer Instinct'] = {} -- head="Ankusa Helm +1"
     sets.precast.JA['Bestial Loyalty'] = {
         body = "Mirke Wardecors",
-        hands = "Ankusa Gloves +1"
+        hands = "Ankusa Gloves +3"
     }
     sets.precast.JA['Call Beast'] = sets.precast.JA['Bestial Loyalty']
     sets.precast.JA.Familiar = {
-        legs = "Ankusa Trousers +1"
+        legs = "Ankusa Trousers +3"
     }
     sets.precast.JA.Tame = {
-        head = "Totemic Helm +1"
+        head = "Totemic Helm +3"
     }
     sets.precast.JA.Spur = {
         back = "Artio's Mantle",
-        feet = "Nukumi Ocreae +1"
+        feet = "Nukumi Ocreae +3"
     }
     sets.SpurAxe = {
         main = "Skullrender"
@@ -124,7 +124,7 @@ function init_gear_sets()
         ring2 = "Stikini Ring +1",
         back = "Pastoralist's Mantle",
         waist = "Klouskap Sash",
-        legs = "Ankusa Trousers +1",
+        legs = "Ankusa Trousers +3",
         feet = "Ankusa Gaiters +3"
     }
 
@@ -224,7 +224,7 @@ function init_gear_sets()
         back = "Moonlight Cape",
         waist = "Klouskap Sash",
         legs = "Tali'ah Sera. +2",
-        feet = "Tot. Gaiters +1"
+        feet = "Tot. Gaiters +2"
     }
 
     sets.midcast.Utsusemi = set_combine(sets.midcast.FastRecast, {
@@ -243,7 +243,7 @@ function init_gear_sets()
         back = "Pastoralist's Mantle",
         waist = "Klouskap Sash",
         legs = "Tali'ah Sera. +2",
-        feet = "Tot. Gaiters +1"
+        feet = "Tot. Gaiters +2"
     }
 
     sets.midcast.Curaga = sets.midcast.Cure
@@ -286,8 +286,8 @@ function init_gear_sets()
 
     sets.midcast['Elemental Magic'] = sets.midcast.FastRecast
 
-    sets.midcast.Helix = sets.midcast['Elemental Magic']
-    sets.midcast.Helix.Resistant = sets.midcast['Elemental Magic']
+    sets.midcast.Helix = set_combine(sets.midcast['Elemental Magic'], {})
+    sets.midcast.Helix.Resistant = set_combine(sets.midcast['Elemental Magic'], {})
 
     -- WEAPONSKILLS
     -- Default weaponskill sets.
@@ -336,7 +336,7 @@ function init_gear_sets()
         back = "Letalis Mantle",
         waist = "Olseni Belt",
         legs = "Meg. Chausses +2",
-        feet = "Nukumi Ocreae +1"
+        feet = "Nukumi Ocreae +3"
     }
 
     sets.precast.WS.FullAcc = {
@@ -352,7 +352,7 @@ function init_gear_sets()
         back = "Ground. Mantle +1",
         waist = "Olseni Belt",
         legs = "Flamma Dirs +2",
-        feet = "Nukumi Ocreae +1"
+        feet = "Nukumi Ocreae +3"
     }
 
     sets.precast.WS.Fodder = {
@@ -368,7 +368,7 @@ function init_gear_sets()
         back = "Ground. Mantle +1",
         waist = "Fotia Belt",
         legs = "Meg. Chausses +2",
-        feet = "Nukumi Ocreae +1"
+        feet = "Nukumi Ocreae +3"
     }
 
     -- Specific weaponskill sets.
@@ -396,7 +396,7 @@ function init_gear_sets()
         back = "Toro Cape",
         waist = "Fotia Belt",
         legs = "Tali'ah Sera. +2",
-        feet = "Tot. Gaiters +1"
+        feet = "Tot. Gaiters +2"
     }
 
     sets.precast.WS['Cloudsplitter'] = set_combine(sets.precast.WS['Primal Rend'], {})
@@ -416,18 +416,18 @@ function init_gear_sets()
         main = gear.PHYKumbha1,
         sub = gear.PHYKumbha2,
         ammo = "Voluspa Tathlum",
-        head = "Totemic Helm +1",
+        head = "Totemic Helm +3",
         neck = "Shulmanu Collar",
         ear1 = "Enmerkar Earring",
         ear2 = "Domesticator's Earring",
         body = gear.taeon_pet_body,
-        hands = "Nukumi Manoplas +1",
+        hands = "Nukumi Manoplas +3",
         ring1 = "Varar Ring +1",
         ring2 = "C. Palug Ring",
         back = "Artio's Mantle",
         waist = "Incarnation Sash",
         legs = gear.valorous_physical_pet_legs,
-        feet = "Totemic Gaiters +1"
+        feet = "Totemic Gaiters +2"
     }
 
     sets.midcast.Pet.SomeAcc = set_combine(sets.midcast.Pet.WS, {
@@ -438,13 +438,13 @@ function init_gear_sets()
     sets.midcast.Pet.Acc = set_combine(sets.midcast.Pet.WS, {
         main = "Kerehcatl",
         sub = "Hunahpu",
-        head = "Totemic Helm +1",
+        head = "Totemic Helm +3",
         hands = "Regimen Mittens"
     })
     sets.midcast.Pet.FullAcc = set_combine(sets.midcast.Pet.WS, {
         main = "Kerehcatl",
         sub = "Hunahpu",
-        head = "Totemic Helm +1",
+        head = "Totemic Helm +3",
         hands = "Regimen Mittens"
     })
 
@@ -459,11 +459,11 @@ function init_gear_sets()
         ring2 = "Tali'ah Ring",
         back = "Artio's Mantle",
         waist = "Incarnation Sash",
-        head="Gleti's Mask",
-        body="Gleti's Cuirass",
-        hands="Gleti's Gauntlets",
-        legs="Gleti's Breeches",
-        feet="Gleti's Boots",    
+        head="Nuk. Cabasset +3",
+        body="Nukumi Gausape +3",
+        hands="Nukumi Manoplas +3",
+        legs="Nukumi Quijotes +3",
+        feet="Nukumi Ocreae +3",    
     }
 
     sets.midcast.Pet.DebuffReady = {
@@ -493,7 +493,7 @@ function init_gear_sets()
         ear1 = "Enmerkar Earring",
         ear2 = "Domesticator's Earring",
         body = gear.valorous_pet_body,
-        hands = "Nukumi Manoplas +1",
+        hands = "Nukumi Manoplas +3",
         ring1 = "Varar Ring +1",
         ring2 = "Varar Ring +1",
         back = "Artio's Mantle",
@@ -511,13 +511,13 @@ function init_gear_sets()
         legs = "Gleti's Breeches"
     }
     sets.midcast.Pet.Neutral = {
-        head = "Totemic Helm +1"
+        head = "Totemic Helm +3"
     }
     sets.midcast.Pet.Favorable = {
-        head = "Nukumi Cabasset"
+        head = "Nukumi Cabasset +3"
     }
     sets.midcast.Pet.TPBonus = {
-        hands = "Nukumi Manoplas +1"
+        hands = "Nukumi Manoplas +3"
     }
 
     -- RESTING
@@ -596,7 +596,7 @@ function init_gear_sets()
         ear1 = "Enmerkar Earring",
         ear2 = "Handler's Earring +1",
         body = "Tot. Jackcoat +3",
-        hands = "Ankusa Gloves +1",
+        hands = "Ankusa Gloves +3",
         ring1 = "Defending Ring",
         ring2 = "C. Palug Ring",
         back = "Artio's Mantle",
@@ -632,7 +632,7 @@ function init_gear_sets()
         ear1 = "Enmerkar Earring",
         ear2 = "Handler's Earring +1",
         body = "Tot. Jackcoat +3",
-        hands = "Ankusa Gloves +1",
+        hands = "Ankusa Gloves +3",
         ring1 = "Defending Ring",
         ring2 = "C. Palug Ring",
         back = "Artio's Mantle",
@@ -655,7 +655,7 @@ function init_gear_sets()
         back = "Moonlight Cape",
         waist = "Flume Belt +1",
         legs = "Tali'ah Sera. +2",
-        feet = "Nukumi Ocreae +1"
+        feet = "Nukumi Ocreae +3"
     }
 
     sets.defense.PetPDT = {
@@ -665,7 +665,7 @@ function init_gear_sets()
         ear1 = "Enmerkar Earring",
         ear2 = "Handler's Earring +1",
         body = "Tot. Jackcoat +3",
-        hands = "Ankusa Gloves +1",
+        hands = "Ankusa Gloves +3",
         ring1 = "Defending Ring",
         ring2 = "C. Palug Ring",
         back = "Pastoralist's Mantle",
@@ -681,7 +681,7 @@ function init_gear_sets()
         ear1 = "Enmerkar Earring",
         ear2 = "Handler's Earring +1",
         body = "Tot. Jackcoat +3",
-        hands = "Ankusa Gloves +1",
+        hands = "Ankusa Gloves +3",
         ring1 = "Defending Ring",
         ring2 = "C. Palug Ring",
         back = "Pastoralist's Mantle",
@@ -693,7 +693,7 @@ function init_gear_sets()
     sets.defense.PetMEVA = sets.defense.PetMDT
 
     sets.defense.PKiller = set_combine(sets.defense.PDT, {
-        body = "Nukumi Gausape +1"
+        body = "Nukumi Gausape +3"
     })
     sets.defense.Reraise = set_combine(sets.defense.PDT, {
         head = "Twilight Helm",
@@ -713,7 +713,7 @@ function init_gear_sets()
         back = "Engulfer Cape +1",
         waist = "Engraved Belt",
         legs = "Tali'ah Sera. +2",
-        feet = "Nukumi Ocreae +1"
+        feet = "Nukumi Ocreae +3"
     }
 
     sets.defense.MEVA = {
@@ -732,7 +732,7 @@ function init_gear_sets()
     }
 
     sets.defense.MKiller = set_combine(sets.defense.MDT, {
-        body = "Nukumi Gausape +1"
+        body = "Nukumi Gausape +3"
     })
 
     sets.Kiting = {
@@ -1031,7 +1031,7 @@ function init_gear_sets()
     sets.engaged.DW.PetTank.Fodder = set_combine(sets.engaged.DW.Fodder, {})
 
     sets.buff['Killer Instinct'] = {
-        body = "Nukumi Gausape +1"
+        body = "Nukumi Gausape +3"
     }
     sets.buff.Doom = set_combine(sets.buff.Doom, {})
     sets.buff.Sleep = {
@@ -1303,8 +1303,6 @@ function select_default_macro_book()
         set_macro_page(6, 16)
     end
 end
-
-state.Weapons:options('None', 'PetPDTAxe', 'DualWeapons')
 
 autows_list = {
     ['PetPDTAxe'] = 'Ruinator',

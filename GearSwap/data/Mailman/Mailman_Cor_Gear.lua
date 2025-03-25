@@ -95,6 +95,9 @@ function init_gear_sets()
     sets.precast.CorsairRoll["Blitzer's Roll"] = set_combine(sets.precast.CorsairRoll, { head = gear.Empy.Head })
     sets.precast.CorsairRoll["Tactician's Roll"] = set_combine(sets.precast.CorsairRoll, { body = gear.Empy.Body })
     sets.precast.CorsairRoll["Allies' Roll"] = set_combine(sets.precast.CorsairRoll, { hands = gear.Empy.Hands })
+    sets.precast.CorsairRoll["Bolter's Roll"] = {
+        main={ name="Rostam", augments={'Path: C'}, bag="Wardrobe 2", priority=1}, -- +8 Effect and 60 sec Duration
+    }
 
     sets.precast.CorsairShot = {
         ammo = gear.QDbullet,
@@ -322,7 +325,6 @@ function init_gear_sets()
 
     sets.precast.WS['Leaden Salute'] = set_combine(sets.precast.WS.MAB, {
 		head="Pixie Hairpin +1",
-		left_ear="Friomisi Earring",
 		feet={ name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
 		right_ring="Archon Ring",
 		left_ring="Dingir Ring",

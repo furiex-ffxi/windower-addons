@@ -173,11 +173,12 @@ function init_gear_sets()
 
 	sets.midcast.Geomancy = {
 		main = "Idris",
+		sub = "Genmei Shield",
 		range = "Dunna",
 		head = empy.Head,
 		neck = "Incanter's Torque",
 		ear1 = "Calamitous Earring",
-		ear2 = "Malignance Earring",
+		ear2 = "Azimuth Earring +2",
 		body = "Vedic Coat",
 		hands = empy.Hands,
 		ring1 = "Defending Ring",

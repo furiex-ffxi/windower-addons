@@ -749,3 +749,7 @@ function select_default_macro_book()
         set_macro_page(1, 4) --War/Etc
     end
 end
+
+function user_job_lockstyle()
+	windower.chat.input('/lockstyleset 006')
+end
