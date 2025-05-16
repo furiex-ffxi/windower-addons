@@ -122,6 +122,7 @@ function init_gear_sets()
 
 	-- Precast sets to enhance JAs
 	sets.precast.JA.Benediction = { body = gear.relic.body }
+	sets.precast.JA.Sacrosanctity = { sub = "Diamond Aspis" }
 
 	-- Waltz set (chr and vit)
 	sets.precast.Waltz = {
@@ -711,7 +712,7 @@ function init_gear_sets()
 
 	sets.midcast.Stun = {
 		-- main = gear.grioavolr_fc_staff,
-		sub = "Clerisy Strap +1",
+		-- sub = "Clerisy Strap +1",
 		ammo = "Hasty Pinion +1",
 		head = "Bunzi's Hat",
 		neck = "Voltsurge Torque",
@@ -810,8 +811,6 @@ function init_gear_sets()
 
 	-- Resting sets
 	sets.resting = {
-		main = "Chatoyant Staff",
-		sub = "Oneiros Grip",
 		ammo = "Homiliary",
 		head = "Befouled Crown",
 		neck = "Chrys. Torque",
@@ -829,8 +828,6 @@ function init_gear_sets()
 
 	-- Idle sets (default idle set not needed since the other three are defined, but leaving for testing purposes)
 	sets.idle = {
-		main = "Daybreak",
-		sub = "Genmei Shield",
 		ammo = "Homiliary",
 		head = "Null Masque",
 		neck = "Loricate Torque +1",
@@ -847,32 +844,26 @@ function init_gear_sets()
 	}
 
 	sets.idle.PDT = set_combine(sets.idle, {
-		main = "Malignance Pole",
-		sub = "Clerisy Strap +1",
-		-- sub = "Umbra Strap",
 		ammo = "Homiliary",
 		head = "Nyame Helm",
 		neck = "Loricate Torque +1",
 		ear1 = "Etiolation Earring",
 		ear2 = "Ethereal Earring",
-		body = "Witching Robe",
+		body = "Adamantite Armor",
 		hands = gear.chironic_refresh_hands,
-		-- ring1 = "Defending Ring",
-		ring1 = "Gelatinous Ring +1",
+		ring1 = "Defending Ring",
 		ring2 = "Stikini Ring +1",
 		back = "Moonlight Cape",
 		waist = "Carrier's Sash",
 	})
 
 	sets.idle.MDT = {
-		main = "Daybreak",
-		sub = "Ammurapi Shield",
 		ammo = "Homiliary",
 		head = "Nyame Helm",
 		neck = "Warder's Charm +1",
 		ear1 = "Etiolation Earring",
 		ear2 = "Ethereal Earring",
-		body = "Nyame Mail",
+		body = "Adamantite Armor",
 		hands = "Nyame Gauntlets",
 		ring1 = "Defending Ring",
 		ring2 = "Fortified Ring",
@@ -885,14 +876,12 @@ function init_gear_sets()
 	-- Defense sets
 
 	sets.defense.PDT = {
-		main = "Mafic Cudgel",
-		sub = "Genmei Shield",
 		ammo = "Staunch Tathlum +1",
 		head = "Nyame Helm",
 		neck = "Loricate Torque +1",
 		ear1 = "Etiolation Earring",
 		ear2 = "Odnowa Earring +1",
-		body = "Nyame Mail",
+		body = "Adamantite Armor",
 		hands = "Nyame Gauntlets",
 		ring1 = "Defending Ring",
 		ring2 = "Gelatinous Ring +1",
@@ -903,14 +892,12 @@ function init_gear_sets()
 	}
 
 	sets.defense.MDT = {
-		main = "Daybreak",
-		sub = "Ammurapi Shield",
 		ammo = "Staunch Tathlum +1",
 		head = "Nyame Helm",
 		neck = "Warder's Charm +1",
 		ear1 = "Etiolation Earring",
 		ear2 = "Odnowa Earring +1",
-		body = "Nyame Mail",
+		body = "Adamantite Armor",
 		hands = "Nyame Gauntlets",
 		ring1 = "Shadow Ring",
 		ring2 = "Fortified Ring",
@@ -921,14 +908,12 @@ function init_gear_sets()
 	}
 
 	sets.defense.MEVA = {
-		main = "Daybreak",
-		sub = "Ammurapi Shield",
 		ammo = "Staunch Tathlum +1",
 		head = "Nyame Helm",
 		neck = "Warder's Charm +1",
 		ear1 = "Etiolation Earring",
 		ear2 = "Odnowa Earring +1",
-		body = "Nyame Mail",
+		body = "Adamantite Armor",
 		hands = "Nyame Gauntlets",
 		ring1 = "Purity Ring",
 		ring2 = "Vengeful Ring",

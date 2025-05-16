@@ -152,7 +152,7 @@ function init_gear_sets()
 	-- Default set for any weaponskill that isn't any more specifically defined
 	sets.precast.WS = {
 		head = sets.Nyame.Head,
-		neck = "Null Loop",
+		neck = "Rep. Plat. Medal",
 		body = sets.Nyame.Body,        
 		hands = sets.Nyame.Hands,
 		legs = sets.Nyame.Legs,
@@ -181,8 +181,13 @@ function init_gear_sets()
 		right_ear =	"Ishvara Earring",
 		left_ring = "Epaminondas's Ring",
 		right_ring = "Karieyh Ring",
-		-- back = RDMCape.MACC,
+		back = "Aurist's Cape +1"
 	}
+
+	sets.precast.WS["Black Halo"] = set_combine(sets.precast.WS, {
+		right_ring = "Metamor. Ring +1",
+		back = "Aurist's Cape +1"
+	})
 
 	sets.precast.WS['Aeolian Edge'] = {
 		head = sets.Nyame.Head,
@@ -457,8 +462,8 @@ function init_gear_sets()
 	}
 
 	sets.midcast.Dispel = {
-		main = "Daybreak",
-		sub = "Ammurapi Shield",
+		-- main = "Daybreak",
+		-- sub = "Ammurapi Shield",
 		ammo = "Pemphredo Tathlum",
 		head = "Amalric Coif +1",
 		neck = "Erra Pendant",
@@ -590,8 +595,6 @@ function init_gear_sets()
 	-- Idle sets
 
 	sets.idle = {
-		main = "Idris",
-		sub = "Genmei Shield",
 		neck = "Loricate Torque +1",
 		ear1 = "Odnowa Earring +1",
 		ear2 = "Ethereal Earring",
@@ -623,9 +626,6 @@ function init_gear_sets()
 
 	-- .Pet sets are for when Luopan is present.
 	sets.idle.Pet = {
-		main = "Sucellus",
-		sub = "Genmei Shield",
-		range = "Dunna",
 		head = gear.empy.Head,
 		neck = "Loricate Torque +1",
 		ear1 = "Handler's Earring",
@@ -782,17 +782,17 @@ function init_gear_sets()
 	sets.engaged = {
 		main = "Maxentius",
 		head = "Blistering Sallet +1",
-		neck = "Null Loop",
-		ear1 = "Crep. Earring",
+		neck = "Combatant's Torque",
+		ear1 = "Cessance Earring",
 		ear2 = "Telos Earring",
-		body = gear.empy.Body,
+		body = sets.Nyame.Body,
 		hands = "Gazu Bracelets +1",
 		ring1 = "Petrov Ring",
-		ring2 = "Cacoethic Ring",
+		ring2 = "Chirich Ring +1",
 		back = "Null Shawl",
-		waist = "Null Belt",
-		legs = gear.empy.Legs,
-		feet = "Battlecast Gaiters"
+		waist = "Goading Belt",
+		legs = sets.Nyame.Legs,
+		feet = sets.Nyame.Feet
 	}
 
 	sets.engaged.DW = {

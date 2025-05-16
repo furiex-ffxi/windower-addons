@@ -2,14 +2,14 @@ function user_job_setup()
 	-- Options: Override default values
 	state.OffenseMode:options('Normal', 'SomeAcc', 'Acc', 'FullAcc', 'Fodder', 'Fencer', 'Subtle')
 	state.WeaponskillMode:options('Match', 'AttackCap', 'Normal', 'SomeAcc', 'Acc', 'FullAcc', 'Fodder', 'Proc')
-	state.HybridMode:options('Normal')
+	state.HybridMode:options('Normal', 'DT')
 	state.PhysicalDefenseMode:options('PDT', 'PDTReraise')
 	state.MagicalDefenseMode:options('MDT', 'MDTReraise')
 	state.ResistDefenseMode:options('MEVA')
 	state.IdleMode:options('Normal', 'PDT', 'Refresh', 'Reraise')
 	state.ExtraMeleeMode = M { ['description'] = 'Extra Melee Mode', 'None' }
 	state.Passive = M { ['description'] = 'Passive Mode', 'None', 'Twilight' }
-	state.Weapons:options('None', 'Chango', 'ShiningOne', 'DualWeapons', 'Greatsword', 'Naegling', 'Loxotic', 'ProcSword', 'ProcDagger', 'ProcKatana', 'ProcGreatSword',
+	state.Weapons:options('None', 'Naegling', 'Loxotic', 'Chango', 'ShiningOne', 'DualWeapons', 'Greatsword', 'ProcSword', 'ProcDagger', 'ProcKatana', 'ProcGreatSword',
 	'ProcScythe', 'ProcPolearm', 'ProcGreatKatana', 'ProcClub', 'ProcStaff')
 
 	gear.da_jse_back = { name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
@@ -48,17 +48,21 @@ function init_gear_sets()
 
 	-- Precast sets to enhance JAs
 	sets.precast.JA['Berserk'] = { 
+		sub = "Diamond Aspis",
 		back = gear.da_jse_back,
 		body="Pumm. Lorica +3", 
         feet="Agoge Calligae +3"
 	}
 	sets.precast.JA['Warcry'] = {
+		sub = "Diamond Aspis",
         head="Agoge Mask +3"
 	}
 	sets.precast.JA['Defender'] = {
+		sub = "Diamond Aspis",
 		hands="Agoge Mufflers +3"
 	}
 	sets.precast.JA['Aggressor'] = {
+		sub = "Diamond Aspis",
 		body="Agoge Lorica +3",
 		head="Pummeler's Mask +3"
 	}
@@ -66,6 +70,7 @@ function init_gear_sets()
 		hands="Agoge Mufflers +3"
 	}
 	sets.precast.JA["Warrior's Charge"] = {
+		sub = "Diamond Aspis",
 		legs={ name="Agoge Cuisses +3", augments={'Enhances "Warrior\'s Charge" effect',}}
 	}
 	sets.precast.JA['Tomahawk'] = { 
@@ -73,13 +78,16 @@ function init_gear_sets()
 		feet="Agoge Calligae +3",
 	}
 	sets.precast.JA['Retaliation'] = {
+		sub = "Diamond Aspis",
 		feet="Boii Calligae +3",
 		hands="Pumm. Mufflers +3"
 	}
 	sets.precast.JA['Restraint'] = {
+		sub = "Diamond Aspis",
 		hands="Boii Mufflers +3"
 	}
 	sets.precast.JA['Blood Rage'] = {
+		sub = "Diamond Aspis",
         body="Boii Lorica +3"
 	}
 	sets.precast.JA['Brazen Rush'] = {}
@@ -461,12 +469,10 @@ function init_gear_sets()
 		hands="Sakpata's Gauntlets",
 		legs="Pumm. Cuisses +3",
 		feet="Pumm. Calligae +3",
-		-- waist="Ioskeha Belt +1",
 		waist="Sailfi Belt +1",
 		right_ear="Boii Earring +1",
 		left_ear="Schere Earring",
 		left_ring="Moonlight Ring",
-		-- right_ring="Petrov Ring",
 		right_ring="Niqmaddu Ring",
 		back=gear.da_jse_back,
 	}
@@ -1520,6 +1526,7 @@ function init_gear_sets()
 	sets.buff.Retaliation = {}
 	sets.buff.Restraint = {}
 	sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
+	sets.Skillchain = { neck="Warder's Charm +1" }
 
 	-- Weapons sets
 	sets.weapons.ShiningOne = { main = "Shining One", sub = "Utu Grip" }

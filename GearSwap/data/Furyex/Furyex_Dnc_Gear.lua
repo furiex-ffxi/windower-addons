@@ -7,7 +7,7 @@ function user_job_setup()
     state.PhysicalDefenseMode:options('PDT')
     state.MagicalDefenseMode:options('MDT')
     state.ResistDefenseMode:options('MEVA')
-    state.Weapons:options('Mpu', 'Twash', 'TwashGleti', 'Qutrub')
+    state.Weapons:options('None', 'Mpu', 'Twash', 'TwashGleti', 'Qutrub')
     state.ExtraMeleeMode = M {
         ['description'] = 'Extra Melee Mode',
         'None',

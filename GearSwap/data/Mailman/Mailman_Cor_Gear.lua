@@ -7,8 +7,8 @@ function user_job_setup()
     state.IdleMode:options('Normal', 'PDT', 'Refresh')
     state.HybridMode:options('Normal', 'DT')
     state.ExtraMeleeMode = M { ['description'] = 'Extra Melee Mode', 'None', 'DWMax' }
-    state.Weapons:options('Default', 'Ranged', 'RangedAcc', 'Savage', 'Evisceration', 'LeadenMelee', 'DualWeapons', 'DualSavageWeapons',
-        'DualEvisceration', 'DualLeadenRanged', 'DualLeadenMelee', 'DualAeolian', 'DualRanged', 'DualRoll',
+    state.Weapons:options('Default', 'Ranged', 'RangedAcc', 'Savage', 'Onion', 'Evisceration', 'LeadenMelee', 'DualWeapons', 'DualSavageWeapons',
+        'DualOnion', 'DualEvisceration', 'DualLeadenRanged', 'DualLeadenMelee', 'DualAeolian', 'DualRanged', 'DualRoll',
         'DualFermion', 'None')
     state.CompensatorMode:options('Always', '300', '1000', 'Never')
 
@@ -570,6 +570,16 @@ function init_gear_sets()
 
     -- Weapons sets
     sets.weapons.Default = { main = "Naegling", sub = "Nusku Shield", range = "Fomalhaut" }
+    sets.weapons.Savage = {
+        main = "Naegling", 
+        sub = "Nusku Shield", 
+        range={ name="Anarchy +2", augments={'Delay:+60','TP Bonus +1000',}}, 
+    }
+    sets.weapons.Onion = {
+        main = "Onion Sword III", 
+        sub = "Nusku Shield", 
+        range={ name="Anarchy +2", augments={'Delay:+60','TP Bonus +1000',}}, 
+    }
     sets.weapons.Ranged = { 
 		main={ name="Rostam", augments={'Path: A'}},
         sub = "Nusku Shield", 
@@ -597,15 +607,15 @@ function init_gear_sets()
 		sub="Gleti's Knife",
 		range={ name="Anarchy +2", augments={'Delay:+60','TP Bonus +1000',}}, 
     }
+    sets.weapons.DualSavageWeapons = { 
+        main="Onion Sword III",
+		sub="Gleti's Knife",
+		range={ name="Anarchy +2", augments={'Delay:+60','TP Bonus +1000',}}, 
+    }    
     sets.weapons.DualEvisceration = { 
         main = "Tauret", 
         sub = "Blurred Knife +1", 
         range={ name="Anarchy +2", augments={'Delay:+60','TP Bonus +1000',}},
-    }
-    sets.weapons.Savage = {
-        main = "Naegling", 
-        sub = "Nusku Shield", 
-        range={ name="Anarchy +2", augments={'Delay:+60','TP Bonus +1000',}}, 
     }
     sets.weapons.DualLeadenRanged = { 
 		main={ name="Rostam", augments={'Path: A'}},

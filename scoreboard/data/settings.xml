@@ -84,8 +84,8 @@
     <liambear>
         <display>
             <pos>
-                <x>2125</x>
-                <y>994</y>
+                <x>1674</x>
+                <y>225</y>
             </pos>
         </display>
         <visible>true</visible>
@@ -93,8 +93,8 @@
     <lolababe>
         <display>
             <pos>
-                <x>2021</x>
-                <y>403</y>
+                <x>1674</x>
+                <y>225</y>
             </pos>
         </display>
     </lolababe>
@@ -105,6 +105,5 @@
                 <y>296</y>
             </pos>
         </display>
-        <visible>true</visible>
     </mailman>
 </settings>

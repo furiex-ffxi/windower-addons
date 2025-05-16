@@ -240,30 +240,22 @@ function init_gear_sets()
 	})
 	sets.precast.WS['Evisceration'] = sets.precast.WS['Chant Du Cygne']
 
--- Weaponskill sets
-	-- Default set for any weaponskill that isn't any more specifically defined
 	sets.precast.WS["Ruthless Stroke"] = set_combine(sets.precast.WS, {
 		right_ear = "Dominance Earring +1",
 		waist = { name="Kentarch Belt +1", augments={'Path: A',}},
 		ammo = "Crepuscular Pebble",
 		back = RDMCape.DEXWSD,
 	})
+	
+	sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {
+        right_ring = "Sroda Ring",
+	})
 
-	sets.precast.WS['Black Halo'] = set_combine(sets.precast.WS, {
-		ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-		waist={ name="Kentarch Belt +1", augments={'Path: A',}},
-		right_ear = "Leth. Earring +1",
+	sets.precast.WS['Black Halo'] = set_combine(sets.precast.WS['Savage Blade'], {
 	})
 
 	sets.precast.WS['Black Halo'].Acc = set_combine(sets.precast.WS['Black Halo'], {
 		right_ear = "Dominance Earring +1"
-	})
-	
-	sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {
-        feet = EMPY.Feet,
-        right_ring = "Karieyh Ring",
-		waist = "Sailfi Belt +1",
-        back = RDMCape.STRWSD,		
 	})
 
 	sets.precast.WS['Sanguine Blade'] = set_combine(sets.precast.WS, {

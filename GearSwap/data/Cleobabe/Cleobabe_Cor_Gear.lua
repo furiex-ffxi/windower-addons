@@ -665,9 +665,9 @@ function init_gear_sets()
     sets.weapons.Savage = { main = "Naegling", sub = "Nusku Shield", range = "Anarchy +2" }
     sets.weapons.Fermion = { main = "Fermion Sword", sub = "Nusku Shield", range = "Anarchy +2" }
     sets.weapons.DualLeadenRanged = { main = "Rostam", sub = "Kustawi", range = "Fomalhaut" }
-    sets.weapons.DualLeadenMelee = { main = "Naegling", sub = "Gleti's Knife", range = "Fomalhaut" }
+    sets.weapons.DualLeadenMelee = { main = "Naegling", sub = "Gleti's Knife", range = "Death Penalty" }
     sets.weapons.DualAeolian = { main = "Tauret", sub = "Gleti's Knife", range = "Anarchy +2" }
-    sets.weapons.DualLeadenMeleeAcc = { main = "Fermion Sword", sub = "Kustawi", range = "Fomalhaut" }
+    sets.weapons.DualLeadenMeleeAcc = { main = "Fermion Sword", sub = "Qutrub Knife", range = "Death Penalty" }
 
     -- Engaged sets
 

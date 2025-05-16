@@ -1,11 +1,11 @@
 function user_job_setup()
 	-- Options: Override default values
 	state.UnlockWeapons = M(true, 'Unlock Weapons')
-	state.OffenseMode:options('Normal', 'Acc')
+	state.OffenseMode:options('Normal', 'Acc', 'Subtle')
 	state.HybridMode:options('Normal', 'DT')
 	state.CastingMode:options('Normal', 'Duration', 'Resistant')
 	state.IdleMode:options('Normal', 'NoRefresh', 'DT')
-	state.Weapons:options('None', 'Naegling', 'Aeneas', 'Carnwenhan', 'Qutrub', 'DualCarnwenhan', 'DualWeapons', 'DualNaegling', 'DualTauret', 'DualAeolian')
+	state.Weapons:options('None', 'Naegling', 'Onion', 'Aeneas', 'Carnwenhan', 'Qutrub', 'DualCarnwenhan', 'DualWeapons', 'DualNaegling', 'DualOnion', 'DualTauret', 'DualAeolian')
 	-- Whether to use Carn (or song daggers in general) under a certain threshhold even when weapons are locked.
 	state.CarnMode           = M { 'Always', '300', '1000', 'Never' }
 
@@ -70,10 +70,12 @@ function init_gear_sets()
 	sets.weapons.Aeneas = { main = "Aeneas", sub = "Genmei Shield" }
 	sets.weapons.Carnwenhan = { main = "Carnwenhan", sub = "Genmei Shield" }
 	sets.weapons.Naegling = { main = "Naegling", sub = "Genmei Shield" }
+	sets.weapons.Onion = { main = "Onion Sword III", sub = "Genmei Shield" }
 	sets.weapons.Qutrub = { main = "Qutrub Knife", sub = "Genmei Shield" }
 	sets.weapons.DualCarnwenhan = {main="Carnwenhan", sub="Centovente"}	
 	sets.weapons.DualWeapons = { main = "Aeneas", sub = "Centovente" }
 	sets.weapons.DualNaegling = { main = "Naegling", sub = "Centovente" }
+	sets.weapons.DualOnion = { main = "Onion Sword III", sub = "Centovente" }
 	sets.weapons.DualTauret = { main = "Tauret", sub = "Blurred Knife +1" }
 	sets.weapons.DualAeolian = { main = "Tauret", sub = "Malevolence" }
 
@@ -174,6 +176,12 @@ function init_gear_sets()
 
 	})
 
+	sets.precast.WS.Subtle = set_combine(sets.precast.WS, {
+		ring1 = "Chirich Ring +1",
+		ring2 = "Chirich Ring +1",
+		ear2 = "Digni. Earring",
+	})
+
 	-- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
 	sets.precast.WS['Evisceration'] = set_combine(sets.precast.WS, {
 		head = { name = "Blistering Sallet +1", augments = { 'Path: A', } },
@@ -213,6 +221,11 @@ function init_gear_sets()
 	})
 
 	sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {
+		body = sets.Nyame.Body,
+		waist = "Sailfi Belt +1",
+	})
+
+	sets.precast.WS['Savage Blade'].Subtle = set_combine(sets.precast.WS.Subtle, {
 		body = sets.Nyame.Body,
 		waist = "Sailfi Belt +1",
 	})
@@ -686,7 +699,7 @@ function init_gear_sets()
 
 	sets.engaged = {
 		range = { name = "Linos", augments = { 'Accuracy+15 Attack+15', '"Store TP"+3', 'Quadruple Attack +3', } },
-		head = "Volte Tiara",
+		head = "Bunzi's Hat",
 		body = "Ashera Harness",
 		hands = "Bunzi's Gloves",
 		legs = "Volte Tights",
@@ -694,7 +707,7 @@ function init_gear_sets()
 		neck = { name = "Bard's Charm +2", augments = { 'Path: A', } },
 		waist = { name = "Sailfi Belt +1", augments = { 'Path: A', } },
 		ear1 = "Telos Earring",
-		ear2 = "Cessance Earring",
+		ear2 = "Crep. Earring",
 		ring1 = "Chirich Ring +1",
 		ring2 = "Chirich Ring +1",
 		back = gear.tp_jse_back,
@@ -702,6 +715,11 @@ function init_gear_sets()
 
 	sets.engaged.DT = set_combine(sets.engaged, {
 		legs = sets.Nyame.Legs,
+		feet = sets.Nyame.Feet,
+	})
+
+	sets.engaged.Subtle = set_combine(sets.engaged, {
+		ear2 = "Digni. Earring",
 		feet = sets.Nyame.Feet,
 	})
 

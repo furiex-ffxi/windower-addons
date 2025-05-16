@@ -50,6 +50,8 @@ function init_gear_sets()
     gear.jse_def_back = { name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','VIT+10','Enmity+10','DEF+50',}}
 
     sets.Enmity = {
+        main="Burtgang",
+        sub="Srivatsa",
         ammo="Sapience Orb",
         head={ name="Loess Barbuta +1", augments={'Path: A',}},
         body="Rev. Surcoat +3",
@@ -57,15 +59,17 @@ function init_gear_sets()
         legs={ name="Cab. Breeches +3", augments={'Enhances "Invincible" effect',}},
         feet="Chev. Sabatons +3",
         neck="Moonlight Necklace",
-        waist="Audumbla Sash",
-        left_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
+        waist="Goading Belt",
+        left_ear="Trux Earring",
         right_ear="Cryptic Earring",
-        left_ring="Gelatinous Ring +1",
+        left_ring="Begrudging Ring",
         right_ring={ name="Apeile Ring +1", augments={'Path: A',}},
-        back=gear.jse_cure_back,
+        back=gear.jse_def_back,
     }
             
     sets.Enmity.SIRD = {
+        main="Burtgang",
+        sub="Srivatsa",
         ammo="Staunch Tathlum +1",
         head={ name="Loess Barbuta +1", augments={'Path: A',},priority=1},
         body={ name="Souv. Cuirass +1", augments={'VIT+12','Attack+25','"Refresh"+3',}},
@@ -84,6 +88,8 @@ function init_gear_sets()
     }
             
     sets.Enmity.DT = {
+        main="Burtgang",
+        sub="Srivatsa",
         ammo="Staunch Tathlum +1",
         head={ name="Loess Barbuta +1", augments={'Path: A',},priority=1},
         body={ name="Souv. Cuirass +1", augments={'VIT+12','Attack+25','"Refresh"+3',}},
@@ -101,27 +107,61 @@ function init_gear_sets()
     }
             
     -- Precast sets to enhance JAs
-    sets.precast.JA['Invincible'] = set_combine(sets.Enmity,{legs={ name="Cab. Breeches +3", augments={'Enhances "Invincible" effect',}},})
-    sets.precast.JA['Holy Circle'] = set_combine(sets.Enmity,{feet="Rev. Leggings +3",})
-    sets.precast.JA['Sentinel'] = set_combine(sets.Enmity,{feet={ name="Cab. Leggings +3", augments={'Enhances "Guardian" effect',}},})
-    sets.precast.JA['Rampart'] = set_combine(sets.Enmity,{head={ name="Cab. Coronet +3", augments={'Enhances "Iron Will" effect',}},}) 
-    sets.precast.JA['Fealty'] = set_combine(sets.Enmity,{body={ name="Cab. Surcoat +3", augments={'Enhances "Fealty" effect',}},})
-    sets.precast.JA['Divine Emblem'] = set_combine(sets.Enmity,{ feet="Chev. Sabatons +3", })
-    sets.precast.JA['Majesty'] = set_combine(sets.Enmity)
+    sets.precast.JA['Invincible'] = set_combine(sets.Enmity,{
+        legs={ name="Cab. Breeches +3", augments={'Enhances "Invincible" effect',}},})
+    sets.precast.JA['Holy Circle'] = set_combine(sets.Enmity,{
+        sub = "Diamond Aspis",
+        feet="Rev. Leggings +3",})
+    sets.precast.JA['Sentinel'] = set_combine(sets.Enmity,{
+        sub = "Diamond Aspis",
+        feet={ name="Cab. Leggings +3", augments={'Enhances "Guardian" effect',}},})
+    sets.precast.JA['Rampart'] = set_combine(sets.Enmity,{
+        sub = "Diamond Aspis",
+        head={ name="Cab. Coronet +3", augments={'Enhances "Iron Will" effect',}},}) 
+    sets.precast.JA['Fealty'] = set_combine(sets.Enmity,{
+        sub = "Diamond Aspis",
+        body={ name="Cab. Surcoat +3", augments={'Enhances "Fealty" effect',}},})
+    sets.precast.JA['Divine Emblem'] = set_combine(sets.Enmity,{ 
+        sub = "Diamond Aspis",
+        feet="Chev. Sabatons +3", })
+    sets.precast.JA['Majesty'] = set_combine(sets.Enmity, {
+        sub = "Diamond Aspis",
+    })
     sets.precast.JA['Cover'] = set_combine(sets.Enmity, {
+        sub = "Diamond Aspis",
         head="Rev. Coronet +3",
         body={ name="Cab. Surcoat +3", augments={'Enhances "Fealty" effect',}},}
     ) 
 	
     sets.precast.JA['Invincible'].DT = set_combine(sets.Enmity.DT,{legs={ name="Cab. Breeches +3", augments={'Enhances "Invincible" effect',}},})
-    sets.precast.JA['Holy Circle'].DT = set_combine(sets.Enmity.DT,{feet="Rev. Leggings +3",})
-    sets.precast.JA['Sentinel'].DT = set_combine(sets.Enmity.DT,{feet={ name="Cab. Leggings +3", augments={'Enhances "Guardian" effect',}},})
-    sets.precast.JA['Rampart'].DT = set_combine(sets.Enmity.DT,{head={ name="Cab. Coronet +3", augments={'Enhances "Iron Will" effect',}},})
-    sets.precast.JA['Fealty'].DT = set_combine(sets.Enmity.DT,{body={ name="Cab. Surcoat +3", augments={'Enhances "Fealty" effect',}},})
-    sets.precast.JA['Divine Emblem'].DT = set_combine(sets.Enmity.DT,{feet="Chev. Sabatons +3",})
-    sets.precast.JA['Majesty'] = set_combine(sets.Enmity)
-    sets.precast.JA['Cover'].DT = set_combine(sets.Enmity.DT, {head="Rev. Coronet +3",
-    body={ name="Cab. Surcoat +3", augments={'Enhances "Fealty" effect',}},})
+    sets.precast.JA['Holy Circle'].DT = set_combine(sets.Enmity.DT,{
+        sub = "Diamond Aspis",
+        feet="Rev. Leggings +3",
+    })
+    sets.precast.JA['Sentinel'].DT = set_combine(sets.Enmity.DT,{
+        sub = "Diamond Aspis",
+        feet={ name="Cab. Leggings +3", augments={'Enhances "Guardian" effect',}},
+    })
+    sets.precast.JA['Rampart'].DT = set_combine(sets.Enmity.DT,{
+        sub = "Diamond Aspis",
+        head={ name="Cab. Coronet +3", augments={'Enhances "Iron Will" effect',}},
+    })
+    sets.precast.JA['Fealty'].DT = set_combine(sets.Enmity.DT,{
+        sub = "Diamond Aspis",
+        body={ name="Cab. Surcoat +3", augments={'Enhances "Fealty" effect',}},
+    })
+    sets.precast.JA['Divine Emblem'].DT = set_combine(sets.Enmity.DT,{
+        sub = "Diamond Aspis",
+        feet="Chev. Sabatons +3",
+    })
+    sets.precast.JA['Majesty'] = set_combine(sets.Enmity, {
+        sub = "Diamond Aspis",
+    })
+    sets.precast.JA['Cover'].DT = set_combine(sets.Enmity.DT, {
+        sub = "Diamond Aspis",
+        head="Rev. Coronet +3",
+        body={ name="Cab. Surcoat +3", augments={'Enhances "Fealty" effect',}},
+    })
 	
     -- add mnd for Chivalry
     sets.precast.JA['Chivalry'] = {
@@ -338,6 +378,8 @@ function init_gear_sets()
 	sets.midcast['Blue Magic'] = set_combine(sets.Enmity, {})
 	sets.midcast['Blue Magic'].SIRD = set_combine(sets.Enmity.SIRD, {})
 	sets.midcast.Cocoon = set_combine(sets.Enmity.SIRD, {})
+	sets.midcast.Dia = set_combine(sets.Enmity, {})
+	sets.midcast.Diaga = set_combine(sets.Enmity, {})
 
     sets.midcast.Cure = {
         ammo="Staunch Tathlum +1",
@@ -605,7 +647,7 @@ function init_gear_sets()
         hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
         legs={ name="Sakpata's Cuisses", augments={'Path: A',},priority=1},
         feet={ name="Sakpata's Leggings", augments={'Path: A',},priority=1},
-        neck={ name="Kgt. Beads +2", augments={'Path: A',},priority=1},
+        neck="Loricate Torque +1",
         waist="Flume Belt +1",
         left_ear={ name="Tuisto Earring",priority=1},
         right_ear={ name="Odnowa Earring +1", augments={'Path: A',},priority=1},
@@ -619,7 +661,7 @@ function init_gear_sets()
         sub={ name="Duban",priority=1},
         ammo="Brigantia Pebble",
         head={ name="Sakpata's Helm", augments={'Path: A',}},
-        body={ name="Sakpata's Plate", augments={'Path: A',}},
+        body="Adamantite Armor",
         hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
         legs={ name="Sakpata's Cuisses", augments={'Path: A',},priority=1},
         feet={ name="Sakpata's Leggings", augments={'Path: A',}},
@@ -712,12 +754,12 @@ function init_gear_sets()
         hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
         legs={ name="Sakpata's Cuisses", augments={'Path: A',},priority=1},
         feet={ name="Sakpata's Leggings", augments={'Path: A',}},
+        neck="Loricate Torque +1",
         -- neck={ name="Kgt. Beads +2", augments={'Path: A',},priority=1},
-        neck="Moonlight Necklace",
         waist="Null Belt",
         left_ear={ name="Tuisto Earring",priority=1},
         right_ear={ name="Odnowa Earring +1", augments={'Path: A',},priority=1},
-        left_ring="Gelatinous Ring +1",
+        left_ring="Defending Ring",
         right_ring={ name="Moonlight Ring",priority=1},
         back=gear.jse_block_back,
     }

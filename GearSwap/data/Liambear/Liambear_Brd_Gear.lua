@@ -46,8 +46,10 @@ function init_gear_sets()
 	-- sets.weapons.DualWeapons = { main = "Dancing Dagger", sub = "Gleti's Knife" }
 	sets.weapons.DualWeapons = { main = "Aeneas", sub = "Fusetto +2" }
 	sets.weapons.DualNaegling = { main = "Naegling", sub = "Fusetto +2" }
+	sets.weapons.DualOnion = { main = "Onion Sword III", sub = "Fusetto +2" }
 	sets.weapons.DualCarnwenhan = { main = "Carnwenhan", sub = "Fusetto +2" }
 	sets.weapons.Naegling = { main = "Naegling", sub = "Genmei Shield" }
+	sets.weapons.Onion = { main = "Onion Sword III", sub = "Genmei Shield" }
 	sets.weapons.Carnwenhan = { main = "Carnwenhan", sub = "Genmei Shield" }
 	sets.weapons.DualTauret = { main = "Tauret", sub = "Blurred Knife +1" }
 	sets.weapons.DualAeolian = { main = "Tauret", sub = "Malevolence" }
