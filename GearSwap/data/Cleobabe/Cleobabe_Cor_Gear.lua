@@ -8,7 +8,7 @@ function user_job_setup()
     state.HybridMode:options('Normal', 'DT')
     state.ExtraMeleeMode = M { ['description'] = 'Extra Melee Mode', 'None', 'DWMax' }
     state.Weapons:options('Default', 'Ranged', 'Savage', 'Evisceration', 'Fermion', 'DualWeapons', 'DualSavageWeapons',
-        'DualEvisceration', 'DualLeadenRanged', 'DualLeadenMelee', 'DualAeolian', 'DualLeadenMeleeAcc', 'DualRanged',
+        'DualEvisceration', 'DualLeadenRanged', 'DualLeadenMelee', 'DualAeolian', 'DualFermion',
         'DualProcWeapons', 'None')
     state.CompensatorMode:options('Always', '300', '1000', 'Never')
 
@@ -663,11 +663,11 @@ function init_gear_sets()
     sets.weapons.DualSavageWeapons = { main = "Naegling", sub = "Gleti's Knife", range = "Anarchy +2" }
     sets.weapons.DualEvisceration = { main = "Tauret", sub = "Savage Blade", range = "Anarchy +2" }
     sets.weapons.Savage = { main = "Naegling", sub = "Nusku Shield", range = "Anarchy +2" }
-    sets.weapons.Fermion = { main = "Fermion Sword", sub = "Nusku Shield", range = "Anarchy +2" }
-    sets.weapons.DualLeadenRanged = { main = "Rostam", sub = "Kustawi", range = "Fomalhaut" }
+    sets.weapons.Fermion = { main = "Fermion Sword", sub = "Nusku Shield", range = "Death Penalty" }
+    sets.weapons.DualLeadenRanged = { main = "Rostam", sub = "Kustawi", range = "Death Penalty" }
     sets.weapons.DualLeadenMelee = { main = "Naegling", sub = "Gleti's Knife", range = "Death Penalty" }
     sets.weapons.DualAeolian = { main = "Tauret", sub = "Gleti's Knife", range = "Anarchy +2" }
-    sets.weapons.DualLeadenMeleeAcc = { main = "Fermion Sword", sub = "Qutrub Knife", range = "Death Penalty" }
+    sets.weapons.DualFermion = { main = "Fermion Sword", sub = "Qutrub Knife", range = "Death Penalty" }
 
     -- Engaged sets
 

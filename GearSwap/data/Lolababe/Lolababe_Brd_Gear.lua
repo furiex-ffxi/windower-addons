@@ -1,11 +1,11 @@
 function user_job_setup()
 	-- Options: Override default values
-	state.UnlockWeapons = M(true, 'Unlock Weapons')
+	state.UnlockWeapons = M(false, 'Unlock Weapons')
 	state.OffenseMode:options('Normal', 'Acc', 'Subtle')
 	state.HybridMode:options('Normal', 'DT')
 	state.CastingMode:options('Normal', 'Duration', 'Resistant')
 	state.IdleMode:options('Normal', 'NoRefresh', 'DT')
-	state.Weapons:options('None', 'Naegling', 'Onion', 'Aeneas', 'Carnwenhan', 'Qutrub', 'DualCarnwenhan', 'DualWeapons', 'DualNaegling', 'DualOnion', 'DualTauret', 'DualAeolian')
+	state.Weapons:options('None', 'Naegling', 'Onion', 'Aeneas', 'Carnwenhan', 'Qutrub', 'DualNaegling', 'DualOnion', 'DualCarnwenhan', 'DualWeapons','DualTauret', 'DualAeolian')
 	-- Whether to use Carn (or song daggers in general) under a certain threshhold even when weapons are locked.
 	state.CarnMode           = M { 'Always', '300', '1000', 'Never' }
 
@@ -183,18 +183,22 @@ function init_gear_sets()
 	})
 
 	-- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
-	sets.precast.WS['Evisceration'] = set_combine(sets.precast.WS, {
-		head = { name = "Blistering Sallet +1", augments = { 'Path: A', } },
+	sets.precast.WS['Fast Blade II'] = set_combine(sets.precast.WS, {
 		body = gear.relic_body,
 		neck = "Fotia Gorget",
 		ear1 = "Moonshade Earring",
 		ear2 = "Mache Earring +1",
-		ring1 = { name="Cacoethic Ring +1", augments={'Path: A',}},
-		ring2 ="Ilabrat Ring",
 		waist = "Fotia Belt",
-		leg = "Zoar Subligar +1",
 		back = gear.dex_wsd_jse_back,
 	})
+
+	sets.precast.WS['Evisceration'] = set_combine(sets.precast.WS['Fast Blade II'], {
+		head = { name = "Blistering Sallet +1", augments = { 'Path: A', } },
+		ring2 = { name="Cacoethic Ring +1", augments={'Path: A',}},
+		leg = "Zoar Subligar +1",
+	})
+
+	sets.precast.WS['Fast Blade II'] = sets.precast.WS['Evisceration']
 
 	sets.precast.WS['Mordant Rime'] = set_combine(sets.precast.WS, {
 		body = sets.Nyame.Body,

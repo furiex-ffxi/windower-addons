@@ -262,6 +262,16 @@ function init_gear_sets()
     sets.precast.WS['Savage Blade'].Acc = set_combine(sets.precast.WS['Savage Blade'], {        
     })
 
+    sets.precast.WS['Fast Blade II'] = set_combine(sets.precast.WS, {
+        neck="Fotia Gorget",
+        waist = "Fotia Belt",
+    })
+
+    sets.precast.WS['Fast Blade II'].Acc = set_combine(sets.precast.WS, {
+        neck="Fotia Gorget",
+        waist = "Fotia Belt",
+    })
+
     sets.precast.WS['Exenterator'] = {
         ammo = gear.WSbullet,
         head = "Chass. Tricorne +3",
@@ -607,14 +617,14 @@ function init_gear_sets()
 		sub="Gleti's Knife",
 		range={ name="Anarchy +2", augments={'Delay:+60','TP Bonus +1000',}}, 
     }
-    sets.weapons.DualSavageWeapons = { 
+    sets.weapons.DualOnion = { 
         main="Onion Sword III",
 		sub="Gleti's Knife",
 		range={ name="Anarchy +2", augments={'Delay:+60','TP Bonus +1000',}}, 
     }    
     sets.weapons.DualEvisceration = { 
         main = "Tauret", 
-        sub = "Blurred Knife +1", 
+        sub = "Gleti's Knife", 
         range={ name="Anarchy +2", augments={'Delay:+60','TP Bonus +1000',}},
     }
     sets.weapons.DualLeadenRanged = { 

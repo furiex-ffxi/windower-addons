@@ -25,7 +25,13 @@ sets.VolteSandoria = {
 }
 
 sets.buff.Doom = {neck="Nicander's Necklace",waist="Gishdubar Sash",ring1="Purity Ring",ring2="Eshmun's Ring"}
-sets.TreasureHunter = {head="Wh. Rarab Cap +1",waist="Chaac Belt"}
+sets.TreasureHunter = {
+    ammo = "Per. Lucky Egg",
+    head = "Volte Cap",
+    waist = "Chaac Belt",
+    hands = "Volte Bracers",
+    legs = "Volte Hose",
+}
 
 sets.precast.Item['Hallowed Water'] = {}
 sets.precast.Item['Holy Water'] = {}

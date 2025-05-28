@@ -8,7 +8,7 @@ function user_job_setup()
     state.HybridMode:options('Normal', 'DT')
     state.ExtraMeleeMode = M { ['description'] = 'Extra Melee Mode', 'None', 'DWMax' }
     state.Weapons:options('Default', 'Ranged', 'Savage', 'Evisceration', 'DualWeapons', 'DualSavageWeapons',
-        'DualEvisceration', 'DualLeadenRanged', 'DualLeadenMelee', 'DualAeolian', 'DualLeadenMeleeAcc', 'DualRanged',
+        'DualEvisceration', 'DualLeadenRanged', 'DualLeadenMelee', 'DualAeolian', 'DualRanged', 'DualFermion',
         'DualProcWeapons', 'None')
     state.CompensatorMode:options('Always', '300', '1000', 'Never')
 
@@ -191,18 +191,18 @@ function init_gear_sets()
     -- Fast cast sets for spells
 
     sets.precast.FC = {
-        head = "Carmine Mask +1",
-        neck = "Baetyl Pendant",
-        ear1 = "Enchntr. Earring +1",
-        ear2 = "Loquac. Earring",
-        body = "Dread Jupon",
-        hands = "Leyline Gloves",
-        ring1 = "Kishar Ring",
-        ring2 = "Lebeche Ring",
-        back = "Moonlight Cape",
-        waist = "Flume Belt +1",
-        legs = "Rawhide Trousers",
-        feet = "Carmine Greaves +1"
+        head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}},
+        body={ name="Adhemar Jacket +1", augments={'HP+105','"Fast Cast"+10','Magic dmg. taken -4',}},
+        hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
+        legs={ name="Herculean Trousers", augments={'AGI+9','Mag. Acc.+8','"Fast Cast"+7',}},
+        feet={ name="Carmine Greaves +1", augments={'HP+80','MP+80','Phys. dmg. taken -4',}},
+        neck="Baetyl Pendant",
+        waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+        left_ear="Enchntr. Earring +1",
+        right_ear="Loquac. Earring",
+        left_ring="Kishar Ring",
+        right_ring="Rahab Ring",
+        back={ name="Camulus's Mantle", augments={'INT+20','Eva.+20 /Mag. Eva.+20','Evasion+10','"Fast Cast"+10','Damage taken-5%',}},
     }
 
     sets.precast.FC.Utsusemi = set_combine(sets.precast.FC, { neck = "Magoraga Beads", body = "Passion Jacket" })
@@ -587,7 +587,7 @@ function init_gear_sets()
     -- Idle sets
     sets.idle = {
         ammo = gear.RAbullet,
-		head=sets.Malignance.Head,
+		head="Null Masque",
 		body=sets.Malignance.Body,
 		hands=sets.Malignance.Hands,
 		legs=gear.Empy.Legs,
@@ -688,23 +688,24 @@ function init_gear_sets()
         hands = "Floral Gauntlets", waist = "Reiki Yotai" }
 
     -- Weapons sets
-    sets.weapons.Default = { main = "Qutrub Knife", sub = "Nusku Shield", range = "Anarchy +2" }
-    sets.weapons.Ranged = { main = "Qutrub Knife", sub = "Nusku Shield", range = "Anarchy +2" }
+    sets.weapons.Default = { main = "Naegling", sub = "Nusku Shield", range = "Fomalhaut" }
+    sets.weapons.Ranged = { main = "Gleti's Knife", sub = "Nusku Shield", range = "Anarchy +2" }
     sets.weapons.Evisceration = { main = "Tauret", sub = "Nusku Shield", range = "Anarchy +2" }
-    sets.weapons.DualWeapons = { main = "Naegling", sub = "Gleti's Knife", range = "Magnatus" }
+    sets.weapons.DualWeapons = { main = "Naegling", sub = "Gleti's Knife", range = "Fomalhaut" }
     sets.weapons.DualSavageWeapons = { main = "Naegling", sub = "Gleti's Knife", range = "Anarchy +2" }
     sets.weapons.DualEvisceration = { main = "Tauret", sub = "Blurred Knife +1", range = "Anarchy +2" }
     sets.weapons.Savage = { main = "Naegling", sub = "Nusku Shield", range = "Anarchy +2" }
-    sets.weapons.DualLeadenRanged = { main = "Tauret", sub = "Gleti's Knife", range = "Fomalhaut" }
-    sets.weapons.DualLeadenMelee = { main = "Tauret", sub = "Gleti's Knife", range = "Fomalhaut" }
+    sets.weapons.DualLeadenRanged = { main = "Tauret", sub = "Gleti's Knife", range = "Death Penalty" }
+    sets.weapons.DualLeadenMelee = { main = "Tauret", sub = "Gleti's Knife", range = "Death Penalty" }
     sets.weapons.DualAeolian = { main = "Rostam", sub = "Tauret", range = "Anarchy +2" }
-    sets.weapons.DualLeadenMeleeAcc = { main = "Tauret", sub = "Gleti's Knife", range = "Fomalhaut" }
     sets.weapons.DualRanged = {
 		main={ name="Rostam"},
         sub="Gleti's Knife",
 		range={ name="Fomalhaut", augments={'Path: A',}},
 		ammo="Chrono Bullet",
     }
+    sets.weapons.DualFermion = { main = "Qutrub Knife", sub = "Bronze Knife", range = "Death Penalty" }
+
     -- Engaged sets
 
     -- Variations for TP weapon and (optional) offense/defense modes.  Code will fall back on previous

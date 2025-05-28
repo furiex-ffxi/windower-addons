@@ -12,7 +12,7 @@ function user_job_setup()
         ['description'] = 'Extra Melee Mode',
         'None'
     }
-    state.Weapons:options('Trishula', 'Shining One', 'Rhongomiant', 'Naegling', 'Mafic', 'Fermion')
+    state.Weapons:options('Trishula', 'Shining One', 'Rhongomiant', 'Naegling', 'Mafic', 'Fermion', 'DualNaeglingKraken')
     state.Passive = M {
         ['description'] = 'Passive Mode',
         'None',
@@ -344,6 +344,11 @@ function init_gear_sets()
         sub = "Legion Scutum"
     }
 
+    sets.weapons.DualNaeglingKraken = {
+        main = "Naegling",
+        sub = "Kraken Club"
+    }
+
     sets.weapons.Mafic = {
         main = "Mafic Cudgel",
         sub = "Legion Scutum"
@@ -413,14 +418,23 @@ function init_gear_sets()
     sets.engaged.SomeAcc = set_combine(sets.engaged, {
     })
     sets.engaged.Acc = set_combine(sets.engaged, {
-        neck={ name="Dgn. Collar +2", augments={'Path: A',}},
+        ear1="Telos Earring",
+        ear2="Crepuscular Earring",
 		waist={ name="Kentarch Belt +1", augments={'Path: A',}},
+        feet=gear.empy.Feet,
     })
     sets.engaged.FullAcc = set_combine(sets.engaged, {
     })
     sets.engaged.DT = set_combine(sets.engaged, {
         right_ring = "Moonlight Ring",
         feet = sets.Nyame.Feet,
+    })
+    sets.engaged.DualNaeglingKraken = set_combine(sets.engaged.Acc, {
+        ammo = "Aurgelmir Orb +1",
+        body = gear.empy.Body,
+        ear1 = "Dedition Earring",
+        waist = "Reiki Yotai",  
+        back = "Null Shawl",
     })
 
     sets.engaged.AM = {}
