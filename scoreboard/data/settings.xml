@@ -71,7 +71,6 @@
                 <y>225</y>
             </pos>
         </display>
-        <visible>true</visible>
     </cleobabe>
     <furyex>
         <display>
@@ -98,7 +97,6 @@
                 <y>225</y>
             </pos>
         </display>
-        <visible>true</visible>
     </lolababe>
     <mailman>
         <display>
@@ -107,6 +105,5 @@
                 <y>296</y>
             </pos>
         </display>
-        <visible>true</visible>
     </mailman>
 </settings>

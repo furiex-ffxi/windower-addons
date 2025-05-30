@@ -214,18 +214,18 @@ function init_gear_sets()
 		}
 	)
 
-	-- Absorb TP set- Haste 25% and FC 43 Gear + 38 Job Traits = 81%
+	-- Absorb TP set- Haste 25% and FC 42 Gear + 38 Job Traits = 80%
 	sets.precast.FC.Absorb = {
 		main = "Maxentius",
 		sub = "Ammurapi Shield",
 		ammo = "Pemphredo Tathlum",
-		head = {name = "Carmine Mask +1", augments = {"Accuracy+20", "Mag. Acc.+12", '"Fast Cast"+4'}}, -- 14 FC
+		head = AF.Head, -- 16 FC
 		body = EMPY.Body,
 		hands = EMPY.Hands,
 		legs = EMPY.Legs,
 		feet = EMPY.Feet,
-		neck = "Dls. Torque +2",
-		waist = "Witful Belt", -- 3 FC
+		neck = "Null Loop",
+		waist = "Null Belt",
 		left_ear = "Malignance Earring", -- 4 FC
 		right_ear = {
 			name = "Leth. Earring +1",
@@ -413,7 +413,7 @@ function init_gear_sets()
 		feet = EMPY.Feet,
 		left_ear = "Malignance Earring",
 		right_ear = "Snotra Earring",
-		waist = "Acuity Belt +1",
+		waist = "Null Belt",
 		ammo = "Regal Gem",
 		left_ring = {name = "Metamor. Ring +1", augments = {"Path: A"}},
 		right_ring = "Freke Ring"
@@ -679,9 +679,9 @@ function init_gear_sets()
 		head = RELIC.Head,
 		body = EMPY.Body,
 		hands = "Regal Cuffs",
-		waist = "Obstin. Sash",
 		legs = "Chironic Hose",
 		feet = RELIC.Feet,
+		waist = "Null Belt",
 		left_ear = "Snotra Earring",
 		right_ear = "Malignance Earring",
 		back = RDMCape.MACC
@@ -694,6 +694,7 @@ function init_gear_sets()
 			main = "Daybreak",
 			sub = "Ammurapi Shield",
 			head = AF.Head,
+			neck = "Null Loop",
 			ear1 = "Regal Earring",
 			hands = EMPY.Hands,
 			waist = "Null Belt",
@@ -738,6 +739,7 @@ function init_gear_sets()
 			ear2 = "Vor Earring",
 			hands = EMPY.Hands,
 			body = AF.Body,
+			waist = "Obstin. Sash",
 			ring1 = {name = "Stikini Ring +1", bag = "wardrobe1"},
 			ring2 = {name = "Stikini Ring +1", bag = "wardrobe2"}
 		}

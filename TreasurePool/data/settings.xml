@@ -66,12 +66,24 @@
             <y>951</y>
         </pos>
     </cleobabe>
+    <fedexman>
+        <pos>
+            <x>2206</x>
+            <y>824</y>
+        </pos>
+    </fedexman>
     <furyex>
         <pos>
             <x>2077</x>
             <y>691</y>
         </pos>
     </furyex>
+    <lanababe>
+        <pos>
+            <x>2118</x>
+            <y>560</y>
+        </pos>
+    </lanababe>
     <lolababe>
         <pos>
             <x>2313</x>
