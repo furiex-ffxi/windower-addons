@@ -7,3 +7,6 @@
 [submodule "interactbruh"]
 	path = interactbruh
 	url = git@github.com:eLiidyr/interactbruh.git
+[submodule "maga"]
+	path = maga
+	url = git@github.com:cairthenn/maga.git
