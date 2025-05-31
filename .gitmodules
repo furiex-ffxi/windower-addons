@@ -16,3 +16,6 @@
 [submodule "sheolhelper"]
 	path = sheolhelper
 	url = git@github.com:MarianArlt/sheolhelper.git
+[submodule "Skillchains"]
+	path = Skillchains
+	url = git@github.com:posimagi/Skillchains.git
