@@ -1,3 +1,6 @@
 [submodule "ConquestPoints"]
 	path = ConquestPoints
 	url = git@github.com:furiex-ffxi/ConquestPoints.git
+[submodule "DParty"]
+	path = DParty
+	url = git@github.com:Petewilmer/DParty.git
