@@ -19,3 +19,6 @@
 [submodule "Skillchains"]
 	path = Skillchains
 	url = git@github.com:posimagi/Skillchains.git
+[submodule "trust"]
+	path = trust
+	url = git@github.com:furiex-ffxi/trust.git
