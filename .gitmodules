@@ -10,3 +10,6 @@
 [submodule "maga"]
 	path = maga
 	url = git@github.com:cairthenn/maga.git
+[submodule "quetz"]
+	path = quetz
+	url = git@github.com:furiex-ffxi/quetz.git
