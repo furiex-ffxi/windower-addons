@@ -1,0 +1,3 @@
+[submodule "ConquestPoints"]
+	path = ConquestPoints
+	url = git@github.com:furiex-ffxi/ConquestPoints.git
