@@ -28,3 +28,6 @@
 [submodule "widescantool"]
 	path = widescantool
 	url = git@github.com:mujihina/widescantool.git
+[submodule "superwarp"]
+	path = superwarp
+	url = git@github.com:furiex-ffxi/superwarp.git
