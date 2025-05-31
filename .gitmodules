@@ -4,3 +4,6 @@
 [submodule "DParty"]
 	path = DParty
 	url = git@github.com:Petewilmer/DParty.git
+[submodule "interactbruh"]
+	path = interactbruh
+	url = git@github.com:eLiidyr/interactbruh.git
