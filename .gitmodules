@@ -22,3 +22,6 @@
 [submodule "trust"]
 	path = trust
 	url = git@github.com:furiex-ffxi/trust.git
+[submodule "NyzulBuddy2"]
+	path = NyzulBuddy2
+	url = git@github.com:Darkdoom22/NyzulBuddy2.git
