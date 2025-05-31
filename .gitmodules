@@ -25,3 +25,6 @@
 [submodule "NyzulBuddy2"]
 	path = NyzulBuddy2
 	url = git@github.com:Darkdoom22/NyzulBuddy2.git
+[submodule "widescantool"]
+	path = widescantool
+	url = git@github.com:mujihina/widescantool.git
