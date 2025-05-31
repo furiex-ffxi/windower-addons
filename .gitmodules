@@ -13,3 +13,6 @@
 [submodule "quetz"]
 	path = quetz
 	url = git@github.com:furiex-ffxi/quetz.git
+[submodule "sheolhelper"]
+	path = sheolhelper
+	url = git@github.com:MarianArlt/sheolhelper.git
