@@ -729,7 +729,9 @@ function init_gear_sets()
 	sets.midcast.Foil = sets.enmity
 	sets.midcast.Flash = sets.enmity
 
-	sets.midcast.Dispel = sets.midcast["Enfeebling Magic"].Resistant
+	sets.midcast.Dispel = set_combine(sets.midcast["Enfeebling Magic"].Resistant, {
+		neck = "Dls. Torque +2",
+	})
 
 	sets.midcast.SkillBasedEnfeebling =
 		set_combine(

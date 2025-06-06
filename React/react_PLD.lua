@@ -27,4 +27,10 @@ return {
             ["ready_reaction"] = "turnaround"
         }
     },
+    ["Ou"]={
+        ["Dancing Fullers"]={
+            ["ready_reaction"]="runaway 12",
+            ["complete_reaction"]="runto 3"
+        }
+    },
 }

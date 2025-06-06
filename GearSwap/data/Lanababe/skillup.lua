@@ -8,7 +8,7 @@ res = require 'resources'
 ---You need to have a minimum of 2 spells in your list
 user_settings = {
     user_spells = {
-        Healing = T{},
+        Healing = T{'Cure'},
         Geomancy = T{},
         Enhancing = T{},
         Ninjutsu = T{},

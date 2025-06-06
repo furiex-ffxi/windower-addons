@@ -6,7 +6,7 @@ _addon.command  = 'ord'
 require('tables')
 require('strings')
 
-local accounts  = {'Furyex', 'Cleobabe', 'Lolababe', 'Mailman'}
+local accounts  = {'Furyex', 'Cleobabe', 'Lolababe', 'Mailman', 'Fedexman', 'Lanababe'}
 local gdelay    = 0.75
 
 windower.register_event('addon command', function(...)

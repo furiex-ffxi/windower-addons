@@ -248,7 +248,7 @@ function init_gear_sets()
 		left_ear = "Friomisi Earring",
 		right_ear = "Crematio Earring",
 		left_ring = "Dingir Ring",
-        right_ring = "Hecate's Earring",
+        right_ring = "Epaminondas's Ring",
         back = gear.magic_wsd_jse_back,
 	})
 

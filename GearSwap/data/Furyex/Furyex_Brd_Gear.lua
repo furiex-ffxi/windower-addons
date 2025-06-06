@@ -26,7 +26,7 @@ function user_job_setup()
 	state.CarnMode = M {"Always", "300", "1000", "Never"}
 
 	-- Adjust this if using the Terpander (new +song instrument)
-	info.ExtraSongInstrument = "Daurdabla"
+	info.ExtraSongInstrument = "Loughnashade"
 	-- How many extra songs we can keep from Daurdabla/Terpander
 	info.ExtraSongs = 2
 
@@ -327,7 +327,7 @@ function init_gear_sets()
 	sets.midcast.SongEffect = {
 		main = "Carnwenhan",
 		sub = "Ammurapi Shield",
-		range = "Gjallarhorn",
+		range = "Loughnashade",
 		ammo = empty,
 		head = gear.empy_head,
 		body = gear.empy_body,

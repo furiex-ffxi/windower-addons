@@ -53,6 +53,14 @@
             </pos>
         </display>
     </cleobabe>
+    <fedexman>
+        <display>
+            <pos>
+                <x>1</x>
+                <y>-2</y>
+            </pos>
+        </display>
+    </fedexman>
     <furyex>
         <display>
             <pos>

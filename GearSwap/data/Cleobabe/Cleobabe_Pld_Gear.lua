@@ -62,7 +62,7 @@ function init_gear_sets()
         waist="Goading Belt",
         left_ear="Trux Earring",
         right_ear="Cryptic Earring",
-        left_ring="Begrudging Ring",
+        left_ring="Apeile Ring",
         right_ring={ name="Apeile Ring +1", augments={'Path: A',}},
         back=gear.jse_def_back,
     }
@@ -428,8 +428,7 @@ function init_gear_sets()
         left_ear="Knightly Earring",
         right_ear={ name="Nourish. Earring +1", augments={'Path: A',}},
         left_ring={ name="Moonlight Ring",priority=1},
-        right_ring = "Defending Ring",
-        -- right_ring={ name="Apeile Ring +1", augments={'Path: A',}},
+        right_ring={ name="Apeile Ring +1", augments={'Path: A',}},
         back=gear.jse_cure_back,
     }
 		

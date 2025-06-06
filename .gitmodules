@@ -31,3 +31,9 @@
 [submodule "superwarp"]
 	path = superwarp
 	url = git@github.com:furiex-ffxi/superwarp.git
+[submodule "GearInfo"]
+	path = GearInfo
+	url = git@github.com:sebyg666/GearInfo.git
+[submodule "TradePlayer"]
+	path = TradePlayer
+	url = git@github.com:Tny5989/TradePlayer.git

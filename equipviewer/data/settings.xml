@@ -53,12 +53,24 @@
             <y>1226</y>
         </pos>
     </cleobabe>
+    <fedexman>
+        <pos>
+            <x>2080</x>
+            <y>1226</y>
+        </pos>
+    </fedexman>
     <furyex>
         <pos>
             <x>2080</x>
             <y>1226</y>
         </pos>
     </furyex>
+    <lanababe>
+        <pos>
+            <x>2080</x>
+            <y>1226</y>
+        </pos>
+    </lanababe>
     <lolababe>
         <pos>
             <x>2080</x>
