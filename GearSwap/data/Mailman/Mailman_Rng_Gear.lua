@@ -5,7 +5,7 @@ function user_job_setup()
     state.RangedMode:options('Normal', 'Acc', 'Fodder')
     state.WeaponskillMode:options('Match', 'Normal', 'Acc')
     state.IdleMode:options('Normal', 'PDT')
-    state.Weapons:options('Default', 'DualEviscerationWeapons', 'DualGastra', 'DualAnni', 'DualWeapons', 'DualSavageWeapons', 'DualMagicWeapons',
+    state.Weapons:options('Default', 'DualEviscerationWeapons', 'DualGastra', 'DualAnni', 'DualWeapons', 'DualSavageWeapons', 'DualSavageKraken', 'DualMagicWeapons',
         'DualMalevolence', 'DualFermion')
 
     Ikenga_vest_bonus = 100  -- It is 190 at R20. Uncomment if you need to manually adjust because you are using below R20
@@ -485,6 +485,12 @@ function init_gear_sets()
         range = "Sparrowhawk +3",
         ammo = "Hauksbok Arrow"
     }
+    sets.weapons.DualSavageKraken = {
+        main = "Naegling",
+        sub = "Kraken Club",
+        range = "Sparrowhawk +3",
+        ammo = "Hauksbok Arrow"
+    }
     sets.weapons.DualEviscerationWeapons = {
         main = "Tauret",
         sub = "Malevolence",
@@ -554,6 +560,17 @@ function init_gear_sets()
 
     sets.engaged.DW.Acc = set_combine(sets.engaged.DW, {
        
+    })
+
+    sets.engaged.DualSavageKraken = set_combine(sets.engaged, {
+        neck = "Iskur Gorget",
+        head = sets.Malignance.Head,
+        body = sets.Malignance.Body,
+        hands = sets.Malignance.Hands,
+        legs = sets.Malignance.Legs,
+        feet = sets.Malignance.Feet, 
+        waist = "Goading Belt",
+        ear1 = "Dedition Earring",
     })
 
     --------------------------------------

@@ -237,22 +237,23 @@ function init_gear_sets()
 
     -- Fast cast sets for spells
     
-    sets.precast.FC = {
-        ammo="Sapience Orb",
-        head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}},
-        body={ name="Rev. Surcoat +3",priority=1},
-        hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
-        legs={ name="Sakpata's Cuisses", augments={'Path: A',}},
-        feet="Chev. Sabatons +3",
-        neck="Orunmila's Torque",
-        waist="Plat. Mog. Belt",
-        -- waist="Oneiros Belt",
-        left_ear="Tuisto Earring",
-        right_ear="Loquac. Earring",
-        left_ring="Gelatinous Ring +1",
-        right_ring="Kishar Ring",
-        back=gear.jse_fc_back,
-    }
+    sets.precast.FC = { -- Total FC: 67%
+        ammo="Sapience Orb",            -- FC: 2%
+        head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}},  -- FC: 14%
+        body={ name="Rev. Surcoat +3",priority=1},  -- FC: 10%
+        hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},  -- FC: 8%
+        legs={ name="Sakpata's Cuisses", augments={'Path: A',}},  -- FC: 0%
+        feet="Chev. Sabatons +3",       -- FC: 13%
+        neck="Voltsurge Torque",        -- FC: 4%
+        -- neck="Orunmila's Torque",    -- FC: 5%
+        waist="Plat. Mog. Belt",        -- FC: 0%
+        -- waist="Oneiros Belt",        -- FC: 0%
+        left_ear="Tuisto Earring",      -- FC: 0%
+        right_ear="Loquac. Earring",    -- FC: 2%
+        left_ring="Gelatinous Ring +1", -- FC: 0%
+        right_ring="Kishar Ring",       -- FC: 4%
+        back=gear.jse_fc_back,          -- FC: 10%
+    } 
 		
     sets.precast.FC.DT = {
         ammo="Sapience Orb",
