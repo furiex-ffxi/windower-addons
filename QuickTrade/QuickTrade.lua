@@ -383,7 +383,7 @@ function quicktrade(arg)
 	}	
 	
 	local ancientCurrencyBronzeIDs = {
-		{id = 1452, name = 'O. Bronzepiece' , count = 100, stacks = 0, stacksize = 99, minimum = 100},
+		{id = 1452, name = 'O. Bronzepiece' , count = 0, stacks = 0, stacksize = 99, minimum = 100},
 	}	
 	
 	local ancientCurrencyWhiteshellIDs = {

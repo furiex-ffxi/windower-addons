@@ -45,4 +45,20 @@ return {
             ["complete_reaction"]="runto 3"
         }
     },
+    ["Ou"]={
+        ["Dancing Fullers"]={
+            ["ready_reaction"]="runaway 12",
+            ["complete_reaction"]="runto 3"
+        }
+    },
+    ["Lady Lilith"]={
+        ["Dark Thorn"]={
+            ["complete_reaction"]="trust set autofacemobmode away",
+            ["ready_reaction"]="trust set autofacemobmode off"
+        },
+        ["Fatal Allure"]={
+            ["complete_reaction"]="trust set autofacemobmode auto",
+            ["ready_reaction"]="trust set autofacemobmode away"
+        }
+    },   
 }

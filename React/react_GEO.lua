@@ -66,5 +66,11 @@ return {
             ["complete_reaction"]="", 
             ["ready_reaction"]="input /ma Stun <bt>"
         }
-    },    
+    },
+    ["Kei"]={
+        ["Dancing Fullers"]={
+            ["ready_reaction"]="runaway 12",
+            ["complete_reaction"]="runto 3"
+        }
+    },
 }

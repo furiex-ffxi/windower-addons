@@ -25,11 +25,11 @@ function user_job_setup()
 		"DualEvisceration",
 		"DualClubs",
 		"DualAeolian",
-		"EnspellOnly",
-		"Enspell",
-		"EnspellDW",
 		"DualSeraph",
-		"DualBow"
+		"EnspellDW",
+		"DualBow",
+		"EnspellOnly",
+		"Enspell"
 	)
 	state.ConvertMode = M {"Always", "300", "1000", "Never"}
 
@@ -78,8 +78,8 @@ function init_gear_sets()
 	-- Fill this with your own JSE.
 	--Atrophy
 	AF.Head = "Atrophy Chapeau +3"
-	AF.Body = "Atrophy Tabard +3"
-	AF.Hands = "Atrophy Gloves +3"
+	AF.Body = "Atrophy Tabard +4"
+	AF.Hands = "Atro. Gloves +4"
 	AF.Legs = "Atrophy Tights +3"
 	AF.Feet = "Atrophy Boots +3"
 
@@ -249,8 +249,8 @@ function init_gear_sets()
 		legs = sets.Nyame.Legs,
 		feet = EMPY.Feet,
 		waist = "Sailfi Belt +1",
-		left_ear = {name = "Moonshade Earring", augments = {"Accuracy+4", "TP Bonus +250"}},
-		right_ear = "Sherida Earring",
+		left_ear = "Sherida Earring",
+		right_ear = {name = "Moonshade Earring", augments = {"Accuracy+4", "TP Bonus +250"}},
 		left_ring = "Epaminondas's Ring",
 		right_ring = "Karieyh Ring",
 		back = RDMCape.STRWSD
@@ -684,7 +684,7 @@ function init_gear_sets()
 		waist = "Null Belt",
 		left_ear = "Snotra Earring",
 		right_ear = "Malignance Earring",
-		back = RDMCape.MACC
+		back = "Null Shawl"
 	}
 
 	sets.midcast["Enfeebling Magic"].Resistant =
@@ -1157,7 +1157,7 @@ function init_gear_sets()
 	sets.weapons.Club = {main = "Maxentius", sub = "Forfend +1"}
 	sets.weapons.EnspellOnly = {main = "Hedron Dagger", sub = "Qutrub Knife", range = empty}
 	sets.weapons.Enspell = {main = "Crocea Mors", sub = "Ammurapi Shield", range = empty}
-	sets.weapons.EnspellDW = {main = "Crocea Mors", sub = "Demers. Degen +1", range = empty}
+	sets.weapons.EnspellDW = {main = "Crocea Mors", sub = "Crepuscular Knife", range = empty}
 	sets.weapons.DualSeraph = {main = "Crocea Mors", sub = "Daybreak", range = empty}
 	sets.weapons.DualAlmace = {main = "Almace", sub = "Sequence", range = empty}
 	sets.weapons.DualBow = {main = "Naegling", sub = "Thibron", range = "Ullr", ammo = "Chapuli Arrow"}

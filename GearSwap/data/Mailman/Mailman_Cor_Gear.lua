@@ -198,7 +198,7 @@ function init_gear_sets()
     sets.precast.RA = {
         ammo = gear.RAbullet,
 		head=gear.Empy.Head, -- 0/14
-        body="Laksa. Frac +3", -- 18/0
+        body="Laksa. Frac +4", -- 18/0
 		hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}}, -- 8/11
 		legs={ name="Adhemar Kecks +1", augments={'AGI+12','"Rapid Shot"+13','Enmity-6',}}, -- 10/13
 		feet="Meg. Jam. +2", -- 10/0
@@ -211,7 +211,7 @@ function init_gear_sets()
 		back=gear.snapshot_jse_back, -- 10/0
     } -- Totals 50/43
 
-    sets.precast.RA.Flurry = set_combine(sets.precast.RA, { body="Laksa. Frac +3", }) -- Totals 45/63
+    sets.precast.RA.Flurry = set_combine(sets.precast.RA, { body="Laksa. Frac +4", }) -- Totals 45/63
     sets.precast.RA.Flurry2 = set_combine(sets.precast.RA.Flurry, { feet={ name="Pursuer's Gaiters", augments={'Rng.Acc.+10','"Rapid Shot"+10','"Recycle"+15',}} }) -- Totals 35/73
 
 
@@ -449,7 +449,7 @@ function init_gear_sets()
 
     sets.midcast.RA.Acc = set_combine(sets.midcast.RA, {
         head = "Malignance Chapeau",
-        body = "Laksa. Frac +3",
+        body = "Laksa. Frac +4",
         hands = "Malignance Gloves",
 		legs="Chas. Culottes +3",
         ring1 = "Regal Ring",

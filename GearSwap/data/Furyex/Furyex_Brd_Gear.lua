@@ -20,7 +20,8 @@ function user_job_setup()
 		"DualNaegling",
 		"DualNaeglingAcc",
 		"DualTwash",
-		"DualAeolian"
+		"DualAeolian",
+		"DualFermion"
 	)
 	-- Whether to use Carn (or song daggers in general) under a certain threshhold even when weapons are locked.
 	state.CarnMode = M {"Always", "300", "1000", "Never"}
@@ -96,13 +97,14 @@ function init_gear_sets()
 	sets.weapons.Naegling = {main = "Naegling", sub = "Genmei Shield"}
 	sets.weapons.Xoanon = {main = "Xoanon", sub = "Enki Strap"}
 	sets.weapons.Qutrub = {main = "Qutrub Knife", sub = "Genmei Shield"}
-	sets.weapons.DualCarnwenhan = {main = "Carnwenhan", sub = "Fusetto +2"}
+	sets.weapons.DualCarnwenhan = {main = "Carnwenhan", sub = "Fusetto +3"}
 	sets.weapons.DualWeapons = {main = "Kartika", sub = "Gleti's Knife"} -- Aenas
-	sets.weapons.DualMpu = {main = "Mpu Gandring", sub = "Fusetto +2"}
-	sets.weapons.DualNaegling = {main = "Naegling", sub = "Fusetto +2"}
+	sets.weapons.DualMpu = {main = "Mpu Gandring", sub = "Fusetto +3"}
+	sets.weapons.DualNaegling = {main = "Naegling", sub = "Fusetto +3"}
 	sets.weapons.DualNaeglingAcc = {main = "Naegling", sub = "Gleti's Knife"}
-	sets.weapons.DualTwash = {main = "Twashtar", sub = "Fusetto +2"}
+	sets.weapons.DualTwash = {main = "Twashtar", sub = "Fusetto +3"}
 	sets.weapons.DualAeolian = {main = "Tauret", sub = "Malevolence"}
+    sets.weapons.DualFermion = {main="Fermion Sword", sub="Hedron Dagger"}
 
 	sets.buff.Sublimation = {
 		waist = "Embla Sash"
@@ -125,8 +127,8 @@ function init_gear_sets()
 		waist = "Embla Sash",
 		ear1 = "Enchntr. Earring +1",
 		ear2 = "Etiolation Earring",
-		ring1 = "Weather. Ring",
-		ring2 = "Kishar Ring",
+		ring1 = "Kishar Ring",
+		ring2 = "Gelationus Ring +1",
 		back = "Fi Follet Cape +1"
 	}
 
@@ -137,8 +139,8 @@ function init_gear_sets()
 		ear2 = "Loquac. Earring",
 		body = "Inyanga Jubbah +2",
 		hands = "Gende. Gages +1",
-		ring1 = "Weather. Ring",
-		ring2 = "Kishar Ring",
+		ring1 = "Kishar Ring",
+		ring2 = "Gelationus Ring +1",
 		back = gear.idle_jse_back,
 		waist = "Witful Belt",
 		legs = "Kaykaus Tights +1",
@@ -357,11 +359,10 @@ function init_gear_sets()
 		neck = "Mnbw. Whistle +1",
 		ear1 = "Regal Earring",
 		ear2 = "Fili Earring +1",
-		ring1 = {name = "Stikini Ring +1", bag = "wardrobe1"},
+		ring1 = "Metamor. Ring +1",
 		ring2 = {name = "Stikini Ring +1", bag = "wardrobe2"},
-		waist = "Acuity Belt +1",
-		back = "Aurist's Cape +1"
-		-- back = gear.fc_jse_back
+		waist = "Null Belt",
+		back = "Null Shawl"
 	}
 
 	sets.midcast.SongDebuff.DW = {} --Only weapons in this set. This set is overlayed onto SongDebuff
@@ -411,12 +412,11 @@ function init_gear_sets()
 		body = "Inyanga Jubbah +2",
 		hands = "Gendewitha Gages +1",
 		ring1 = "Kishar Ring",
-		ring2 = "Prolix Ring",
-		-- back = gear.fc_jse_back,
+		ring2 = {name = "Gelatinous Ring +1", augments = {"Path: A"}},
 		back = "Fi Follet Cape +1",
 		waist = "Witful Belt",
 		legs = gear.empy_legs,
-		feet = "Aya. Gambieras +2"
+		feet = gear.empy_feet
 	}
 
 	-- Cast spell with normal gear, except using Daurdabla instead
@@ -632,7 +632,7 @@ function init_gear_sets()
 		legs = sets.Nyame.Legs,
 		feet = sets.Nyame.Feet,
 		neck = "Warder's Charm +1",
-		waist = "Plat. Mog. Belt",
+		waist = "Null Belt",
 		ear1 = "Eabani Earring",
 		ear2 = "Etiolation Earring",
 		ring1 = "Karieyh Ring",

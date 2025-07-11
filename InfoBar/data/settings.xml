@@ -69,6 +69,17 @@
             </pos>
         </display>
     </furyex>
+    <lanababe>
+        <display>
+            <pos>
+                <x>-34</x>
+                <y>-5</y>
+            </pos>
+            <text>
+                <blue>128</blue>
+            </text>
+        </display>
+    </lanababe>
     <lolababe>
         <display>
             <pos>
@@ -80,9 +91,12 @@
     <mailman>
         <display>
             <pos>
-                <x>-53</x>
+                <x>-70</x>
                 <y>-18</y>
             </pos>
+            <text>
+                <blue>128</blue>
+            </text>
         </display>
     </mailman>
 </settings>

@@ -50,7 +50,7 @@ function init_gear_sets()
 	sets.precast.JA['Berserk'] = { 
 		sub = "Diamond Aspis",
 		back = gear.da_jse_back,
-		body="Pumm. Lorica +3", 
+		body="Pumm. Lorica +4", 
         feet="Agoge Calligae +3"
 	}
 	sets.precast.JA['Warcry'] = {
@@ -80,7 +80,7 @@ function init_gear_sets()
 	sets.precast.JA['Retaliation'] = {
 		sub = "Diamond Aspis",
 		feet="Boii Calligae +3",
-		hands="Pumm. Mufflers +3"
+		hands="Pumm. Mufflers +4"
 	}
 	sets.precast.JA['Restraint'] = {
 		sub = "Diamond Aspis",
@@ -106,14 +106,14 @@ function init_gear_sets()
 	-- Fast cast sets for spells
 
 	sets.precast.FC = {
-        -- ammo="Sapience Orb",
+        ammo="Sapience Orb",
         head="Sakpata's Helm",
         body="Sakpata's Breastplate",
         hands="Leyline Gloves",
         -- legs="Arjuna Breeches",
-        -- feet="Odyssean Greaves",
+        feet="Odyssean Greaves",
         neck="Voltsurge Torque",
-        -- waist="Audumbla Sash",
+        waist="Audumbla Sash",
         left_ear="Loquac. Earring",
         right_ear="Etiolation Earring",
         left_ring="Gelatinous Ring +1",
@@ -167,7 +167,7 @@ function init_gear_sets()
         head = "Agoge Mask +3",
 		neck = "War. Beads +2",
         hands =	"Boii Mufflers +3",
-        body = "Pumm. Lorica +3",
+        body = "Pumm. Lorica +4",
         legs = sets.Nyame.Legs,
         feet = sets.Nyame.Feet,
 		waist="Sailfi Belt +1",
@@ -193,12 +193,12 @@ function init_gear_sets()
 
 	sets.precast.WS.SomeAcc = set_combine(sets.precast.WS, { 
 		-- back = "Letalis Mantle", 
-		legs="Pumm. Cuisses +3",
+		legs="Pumm. Cuisses +4",
 	})
 	sets.precast.WS.Acc = set_combine(sets.precast.WS, { 
 		neck = "Combatant's Torque",
-		legs = "Pumm. Cuisses +3",
-        feet = "Pumm. Calligae +3",
+		legs = "Pumm. Cuisses +4",
+        feet = "Pumm. Calligae +4",
 	})
 	sets.precast.WS.FullAcc = set_combine(sets.precast.WS, { 
 		neck = "Combatant's Torque" 
@@ -271,7 +271,7 @@ function init_gear_sets()
 		body = "Sakpata's Plate",
 		hands = "Sakpata's Gauntlets",
 		legs = "Sakpata's Cuisses",
-		feet = "Pumm. Calligae +3",
+		feet = "Pumm. Calligae +4",
 		belt = "Fotia Belt",
 		ring2 = "Niqmaddu Ring",
 	})
@@ -377,7 +377,7 @@ function init_gear_sets()
 		head="Sakpata's Helm",
 		body="Sacro Breastplate",
 		hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
-		legs="Pumm. Cuisses +3",
+		legs="Pumm. Cuisses +4",
 		feet="Boii Calligae +3",
 		neck={ name="War. Beads +2", augments={'Path: A',}},
 		waist="Asklepian Belt",
@@ -409,8 +409,8 @@ function init_gear_sets()
 		legs="Sakpata's Cuisses",
 		feet="Sakpata's Leggings",
 		waist="Plat. Mog. Belt",
-		-- legs="Pumm. Cuisses +3",
-		-- feet="Pumm. Calligae +3",
+		-- legs="Pumm. Cuisses +4",
+		-- feet="Pumm. Calligae +4",
 		neck={ name="War. Beads +2", augments={'Path: A',}},
 		-- waist="Ioskeha Belt +1",
 		-- left_ear="Telos Earring",
@@ -467,8 +467,8 @@ function init_gear_sets()
 		neck = "War. Beads +2",
 		body = "Sakpata's Breastplate",
 		hands="Sakpata's Gauntlets",
-		legs="Pumm. Cuisses +3",
-		feet="Pumm. Calligae +3",
+		legs="Pumm. Cuisses +4",
+		feet="Pumm. Calligae +4",
 		waist="Sailfi Belt +1",
 		right_ear="Boii Earring +1",
 		left_ear="Schere Earring",
@@ -1571,5 +1571,5 @@ function select_default_macro_book()
 end
 
 function user_job_lockstyle()
-	windower.chat.input('/lockstyleset 017')
+	windower.chat.input('/lockstyleset 001')
 end

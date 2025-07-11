@@ -222,8 +222,8 @@ function init_gear_sets()
 	)
 
 	sets.midcast.Cure = {
-		main = "Daybreak",
-		sub = "Sors Shield",
+		-- main = "Daybreak",
+		-- sub = "Sors Shield",
 		-- ammo = "Hasty Pinion +1",
 		head = "Vanya Hood",
 		neck = "Incanter's Torque",
@@ -259,8 +259,8 @@ function init_gear_sets()
 
 	--Cureset for if it's not light weather but is light day.
 	sets.midcast.LightDayCure = {
-		main = "Daybreak",
-		sub = "Sors Shield",
+		-- main = "Daybreak",
+		-- sub = "Sors Shield",
 		-- ammo = "Hasty Pinion +1",
 		head = "Amalric Coif +1",
 		neck = "Incanter's Torque",
@@ -319,8 +319,25 @@ function init_gear_sets()
 		back = gear.nuke_jse_back
 	}
 
+	sets.midcast['Elemental Magic'].Proc = {
+		main = empty,
+		sub = empty,
+		ammo = "Impatiens",
+		head = "Vanya Hood",
+		neck = "Loricate Torque +1",
+		ear1 = "Gifted Earring",
+		ear2 = "Loquac. Earring",
+		body = "Seidr Cotehardie",
+		hands = "Regal Cuffs",
+		ring1 = "Kishar Ring",
+		ring2 = "Prolix Ring",
+		back = "Swith Cape +1",
+		waist = "Witful Belt",
+		legs = "Assid. Pants +1",
+		feet = "Regal Pumps +1"
+	}
+
 	-- sets.midcast['Elemental Magic'].Resistant = sets.midcast['Elemental Magic']
-	-- sets.midcast['Elemental Magic'].Proc = sets.midcast['Elemental Magic']
 	-- sets.midcast['Elemental Magic'].Fodder = sets.midcast['Elemental Magic']
 	-- sets.midcast['Elemental Magic'].HighTierNuke = sets.midcast['Elemental Magic']
 	-- sets.midcast['Elemental Magic'].HighTierNuke.Resistant = sets.midcast['Elemental Magic']

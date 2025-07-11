@@ -646,7 +646,7 @@ function init_gear_sets()
             name = "Odnowa Earring +1",
             augments = {"Path: A"}
         },
-        left_ring = "Chirich Ring +1",
+        left_ring = "Karieyh Ring",
         right_ring = "Chirich Ring +1",
         back = {
             name = "Segomo's Mantle",
@@ -730,8 +730,7 @@ function init_gear_sets()
         waist = "Moonbow Belt +1",
         left_ear = "Sherida Earring",
         right_ear = {
-            name = "Schere Earring",
-            augments = {"Path: A"}
+            name = "Bhikku Earring +2"
         },
         left_ring = "Niqmaddu Ring",
         right_ring = "Gere Ring",
@@ -795,7 +794,7 @@ function init_gear_sets()
             augments = {"Path: A"}
         },
         right_ear = {
-            name = "Bhikku Earring +1"
+            name = "Bhikku Earring +2"
         },
         left_ring = "Defending Ring",
         right_ring = "Gere Ring",
@@ -817,7 +816,7 @@ function init_gear_sets()
         body = "Bhikku Cyclas +3"
     }
     sets.buff.Footwork = {}
-    sets.buff.Boost = {} -- waist="Ask Sash"
+    sets.buff.Boost = { waist="Ask Sash" } 
 
     sets.FootworkWS = {}
     sets.DayIdle = {}

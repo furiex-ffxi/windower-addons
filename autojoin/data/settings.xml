@@ -4,9 +4,12 @@
         <autodecline>false</autodecline>
         <blacklist />
         <mode>whitelist</mode>
-        <whitelist>Furyex,Mikazaru,Cyrite,Dimdragon,Lolababe,Mailman,Cleobabe,Lilsouja,Faustine,Dudewtf</whitelist>
+        <whitelist>Furyex,Mikazaru,Cleobabe,Dimdragon,Lolababe,Mailman,Faustine,Lilsouja,Cyrite,Dudewtf</whitelist>
     </global>
+    <cleobabe>
+        <whitelist>Furyex,Mikazaru,Cleobabe,Cyrite,Lanababe,Dimdragon,Lolababe,Mailman,Lilsouja,Fedexman,Faustine,Dudewtf</whitelist>
+    </cleobabe>
     <furyex>
-        <whitelist>Furyex,Mikazaru,Rapsodya,Cleobabe,Dimdragon,Lolababe,Mailman,Faustine,Lilsouja,Cyrite,Dudewtf</whitelist>
+        <whitelist>Furyex,Mikazaru,Mailman,Cyrite,Dimdragon,Lolababe,Cleobabe,Rapsodya,Lilsouja,Faustine,Dudewtf</whitelist>
     </furyex>
 </settings>

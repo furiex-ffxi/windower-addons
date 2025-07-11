@@ -17,11 +17,11 @@ function user_job_setup()
 	gear.tp_jse_back = { name = "Intarabus's Cape", augments = { 'DEX+20', 'Accuracy+20 Attack+20', 'Accuracy+10', '"Dbl.Atk."+10', 'Phys. dmg. taken-10%', } }
 
 	gear.af = {}
-	gear.af.Head             = "Brioso Roundlet +3"
-	gear.af.Body             = "Brioso Justau. +3"
-	gear.af.Hands            = "Brioso Cuffs +3"
-	gear.af.Legs             = "Brioso Cannions +3"
-	gear.af.Feet             = "Brioso Slippers +3"
+	gear.af.Head             = "Brioso Roundlet +4"
+	gear.af.Body             = "Brioso Just. +4"
+	gear.af.Hands            = "Brioso Cuffs +4"
+	gear.af.Legs             = "Brioso Cann. +4"
+	gear.af.Feet             = "Brioso Slippers +4"
 
 	gear.relic = {}
 	gear.relic.Head          = "Bihu Roundlet +3"
@@ -493,8 +493,8 @@ function init_gear_sets()
 
 
 	-- Gear to enhance certain classes of songs
-	sets.midcast.Lullaby = { }
-	sets.midcast.Lullaby.Resistant = { range = "Gjallarhorn" }
+	sets.midcast.Lullaby = { hands = gear.af.Hands }
+	sets.midcast.Lullaby.Resistant = { hands = gear.af.Hands, range = "Gjallarhorn" }
 	sets.midcast.Lullaby.Duration = sets.midcast.Lullaby
 
 	sets.midcast.Ballad = { legs = "Fili Rhingrave +3" }
@@ -503,6 +503,7 @@ function init_gear_sets()
 	sets.midcast['Horde Lullaby'] = { 
 		main = "Carnwenhan",
 		sub = "Ammurapi Shield",
+		hands = gear.af.Hands,
 		range = "Gjallarhorn" 
 	} 
 	sets.midcast['Horde Lullaby'].Resistant = sets.midcast['Horde Lullaby']
@@ -511,7 +512,8 @@ function init_gear_sets()
 		main = "Carnwenhan",
 		sub = "Ammurapi Shield",
 		range = "Blurred Harp +1",
-		hands = "Inyan. Dastanas +2",
+		hands = gear.af.Hands,
+		legs = "Inyanga Shalwar +2",
 		feet = "Bihu Slippers +3",
 		ear1 = "Gersemi Earring",
 	}
@@ -566,7 +568,7 @@ function init_gear_sets()
 	sets.idle = {
 		range = "Loughnashade",
 		head = "Fili Calot +3",
-		body = "Zendik Robe",
+		body = "Adamantite Armor",
 		hands = "Fili Manchettes +3",
 		legs = gear.empy.Legs,
 		feet = "Fili Cothurnes +3",

@@ -75,16 +75,17 @@
     </global>
     <cleobabe>
         <text>
-            <bg>
-                <green>75</green>
-            </bg>
             <pos>
                 <x>76</x>
                 <y>503</y>
             </pos>
+            <text>
+                <fonts>
+
+                </fonts>
+            </text>
         </text>
-        <tracking>ulhuadshi</tracking>
-        <visible>false</visible>
+        <tracking>kukulkan</tracking>
     </cleobabe>
     <furyex>
         <text>
@@ -114,15 +115,13 @@
     </lolababe>
     <mailman>
         <text>
+            <bg>
+                <green>75</green>
+            </bg>
             <pos>
                 <x>76</x>
                 <y>503</y>
             </pos>
-            <text>
-                <fonts>
-
-                </fonts>
-            </text>
         </text>
         <tracking>ulhuadshi</tracking>
         <visible>false</visible>

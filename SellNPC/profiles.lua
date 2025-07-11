@@ -13,6 +13,12 @@ profiles['powder'] = S{
 
 -- //sellnpc junk
 profiles['junk'] = S{
+    'Shining Cloth',
+    'Mage\'s Ballad III',
+    'Behemoth Hide',
+    'Behemoth Horn',
+    'Addle',
+    'Snowsteel Ore',
     '??? Earring: WAR',
     '??? Earring: MNK',
     '??? Earring: WHM',
@@ -213,7 +219,6 @@ profiles['junk'] = S{
     'Win. Tea Leaves', 
     'Sheep Tooth', 
     'Blk. Tiger Fang', 
-    'Wootz Ore', 
     'Bugard Tusk', 
     'Loc. Elutriator', 
     'Senroh Sardine', 

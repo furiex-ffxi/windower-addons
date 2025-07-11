@@ -11,7 +11,6 @@ function user_job_setup()
 	state.ResistDefenseMode:options("MEVA")
 	state.Weapons:options(
 		"None",
-		"Mpu",
 		"Naegling",
 		"Onion",
 		"Club",
@@ -19,7 +18,6 @@ function user_job_setup()
 		"Murgleis",
 		"Bow",
 		"DualWeapons",
-		"DualMpu",
 		"DualOnion",
 		"DualWeaponsAcc",
 		"DualEvisceration",
@@ -78,8 +76,8 @@ function init_gear_sets()
 	-- Fill this with your own JSE.
 	--Atrophy
 	AF.Head = "Atrophy Chapeau +3"
-	AF.Body = "Atrophy Tabard +3"
-	AF.Hands = "Atrophy Gloves +3"
+	AF.Body = "Atrophy Tabard +4"
+	AF.Hands = "Atro. Gloves +4"
 	AF.Legs = "Atrophy Tights +3"
 	AF.Feet = "Atrophy Boots +3"
 
@@ -91,11 +89,11 @@ function init_gear_sets()
 	RELIC.Feet = "Vitiation Boots +3"
 
 	--Lethargy
-	EMPY.Head = "Leth. Chappel +3"
-	EMPY.Body = "Lethargy Sayon +3"
-	EMPY.Hands = "Leth. Ganth. +3"
-	EMPY.Legs = "Leth. Fuseau +3"
-	EMPY.Feet = "Leth. Houseaux +3"
+	EMPY.Head = "Leth. Chappel +2"
+	EMPY.Body = "Lethargy Sayon +2"
+	EMPY.Hands = "Leth. Ganth. +2"
+	EMPY.Legs = "Leth. Fuseau +2"
+	EMPY.Feet = "Leth. Houseaux +2"
 
 	-- Carmine
 	Carm.Legs = {}
@@ -181,7 +179,8 @@ function init_gear_sets()
 		right_ear = "Etiolation Earring", -- 1
 		left_ring = "Defending Ring",
 		right_ring = "Kishar Ring", -- 4
-		back = "Perimede Cape",
+		-- back = "Perimede Cape",
+		back = "Fi Follet Cape +1", -- 10
 		ammo = "Staunch Tathlum +1",
 		range = empty
 		--Total: 45 gear + 38 job
@@ -228,7 +227,7 @@ function init_gear_sets()
 		waist = "Null Belt",
 		left_ear = "Malignance Earring", -- 4 FC
 		right_ear = {
-			name = "Leth. Earring +1",
+			name = "Lethargy Earring",
 			augments = {"System: 1 ID: 1676 Val: 0", "Accuracy+13", "Mag. Acc.+13", '"Dbl.Atk."+4'}
 		}, -- 8 FC
 		left_ring = {name = "Metamor. Ring +1", augments = {"Path: A"}},
@@ -241,16 +240,18 @@ function init_gear_sets()
 	-- Weaponskill sets
 	-- Default set for any weaponskill that isn't any more specifically defined
 	sets.precast.WS = {
-		head = sets.Nyame.Head,
+		-- head = sets.Nyame.Head,
+		head = RELIC.Head,
 		ammo = "Oshasha's Treatise",
 		neck = "Rep. Plat. Medal",
 		body = sets.Nyame.Body,
-		hands = sets.Nyame.Hands,
+		-- hands = sets.Nyame.Hands,
+		hands = AF.Hands,
 		legs = sets.Nyame.Legs,
 		feet = EMPY.Feet,
 		waist = "Sailfi Belt +1",
-		left_ear = {name = "Moonshade Earring", augments = {"Accuracy+4", "TP Bonus +250"}},
-		right_ear = "Sherida Earring",
+		left_ear = "Sherida Earring",
+		right_ear = {name = "Moonshade Earring", augments = {"Accuracy+4", "TP Bonus +250"}},
 		left_ring = "Epaminondas's Ring",
 		right_ring = "Karieyh Ring",
 		back = RDMCape.STRWSD
@@ -286,7 +287,7 @@ function init_gear_sets()
 			neck = "Fotia Gorget",
 			body = EMPY.Body,
 			ear1 = "Sherida Earring",
-			ear2 = "Leth. Earring +1",
+			ear2 = "Lethargy Earring",
 			hands = sets.Malignance.Hands,
 			-- ring1 = "Begrudging Ring",
 			ring1 = "Karieyh Ring",
@@ -323,7 +324,7 @@ function init_gear_sets()
 			neck = "Fotia Gorget",
 			ammo = "Coiste Bodhar",
 			ear1 = "Sherida Earring",
-			ear2 = "Leth. Earring +1",
+			ear2 = "Lethargy Earring",
 			waist = "Fotia Belt",
 			back = RDMCape.DEXWSD
 		}
@@ -426,7 +427,7 @@ function init_gear_sets()
 		sub = "Clerisy Strap +1",
 		-- ammo = "Hasty Pinion +1",
 		head = AF.Head,
-		neck = "Voltsurge Torque",
+		neck = "Baeytl Pendant",
 		ear1 = "Enchntr. Earring +1",
 		ear2 = "Malignance Earring",
 		body = "Zendik Robe",
@@ -449,7 +450,7 @@ function init_gear_sets()
 		neck = "Null Loop",
 		waist = "Sailfi Belt +1",
 		left_ear = "Regal Earring",
-		right_ear = "Leth. Earring +1", -- 8
+		right_ear = "Lethargy Earring", -- 8
 		left_ring = {name = "Metamor. Ring +1", augments = {"Path: A"}},
 		right_ring = {name = "Stikini Ring +1", bag = "wardrobe2"},
 		back = RDMCape.FC -- 10
@@ -576,7 +577,7 @@ function init_gear_sets()
 		neck = {name = "Dls. Torque +2", augments = {"Path: A"}},
 		waist = "Embla Sash",
 		left_ear = "Malignance Earring",
-		right_ear = "Leth. Earring +1",
+		right_ear = "Lethargy Earring",
 		ring1 = {name = "Stikini Ring +1", bag = "wardrobe1"},
 		ring2 = {name = "Stikini Ring +1", bag = "wardrobe2"},
 		back = "Ghostfyre Cape"
@@ -589,7 +590,7 @@ function init_gear_sets()
 		head = {name = "Telchine Cap", augments = {'"Regen"+2', "Enh. Mag. eff. dur. +10"}},
 		neck = "Dls. Torque +2",
 		ear1 = "Andoaa Earring",
-		ear2 = "Leth. Earring +1",
+		ear2 = "Lethargy Earring",
 		body = RELIC.Body,
 		hands = AF.Hands,
 		ring1 = {name = "Stikini Ring +1", bag = "wardrobe2"},
@@ -671,19 +672,21 @@ function init_gear_sets()
 	sets.midcast["Enfeebling Magic"] = {
 		main = "Murgleis",
 		sub = "Ammurapi Shield",
-		ring1 = {name = "Stikini Ring +1", bag = "wardrobe2"},
-		ring2 = "Kishar Ring",
+		ring1 = {name = "Stikini Ring +1", bag = "wardrobe"},
+		ring2 = {name = "Stikini Ring +1", bag = "wardrobe2"},
+		-- ring2 = "Kishar Ring",
 		ammo = "Regal Gem",
 		range = empty,
 		neck = "Dls. Torque +2",
 		head = RELIC.Head,
 		body = EMPY.Body,
-		hands = "Regal Cuffs",
+		-- hands = "Regal Cuffs",
+		hands = AF.Hands,
 		legs = "Chironic Hose",
 		feet = RELIC.Feet,
 		waist = "Null Belt",
 		left_ear = "Snotra Earring",
-		right_ear = "Malignance Earring",
+		right_ear = "Regal Earring",
 		back = RDMCape.MACC
 	}
 
@@ -808,7 +811,7 @@ function init_gear_sets()
 		range = empty,
 		ammo = "Impatiens",
 		head = "Vanya Hood",
-		neck = "Voltsurge Torque",
+		neck = "Baeytl Pendant",
 		ear1 = "Enchntr. Earring +1",
 		ear2 = "Loquac. Earring",
 		body = "Zendik Robe",
@@ -1137,18 +1140,16 @@ function init_gear_sets()
 	sets.NightIdle = {}
 
 	-- Weapons sets
-	sets.weapons.Mpu = {main = "Mpu Gandring", sub = "Ammurapi Shield", range = empty}
 	sets.weapons.Murgleis = {main = "Murgleis", sub = "Ammurapi Shield", range = empty}
 	sets.weapons.Naegling = {main = "Naegling", sub = "Ammurapi Shield", range = empty}
 	sets.weapons.Onion = {main = "Onion Sword III", sub = "Ammurapi Shield", range = empty}
 	sets.weapons.Bow = {main = "Naegling", sub = "Sacro Bulwark", range = "Ullr", ammo = "Beetle Arrow"}
-	sets.weapons.DualMpu = {main = "Mpu Gandring", sub = "Thibron", range = empty}
 	sets.weapons.DualOnion = {main = "Onion Sword III", sub = "Kraken Club", range = empty}
-	sets.weapons.DualWeapons = {main = "Naegling", sub = "Thibron", range = empty}
+	sets.weapons.DualWeapons = {main = "Naegling", sub = "Machaera +2", range = empty}
 	-- sets.weapons.DualWeaponsAcc = { main = "Naegling", sub = "Almace", range = empty }
 	sets.weapons.DualWeaponsAcc = {main = "Naegling", sub = "Ternion Dagger +1", range = empty}
 	-- sets.weapons.DualEvisceration = { main = "Tauret", sub = "Almace", range = empty }
-	sets.weapons.DualClubs = {main = "Maxentius", sub = "Thibron", range = empty}
+	sets.weapons.DualClubs = {main = "Maxentius", sub = "Machaera +2", range = empty}
 	sets.weapons.DualEvisceration = {main = "Tauret", sub = "Ternion Dagger +1", range = empty}
 	sets.weapons.DualAeolian = {main = "Tauret", sub = "Daybreak", range = empty}
 	sets.weapons.Tauret = {main = "Tauret", sub = "Ammurapi Shield"}
@@ -1158,7 +1159,7 @@ function init_gear_sets()
 	sets.weapons.EnspellDW = {main = "Crocea Mors", sub = "Demers. Degen +1", range = empty}
 	sets.weapons.DualSeraph = {main = "Crocea Mors", sub = "Daybreak", range = empty}
 	sets.weapons.DualAlmace = {main = "Almace", sub = "Sequence", range = empty}
-	sets.weapons.DualBow = {main = "Naegling", sub = "Thibron", range = "Ullr", ammo = "Chapuli Arrow"}
+	sets.weapons.DualBow = {main = "Naegling", sub = "Machaera +2", range = "Ullr", ammo = "Chapuli Arrow"}
 	sets.weapons.BowMacc = {main = "Naegling", sub = "Tauret", range = "Ullr", ammo = empty}
 
 	sets.buff.Sublimation = {waist = "Embla Sash"}
@@ -1182,11 +1183,14 @@ function init_gear_sets()
 		--    back  Sucellos's Cape DEX Dual Wield
 		ammo = "Aurgelmir Orb +1",
 		range = empty,
-		head = "Bunzi's Hat",
+		-- head = "Bunzi's Hat",
+		head = sets.Malignance.Head,
 		hands = sets.Malignance.Hands,
 		body = sets.Malignance.Body,
-		left_ring = "Chirich Ring +1",
-		right_ring = "Lehko's Ring",
+		left_ring = "Ilabrat Ring",
+		right_ring = "Petrov Ring",
+		-- left_ring = "Chirich Ring +1",
+		-- right_ring = "Lehko's Ring",
 		legs = sets.Malignance.Legs,
 		feet = sets.Malignance.Feet,
 		neck = "Anu Torque",
@@ -1213,7 +1217,7 @@ function init_gear_sets()
 			neck = "Dls. Torque +2",
 			ammo = "Sroda Tathlum",
 			ear1 = "Crep. Earring",
-			ear2 = "Leth. Earring +1",
+			ear2 = "Lethargy Earring",
 			body = EMPY.Body,
 			hands = "Aya. Manopolas +2",
 			ring1 = "Metamor. Ring +1",
@@ -1235,7 +1239,7 @@ function init_gear_sets()
 		{
 			neck = "Null Loop",
 			waist = "Null Belt",
-			right_ear = "Leth. Earring +1"
+			right_ear = "Lethargy Earring"
 		}
 	)
 
@@ -1258,7 +1262,8 @@ function init_gear_sets()
 		sets.engaged,
 		{
 			waist = "Reiki Yotai",
-			ear2 = "Suppanomimi"
+			ear2 = "Eabani Earring",
+			-- ear2 = "Suppanomimi"
 		}
 	)
 	sets.engaged.DW.Acc = set_combine(sets.engaged.DW, {})

@@ -482,7 +482,7 @@ function init_gear_sets()
 
 	-- 110 total Enhancing Magic Skill; caps even without Light Arts
 	sets.midcast['Enhancing Magic'] = {
-		-- main = gear.gada_enhancing_club,
+		main = gear.gada_enhancing_club,
 		sub = "Ammurapi Shield",
 		ammo = "Hasty Pinion +1",
 		neck = "Incanter's Torque",

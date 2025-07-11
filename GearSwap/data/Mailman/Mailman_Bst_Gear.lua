@@ -454,7 +454,7 @@ function init_gear_sets()
         ammo = "Hesperiidae",
         neck = "Adad Amulet",
         ear1 = "Enmerkar Earring",
-        ear2 = "Crep. Earring",
+        ear2 = "Nukumi Earring +1",
         ring1 = "C. Palug Ring",
         ring2 = "Tali'ah Ring",
         back = "Artio's Mantle",
@@ -463,24 +463,24 @@ function init_gear_sets()
         body="Nukumi Gausape +3",
         hands="Nukumi Manoplas +3",
         legs="Nukumi Quijotes +3",
-        feet="Nukumi Ocreae +3",    
+        feet = "Gleti's Boots"
     }
 
     sets.midcast.Pet.DebuffReady = {
         main = "Agwu's Axe",
-        sub = gear.PDTMABKumbha,
+        sub = "Legion Scutum",
         ammo = "Hesperiidae",
-        head = "Gleti's Mask",
+        head="Nuk. Cabasset +3",
         neck = "Adad Amulet",
         ear1 = "Enmerkar Earring",
-        ear2 = "Crep. Earring",
-        body = "Gleti's Cuirass",
-        hands = "Gleti's Gauntlets",
+        ear2 = "Nukumi Earring +1",
+        body="Nukumi Gausape +3",
+        hands="Nukumi Manoplas +3",
         ring1 = "C. Palug Ring",
         ring2 = "Tali'ah Ring",
         back = "Artio's Mantle",
         waist = "Incarnation Sash",
-        legs = "Gleti's Breeches",
+        legs="Nukumi Quijotes +3",
         feet = "Gleti's Boots"
     }
 

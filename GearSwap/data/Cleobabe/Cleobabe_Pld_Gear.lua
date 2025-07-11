@@ -74,7 +74,7 @@ function init_gear_sets()
         head={ name="Loess Barbuta +1", augments={'Path: A',},priority=1},
         body={ name="Souv. Cuirass +1", augments={'VIT+12','Attack+25','"Refresh"+3',}},
         -- body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
-        hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
+        hands="Regal Gauntlets",
         legs="Founder's Hose",
         feet="Odyssean Greaves",
         neck="Moonlight Necklace",
@@ -247,7 +247,6 @@ function init_gear_sets()
         neck="Voltsurge Torque",        -- FC: 4%
         -- neck="Orunmila's Torque",    -- FC: 5%
         waist="Plat. Mog. Belt",        -- FC: 0%
-        -- waist="Oneiros Belt",        -- FC: 0%
         left_ear="Tuisto Earring",      -- FC: 0%
         right_ear="Loquac. Earring",    -- FC: 2%
         left_ring="Gelatinous Ring +1", -- FC: 0%
@@ -473,7 +472,7 @@ function init_gear_sets()
         head={ name="Loess Barbuta +1", augments={'Path: A',},priority=1},
         body={ name="Souv. Cuirass +1", augments={'VIT+12','Attack+25','"Refresh"+3',}},
         -- body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
-        hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
+        hands="Regal Gauntlets",
         legs="Founder's Hose",
         feet="Odyssean Greaves",
         neck="Moonlight Necklace",
@@ -597,7 +596,7 @@ function init_gear_sets()
     })	
         
     sets.Phalanx_Received = {
-        main="Burtgang",
+        main="Sakpata's Sword",
         sub="Priwen",
         ammo="Staunch Tathlum +1",
         head={ name="Yorium Barbuta", augments={'DEF+22','Spell interruption rate down -10%','Phalanx +3',}},
@@ -675,7 +674,7 @@ function init_gear_sets()
     }
 
     sets.idle.Town = {
-        body = "Sacro Breastplate"
+        body="Adamantite Armor",
     }
 		
 
@@ -702,7 +701,7 @@ function init_gear_sets()
 	sets.weapons.BurtAegis = {main="Burtgang",sub="Aegis",}
 	sets.weapons.BurtDuban = {main="Burtgang",sub="Duban",}
 	sets.weapons.NaeglingBlurred = {main="Naegling",sub="Blurred Shield +1",}
-	sets.weapons.ClubOchain = {}
+	sets.weapons.ClubOchain = {main="Excalibur",sub="Blurred Shield +1",}
 	sets.weapons.DualWeapons = {}
 	sets.weapons.Staff = {main="Malignance Pole",sub="Umbra Strap",}
     
@@ -726,7 +725,25 @@ function init_gear_sets()
 	--------------------------------------
 	-- Engaged sets
 	--------------------------------------
-    
+    sets.engaged = {
+        main="Burtgang",
+        sub= {name="Duban",priority=1},
+        ammo="Coiste Bodhar",
+        head={ name="Sakpata's Helm", augments={'Path: A'}},
+        body={ name="Sakpata's Plate", augments={'Path: A',}},
+        hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
+        legs={ name="Sakpata's Cuisses", augments={'Path: A',}},
+        feet={ name="Sakpata's Leggings", augments={'Path: A',}},
+        neck="Lissome Necklace",
+        waist="Sailfi Belt +1",
+        left_ear="Cessance Earring",
+        right_ear="Telos Earring",
+        left_ring="Chirich Ring +1",
+        right_ring="Chirich Ring +1",
+        back=gear.jse_cure_back,
+    }
+		
+
 	sets.engaged.Tank = {
         main="Burtgang",
         sub= {name="Duban",priority=1},
