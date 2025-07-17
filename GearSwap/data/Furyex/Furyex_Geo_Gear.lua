@@ -592,6 +592,11 @@ function init_gear_sets()
 		}
 	)
 
+	sets.idle.Town = {
+			main = "Idris",
+			sub = "Ammurapi Shield",
+	}
+
 	-- Defense sets
 
 	sets.defense.PDT = set_combine(sets.idle.DT, {})

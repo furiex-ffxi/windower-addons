@@ -681,7 +681,7 @@ function init_gear_sets()
 		hands = "Regal Cuffs",
 		legs = "Chironic Hose",
 		feet = RELIC.Feet,
-		waist = "Null Belt",
+		waist = "Obstinate Sash",
 		left_ear = "Snotra Earring",
 		right_ear = "Malignance Earring",
 		back = "Null Shawl"
