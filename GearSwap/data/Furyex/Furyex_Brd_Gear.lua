@@ -438,8 +438,8 @@ function init_gear_sets()
 		waist = "Luminary Sash",
 		ear1 = "Mendi. Earring",
 		ear2 = "Meili Earring",
-		ring1 = {name = "Stikini Ring +1", bag = "wardrobe2"},
-		ring2 = "Sirona's Ring",
+		ring1 = {name = "Stikini Ring +1", bag = "wardrobe"},
+		ring2 = {name = "Stikini Ring +1", bag = "wardrobe2"},
 		back = "Solemnity Cape"
 	}
 

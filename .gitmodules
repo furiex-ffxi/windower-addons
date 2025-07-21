@@ -40,6 +40,3 @@
 [submodule "Gil"]
 	path = Gil
 	url = git@github.com:Darkdoom22/Gil.git
-[submodule "mappy--Kenshi-Version"]
-	path = mappy--Kenshi-Version
-	url = git@github.com:KenshiDRK/mappy--Kenshi-Version.git

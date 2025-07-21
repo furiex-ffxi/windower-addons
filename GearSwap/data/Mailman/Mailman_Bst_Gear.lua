@@ -1304,6 +1304,10 @@ function select_default_macro_book()
     end
 end
 
+function user_job_lockstyle()
+    windower.chat.input('/lockstyleset 003') 
+end
+
 autows_list = {
     ['PetPDTAxe'] = 'Ruinator',
     ['DualWeapons'] = 'Ruinator'

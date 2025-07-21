@@ -75,11 +75,11 @@ function init_gear_sets()
 
 	-- Fill this with your own JSE.
 	--Atrophy
-	AF.Head = "Atrophy Chapeau +3"
+	AF.Head = "Atro. Chapeau +4"
 	AF.Body = "Atrophy Tabard +4"
 	AF.Hands = "Atro. Gloves +4"
-	AF.Legs = "Atrophy Tights +3"
-	AF.Feet = "Atrophy Boots +3"
+	AF.Legs = "Atro. Tights +4"
+	AF.Feet = "Atro. Boots +4"
 
 	--Vitiation
 	RELIC.Head = "Viti. Chapeau +3"
@@ -174,16 +174,16 @@ function init_gear_sets()
 		hands = sets.Nyame.Hands,
 		legs = sets.Nyame.Legs,
 		feet = sets.Nyame.Feet,
-		waist = "Embla Sash", -- 5
+		waist = "Plat. Mog. Belt",
 		left_ear = "Malignance Earring", -- 4
-		right_ear = "Etiolation Earring", -- 1
+		right_ear = "Lethargy Earring", -- 7
 		left_ring = "Defending Ring",
 		right_ring = "Kishar Ring", -- 4
 		-- back = "Perimede Cape",
 		back = "Fi Follet Cape +1", -- 10
 		ammo = "Staunch Tathlum +1",
 		range = empty
-		--Total: 45 gear + 38 job
+		--Total: 46 gear + 38 job
 	}
 
 	-- Curing Precast, Cure Spell Casting time -
@@ -673,8 +673,7 @@ function init_gear_sets()
 		main = "Murgleis",
 		sub = "Ammurapi Shield",
 		ring1 = {name = "Stikini Ring +1", bag = "wardrobe"},
-		ring2 = {name = "Stikini Ring +1", bag = "wardrobe2"},
-		-- ring2 = "Kishar Ring",
+		ring2 = "Kishar Ring",
 		ammo = "Regal Gem",
 		range = empty,
 		neck = "Dls. Torque +2",

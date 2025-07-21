@@ -198,7 +198,7 @@ function init_gear_sets()
 		sub = "Genmei Shield",
 		range = "Dunna",
 		head = empy.Head,
-		neck = "Incanter's Torque",
+		neck = "Bagua's Charm +2",
 		ear1 = "Calamitous Earring",
 		ear2 = "Azimuth Earring +2",
 		body = "Vedic Coat",
@@ -519,7 +519,8 @@ function init_gear_sets()
 		hands = relic.Hands,
 		legs = sets.Nyame.Legs,
 		feet = sets.Nyame.Feet,
-		ring1 = "Defending Ring",
+		-- ring1 = "Defending Ring",
+		ring1 = "Stikini Ring +1",
 		ring2 = "Stikini Ring +1",
 		back = gear.idle_jse_back,
 		waist = "Plat. Mog. Belt"

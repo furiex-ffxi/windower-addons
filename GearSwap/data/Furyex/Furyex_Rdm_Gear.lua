@@ -77,11 +77,11 @@ function init_gear_sets()
 
 	-- Fill this with your own JSE.
 	--Atrophy
-	AF.Head = "Atrophy Chapeau +3"
+	AF.Head = "Atro. Chapeau +4"
 	AF.Body = "Atrophy Tabard +4"
 	AF.Hands = "Atro. Gloves +4"
-	AF.Legs = "Atrophy Tights +3"
-	AF.Feet = "Atrophy Boots +3"
+	AF.Legs = "Atro. Tights +4"
+	AF.Feet = "Atro. Boots +4"
 
 	--Vitiation
 	RELIC.Head = "Viti. Chapeau +3"
@@ -176,15 +176,15 @@ function init_gear_sets()
 		hands = sets.Nyame.Hands,
 		legs = sets.Nyame.Legs,
 		feet = sets.Nyame.Feet,
-		waist = "Embla Sash", -- 5
+		waist = "Plat. Mog. Belt",
 		left_ear = "Malignance Earring", -- 4
-		right_ear = "Etiolation Earring", -- 1
+		right_ear = "Leth. Earring +1", -- 8
 		left_ring = "Defending Ring",
 		right_ring = "Kishar Ring", -- 4
 		back = "Perimede Cape",
 		ammo = "Staunch Tathlum +1",
 		range = empty
-		--Total: 45 gear + 38 job
+		--Total: 47 gear + 38 job
 	}
 
 	-- Curing Precast, Cure Spell Casting time -
@@ -227,10 +227,7 @@ function init_gear_sets()
 		neck = "Null Loop",
 		waist = "Null Belt",
 		left_ear = "Malignance Earring", -- 4 FC
-		right_ear = {
-			name = "Leth. Earring +1",
-			augments = {"System: 1 ID: 1676 Val: 0", "Accuracy+13", "Mag. Acc.+13", '"Dbl.Atk."+4'}
-		}, -- 8 FC
+		right_ear = "Leth. Earring +1", -- 8 FC
 		left_ring = {name = "Metamor. Ring +1", augments = {"Path: A"}},
 		right_ring = "Kishar Ring", -- 4 FC
 		back = RDMCape.FC -- 10 FC
@@ -426,7 +423,7 @@ function init_gear_sets()
 		sub = "Clerisy Strap +1",
 		-- ammo = "Hasty Pinion +1",
 		head = AF.Head,
-		neck = "Voltsurge Torque",
+		neck = "Baetyl Pendant",
 		ear1 = "Enchntr. Earring +1",
 		ear2 = "Malignance Earring",
 		body = "Zendik Robe",
@@ -810,7 +807,7 @@ function init_gear_sets()
 		range = empty,
 		ammo = "Impatiens",
 		head = "Vanya Hood",
-		neck = "Voltsurge Torque",
+		neck = "Baetyl Pendant",
 		ear1 = "Enchntr. Earring +1",
 		ear2 = "Loquac. Earring",
 		body = "Zendik Robe",
@@ -1000,13 +997,13 @@ function init_gear_sets()
 		ear1 = "Gifted Earring",
 		ear2 = "Mendi. Earring",
 		body = RELIC.Body,
-		hands = "Kaykaus Cuffs",
+		hands = "Kaykaus Cuffs +1",
 		ring1 = "Gelatinous Ring +1",
 		ring2 = "Meridian Ring",
 		back = "Moonlight Cape",
 		waist = "Luminary Sash",
 		legs = "Carmine Cuisses +1",
-		feet = "Kaykaus Boots"
+		feet = "Kaykaus Boots +1"
 	}
 
 	sets.buff.Doom = set_combine(sets.buff.Doom, {})
@@ -1018,7 +1015,7 @@ function init_gear_sets()
 		main = "Chatoyant Staff",
 		sub = "Oneiros Grip",
 		range = empty,
-		ammo = "Impatiens",
+		ammo = "Homiliary",
 		head = RELIC.Head,
 		neck = "Loricate Torque +1",
 		ear1 = "Etiolation Earring",
@@ -1027,7 +1024,7 @@ function init_gear_sets()
 		hands = gear.merlinic_refresh_hands,
 		ring1 = "Defending Ring",
 		ring2 = "Sheltered Ring",
-		back = "Umbra Cape",
+		back = RDMCape.TP,
 		waist = "Flume Belt +1",
 		legs = "Lengo Pants",
 		feet = gear.chironic_refresh_feet
@@ -1101,7 +1098,6 @@ function init_gear_sets()
 		set_combine(
 		sets.idle.PDT,
 		{
-			back = "Umbra Cape",
 			legs = "Carmine Cuisses +1",
 			feet = "Hippo. Socks +1"
 		}

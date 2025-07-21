@@ -61,7 +61,7 @@ function init_gear_sets()
         neck="Moonlight Necklace",
         waist="Creed Baudrier",
         -- left_ear="Trux Earring",
-        -- right_ear="Cryptic Earring",
+        right_ear="Cryptic Earring",
         left_ring="Apeile Ring",
         right_ring={ name="Apeile Ring +1", augments={'Path: A',}},
         back=gear.jse_def_back,
@@ -111,7 +111,7 @@ function init_gear_sets()
         legs={ name="Cab. Breeches +3", augments={'Enhances "Invincible" effect',}},})
     sets.precast.JA['Holy Circle'] = set_combine(sets.Enmity,{
         sub = "Diamond Aspis",
-        feet="Rev. Leggings +3",})
+        feet="Rev. Leggings +4",})
     sets.precast.JA['Sentinel'] = set_combine(sets.Enmity,{
         sub = "Diamond Aspis",
         feet={ name="Cab. Leggings +3", augments={'Enhances "Guardian" effect',}},})
@@ -136,7 +136,7 @@ function init_gear_sets()
     sets.precast.JA['Invincible'].DT = set_combine(sets.Enmity.DT,{legs={ name="Cab. Breeches +3", augments={'Enhances "Invincible" effect',}},})
     sets.precast.JA['Holy Circle'].DT = set_combine(sets.Enmity.DT,{
         sub = "Diamond Aspis",
-        feet="Rev. Leggings +3",
+        feet="Rev. Leggings +4",
     })
     sets.precast.JA['Sentinel'].DT = set_combine(sets.Enmity.DT,{
         sub = "Diamond Aspis",

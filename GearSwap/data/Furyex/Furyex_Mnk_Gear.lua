@@ -1,8 +1,8 @@
 function user_job_setup()
     -- Options: Override default values
-    state.OffenseMode:options("Normal", "SB", "DT", "Conter")
+    state.OffenseMode:options("Normal", "SB", "DT", "Counter")
     state.WeaponskillMode:options("Match", "Normal", "Acc", "FullAcc")
-    state.HybridMode:options("Normal", "PDT")
+    state.HybridMode:options("Normal", "DT")
     state.PhysicalDefenseMode:options("PDT")
     state.MagicalDefenseMode:options("MDT")
     state.ResistDefenseMode:options("MEVA")
@@ -75,6 +75,12 @@ function init_gear_sets()
             augments = {'Enhances "Invigorate" effect'}
         }
     }
+
+    sets.precast.JA['Vallation'] = set_combine(sets.Enmity,{})
+    sets.precast.JA['Valiance'] = sets.precast.JA['Vallation']
+	sets.precast.JA['Pflug'] = set_combine(sets.Enmity,{})
+	sets.precast.JA['Swordplay'] = set_combine(sets.Enmity,{})
+	sets.precast.JA['Perfect Counter'] = set_combine{sets.Enmity,{}}
 
     sets.Enmity = {
         main = "Ungeri Staff",
@@ -668,16 +674,12 @@ function init_gear_sets()
         waist = "Moonbow Belt +1",
         left_ear = "Sherida Earring",
         right_ear = "Bhikku Earring +2",
-        -- right_ear = {
-        --     name = "Schere Earring",
-        --     augments = {"Path: A"}
-        -- },
         left_ring = "Niqmaddu Ring",
         right_ring = "Gere Ring",
         back = gear.jse_dex_wsd_back
     }
 
-    sets.engaged.Conter = {
+    sets.engaged.Counter = {
         ammo = "Amar Cluster",
         head = "Bhikku Crown +3",
         body = {
@@ -695,10 +697,7 @@ function init_gear_sets()
             augments = {"Path: A"}
         },
         waist = "Moonbow Belt +1",
-        left_ear = {
-            name = "Schere Earring",
-            augments = {"Path: A"}
-        },
+        left_ear = "Sherida Earring",
         right_ear = {
             name = "Bhikku Earring +2"
         },
