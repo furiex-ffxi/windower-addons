@@ -2,7 +2,7 @@
 
 _addon.name = 'Scoreboard'
 _addon.author = 'Suji'
-_addon.version = '1.14'
+_addon.version = '1.15'
 _addon.commands = {'sb', 'scoreboard'}
 
 require('tables')
@@ -30,6 +30,9 @@ default_settings.visible = true
 default_settings.showfellow = true
 default_settings.UpdateFrequency = 0.5
 default_settings.combinepets = true
+default_settings.oneperline = false
+default_settings.compactsc = false
+default_settings.creditpetdamagetoowner = false
 
 default_settings.display = {}
 default_settings.display.pos = {}
@@ -84,17 +87,18 @@ windower.register_event('addon command', function()
             sb_output('Scoreboard v' .. _addon.version .. '. Author: Suji')
             sb_output('sb help : Shows help message')
             sb_output('sb pos <x> <y> : Positions the scoreboard')
-            sb_output('sb reset : Reset damage')
+            sb_output('sb reset : Resets damage')
             sb_output('sb report [<target>] : Reports damage. Can take standard chatmode target options.')
             sb_output('sb reportstat <stat> [<player>] [<target>] : Reports the given stat. Can take standard chatmode target options. Ex: //sb rs acc p')
-            sb_output('Valid chatmode targets are: ' .. chatmodes:concat(', '))
-            sb_output('sb filter show  : Shows current filter settings')
-            sb_output('sb filter add <mob1> <mob2> ... : Add mob patterns to the filter (substrings ok)')
+            sb_output('  Valid chatmode targets are: ' .. chatmodes:concat(', '))
+            sb_output('sb filter show : Shows current filter settings')
+            sb_output('sb filter add <mob1> <mob2> ... : Adds mob patterns to the filter (substrings ok)')
             sb_output('sb filter clear : Clears mob filter')
             sb_output('sb visible : Toggles scoreboard visibility')
-            sb_output('sb stat <stat> [<player>]: Shows specific damage stats. Respects filters. If player isn\'t specified, ' ..
-                  'stats for everyone are displayed. Valid stats are:')
-            sb_output(dps_db.player_stat_fields:tostring():stripchars('{}"'))
+            sb_output('sb stat <stat> [<player>] : Shows specific damage stats. Respects filters. If player isn\'t specified, stats for everyone are displayed.')
+            sb_output('  Valid stats are: '..dps_db.player_stat_fields:tostring():stripchars('{}"'))
+            sb_output('sb set <flag> <value> : Sets configuration variables')
+            sb_output('  Valid flags are: CombinePets, NumPlayers, BGTransparency, Font, SBColor, ShowAlliDPS, ResetFilters, ShowFellow, OnePerLine, CompactSC, CreditPetDamageToOwner')
         elseif command == 'pos' then
             if params[2] then
                 local posx, posy = tonumber(params[1]), tonumber(params[2])
@@ -109,83 +113,108 @@ windower.register_event('addon command', function()
             end
 
             local setting = params[1]
-            if setting == 'combinepets' then
-                if params[2] == 'true' then
+            if setting:lower() == 'combinepets' then
+                if params[2]:lower() == 'true' then
                     settings.combinepets = true
-                elseif params[2] == 'false' then
+                elseif params[2]:lower() == 'false' then
                     settings.combinepets = false
                 else
-                    error("Invalid value for 'combinepets'. Must be true or false.")
+                    error("Invalid value for 'CombinePets'. Must be true or false.")
                     return
                 end
                 settings:save()
-                sb_output("Setting 'combinepets' set to " .. tostring(settings.combinepets))
-            elseif setting == 'numplayers' then
+                sb_output("Setting 'CombinePets' set to " .. tostring(settings.combinepets))
+            elseif setting:lower() == 'numplayers' then
                 settings.numplayers = tonumber(params[2])
                 settings:save()
                 display:update()
-                sb_output("Setting 'numplayers' set to " .. settings.numplayers)
-            elseif setting == 'bgtransparency' then
+                sb_output("Setting 'NumPlayers' set to " .. settings.numplayers)
+            elseif setting:lower() == 'bgtransparency' then
                 settings.display.bg.alpha  = tonumber(params[2])
                 settings:save()
                 display:update()
-                sb_output("Setting 'bgtransparency' set to " .. settings.display.bg.alpha)
-            elseif setting == 'font' then
+                sb_output("Setting 'BGTransparency' set to " .. settings.display.bg.alpha)
+            elseif setting:lower() == 'font' then
                 settings.display.text.font = params[2]
                 settings:save()
                 display:update()
-                sb_output("Setting 'font' set to " .. settings.display.text.font)
-            elseif setting == 'sbcolor' then
+                sb_output("Setting 'Font' set to " .. settings.display.text.font)
+            elseif setting:lower() == 'sbcolor' then
                 settings.sbcolor = tonumber(params[2])
                 settings:save()
-                sb_output("Setting 'sbcolor' set to " .. settings.sbcolor)
-            elseif setting == 'showallidps' then
-                if params[2] == 'true' then
+                sb_output("Setting 'SBColor' set to " .. settings.sbcolor)
+            elseif setting:lower() == 'showallidps' then
+                if params[2]:lower() == 'true' then
                     settings.showallidps = true
-                elseif params[2] == 'false' then
+                elseif params[2]:lower() == 'false' then
                     settings.showallidps = false
                 else
-                    error("Invalid value for 'showallidps'. Must be true or false.")
+                    error("Invalid value for 'ShowAlliDPS'. Must be true or false.")
                     return
                 end
-                
                 settings:save()
-                sb_output("Setting 'showalldps' set to " .. tostring(settings.showallidps))
-            elseif setting == 'resetfilters' then
-                if params[2] == 'true' then
+                sb_output("Setting 'ShowAlliDPS' set to " .. tostring(settings.showallidps))
+            elseif setting:lower() == 'resetfilters' then
+                if params[2]:lower() == 'true' then
                     settings.resetfilters = true
-                elseif params[2] == 'false' then
+                elseif params[2]:lower() == 'false' then
                     settings.resetfilters = false
                 else
-                    error("Invalid value for 'resetfilters'. Must be true or false.")
+                    error("Invalid value for 'ResetFilters'. Must be true or false.")
                     return
                 end
-                
                 settings:save()
-                sb_output("Setting 'resetfilters' set to " .. tostring(settings.resetfilters))
-            elseif setting == 'showfellow' then
-                if params[2] == 'true' then
+                sb_output("Setting 'ResetFilters' set to " .. tostring(settings.resetfilters))
+            elseif setting:lower() == 'showfellow' then
+                if params[2]:lower() == 'true' then
                     settings.showfellow = true
-                elseif params[2] == 'false' then
+                elseif params[2]:lower() == 'false' then
                     settings.showfellow = false
                 else
-                    error("Invalid value for 'showfellow'. Must be true or false.")
+                    error("Invalid value for 'ShowFellow'. Must be true or false.")
                     return
                 end
-                
                 settings:save()
-                sb_output("Setting 'showfellow' set to " .. tostring(settings.showfellow))
+                sb_output("Setting 'ShowFellow' set to " .. tostring(settings.showfellow))
+            elseif setting:lower() == 'oneperline' then
+                if params[2]:lower() == 'true' then
+                    settings.oneperline = true
+                elseif params[2]:lower() == 'false' then
+                    settings.oneperline = false
+                else
+                    error("Invalid value for 'OnePerLine'. Must be true or false.")
+                    return
+                end
+                settings:save()
+                sb_output("Setting 'OnePerLine' set to " .. tostring(settings.oneperline))
+            elseif setting:lower() == 'compactsc' then
+                if params[2]:lower() == 'true' then
+                    settings.compactsc = true
+                elseif params[2]:lower() == 'false' then
+                    settings.compactsc = false
+                else
+                    error("Invalid value for 'CompactSC'. Must be true or false.")
+                    return
+                end
+                settings:save()
+                sb_output("Setting 'CompactSC' set to " .. tostring(settings.compactsc))
+            elseif setting:lower() == 'creditpetdamagetoowner' then
+                if params[2]:lower() == 'true' then
+                    settings.creditpetdamagetoowner = true
+                elseif params[2]:lower() == 'false' then
+                    settings.creditpetdamagetoowner = false
+                else
+                    error("Invalid value for 'CreditPetDamageToOwner'. Must be true or false.")
+                    return
+                end
+                settings:save()
+                sb_output("Setting 'CreditPetDamageToOwner' set to " .. tostring(settings.creditpetdamagetoowner))
             end
         elseif command == 'reset' then
             reset()
         elseif command == 'report' then
             local arg = params[1]
             local arg2 = params[2]
-
-            -- no chat mode was specified, just echo it
-            if not arg then
-                arg = "echo"
-            end
 
             if arg then
                 if chatmodes:contains(arg) then
@@ -259,12 +288,8 @@ windower.register_event('addon command', function()
                 -- Arg2 is a chatmode so we assume this is a 3-arg version (no player specified)
                 display:report_stat(stat, {chatmode = arg2, telltarget = arg3})
             else
-                -- no chat mode was specified, just echo it
-                if not arg2 and not arg3 then
-                    display:report_stat(stat, {chatmode = "echo", telltarget = arg3})
-                    return
-                end
-                
+                -- Arg2 is not a chatmode, so we assume it's a player name and then see
+                -- if arg3 looks like an optional chatmode.
                 if arg2 and not arg2:match('^[a-zA-Z]+$') then
                     -- should be a valid player name
                     error('Invalid argument for reportstat t ' .. arg2)
@@ -457,13 +482,22 @@ function action_handler(raw_actionpacket)
                 
                 if add and add.conclusion then
                     local actor_name = create_mob_name(actionpacket)
-                    if T{196,223,288,289,290,291,292,
-                        293,294,295,296,297,298,299,
-                        300,301,302,385,386,387,388,
-                        389,390,391,392,393,394,395,
-                        396,397,398,732,767,768,769,770}:contains(add.message_id) then
-                        actor_name = string.format("Skillchain(%s%s)", actor_name:sub(1, 3),
-                                                      actor_name:len() > 3 and '.' or '')
+                    if not settings.compactsc then
+                        if T{196,223,288,289,290,291,292,
+                            293,294,295,296,297,298,299,
+                            300,301,302,385,386,387,388,
+                            389,390,391,392,393,394,395,
+                            396,397,398,732,767,768,769,770}:contains(add.message_id) then
+                            actor_name = string.format("Skillchain (%s)", actor_name:sub(1, 3))
+                        end
+                    else
+                        if T{196,223,288,289,290,291,292,
+                            293,294,295,296,297,298,299,
+                            300,301,302,385,386,387,388,
+                            389,390,391,392,393,394,395,
+                            396,397,398,732,767,768,769,770}:contains(add.message_id) then
+                            actor_name = string.format("SC:%s", actor_name:sub(1, 13))
+                        end
                     end
                     if add.conclusion.subject == 'target' and T(add.conclusion.objects):contains('HP') and add.param ~= 0 then
                         dps_db:add_damage(target:get_name(), actor_name, (add.conclusion.verb == 'gains' and -1 or 1)*add.param)
@@ -505,29 +539,25 @@ ActionPacket.open_listener(action_handler)
         return name, pet.name
     end
 
-    function create_mob_name(actionpacket)
-        local actor = actionpacket:get_actor_name()
-        local result = ''
-        local owner, pet = find_pet_owner_name(actionpacket)
-        if owner ~= nil then
-            if string.len(actor) > 8 then
-                result = string.sub(actor, 1, 7)..'.'
-            else
-                result = actor
-            end
-            if settings.combinepets then
-                result = ''
-            else
-                result = actor
-            end
-            if pet then
-                result = '('..owner..')'..' '..pet
-            end
-        else
+function create_mob_name(actionpacket)
+    local actor = actionpacket:get_actor_name()
+    local result = ''
+    local owner, pet = find_pet_owner_name(actionpacket)
+    if owner ~= nil then
+        if pet == nil then
             return actor
+        elseif settings.combinepets then
+            result = "Pets"
+        elseif settings.creditpetdamagetoowner then
+            result = owner
+        else
+            result = string.sub(pet, 1, 8) .. " (" .. string.sub(owner, 1, 3) .. ")"
         end
         return result
+    else
+        return actor
     end
+end
 
 config.register(settings, function(settings)
     update_dps_clock:loop(settings.UpdateFrequency)
@@ -536,7 +566,7 @@ end)
 
 
 --[[
-Copyright � 2013-2014, Jerry Hebert
+Copyright (c) 2013-2014, Jerry Hebert
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without

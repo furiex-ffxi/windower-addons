@@ -1,4 +1,10 @@
 return {
+    ["Gogmagog"] = {
+        ["Noahionto"]={
+            ["complete_reaction"]="trust set autofacemobmode off",
+            ["ready_reaction"]="trust set autofacemobmode away"
+        },
+    },
     ["Bozzetto Retributionist"]={
         ["Splashing Assault"]={
             ["complete_reaction"]="",

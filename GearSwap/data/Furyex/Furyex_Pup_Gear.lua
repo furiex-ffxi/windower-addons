@@ -461,7 +461,7 @@ function init_gear_sets()
         },
         legs = "Taeon Tights",
         hands = "Mpaca's Gloves",
-        ring1 = "Overbearing Ring",
+        ring1 = "Varar Ring +1",
         ring2 = "C. Palug Ring",
         back = "Visucius's Mantle",
         waist = "Incarnation Sash",
