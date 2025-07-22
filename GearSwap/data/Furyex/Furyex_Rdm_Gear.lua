@@ -636,7 +636,7 @@ function init_gear_sets()
 		waist = "Olympus Sash",
 		back = "Ghostfyre Cape"
 	}
-	sets.midcast.Refresh = {head = "Amalric Coif +1", body = AF.Body, legs = EMPY.Feet}
+	sets.midcast.Refresh = {head = "Amalric Coif +1", body = AF.Body, legs = EMPY.Legs}
 	sets.midcast.Regen = {
 		main = "Bolelabunga",
 		feet = "Bunzi's Sabots"
