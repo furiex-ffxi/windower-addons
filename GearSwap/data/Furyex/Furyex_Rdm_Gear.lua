@@ -246,7 +246,7 @@ function init_gear_sets()
 		legs = sets.Nyame.Legs,
 		feet = EMPY.Feet,
 		waist = "Sailfi Belt +1",
-		left_ear = "Sherida Earring",
+		left_ear = "Ishvara Earring",
 		right_ear = {name = "Moonshade Earring", augments = {"Accuracy+4", "TP Bonus +250"}},
 		left_ring = "Epaminondas's Ring",
 		right_ring = "Karieyh Ring",
@@ -298,7 +298,6 @@ function init_gear_sets()
 		set_combine(
 		sets.precast.WS,
 		{
-			right_ear = "Dominance Earring +1",
 			waist = {name = "Kentarch Belt +1", augments = {"Path: A"}},
 			ammo = "Crepuscular Pebble",
 			back = RDMCape.DEXWSD

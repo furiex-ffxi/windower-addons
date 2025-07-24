@@ -91,16 +91,16 @@ function init_gear_sets()
 
 	-- Fast cast sets for spells
 	sets.precast.FC = {
-		head = "Volte Beret",
+		head = "Vanya Hood",
 		body = "Zendik Robe",
 		hands = { name = "Gende. Gages +1", augments = { 'Phys. dmg. taken -3%', 'Magic dmg. taken -2%', 'Song spellcasting time -4%', } },
 		legs = "Volte Brais",
 		feet = "Fili Corthurnes +3",
 		neck = "Orunmila's Torque",
 		waist = "Embla Sash",
-		ear1 = "Odnowa Earring +1",
-		ear2 = "Etiolation Earring",
-		ring1 = "Weather. Ring",
+		ear1 = "Etiolation Earring",
+		ear2 = "Fili Earring +1",
+		ring1 = "Medada's Ring",
 		ring2 = "Kishar Ring",
 		back = gear.fc_jse_back,
 	}
@@ -121,8 +121,11 @@ function init_gear_sets()
 	}
 
 	sets.precast.FC.Cure = set_combine(sets.precast.FC, {
+		main = "Daybreak", -- to offset MP
+		sub = "Ammurapi Shield", -- to offset MP
+		ear1 = "Evans Earring", -- to offset MP
 		feet = "Kaykaus Boots +1", --0/7
-		ear2 = "Mendi. Earring", --0/5
+		back = "Fi Follet Cape +1"
 	})
 
 	sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC, { waist = "Siegel Sash" })
@@ -266,7 +269,7 @@ function init_gear_sets()
 	-- For song buffs (duration and AF3 set bonus)
 	sets.midcast.SongEffect = {
 		main = "Carnwenhan",
-		-- sub = "Ammurapi Shield",
+		sub = "Ammurapi Shield",
 		range = "Gjallarhorn",
 		ammo = empty,
 		head = "Fili Calot +3",
@@ -275,9 +278,9 @@ function init_gear_sets()
 		legs = "Inyanga Shalwar +2",
 		feet = "Brioso Slippers +3",
 		neck = "Mnbw. Whistle +1",
-		waist = "Flume Belt +1",
-		ear1 = { name = "Odnowa Earring +1", augments = { 'Path: A', } },
-		ear2 = "Genmei Earring",
+		waist = "Null Belt",
+		ear1 = "Etiolation Earring",
+		ear2 = "Fili Earring +1",
 		ring1 = "Defending Ring",
 		ring2 = { name = "Gelatinous Ring +1", augments = { 'Path: A', } },
 		back = gear.fc_jse_back,
@@ -285,7 +288,7 @@ function init_gear_sets()
 
 	sets.midcast.SongEffect.DW = { 
 		main = "Carnwenhan", 
-		-- sub = "Kali" 
+		sub = "Kali" 
 	} --Only weapons in this set. This set is overlayed onto SongEffect
 
 	sets.midcast.SongDebuff = {
@@ -358,20 +361,21 @@ function init_gear_sets()
 
 	-- Other general spells and classes.
 	sets.midcast.Cure = {
-		main = "Daybreak", --30
-		sub = "Ammurapi Shield",
-		head = "Kaykaus Mitra +1",
+		main = "Grioavolr",
+		sub = "Giuoco Grip",
+		ammo = "Pemphredo Tathlum",
+		head = "Vanya Hood",
 		body = "Kaykaus Bliaut +1",
 		hands = "Kaykaus Cuffs +1",
 		legs = "Kaykaus Tights +1",
-		feet = "Kaykaus Boots +1",
-		neck = "Incanter's Torque",
-		waist = "Luminary Sash",
-		ear1 = "Mendi. Earring",
-		ear2 = "Meili Earring",
-		ring1 = { name = "Stikini Ring +1", bag = "wardrobe2" },
-		ring2 = "Sirona's Ring",
-		back = "Solemnity Cape",
+		feet = "Vanya Clogs",
+		neck = "Reti Pendant",
+		waist = "Shinjutsu-no-Obi +1",
+		ear1 = "Gifted Earring",
+		ear2 = "Calamitous Earring",
+		ring1 = {name = "Stikini Ring +1", bag = "wardrobe"},
+		ring2 = "Mephitas's Ring +1",
+		back = "Aurist's Cape +1"
 	}
 
 	sets.midcast.Curaga = sets.midcast.Cure
@@ -574,7 +578,7 @@ function init_gear_sets()
 		legs = gear.empy.Legs,
 		feet = "Fili Cothurnes +3",
 		neck = "Warder's Charm +1",
-		waist = "Plat. Mog. Belt",
+		waist = "Null Belt",
 		ear1 = "Etiolation Earring",
 		ear2 = "Fili Earring +1",
 		ring1 = "Stikini Ring +1",

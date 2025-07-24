@@ -19,12 +19,10 @@ return {
     },
     ['gallantry'] = {
         [100] = {Name="Tukuku Whiteshell", Cost=20, Option=10, Index=0, Stack=99},
-        [101] = {Name="Lungo-Nango Jadeshell", Cost=2000, Option=10, Index=1, Stack=99},
-        [102] = {Name="Ordelle Bronzepiece",Cost=20, Option=10, Index=2, Stack=99},
-        [103] = {Name="Montiont Silverpiece", Cost=2000, Option=10, Index=3, Stack=99},
-        [104] = {Name="One Byne Bill",Cost=20, Option=10, Index=4, Stack=99},
-        [105] = {Name="One Hundred Byne Bill",Cost=2000, Option=10, Index=5, Stack=99},
-        [106] = {Name="Pluton", Cost=50, Option=10, Index=6, Stack=99},
-        [107] = {Name="Vial of Umbral Marrow", Cost=30000, Option=10, Index=7, Stack=99},
+        [101] = {Name="Ordelle Bronzepiece",Cost=20, Option=10, Index=1, Stack=99},
+        [102] = {Name="One Byne Bill",Cost=20, Option=10, Index=2, Stack=99},
+        [103] = {Name="Pluton", Cost=50, Option=10, Index=3, Stack=99},
+        [104] = {Name="Vial of Umbral Marrow", Cost=30000, Option=10, Index=4, Stack=99},
+        [105] = {Name="Piece of Alexandrite", Cost=15, Option=10, Index=5, Stack=99},
     }
 }

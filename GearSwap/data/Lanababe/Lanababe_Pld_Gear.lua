@@ -737,7 +737,7 @@ function init_gear_sets()
         main="Burtgang",
         sub= {name="Duban",priority=1},
         ammo="Staunch Tathlum +1",
-        head="Chev. Armet +2",
+        head="Chev. Armet +3",
         body={ name="Sakpata's Plate", augments={'Path: A',}},
         hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
         legs="Chev. Cuisses +2",

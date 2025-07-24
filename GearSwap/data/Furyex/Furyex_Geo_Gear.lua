@@ -104,8 +104,7 @@ function init_gear_sets()
 		neck = "Baetyl Pendant", --4
 		ear1 = "Loquac. Earring", -- 2
 		ear2 = "Malignance Earring", -- 4
-		-- body = "Zendik Robe", -- 13
-		body = "Volte Doublet", -- 10
+		body = "Zendik Robe", -- 13
 		hands = "Agwu's Gages", -- 6
 		ring1 = "Kishar Ring", -- 4
 		ring2 = "Prolix Ring", -- 2
@@ -113,7 +112,7 @@ function init_gear_sets()
 		waist = "Witful Belt", -- 3 / 3 QM
 		legs = af.Legs, -- 15
 		feet = "Volte Gaiters" -- 6
-	} -- 80 FC
+	} -- 83 FC
 
 	sets.precast.FC["Elemental Magic"] =
 		set_combine(

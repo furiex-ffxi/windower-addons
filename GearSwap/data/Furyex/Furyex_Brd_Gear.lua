@@ -427,20 +427,21 @@ function init_gear_sets()
 
 	-- Other general spells and classes.
 	sets.midcast.Cure = {
-		main = "Daybreak", --30
-		sub = "Ammurapi Shield",
-		head = "Kaykaus Mitra +1",
+		main = "Grioavolr",
+		sub = "Giuoco Grip",
+		ammo = "Pemphredo Tathlum",
+		head = "Vanya Hood",
 		body = "Kaykaus Bliaut +1",
 		hands = "Kaykaus Cuffs +1",
 		legs = "Kaykaus Tights +1",
-		feet = "Kaykaus Boots +1",
-		neck = "Incanter's Torque",
-		waist = "Luminary Sash",
-		ear1 = "Mendi. Earring",
-		ear2 = "Meili Earring",
+		feet = "Vanya Clogs",
+		neck = "Reti Pendant",
+		waist = "Shinjutsu-no-Obi +1",
+		ear1 = "Gifted Earring",
+		ear2 = "Calamitous Earring",
 		ring1 = {name = "Stikini Ring +1", bag = "wardrobe"},
-		ring2 = {name = "Stikini Ring +1", bag = "wardrobe2"},
-		back = "Solemnity Cape"
+		ring2 = "Mephitas's Ring +1",
+		back = "Aurist's Cape +1"
 	}
 
 	sets.midcast.Curaga = sets.midcast.Cure
