@@ -79,19 +79,23 @@ function init_gear_sets()
 	sets.precast.FC = {
 		main = "Malignance Pole",
 		sub = "Clerisy Strap +1", -- 3 
-		ammo = "Impatiens", -- 2 QM
-		head = gear.empy.head, -- 10
-		neck = "Clr. Torque +2", -- 8
-		ear1 = "Enchntr. Earring +1", -- 2
+		-- ammo = "Impatiens", -- 2 QM
+		ammo = "Sapience Orb", -- 2 QM
+		head = "Bunzi's Hat", -- 10
+		-- neck = "Clr. Torque +2", -- 8
+		neck = "Baetyl Pendant", -- 4
+		ear1 = "Loquac. Earring", -- 2
 		ear2 = "Malignance Earring", -- 4
 		body = "Inyanga Jubbah +2", -- 14
 		hands = "Fanatic Gloves", -- 7
 		ring1 = "Kishar Ring", -- 4
-		ring2 = "Lebeche Ring", -- 2 QM
+		ring2 = "Medada's Ring", -- 10
 		back = "Fi Follet Cape +1", -- 10
 		waist = "Witful Belt", -- 3/3 QM
-		legs = "Volte Brais", -- 9
-		feet = "Volte Gaiters"  -- 6
+		-- legs = "Volte Brais", -- 9
+		legs = "Lengo Pants", -- 5
+		feet = "Nyame Sollerets"
+		-- feet = "Volte Gaiters"  -- 6
 	} -- 80 FC / 7 QM
 
 	sets.precast.FC.DT = set_combine(sets.precast.FC, {
@@ -116,7 +120,7 @@ function init_gear_sets()
 
 	sets.precast.FC.CureSolace = sets.precast.FC.Cure
 
-	sets.precast.FC.Impact = set_combine(sets.precast.FC, { head = empty, body = "Twilight Cloak" })
+	sets.precast.FC.Impact = set_combine(sets.precast.FC, { head = empty, body = "Crepuscular Cloak" })
 
 	sets.precast.FC.Dispelga = set_combine(sets.precast.FC, { main = "Daybreak", sub = "Genmei Shield" })
 
@@ -266,7 +270,8 @@ function init_gear_sets()
 	sets.midcast['Full Cure'] = sets.midcast.FastRecast
 
 	sets.midcast.Cure = {
-		main = "Raetic Rod +1",
+		-- main = "Raetic Rod +1",
+		main = "Daybreak",
 		sub = "Genmei Shield",
 		ammo = "Pemphredo Tathlum",
 		head = "Kaykaus Mitra +1",
@@ -828,6 +833,8 @@ function init_gear_sets()
 
 	-- Idle sets (default idle set not needed since the other three are defined, but leaving for testing purposes)
 	sets.idle = {
+		main = "Daybreak",
+		sub = "Ammurapi Shield",
 		ammo = "Homiliary",
 		head = "Null Masque",
 		neck = "Loricate Torque +1",

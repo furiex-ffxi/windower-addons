@@ -402,22 +402,14 @@ function init_gear_sets()
 
 	-- Defense sets
 	sets.defense.PDT = {
-		-- ammo="Coiste Bodhar",
 		head="Sakpata's Helm",
 		body="Sakpata's Plate",
 		hands="Sakpata's Gauntlets",
 		legs="Sakpata's Cuisses",
 		feet="Sakpata's Leggings",
 		waist="Plat. Mog. Belt",
-		-- legs="Pumm. Cuisses +4",
-		-- feet="Pumm. Calligae +4",
 		neck={ name="War. Beads +2", augments={'Path: A',}},
-		-- waist="Ioskeha Belt +1",
-		-- left_ear="Telos Earring",
-		-- right_ear="Dedition Earring",
-		ring1="Flamma Ring",
 		ring2="Gelatinous Ring +1",
-		-- right_ring="Defending Ring",
 		back=gear.da_jse_back,
 	}
 

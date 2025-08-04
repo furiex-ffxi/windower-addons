@@ -129,6 +129,10 @@ function aminon_debuffs(org)
 	end
 
 	indexstart, indexend = string.find(org:lower(),"effect wears off")
+	if indexstart and string.find(org:lower(), "inhibit tp") then
+		windower.send_command('input /p Chi Blast wore off!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! <call15>')
+	end
+
 	if indexstart and string.find(org:lower(), "magic") then
 		windower.send_command('input /p Frazzle wore off!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! <call15>')
 	end

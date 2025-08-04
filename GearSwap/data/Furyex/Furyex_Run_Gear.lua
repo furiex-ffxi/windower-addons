@@ -697,7 +697,7 @@ function init_gear_sets()
 	-- Weapons sets
 	-- Refined Grip +1
 	sets.weapons.Aettir = {main = "Aettir", sub = "Utu Grip"}
-	sets.weapons.Hepatizon = {main = "Hepatizon Axe +1", sub = "Utu Grip"}
+	sets.weapons.Hepatizon = {main = "Lycurgos", sub = "Utu Grip"}
 	sets.weapons.Epeo = {main = "Epeolatry", sub = "Refined Grip +1"}
 	sets.weapons.Doli = {main = "Dolichenus", sub = "Chanter's Shield"}
 	sets.weapons.DualWeapons = {main = "Firangi", sub = "Reikiko"}

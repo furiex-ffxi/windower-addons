@@ -14,6 +14,8 @@ profiles['powder'] = S{
 -- //sellnpc junk
 profiles['junk'] = S{
     'Shining Cloth',
+    'Hare Meat',
+    'Hare Hide',
     'Mage\'s Ballad III',
     'Behemoth Hide',
     'Behemoth Horn',

@@ -184,7 +184,7 @@ function quicktrade(arg)
 	}
 
 	local soulPlateIDs = {
-		{id = 2477, name = 'soul plate', count = 0, stacks = 0, stacksize = 1}, -- Can only trade 10 per Vana'diel day
+		{id = 2477, name = 'soul plate', count = 0, stacks = 0, stacksize = 1}, 
 	}
 	
 	local spGobbieKeyIDs = {
@@ -518,7 +518,17 @@ function quicktrade(arg)
 		windower.send_command('setkey enter down;wait 0.1;setkey enter up;wait 2;setkey down down;wait 0.1;setkey down up;wait 0.1;setkey down down;wait 0.1;setkey down up;wait 0.1;setkey down down;wait 0.1;setkey down up;wait 0.1;setkey down down;wait 0.1;setkey down up;wait 0.1;setkey down down;wait 0.1;setkey down up;wait 0.1;setkey enter down;wait 0.1;setkey enter up;wait 0.2;setkey down down;wait 0.1;setkey down up;wait 0.1;setkey down down;wait 0.1;setkey down up;wait 0.1;setkey down down;wait 0.1;setkey down up;wait 0.1;setkey down down;wait 0.1;setkey down up;wait 0.1;setkey down down;wait 0.1;setkey down up;wait 0.1;setkey down down;wait 0.1;setkey down up;wait 0.1;setkey enter down;wait 0.1;setkey enter up;wait 0.2;setkey up down;wait 0.1;setkey up up;wait 0.1;setkey enter down;wait 0.1;setkey enter up')
 	elseif target.name == 'Atma Infusionist' then
 		windower.send_command('setkey enter down;wait 0.1;setkey enter up;wait 2;setkey down down;wait 0.1;setkey down up;wait 0.1;setkey down down;wait 0.1;setkey down up;wait 0.1;setkey down down;wait 0.1;setkey down up;wait 0.1;setkey enter down;wait 0.1;setkey enter up;wait 0.3;setkey down down;wait 0.1;setkey down up;wait 0.1;setkey down down;wait 0.1;setkey down up;wait 0.1;setkey down down;wait 0.1;setkey down up;wait 0.1;setkey down down;wait 0.1;setkey down up;wait 0.1;setkey enter down;wait 0.1;setkey enter up;wait 0.3;setkey up down;wait 0.1;setkey up up;wait 0.1;setkey enter down;wait 0.1;setkey enter up;wait 0.3;')	
-
+	elseif target.name == 'Sanraku' then
+		windower.send_command('TradeNPC 1 "Ob\'s Arm"')
+		windower.send_command('TradeNPC 1 "Anantaboga\'s Heart"')
+		windower.send_command('TradeNPC 1 "Achamoth\'s Antenna"')
+		windower.send_command('TradeNPC 1 "Bhurborlor\'s Vambrace"')
+		windower.send_command('TradeNPC 1 "Nosferatu\'s Claw"')
+		windower.send_command('TradeNPC 1 "Chigre"')
+		windower.send_command('TradeNPC 1 "Wulgaru\'s Head"')
+		windower.send_command('TradeNPC 1 "Ex. Lamia Armband"')
+		windower.send_command('TradeNPC 1 "Mahjlaef\'s Staff"')
+		windower.send_command('TradeNPC 1 "Nuhn\'s Esca"')
 	
 	elseif target.name == '???' then
 		local var_thiszone = windower.ffxi.get_info()['zone']

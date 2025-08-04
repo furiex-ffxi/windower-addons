@@ -422,6 +422,21 @@ function init_gear_sets()
         feet = "Carmine Greaves +1"
     }
 
+    sets.midcast.Absorb = {
+        head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}},
+        body="Chasseur's Frac +3",
+        hands="Chasseur's Gants +3",
+        legs="Chas. Culottes +3",
+        feet="Chass. Bottes +3",
+        neck={ name="Comm. Charm +2", augments={'Path: A',}},
+        waist="Null Belt",
+        left_ear="Mani Earring",
+        right_ear="Chas. Earring +1",
+        left_ring="Medada's Ring",
+        right_ring="Weather. Ring +1",
+        back={ name="Camulus's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10','Damage taken-5%',}},
+    }
+
     sets.Self_Healing = { neck = "Phalaina Locket", hands = "Buremte Gloves", ring2 = "Kunaji Ring",
         waist = "Gishdubar Sash" }
     sets.Cure_Received = { neck = "Phalaina Locket", hands = "Buremte Gloves", ring2 = "Kunaji Ring",

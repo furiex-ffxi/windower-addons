@@ -1,9 +1,16 @@
 --Gearsets your character will use among multiple jobs.
+sets.Nyame = {
+    Head="Nyame Helm",
+    Body="Nyame Mail",
+    Hands="Nyame Gauntlets",
+    Legs="Nyame Flanchard",
+    Feet="Nyame Sollerets"
+}
 sets.BehemothSuit = {body="Behemoth Suit +1",hands=empty,legs=empty,feet=empty}
 sets.Sheltered = {ring2="Sheltered Ring"}
 sets.Capacity = {back="Mecisto. Mantle"}
 
-sets.buff.Doom = {neck="Nicander's Necklace",waist="Gishdubar Sash",ring1="Eshmun's Ring",ring2="Eshmun's Ring"}
+sets.buff.Doom = {neck="Nicander's Necklace",waist="Gishdubar Sash",ring1="Purity Ring",ring2="Eshmun's Ring"}
 sets.TreasureHunter = {head="Wh. Rarab Cap +1",waist="Chaac Belt"}
 
 sets.precast.Item['Hallowed Water'] = {}
@@ -11,14 +18,18 @@ sets.precast.Item['Holy Water'] = {}
 
 --Augmented items that you'll use among multiple jobs.
 
-gear.gada_enhancing_club = {name="Gada",augments={'Enh. Mag. eff. dur. +6','STR+3','Mag. Acc.+8','"Mag.Atk.Bns."+17','DMG:+7',}}
-gear.gada_healing_club = {name="Gada",augments={'"Cure" potency +9%','Mag. Acc.+11','"Mag.Atk.Bns."+13','DMG:+3',}}
+gear.gada_enhancing_club = { name="Gada", augments={'Enh. Mag. eff. dur. +6','VIT+4',}}
+gear.gada_indi_club = { name="Gada", augments={'Indi. eff. dur. +11','Mag. Acc.+13','"Mag.Atk.Bns."+14','DMG:+1',}}
 gear.grioavolr_nuke_staff = {name="Grioavolr",augments={'Magic burst dmg.+8%','MP+61','Mag. Acc.+16','"Mag.Atk.Bns."+30','Magic Damage +7',}}
 gear.grioavolr_fc_staff = {name="Grioavolr",augments={'"Fast Cast"+7','MP+20','Mag. Acc.+17','"Mag.Atk.Bns."+10','Magic Damage +5',}}
 gear.grioavolr_pet_staff = {name="Grioavolr",augments={'Blood Pact Dmg.+8','Pet: STR+10','Pet: Mag. Acc.+19','Pet: "Mag.Atk.Bns."+30',}}
 
 gear.taeon_pet_body = {name="Taeon Tabard",augments={'Pet: Accuracy+15 Pet: Rng. Acc.+15','Pet: "Dbl. Atk."+4','Pet: Damage taken -4%',}}
-gear.taeon_phalanx_body = {name="Taeon Tabard",augments={'Mag. Evasion+15','Spell interruption rate down -10%','Phalanx +3'}}
+gear.taeon_phalanx_head = { name="Taeon Chapeau", augments={'Phalanx +3',}}
+gear.taeon_phalanx_body = { name="Taeon Tabard", augments={'Phalanx +3',}}
+gear.taeon_phalanx_hands={ name="Taeon Gloves", augments={'Phalanx +3',}}
+gear.taeon_phalanx_legs={ name="Taeon Tights", augments={'Phalanx +3',}}
+gear.taeon_phalanx_feet={ name="Taeon Boots", augments={'Phalanx +3',}}
 
 gear.chironic_enfeeble_hands = {name="Chironic Gloves",augments={'Mag. Acc.+20 "Mag.Atk.Bns."+20','MND+10','Mag. Acc.+15',}}
 gear.chironic_refresh_hands = {name="Chironic Gloves",augments={'"Counter"+4','DEX+4','"Refresh"+2','Accuracy+19 Attack+19','Mag. Acc.+13 "Mag.Atk.Bns."+13',}}
@@ -26,7 +37,9 @@ gear.chironic_treasure_feet = {name="Chironic Slippers",augments={'"Occult Acume
 gear.chironic_nuke_feet = {name="Chironic Slippers",augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','"Drain" and "Aspir" potency +10','CHR+6','"Mag.Atk.Bns."+15',}}
 gear.chironic_refresh_feet ={name="Chironic Slippers", augments={'Pet: Attack+23 Pet: Rng.Atk.+23','Pet: Haste+1','"Refresh"+2','Accuracy+10 Attack+10',}}
 
-gear.herculean_fc_head = {name="Herculean Helm",augments={'"Fast Cast"+6','"Mag.Atk.Bns."+13',}}
+gear.herculean_fc_head = {name="Herculean Helm", augments={'"Fast Cast"+6','Mag. Acc.+6',}}
+gear.herculean_fc_legs = {name="Herculean Trousers", augments={'Mag. Acc.+6','"Fast Cast"+6',}}
+gear.herculean_fc_feet = {name="Herculean Boots", augments={'Mag. Acc.+18','"Fast Cast"+6','MND+9',}}
 gear.herculean_nuke_head = {name="Herculean Helm",augments={'Mag. Acc.+16 "Mag.Atk.Bns."+16','Enmity-3','INT+9','"Mag.Atk.Bns."+13',}}
 gear.herculean_phalanx_hands = {name="Herculean Gloves", augments={'INT+6','MND+7','Phalanx +4','Accuracy+10 Attack+10','Mag. Acc.+13 "Mag.Atk.Bns."+13',}}
 gear.herculean_treasure_hands = {name="Herculean Gloves", augments={'"Store TP"+7','INT+6','"Treasure Hunter"+2','Accuracy+17 Attack+17','Mag. Acc.+17 "Mag.Atk.Bns."+17',}}
@@ -47,7 +60,7 @@ gear.merlinic_nuke_body = {name="Merlinic Jubbah",augments={'Mag. Acc.+22 "Mag.A
 gear.merlinic_occult_body = {name="Merlinic Jubbah",augments={'Mag. Acc.+14','"Occult Acumen"+11','MND+6',}}
 gear.merlinic_refresh_hands = {name="Merlinic Dastanas",augments={'Attack+17','Pet: INT+5','"Refresh"+2','Accuracy+11 Attack+11',}}
 gear.merlinic_magpact_hands = {name="Merlinic Dastanas",augments={'Pet: Mag. Acc.+27','Blood Pact Dmg.+10','Pet: DEX+8','Pet: "Mag.Atk.Bns."+13',}}
-gear.merlinic_physpact_hands = {name="Merlinic Dastanas",augments={'Pet: Accuracy+28 Pet: Rng. Acc.+28','Blood Pact Dmg.+10','Pet: STR+7','Pet: Mag. Acc.+6',}}
+gear.merlinic_physpact_hands = { name="Merlinic Dastanas", augments={'Pet: Attack+26 Pet: Rng.Atk.+26','Blood Pact Dmg.+8','Pet: STR+4','Pet: Mag. Acc.+7','Pet: "Mag.Atk.Bns."+5',}}
 gear.merlinic_occult_hands = {name="Merlinic Dastanas",augments={'"Mag.Atk.Bns."+25','"Occult Acumen"+11','CHR+9',}}
 gear.merlinic_nuke_feet = {name="Merlinic Crackows",augments={'Mag. Acc.+19 "Mag.Atk.Bns."+19','"Conserve MP"+1','INT+11','Mag. Acc.+3','"Mag.Atk.Bns."+15',}}
 gear.merlinic_aspir_feet = {name="Merlinic Crackows",augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','"Drain" and "Aspir" potency +10','Mag. Acc.+15',}}

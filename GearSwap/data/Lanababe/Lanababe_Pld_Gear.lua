@@ -10,7 +10,7 @@ function user_job_setup()
     state.MagicalDefenseMode:options('MDT_HP','MDT','MDT_Reraise')
 	state.ResistDefenseMode:options('MEVA_HP','MEVA')
 	state.IdleMode:options('Tank','MDT','Normal')
-	state.Weapons:options('None','BurtAegis','BurtDuban','NaeglingBlurred','ExcalAegis','Staff')
+	state.Weapons:options('None','BurtAegis','BurtDuban','BurtKC','NaeglingBlurred','ExcalAegis','Staff')
 	
     state.ExtraDefenseMode = M{['description']='Extra Defense Mode','None','MP','Twilight'}
 	
@@ -57,7 +57,7 @@ function init_gear_sets()
         body="Rev. Surcoat +4",
         hands={ name="Cab. Gauntlets +3", augments={'Enhances "Chivalry" effect',}},
         legs={ name="Cab. Breeches +3", augments={'Enhances "Invincible" effect',}},
-        feet="Chev. Sabatons +2",
+        feet="Chev. Sabatons +3",
         neck="Moonlight Necklace",
         waist="Creed Baudrier",
         -- left_ear="Trux Earring",
@@ -72,8 +72,7 @@ function init_gear_sets()
         sub="Srivatsa",
         ammo="Staunch Tathlum +1",
         head={ name="Loess Barbuta +1", augments={'Path: A',},priority=1},
-        body={ name="Souv. Cuirass +1", augments={'VIT+12','Attack+25','"Refresh"+3',}},
-        -- body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
+        body="Chev. Cuirass +2",
         hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
         legs="Founder's Hose",
         feet="Odyssean Greaves",
@@ -92,11 +91,10 @@ function init_gear_sets()
         sub="Srivatsa",
         ammo="Staunch Tathlum +1",
         head={ name="Loess Barbuta +1", augments={'Path: A',},priority=1},
-        body={ name="Souv. Cuirass +1", augments={'VIT+12','Attack+25','"Refresh"+3',}},
-        -- body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
+        body="Chev. Cuirass +2",
         hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
-        legs="Founder's Hose",
-        feet="Odyssean Greaves",
+        legs="Chev. Cuisses +2",
+        feet="Souveran Schuhs +1",
         neck="Moonlight Necklace",
         waist="Audumbla Sash",
         left_ear="Tuisto Earring",
@@ -123,7 +121,7 @@ function init_gear_sets()
         body={ name="Cab. Surcoat +3", augments={'Enhances "Fealty" effect',}},})
     sets.precast.JA['Divine Emblem'] = set_combine(sets.Enmity,{ 
         sub = "Diamond Aspis",
-        feet="Chev. Sabatons +2", })
+        feet="Chev. Sabatons +3", })
     sets.precast.JA['Majesty'] = set_combine(sets.Enmity, {
         sub = "Diamond Aspis",
     })
@@ -152,7 +150,7 @@ function init_gear_sets()
     })
     sets.precast.JA['Divine Emblem'].DT = set_combine(sets.Enmity.DT,{
         sub = "Diamond Aspis",
-        feet="Chev. Sabatons +2",
+        feet="Chev. Sabatons +3",
     })
     sets.precast.JA['Majesty'] = set_combine(sets.Enmity, {
         sub = "Diamond Aspis",
@@ -244,7 +242,7 @@ function init_gear_sets()
         hands="Leyline Gloves",
         -- hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
         legs={ name="Sakpata's Cuisses", augments={'Path: A',}},
-        feet="Chev. Sabatons +2",
+        feet="Chev. Sabatons +3",
         -- neck="Orunmila's Torque",
         neck="Baetyl Pendant",
         waist="Plat. Mog. Belt",
@@ -262,8 +260,9 @@ function init_gear_sets()
         hands="Leyline Gloves",
         -- hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
         legs={ name="Sakpata's Cuisses", augments={'Path: A',}},
-        feet="Chev. Sabatons +2",
-        neck="Orunmila's Torque",
+        feet="Chev. Sabatons +3",
+        neck="Baetyl Pendant",
+        -- neck="Orunmila's Torque",
         waist="Plat. Mog. Belt",
         -- waist="Oneiros Belt",
         left_ear="Tuisto Earring",
@@ -318,11 +317,10 @@ function init_gear_sets()
     sets.precast.WS['Atonement'] = {
         ammo="Sapience Orb",
         head={ name="Loess Barbuta +1", augments={'Path: A',}},
-        body={ name="Souv. Cuirass +1", augments={'VIT+12','Attack+25','"Refresh"+3',}},
-        -- body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+        body="Chev. Cuisses +2",
         hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
         legs={ name="Souv. Diechlings +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
-        feet="Chev. Sabatons +2",
+        feet="Chev. Sabatons +3",
         neck="Moonlight Necklace",
         waist="Creed Baudrier",
         left_ear="Tuisto Earring",
@@ -348,8 +346,9 @@ function init_gear_sets()
         hands = "Leyline Gloves",
         -- hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
         legs={ name="Sakpata's Cuisses", augments={'Path: A',}},
-        feet="Chev. Sabatons +2",
-        neck="Orunmila's Torque",
+        feet="Chev. Sabatons +3",
+        neck="Baetyl Pendant",
+        -- neck="Orunmila's Torque",
         waist="Oneiros Belt",
         left_ear="Tuisto Earring",
         right_ear="Loquac. Earring",
@@ -365,8 +364,9 @@ function init_gear_sets()
         hands = "Leyline Gloves",
         -- hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
         legs={ name="Sakpata's Cuisses", augments={'Path: A',}},
-        feet="Chev. Sabatons +2",
-        neck="Orunmila's Torque",
+        feet="Chev. Sabatons +3",
+        neck="Baetyl Pendant",
+        -- neck="Orunmila's Torque",
         waist="Oneiros Belt",
         left_ear="Tuisto Earring",
         right_ear="Loquac. Earring",
@@ -398,7 +398,7 @@ function init_gear_sets()
         left_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
         right_ear="Chev. Earring",
         left_ring="Gelatinous Ring +1",
-        right_ring="Begrudging Ring",
+        right_ring="Apeile Ring +1",
         back=gear.jse_cure_back,
     }
             
@@ -414,7 +414,7 @@ function init_gear_sets()
         left_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
         right_ear="Chev. Earring",
         left_ring="Gelatinous Ring +1",
-        right_ring="Begrudging Ring",
+        right_ring="Apeile Ring +1",
         back=gear.jse_cure_back,
     }
 
@@ -424,8 +424,7 @@ function init_gear_sets()
         ammo="Staunch Tathlum +1",
         head={ name="Loess Barbuta +1", augments={'Path: A',},priority=1},
         body={ name="Souv. Cuirass +1", augments={'VIT+12','Attack+25','"Refresh"+3',}},
-        -- body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
-        hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
+        hands="Chev. Cuirass +2",
         legs={ name="Sakpata's Cuisses", augments={'Path: A',},priority=1},
         feet="Odyssean Greaves",
         neck="Moonlight Necklace",
@@ -569,8 +568,8 @@ function init_gear_sets()
         main="Burtgang",
         sub="Priwen",
         ammo="Staunch Tathlum +1",
-        head={ name="Yorium Barbuta", augments={'DEF+22','Spell interruption rate down -10%','Phalanx +3',}},
-        body={ name="Yorium Cuirass", augments={'DEF+23','Spell interruption rate down -10%','Phalanx +3',}},
+        head={ name="Yorium Barbuta", augments={'DEF+23','Spell interruption rate down -10%','Phalanx +3',}},
+        body={ name="Yorium Cuirass", augments={'DEF+25','Spell interruption rate down -10%','Phalanx +3',}},
         hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
         legs={ name="Sakpata's Cuisses", augments={'Path: A',},priority=1},
         feet={ name="Souveran Schuhs +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
@@ -587,8 +586,8 @@ function init_gear_sets()
         main="Burtgang",
         sub="Priwen",
         ammo="Staunch Tathlum +1",
-        head={ name="Yorium Barbuta", augments={'DEF+22','Spell interruption rate down -10%','Phalanx +3',}},
-        body={ name="Yorium Cuirass", augments={'DEF+23','Spell interruption rate down -10%','Phalanx +3',}},
+        head={ name="Yorium Barbuta", augments={'DEF+23','Spell interruption rate down -10%','Phalanx +3',}},
+        body={ name="Yorium Cuirass", augments={'DEF+25','Spell interruption rate down -10%','Phalanx +3',}},
         hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
         legs={ name="Sakpata's Cuisses", augments={'Path: A',},priority=1},
         feet={ name="Souveran Schuhs +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
@@ -605,8 +604,8 @@ function init_gear_sets()
         main="Sakpata's Sword",
         sub="Priwen",
         ammo="Staunch Tathlum +1",
-        head={ name="Yorium Barbuta", augments={'DEF+22','Spell interruption rate down -10%','Phalanx +3',}},
-        body={ name="Yorium Cuirass", augments={'DEF+23','Spell interruption rate down -10%','Phalanx +3',}},
+        head={ name="Yorium Barbuta", augments={'DEF+23','Spell interruption rate down -10%','Phalanx +3',}},
+        body={ name="Yorium Cuirass", augments={'DEF+25','Spell interruption rate down -10%','Phalanx +3',}},
         hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
         legs={ name="Sakpata's Cuisses", augments={'Path: A',}},
         feet={ name="Souveran Schuhs +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
@@ -629,7 +628,8 @@ function init_gear_sets()
         main={ name="Moralltach", augments={'Path: C',},priority=1},
         sub="Duban",
         ammo="Staunch Tathlum +1",
-        head={ name="Odyssean Helm", augments={'Mag. Acc.+3','"Mag.Atk.Bns."+20','"Refresh"+2','Accuracy+1 Attack+1',}},
+        head = "Sakpata's Helm",
+        -- head={ name="Odyssean Helm", augments={'Mag. Acc.+3','"Mag.Atk.Bns."+20','"Refresh"+2','Accuracy+1 Attack+1',}},
         body={ name="Souv. Cuirass +1", augments={'VIT+12','Attack+25','"Refresh"+3',}},
         hands={ name="Regal Gauntlets",priority=1},
         legs={ name="Sakpata's Cuisses", augments={'Path: A',},priority=1},
@@ -707,6 +707,7 @@ function init_gear_sets()
 	-- Weapons sets
 	sets.weapons.BurtAegis = {main="Burtgang",sub="Aegis",}
 	sets.weapons.BurtDuban = {main="Burtgang",sub="Duban",}
+    sets.weapons.BurtKC = {main="Burtgang",sub="Kraken Club",}
 	sets.weapons.NaeglingBlurred = {main="Naegling",sub="Blurred Shield +1",}
 	sets.weapons.ExcalAegis = {main="Excalibur",sub="Aegis",}
 	sets.weapons.DualWeapons = {}

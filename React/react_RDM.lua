@@ -45,7 +45,11 @@ return {
         ["Just Desserts"]={
             ["complete_reaction"]="", 
             ["ready_reaction"]="input /ma Stun <bt>"
-        }
+        },
+        ["Slimy Proposal"]={
+            ["complete_reaction"]="", 
+            ["ready_reaction"]="input /ma Stun <bt>"
+        },                                  
     },
 	["Bozzetto Skathi"]={
        ["Blight Dance"]={

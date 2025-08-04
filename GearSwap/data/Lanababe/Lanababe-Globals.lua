@@ -92,3 +92,64 @@ bayld_items = {'Tlalpoloani','Macoquetza','Camatlatia','Icoyoca','Tlamini','Suij
 'Otomi Gloves','Kaabnax Hat','Kaabnax Trousers','Ejekamal Mask','Ejekamal Boots','Quiahuiz Helm','Quiahuiz Trousers',
 'Uk\'uxkaj Cap'}
 ]]
+
+-- windower.register_event('incoming text',function(org)
+-- 	aita_debuffs(org)
+-- 	aminon_debuffs(org)
+-- end)
+
+-- function aita_debuffs(org)
+-- 	if not string.find(org:lower(), "aita") and not string.find(org:lower(), "degei") then
+-- 		return
+-- 	end
+
+-- 	if string.find(org, "Flaming Kick") or string.find(org, "Demonfire") then
+-- 		windower.send_command('input /t Furyex NUKE! > WATER! <call14>!')
+-- 	end
+-- 	if string.find(org, "Flashflood") or string.find(org, "Torrential Pain") then
+-- 		windower.send_command('input /t Furyex NUKE! > THUNDER! <call14>!')
+-- 	end
+-- 	if string.find(org, "Icy Grasp") or string.find(org, "Frozen Blood") then
+-- 		windower.send_command('input /t Furyex NUKE! > FIRE! <call14>!')
+-- 	end
+-- 	if string.find(org, "Eroding Flesh") or string.find(org, "Ensepulcher") then
+-- 		windower.send_command('input /t Furyex NUKE! > AERO! <call14>!')
+-- 	end
+-- 	if string.find(org, "Fulminous Smash") or string.find(org, "Ceaseless Surge") then
+-- 		windower.send_command('input /t Furyex NUKE! > STONE! <call14>!')
+-- 	end
+-- 	if string.find(org, "Blast of Reticence") then
+-- 		windower.send_command('input /t Furyex NUKE! > BLIZZARD! <call14>!')
+-- 	end
+-- end
+
+-- function aminon_debuffs(org)
+-- 	if not string.find(org:lower(), "aminon") or not string.find(org:lower(), "mboze") then
+-- 		return
+-- 	end
+
+-- 	indexstart, indexend = string.find(org:lower(),"effect wears off")
+-- 	if indexstart and string.find(org:lower(), "magic") then
+-- 		windower.send_command('input /p Frazzle wore off!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! <call15>')
+-- 	end
+	
+-- 	if indexstart and string.find(org:lower(), "slow") then
+-- 		windower.send_command('input /p Slow wore off! <call15>')
+-- 	end
+	
+-- 	if indexstart and string.find(org:lower(), "dia") then
+-- 		windower.send_command('input /p Dia wore off! <call15>')
+-- 	end
+
+-- 	if indexstart and string.find(org:lower(), "threnody") then
+-- 		windower.send_command('input /p Threnody wore off! <call15>')
+-- 	end
+	
+-- 	indexstart, indexend = string.find(org:lower(),"is no longer")
+-- 	if indexstart and string.find(org:lower(), "paralyzed") then
+-- 		windower.send_command('input /p Paralyze wore off! <call15>')
+-- 	end
+-- 	if indexstart and string.find(org:lower(), "silenced") then
+-- 		windower.send_command('input /p Silence wore off! <call15>')
+-- 	end
+-- end

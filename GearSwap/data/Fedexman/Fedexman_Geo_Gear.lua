@@ -200,7 +200,7 @@ function init_gear_sets()
 		head = empy.Head,
 		neck = "Bagua's Charm +2",
 		ear1 = "Calamitous Earring",
-		ear2 = "Azimuth Earring +2",
+		ear2 = "Azimuth Earring",
 		body = "Vedic Coat",
 		hands = empy.Hands,
 		ring1 = "Defending Ring",

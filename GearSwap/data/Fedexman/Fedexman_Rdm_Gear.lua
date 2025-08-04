@@ -90,7 +90,7 @@ function init_gear_sets()
 
 	--Lethargy
 	EMPY.Head = "Leth. Chappel +2"
-	EMPY.Body = "Lethargy Sayon +2"
+	EMPY.Body = "Lethargy Sayon +3"
 	EMPY.Hands = "Leth. Ganth. +3"
 	EMPY.Legs = "Leth. Fuseau +2"
 	EMPY.Feet = "Leth. Houseaux +2"
@@ -949,7 +949,13 @@ function init_gear_sets()
 		sets.midcast["Dark Magic"],
 		{
 			main = "Bunzi's Rod",
-			sub = "Ammurapi Shield"
+			sub = "Ammurapi Shield",
+			back = "Null Shawl",
+			legs = AF.Legs,
+			feet = AF.Feet,
+			ring1 = "Stikini Ring +1",
+			ring2 = "Stikini Ring +1",
+
 			-- ammo = empty,
 			-- head = AF.Head,
 			-- body = "Zendik Robe",
@@ -1150,7 +1156,7 @@ function init_gear_sets()
 	-- sets.weapons.DualEvisceration = { main = "Tauret", sub = "Almace", range = empty }
 	sets.weapons.DualClubs = {main = "Maxentius", sub = "Machaera +2", range = empty}
 	sets.weapons.DualEvisceration = {main = "Tauret", sub = "Ternion Dagger +1", range = empty}
-	sets.weapons.DualAeolian = {main = "Tauret", sub = "Daybreak", range = empty}
+	sets.weapons.DualAeolian = {main = "Malevolence", sub = "Machaera +2", range = empty}
 	sets.weapons.Tauret = {main = "Tauret", sub = "Ammurapi Shield"}
 	sets.weapons.Club = {main = "Maxentius", sub = "Forfend +1"}
 	sets.weapons.EnspellOnly = {main = "Hedron Dagger", sub = "Qutrub Knife", range = empty}

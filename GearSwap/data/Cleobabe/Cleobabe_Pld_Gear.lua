@@ -10,7 +10,7 @@ function user_job_setup()
     state.MagicalDefenseMode:options('MDT_HP','MDT','MDT_Reraise')
 	state.ResistDefenseMode:options('MEVA_HP','MEVA')
 	state.IdleMode:options('Tank','MDT','Normal')
-	state.Weapons:options('None','BurtAegis','BurtDuban','NaeglingBlurred','ClubOchain','Staff')
+	state.Weapons:options('None','BurtAegis','BurtDuban', 'NaeglingBlurred','ClubOchain','Staff')
 	
     state.ExtraDefenseMode = M{['description']='Extra Defense Mode','None','MP','Twilight'}
 	
@@ -72,8 +72,7 @@ function init_gear_sets()
         sub="Srivatsa",
         ammo="Staunch Tathlum +1",
         head={ name="Loess Barbuta +1", augments={'Path: A',},priority=1},
-        body={ name="Souv. Cuirass +1", augments={'VIT+12','Attack+25','"Refresh"+3',}},
-        -- body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
+        body="Chev. Cuirass +3",
         hands="Regal Gauntlets",
         legs="Founder's Hose",
         feet="Odyssean Greaves",
@@ -316,8 +315,7 @@ function init_gear_sets()
     sets.precast.WS['Atonement'] = {
         ammo="Sapience Orb",
         head={ name="Loess Barbuta +1", augments={'Path: A',}},
-        body={ name="Souv. Cuirass +1", augments={'VIT+12','Attack+25','"Refresh"+3',}},
-        -- body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+        body="Chev. Cuisses +3",
         hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
         legs={ name="Souv. Diechlings +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
         feet="Chev. Sabatons +3",
