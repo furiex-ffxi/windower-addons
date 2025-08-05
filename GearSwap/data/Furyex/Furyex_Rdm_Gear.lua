@@ -449,6 +449,8 @@ function init_gear_sets()
 		back = RDMCape.FC -- 10
 	}
 
+	sets.midcast.Utsusemi = sets.enmity
+
 	sets.midcast.Cure =
 		set_combine(
 		sets.midcast.Casting,
@@ -938,21 +940,10 @@ function init_gear_sets()
 
 	sets.midcast.Aspir = sets.midcast.Drain
 
-	sets.midcast.Stun = {
-		ammo="Regal Gem",
-		head = AF.Head,
-		body = EMPY.Body,
-		hands = EMPY.Hands,
-		legs = "Volte Tights",
-		feet= RELIC.Feet,
-		neck = "Erra Pendant",
-		waist = "Null Belt",
-		left_ear = "Regal Earring",
-		right_ear = "Malignance Earring",
-		left_ring = { name="Metamor. Ring +1", augments={'Path: A',}},
-		right_ring = "Stikini Ring +1",
-		back= RDMCape.FC
-	}
+	sets.midcast.Stun = set_combine(sets.midcast.Absorb, {
+		main = "Crocea Mors",
+		sub = "Ammurapi Shield",
+	})
 
 	sets.midcast.Stun.Resistant = set_combine(sets.midcast.Stun, {})
 
@@ -1193,19 +1184,19 @@ function init_gear_sets()
 		set_combine(
 		sets.engaged,
 		{
-			head = sets.Malignance.Head,
-			neck = "Dls. Torque +2",
+			head = "Bunzi's Hat",
+			neck = "Null Loop",
 			ammo = "Sroda Tathlum",
-			ear1 = "Crep. Earring",
-			ear2 = "Leth. Earring +1",
-			body = EMPY.Body,
+			ear1 = "Suppanomimi",
+			ear2 = "Eabani Earring",
+			body = AF.Body,
 			hands = "Aya. Manopolas +2",
 			ring1 = "Metamor. Ring +1",
 			ring2 = "Lehko's Ring",
 			waist = "Orpheus's Sash",
 			back = RDMCape.DW,
-			legs = sets.Malignance.Legs,
-			feet = sets.Malignance.Feet
+			legs = RELIC.Legs,
+			feet = AF.Feet
 		}
 	)
 

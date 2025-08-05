@@ -955,15 +955,6 @@ function init_gear_sets()
 			feet = AF.Feet,
 			ring1 = "Stikini Ring +1",
 			ring2 = "Stikini Ring +1",
-
-			-- ammo = empty,
-			-- head = AF.Head,
-			-- body = "Zendik Robe",
-			-- hands = "Volte Gloves",
-			-- ring1 = "Metamor. Ring +1",
-			-- ring2 = "Stikini Ring +1",
-			-- back = gear.nuke_jse_back,
-			-- legs = "Chironic Hose",
 		}
 	)
 
@@ -1214,25 +1205,21 @@ function init_gear_sets()
 		}
 	)
 
-	sets.engaged.EnspellOnly =
-		set_combine(
-		sets.engaged,
-		{
-			head = sets.Malignance.Head,
-			neck = "Dls. Torque +2",
-			ammo = "Sroda Tathlum",
-			ear1 = "Crep. Earring",
-			ear2 = "Lethargy Earring",
-			body = EMPY.Body,
-			hands = "Aya. Manopolas +2",
-			ring1 = "Metamor. Ring +1",
-			ring2 = "Lehko's Ring",
-			waist = "Orpheus's Sash",
-			back = RDMCape.DW,
-			legs = sets.Malignance.Legs,
-			feet = sets.Malignance.Feet
-		}
-	)
+	sets.engaged.EnspellOnly = {
+		head = "Malignance Chapeau",
+		neck = "Null Loop",
+		ammo = "Sroda Tathlum",
+		ear1 = "Regal Earring",
+		ear2 = "Eabani Earring",
+		body = AF.Body,
+		hands = "Aya. Manopolas +2",
+		ring1 = "Metamor. Ring +1",
+		ring2 = "Medada's Ring",
+		waist = "Orpheus's Sash",
+		back = RDMCape.DW,
+		legs = RELIC.Legs,
+		feet = AF.Feet
+	}
 
 	sets.engaged.Enspell = set_combine(sets.engaged.EnspellOnly, {})
 
