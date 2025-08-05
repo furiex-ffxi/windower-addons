@@ -346,10 +346,7 @@ function init_gear_sets()
     sets.precast.WS['Leaden Salute'].Acc = set_combine(sets.precast.WS['Leaden Salute'], { })
 
     sets.precast.WS['Aeolian Edge'] = set_combine(sets.precast.WS.MAB, {
-        ammo="Animikii Bullet",
         right_ear="Hectate's Earring",
-		back=gear.magic_wsd_jse_back,
-		body="Lanun Frac +3",
     })
 
     sets.precast.WS['Wildfire'] = set_combine(sets.precast.WS.MAB, {
