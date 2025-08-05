@@ -244,7 +244,7 @@ function init_gear_sets()
 		body = "Lanun Frac +3",
         hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},
 		legs = sets.Nyame.Legs,
-		waist = "Orpheus's Sash",
+        waist = "Eschan Stone",
 		left_ear = "Friomisi Earring",
 		right_ear = "Crematio Earring",
 		left_ring = "Dingir Ring",
