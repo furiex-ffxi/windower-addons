@@ -5,7 +5,7 @@ function user_job_setup()
 	state.HybridMode:options('Normal', 'DT')
 	state.CastingMode:options('Normal', 'Duration', 'Resistant')
 	state.IdleMode:options('Normal', 'NoRefresh', 'DT')
-	state.Weapons:options('None', 'Naegling', 'Onion', 'Aeneas', 'Carnwenhan', 'Xoanon', 'Qutrub', 'DualNaegling', 'DualOnion', 'DualCarnwenhan', 'DualWeapons','DualTauret', 'DualAeolian')
+	state.Weapons:options('None', 'Naegling', 'Onion', 'Aeneas', 'Carnwenhan', 'Xoanon', 'DualQutrub', 'DualNaegling', 'DualOnion', 'DualCarnwenhan', 'DualWeapons','DualTauret', 'DualAeolian')
 	-- Whether to use Carn (or song daggers in general) under a certain threshhold even when weapons are locked.
 	state.CarnMode           = M { 'Always', '300', '1000', 'Never' }
 
@@ -72,7 +72,7 @@ function init_gear_sets()
 	sets.weapons.Xoanon = {main = "Xoanon", sub = "Enki Strap"}
 	sets.weapons.Naegling = { main = "Naegling", sub = "Genmei Shield" }
 	sets.weapons.Onion = { main = "Onion Sword III", sub = "Genmei Shield" }
-	sets.weapons.Qutrub = { main = "Qutrub Knife", sub = "Genmei Shield" }
+	sets.weapons.DualQutrub = {main = "Qutrub Knife", sub = "Ceremonial Dagger", range = empty}
 	sets.weapons.DualCarnwenhan = {main="Carnwenhan", sub="Centovente"}	
 	sets.weapons.DualWeapons = { main = "Aeneas", sub = "Centovente" }
 	sets.weapons.DualNaegling = { main = "Naegling", sub = "Centovente" }
@@ -788,7 +788,7 @@ function select_default_macro_book()
 	set_macro_page(1, 1)
 end
 
-state.Weapons:options('None', 'Naegling', 'Aeneas', 'Carnwenhan', 'Qutrub', 'DualCarnwenhan','DualWeapons', 'DualNaegling', 'DualTauret', 'DualAeolian')
+state.Weapons:options('None', 'Naegling', 'Aeneas', 'Carnwenhan', 'DualQutrub', 'DualCarnwenhan','DualWeapons', 'DualNaegling', 'DualTauret', 'DualAeolian')
 
 autows_list = {
 	['Naegling'] = 'Savage Blade',

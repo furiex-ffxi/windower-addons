@@ -1150,7 +1150,7 @@ function init_gear_sets()
 	sets.weapons.DualAeolian = {main = "Malevolence", sub = "Machaera +2", range = empty}
 	sets.weapons.Tauret = {main = "Tauret", sub = "Ammurapi Shield"}
 	sets.weapons.Club = {main = "Maxentius", sub = "Forfend +1"}
-	sets.weapons.EnspellOnly = {main = "Hedron Dagger", sub = "Qutrub Knife", range = empty}
+	sets.weapons.EnspellOnly = {main = "Qutrub Knife", sub = "Ceremonial Dagger", range = empty}
 	sets.weapons.Enspell = {main = "Crocea Mors", sub = "Ammurapi Shield", range = empty}
 	sets.weapons.EnspellDW = {main = "Crocea Mors", sub = "Demers. Degen +1", range = empty}
 	sets.weapons.DualSeraph = {main = "Crocea Mors", sub = "Daybreak", range = empty}

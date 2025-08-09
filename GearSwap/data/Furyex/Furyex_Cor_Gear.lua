@@ -673,17 +673,17 @@ function init_gear_sets()
     sets.weapons.DualWeapons = {main = "Naegling", sub = "Gleti's Knife", range = "Fomalhaut"}
     sets.weapons.DualSavageWeapons = {
         main = "Naegling",
-        sub = "Gleti's Knife",
+        sub = "Crepuscular Knife",
         range = {name = "Anarchy +2", augments = {"Delay:+60", "TP Bonus +1000"}}
     }
     sets.weapons.DualOnion = {
         main = "Onion Sword III",
-        sub = "Gleti's Knife",
+        sub = "Crepuscular Knife",
         range = {name = "Anarchy +2", augments = {"Delay:+60", "TP Bonus +1000"}}
     }
     sets.weapons.DualEvisceration = {
         main = "Tauret",
-        sub = "Blurred Knife +1",
+        sub = "Crepuscular Knife",
         range = {name = "Anarchy +2", augments = {"Delay:+60", "TP Bonus +1000"}}
     }
     sets.weapons.Savage = {
@@ -711,18 +711,18 @@ function init_gear_sets()
     sets.weapons.DualAeolian = {
         ammo = "Living Bullet",
         main = {name = "Rostam", augments = {"Path: A"}},
-        sub = "Gleti's Knife",
+        sub = "Crepuscular Knife",
         range = {name = "Anarchy +2", augments = {"Delay:+60", "TP Bonus +1000"}}
     }
     sets.weapons.DualRanged = {
         main = {name = "Rostam", augments = {"Path: A"}},
-        sub = "Gleti's Knife",
+        sub = "Crepuscular Knife",
         range = {name = "Fomalhaut", augments = {"Path: A"}},
         ammo = "Chrono Bullet"
     }
     sets.weapons.DualRoll = {
         main = {name = "Rostam", augments = {"Path: C"}},
-        sub = "Gleti's Knife",
+        sub = "Crepuscular Knife",
         range = "Compensator",
         ammo = "Living Bullet"
     }

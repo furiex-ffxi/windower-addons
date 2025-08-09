@@ -81,7 +81,7 @@ function init_gear_sets()
         ear1 = "Crep. Earring",
         ear2 = "Sherida Earring",
         body = gear.relic.Body,
-        hands = gear.empy.Hands,
+        hands = gear.af.Hands,
         ring1 = "Petrov Ring",
         ring2 = "Niqmaddu Ring",
         back = gear.tp_jse_back,

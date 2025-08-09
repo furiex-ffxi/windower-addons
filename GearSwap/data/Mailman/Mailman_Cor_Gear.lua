@@ -19,7 +19,7 @@ function user_job_setup()
     options.ammo_warning_limit = 15
     Ikenga_vest_bonus = 180  -- It is 190 at R20. Uncomment if you need to manually adjust because you are using below R20
 
-    gear.tp_ranger_jse_back = { name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Store TP"+10','Damage taken-5%',}}
+    gear.tp_ranger_jse_back = { name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Store TP"+10','Damage taken-5%',}} -- needle racc to agi, and dt to pdt
     gear.snapshot_jse_back = { name = "Camulus's Mantle", augments = { '"Snapshot"+10', } }
     gear.tp_jse_back = { name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dual Wield"+10','Phys. dmg. taken-10%',}}
     gear.ranger_wsd_jse_back = { name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%','Damage taken-5%',}}
@@ -176,6 +176,20 @@ function init_gear_sets()
 
     -- Fast cast sets for spells
 
+    -- ammo="Devastating Bullet",
+    -- head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}},
+    -- body="Chasseur's Frac +3",
+    -- hands="Chasseur's Gants +3",
+    -- legs="Chas. Culottes +3",
+    -- feet="Chass. Bottes +3",
+    -- neck={ name="Comm. Charm +2", augments={'Path: A',}},
+    -- waist="K. Kachina Belt +1",
+    -- left_ear="Mani Earring",
+    -- right_ear={ name="Chas. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+13','Mag. Acc.+13','Crit.hit rate+4',}},
+    -- left_ring="Medada's Ring",
+    -- right_ring="Weather. Ring +1",
+    -- back={ name="Camulus's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10','Damage taken-5%',}},
+
     sets.precast.FC = {
 	    head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}}, -- 14
 		body={ name="Taeon Tabard", augments={'"Fast Cast"+5','HP+44',}}, -- 9
@@ -198,21 +212,25 @@ function init_gear_sets()
     sets.precast.RA = {
         ammo = gear.RAbullet,
 		head=gear.Empy.Head, -- 0/14
-        body="Laksa. Frac +4", -- 18/0
+        body="Ikenga's Vest", -- 9/0
 		hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}}, -- 8/11
 		legs={ name="Adhemar Kecks +1", augments={'AGI+12','"Rapid Shot"+13','Enmity-6',}}, -- 10/13
 		feet="Meg. Jam. +2", -- 10/0
-		-- left_ear={ name="Tuisto Earring", priority=2},
-		-- right_ear={ name="Etiolation Earring", priority=1},
+		left_ear={ name="Tuisto Earring", priority=2},
+		right_ear={ name="Etiolation Earring", priority=1},
 		left_ring="Dingir Ring",
 		right_ring="Crepuscular Ring", -- 3/0
 		neck={ name="Comm. Charm +2", augments={'Path: A',}}, -- 4/0
 		waist="Yemaya Belt", -- 0/5
 		back=gear.snapshot_jse_back, -- 10/0
-    } -- Totals 50/43
+    } -- Totals 54 snapshot + 10 job gift / 43 rapid shot + 30 from traits = 64 snapshot / 73 rapid shot
 
-    sets.precast.RA.Flurry = set_combine(sets.precast.RA, { body="Laksa. Frac +4", }) -- Totals 45/63
-    sets.precast.RA.Flurry2 = set_combine(sets.precast.RA.Flurry, { feet={ name="Pursuer's Gaiters", augments={'Rng.Acc.+10','"Rapid Shot"+10','"Recycle"+15',}} }) -- Totals 35/73
+    sets.precast.RA.Flurry = set_combine(sets.precast.RA, { 
+        body="Laksa. Frac +4", -- 0/20
+    }) --55 snapshot + 15 flurry = 70 snapshot / 93 rapid shot
+    sets.precast.RA.Flurry2 = set_combine(sets.precast.RA.Flurry, { 
+        feet={ name="Pursuer's Gaiters", augments={'Rng.Acc.+10','"Rapid Shot"+10','"Recycle"+15',}} 
+    }) -- Totals 45 snapshot + 30 flurry2 =  70 snapshot / 103 rapid shot
 
 
     -- Weaponskill sets
@@ -263,14 +281,14 @@ function init_gear_sets()
     })
 
     sets.precast.WS['Fast Blade II'] = set_combine(sets.precast.WS, {
-        neck="Fotia Gorget",
+        neck = "Fotia Gorget",
         waist = "Fotia Belt",
     })
 
     sets.precast.WS['Fast Blade II'].Acc = set_combine(sets.precast.WS, {
-        neck="Fotia Gorget",
+        neck = "Fotia Gorget",
         waist = "Fotia Belt",
-    })
+    }) 
 
     sets.precast.WS['Exenterator'] = {
         ammo = gear.WSbullet,
@@ -447,8 +465,8 @@ function init_gear_sets()
         ammo = gear.RAbullet,
 		head="Ikenga's Hat",
 		body="Ikenga's Vest",
-		hands="Ikenga's Gloves",
-		legs="Chas. Culottes +3",
+        hands="Malignance Gloves",
+        legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},
 		feet="Ikenga's Clogs",
 		neck="Iskur Gorget",
 		waist="Yemaya Belt",
@@ -460,12 +478,18 @@ function init_gear_sets()
     }
 
     sets.midcast.RA.Acc = set_combine(sets.midcast.RA, {
-        head = "Malignance Chapeau",
-        body = "Laksa. Frac +4",
-        hands = "Malignance Gloves",
-		legs="Chas. Culottes +3",
-        ring1 = "Regal Ring",
-        feet = "Malignance Boots"
+        head = gear.Empy.Head,
+        body = gear.Empy.Body,
+        hands = gear.Empy.Hands,
+		legs= gear.Empy.Legs,
+        feet = gear.Empy.Feet,
+        neck = "Null Loop",
+        waist = "Null Belt",
+        left_ear="Crep. Earring",
+        right_ear="Telos Earring",
+        left_ring="Crepuscular Ring",
+        right_ring={ name="Cacoethic Ring +1", augments={'Path: A',}},
+        back="Null Shawl",
     })
 
     sets.buff['Triple Shot'] = { 

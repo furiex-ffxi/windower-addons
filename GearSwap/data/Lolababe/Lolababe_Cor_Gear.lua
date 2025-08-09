@@ -726,7 +726,7 @@ function init_gear_sets()
         back = gear.tp_jse_back,
         waist = "Sailfi Belt +1",
         legs = "Samnuha Tights",
-        feet = sets.Malignance.Feet        
+        feet = "Herculean Boots"        
     }
 
     sets.engaged.Acc = set_combine(sets.engaged, {
