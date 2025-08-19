@@ -68,7 +68,7 @@ function init_gear_sets()
         head="Oshosi Mask +1", -- Missing
         body=gear.Empy.Body, --14
         hands="Lanun Gants +3", -- Triple shot becomes Quad shot
-        legs="Osh. Trousers +1", -- Missing
+        legs="Osh. Trousers +1", 
         feet="Osh. Leggings +1", --3
     }
     sets.precast.JA['Snake Eye'] = { legs = "Lanun Trews +3" }
@@ -394,6 +394,7 @@ function init_gear_sets()
         right_ear="Friomisi Earring",
         left_ring="Dingir Ring",
         right_ring="Epaminondas's Ring",
+        back=gear.magic_wsd_jse_back,
     }
     sets.precast.WS['Hot Shot'].Acc = set_combine(sets.precast.WS['Hot Shot'], { })
 

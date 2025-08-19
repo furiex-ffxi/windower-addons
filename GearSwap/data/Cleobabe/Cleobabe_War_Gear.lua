@@ -173,13 +173,13 @@ function init_gear_sets()
 		waist="Sailfi Belt +1",
 		left_ring="Cornelia's Ring",
         right_ring="Regal Ring",
-		left_ear = "Thrud Earring",
-        right_ear = "Moonshade Earring",
+        left_ear = "Moonshade Earring",
+		right_ear = "Thrud Earring",
 		back=gear.wsd_str_jse_back,
 	}
 
 	sets.precast.WS.AttackCap = set_combine(sets.precast.WS, { 
-		-- body="Sakpata's Breastplate",
+		body="Sakpata's Breastplate",
 		legs = "Boii Cuisses +3",
 	})
 
@@ -280,6 +280,44 @@ function init_gear_sets()
 	sets.precast.WS['Resolution'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
 	sets.precast.WS['Resolution'].Fodder = set_combine(sets.precast.WS.Fodder, {})
 
+	sets.precast.WS['Impulse Drive'] = set_combine(sets.precast.WS, {
+		ammo = "Yetshila +1",
+		neck = "War. Beads +2",
+		head = "Agoge Mask +3",
+		body = "Sakpata's Plate",
+		hands = "Boii Mufflers +3",
+		legs = "Boii Cuisses +3",
+		feet = "Boii Calligae +3",
+		belt = "Sailfi Belt +1",
+		ear1 = "Moonshade Earring",
+		ear2 = "Boii Earring +1",
+		ring1 = "Sroda Ring",
+		ring2 = "Niqmaddu Ring",
+	})
+	sets.precast.WS['Impulse Drive'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
+	sets.precast.WS['Impulse Drive'].Acc = set_combine(sets.precast.WS.Acc, {})
+	sets.precast.WS['Impulse Drive'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
+	sets.precast.WS['Impulse Drive'].Fodder = set_combine(sets.precast.WS.Fodder, {})	
+
+	sets.precast.WS['Stardiver'] = set_combine(sets.precast.WS, {
+		ammo = "Yetshila +1",
+		neck = "Fotia Gorget",
+		head = "Boii Mask +3",
+		body = "Sakpata's Plate",
+		hands = "Sakpata's Gauntlets",
+		legs = "Boii Cuisses +3",
+		feet = "Boii Calligae +3",
+		belt = "Fotia Belt",
+		ear1 = "Moonshade Earring",
+		ear2 = "Boii Earring +1",	
+		ring1 = "Sroda Ring",
+		ring2 = "Niqmaddu Ring",
+	})
+	sets.precast.WS['Stardiver'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
+	sets.precast.WS['Stardiver'].Acc = set_combine(sets.precast.WS.Acc, {})
+	sets.precast.WS['Stardiver'].FullAcc = set_combine(sets.precast.WS.FullAcc, {})
+	sets.precast.WS['Stardiver'].Fodder = set_combine(sets.precast.WS.Fodder, {})
+	
 	sets.precast.WS['Ruinator'] = set_combine(sets.precast.WS, {})
 	sets.precast.WS['Ruinator'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {})
 	sets.precast.WS['Ruinator'].Acc = set_combine(sets.precast.WS.Acc, {})
@@ -373,7 +411,7 @@ function init_gear_sets()
 
 	-- Idle sets
 	sets.idle = {
-		ammo="Coiste Bodhar",
+		ammo="Staunch Tathlum +1",
 		head="Sakpata's Helm",
 		body="Sacro Breastplate",
 		hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
@@ -385,7 +423,6 @@ function init_gear_sets()
 		right_ear="Etiolation Earring",
 		left_ring="Moonlight Ring",
 		right_ring="Defending Ring",
-		-- ammo="Staunch Tathlum +1",
 		-- feet="Hermes' Sandals +1",
 		-- neck="Bathy Choker +1",
 		-- waist="Flume Belt",
@@ -407,9 +444,8 @@ function init_gear_sets()
 		hands="Sakpata's Gauntlets",
 		legs="Sakpata's Cuisses",
 		feet="Sakpata's Leggings",
-		waist="Plat. Mog. Belt",
 		neck={ name="War. Beads +2", augments={'Path: A',}},
-		ring2="Gelatinous Ring +1",
+		ring1 = "Moonight Ring",
 		back=gear.da_jse_back,
 	}
 
@@ -454,21 +490,24 @@ function init_gear_sets()
 
 	-- Engaged sets
 	sets.engaged = {
-		ammo="Coiste Bodhar",
-		head = "Boii Mask +3",
-		neck = "War. Beads +2",
-		body = "Sakpata's Breastplate",
-		hands="Sakpata's Gauntlets",
-		legs="Pumm. Cuisses +4",
-		feet="Pumm. Calligae +4",
-		waist="Sailfi Belt +1",
-		right_ear="Boii Earring +1",
-		left_ear="Schere Earring",
-		left_ring="Moonlight Ring",
+		ammo="Coiste Bodhar", -- 3 DA
+		head = "Boii Mask +3", -- 7 DA
+		neck = "Vim Torque +1",
+		body = "Sakpata's Breastplate", -- 8 DA
+		hands="Sakpata's Gauntlets", -- 6 DA
+		legs="Pumm. Cuisses +4", -- 11 DA
+		feet="Pumm. Calligae +4", -- 9 DA
+		waist="Sailfi Belt +1", -- 5 DA
+		right_ear="Boii Earring +1", -- 8 DA
+		left_ear="Schere Earring", -- 6 DA
+		left_ring="Petrov Ring", -- 1 DA
 		right_ring="Niqmaddu Ring",
-		back=gear.da_jse_back,
+		back=gear.da_jse_back, -- 10 DA
 	}
-	
+
+	sets.engaged.DT = set_combine(sets.engaged, {
+        left_ring="Moonlight Ring",
+    })
 	sets.engaged.SomeAcc = set_combine(sets.engaged, {
         body="Agoge Lorica +3",
     })
@@ -492,11 +531,15 @@ function init_gear_sets()
     })
 
 	sets.engaged.Naegling = set_combine(sets.engaged, {
-		hands = "Sakpata's Gauntlets",
-		body="Hjarrandi Breast.", 
+		neck = "Vim Torque +1",
 		legs = "Boii Cuisses +3",
 		left_ring = "Petrov Ring",
     })
+	sets.engaged.Naegling.DT = set_combine(sets.engaged.DT, {
+		neck = "Vim Torque +1",
+		legs = "Boii Cuisses +3",
+		left_ring = "Moonlight Ring",
+    })	
 
 	--[[
     sets.engaged.Charge = {}

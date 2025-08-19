@@ -588,6 +588,7 @@ end
 -------------------------------------------------------------------------------------------------------------------
 
 function set_macro_page(set,book)
+	-- Default macro set/book
     if not tonumber(set) then
         add_to_chat(123,'Error setting macro page: Set is not a valid number ('..tostring(set)..').')
         return

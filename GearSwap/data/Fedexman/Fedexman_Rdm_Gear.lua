@@ -93,7 +93,7 @@ function init_gear_sets()
 	EMPY.Body = "Lethargy Sayon +3"
 	EMPY.Hands = "Leth. Ganth. +3"
 	EMPY.Legs = "Leth. Fuseau +2"
-	EMPY.Feet = "Leth. Houseaux +2"
+	EMPY.Feet = "Leth. Houseaux +3"
 
 	-- Carmine
 	Carm.Legs = {}
@@ -1152,7 +1152,7 @@ function init_gear_sets()
 	sets.weapons.Club = {main = "Maxentius", sub = "Forfend +1"}
 	sets.weapons.EnspellOnly = {main = "Qutrub Knife", sub = "Ceremonial Dagger", range = empty}
 	sets.weapons.Enspell = {main = "Crocea Mors", sub = "Ammurapi Shield", range = empty}
-	sets.weapons.EnspellDW = {main = "Crocea Mors", sub = "Demers. Degen +1", range = empty}
+	sets.weapons.EnspellDW = {main = "Crocea Mors", sub = "Malevolence", range = empty}
 	sets.weapons.DualSeraph = {main = "Crocea Mors", sub = "Daybreak", range = empty}
 	sets.weapons.DualAlmace = {main = "Almace", sub = "Sequence", range = empty}
 	sets.weapons.DualBow = {main = "Naegling", sub = "Machaera +2", range = "Ullr", ammo = "Chapuli Arrow"}
@@ -1185,8 +1185,8 @@ function init_gear_sets()
 		body = sets.Malignance.Body,
 		left_ring = "Ilabrat Ring",
 		right_ring = "Petrov Ring",
-		-- left_ring = "Chirich Ring +1",
-		-- right_ring = "Lehko's Ring",
+		left_ring={name="Chirich Ring +1", bag="wardrobe"},
+		right_ring={name="Chirich Ring +1", bag="wardrobe2"},
 		legs = sets.Malignance.Legs,
 		feet = sets.Malignance.Feet,
 		neck = "Anu Torque",
@@ -1200,8 +1200,6 @@ function init_gear_sets()
 		set_combine(
 		sets.engaged,
 		{
-			left_ear = "Sherida Earring",
-			left_ring = "Apate Ring"
 		}
 	)
 
@@ -1210,7 +1208,7 @@ function init_gear_sets()
 		neck = "Null Loop",
 		ammo = "Sroda Tathlum",
 		ear1 = "Regal Earring",
-		ear2 = "Eabani Earring",
+		ear2 = "Suppanomimi",
 		body = AF.Body,
 		hands = "Aya. Manopolas +2",
 		ring1 = "Metamor. Ring +1",

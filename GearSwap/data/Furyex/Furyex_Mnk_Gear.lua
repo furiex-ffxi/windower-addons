@@ -20,6 +20,8 @@ function user_job_setup()
     send_command('bind !` input /ja "Perfect Counter" <me>')
     send_command('bind ^backspace input /ja "Mantra" <me>')
     send_command("bind @` gs c cycle SkillchainMode")
+
+    select_default_macro_book()
 end
 
 function init_gear_sets()
@@ -745,24 +747,20 @@ function init_gear_sets()
         main = "Malignance Pole",
         sub = "Alber Strap"
     }
-
-    -- Select default macro book on initial load or subjob change.
-    function select_default_macro_book()
-        -- Default macro set/book
-        if player.sub_job == "DNC" then
-            set_macro_page(5, 20)
-        elseif player.sub_job == "NIN" then
-            set_macro_page(4, 20)
-        elseif player.sub_job == "THF" then
-            set_macro_page(6, 20)
-        elseif player.sub_job == "RUN" then
-            set_macro_page(7, 20)
-        else
-            set_macro_page(6, 20)
-        end
-    end
 end
+
 
 function user_job_lockstyle()
     windower.chat.input("/lockstyleset 008")
+end
+
+
+-- Select default macro book on initial load or subjob change.
+function select_default_macro_book()
+	-- Default macro set/book
+	if player.sub_job == "WAR" then
+		set_macro_page(2, 3)
+	else
+		set_macro_page(2, 3)
+	end
 end

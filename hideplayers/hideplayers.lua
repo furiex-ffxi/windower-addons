@@ -1,6 +1,6 @@
-_addon.name = 'Safe Oboro'
-_addon.version = '0.1.2'
-_addon.author = 'Lili'
+_addon.name = 'HidePlayers'
+_addon.version = '0.2.0'
+_addon.author = 'Furyex'
 
 require('logger')
 local packets = require("packets")
@@ -11,65 +11,27 @@ local so = {
     zone = false,
 }
 
-local res = {}
-res.buffs = require('resources').buffs
-res.zones = require('resources').zones
-
--- returns current zone name
-local function get_zone()
-    return res.zones[windower.ffxi.get_info().zone].en
-end
-
--- returns true if current zone is a city or town. 
-local in_town = function()
-	local Cities = S{ 
-            "Northern San d'Oria", "Southern San d'Oria", "Port San d'Oria", "Chateau d'Oraguille",
-            "Bastok Markets", "Bastok Mines", "Port Bastok", "Metalworks",
-            "Windurst Walls", "Windurst Waters", "Windurst Woods", "Port Windurst", "Heavens Tower",
-            "Ru'Lude Gardens", "Upper Jeuno", "Lower Jeuno", "Port Jeuno",
-            "Selbina", "Mhaura", "Kazham", "Norg", "Rabao", "Tavnazian Safehold",
-            "Aht Urhgan Whitegate", "Al Zahbi", "Nashmau",
-            "Southern San d'Oria (S)", "Bastok Markets (S)", "Windurst Waters (S)",
-            -- "Walk of Echoes", "Provenance",
-            "Western Adoulin", "Eastern Adoulin", "Celennia Memorial Library",
-            "Bastok-Jeuno Airship", "Kazham-Jeuno Airship", "San d'Oria-Jeuno Airship", "Windurst-Jeuno Airship",
-            "Ship bound for Mhaura", "Ship bound for Selbina", "Open sea route to Al Zahbi", "Open sea route to Mhaura",
-            "Silver Sea route to Al Zahbi", "Silver Sea route to Nashmau", "Manaclipper", "Phanauet Channel",
-            "Chocobo Circuit", "Feretory", "Mog Garden", 
-            }
-    return function()
-        if Cities:contains(get_zone()) then
-            return true
-        end
-    end
-end()
-
-function is_blocked (t)
-	local BlockedPlayers = S{ 
-                "Ujizero",
-                "Inyani",
-                "Enlarge",
-                "Bloodvessel",
-                "Redcell"
-            }
-    if BlockedPlayers:contains(t) then
-        return true
-    end
-    return false
-end
-
-function oboro_is_near(t)
-    local t = t or windower.ffxi.get_mob_by_target('me')
-    local player_name = windower.ffxi.get_player().name
-    print(player_name)
-    return is_blocked(player_name)
-end
-
+-- Add the names you want to hide here (all lowercase, case-insensitive match)
+local hidden_names = {
+    ['inyani'] = true,
+    ['bloodvessel'] = true,
+    ['ujizero'] = true,
+    ['redcell'] = true,
+    ['enlarge'] = true,
+    ['cleobabe'] = true,
+    -- Add more names as needed
+}
 
 windower.register_event('load','login',function()
+    -- Initialize player and zone information
+    print('HidePlayers addon loaded. Hiding specified players...')
     so.player = windower.ffxi.get_player()
     so.zone = windower.ffxi.get_info().zone
     so.partymembers = windower.ffxi.get_party()
+end)
+
+windower.register_event('zone change',function(id)
+    so.zone = id
 end)
 
 windower.register_event('unload','logout', function()
@@ -78,17 +40,22 @@ windower.register_event('unload','logout', function()
 end)
 
 windower.register_event('incoming chunk', function (id, org, mod, inj)
-    if not in_town() or not so.player or inj then
+    if not so.player or inj then
+        print('HidePlayers: Not ready or packet injection detected, skipping...')
         return
     end
-    
-    if id == 0x00D and string.sub(org, 5,8):unpack("I") ~= so.player.id then
-        
+
+    -- Hide players with specific names everywhere
+    if id == 0x00D then
         local p = packets.parse('incoming', org)
-       
-        if oboro_is_near(p) then -- oboro.r > math.sqrt((oboro.x - p.X)^2 + (oboro.y - p.Y)^2) then
-           p.Despawn = true
-           return packets.build(p) 
+        if p and p.Name then
+            print('HidePlayers: Player name found: ' .. p.Name)
+            local name = p.Name:lower()
+            print('Checking name: ' .. name)
+            if hidden_names[name] then  
+                p.Despawn = true
+                return packets.build(p)
+            end
         end
     end
 end)

@@ -5,7 +5,7 @@ function user_job_setup()
     state.RangedMode:options('Normal', 'Acc', 'Fodder')
     state.WeaponskillMode:options('Match', 'Normal', 'Acc')
     state.IdleMode:options('Normal', 'PDT')
-    state.Weapons:options('Default', 'DualEviscerationWeapons', 'DualGastra', 'DualAnni', 'DualWeapons', 'DualSavageWeapons', 'DualSavageKraken', 'DualMagicWeapons',
+    state.Weapons:options('Default', 'Anni', 'DualEviscerationWeapons', 'DualGastra', 'DualAnni', 'DualWeapons', 'DualSavageWeapons', 'DualSavageKraken', 'DualMagicWeapons',
         'DualMalevolence', 'DualFermion')
 
     Ikenga_vest_bonus = 100  -- It is 190 at R20. Uncomment if you need to manually adjust because you are using below R20
@@ -461,6 +461,12 @@ function init_gear_sets()
         range = "Fail-Not",
         ammo = "Chrono Arrow"
     }
+    sets.weapons.Anni = {
+        main = "Kustawi +1",
+        sub = "Nusku Shield",
+        range = "Annihilator",
+        ammo = "Chrono Bullet"
+    }    
     sets.weapons.DualWeapons = {
         main = "Kustawi +1",
         sub = "Gleti's Knife",

@@ -7,7 +7,7 @@ function user_job_setup()
 	state.MagicalDefenseMode:options("MDT_HP", "MDT")
 	state.ResistDefenseMode:options("MEVA", "MEVA_HP")
 	state.IdleMode:options("Tank", "Normal", "KiteTank")
-	state.Weapons:options("None", "Epeo", "Aettir", "Hepatizon", "Doli", "DualWeapons")
+	state.Weapons:options("None", "Epeo", "Lionheart", "Aettir", "Hepatizon", "Doli", "DualWeapons")
 
 	state.ExtraDefenseMode = M {["description"] = "Extra Defense Mode", "None", "MP"}
 
@@ -697,6 +697,7 @@ function init_gear_sets()
 	-- Weapons sets
 	-- Refined Grip +1
 	sets.weapons.Aettir = {main = "Aettir", sub = "Utu Grip"}
+	sets.weapons.Lionheart = {main = "Lionheart", sub = "Utu Grip"}
 	sets.weapons.Hepatizon = {main = "Lycurgos", sub = "Utu Grip"}
 	sets.weapons.Epeo = {main = "Epeolatry", sub = "Refined Grip +1"}
 	sets.weapons.Doli = {main = "Dolichenus", sub = "Chanter's Shield"}

@@ -7,7 +7,7 @@ function user_job_setup()
     state.PhysicalDefenseMode:options("PDT")
     state.MagicalDefenseMode:options("MDT")
     state.ResistDefenseMode:options("MEVA")
-    state.Weapons:options("None", "Mpu", "Twash", "TwashGleti", "Onion", "Qutrub")
+    state.Weapons:options("None", "Mpu", "Twash", "TwashCrep", "Onion", "Qutrub")
     state.ExtraMeleeMode =
         M {
         ["description"] = "Extra Melee Mode",
@@ -71,7 +71,7 @@ function init_gear_sets()
     sets.weapons.Mpu = {
         main = "Mpu Gandring",
         sub = {
-            name = "Fusetto +2",
+            name = "Fusetto +3",
             augments = {"TP Bonus +1000"}
         }
     }
@@ -81,30 +81,30 @@ function init_gear_sets()
             augments = {"Path: A"}
         },
         sub = {
-            name = "Fusetto +2",
+            name = "Fusetto +3",
             augments = {"TP Bonus +1000"}
         }
     }
 
-    sets.weapons.TwashGleti = {
+    sets.weapons.TwashCrep = {
         main = {
             name = "Twashtar",
             augments = {"Path: A"}
         },
-        sub = "Gleti's Knife"
+        sub = "Crepuscular Knife"
     }
 
     sets.weapons.Onion = {
         main = "Onion Sword III",
         sub = {
-            name = "Fusetto +2",
+            name = "Fusetto +3",
             augments = {"TP Bonus +1000"}
         }
     }
 
     sets.weapons.Qutrub = {
         main = "Qutrub Knife",
-        sub = "Fusetto +2"
+        sub = "Fusetto +3"
     }
 
     -- Precast Sets
@@ -841,6 +841,16 @@ function init_gear_sets()
             body = "Mekosu. Harness"
         }
     )
+
+    sets.idle.Town =
+        set_combine(
+        sets.idle,
+        {
+            main = "Twashtar",
+            sub = "Crepuscular Knife",
+        }
+    )
+
 
     -- Defense sets
 

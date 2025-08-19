@@ -1026,6 +1026,14 @@ function quicktrade(arg)
 				if idTable[1].count >= 100 then
 				tradeString = 'tradenpc 100 "' .. idTable[1].name .. '"'
 				end
+		elseif tableType == "Tukuku Whiteshell" then -- Added by Furyex
+				if idTable[1].count >= 100 then
+				tradeString = 'tradenpc 100 "' .. idTable[1].name .. '"'
+				end				
+		elseif tableType == "O. Bronzepiece" then -- Added by Furyex
+				if idTable[1].count >= 100 then
+				tradeString = 'tradenpc 100 "' .. idTable[1].name .. '"'
+				end					
 --	windower.send_command('TradeNPC 100 "1 byne bill";wait 1;setkey enter down;wait 0.1;setkey enter up ')
 		else
 			for i = 1, #idTable do

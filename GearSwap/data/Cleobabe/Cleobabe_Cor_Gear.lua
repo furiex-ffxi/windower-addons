@@ -14,7 +14,7 @@ function user_job_setup()
 
     gear.RAbullet = "Chrono Bullet"
     gear.WSbullet = "Chrono Bullet"
-    gear.MAbullet = "Chrono Bullet" --For MAB WS, do not put single-use bullets here.
+    gear.MAbullet = "Living Bullet" --For MAB WS, do not put single-use bullets here.
     gear.QDbullet = "Animikii Bullet"
     options.ammo_warning_limit = 15
     --Ikenga_vest_bonus = 190  -- It is 190 at R20. Uncomment if you need to manually adjust because you are using below R20

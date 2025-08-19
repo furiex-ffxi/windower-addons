@@ -262,7 +262,6 @@ function init_gear_sets()
         feet="Chev. Sabatons +3",
         neck="Orunmila's Torque",
         waist="Plat. Mog. Belt",
-        -- waist="Oneiros Belt",
         left_ear="Tuisto Earring",
         right_ear="Loquac. Earring",
         left_ring="Gelatinous Ring +1",
