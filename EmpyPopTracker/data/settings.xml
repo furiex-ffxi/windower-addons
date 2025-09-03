@@ -75,17 +75,16 @@
     </global>
     <cleobabe>
         <text>
+            <bg>
+                <green>75</green>
+            </bg>
             <pos>
                 <x>76</x>
                 <y>503</y>
             </pos>
-            <text>
-                <fonts>
-
-                </fonts>
-            </text>
         </text>
         <tracking>kukulkan</tracking>
+        <visible>false</visible>
     </cleobabe>
     <furyex>
         <text>
@@ -96,8 +95,13 @@
                 <x>76</x>
                 <y>503</y>
             </pos>
+            <text>
+                <fonts>
+
+                </fonts>
+            </text>
         </text>
-        <tracking>orthrus</tracking>
+        <tracking>glavoid</tracking>
         <visible>false</visible>
     </furyex>
     <lolababe>

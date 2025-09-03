@@ -310,6 +310,8 @@ function init_gear_sets()
     sets.precast.WS['Blade: Chi'] = set_combine(sets.precast.WS.MAB, {})
     sets.precast.WS['Blade: Teki'] = set_combine(sets.precast.WS.MAB, {})
     sets.precast.WS['Blade: To'] = set_combine(sets.precast.WS.MAB, {})
+    sets.precast.WS['Blade: Ei'] = set_combine(sets.precast.WS.MAB, {})
+    sets.precast.WS['Blade: Yu'] = set_combine(sets.precast.WS.MAB, {})
 
 
     -- Swap to these on Moonshade using WS if at 3000 TP

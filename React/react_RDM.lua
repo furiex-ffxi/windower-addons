@@ -1,4 +1,48 @@
 return {
+    ["Aita"] = {
+        ["Flaming Kick"] = {
+            ["complete_reaction"] = "/water",
+            ["ready_reaction"]=""
+        },
+        ["Icy Grasp"] = {
+            ["complete_reaction"] = "/fire",
+            ["ready_reaction"]=""
+        },
+        ["Flashflood"] = {
+            ["complete_reaction"] = "/thunder",
+            ["ready_reaction"] = ""
+        },
+        ["Eroding Flesh"] = {
+            ["complete_reaction"] = "/aero",
+            ["ready_reaction"] = ""
+        },
+        ["Fulminous Smash"] = {
+            ["complete_reaction"] = "/stone",
+            ["ready_reaction"] = ""
+        }
+    },
+    ["Degei"] = {
+        ["Flaming Kick"] = {
+            ["complete_reaction"] = "/water",
+            ["ready_reaction"] = ""
+        },
+        ["Icy Grasp"] = {
+            ["complete_reaction"] = "/fire",
+            ["ready_reaction"] = ""
+        },
+        ["Flashflood"] = {
+            ["complete_reaction"] = "/thunder",
+            ["ready_reaction"] = ""
+        },
+        ["Eroding Flesh"] = {
+            ["complete_reaction"] = "/aero",
+            ["ready_reaction"] = ""
+        },
+        ["Fulminous Smash"] = {
+            ["complete_reaction"] = "/stone",
+            ["ready_reaction"] = ""
+        }
+    }, 
     ["Gogmagog"] = {
         ["Noahionto"]={
             ["complete_reaction"]="trust set autofacemobmode off",

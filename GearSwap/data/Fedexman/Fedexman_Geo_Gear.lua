@@ -69,11 +69,11 @@ function init_gear_sets()
 	relic.Feet = "Bagua Sandals +3"
 
 	empy = {}
-	empy.Head = "Azimuth Hood +3"
-	empy.Body = "Azimuth Coat +3"
-	empy.Hands = "Azimuth Gloves +3"
-	empy.Legs = "Azimuth Tights +3"
-	empy.Feet = "Azimuth Gaiters +3"
+	empy.Head = "Azimuth Hood +2"
+	empy.Body = "Azimuth Coat +2"
+	empy.Hands = "Azimuth Gloves +2"
+	empy.Legs = "Azimuth Tights +2"
+	empy.Feet = "Azimuth Gaiters +2"
 
 	-- Precast sets to enhance JAs
 	sets.precast.JA.Bolster = {body = relic.Body}

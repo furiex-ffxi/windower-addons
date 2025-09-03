@@ -58,11 +58,11 @@ function init_gear_sets()
 	}
 
 	gear.empy = {
-		head = "Ebers Cap +3",
-		body = "Ebers Bliaut +3",
-		hands = "Ebers Mitts +3",
-		legs = "Ebers Pant. +3",
-		feet = "Ebers Duckbills +3"
+		head = "Ebers Cap +2",
+		body = "Ebers Bliaut +2",
+		hands = "Ebers Mitts +2",
+		legs = "Ebers Pant. +2",
+		feet = "Ebers Duckbills +2"
 	}
 
 	-- Weapons sets
@@ -198,7 +198,7 @@ function init_gear_sets()
 
 	-- Midcast Sets
 
-	sets.Kiting = { ring1 = "Shneddick Ring" }
+	sets.Kiting = { feet = "Herald's Gaiters" }
 	sets.latent_refresh = { waist = "Fucho-no-obi" }
 	sets.latent_refresh_grip = { sub = "Oneiros Grip" }
 	sets.TPEat = { neck = "Chrys. Torque" }
@@ -1053,6 +1053,7 @@ function init_gear_sets()
 		feet = "Kaykaus Boots"
 	}
 
+	sets.buff.Sleep = { main = "Prime Maul" }
 	sets.buff.Doom = set_combine(sets.buff.Doom, {})
 end
 

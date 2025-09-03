@@ -5,7 +5,7 @@ function user_job_setup()
     state.WeaponskillMode:options("Match", "Normal", "Acc", "FullAcc", "Fodder")
     state.PhysicalDefenseMode:options("PDT")
     state.IdleMode:options("Normal", "PDT", "Refresh")
-    state.Weapons:options("None", "PetWeapons", "PetWeaponsRanged", "Verethragna", "Godhands", "Midnights")
+    state.Weapons:options("None", "PetWeapons", "PetWeaponsRanged", "Kenkonken", "Verethragna", "Godhands", "Midnights")
     state.PetMode =
         M {
         ["description"] = "Pet Mode",
@@ -708,7 +708,7 @@ function init_gear_sets()
     -- Normal melee group
     sets.engaged = {
         neck = "Shulmanu Collar",
-        head = "Malignance Chapeau",
+        head = "Mpaca's Cap",
         body = "Mpaca's Doublet",
         hands = gear.herculean_qa_hands,
         ear1 = "Mache Earring +1",
@@ -787,6 +787,7 @@ function init_gear_sets()
 
     -- Weapons sets
     sets.weapons.Godhands = {main = "Godhands", range = "Animator P +1"}
+    sets.weapons.Kenkonken = {main = "Kenkonken", range = "Animator P +1"}
     sets.weapons.Verethragna = {main = "Verethragna", range = "Animator P +1"}
     sets.weapons.Midnights = {main = "Midnights", range = "Animator P +1"}
     sets.weapons.PetWeapons = {main = "Xiucoatl", range = "Animator P +1"}

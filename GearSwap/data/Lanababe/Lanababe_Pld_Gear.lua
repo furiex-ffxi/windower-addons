@@ -72,7 +72,7 @@ function init_gear_sets()
         sub="Srivatsa",
         ammo="Staunch Tathlum +1",
         head={ name="Loess Barbuta +1", augments={'Path: A',},priority=1},
-        body="Chev. Cuirass +2",
+        body="Chev. Cuirass +3",
         hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
         legs="Founder's Hose",
         feet="Odyssean Greaves",
@@ -91,7 +91,7 @@ function init_gear_sets()
         sub="Srivatsa",
         ammo="Staunch Tathlum +1",
         head={ name="Loess Barbuta +1", augments={'Path: A',},priority=1},
-        body="Chev. Cuirass +2",
+        body="Chev. Cuirass +3",
         hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
         legs="Chev. Cuisses +3",
         feet="Souveran Schuhs +1",
@@ -384,6 +384,8 @@ function init_gear_sets()
 	sets.midcast.Cocoon = set_combine(sets.Enmity.SIRD, {})
 	sets.midcast.Dia = set_combine(sets.Enmity, {})
 	sets.midcast.Diaga = set_combine(sets.Enmity, {})
+    sets.midcast.Banish = set_combine(sets.Enmity.SIRD, {})
+    sets.midcast.Banishga = set_combine(sets.Enmity.SIRD, {})
 
     sets.midcast.Cure = {
         ammo="Staunch Tathlum +1",
@@ -405,7 +407,7 @@ function init_gear_sets()
     sets.midcast.Cure.SIRD = {
         ammo="Staunch Tathlum +1",
         head="Souv. Schaller +1",
-        body="Chev. Cuirass +2",
+        body="Chev. Cuirass +3",
         hands="Regal Gauntlets",
         legs="Founder's Hose",
         feet="Odyssean Greaves",
@@ -424,7 +426,7 @@ function init_gear_sets()
         ammo="Staunch Tathlum +1",
         head={ name="Loess Barbuta +1", augments={'Path: A',},priority=1},
         body={ name="Souv. Cuirass +1", augments={'VIT+12','Attack+25','"Refresh"+3',}},
-        hands="Chev. Cuirass +2",
+        hands="Chev. Cuirass +3",
         legs={ name="Sakpata's Cuisses", augments={'Path: A',},priority=1},
         feet="Odyssean Greaves",
         neck="Moonlight Necklace",

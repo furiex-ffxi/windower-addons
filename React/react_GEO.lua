@@ -1,4 +1,48 @@
 return {
+    ["Aita"] = {
+        ["Flaming Kick"] = {
+            ["complete_reaction"] = "/water bt",
+            ["ready_reaction"]=""
+        },
+        ["Icy Grasp"] = {
+            ["complete_reaction"] = "/fire bt",
+            ["ready_reaction"]=""
+        },
+        ["Flashflood"] = {
+            ["complete_reaction"] = "/thunder bt",
+            ["ready_reaction"] = ""
+        },
+        ["Eroding Flesh"] = {
+            ["complete_reaction"] = "/aero bt",
+            ["ready_reaction"] = ""
+        },
+        ["Fulminous Smash"] = {
+            ["complete_reaction"] = "/stone bt",
+            ["ready_reaction"] = ""
+        }
+    },
+    ["Degei"] = {
+        ["Flaming Kick"] = {
+            ["complete_reaction"] = "/water bt",
+            ["ready_reaction"] = ""
+        },
+        ["Icy Grasp"] = {
+            ["complete_reaction"] = "/fire bt",
+            ["ready_reaction"] = ""
+        },
+        ["Flashflood"] = {
+            ["complete_reaction"] = "/thunder bt",
+            ["ready_reaction"] = ""
+        },
+        ["Eroding Flesh"] = {
+            ["complete_reaction"] = "/aero bt",
+            ["ready_reaction"] = ""
+        },
+        ["Fulminous Smash"] = {
+            ["complete_reaction"] = "/stone bt",
+            ["ready_reaction"] = ""
+        }
+    },    
     ["Lady Lilith"]={
         ["Dark Thorn"]={
             ["complete_reaction"]="/dispel",
@@ -72,5 +116,5 @@ return {
             ["ready_reaction"]="runaway 12",
             ["complete_reaction"]="runto 3"
         }
-    },
+    }
 }

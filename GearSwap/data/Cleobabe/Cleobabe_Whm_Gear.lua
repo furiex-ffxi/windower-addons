@@ -1046,6 +1046,7 @@ function init_gear_sets()
 		feet = "Kaykaus Boots"
 	}
 
+	sets.buff.Sleep = { main = "Lorg Mor" }
 	sets.buff.Doom = set_combine(sets.buff.Doom, {})
 end
 

@@ -89,10 +89,10 @@ function init_gear_sets()
 	RELIC.Feet = "Vitiation Boots +3"
 
 	--Lethargy
-	EMPY.Head = "Leth. Chappel +2"
+	EMPY.Head = "Leth. Chappel +3"
 	EMPY.Body = "Lethargy Sayon +3"
 	EMPY.Hands = "Leth. Ganth. +3"
-	EMPY.Legs = "Leth. Fuseau +2"
+	EMPY.Legs = "Leth. Fuseau +3"
 	EMPY.Feet = "Leth. Houseaux +3"
 
 	-- Carmine
@@ -731,8 +731,10 @@ function init_gear_sets()
 	sets.midcast.Foil = sets.enmity
 	sets.midcast.Flash = sets.enmity
 
-	sets.midcast.Dispel = sets.midcast["Enfeebling Magic"].Resistant
-
+	sets.midcast.Dispel = set_combine(sets.midcast["Enfeebling Magic"].Resistant, {
+		neck = "Dls. Torque +2",
+	})
+	
 	sets.midcast.SkillBasedEnfeebling =
 		set_combine(
 		sets.midcast["Enfeebling Magic"],
@@ -1142,12 +1144,10 @@ function init_gear_sets()
 	sets.weapons.Bow = {main = "Naegling", sub = "Sacro Bulwark", range = "Ullr", ammo = "Beetle Arrow"}
 	sets.weapons.DualOnion = {main = "Onion Sword III", sub = "Kraken Club", range = empty}
 	sets.weapons.DualWeapons = {main = "Naegling", sub = "Machaera +2", range = empty}
-	-- sets.weapons.DualWeaponsAcc = { main = "Naegling", sub = "Almace", range = empty }
 	sets.weapons.DualWeaponsAcc = {main = "Naegling", sub = "Ternion Dagger +1", range = empty}
-	-- sets.weapons.DualEvisceration = { main = "Tauret", sub = "Almace", range = empty }
 	sets.weapons.DualClubs = {main = "Maxentius", sub = "Machaera +2", range = empty}
 	sets.weapons.DualEvisceration = {main = "Tauret", sub = "Ternion Dagger +1", range = empty}
-	sets.weapons.DualAeolian = {main = "Malevolence", sub = "Machaera +2", range = empty}
+	sets.weapons.DualAeolian = {main = "Tauret", sub = "Machaera +2", range = empty}
 	sets.weapons.Tauret = {main = "Tauret", sub = "Ammurapi Shield"}
 	sets.weapons.Club = {main = "Maxentius", sub = "Forfend +1"}
 	sets.weapons.EnspellOnly = {main = "Qutrub Knife", sub = "Ceremonial Dagger", range = empty}

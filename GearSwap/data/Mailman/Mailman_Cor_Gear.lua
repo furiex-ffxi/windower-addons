@@ -197,7 +197,7 @@ function init_gear_sets()
 		legs={ name="Herculean Trousers", augments={'Mag. Acc.+7','"Fast Cast"+6',}},  -- 6
 		feet={ name="Carmine Greaves +1", augments={'HP+80','MP+80','Phys. dmg. taken -4',}}, -- 8
 		neck="Voltsurge Torque", -- 4
-		waist="Witful Belt",
+		waist="Plat. Mog. Belt",
 		left_ear="Loquac. Earring", -- 2
 		right_ear="Etiolation Earring", -- 1
 		left_ring="Prolix Ring",
@@ -446,11 +446,14 @@ function init_gear_sets()
         feet="Chass. Bottes +3",
         neck={ name="Comm. Charm +2", augments={'Path: A',}},
         waist="Null Belt",
-        left_ear="Mani Earring",
+        -- left_ear="Mani Earring",
+        left_ear="Etiolation Earring",
         right_ear="Chas. Earring +1",
-        left_ring="Medada's Ring",
-        right_ring="Weather. Ring +1",
-        back={ name="Camulus's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10','Damage taken-5%',}},
+        -- left_ring="Medada's Ring",
+        left_ring="Rahab Ring",
+        -- right_ring="Weather. Ring +1",
+        right_ring="Kishar Ring",
+    back={ name="Camulus's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
     }
 
     sets.Self_Healing = { neck = "Phalaina Locket", hands = "Buremte Gloves", ring2 = "Kunaji Ring",
@@ -494,7 +497,7 @@ function init_gear_sets()
     })
 
     sets.buff['Triple Shot'] = { 
-        head="Oshosi Mask +1", -- Missing
+        head="Oshosi Mask +1", -- 5
         body=gear.Empy.Body, --14
         hands="Lanun Gants +3", -- Triple shot becomes Quad shot
         legs="Osh. Trousers +1", 

@@ -93,13 +93,49 @@ bayld_items = {'Tlalpoloani','Macoquetza','Camatlatia','Icoyoca','Tlamini','Suij
 'Uk\'uxkaj Cap'}
 ]]
 
-windower.register_event('incoming text',function(org)
-	aita_debuffs(org)
-	aminon_debuffs(org)
+local debuff_event_id = nil
+
+local function is_valid_zone(id)
+    return id == 275 or id == 189 or id == 133
+end
+
+-- Function to register the debuff monitoring
+local function register_debuff_event()
+	if not debuff_event_id then
+		debuff_event_id = windower.register_event('incoming text', function(org)
+			aita_debuffs(org)
+			aminon_debuffs(org)
+		end)
+	end
+end
+
+-- Function to unregister the debuff monitoring
+local function unregister_debuff_event()
+	if debuff_event_id then
+		windower.unregister_event(debuff_event_id)
+		debuff_event_id = nil
+	end
+end
+
+-- Check zone on startup
+local zone_id = windower.ffxi.get_info().zone
+if is_valid_zone(zone_id) then
+	register_debuff_event()
+end
+
+-- Register zone change event to handle entering/leaving Sortie
+windower.register_event('zone change', function(new_id, old_id)
+	if is_valid_zone(new_id) then
+		-- Entering valid zone - register the debuff event
+		register_debuff_event()
+	elseif is_valid_zone(old_id) then
+		-- Leaving valid zone - unregister the debuff event
+		unregister_debuff_event()
+	end
 end)
 
 function aita_debuffs(org)
-	if not string.find(org:lower(), "aita") and not string.find(org:lower(), "degei") then
+	if not string.find(org:lower(), "aita") and not string.find(org:lower(), "degei") and not string.find(org:lower(), "aminon") then
 		return
 	end
 
