@@ -1,0 +1,30 @@
+--This file is used to store the mob names and their abbreviations used by the `abbreviate_common_mob_names` option in Bars.
+--Please note the name to be replaced is case-sensitive but does not have to be the complete mob name, only the part of the name you wish to be replaced.
+
+return {
+    ["Abject"]="A.",
+    ["Apex"]="A.",
+    ["Apollyon"]="A.",
+    ["Awoken"]="A.",
+    ["Azi Dahaka's"]="Azi's",
+    ["Biune"]="B.",
+    ["Bozzetto"]="Bz.",
+    ["Cachaemic"]="C.",
+    ["Commander"]="Cmdr.",
+    ["Demisang"]="D.",
+    ["Esurient"]="E.",
+    ["Fetid"]="F.",
+    ["Gyvewrapped"]="G.",
+    ["Haughty"]="H.",
+    ["Leader"]="Ldr.",
+    ["Locus"]="L.",
+    ["Naga Raja's"]="Naga's",
+    ["Nostos"]="N.",
+    ["Quetzalcoatl's"]="Quetz's",
+    ["Regiment"]="Rgm.",
+    ["Squadron"]="Sqd.",
+    ["Sweetwater"]="Swt.",
+    ["Temenos"]="T.",
+    ["Transcended"]="Trn.",
+    ["Vanguard"]="Vng.",
+}
