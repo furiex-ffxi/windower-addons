@@ -40,3 +40,6 @@
 [submodule "Gil"]
 	path = Gil
 	url = git@github.com:Darkdoom22/Gil.git
+[submodule "XivParty"]
+	path = XivParty
+	url = git@github.com:Tylas11/XivParty.git

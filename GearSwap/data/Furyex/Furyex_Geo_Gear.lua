@@ -622,13 +622,14 @@ function init_gear_sets()
 		head = "Pixie Hairpin +1",
 		ear1 = "Mendicant's Earring",
 		ear2 = "Evans Earring",
-		body = "Jhakri Robe +2",
-		hands = "Jhakri Cuffs +2",
+		body = "Telchine Chas.",
+		hands = "Telchine Gloves",
 		ring1 = "Mephitas's Ring +1",
-		ring2 = "Mephitas's Ring",
-		back = "Swith Cape +1",
+		ring2 = "Defending Ring",
+		waist = "Null Belt",
+		back = "Null Shawl",
 		legs = "Shedir Seraweels",
-		feet = "Jhakri Pigaches +2"
+		feet = "Telchine Pigaches"
 	}
 
 	sets.buff.Doom = set_combine(sets.buff.Doom, {})

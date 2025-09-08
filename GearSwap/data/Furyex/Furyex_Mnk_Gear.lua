@@ -46,7 +46,7 @@ function init_gear_sets()
         hands = "Anchor. Gloves +3"
     } -- Remove Haste and Add Slow Gear.
     sets.precast.JA["Dodge"] = {
-        feet = "Anch. Gaiters +2"
+        feet = "Anch. Gaiters +3"
     }
     sets.precast.JA["Focus"] = {
         head = "Anch. Crown +3"
@@ -223,7 +223,7 @@ function init_gear_sets()
             name = "Nyame Mail",
             augments = {"Path: B"}
         },
-        hands = "Bhikku Gloves +3",
+        hands = gear.herculean_qa_hands,
         legs = {
             name = "Mpaca's Hose",
             augments = {"Path: A"}
@@ -232,12 +232,12 @@ function init_gear_sets()
             name = "Mpaca's Boots",
             augments = {"Path: A"}
         },
-        neck = "Rep. Plat. Medal",
+        neck = "Mnk. Nodowa +2",
         waist = "Moonbow Belt +1",
-        left_ear = "Sherida Earring",
-        right_ear = {
+        left_ear = {
             name = "Moonshade Earring"
         },
+        right_ear = "Schere Earring",
         left_ring = "Niqmaddu Ring",
         right_ring = "Gere Ring",
         back = gear.jse_str_wsd_back
@@ -270,10 +270,10 @@ function init_gear_sets()
             augments = {"Path: A"}
         },
         waist = "Moonbow Belt +1",
-        left_ear = "Sherida Earring",
-        right_ear = {
+        left_ear = {
             name = "Moonshade Earring"
         },
+        right_ear = "Sherida Earring",
         left_ring = "Niqmaddu Ring",
         right_ring = "Gere Ring",
         back = gear.jse_str_wsd_back
@@ -361,7 +361,7 @@ function init_gear_sets()
             name = "Mpaca's Hose",
             augments = {"Path: A"}
         },
-        feet = "Anch. Gaiters +2",
+        feet = "Anch. Gaiters +3",
         neck = {
             name = "Mnk. Nodowa +2",
             augments = {"Path: A"}
@@ -400,7 +400,7 @@ function init_gear_sets()
             name = "Mpaca's Hose",
             augments = {"Path: A"}
         },
-        feet = "Anch. Gaiters +2",
+        feet = "Anch. Gaiters +3",
         neck = {
             name = "Mnk. Nodowa +2",
             augments = {"Path: A"}
@@ -503,10 +503,10 @@ function init_gear_sets()
         },
         neck = "Sibyl Scarf",
         waist = "Orpheus's Sash",
-        left_ear = "Friomisi Earring",
-        right_ear = {
+        left_ear = {
             name = "Moonshade Earring"
         },
+        right_ear = "Friomisi Earring",
         left_ring = "Medada's Ring",
         right_ring = {
             name = "Metamor. Ring +1",

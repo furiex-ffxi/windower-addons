@@ -74,6 +74,7 @@
                 <y>225</y>
             </pos>
         </display>
+        <visible>true</visible>
     </cleobabe>
     <furyex>
         <display>
@@ -82,8 +83,10 @@
                 <y>241</y>
             </pos>
         </display>
-        <visible>true</visible>
     </furyex>
+    <lanababe>
+        <visible>true</visible>
+    </lanababe>
     <liambear>
         <display>
             <pos>
@@ -100,6 +103,7 @@
                 <y>225</y>
             </pos>
         </display>
+        <visible>true</visible>
     </lolababe>
     <mailman>
         <display>

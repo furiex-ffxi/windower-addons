@@ -1,4 +1,10 @@
 return {
+    ["Glassy Thinker"]={
+        ["Pain Sync"]={
+            ["complete_reaction"]="trust set autofacemobmode auto",
+            ["ready_reaction"]="trust set autofacemobmode away"
+        },
+     },    
     ["Aita"] = {
         ["Flaming Kick"] = {
             ["complete_reaction"] = "/water",

@@ -104,8 +104,7 @@ function init_gear_sets()
 		neck = "Baetyl Pendant", --4
 		ear1 = "Loquac. Earring", -- 2
 		ear2 = "Malignance Earring", -- 4
-		-- body = "Zendik Robe", -- 13
-		body = "Volte Doublet", -- 10
+		body = "Zendik Robe", -- 13
 		hands = "Agwu's Gages", -- 6
 		ring1 = "Kishar Ring", -- 4
 		ring2 = "Prolix Ring", -- 2
@@ -144,7 +143,7 @@ function init_gear_sets()
 	sets.precast.FC.Stoneskin = set_combine(sets.precast.FC["Enhancing Magic"], {})
 
 	sets.precast.FC.Impact = {
-		-- ammo = "Impatiens",
+		range = "Dunna",
 		head = empty,
 		neck = "Voltsurge Torque",
 		ear1 = "Enchntr. Earring +1",
