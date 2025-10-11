@@ -12,13 +12,13 @@ function user_job_setup()
 	state.Weapons:options(
 		"None",
 		"Naegling",
-		"Onion",
 		"Club",
+		"Mandau",
 		"Tauret",
 		"Murgleis",
 		"Bow",
 		"DualWeapons",
-		"DualOnion",
+		"DualMandau",
 		"DualWeaponsAcc",
 		"DualEvisceration",
 		"DualClubs",
@@ -82,11 +82,11 @@ function init_gear_sets()
 	AF.Feet = "Atro. Boots +4"
 
 	--Vitiation
-	RELIC.Head = "Viti. Chapeau +3"
-	RELIC.Body = "Viti. Tabard +3"
-	RELIC.Hands = "Viti. Gloves +3"
-	RELIC.Legs = "Viti. Tights +3"
-	RELIC.Feet = "Vitiation Boots +3"
+	RELIC.Head = "Viti. Chapeau +4"
+	RELIC.Body = "Viti. Tabard +4"
+	RELIC.Hands = "Viti. Gloves +4"
+	RELIC.Legs = "Viti. Tights +4"
+	RELIC.Feet = "Viti. Boots +4"
 
 	--Lethargy
 	EMPY.Head = "Leth. Chappel +3"
@@ -245,8 +245,7 @@ function init_gear_sets()
 		ammo = "Oshasha's Treatise",
 		neck = "Rep. Plat. Medal",
 		body = sets.Nyame.Body,
-		-- hands = sets.Nyame.Hands,
-		hands = AF.Hands,
+		hands = sets.Nyame.Hands,
 		legs = sets.Nyame.Legs,
 		feet = EMPY.Feet,
 		waist = "Sailfi Belt +1",
@@ -679,8 +678,7 @@ function init_gear_sets()
 		neck = "Dls. Torque +2",
 		head = RELIC.Head,
 		body = EMPY.Body,
-		-- hands = "Regal Cuffs",
-		hands = AF.Hands,
+		hands = "Regal Cuffs",
 		legs = "Chironic Hose",
 		feet = RELIC.Feet,
 		waist = "Null Belt",
@@ -720,6 +718,14 @@ function init_gear_sets()
 		}
 	)
 
+	sets.precast.Dispelga =
+		set_combine(
+		sets.midcast["Enfeebling Magic"].Resistant,
+		{
+			main = "Daybreak",
+			sub = "Ammurapi Shield"
+		}
+	)
 	sets.midcast.Silence = sets.midcast.DurationOnlyEnfeebling
 	sets.midcast.Silence.Resistant = sets.midcast["Enfeebling Magic"].Resistant
 	sets.midcast.Sleep = set_combine(sets.midcast.DurationOnlyEnfeebling, {waist = "Acuity Belt +1"})
@@ -1140,14 +1146,14 @@ function init_gear_sets()
 	-- Weapons sets
 	sets.weapons.Murgleis = {main = "Murgleis", sub = "Ammurapi Shield", range = empty}
 	sets.weapons.Naegling = {main = "Naegling", sub = "Ammurapi Shield", range = empty}
-	sets.weapons.Onion = {main = "Onion Sword III", sub = "Ammurapi Shield", range = empty}
+	sets.weapons.Mandau = {main = "Mandau", sub = "Ammurapi Shield", range = empty}
 	sets.weapons.Bow = {main = "Naegling", sub = "Sacro Bulwark", range = "Ullr", ammo = "Beetle Arrow"}
-	sets.weapons.DualOnion = {main = "Onion Sword III", sub = "Kraken Club", range = empty}
-	sets.weapons.DualWeapons = {main = "Naegling", sub = "Machaera +2", range = empty}
+	sets.weapons.DualMandau = {main = "Mandau", sub = "Machaera +3", range = empty}
+	sets.weapons.DualWeapons = {main = "Naegling", sub = "Machaera +3", range = empty}
 	sets.weapons.DualWeaponsAcc = {main = "Naegling", sub = "Ternion Dagger +1", range = empty}
-	sets.weapons.DualClubs = {main = "Maxentius", sub = "Machaera +2", range = empty}
+	sets.weapons.DualClubs = {main = "Maxentius", sub = "Machaera +3", range = empty}
 	sets.weapons.DualEvisceration = {main = "Tauret", sub = "Ternion Dagger +1", range = empty}
-	sets.weapons.DualAeolian = {main = "Tauret", sub = "Machaera +2", range = empty}
+	sets.weapons.DualAeolian = {main = "Tauret", sub = "Machaera +3", range = empty}
 	sets.weapons.Tauret = {main = "Tauret", sub = "Ammurapi Shield"}
 	sets.weapons.Club = {main = "Maxentius", sub = "Forfend +1"}
 	sets.weapons.EnspellOnly = {main = "Qutrub Knife", sub = "Ceremonial Dagger", range = empty}
@@ -1155,7 +1161,7 @@ function init_gear_sets()
 	sets.weapons.EnspellDW = {main = "Crocea Mors", sub = "Malevolence", range = empty}
 	sets.weapons.DualSeraph = {main = "Crocea Mors", sub = "Daybreak", range = empty}
 	sets.weapons.DualAlmace = {main = "Almace", sub = "Sequence", range = empty}
-	sets.weapons.DualBow = {main = "Naegling", sub = "Machaera +2", range = "Ullr", ammo = "Chapuli Arrow"}
+	sets.weapons.DualBow = {main = "Naegling", sub = "Machaera +3", range = "Ullr", ammo = "Chapuli Arrow"}
 	sets.weapons.BowMacc = {main = "Naegling", sub = "Tauret", range = "Ullr", ammo = empty}
 
 	sets.buff.Sublimation = {waist = "Embla Sash"}

@@ -24,11 +24,11 @@ function user_job_setup()
 	gear.af.Feet             = "Brioso Slippers +4"
 
 	gear.relic = {}
-	gear.relic.Head          = "Bihu Roundlet +3"
-	gear.relic.Body          = "Bihu Jstcorps. +3"
-	gear.relic.Hands         = "Bihu Cuffs +3"
-	gear.relic.Legs          = "Bihu Cannions +3"
-	gear.relic.Feet          = "Bihu Slippers +3"
+	gear.relic.Head          = "Bihu Roundlet +4"
+	gear.relic.Body          = "Bihu Jstcorps. +4"
+	gear.relic.Hands         = "Bihu Cuffs +4"
+	gear.relic.Legs          = "Bihu Cannions +4"
+	gear.relic.Feet          = "Bihu Slippers +4"
 
 	gear.empy = {}
 	gear.empy.Head           = "Fili Calot +3"
@@ -138,7 +138,7 @@ function init_gear_sets()
 		--range="Gjallarhorn",
 		head = "Fili Calot +3", --14
 		body = "Brioso Justau. +3", --15
-		feet="Bihu Slippers +3", --9
+		feet= gear.relic.Feet, --9
 	})
 
 	sets.precast.FC["Honor March"] = set_combine(sets.precast.FC.BardSong, { range = "Marsyas" })
@@ -151,9 +151,9 @@ function init_gear_sets()
 
 	-- Precast sets to enhance JAs
 
-	sets.precast.JA.Nightingale = { feet = "Bihu Slippers +3" }
-	sets.precast.JA.Troubadour = { body = "Bihu Jstcorps. +3" }
-	sets.precast.JA['Soul Voice'] = { legs = "Bihu Cannions +3" }
+	sets.precast.JA.Nightingale = { feet = gear.relic.Feet }
+	sets.precast.JA.Troubadour = { body = gear.relic.Body }
+	sets.precast.JA['Soul Voice'] = { legs = gear.relic.Legs }
 
 	-- Waltz set (chr and vit)
 	sets.precast.Waltz = {}
@@ -163,7 +163,7 @@ function init_gear_sets()
 	sets.precast.WS = {
 		range = { name = "Linos", augments = { 'Accuracy+16', 'Weapon skill damage +3%', 'STR+6 CHR+6', } },
 		head = { name = "Nyame Helm", augments = { 'Path: B', } },
-		body = { name = "Bihu Jstcorps. +3", augments = { 'Enhances "Troubadour" effect', } },
+		body = gear.relic.Body,
 		hands = { name = "Nyame Gauntlets", augments = { 'Path: B', } },
 		legs = { name = "Nyame Flanchard", augments = { 'Path: B', } },
 		feet = { name = "Nyame Sollerets", augments = { 'Path: B', } },
@@ -188,7 +188,6 @@ function init_gear_sets()
 
 	-- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
 	sets.precast.WS['Fast Blade II'] = set_combine(sets.precast.WS, {
-		body = gear.relic_body,
 		neck = "Fotia Gorget",
 		ear1 = "Moonshade Earring",
 		ear2 = "Mache Earring +1",
@@ -519,7 +518,7 @@ function init_gear_sets()
 		range = "Blurred Harp +1",
 		hands = gear.af.Hands,
 		legs = "Inyanga Shalwar +2",
-		feet = "Bihu Slippers +3",
+		feet = gear.relic.Feet,
 		ear1 = "Gersemi Earring",
 	}
 	sets.midcast['Horde Lullaby II'].Resistant = sets.midcast['Horde Lullaby II']
@@ -535,8 +534,8 @@ function init_gear_sets()
 	sets.midcast.Minuet = { body = "Fili Hongreline +3" }
 	sets.midcast.Prelude = { feet = "Fili Cothurnes +3" }
 	sets.midcast.Threnody = { body = "Mou. Manteel +1" }
-	sets.midcast['Adventurer\'s Dirge'] = { range = "Marsyas", hands = "Bihu Cuffs +3" }
-	sets.midcast['Foe Sirvente'] = { head = "Bihu Roundlet +3" }
+	sets.midcast['Adventurer\'s Dirge'] = { range = "Marsyas", hands = gear.relic.Hands }
+	sets.midcast['Foe Sirvente'] = { head = gear.relic.Head }
 	sets.midcast['Magic Finale'] = { legs = "Fili Rhingrave +3" }
 	sets.midcast["Sentinel's Scherzo"] = { feet = "Fili Cothurnes +3" }
 	sets.midcast["Chocobo Mazurka"] = { range = "Marsyas" }
@@ -563,7 +562,7 @@ function init_gear_sets()
 		--body="Respite Cloak",
 		--hands=gear.chironic_refresh_hands,
 		--ring1="Defending Ring",
-		--ring2="Dark Ring",
+		--ring2="Murky Ring",
 		--back="Umbra Cape",
 		waist = "Flume Belt +1",
 		--legs="Assid. Pants +1",

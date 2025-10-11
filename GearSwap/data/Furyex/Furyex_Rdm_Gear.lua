@@ -21,6 +21,7 @@ function user_job_setup()
 		"DualWeapons",
 		"DualMpu",
 		"DualOnion",
+		"DualMurgleis",
 		"DualWeaponsAcc",
 		"DualEvisceration",
 		"DualClubs",
@@ -84,11 +85,11 @@ function init_gear_sets()
 	AF.Feet = "Atro. Boots +4"
 
 	--Vitiation
-	RELIC.Head = "Viti. Chapeau +3"
-	RELIC.Body = "Viti. Tabard +3"
-	RELIC.Hands = "Viti. Gloves +3"
-	RELIC.Legs = "Viti. Tights +3"
-	RELIC.Feet = "Vitiation Boots +3"
+	RELIC.Head = "Viti. Chapeau +4"
+	RELIC.Body = "Viti. Tabard +4"
+	RELIC.Hands = "Viti. Gloves +4"
+	RELIC.Legs = "Viti. Tights +4"
+	RELIC.Feet = "Viti. Boots +4"
 
 	--Lethargy
 	EMPY.Head = "Leth. Chappel +3"
@@ -680,7 +681,7 @@ function init_gear_sets()
 		waist = "Obstinate Sash",
 		left_ear = "Snotra Earring",
 		right_ear = "Malignance Earring",
-		back = "Null Shawl"
+		back = RDMCape.FC
 	}
 
 	sets.midcast["Enfeebling Magic"].Resistant =
@@ -724,7 +725,6 @@ function init_gear_sets()
 	sets.midcast.Break.Resistant = set_combine(sets.midcast["Enfeebling Magic"].Resistant, {waist = "Acuity Belt +1"})
 	sets.midcast.Foil = sets.enmity
 	sets.midcast.Flash = sets.enmity
-
 	sets.midcast.Dispel = set_combine(sets.midcast["Enfeebling Magic"].Resistant, {
 		neck = "Dls. Torque +2",
 	})
@@ -762,10 +762,8 @@ function init_gear_sets()
 		}
 	)
 	sets.midcast["Frazzle III"].Resistant = sets.midcast["Enfeebling Magic"].Resistant
-
 	sets.midcast["Distract III"] = sets.midcast.SkillBasedEnfeebling
 	sets.midcast["Distract III"].Resistant = sets.midcast["Enfeebling Magic"].Resistant
-
 	sets.midcast["Divine Magic"] = set_combine(sets.midcast["Enfeebling Magic"].Resistant, {})
 
 	sets.midcast.Dia =
@@ -1018,8 +1016,8 @@ function init_gear_sets()
 		feet = sets.VolteSandoria.Feet,
 		waist = "Null Belt",
 		left_ear = "Etiolation Earring",
-		right_ear = "Ethereal Earring",
-		left_ring = "Defending Ring",
+		right_ear = "Alabaster Earring",
+		left_ring = "Murky Ring",
 		right_ring = {name = "Stikini Ring +1", bag = "wardrobe2"},
 		back = RDMCape.TP
 	}
@@ -1118,10 +1116,11 @@ function init_gear_sets()
 	sets.weapons.Onion = {main = "Onion Sword III", sub = "Ammurapi Shield", range = empty}
 	sets.weapons.Bow = {main = "Naegling", sub = "Sacro Bulwark", range = "Ullr", ammo = "Beetle Arrow"}
 	sets.weapons.DualMpu = {main = "Mpu Gandring", sub = "Thibron", range = empty}
-	sets.weapons.DualOnion = {main = "Onion Sword III", sub = "Kraken Club", range = empty}
+	sets.weapons.DualOnion = {main = "Onion Sword III", sub = "Thibron", range = empty}
 	sets.weapons.DualWeapons = {main = "Naegling", sub = "Thibron", range = empty}
 	-- sets.weapons.DualWeaponsAcc = { main = "Naegling", sub = "Almace", range = empty }
 	sets.weapons.DualWeaponsAcc = {main = "Naegling", sub = "Ternion Dagger +1", range = empty}
+	sets.weapons.DualMurgleis = {main = "Murgleis", sub = "Kraken Club", range = empty}
 	-- sets.weapons.DualEvisceration = { main = "Tauret", sub = "Almace", range = empty }
 	sets.weapons.DualClubs = {main = "Maxentius", sub = "Thibron", range = empty}
 	sets.weapons.DualEvisceration = {main = "Tauret", sub = "Ternion Dagger +1", range = empty}

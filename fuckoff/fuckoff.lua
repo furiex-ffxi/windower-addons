@@ -1,41 +1,57 @@
 _addon.name = 'FuckOff'
 _addon.version = '0.21'
 _addon.author = 'Chiaia (Asura)'
-_addon.commands = {'fuckoff','fo'} --Won't do anything atm.
+_addon.commands = {'fuckoff', 'fo'} -- Won't do anything atm.
 
 require('luau')
 packets = require('packets')
 
 local block_skillup = true
 
-local black_listed_users = T{'TotallyABotOne111111','TotallyABotTwo222222','TotallyABotThree333333',} -- Want to block all messages from X user then added there name(s) here.
-	
+local black_listed_users = T {'TotallyABotOne111111', 
+'TotallyABotTwo222222', 
+'TotallyABotThree333333',
+'Killera'
+} -- Want to block all messages from X user then added there name(s) here.
+
 -- I could do a general digit check on JP instead of set 500/2100 values but atm I feel it's not needed. Will see if they change thier tactics.
 -- If you want to learn more about "Magical Characters" or Patterns in Lua: https://riptutorial.com/lua/example/20315/lua-pattern-matching
-local black_listed_words = T{string.char(0x81,0x69),string.char(0x81,0x99),string.char(0x81,0x9A),'1%-99','Job Points.*2100','Job Points.*500','Job Points.*4m','JP.*2100','JP.*500','Capacity Points.*2100','Capacity Points.*500','CPS*.*2100','CPS*.*500','ｆｆｘｉｓｈｏｐ','Jinpu 99999','Jinpu99999','This is IGXE','Clear Mind*.*15mins rdy start','Reisenjima*.*Helms*.*T4*.*Buy','Aeonic Weapon*.*3zone*.*Buy','Tumult Curator*.*Kill','Aeonic Weapon*.*Mind','Aeonic Weapon*.*Buy','Aeonic*.*Buy','Selling Aeonic','Empy Weapons Abyssea','50 50 75','500P*.*5M','2100P*.*20M', "New2025"} -- First two are '☆' and '★' symbols.
+local black_listed_words = T {string.char(0x81, 0x69), string.char(0x81, 0x99), string.char(0x81, 0x9A), '1%-99',
+                              'Job Points.*2100', 'Job Points.*500', 'Job Points.*4m', 'JP.*2100', 'JP.*500',
+                              'Capacity Points.*2100', 'Capacity Points.*500', 'CPS.*2100', 'CPS.*500',
+                              'ｆｆｘｉｓｈｏｐ', 'Jinpu 99999', 'Jinpu99999', 'This is IGXE',
+                              'Clear Mind.*15mins rdy start', 'Reisenjima.*Helms.*T4.*Buy',
+                              'Aeonic Weapon.*3zone.*Buy', 'Tumult Curator.*Kill', 'Aeonic Weapon.*Mind',
+                              'Aeonic Weapon.*Buy', 'Selling Aeonic', 'Empy Weapons Abyssea', '50 50 75',
+                              'Bibiki Bay', 'UC HTMB', '500P', '500p', 'RP2386', 'T1T2T3T4', '50M JST', 'Master Trials',
+                              'MasterTrials', 'CP500P', 'SuperRP', 'Seg11k.*', 'Supercharge', '43k+',
+                              'Aeonic.*Clear Mind.*','W3.*Clear Mind.*'} -- First two are '☆' and '★' symbols.
 
-local black_listed_skill_pages = T{'6147', '6148', '6149', '6150', '6151', '6152', '6153', '6154', '6155', '6156', '6157', '6158', '6159', '6160', '6161', '6162', '6163', '6164', '6165', '6166', '6167', '6168', '6169', '6170', '6171', '6172', '6173', '6174', '6175', '6176', '6177', '6178', '6179', '6180', '6181', '6182', '6183', '6184', '6185',}
+local black_listed_skill_pages = T {'6147', '6148', '6149', '6150', '6151', '6152', '6153', '6154', '6155', '6156',
+                                    '6157', '6158', '6159', '6160', '6161', '6162', '6163', '6164', '6165', '6166',
+                                    '6167', '6168', '6169', '6170', '6171', '6172', '6173', '6174', '6175', '6176',
+                                    '6177', '6178', '6179', '6180', '6181', '6182', '6183', '6184', '6185'}
 
-windower.register_event('incoming chunk', function(id,data)
+windower.register_event('incoming chunk', function(id, data)
     if id == 0x017 then -- 0x017 Is incoming chat.
         local chat = packets.parse('incoming', data)
         local cleaned = windower.convert_auto_trans(chat['Message']):lower()
 
-		if black_listed_users:contains(chat['Sender Name']) then -- Blocks any message from X user in any chat mode.
-			return true
-		elseif (chat['Mode'] == 3 or chat['Mode'] == 1 or chat['Mode'] == 26) then -- RMT checks in tell, shouts, and yells. Years ago they use to use tells to be more stealthy about gil selling.
-			for k,v in ipairs(black_listed_words) do
-				if cleaned:match(v:lower()) then
-					return true
-				end
-			end
+        if black_listed_users:contains(chat['Sender Name']) then -- Blocks any message from X user in any chat mode.
+            return true
+        elseif (chat['Mode'] == 3 or chat['Mode'] == 1 or chat['Mode'] == 26) then -- RMT checks in tell, shouts, and yells. Years ago they use to use tells to be more stealthy about gil selling.
+            for k, v in ipairs(black_listed_words) do
+                if cleaned:match(v:lower()) then
+                    return true
+                end
+            end
         end
     elseif id == 0x028 and block_skillup then -- Action Message
         local data = packets.parse('incoming', data)
         if black_listed_skill_pages:contains(data['Target 1 Action 1 Param']) then
             return true
         end
-	end
+    end
 end)
 
 --[[

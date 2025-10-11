@@ -1,7 +1,7 @@
 function user_job_setup()
     -- Options: Override default values
     state.OffenseMode:options("Normal", "SB", "DT", "Counter")
-    state.WeaponskillMode:options("Match", "Normal", "Acc", "FullAcc")
+    state.WeaponskillMode:options("Match", "Normal", "SB")
     state.HybridMode:options("Normal", "DT")
     state.PhysicalDefenseMode:options("PDT")
     state.MagicalDefenseMode:options("MDT")
@@ -39,17 +39,17 @@ function init_gear_sets()
         legs = "Hes. Hose +3"
     }
     sets.precast.JA["Boost"] = {
-        hands = "Anchor. Gloves +3"
+        hands = "Anch. Gloves +4"
     }
     sets.precast.JA["Boost"].OutOfCombat = {
         waist = "Ask Sash",
-        hands = "Anchor. Gloves +3"
+        hands = "Anch. Gloves +4"
     } -- Remove Haste and Add Slow Gear.
     sets.precast.JA["Dodge"] = {
-        feet = "Anch. Gaiters +3"
+        feet = "Anch. Gaiters +4"
     }
     sets.precast.JA["Focus"] = {
-        head = "Anch. Crown +3"
+        head = "Anchor. Crown +4"
     }
     sets.precast.JA["Counterstance"] = {
         feet = "Hes. Gaiters +3"
@@ -58,7 +58,7 @@ function init_gear_sets()
         feet = "Bhikku Gaiters +3"
     }
     sets.precast.JA["Formless Strikes"] = {
-        body = "Hes. Cyclas +3"
+        body = "Hesy. Cyclas +4"
     }
     sets.precast.JA["Mantra"] = {
         feet = "Hes. Gaiters +3"
@@ -66,12 +66,12 @@ function init_gear_sets()
 
     sets.precast.JA["Chi Blast"] = {
         head = {
-            name = "Hes. Crown +3"
+            name = "Hes. Crown +4"
         }
     }
 
     sets.precast.JA["Chakra"] = {
-        body = "Anch. Cyclas +3",
+        body = "Anch. Cyclas +4",
         hands = {
             name = "Hes. Gloves +3",
             augments = {'Enhances "Invigorate" effect'}
@@ -203,10 +203,7 @@ function init_gear_sets()
         back = gear.jse_dex_wsd_back
     }
 	
-    sets.precast.WSAcc = set_combine(sets.precast.WS.Barehanded, {})
-    sets.precast.WSFullAcc = set_combine(sets.precast.WS.Barehanded, {})
-    sets.precast.WS.Acc = set_combine(sets.precast.WS, sets.precast.WSAcc)
-    sets.precast.WS.FullAcc = set_combine(sets.precast.WS, sets.precast.WSFullAcc)
+    sets.precast.WS.SB = set_combine(sets.precast.WS, {})
 
     -- Specific weaponskill sets.
 
@@ -361,7 +358,7 @@ function init_gear_sets()
             name = "Mpaca's Hose",
             augments = {"Path: A"}
         },
-        feet = "Anch. Gaiters +3",
+        feet = "Anch. Gaiters +4",
         neck = {
             name = "Mnk. Nodowa +2",
             augments = {"Path: A"}
@@ -400,7 +397,7 @@ function init_gear_sets()
             name = "Mpaca's Hose",
             augments = {"Path: A"}
         },
-        feet = "Anch. Gaiters +3",
+        feet = "Anch. Gaiters +4",
         neck = {
             name = "Mnk. Nodowa +2",
             augments = {"Path: A"}
@@ -457,24 +454,30 @@ function init_gear_sets()
         back = gear.jse_str_wsd_back
     })
 
-    sets.precast.WS["Raging Fists"].Acc = set_combine(sets.precast.WS["Raging Fists"], sets.precast.WSAcc)
-    sets.precast.WS["Howling Fist"].Acc = set_combine(sets.precast.WS["Howling Fist"], sets.precast.WSAcc)
-    sets.precast.WS["Asuran Fists"].Acc = set_combine(sets.precast.WS["Asuran Fists"], sets.precast.WSAcc)
-    sets.precast.WS["Ascetic's Fury"].Acc = set_combine(sets.precast.WS["Ascetic's Fury"], sets.precast.WSAcc, {})
-    sets.precast.WS["Victory Smite"].Acc = set_combine(sets.precast.WS["Victory Smite"], sets.precast.WSAcc, {})
-    sets.precast.WS["Shijin Spiral"].Acc = set_combine(sets.precast.WS["Shijin Spiral"], sets.precast.WSAcc)
-    sets.precast.WS["Dragon Kick"].Acc = set_combine(sets.precast.WS["Dragon Kick"], sets.precast.WSAcc)
-    sets.precast.WS["Tornado Kick"].Acc = set_combine(sets.precast.WS["Tornado Kick"], sets.precast.WSAcc)
-
-    sets.precast.WS["Raging Fists"].FullAcc = set_combine(sets.precast.WS["Raging Fists"], sets.precast.WSFullAcc)
-    sets.precast.WS["Howling Fist"].FullAcc = set_combine(sets.precast.WS["Howling Fist"], sets.precast.WSFullAcc)
-    sets.precast.WS["Asuran Fists"].FullAcc = set_combine(sets.precast.WS["Asuran Fists"], sets.precast.WSFullAcc)
-    sets.precast.WS["Ascetic's Fury"].FullAcc = set_combine(sets.precast.WS["Ascetic's Fury"], sets.precast.WSFullAcc,
-        {})
-    sets.precast.WS["Victory Smite"].FullAcc = set_combine(sets.precast.WS["Victory Smite"], sets.precast.WSFullAcc, {})
-    sets.precast.WS["Shijin Spiral"].FullAcc = set_combine(sets.precast.WS["Shijin Spiral"], sets.precast.WSFullAcc)
-    sets.precast.WS["Dragon Kick"].FullAcc = set_combine(sets.precast.WS["Dragon Kick"], sets.precast.WSFullAcc)
-    sets.precast.WS["Tornado Kick"].FullAcc = set_combine(sets.precast.WS["Tornado Kick"], sets.precast.WSFullAcc)
+    sets.precast.WS["Raging Fists"].SB = set_combine(sets.precast.WS["Raging Fists"], {
+        right_ear = "Sherida Earring"
+    })
+    sets.precast.WS["Howling Fist"].SB = set_combine(sets.precast.WS["Howling Fist"], {
+        right_ear = "Sherida Earring"
+    })
+    sets.precast.WS["Asuran Fists"].SB = set_combine(sets.precast.WS["Asuran Fists"], {
+        right_ear = "Sherida Earring"
+    })
+    sets.precast.WS["Ascetic's Fury"].SB = set_combine(sets.precast.WS["Ascetic's Fury"], {
+        right_ear = "Sherida Earring"
+    })
+    sets.precast.WS["Victory Smite"].SB = set_combine(sets.precast.WS["Victory Smite"], {
+        right_ear = "Sherida Earring"
+    })
+    sets.precast.WS["Shijin Spiral"].SB = set_combine(sets.precast.WS["Shijin Spiral"], {
+        right_ear = "Sherida Earring"
+    })
+    sets.precast.WS["Dragon Kick"].SB = set_combine(sets.precast.WS["Dragon Kick"], {
+        right_ear = "Sherida Earring"
+    })
+    sets.precast.WS["Tornado Kick"].SB = set_combine(sets.precast.WS["Tornado Kick"], {
+        right_ear = "Sherida Earring"
+    })
 
     sets.precast.WS["Cataclysm"] = {
         ammo = {
@@ -689,7 +692,7 @@ function init_gear_sets()
             augments = {"Path: A"}
         },
         hands = "Malignance Gloves",
-        legs = "Anch. Hose +3",
+        legs = "Anch. Hose +4",
         feet = {
             name = "Hes. Gaiters +3",
             augments = {'Enhances "Mantra" effect'}
@@ -721,6 +724,7 @@ function init_gear_sets()
     }
     sets.buff.Footwork = {}
     sets.buff.Boost = {
+        head = "Volte Cap",
         waist = "Ask Sash"
     }
 

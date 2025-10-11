@@ -55,15 +55,15 @@ function init_gear_sets()
 	-- Precast sets
 	--------------------------------------
 	af = {}
-	af.Head = "Geo. Galero +3"
-	af.Body = "Geomancy Tunic +3"
-	af.Hands = "Geo. Mitaines +3"
-	af.Legs = "Geomancy Pants +3"
-	af.Feet = "Geo. Sandals +3"
+	af.Head = "Geo. Galero +4"
+	af.Body = "Geo. Tunic +4"
+	af.Hands = "Geo. Mitaines +4"
+	af.Legs = "Geo. Pants +4"
+	af.Feet = "Geo. Sandals +4"
 
 	relic = {}
-	relic.Head = "Bagua Galero +3"
-	relic.Body = "Bagua Tunic +3"
+	relic.Head = "Bagua Galero +4"
+	relic.Body = "Bagua Tunic +4"
 	relic.Hands = "Bagua Mitaines +3"
 	relic.Legs = "Bagua Pants +3"
 	relic.Feet = "Bagua Sandals +3"

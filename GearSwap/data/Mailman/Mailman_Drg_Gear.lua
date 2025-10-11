@@ -36,11 +36,11 @@ function init_gear_sets()
     -- Start defining the sets
     --------------------------------------
     gear.af = {
-        Head = "Vishap Armet +3",
-        Body = "Vishap Mail +3",
-        Hands = "Vis. Fing. Gaunt. +3",
-        Legs = "Vishap Brais +3",
-        Feet = "Vishap Greaves +3",
+        Head = "Vishap Armet +4",
+        Body = "Vishap Mail +4",
+        Hands = "Vish. Fin. Gaunt. +4",
+        Legs = "Vishap Brais +4",
+        Feet = "Vishap Greaves +4",
     }
 
     gear.empy = {
@@ -52,8 +52,8 @@ function init_gear_sets()
     }
     
     gear.relic = {
-        Head = "Ptero. Armet +3",
-        Body = "Ptero. Mail +3",
+        Head = "Ptero. Armet +4",
+        Body = "Ptero. Mail +4",
         Hands = "Ptero. Fin. G. +3",
         Legs = "Ptero. Brais +3",
         Feet = "Ptero. Greaves +3",
@@ -194,7 +194,7 @@ function init_gear_sets()
         head = gear.empy.Head,
         body = sets.Nyame.Body,
         hands = gear.relic.Hands,
-        legs = sets.Nyame.Legs,
+        legs = gear.af.Legs,
         feet = sets.Nyame.Feet,
         neck = "Dgn. Collar +2",
         waist = "Sailfi Belt +1",

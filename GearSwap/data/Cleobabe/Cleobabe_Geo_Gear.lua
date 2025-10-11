@@ -1,6 +1,7 @@
 function user_job_setup()
 	-- Options: Override default values
 	state.OffenseMode:options('Normal')
+	state.HybridMode:options("Normal", "Staff")
 	state.CastingMode:options('Normal', 'Resistant', 'Fodder', 'Proc')
 	state.IdleMode:options('Normal', 'PDT')
 	state.PhysicalDefenseMode:options('PDT', 'NukeLock', 'GeoLock', 'PetPDT')
@@ -45,16 +46,16 @@ function init_gear_sets()
 	-- Precast sets
 	--------------------------------------
 	gear.af = {
-		Head = "Geo. Galero +3",
-		Body = "Geomancy Tunic +3",
-		Hands = "Geo. Mitaines +3",
-		Legs = "Geomancy Pants +3",
-		Feet = "Geo. Sandals +3",
+		Head = "Geo. Galero +4",
+		Body = "Geo. Tunic +4",
+		Hands = "Geo. Mitaines +4",
+		Legs = "Geo. Pants +4",
+		Feet = "Geo. Sandals +4",
 	}
 
 	gear.relic = {
-		Head = "Bagua Galero +3",
-		Body = "Bagua Tunic +3",
+		Head = "Bagua Galero +4",
+		Body = "Bagua Tunic +4",
 		Hands = "Bagua Mitaines +3",
 		Legs = "Bagua Pants +3",
 		Feet = "Bagua Sandals +3",
@@ -237,7 +238,7 @@ function init_gear_sets()
 		body = "Vedic Coat",
 		hands = gear.af.Hands,
 		ring1 = "Defending Ring",
-		ring2 = "Dark Ring",
+		ring2 = "Murky Ring",
 		back = "Solemnity Cape",
 		waist = "Austerity Belt +1",
 		legs = "Vanya Slops",
@@ -586,7 +587,7 @@ function init_gear_sets()
 		body = "Azimuth Coat +3",
 		hands = gear.merlinic_refresh_hands,
 		ring1 = "Defending Ring",
-		ring2 = "Dark Ring",
+		ring2 = "Murky Ring",
 		back = "Umbra Cape",
 		legs = "Assid. Pants +1",
 		feet = gear.merlinic_refresh_feet
@@ -597,31 +598,28 @@ function init_gear_sets()
 	sets.idle = {
 		neck = "Loricate Torque +1",
 		ear1 = "Odnowa Earring +1",
-		ear2 = "Ethereal Earring",
+		ear2 = "Alabaster Earring",
 		head = "Null Masque",
 		body = gear.empy.Body,
 		hands = gear.relic.Hands,
 		legs = "Volte Brais",
 		feet = "Volte Gaiters",
-		ring1 = "Defending Ring",
-		ring2 = "Stikini Ring +1",
+		ring1 = "Stikini Ring +1",
+		ring2 = "Murky Ring",
 		back = gear.idle_jse_back,
 		waist = "Plat. Mog. Belt",
 	}
 
 	sets.idle.PDT = set_combine(sets.idle, {
-		main = "Malignance Pole",
-		sub = "Umbra Strap",
-		ammo = "Homiliary",
 		head = "Null Masque",
 		neck = "Loricate Torque +1",
 		ear1 = "Etiolation Earring",
-		ear2 = "Ethereal Earring",
-		-- ring1 = "Defending Ring",
-		ring1 = "Gelatinous Ring +1",
-		ring2 = "Stikini Ring +1",
+		ear2 = "Alabaster Earring",
+		body = "Shamash Robe",
+		ring1 = "Stikini Ring +1",
+		ring2 = "Murky Ring",
 		back = gear.idle_jse_back,
-		waist = "Carrier's Sash",
+		waist = "Null Belt",
 	})
 
 	-- .Pet sets are for when Luopan is present.
@@ -632,8 +630,8 @@ function init_gear_sets()
 		ear2 = "Odnawa Earring +1",
 		body = "Shamash Robe",
 		hands = gear.af.Hands,
-		ring1 = "Defending Ring",
-		ring2 = "Stikini Ring +1",
+		ring1 = "Stikini Ring +1",
+		ring2 = "Murky Ring",
 		back = gear.idle_jse_back,
 		waist = "Isa Belt",
 		legs = "Agwu's Slops",
@@ -647,8 +645,8 @@ function init_gear_sets()
 		ear2 = "Odnawa Earring +1",
 		body = "Shamash Robe",
 		hands = gear.af.Hands,
-		ring1 = "Defending Ring",
-		ring2 = "Stikini Ring +1",
+		ring1 = "Stikini Ring +1",
+		ring2 = "Murky Ring",
 		back = gear.idle_jse_back,
 		waist = "Isa Belt",
 		legs = "Nyame Flanchard",
@@ -672,7 +670,7 @@ function init_gear_sets()
 		body = "Adamantite Armor",
 		hands = gear.merlinic_refresh_hands,
 		ring1 = "Defending Ring",
-		ring2 = "Dark Ring",
+		ring2 = "Murky Ring",
 		back = "Umbra Cape",
 		waist = "Carrier's Sash",
 		legs = "Assid. Pants +1",
@@ -692,7 +690,7 @@ function init_gear_sets()
 		body = "Adamantite Armor",
 		hands = "Nyame Gauntlets",
 		ring1 = "Defending Ring",
-		ring2 = "Dark Ring",
+		ring2 = "Murky Ring",
 		back = "Umbra Cape",
 		waist = "Carrier's Sash",
 		legs = "Nyame Flanchard",
@@ -710,7 +708,7 @@ function init_gear_sets()
 		body = "Adamantite Armor",
 		hands = "Nyame Gauntlets",
 		ring1 = "Defending Ring",
-		ring2 = "Dark Ring",
+		ring2 = "Murky Ring",
 		back = "Umbra Cape",
 		waist = "Carrier's Sash",
 		legs = "Nyame Flanchard",
@@ -779,6 +777,23 @@ function init_gear_sets()
 	-- Normal melee group
 	sets.engaged = {
 		main = "Maxentius",
+		head = "Blistering Sallet +1",
+		neck = "Combatant's Torque",
+		ear1 = "Cessance Earring",
+		ear2 = "Telos Earring",
+		body = sets.Nyame.Body,
+		hands = "Gazu Bracelets +1",
+		ring1 = "Petrov Ring",
+		ring2 = "Chirich Ring +1",
+		back = "Null Shawl",
+		waist = "Goading Belt",
+		legs = sets.Nyame.Legs,
+		feet = sets.Nyame.Feet
+	}
+
+	sets.engaged.Staff = {
+		main = "Contemplator +1",
+		sub = "Umbra Strap",
 		head = "Blistering Sallet +1",
 		neck = "Combatant's Torque",
 		ear1 = "Cessance Earring",

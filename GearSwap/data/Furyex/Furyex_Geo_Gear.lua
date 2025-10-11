@@ -119,7 +119,7 @@ function init_gear_sets()
 		sets.precast.FC,
 		{
 			hands = relic.Hands, -- 14
-			ring2 = "Defending Ring",
+			ring2 = "Murky Ring",
 			feet = "Nyame Sollerets"
 		}
 	) -- 80
@@ -202,7 +202,7 @@ function init_gear_sets()
 		ear2 = "Azimuth Earring +2",
 		body = "Vedic Coat",
 		hands = empy.Hands,
-		ring1 = "Defending Ring",
+		ring1 = "Murky Ring",
 		ring2 = "Mephitas's Ring +1",
 		back = gear.idle_jse_back,
 		waist = "Austerity Belt +1",
@@ -530,12 +530,12 @@ function init_gear_sets()
 		neck = "Bagua Charm +2",
 		ear1 = "Odnowa Earring +1",
 		ear2 = "Azimuth Earring +2",
-		head = "Volte Beret",
+		head = "Null Mask",
 		body = empy.Body,
 		hands = relic.Hands,
 		legs = sets.Nyame.Legs,
 		feet = sets.Nyame.Feet,
-		ring1 = "Defending Ring",
+		ring1 = "Murky Ring",
 		ring2 = "Stikini Ring +1",
 		back = gear.idle_jse_back,
 		waist = "Plat. Mog. Belt"
@@ -545,7 +545,7 @@ function init_gear_sets()
 		set_combine(
 		sets.idle,
 		{
-			left_ring = "Defending Ring",
+			left_ring = "Murky Ring",
 			back = gear.nuke_jse_back
 		}
 	)
@@ -625,7 +625,7 @@ function init_gear_sets()
 		body = "Telchine Chas.",
 		hands = "Telchine Gloves",
 		ring1 = "Mephitas's Ring +1",
-		ring2 = "Defending Ring",
+		ring2 = "Murky Ring",
 		waist = "Null Belt",
 		back = "Null Shawl",
 		legs = "Shedir Seraweels",
@@ -653,7 +653,7 @@ function init_gear_sets()
 		ear1 = "Cessance Earring",
 		ear2 = "Telos Earring",
 		body = sets.Nyame.Body,
-		hands = "Gazu Bracelets +1",
+		hands = "Nyame Gauntlets",
 		ring1 = "Petrov Ring",
 		ring2 = "Lehko's Ring",
 		back = gear.tp_jse_back,
@@ -661,6 +661,9 @@ function init_gear_sets()
 		legs = sets.Nyame.Legs,
 		feet = sets.Nyame.Feet
 	}
+	sets.engaged.Acc = set_combine(sets.engaged, {
+		hands = "Gazu Bracelets +1",
+	})
 
 	sets.engaged.DW = {}
 

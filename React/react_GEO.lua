@@ -1,4 +1,10 @@
 return {
+    ["Esurient Botulus"]={
+        ["Slimy Proposal"]={
+            ["complete_reaction"]="",
+            ["ready_reaction"]="/flatblade"
+        },
+    },
     ["Aita"] = {
         ["Flaming Kick"] = {
             ["complete_reaction"] = "/water bt",

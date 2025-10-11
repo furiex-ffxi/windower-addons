@@ -10,7 +10,7 @@ function user_job_setup()
     state.PhysicalDefenseMode:options('PDT')
     state.MagicalDefenseMode:options('MDT')
     state.ResistDefenseMode:options('MEVA')
-    state.Weapons:options('None', 'Savage', 'Heishi', 'HeishiYag', 'MagicWeapons', 'ProcSword', 'ProcDagger', 'ProcGreatSword', 'ProcScythe',
+    state.Weapons:options('None', 'Naegling', 'Heishi', 'HeishiYag', 'MagicWeapons', 'ProcSword', 'ProcDagger', 'ProcGreatSword', 'ProcScythe',
         'ProcPolearm', 'ProcGreatKatana', 'ProcKatana', 'ProcClub', 'ProcStaff')
     state.ExtraMeleeMode = M { ['description'] = 'Extra Melee Mode', 'None', 'SuppaBrutal', 'DWEarrings', 'DWMax' }
 
@@ -191,16 +191,17 @@ function init_gear_sets()
         feet = sets.Nyame.Feet,
         waist = { name="Sailfi Belt +1", augments={'Path: A',}},
         ear1 = { name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-        ear2 = "Lugra Earring +1",
+        ear2 = "Hattori Earring +1",
         left_ring = "Epaminondas's Ring",
         right_ring = "Cornelia's Ring",        
         back = gear.wsd_jse_back
     }
     sets.precast.WS.MAB = set_combine(sets.precast.WS,{ 
         ammo = "Seeth. Bomblet +1",
-        neck = "Fotia Gorget",
+        neck = "Ninja Nodowa +2",
         head = gear.relic.Head,
         waist = "Orpheus's Sash",
+        ring1 = "Sroda Ring",
         ring2 = "Gere Ring"
     })
 
@@ -431,12 +432,12 @@ function init_gear_sets()
         head = sets.Nyame.Head,
         neck = "Loricate Torque +1",
         ear1 = "Eabani Earring",
-        ear2 = "Assuage Earring",
+        ear2 = "Alabaster Earring",
         body = sets.Nyame.Body,
         hands = sets.Nyame.Hands,
         ring1 = "Gelatinous Ring +1",
         ring2 = "Fortified Ring",
-        back = "Moonlight Cape",
+        back = "Null Shawl",
         waist = "Platinum Moogle Belt",
         legs = sets.Nyame.Legs,
         feet = sets.Nyame.Feet,
@@ -469,7 +470,9 @@ function init_gear_sets()
 
 
 
-    sets.Kiting = { feet = "Danzo Sune-Ate" }
+	sets.Kiting = {
+		ring1 = "Shneddick Ring",
+	}
     sets.DuskKiting = {}
     sets.DuskIdle = {}
     sets.DayIdle = {}
@@ -575,11 +578,11 @@ function init_gear_sets()
     -- Weapons sets
     sets.weapons.Heishi = { main = "Heishi Shorinken", sub = "Kunimitsu" }
     sets.weapons.HeishiYag = { main = "Heishi Shorinken", sub = "Yagyu Darkblade" }
-    sets.weapons.Savage = { main = "Naegling", sub = "Uzura +2" }
+    sets.weapons.Naegling = { main = "Naegling", sub = "Uzura +2" }
     sets.weapons.Evisceration = { main = "Tauret", sub = "Kunimitsu" }
     sets.weapons.MagicWeapons = { main = "Gokotai", sub = "Kunimitsu" }
 	sets.weapons.ProcDagger = { main = "Qutrub Knife", sub = empty }
-	sets.weapons.ProcSword = { main = "Wax Sword", sub = 'Qutrub Knife' }
+	sets.weapons.ProcSword = { main = "Fermion Sword", sub = 'Qutrub Knife' }
 	sets.weapons.ProcKatana = { main = "Trainee Burin", sub = empty }
 	sets.weapons.ProcGreatSword = { main = "Goujian", sub = empty }
 	sets.weapons.ProcScythe = { main = "Bronze Zaghnal", sub = empty }

@@ -41,7 +41,7 @@ function init_gear_sets()
     -- Precast sets to enhance JAs
 
     sets.precast.JA['Tabula Rasa'] = { legs = "Peda. Pants +3" }
-    sets.precast.JA['Enlightenment'] = { body = "Peda. Gown +3" }
+    sets.precast.JA['Enlightenment'] = { body = "Peda. Gown +4" }
     -- Fast cast sets for spells
 
     sets.precast.FC = {
@@ -51,7 +51,7 @@ function init_gear_sets()
         ear1 = "Etiolation Earring",
         ear2 = "Malignance Earring",
         body = "Zendik Robe",
-        hands = "Acad. Bracers +3",
+        hands = "Acad. Bracers +4",
         ring1 = "Kishar Ring",
         -- ring2 = "Lebeche Ring",
         -- back = "Perimede Cape",
@@ -221,7 +221,7 @@ function init_gear_sets()
         neck = "Incanter's Torque",
         ear1 = "Andoaa Earring",
         -- ear2 = "Gifted Earring",
-        body= "Peda. Gown +3",
+        body= "Peda. Gown +4",
         hands="Arbatel Bracers +3",
         ring1 = "Stikini Ring +1",
         ring2 = "Stikini Ring +1",
@@ -283,7 +283,7 @@ function init_gear_sets()
         main = "Daybreak",
         sub = "Ammurapi Shield",
         ammo = "Pemphredo Tathlum",
-        head = "Acad. Mortar. +3",
+        head = "Acad. Mortar. +4",
         neck = "Erra Pendant",
         ear1 = "Regal Earring",
         ear2 = "Malignance Earring",
@@ -292,7 +292,7 @@ function init_gear_sets()
         ring1 = "Kishar Ring",
         ring2 = "Stikini Ring +1",
         back = gear.nuke_jse_back,
-        -- waist = "Obstin. Sash",
+        waist = "Obstin. Sash",
         legs = "Chironic Hose",
         -- feet = "Uk'uxkaj Boots"
     }
@@ -300,7 +300,7 @@ function init_gear_sets()
     sets.midcast['Enfeebling Magic'].Resistant =set_combine(sets.midcast['Enfeebling Magic'], {
         ear2 = "Digni. Earring",
         -- body = "Chironic Doublet",
-        hands = "Acad. Bracers +3",
+        hands = "Acad. Bracers +4",
         ring1 = "Metamor. Ring +1",
         ring2 = "Stikini Ring +1",
         back = gear.nuke_jse_back,
@@ -346,7 +346,7 @@ function init_gear_sets()
         ear1 = "Regal Earring",
         ear2 = "Malignance Earring",
         -- body = "Chironic Doublet",
-        hands = "Acad. Bracers +3",
+        hands = "Acad. Bracers +4",
         ring1 = "Stikini Ring +1",
         ring2 = "Stikini Ring +1",
         back = gear.nuke_jse_back,
@@ -400,7 +400,7 @@ function init_gear_sets()
         ear1 = "Regal Earring",
         ear2 = "Malignance Earring",
         -- body = "Chironic Doublet",
-        hands = "Acad. Bracers +3",
+        hands = "Acad. Bracers +4",
         -- ring1 = "Evanescence Ring",
         ring2 = "Archon Ring",
         back = gear.nuke_jse_back,
@@ -429,8 +429,8 @@ function init_gear_sets()
         neck = "Voltsurge Torque",
         -- ear1 = "Enchntr. Earring +1",
         ear2 = "Malignance Earring",
-        -- body = "Zendik Robe",
-        hands = "Acad. Bracers +3",
+        body = "Zendik Robe",
+        hands = "Acad. Bracers +4",
         ring1 = "Metamor. Ring +1",
         ring2 = "Stikini Ring +1",
         back = gear.nuke_jse_back,
@@ -443,12 +443,12 @@ function init_gear_sets()
         main = "Daybreak",
         sub = "Ammurapi Shield",
         ammo = "Pemphredo Tathlum",
-        head = "Acad. Mortar. +3",
+        head = "Acad. Mortar. +4",
         neck = "Erra Pendant",
         ear1 = "Regal Earring",
         ear2 = "Malignance Earring",
-        -- body = "Zendik Robe",
-        hands = "Acad. Bracers +3",
+        body = "Zendik Robe",
+        hands = "Acad. Bracers +4",
         ring1 = "Metamor. Ring +1",
         ring2 = "Stikini Ring +1",
         back = gear.nuke_jse_back,
@@ -703,7 +703,7 @@ function init_gear_sets()
         ear1 = "Regal Earring",
         ear2 = "Malignance Earring",
         -- body = "Twilight Cloak",
-        hands = "Acad. Bracers +3",
+        hands = "Acad. Bracers +4",
         ring1 = "Metamor. Ring +1",
         ring2 = "Stikini Ring +1",
         back = gear.nuke_jse_back,
@@ -732,7 +732,7 @@ function init_gear_sets()
         body = "Amalric Doublet +1",
         -- hands = gear.merlinic_refresh_hands,
         ring1 = "Defending Ring",
-        -- ring2 = "Dark Ring",
+        -- ring2 = "Murky Ring",
         -- back = "Umbra Cape",
         waist = "Fucho-no-obi",
         legs = "Assid. Pants +1",
@@ -770,7 +770,7 @@ function init_gear_sets()
         -- body = "Vrikodara Jupon",
         hands = "Gende. Gages +1",
         ring1 = "Defending Ring",
-        -- ring2 = "Dark Ring",
+        -- ring2 = "Murky Ring",
         -- back = "Umbra Cape",
         -- waist = "Carrier's Sash",
         legs = "Nyame Flanchard",
@@ -792,7 +792,7 @@ function init_gear_sets()
         body = "Jhakri Robe +1",
         -- hands = gear.merlinic_refresh_hands,
         ring1 = "Defending Ring",
-        -- ring2 = "Dark Ring",
+        -- ring2 = "Murky Ring",
         -- back = "Umbra Cape",
         -- waist = "Carrier's Sash",
         legs = "Assid. Pants +1",
@@ -813,7 +813,7 @@ function init_gear_sets()
         -- body = "Mallquis Saio +2",
         hands = "Gende. Gages +1",
         ring1 = "Defending Ring",
-        -- ring2 = "Dark Ring",
+        -- ring2 = "Murky Ring",
         -- back = "Umbra Cape",
         waist = "Carrier's Sash",
         legs = "Nyame Flanchard",
@@ -832,7 +832,7 @@ function init_gear_sets()
         -- body = "Mallquis Saio +2",
         hands = "Gende. Gages +1",
         ring1 = "Defending Ring",
-        -- ring2 = "Dark Ring",
+        -- ring2 = "Murky Ring",
         -- back = "Umbra Cape",
         -- waist = "Carrier's Sash",
         legs = "Nyame Flanchard",
@@ -901,7 +901,7 @@ function init_gear_sets()
         -- body = "Vrikodara Jupon",
         hands = "Gende. Gages +1",
         ring1 = "Defending Ring",
-        -- ring2 = "Dark Ring",
+        -- ring2 = "Murky Ring",
         -- back = "Umbra Cape",
         -- waist = "Carrier's Sash",
         legs = "Nyame Flanchard",
@@ -960,10 +960,10 @@ function init_gear_sets()
     }
 
     sets.buff.Doom = set_combine(sets.buff.Doom, {})
-    sets.buff['Light Arts'] = { legs="Acad. Pants +3" } 
-    sets.buff['Dark Arts'] = { body="Acad. Gown +3" }  
+    sets.buff['Light Arts'] = { legs="Acad. Pants +4" } 
+    sets.buff['Dark Arts'] = { body="Acad. Gown +4" }  
 
-    sets.buff.Sublimation = { head = "Acad. Mortar. +3", waist = "Embla Sash" }
+    sets.buff.Sublimation = { head = "Acad. Mortar. +4", waist = "Embla Sash" }
     sets.buff.DTSublimation = { waist = "Embla Sash" }
 
     -- Weapons sets

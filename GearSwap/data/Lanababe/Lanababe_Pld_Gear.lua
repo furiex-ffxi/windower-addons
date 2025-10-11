@@ -55,8 +55,8 @@ function init_gear_sets()
         ammo="Sapience Orb",
         head={ name="Loess Barbuta +1", augments={'Path: A',}},
         body="Rev. Surcoat +4",
-        hands={ name="Cab. Gauntlets +3", augments={'Enhances "Chivalry" effect',}},
-        legs={ name="Cab. Breeches +3", augments={'Enhances "Invincible" effect',}},
+        hands={ name="Cab. Gauntlets +4", augments={'Enhances "Chivalry" effect',}},
+        legs={ name="Cab. Breeches +4", augments={'Enhances "Invincible" effect',}},
         feet="Chev. Sabatons +3",
         neck="Moonlight Necklace",
         waist="Creed Baudrier",
@@ -106,19 +106,19 @@ function init_gear_sets()
             
     -- Precast sets to enhance JAs
     sets.precast.JA['Invincible'] = set_combine(sets.Enmity,{
-        legs={ name="Cab. Breeches +3", augments={'Enhances "Invincible" effect',}},})
+        legs={ name="Cab. Breeches +4", augments={'Enhances "Invincible" effect',}},})
     sets.precast.JA['Holy Circle'] = set_combine(sets.Enmity,{
         sub = "Diamond Aspis",
         feet="Rev. Leggings +4",})
     sets.precast.JA['Sentinel'] = set_combine(sets.Enmity,{
         sub = "Diamond Aspis",
-        feet={ name="Cab. Leggings +3", augments={'Enhances "Guardian" effect',}},})
+        feet={ name="Cab. Leggings +4", augments={'Enhances "Guardian" effect',}},})
     sets.precast.JA['Rampart'] = set_combine(sets.Enmity,{
         sub = "Diamond Aspis",
-        head={ name="Cab. Coronet +3", augments={'Enhances "Iron Will" effect',}},}) 
+        head={ name="Cab. Coronet +4", augments={'Enhances "Iron Will" effect',}},}) 
     sets.precast.JA['Fealty'] = set_combine(sets.Enmity,{
         sub = "Diamond Aspis",
-        body={ name="Cab. Surcoat +3", augments={'Enhances "Fealty" effect',}},})
+        body={ name="Cab. Surcoat +4", augments={'Enhances "Fealty" effect',}},})
     sets.precast.JA['Divine Emblem'] = set_combine(sets.Enmity,{ 
         sub = "Diamond Aspis",
         feet="Chev. Sabatons +3", })
@@ -128,25 +128,25 @@ function init_gear_sets()
     sets.precast.JA['Cover'] = set_combine(sets.Enmity, {
         sub = "Diamond Aspis",
         head="Rev. Coronet +4",
-        body={ name="Cab. Surcoat +3", augments={'Enhances "Fealty" effect',}},}
+        body={ name="Cab. Surcoat +4", augments={'Enhances "Fealty" effect',}},}
     ) 
 	
-    sets.precast.JA['Invincible'].DT = set_combine(sets.Enmity.DT,{legs={ name="Cab. Breeches +3", augments={'Enhances "Invincible" effect',}},})
+    sets.precast.JA['Invincible'].DT = set_combine(sets.Enmity.DT,{legs={ name="Cab. Breeches +4", augments={'Enhances "Invincible" effect',}},})
     sets.precast.JA['Holy Circle'].DT = set_combine(sets.Enmity.DT,{
         sub = "Diamond Aspis",
         feet="Rev. Leggings +4",
     })
     sets.precast.JA['Sentinel'].DT = set_combine(sets.Enmity.DT,{
         sub = "Diamond Aspis",
-        feet={ name="Cab. Leggings +3", augments={'Enhances "Guardian" effect',}},
+        feet={ name="Cab. Leggings +4", augments={'Enhances "Guardian" effect',}},
     })
     sets.precast.JA['Rampart'].DT = set_combine(sets.Enmity.DT,{
         sub = "Diamond Aspis",
-        head={ name="Cab. Coronet +3", augments={'Enhances "Iron Will" effect',}},
+        head={ name="Cab. Coronet +4", augments={'Enhances "Iron Will" effect',}},
     })
     sets.precast.JA['Fealty'].DT = set_combine(sets.Enmity.DT,{
         sub = "Diamond Aspis",
-        body={ name="Cab. Surcoat +3", augments={'Enhances "Fealty" effect',}},
+        body={ name="Cab. Surcoat +4", augments={'Enhances "Fealty" effect',}},
     })
     sets.precast.JA['Divine Emblem'].DT = set_combine(sets.Enmity.DT,{
         sub = "Diamond Aspis",
@@ -158,7 +158,7 @@ function init_gear_sets()
     sets.precast.JA['Cover'].DT = set_combine(sets.Enmity.DT, {
         sub = "Diamond Aspis",
         head="Rev. Coronet +4",
-        body={ name="Cab. Surcoat +3", augments={'Enhances "Fealty" effect',}},
+        body={ name="Cab. Surcoat +4", augments={'Enhances "Fealty" effect',}},
     })
 	
     -- add mnd for Chivalry
@@ -166,7 +166,7 @@ function init_gear_sets()
         ammo="Staunch Tathlum +1",
         head={ name="Nyame Helm", augments={'Path: B',}},
         body={ name="Nyame Mail", augments={'Path: B',}},
-        hands={ name="Cab. Gauntlets +3", augments={'Enhances "Chivalry" effect',}},
+        hands={ name="Cab. Gauntlets +4", augments={'Enhances "Chivalry" effect',}},
         legs={ name="Nyame Flanchard", augments={'Path: B',}},
         feet={ name="Nyame Sollerets", augments={'Path: B',}},
         neck={ name="Kgt. Beads +2", augments={'Path: A',}},
@@ -182,7 +182,7 @@ function init_gear_sets()
         ammo="Staunch Tathlum +1",
         head={ name="Nyame Helm", augments={'Path: B',}},
         body={ name="Nyame Mail", augments={'Path: B',}},
-        hands={ name="Cab. Gauntlets +3", augments={'Enhances "Chivalry" effect',}},
+        hands={ name="Cab. Gauntlets +4", augments={'Enhances "Chivalry" effect',}},
         legs={ name="Nyame Flanchard", augments={'Path: B',}},
         feet={ name="Nyame Sollerets", augments={'Path: B',}},
         neck={ name="Kgt. Beads +2", augments={'Path: A',}},
@@ -194,7 +194,7 @@ function init_gear_sets()
         back=gear.jse_cure_back,
     }
 
-	sets.precast.JA['Shield Bash'] = set_combine(sets.Enmity, {hands="Cab. Gauntlets +3"})		
+	sets.precast.JA['Shield Bash'] = set_combine(sets.Enmity, {hands="Cab. Gauntlets +4"})		
     sets.precast.JA['Provoke'] = set_combine(sets.Enmity, {})
 	sets.precast.JA['Warcry'] = set_combine(sets.Enmity, {})
 	sets.precast.JA['Palisade'] = set_combine(sets.Enmity, {})
@@ -203,7 +203,7 @@ function init_gear_sets()
 	sets.precast.JA['Berserk'] = set_combine(sets.Enmity, {})
 	sets.precast.JA['Aggressor'] = set_combine(sets.Enmity, {})
 	
-	sets.precast.JA['Shield Bash'].DT = set_combine(sets.Enmity.DT, {hands="Cab. Gauntlets +3"})		
+	sets.precast.JA['Shield Bash'].DT = set_combine(sets.Enmity.DT, {hands="Cab. Gauntlets +4"})		
     sets.precast.JA['Provoke'].DT = set_combine(sets.Enmity.DT, {})
 	sets.precast.JA['Warcry'].DT = set_combine(sets.Enmity.DT, {})
 	sets.precast.JA['Palisade'].DT = set_combine(sets.Enmity.DT, {})
@@ -375,6 +375,8 @@ function init_gear_sets()
         back=gear.jse_fc_back,
     }
 
+    sets.midcast.Sleep = set_combine(sets.Enmity, {})
+	sets.midcast.Sleep.SIRD = set_combine(sets.Enmity.SIRD, {})
     sets.midcast.Flash = set_combine(sets.Enmity, {})
 	sets.midcast.Flash.SIRD = set_combine(sets.Enmity.SIRD, {})
     sets.midcast.Stun = set_combine(sets.Enmity, {})
@@ -393,7 +395,7 @@ function init_gear_sets()
         body="Sakpata's Breastplate",
         -- body="Adamantite Armor",
         hands="Regal Gauntlets",
-        legs={ name="Cab. Breeches +3", augments={'Enhances "Invincible" effect',}},
+        legs={ name="Cab. Breeches +4", augments={'Enhances "Invincible" effect',}},
         feet="Odyssean Greaves",
         neck="Moonlight Necklace",
         waist="Plat. Mog. Belt",
@@ -627,10 +629,11 @@ function init_gear_sets()
 
     -- Idle sets
     sets.idle = {
-        main={ name="Moralltach", augments={'Path: C',},priority=1},
+        main = "Malignance Sword",
+        -- main={ name="Moralltach", augments={'Path: C',},priority=1},
         sub="Duban",
         ammo="Staunch Tathlum +1",
-        head = "Sakpata's Helm",
+        head = "Null Masque",
         -- head={ name="Odyssean Helm", augments={'Mag. Acc.+3','"Mag.Atk.Bns."+20','"Refresh"+2','Accuracy+1 Attack+1',}},
         body={ name="Souv. Cuirass +1", augments={'VIT+12','Attack+25','"Refresh"+3',}},
         hands={ name="Regal Gauntlets",priority=1},
@@ -735,6 +738,22 @@ function init_gear_sets()
 	--------------------------------------
 	-- Engaged sets
 	--------------------------------------
+
+    sets.engaged = {
+        ammo="Coiste Bodhar",
+        head={ name="Sakpata's Helm", augments={'Path: A',}},
+        body={ name="Sakpata's Plate", augments={'Path: A',}},
+        hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
+        legs={ name="Sakpata's Cuisses", augments={'Path: A',}},
+        feet={ name="Sakpata's Leggings", augments={'Path: A',}},
+        neck="Combatant's Torque",
+        waist="Sailfi Belt +1",
+        left_ear="Telos Earring",
+        right_ear="Dedition Earring",
+        left_ring="Moonlight Ring",
+        right_ring="Petrov Ring",
+        back="Null Shawl",
+    }
     
 	sets.engaged.Tank = {
         main="Burtgang",
@@ -780,7 +799,7 @@ function init_gear_sets()
 	--------------------------------------
 	sets.buff.Doom = set_combine(sets.buff.Doom, {})
 	sets.buff.Sleep = {neck="Vim Torque +1"}
-    sets.buff.Cover = {body="Cab. Surcoat +3"}
+    sets.buff.Cover = {body="Cab. Surcoat +4"}
 end
 
 -- Select default macro book on initial load or subjob change.

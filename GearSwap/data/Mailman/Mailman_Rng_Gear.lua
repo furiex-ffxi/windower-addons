@@ -5,10 +5,10 @@ function user_job_setup()
     state.RangedMode:options('Normal', 'Acc', 'Fodder')
     state.WeaponskillMode:options('Match', 'Normal', 'Acc')
     state.IdleMode:options('Normal', 'PDT')
-    state.Weapons:options('Default', 'Anni', 'DualEviscerationWeapons', 'DualGastra', 'DualAnni', 'DualWeapons', 'DualSavageWeapons', 'DualSavageKraken', 'DualMagicWeapons',
+    state.Weapons:options('Default', 'Yoichi', 'Anni', 'DualEviscerationWeapons', 'DualGastra', 'DualYoichi', 'DualAnni', 'DualWeapons', 'DualSavageWeapons', 'DualSavageKraken', 'DualMagicWeapons',
         'DualMalevolence', 'DualFermion')
 
-    Ikenga_vest_bonus = 100  -- It is 190 at R20. Uncomment if you need to manually adjust because you are using below R20
+    Ikenga_vest_bonus = 180  -- It is 190 at R20. Uncomment if you need to manually adjust because you are using below R20
 
     WeaponType = {
         ['Fail-Not'] = "Bow",
@@ -246,7 +246,7 @@ function init_gear_sets()
         ear2 = "Friomisi Earring",
         body = "Nyame Mail",
         hands = "Nyame Gauntlets",
-        ring1 = "Regal Ring",
+        ring1 = "Weatherspoon Ring",
         ring2 = "Dingir Ring",
         back = gear.wsd_ranger_jse_back,
         waist = "Eschan Stone",
@@ -392,7 +392,7 @@ function init_gear_sets()
         body = "Malignance Tabard",
         hands = "Malignance Gloves",
         ring1 = "Defending Ring",
-        ring2 = "Dark Ring",
+        ring2 = "Murky Ring",
         back = "Moonlight Cape",
         waist = "Carrier's Sash",
         legs = "Malignance Tights",
@@ -408,7 +408,7 @@ function init_gear_sets()
         body = "Malignance Tabard",
         hands = "Malignance Gloves",
         ring1 = "Defending Ring",
-        ring2 = "Dark Ring",
+        ring2 = "Murky Ring",
         back = "Moonlight Cape",
         waist = "Flume Belt +1",
         legs = "Malignance Tights",
@@ -467,6 +467,12 @@ function init_gear_sets()
         range = "Annihilator",
         ammo = "Chrono Bullet"
     }    
+    sets.weapons.Yoichi = {
+        main = "Kustawi +1",
+        sub = "Nusku Shield",
+        range = "Yoichinoyumi",
+        ammo = "Chrono Arrow"
+    }
     sets.weapons.DualWeapons = {
         main = "Kustawi +1",
         sub = "Gleti's Knife",
@@ -485,6 +491,12 @@ function init_gear_sets()
         range = "Annihilator",
         ammo = "Chrono Bullet"
     }    
+    sets.weapons.DualYoichi = {
+        main = "Perun +1",
+        sub = "Kraken Club",
+        range = "Yoichinoyumi",
+        ammo = "Chrono Arrow"
+    }
     sets.weapons.DualSavageWeapons = {
         main = "Naegling",
         sub = "Gleti's Knife",

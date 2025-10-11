@@ -9,7 +9,7 @@ function user_job_setup()
 	state.IdleMode:options('Normal', 'PDT', 'Refresh', 'Reraise')
 	state.ExtraMeleeMode = M { ['description'] = 'Extra Melee Mode', 'None' }
 	state.Passive = M { ['description'] = 'Passive Mode', 'None', 'Twilight' }
-	state.Weapons:options('None', 'Naegling', 'Loxotic', 'Chango', 'ShiningOne', 'DualWeapons', 'Greatsword', 'ProcSword', 'ProcDagger', 'ProcKatana', 'ProcGreatSword',
+	state.Weapons:options('None', 'Naegling', 'Loxotic', 'Ikenga','Chango', 'ShiningOne', 'DualWeapons', 'Greatsword', 'ProcSword', 'ProcDagger', 'ProcKatana', 'ProcGreatSword',
 	'ProcScythe', 'ProcPolearm', 'ProcGreatKatana', 'ProcClub', 'ProcStaff')
 
 	gear.da_jse_back = { name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
@@ -23,7 +23,7 @@ function user_job_setup()
 	send_command('bind @` gs c cycle SkillchainMode')
 	send_command('bind !r gs c set skipprocweapons true;gs c reset weaponskillmode;gs c set weapons none')
 	send_command('bind !q gs c set skipprocweapons false;gs c set weapons ProcSword;gs c set weaponskillmode proc')
-	--Ikenga_axe_bonus = 300  -- It is 300 at R25. Uncomment if you need to manually adjust because you are using below R25 or above
+	--sa_axe_bonus = 300  -- It is 300 at R25. Uncomment if you need to manually adjust because you are using below R25 or above
 
 	select_default_macro_book()
 end
@@ -51,31 +51,31 @@ function init_gear_sets()
 		sub = "Diamond Aspis",
 		back = gear.da_jse_back,
 		body="Pumm. Lorica +4", 
-        feet="Agoge Calligae +3"
+        feet="Agoge Calligae +4"
 	}
 	sets.precast.JA['Warcry'] = {
 		sub = "Diamond Aspis",
-        head="Agoge Mask +3"
+        head="Agoge Mask +4"
 	}
 	sets.precast.JA['Defender'] = {
 		sub = "Diamond Aspis",
-		hands="Agoge Mufflers +3"
+		hands="Agoge Mufflers +4"
 	}
 	sets.precast.JA['Aggressor'] = {
 		sub = "Diamond Aspis",
-		body="Agoge Lorica +3",
+		body="Agoge Lorica +4",
 		head="Pummeler's Mask +3"
 	}
 	sets.precast.JA['Mighty Strikes'] = {
-		hands="Agoge Mufflers +3"
+		hands="Agoge Mufflers +4"
 	}
 	sets.precast.JA["Warrior's Charge"] = {
 		sub = "Diamond Aspis",
-		legs={ name="Agoge Cuisses +3", augments={'Enhances "Warrior\'s Charge" effect',}}
+		legs={ name="Agoge Cuisses +4", augments={'Enhances "Warrior\'s Charge" effect',}}
 	}
 	sets.precast.JA['Tomahawk'] = { 
 		ammo = "Thr. Tomahawk",
-		feet="Agoge Calligae +3",
+		feet="Agoge Calligae +4",
 	}
 	sets.precast.JA['Retaliation'] = {
 		sub = "Diamond Aspis",
@@ -164,7 +164,7 @@ function init_gear_sets()
 	-- Default set for any weaponskill that isn't any more specifically defined
 	sets.precast.WS = {
         ammo = "Knobkierrie",
-        head = "Agoge Mask +3",
+        head = "Agoge Mask +4",
 		neck = "War. Beads +2",
         hands =	"Boii Mufflers +3",
         body = "Pumm. Lorica +4",
@@ -233,6 +233,33 @@ function init_gear_sets()
 		neck = "Bathy Choker +1",
 	})
 
+	sets.precast.WS['Calamity'] = set_combine(sets.precast.WS, {
+		head = sets.Nyame.Head,
+		legs = "Boii Cuisses +3",
+	})
+	sets.precast.WS['Calamity'].SomeAcc = set_combine(sets.precast.WS.SomeAcc, {
+		head = sets.Nyame.Head,
+		legs = "Boii Cuisses +3",
+	})
+	sets.precast.WS['Calamity'].Acc = set_combine(sets.precast.WS.Acc, {
+		head = sets.Nyame.Head,
+		legs = "Boii Cuisses +3",
+	})
+	sets.precast.WS['Calamity'].FullAcc = set_combine(sets.precast.WS.FullAcc, {
+		head = sets.Nyame.Head,
+		legs = "Boii Cuisses +3",
+	})
+	sets.precast.WS['Calamity'].Fodder = set_combine(sets.precast.WS.Fodder, {
+		head = sets.Nyame.Head,
+		legs = "Boii Cuisses +3",
+	})
+	sets.precast.WS['Calamity'].Subtle = set_combine(sets.precast.WS, {
+		body = "Dagon Breast.",
+		left_ring = "Chirich Ring +1",
+		right_ring = "Chirich Ring +1",
+		neck = "Bathy Choker +1",
+	})
+
 	sets.precast.WS['Upheaval'] = set_combine(sets.precast.WS, {
 		back = gear.wsd_vit_jse_back,
 		legs = "Boii Cuisses +3",
@@ -283,7 +310,7 @@ function init_gear_sets()
 	sets.precast.WS['Impulse Drive'] = set_combine(sets.precast.WS, {
 		ammo = "Yetshila +1",
 		neck = "War. Beads +2",
-		head = "Agoge Mask +3",
+		head = "Agoge Mask +4",
 		body = "Sakpata's Plate",
 		hands = "Boii Mufflers +3",
 		legs = "Boii Cuisses +3",
@@ -509,13 +536,13 @@ function init_gear_sets()
         left_ring="Moonlight Ring",
     })
 	sets.engaged.SomeAcc = set_combine(sets.engaged, {
-        body="Agoge Lorica +3",
+        body="Agoge Lorica +4",
     })
 	sets.engaged.Acc = set_combine(sets.engaged.SomeAcc, {
-        body="Agoge Lorica +3",
+        body="Agoge Lorica +4",
     })
 	sets.engaged.FullAcc = set_combine(sets.engaged.Acc, {
-        body="Agoge Lorica +3",
+        body="Agoge Lorica +4",
 		ammo="Ginsen",
     })
 	sets.engaged.Fodder = set_combine(sets.engaged, {
@@ -1564,6 +1591,7 @@ function init_gear_sets()
 	sets.Skillchain = { neck="Warder's Charm +1" }
 
 	-- Weapons sets
+	sets.weapons.Ikenga = { main = "Ikenga's Axe", sub = "Blurred Shield +1" }
 	sets.weapons.ShiningOne = { main = "Shining One", sub = "Utu Grip" }
 	sets.weapons.Naegling = { main = "Naegling", sub = "Blurred Shield +1" }
 	sets.weapons.Loxotic = { main = "Loxotic Mace +1", sub = "Blurred Shield +1" }

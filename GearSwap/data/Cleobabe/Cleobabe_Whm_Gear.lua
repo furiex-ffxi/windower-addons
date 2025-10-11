@@ -819,7 +819,7 @@ function init_gear_sets()
 		body = gear.empy.body,
 		hands = gear.chironic_refresh_hands,
 		ring1 = "Defending Ring",
-		ring2 = "Dark Ring",
+		ring2 = "Murky Ring",
 		back = "Umbra Cape",
 		waist = "Fucho-no-obi",
 		legs = "Assid. Pants +1",

@@ -82,7 +82,7 @@ function init_gear_sets()
 		ammo = "Sapience Orb", -- 2
 		head = "Halitus Helm", -- 8
 		neck = "Moonlight Necklace", -- 15
-		ear1 = "Rimeice Earring", -- 5
+		ear1 = "Tuisto Earring",
 		ear2 = "Cryptic Earring", -- 4
 		body = "Emet Harness +1", -- 10
 		hands = "Kurys Gloves", -- 9
@@ -92,7 +92,7 @@ function init_gear_sets()
 		waist = "Goading Belt", -- 5
 		legs = gear.empy.Legs, -- 13
 		feet = gear.empy.Feet -- 8
-	} -- +127 enmity
+	} -- +122 enmity
 
 	sets.Enmity.SIRD =
 		set_combine(
@@ -102,15 +102,15 @@ function init_gear_sets()
 			head = gear.empy.Head, -- 20
 			neck = "Moonlight Necklace", -- 15
 			body = "Adamantite Armor",
-			hands = "Rawhide Gloves", -- 15
-			ring1 = "Defending Ring",
+			hands = "Regal Gauntlets", -- 10
+			ring1 = "Murky Ring", -- 3
 			ring2 = "Moonlight Ring",
 			back = gear.sird_jse_back, -- 10
 			waist = "Audumbla Sash", -- 10
 			legs = "Carmine Cuisses +1", -- 20
 			feet = gear.empy.Feet
 		}
-	) -- 101 gear + 10 merit, 54 DT
+	) -- 99 gear + 10 merit, 54 DT
 
 	sets.Enmity.DT = {
 		ammo = "Staunch Tathlum +1",
@@ -621,9 +621,9 @@ function init_gear_sets()
 		main = "Epeolatry",
 		sub = "Utu Grip",
 		ammo = "Brigantia Pebble",
-		head = "Nyame Helm",
+		head = "Null Masque",
 		neck = "Warder's Charm +1",
-		ear1 = "Ethereal Earring",
+		ear1 = "Alabaster Earring",
 		ear2 = "Erilaz Earring +2",
 		body = gear.af.Body,
 		hands = "Regal Gauntlets",
@@ -854,7 +854,7 @@ function init_gear_sets()
 		body = gear.empy.Body,
 		hands = gear.empy.Hands,
 		ring1 = "Shadow Ring",
-		ring2 = "Defending Ring",
+		ring2 = "Murky Ring",
 		back = gear.enmity_jse_back,
 		waist = "Engraved Belt",
 		legs = gear.empy.Legs,

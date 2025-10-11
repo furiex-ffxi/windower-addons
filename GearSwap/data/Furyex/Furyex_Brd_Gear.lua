@@ -340,7 +340,7 @@ function init_gear_sets()
 		waist = "Flume Belt +1",
 		ear1 = {name = "Odnowa Earring +1", augments = {"Path: A"}},
 		ear2 = "Genmei Earring",
-		ring1 = "Defending Ring",
+		ring1 = "Murky Ring",
 		ring2 = {name = "Gelatinous Ring +1", augments = {"Path: A"}},
 		back = gear.tp_jse_back
 	}
@@ -607,23 +607,7 @@ function init_gear_sets()
 	------
 
 	-- Resting sets
-	sets.resting = {
-		--main="Chatoyant Staff",
-		--sub="Umbra Strap",
-		ammo = "Staunch Tathlum +1",
-		--head=empty,
-		--neck="Loricate Torque +1",
-		--ear1="Etiolation Earring",
-		--ear2="Ethereal Earring",
-		--body="Respite Cloak",
-		--hands=gear.chironic_refresh_hands,
-		--ring1="Defending Ring",
-		--ring2="Dark Ring",
-		--back="Umbra Cape",
-		waist = "Flume Belt +1"
-		--legs="Assid. Pants +1",
-		--feet=gear.chironic_refresh_feet
-	}
+	sets.resting = {}
 
 	sets.idle = {
 		range = "Loughnashade",
@@ -654,7 +638,7 @@ function init_gear_sets()
 			waist = "Plat. Mog. Belt",
 			ear1 = "Eabani Earring",
 			ear2 = "Etiolation Earring",
-			ring1 = "Defending Ring",
+			ring1 = "Murky Ring",
 			ring2 = "Stikini Ring +1",
 			back = gear.tp_jse_back
 		}
@@ -670,7 +654,7 @@ function init_gear_sets()
 		ear2 = "Sanare Earring",
 		body = "Nyame Mail",
 		hands = "Nyame Gauntlets",
-		ring1 = "Defending Ring",
+		ring1 = "Murky Ring",
 		ring2 = "Shadow Ring",
 		back = gear.idle_jse_back,
 		waist = "Carrier's Sash",
@@ -688,7 +672,7 @@ function init_gear_sets()
 		ear2 = "Sanare Earring",
 		body = "Adamantite Armor",
 		hands = "Nyame Gauntlets",
-		ring1 = "Defending Ring",
+		ring1 = "Murky Ring",
 		ring2 = "Shadow Ring",
 		back = gear.idle_jse_back,
 		waist = "Carrier's Sash",
@@ -730,7 +714,7 @@ function init_gear_sets()
 		ear2 = "Sanare Earring",
 		body = "Nyame Mail",
 		hands = "Nyame Gauntlets",
-		ring1 = "Defending Ring",
+		ring1 = "Murky Ring",
 		ring2 = "Shadow Ring",
 		back = "Moonlight Cape",
 		waist = "Carrier's Sash",
@@ -748,7 +732,7 @@ function init_gear_sets()
 		ear2 = "Sanare Earring",
 		body = "Nyame Mail",
 		hands = "Nyame Gauntlets",
-		ring1 = "Defending Ring",
+		ring1 = "Murky Ring",
 		ring2 = "Shadow Ring",
 		back = "Moonlight Cape",
 		waist = "Carrier's Sash",

@@ -42,16 +42,16 @@ function init_gear_sets()
 	-- Start defining the sets
 	--------------------------------------
 	gear.af = {
-		head = "Theophany Cap +3",
-		body = "Theo. Bliaut +3",
-		hands = "Theophany Mitts +3",
-		legs = "Th. Pant. +3",
-		feet = "Theo. Duckbills +3"
+		head = "Theo. Cap +4",
+		body = "Theo. Bliaut +4",
+		hands = "Theo. Mitts +4",
+		legs = "Theo. Pant. +4",
+		feet = "Theo. Duckbills +4"
 	}
 
 	gear.relic = {
-		head = "Piety Cap +3",
-		body = "Piety Bliaut +3",
+		head = "Piety Cap +4",
+		body = "Piety Bliaut +4",
 		hands = "Piety Mitts +3",
 		legs = "Piety Pantaln. +3",
 		feet = "Piety Duckbills +3"
@@ -824,7 +824,7 @@ function init_gear_sets()
 		body = gear.empy.body,
 		hands = gear.chironic_refresh_hands,
 		ring1 = "Defending Ring",
-		ring2 = "Dark Ring",
+		ring2 = "Murky Ring",
 		back = "Umbra Cape",
 		waist = "Fucho-no-obi",
 		legs = "Assid. Pants +1",
