@@ -240,8 +240,7 @@ function init_gear_sets()
 	-- Weaponskill sets
 	-- Default set for any weaponskill that isn't any more specifically defined
 	sets.precast.WS = {
-		-- head = sets.Nyame.Head,
-		head = RELIC.Head,
+		head = sets.Nyame.Head,
 		ammo = "Oshasha's Treatise",
 		neck = "Rep. Plat. Medal",
 		body = sets.Nyame.Body,
@@ -275,6 +274,12 @@ function init_gear_sets()
 
 	-- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
 	sets.precast.WS["Requiescat"] = set_combine(sets.precast.WS, {})
+
+	sets.precast.WS["Mercy Stroke"] = set_combine(sets.precast.WS, {
+		ammo = "Coiste Bodhar",
+		right_ear = "Ishvara Earring",
+		right_ring = "Sroda Ring",
+	})
 
 	sets.precast.WS["Chant Du Cygne"] =
 		set_combine(
@@ -1148,7 +1153,7 @@ function init_gear_sets()
 	sets.weapons.Naegling = {main = "Naegling", sub = "Ammurapi Shield", range = empty}
 	sets.weapons.Mandau = {main = "Mandau", sub = "Ammurapi Shield", range = empty}
 	sets.weapons.Bow = {main = "Naegling", sub = "Sacro Bulwark", range = "Ullr", ammo = "Beetle Arrow"}
-	sets.weapons.DualMandau = {main = "Mandau", sub = "Machaera +3", range = empty}
+	sets.weapons.DualMandau = {main = "Mandau", sub = "Gleti's Knife", range = empty}
 	sets.weapons.DualWeapons = {main = "Naegling", sub = "Machaera +3", range = empty}
 	sets.weapons.DualWeaponsAcc = {main = "Naegling", sub = "Ternion Dagger +1", range = empty}
 	sets.weapons.DualClubs = {main = "Maxentius", sub = "Machaera +3", range = empty}
