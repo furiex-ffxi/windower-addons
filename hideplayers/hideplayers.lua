@@ -1,6 +1,7 @@
 _addon.name = 'Hide Players'
 _addon.version = '0.1.0'
 _addon.author = 'Furiex'
+_addon.commands = {'hideplayers'}
 
 require('logger')
 local packets = require("packets")
