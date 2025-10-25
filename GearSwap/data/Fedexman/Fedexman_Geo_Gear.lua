@@ -64,9 +64,9 @@ function init_gear_sets()
 	relic = {}
 	relic.Head = "Bagua Galero +4"
 	relic.Body = "Bagua Tunic +4"
-	relic.Hands = "Bagua Mitaines +3"
-	relic.Legs = "Bagua Pants +3"
-	relic.Feet = "Bagua Sandals +3"
+	relic.Hands = "Bagua Mitaines +4"
+	relic.Legs = "Bagua Pants +4"
+	relic.Feet = "Bagua Sandals +4"
 
 	empy = {}
 	empy.Head = "Azimuth Hood +2"

@@ -52,9 +52,9 @@ function init_gear_sets()
 	gear.relic = {
 		head = "Piety Cap +4",
 		body = "Piety Bliaut +4",
-		hands = "Piety Mitts +3",
-		legs = "Piety Pantaln. +3",
-		feet = "Piety Duckbills +3"
+		hands = "Piety Mitts +4",
+		legs = "Piety Pantaln. +4",
+		feet = "Piety Duckbills +4"
 	}
 
 	gear.empy = {

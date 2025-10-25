@@ -282,7 +282,7 @@ function init_gear_sets()
             name = "Moonshade Earring"
         },
         right_ear = {
-            name = "Macu. Earring +1"
+            name = "Macu. Earring +2"
         },
         left_ring = "Epaminondas's Ring",
         right_ring = "Regal Ring",
@@ -329,7 +329,7 @@ function init_gear_sets()
                 name = "Moonshade Earring"
             },
             right_ear = {
-                name = "Macu. Earring +1"
+                name = "Macu. Earring +2"
             },
             left_ring = "Epaminondas's Ring",
             right_ring = "Regal Ring",
@@ -384,7 +384,7 @@ function init_gear_sets()
                 name = "Moonshade Earring"
             },
             right_ear = {
-                name = "Macu. Earring +1"
+                name = "Macu. Earring +2"
             },
             left_ring = "Epaminondas's Ring",
             right_ring = "Regal Ring",
@@ -437,7 +437,7 @@ function init_gear_sets()
                 name = "Moonshade Earring"
             },
             right_ear = {
-                name = "Macu. Earring +1"
+                name = "Macu. Earring +2"
             },
             left_ring = "Epaminondas's Ring",
             right_ring = "Regal Ring",
@@ -491,7 +491,7 @@ function init_gear_sets()
                 name = "Moonshade Earring"
             },
             right_ear = {
-                name = "Macu. Earring +1"
+                name = "Macu. Earring +2"
             },
             left_ring = "Epaminondas's Ring",
             right_ring = "Regal Ring",
@@ -544,7 +544,7 @@ function init_gear_sets()
                 name = "Moonshade Earring"
             },
             right_ear = {
-                name = "Macu. Earring +1"
+                name = "Macu. Earring +2"
             },
             left_ring = "Epaminondas's Ring",
             right_ring = "Regal Ring",
@@ -593,7 +593,7 @@ function init_gear_sets()
             waist = "Fotia Belt",
             left_ear = "Odr Earring",
             right_ear = {
-                name = "Macu. Earring +1"
+                name = "Macu. Earring +2"
             },
             left_ring = "Ilabrat Ring",
             right_ring = "Regal Ring",
@@ -637,7 +637,7 @@ function init_gear_sets()
             waist = "Fotia Belt",
             left_ear = "Sherida Earring",
             right_ear = {
-                name = "Macu. Earring +1"
+                name = "Macu. Earring +2"
             },
             left_ring = "Ilabrat Ring",
             right_ring = "Regal Ring",
@@ -685,9 +685,7 @@ function init_gear_sets()
             augments = {"Path: A"}
         },
         left_ear = "Moonshade Earring",
-        right_ear = {
-            name = "Maculele Earring +1"
-        },
+        right_ear = "Macu. Earring +2",
         left_ring = "Gere Ring",
         right_ring = "Epona's Ring",
         back = {
@@ -743,13 +741,13 @@ function init_gear_sets()
     sets.MaxTP = {
         left_ear = "Sherida Earring",
         right_ear = {
-            name = "Macu. Earring +1"
+            name = "Macu. Earring +2"
         }
     }
     sets.AccMaxTP = {
         left_ear = "Sherida Earring",
         right_ear = {
-            name = "Macu. Earring +1"
+            name = "Macu. Earring +2"
         }
     }
 
@@ -848,6 +846,7 @@ function init_gear_sets()
         {
             main = "Twashtar",
             sub = "Crepuscular Knife",
+            right_ear = "Macu. Earring +2"
         }
     )
 
@@ -915,7 +914,7 @@ function init_gear_sets()
             augments = {"Path: A"}
         },
         left_ear = "Sherida Earring",
-        right_ear = "Telos Earring",
+        right_ear = "Macu. Earring +2",
         left_ring = "Gere Ring",
         right_ring = "Lehko's Ring",
         back = {
@@ -943,7 +942,7 @@ function init_gear_sets()
             augments = {"Path: A"}
         },
         left_ear = "Sherida Earring",
-        right_ear = "Telos Earring",
+        right_ear = "Macu. Earring +2",
         left_ring = "Gere Ring",
         right_ring = "Lehko's Ring",
         back = {
@@ -1019,7 +1018,7 @@ function init_gear_sets()
             augments = {"Path: A"}
         },
         left_ear = "Sherida Earring",
-        right_ear = "Dedition Earring",
+        right_ear = "Macu. Earring +2",
         left_ring = "Chirich Ring +1",
         right_ring = "Chirich Ring +1",
         back = {

@@ -530,7 +530,7 @@ function init_gear_sets()
 		neck = "Bagua Charm +2",
 		ear1 = "Odnowa Earring +1",
 		ear2 = "Azimuth Earring +2",
-		head = "Null Mask",
+		head = "Null Masque",
 		body = empy.Body,
 		hands = relic.Hands,
 		legs = sets.Nyame.Legs,

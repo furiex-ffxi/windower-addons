@@ -40,7 +40,7 @@ function init_gear_sets()
 
     -- Precast sets to enhance JAs
 
-    sets.precast.JA['Tabula Rasa'] = { legs = "Peda. Pants +3" }
+    sets.precast.JA['Tabula Rasa'] = { legs = "Peda. Pants +4" }
     sets.precast.JA['Enlightenment'] = { body = "Peda. Gown +4" }
     -- Fast cast sets for spells
 
@@ -263,7 +263,7 @@ function init_gear_sets()
     })
 
     sets.midcast.Storm = set_combine(sets.midcast['Enhancing Magic'], { 
-        feet = "Peda. Loafers +3" 
+        feet = "Peda. Loafers +4" 
     })
 
     sets.midcast.Protect = set_combine(sets.midcast['Enhancing Magic'], { 
@@ -922,8 +922,8 @@ function init_gear_sets()
 
     sets.buff['Penury'] = { legs = "Arbatel Pants +2" }
     sets.buff['Parsimony'] = { legs = "Arbatel Pants +2" }
-    sets.buff['Celerity'] = { feet = "Peda. Loafers +3" }
-    sets.buff['Alacrity'] = { feet = "Peda. Loafers +3" }
+    sets.buff['Celerity'] = { feet = "Peda. Loafers +4" }
+    sets.buff['Alacrity'] = { feet = "Peda./ Loafers +4" }
     sets.buff['Klimaform'] = { feet = "Arbatel Loafers +3" }
 
     sets.HPDown = {

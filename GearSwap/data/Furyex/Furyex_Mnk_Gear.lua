@@ -36,7 +36,7 @@ function init_gear_sets()
 
     -- Precast sets to enhance JAs on use
     sets.precast.JA["Hundred Fists"] = {
-        legs = "Hes. Hose +3"
+        legs = "Hesy. Hose +4 +3"
     }
     sets.precast.JA["Boost"] = {
         hands = "Anch. Gloves +4"
@@ -52,7 +52,7 @@ function init_gear_sets()
         head = "Anchor. Crown +4"
     }
     sets.precast.JA["Counterstance"] = {
-        feet = "Hes. Gaiters +3"
+        feet = "Hesy. Gaiters +4"
     }
     sets.precast.JA["Footwork"] = {
         feet = "Bhikku Gaiters +3"
@@ -61,7 +61,7 @@ function init_gear_sets()
         body = "Hesy. Cyclas +4"
     }
     sets.precast.JA["Mantra"] = {
-        feet = "Hes. Gaiters +3"
+        feet = "Hesy. Gaiters +4"
     }
 
     sets.precast.JA["Chi Blast"] = {
@@ -73,7 +73,7 @@ function init_gear_sets()
     sets.precast.JA["Chakra"] = {
         body = "Anch. Cyclas +4",
         hands = {
-            name = "Hes. Gloves +3",
+            name = "Hesy. Gloves +4",
             augments = {'Enhances "Invigorate" effect'}
         }
     }
@@ -118,7 +118,7 @@ function init_gear_sets()
         ear1 = "Mache Earring +1",
         ear2 = "Telos Earring",
         body = "Malignance Tabard",
-        hands = "Hes. Gloves +3",
+        hands = "Hesy. Gloves +4",
         ring1 = "Ramuh Ring +1",
         ring2 = "Ramuh Ring +1",
         back = "Segomo's Mantle",
@@ -134,7 +134,7 @@ function init_gear_sets()
         ear1 = "Mache Earring +1",
         ear2 = "Telos Earring",
         body = "Malignance Tabard",
-        hands = "Hes. Gloves +3",
+        hands = "Hesy. Gloves +4",
         ring1 = "Ramuh Ring +1",
         ring2 = "Ramuh Ring +1",
         back = "Segomo's Mantle",
@@ -694,7 +694,7 @@ function init_gear_sets()
         hands = "Malignance Gloves",
         legs = "Anch. Hose +4",
         feet = {
-            name = "Hes. Gaiters +3",
+            name = "Hesy. Gaiters +4",
             augments = {'Enhances "Mantra" effect'}
         },
         neck = {
