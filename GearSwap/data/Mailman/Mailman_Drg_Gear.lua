@@ -54,9 +54,9 @@ function init_gear_sets()
     gear.relic = {
         Head = "Ptero. Armet +4",
         Body = "Ptero. Mail +4",
-        Hands = "Ptero. Fin. G. +3",
-        Legs = "Ptero. Brais +3",
-        Feet = "Ptero. Greaves +3",
+        Hands = "Ptero. Fin. G. +4",
+        Legs = "Ptero. Brais +4",
+        Feet = "Ptero. Greaves +4",
     }
 
     gear.str_wsd_jse_back = {

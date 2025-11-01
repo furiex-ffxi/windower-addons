@@ -7,7 +7,7 @@ function user_job_setup()
     state.IdleMode:options('Normal', 'PDT', 'Refresh')
     state.HybridMode:options('Normal', 'DT')
     state.ExtraMeleeMode = M { ['description'] = 'Extra Melee Mode', 'None', 'DWMax' }
-    state.Weapons:options('Default', 'Ranged', 'RangedAcc', 'Savage', 'Onion', 'Evisceration', 'LeadenMelee', 'DualWeapons', 'DualSavageWeapons',
+    state.Weapons:options('Default', 'Ranged', 'RangedAcc', 'Savage', 'Onion', 'Evisceration', 'LeadenMelee', 'Roll', 'DualWeapons', 'DualSavageWeapons',
         'DualOnion', 'DualEvisceration', 'DualLeadenRanged', 'DualLeadenMelee', 'DualAeolian', 'DualRanged', 'DualRoll',
         'DualFermion', 'None')
     state.CompensatorMode:options('Always', '300', '1000', 'Never')
@@ -19,12 +19,13 @@ function user_job_setup()
     options.ammo_warning_limit = 15
     Ikenga_vest_bonus = 180  -- It is 190 at R20. Uncomment if you need to manually adjust because you are using below R20
 
-    gear.tp_ranger_jse_back = { name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Store TP"+10','Damage taken-5%',}} -- needle racc to agi, and dt to pdt
-    gear.snapshot_jse_back = { name = "Camulus's Mantle", augments = { '"Snapshot"+10', } }
     gear.tp_jse_back = { name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dual Wield"+10','Phys. dmg. taken-10%',}}
+    gear.tp_ranger_jse_back = { name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Store TP"+10','Damage taken-5%',}} -- needle racc to agi, and dt to pdt
+    gear.snapshot_jse_back = { name="Camulus's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+10','"Snapshot"+10','Mag. Evasion+15',}} -- +10 more HP, 5 dye
     gear.ranger_wsd_jse_back = { name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%','Damage taken-5%',}}
     gear.magic_wsd_jse_back = { name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%','Mag. Evasion+15',}}
     gear.str_wsd_jse_back = { name="Camulus's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
+    gear.fc_jse_back = { name="Camulus's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Fast Cast"+10','Phys. dmg. taken-10%',}}
 
     -- Additional local binds
     send_command('bind ^` gs c cycle ElementalMode')
@@ -85,7 +86,7 @@ function init_gear_sets()
 		legs="Desultor Tassets", --Phantomroll ability delay -5
 		neck="Regal Necklace", -- 20 sec Duration
 		right_ring="Luzaf's Ring", -- 16 yalm range
-		back="Camulus's Mantle", -- 30 sec Duration
+		back=gear.tp_jse_back, -- 30 sec Duration
     }
 
     sets.precast.LuzafRing = { ring2 = "Luzaf's Ring" }
@@ -202,7 +203,7 @@ function init_gear_sets()
 		right_ear="Etiolation Earring", -- 1
 		left_ring="Weatherspoon Ring", -- 5
 		right_ring="Kishar Ring", -- 4
-		back={ name="Camulus's Mantle", augments={'HP+60','HP+20','"Fast Cast"+10',}}, -- 10
+		back=gear.fc_jse_back, -- 10
     }
 
     sets.precast.FC.Utsusemi = set_combine(sets.precast.FC, { neck = "Magoraga Beads", body = "Passion Jacket" })
@@ -452,7 +453,7 @@ function init_gear_sets()
         -- left_ring="Medada's Ring",
         left_ring="Weatherspoon Ring",
         right_ring="Kishar Ring",
-    back={ name="Camulus's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
+        back=gear.fc_jse_back,
     }
 
     sets.Self_Healing = { neck = "Phalaina Locket", hands = "Buremte Gloves", ring2 = "Kunaji Ring",
@@ -528,7 +529,7 @@ function init_gear_sets()
 		right_ear="Etiolation Earring",
 		left_ring="Defending Ring",
 		right_ring="Gelatinous Ring +1",
-		back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dual Wield"+10','Phys. dmg. taken-10%',}},
+		back=gear.tp_jse_back,
     }
 
     sets.idle.PDT = {
@@ -544,7 +545,7 @@ function init_gear_sets()
 		right_ear="Etiolation Earring",
 		left_ring="Defending Ring",
 		right_ring="Gelatinous Ring +1",
-		back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dual Wield"+10','Phys. dmg. taken-10%',}},
+		back=gear.tp_jse_back,
     }
 
     sets.idle.Refresh = {
@@ -652,8 +653,12 @@ function init_gear_sets()
 		main={ name="Rostam", augments={'Path: A'}},
         sub = "Nusku Shield", 
 		range="Death Penalty", 
-		ammo="Living Bullet",
     }
+    sets.weapons.Roll = { 
+		main={ name="Rostam", augments={'Path: C'}},
+        sub = "Nusku Shield", 
+        range = "Compensator",
+    }    
     sets.weapons.DualWeapons = { main = "Naegling", sub = "Gleti's Knife", range = "Magnatus" }
     sets.weapons.DualSavageWeapons = { 
         main="Naegling",
@@ -746,7 +751,7 @@ function init_gear_sets()
         waist = "Windbuffet Belt +1",
         legs = gear.Empy.Legs,
         feet = "Herculean Boots",
-        back = gear.tp_jse_back,
+        back = "Null Shawl",
     }
 
     sets.engaged.Acc = set_combine(sets.engaged, {
@@ -765,7 +770,7 @@ function init_gear_sets()
         right_ear="Dedition Earring",
 		ring1="Lehko's Ring",
         right_ring="Epona's Ring",
-        back = gear.tp_jse_back,
+        back = "Null Shawl",
     })
 
     sets.engaged.Acc.DT = {
@@ -777,7 +782,7 @@ function init_gear_sets()
         hands = "Malignance Gloves",
         ring1 = "Defending Ring",
         ring2 = "Ramuh Ring +1",
-        back = gear.tp_jse_back,
+        back = "Null Shawl",
         waist = "Olseni Belt",
         legs = "Malignance Tights",
         feet = "Malignance Boots"
@@ -836,6 +841,7 @@ function init_gear_sets()
         ear2 = "Dedition Earring",
         left_ring = "Chirich Ring +1",
         right_ring = "Chirich Ring +1",
+        back = "Null Shawl",
     }
 
     sets.engaged.DW.SB = {
@@ -850,6 +856,7 @@ function init_gear_sets()
         right_ear = "Suppanomimi",
         left_ring = "Chirich Ring +1",
         right_ring = "Chirich Ring +1",
+        back = gear.tp_jse_back,
     }
     
     sets.engaged.DW.SB.DT = {
@@ -864,6 +871,7 @@ function init_gear_sets()
         right_ear = "Suppanomimi",
         left_ring = "Chirich Ring +1",
         right_ring = "Chirich Ring +1",
+        back = gear.tp_jse_back,
     }
 end
 

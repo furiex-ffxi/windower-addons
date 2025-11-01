@@ -293,18 +293,18 @@ function init_gear_sets()
     -- Default weaponskill sets.
     sets.precast.WS = {
         ammo = "Voluspa Tathlum",
-        head = "Meghanada Visor +2",
+        head = "Nyame Helm",
         neck = "Combatant's Torque",
         ear1 = "Brutal Earring",
         ear2 = "Sherida Earring",
-        body = "Meg. Cuirie +2",
-        hands = "Meg. Gloves +2",
+        body = "Nyame Mail",
+        hands = "Nyame Gauntlets",
         ring1 = "Regal Ring",
         ring2 = "Ilabrat Ring",
-        back = "Bleating Mantle",
+        back = "Null Shawl",
         waist = "Fotia Belt",
-        legs = "Meg. Chausses +2",
-        feet = "Meg. Jam. +2"
+        legs = "Nyame Flanchard",
+        feet = "Nyame Sollerets"
     }
 
     sets.precast.WS.SomeAcc = {
@@ -457,7 +457,7 @@ function init_gear_sets()
         ear2 = "Nukumi Earring +1",
         ring1 = "C. Palug Ring",
         ring2 = "Murky Ring",
-        back = "Artio's Mantle",
+        back = { name="Artio's Mantle", augments={'Pet: M.Acc.+20 Pet: M.Dmg.+20','Pet: Mag. Acc.+10',}},
         waist = "Incarnation Sash",
         head="Nuk. Cabasset +3",
         body="Nukumi Gausape +3",
@@ -478,7 +478,7 @@ function init_gear_sets()
         hands="Nukumi Manoplas +3",
         ring1 = "C. Palug Ring",
         ring2 = "Murky Ring",
-        back = "Artio's Mantle",
+        back = { name="Artio's Mantle", augments={'Pet: M.Acc.+20 Pet: M.Dmg.+20','Pet: Mag. Acc.+10',}},
         waist = "Incarnation Sash",
         legs="Nukumi Quijotes +3",
         feet = "Gleti's Boots"
@@ -496,18 +496,18 @@ function init_gear_sets()
         hands = "Nukumi Manoplas +3",
         ring1 = "Varar Ring +1",
         ring2 = "Varar Ring +1",
-        back = "Artio's Mantle",
+        back = { name="Artio's Mantle", augments={'Pet: M.Acc.+20 Pet: M.Dmg.+20','Pet: Mag. Acc.+10',}},
         waist = "Incarnation Sash",
         legs = gear.valorous_magical_pet_legs,
         feet = gear.valorous_magical_pet_feet
     }
 
     sets.midcast.Pet.ReadyRecast = {
-        main = "Charmer's Merlin",
+        hands="Nukumi Manoplas +3",
         legs = "Gleti's Breeches"
     }
     sets.midcast.Pet.ReadyRecastDW = {
-        sub = "Charmer's Merlin",
+        hands="Nukumi Manoplas +3",
         legs = "Gleti's Breeches"
     }
     sets.midcast.Pet.Neutral = {
@@ -527,18 +527,13 @@ function init_gear_sets()
         main = "Izizoeksi",
         sub = gear.PDTMABKumbha,
         ammo = "Staunch Tathlum +1",
-        -- head = "Jumalik Helm",
         neck = "Loricate Torque +1",
         ear1 = "Sanare Earring",
         ear2 = "Genmei Earring",
-        -- body = "Jumalik Mail",
-        -- hands = "Macabre Gaunt. +1",
         ring1 = "Defending Ring",
         ring2 = "C. Palug Ring",
         back = "Solemnity Cape",
         waist = "Flume Belt +1",
-        -- legs = "Tali'ah Sera. +2",
-        -- feet = "Skd. Jambeaux +1"
         head = sets.Nyame.Head,
         body = sets.Nyame.Body,
         hands = sets.Nyame.Hands,
@@ -590,55 +585,55 @@ function init_gear_sets()
     sets.idle.Pet = {
         main = "Izizoeksi",
         sub = gear.PDTMABKumbha,
-        ammo = "Voluspa Tathlum",
+        ammo = "Crepuscular Pebble",
         head = "Anwig Salade",
-        neck = "Loricate Torque +1",
+        neck = "Null Loop",
         ear1 = "Enmerkar Earring",
-        ear2 = "Handler's Earring +1",
+        ear2 = "Nukumi Earring +1",
         body = "Tot. Jackcoat +3",
-        hands = "Ankusa Gloves +3",
-        ring1 = "Defending Ring",
-        ring2 = "C. Palug Ring",
-        back = "Artio's Mantle",
+        hands = "Gleti's Gauntlets",
+        ring1 = "Murky Ring",
+        ring2 = "Defending Ring",
+        back = { name="Artio's Mantle", augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','Pet: "Regen"+10','Pet: Damage taken -5%',}},
         waist = "Isa Belt",
-        legs = "Tali'ah Sera. +2",
-        feet = "Ankusa Gaiters +3"
+        legs = "Nukumi Quijotes +3",
+        feet = "Gleti's Boots"
     }
 
     sets.idle.Pet.Engaged = {
         main = "Izizoeksi",
         sub = gear.PDTMABKumbha,
-        ammo = "Voluspa Tathlum",
+        ammo = "Crepuscular Pebble",
         head = "Anwig Salade",
-        neck = "Shulmanu Collar",
+        neck = "Null Loop",
         ear1 = "Enmerkar Earring",
-        ear2 = "Handler's Earring +1",
+        ear2 = "Nukumi Earring +1",
         body = "Tot. Jackcoat +3",
         hands = "Gleti's Gauntlets",
-        ring1 = "Defending Ring",
-        ring2 = "C. Palug Ring",
-        back = "Artio's Mantle",
+        ring1 = "Murky Ring",
+        ring2 = "Defending Ring",
+        back = { name="Artio's Mantle", augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','Pet: "Regen"+10','Pet: Damage taken -5%',}},
         waist = "Isa Belt",
-        legs = "Tali'ah Sera. +2",
-        feet = "Ankusa Gaiters +3"
+        legs = "Nukumi Quijotes +3",
+        feet = "Gleti's Boots"
     }
 
     sets.idle.Pet.Engaged.DW = {
         main = "Izizoeksi",
         sub = gear.PDTMABKumbha,
-        ammo = "Voluspa Tathlum",
+        ammo = "Coiste Bodhar",
         head = "Anwig Salade",
         neck = "Shulmanu Collar",
         ear1 = "Enmerkar Earring",
-        ear2 = "Handler's Earring +1",
+        ear2 = "Nukumi Earring +1",
         body = "Tot. Jackcoat +3",
-        hands = "Ankusa Gloves +3",
-        ring1 = "Defending Ring",
+        hands = "Gleti's Gauntlets",
+        ring1 = "Murky Ring",
         ring2 = "C. Palug Ring",
-        back = "Artio's Mantle",
+        back = { name="Artio's Mantle", augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','Pet: "Regen"+10','Pet: Damage taken -5%',}},
         waist = "Isa Belt",
-        legs = "Tali'ah Sera. +2",
-        feet = "Ankusa Gaiters +3"
+        legs = "Nukumi Quijotes +3",
+        feet = "Gleti's Boots"
     }
 
     -- DEFENSE SETS
@@ -753,7 +748,7 @@ function init_gear_sets()
         hands = "Malignance Gloves",
         ring1 = "Petrov Ring",
         ring2 = "Epona's Ring",
-        back = "Ground. Mantle +1",
+        back = "Null Shawl",
         waist = "Windbuffet Belt +1",
         legs = "Malignance Tights",
         feet = "Malignance Boots"
@@ -1010,11 +1005,11 @@ function init_gear_sets()
     sets.engaged.BothDD.Fodder = set_combine(sets.engaged.Fodder, {})
 
     -- GEARSETS FOR MASTER ENGAGED (SINGLE-WIELD) & PET TANKING
-    sets.engaged.PetTank = set_combine(sets.engaged, {})
-    sets.engaged.PetTank.SomeAcc = set_combine(sets.engaged.SomeAcc, {})
-    sets.engaged.PetTank.Acc = set_combine(sets.engaged.Acc, {})
-    sets.engaged.PetTank.FullAcc = set_combine(sets.engaged.FullAcc, {})
-    sets.engaged.PetTank.Fodder = set_combine(sets.engaged.Fodder, {})
+    sets.engaged.PetTank = set_combine(sets.engaged, sets.idle.Pet, {})
+    sets.engaged.PetTank.SomeAcc = set_combine(sets.engaged.PetTank.SomeAcc, {})
+    sets.engaged.PetTank.Acc = set_combine(sets.engaged.PetTank.Acc, {})
+    sets.engaged.PetTank.FullAcc = set_combine(sets.engaged.PetTank.FullAcc, {})
+    sets.engaged.PetTank.Fodder = set_combine(sets.engaged.PetTank.Fodder, {})
 
     -- GEARSETS FOR MASTER ENGAGED (DUAL-WIELD) & PET ENGAGED
     sets.engaged.DW.BothDD = set_combine(sets.engaged.DW, {})

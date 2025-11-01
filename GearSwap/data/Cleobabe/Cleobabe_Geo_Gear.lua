@@ -117,8 +117,7 @@ function init_gear_sets()
         neck = "Voltsurge Torque", -- 4
         ear1 = "Enchntr. Earring +1", -- 2
         ear2 = "Malignance Earring", -- 4
-        -- body = "Zendik Robe", -- 13
-        body = "Volte Doublet", -- 10
+        body = "Zendik Robe", -- 13
         hands = "Volte Gloves", -- 6
         ring1 = "Kishar Ring", -- 4
         ring2 = "Prolix Ring", -- 2
@@ -715,7 +714,8 @@ function init_gear_sets()
         ear1 = "Odnowa Earring +1",
         ear2 = "Alabaster Earring",
         head = "Null Masque",
-        body = gear.empy.Body,
+        body = "Zendik Robe",
+        -- body = gear.empy.Body,
         hands = gear.relic.Hands,
         legs = "Volte Brais",
         feet = "Volte Gaiters",

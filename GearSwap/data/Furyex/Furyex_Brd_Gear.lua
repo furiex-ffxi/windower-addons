@@ -1,7 +1,7 @@
 function user_job_setup()
 	-- Options: Override default values
 	state.UnlockWeapons = M(true, "Unlock Weapons")
-	state.OffenseMode:options("Normal", "Acc")
+	state.OffenseMode:options("Normal", "Acc", "Subtle")
 	state.HybridMode:options("Normal", "DT")
 	state.CastingMode:options("Normal", "Duration", "Resistant")
 	state.IdleMode:options("Normal", "PDT", "NoRefresh")
@@ -213,6 +213,12 @@ function init_gear_sets()
 	}
 
 	sets.precast.WS.Acc = set_combine(sets.precast.WS, {})
+
+	sets.precast.WS.Subtle = set_combine(sets.precast.WS, {
+		neck = "Bathy Choker +1",
+		ring1 = "Chirich Ring +1",
+		ring2 = "Chirich Ring +1"
+	})
 
 	-- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
 	sets.precast.WS["Evisceration"] =
@@ -775,9 +781,12 @@ function init_gear_sets()
 		sets.engaged,
 		{
 			ring1 = "Moonlight Ring",
-			feet = {name = "Nyame Sollerets", augments = {"Path: B"}}
+			legs = "Nyame Flanchard"
 		}
 	)
+
+	sets.engaged.Subtle = set_combine(sets.engaged, {})
+
 
 	-- 1383 eva, 1530 def
 	-- Current best set: PDT:-35,  MDT:-50

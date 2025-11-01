@@ -301,11 +301,13 @@ function init_gear_sets()
 	})
 
 	sets.midcast.Cure.SIRD = set_combine(sets.midcast.Cure, {
+		ammo = "Staunch Tathlum +1",
 		hands = "Chironic Gloves",
 		feet = gear.af.feet
 	})
 
 	sets.midcast.CureSolace.SIRD = set_combine(sets.midcast.CureSolace, {
+		ammo = "Staunch Tathlum +1",
 		hands = "Chironic Gloves",
 		feet = gear.af.feet
 	})
@@ -837,7 +839,7 @@ function init_gear_sets()
 		sub = "Ammurapi Shield",
 		ammo = "Homiliary",
 		head = "Null Masque",
-		neck = "Loricate Torque +1",
+		neck = "Sibyl Scarf",
 		ear1 = "Etiolation Earring",
 		ear2 = "Ebers Earring +1",
 		body = gear.empy.body,
@@ -852,16 +854,18 @@ function init_gear_sets()
 
 	sets.idle.PDT = set_combine(sets.idle, {
 		ammo = "Homiliary",
-		head = "Nyame Helm",
-		neck = "Loricate Torque +1",
-		ear1 = "Etiolation Earring",
-		ear2 = "Ethereal Earring",
+		head = "Null Masque",
+		neck = "Sibyl Scarf",
+		ear1 = "Alabaster Earring",
+		ear2 = "Ebers Earring +1",
 		body = "Adamantite Armor",
-		hands = gear.chironic_refresh_hands,
-		ring1 = "Defending Ring",
+		feet = "Nyame Sollerets",
+		legs = "Nyame Flanchard",
+		hands = "Nyame Gauntlets",
+		ring1 = "Stikini Ring +1",
 		ring2 = "Stikini Ring +1",
-		back = "Moonlight Cape",
-		waist = "Carrier's Sash",
+		back = "Alaunus's Cape",
+		waist = "Plat. Mog. Belt",
 	})
 
 	sets.idle.MDT = {

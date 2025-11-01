@@ -84,7 +84,7 @@ function init_gear_sets()
 
 	-- Indi Duration in slots that would normally have skill here to make entrust more efficient.
 	sets.buff.Entrust = {
-		main = gear.gada_indi_club,
+		-- main = gear.gada_indi_club, 
 		neck = "Incanter's Torque",
 		back = gear.idle_jse_back,
 		legs = relic.Legs,
@@ -100,16 +100,16 @@ function init_gear_sets()
 
 	sets.precast.FC = {
 		range = "Dunna", -- 3
-		head = "Amalric Coif +1", -- 11
+		-- head = "Amalric Coif +1", -- 11
 		neck = "Baetyl Pendant", --4
-		ear1 = "Loquac. Earring", -- 2
+		-- ear1 = "Loquac. Earring", -- 2
 		ear2 = "Malignance Earring", -- 4
 		body = "Zendik Robe", -- 13
 		hands = "Agwu's Gages", -- 6
 		ring1 = "Kishar Ring", -- 4
-		ring2 = "Prolix Ring", -- 2
+		-- ring2 = "Prolix Ring", -- 2
 		back = "Fi Follet Cape", -- 10
-		waist = "Witful Belt", -- 3 / 3 QM
+		-- waist = "Witful Belt", -- 3 / 3 QM
 		legs = af.Legs, -- 15
 		feet = "Volte Gaiters" -- 6
 	} -- 80 FC
@@ -197,15 +197,16 @@ function init_gear_sets()
 		sub = "Genmei Shield",
 		range = "Dunna",
 		head = empy.Head,
-		neck = "Bagua's Charm +2",
-		ear1 = "Calamitous Earring",
+		neck = "Bagua Charm +2",
+		-- ear1 = "Calamitous Earring",
 		ear2 = "Azimuth Earring",
-		body = "Vedic Coat",
+		body = "Zendik Robe",
+		-- body = "Vedic Coat",
 		hands = empy.Hands,
-		ring1 = "Defending Ring",
+		ring1 = "Murky Ring",
 		ring2 = "Mephitas's Ring +1",
 		back = gear.idle_jse_back,
-		waist = "Austerity Belt +1",
+		-- waist = "Austerity Belt +1",
 		legs = "Lengo Pants",
 		feet = empy.Feet
 	}
@@ -330,7 +331,7 @@ function init_gear_sets()
 		sub = "Ammurapi Shield",
 		range = "Dunna",
 		head = "Agwu's Cap",
-		neck = "Bagua's Charm +2",
+		neck = "Bagua Charm +2",
 		ear1 = "Malignance Earring",
 		ear2 = "Azimuth Earring +2",
 		body = "Agwu's Robe",
@@ -518,7 +519,6 @@ function init_gear_sets()
 		hands = relic.Hands,
 		legs = sets.Nyame.Legs,
 		feet = sets.Nyame.Feet,
-		-- ring1 = "Defending Ring",
 		ring1 = "Stikini Ring +1",
 		ring2 = "Stikini Ring +1",
 		back = gear.idle_jse_back,
@@ -529,7 +529,7 @@ function init_gear_sets()
 		set_combine(
 		sets.idle,
 		{
-			left_ring = "Defending Ring",
+			left_ring = "Murky Ring",
 			back = gear.nuke_jse_back
 		}
 	)
@@ -544,7 +544,7 @@ function init_gear_sets()
 			ring1 = "Stikini Ring +1",
 			ring2 = "Stikini Ring +1",
 			back = gear.idle_jse_back,
-			waist = "Isa Belt",
+			-- waist = "Isa Belt",
 			feet = relic.Feet
 		}
 	)
@@ -555,7 +555,7 @@ function init_gear_sets()
 		{
 			main = "Idris",
 			sub = "Genmei Shield",
-			body = "Adamantite Armor",
+			body = "Nyame Mail",
 			legs = "Nyame Flanchard",
 			feet = "Nyame Sollerets"
 		}

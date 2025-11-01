@@ -794,40 +794,6 @@ function init_gear_sets()
             augments = {'Path: A'}
         },
         legs = "Wicce Chausses +3",
-        feet = "Wicce Sabots +3",
-        -- feet = {
-        --     name = "Agwu's Pigaches",
-        --     augments = {'Path: A'}
-        -- },
-        neck = {
-            name = "Src. Stole +2",
-            augments = {'Path: A'}
-        },
-        waist = "Sacro Cord",
-        left_ear = "Malignance Earring",
-        right_ear = "Wicce Earring +2",
-        left_ring = "Freke Ring",
-        right_ring = "Medada's Ring",
-        back = {
-            name = "Taranus's Cape",
-            augments = {'INT+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'INT+10', '"Mag.Atk.Bns."+10', "Phys. dmg. taken-10%"}
-        }
-    }
-
-    sets.midcast['Elemental Magic'].Resistant = {}
-
-    sets.midcast['Elemental Magic'].HighTierNuke = {
-        ammo = {
-            name = "Ghastly Tathlum +1",
-            augments = {'Path: A'}
-        },
-        head = "Ea Hat +1",
-        body = "Wicce Coat +3",
-        hands = {
-            name = "Agwu's Gages",
-            augments = {'Path: A'}
-        },
-        legs = "Wicce Chausses +3",
         feet = {
             name = "Agwu's Pigaches",
             augments = {'Path: A'}
@@ -847,7 +813,18 @@ function init_gear_sets()
         }
     }
 
-    sets.midcast['Elemental Magic'].HighTierNuke.Resistant = {}
+    sets.midcast['Elemental Magic'].Resistant = {}
+
+    sets.midcast['Elemental Magic'].HighTierNuke = set_combine(sets.midcast['Elemental Magic'], {})
+    sets.midcast['Elemental Magic'].HighTierNuke.Resistant = set_combine(
+        sets.midcast['Elemental Magic'].Resistant, {}
+    )
+    sets.midcast['Elemental Magic'].LowTierNuke = set_combine(sets.midcast['Elemental Magic'], {
+        body = "Spaekona's Coat +3"
+    })
+    sets.midcast['Elemental Magic'].LowTierNuke.Resistant = set_combine(sets.midcast['Elemental Magic'].Resistant, {
+        body = "Spaekona's Coat +3"
+    })
 
     sets.midcast.Helix = sets.midcast['Elemental Magic']
     sets.midcast.Helix.Resistant = sets.midcast['Elemental Magic'].Resistant
@@ -1038,7 +1015,9 @@ function init_gear_sets()
             augments = {'INT+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'INT+10', '"Mag.Atk.Bns."+10', "Phys. dmg. taken-10%"}
         }
     }
-
+    sets.idle.Town = {
+        ear2 = "Wicce Earring +2"
+    }
     sets.idle.Weak = {}
 
     -- Defense sets

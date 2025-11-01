@@ -851,7 +851,7 @@ function init_gear_sets()
 		neck = "Warder's Charm +1",
 		ear1 = "Sanare Earring",
 		ear2 = "Erilaz Earring +2",
-		body = "Adamantite Armor",
+		body = gear.empy.Body,
 		hands = gear.empy.Hands,
 		ring1 = "Shadow Ring",
 		ring2 = "Murky Ring",

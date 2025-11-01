@@ -347,7 +347,7 @@ function init_gear_sets()
 		sub = "Ammurapi Shield",
 		range = "Dunna",
 		head = "Agwu's Cap",
-		neck = "Bagua's Charm +2",
+		neck = "Bagua Charm +2",
 		ear1 = "Malignance Earring",
 		ear2 = "Azimuth Earring +2",
 		body = "Agwu's Robe",

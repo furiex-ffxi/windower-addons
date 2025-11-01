@@ -2,13 +2,13 @@
 function user_job_setup()
     state.OffenseMode:options('Normal', 'Acc')
     state.HybridMode:options('Normal', 'DTLite', 'DT')
-    state.RangedMode:options('Normal', 'Acc', 'Fodder')
+    state.RangedMode:options('Normal', 'Acc', 'Crit')
     state.WeaponskillMode:options('Match', 'Normal', 'Acc')
     state.IdleMode:options('Normal', 'PDT')
     state.Weapons:options('Default', 'Yoichi', 'Anni', 'DualEviscerationWeapons', 'DualGastra', 'DualYoichi', 'DualAnni', 'DualWeapons', 'DualSavageWeapons', 'DualSavageKraken', 'DualMagicWeapons',
         'DualMalevolence', 'DualFermion')
 
-    Ikenga_vest_bonus = 180  -- It is 190 at R20. Uncomment if you need to manually adjust because you are using below R20
+    -- Ikenga_vest_bonus = 180  -- It is 190 at R20. Uncomment if you need to manually adjust because you are using below R20
 
     WeaponType = {
         ['Fail-Not'] = "Bow",
@@ -52,19 +52,6 @@ function user_job_setup()
         }
     }
 
-    gear.tp_ranger_jse_back = {
-        name = "Belenus's Cape",
-        augments = {'AGI+20', 'Rng.Acc.+20 Rng.Atk.+20', '"Store TP"+10'}
-    }
-    gear.wsd_ranger_jse_back = {
-        name = "Belenus's Cape",
-        augments = {'AGI+20', 'Rng.Acc.+20 Rng.Atk.+20', 'Weapon skill damage +10%'}
-    }
-    gear.snapshot_jse_back = {
-        name = "Belenus's Cape",
-        augments = {'"Snapshot"+10'}
-    }
-
     -- Additional local binds
     send_command('bind !` input /ra <t>')
     send_command('bind !backspace input /ja "Bounty Shot" <t>')
@@ -82,13 +69,17 @@ function init_gear_sets()
     --------------------------------------
     -- Precast sets
     --------------------------------------
-    gear.da_jse_back = { name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
+    gear.agi_wsd_jse_back = { name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
     gear.str_wsd_jse_back = { name="Belenus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
-    
+    gear.tp_ranger_jse_back = { name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','"Store TP"+10','Phys. dmg. taken-10%',}}
+    gear.snapshot_jse_back = { name="Belenus's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','"Snapshot"+10','Mag. Evasion+15',}}
+    gear.crit_jse_back = { name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Crit.hit rate+10','Phys. dmg. taken-10%',}}
+
+
     -- Precast sets to enhance JAs
     sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
     sets.precast.JA['Bounty Shot'] = set_combine(sets.TreasureHunter, {
-        hands = "Amini Glove. +2"
+        hands = "Amini Glove. +3"
     })
     sets.precast.JA['Camouflage'] = {
         body = "Orion Jerkin +3"
@@ -132,30 +123,31 @@ function init_gear_sets()
 
     sets.precast.RA = {
         neck="Scout's Gorget +2",
-        right_ear="Etiolation Earring",
         left_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
-        head = "Amini Gapette +2", -- 7
-        body = "Amini Caban +2",
-        ring1 = "Crepuscular Ring", -- 11
-        ring2="Ilabrat Ring",
-        back = gear.snapshot_jse_back,
-        waist="Yemaya Belt",
+        right_ear="Alabaster Earring",
+        head = "Amini Gapette +3", -- 7
+        body = "Amini Caban +3",
+        hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}}, -- 8 / 11
+		left_ring={ name="Gelatinous Ring +1", augments={'Path: A',}, priority=2},
+		right_ring="Crepuscular Ring", -- 3
+        waist = "Yemaya Belt",
         legs = "Orion Braccae +3",
-        feet = "Meg. Jam. +2"
+        feet = "Meg. Jam. +2",
+        back = gear.snapshot_jse_back,
     } -- 38
 
-    sets.precast.RA.Flurry = set_combine(sets.precast.RA, {})
+    sets.precast.RA.Flurry = set_combine(sets.precast.RA, {
+        head="Orion Beret +3",
+	    legs={ name="Adhemar Kecks +1", augments={'AGI+12','"Rapid Shot"+13','Enmity-6',}}, -- 10/13
+    })
     sets.precast.RA.Flurry2 = set_combine(sets.precast.RA, {
-        head = "Orion Beret +3",
-        waist = "Yemaya Belt",
-        legs = "Adhemar Kecks +1"
+		feet={ name="Pursuer's Gaiters", augments={'Rng.Acc.+10','"Rapid Shot"+10','"Recycle"+15',}},
     })
 
     -- Weaponskill sets
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {
         head = "Orion Beret +3",
-        -- neck = "Fotia Gorget",
         neck = "Iskur Gorget",
         body = sets.Nyame.Body,
         hands = sets.Nyame.Hands,
@@ -163,7 +155,7 @@ function init_gear_sets()
 		right_ear="Ishvara Earring",
 		left_ring="Regal Ring",
         right_ring="Epaminondas's Ring",
-        back = gear.str_wsd_jse_back,
+        back = gear.agi_wsd_jse_back,
         waist = "Sailfi Belt +1",
         legs = sets.Nyame.Legs,
         feet = sets.Nyame.Feet
@@ -171,7 +163,6 @@ function init_gear_sets()
     
 
     sets.precast.WS.Acc = set_combine(sets.precast.WS, {
-
 	})
 
     sets.precast.WS['Savage Blade'] = {
@@ -198,7 +189,7 @@ function init_gear_sets()
         hands = "Carmine Fin. Ga. +1",
         ring1 = "Regal Ring",
         ring2 = "Dingir Ring",
-        back = gear.wsd_ranger_jse_back,
+        back = gear.agi_wsd_jse_back,
         waist = "Eschan Stone",
         legs = "Gyve Trousers",
         feet = gear.herculean_nuke_feet
@@ -213,7 +204,7 @@ function init_gear_sets()
         hands = "Leyline Gloves",
         ring1 = "Regal Ring",
         ring2 = "Dingir Ring",
-        back = gear.wsd_ranger_jse_back,
+        back = gear.agi_wsd_jse_back,
         waist = "Eschan Stone",
         legs = "Gyve Trousers",
         feet = gear.herculean_nuke_feet
@@ -225,12 +216,11 @@ function init_gear_sets()
 		body=sets.Nyame.Body,
         hands = sets.Nyame.Hands,
 		legs= sets.Nyame.Legs,
-		-- waist="Orpheus's Sash",
         waist="Eschan Stone",
 		left_ear="Friomisi Earring",
 		right_ear="Hectate's Earring",
 		left_ring="Dingir Ring",
-		-- back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
+        back=gear.agi_wsd_jse_back
 	})
 
     sets.precast.WS['Aeolian Edge'] = set_combine(sets.precast.WS.MAB, {
@@ -248,7 +238,7 @@ function init_gear_sets()
         hands = "Nyame Gauntlets",
         ring1 = "Weatherspoon Ring",
         ring2 = "Dingir Ring",
-        back = gear.wsd_ranger_jse_back,
+        back = gear.agi_wsd_jse_back,
         waist = "Eschan Stone",
         legs = "Gyve Trousers",
         feet = gear.herculean_nuke_feet
@@ -263,7 +253,7 @@ function init_gear_sets()
         hands = "Leyline Gloves",
         ring1 = "Regal Ring",
         ring2 = "Dingir Ring",
-        back = gear.wsd_ranger_jse_back,
+        back = gear.agi_wsd_jse_back,
         waist = "Eschan Stone",
         legs = "Gyve Trousers",
         feet = gear.herculean_nuke_feet
@@ -299,17 +289,17 @@ function init_gear_sets()
     -- Ranged sets
 
     sets.midcast.RA = {
-        head="Arcadian Beret +3",
         neck="Iskur Gorget",
-        right_ear="Dedition Earring",
-        left_ear="Crep. Earring",
-        body="Ikenga's Vest",
-        hands="Ikenga's Gloves",
-        left_ring="Lehko's Ring",
-        right_ring="Ilabrat Ring",
-        waist="Tellen Belt",
-        legs="Amini Bragues +2",
-        feet="Ikenga's Clogs",
+		left_ear="Telos Earring",
+		right_ear="Crep. Earring",
+        head="Arcadian Beret +3",
+        body = "Ikenga's Vest",
+		hands = "Amini Glove. +3",
+		legs = "Amini Bragues +3",
+        left_ring = "Lehko's Ring",
+		right_ring = "Crepuscular Ring",
+        waist = "Tellen Belt",
+        feet = "Ikenga's Clogs",
         back = gear.tp_ranger_jse_back,
     }
 
@@ -328,19 +318,19 @@ function init_gear_sets()
         feet = "Malignance Boots"
     }
 
-    sets.midcast.RA.Fodder = {
-        head = "Malignance Chapeau",
-        neck = "Iskur Gorget",
-        ear1 = "Dedition Earring",
-        ear2 = "Telos Earring",
-        body = "Malignance Tabard",
-        hands = "Malignance Gloves",
-        ring1 = "Crepuscular Ring",
-        ring2 = "Ilabrat Ring",
-        back = gear.tp_ranger_jse_back,
-        waist = "Yemaya Belt",
-        legs = "Malignance Tights",
-        feet = "Malignance Boots"
+    sets.midcast.RA.Crit = {
+        neck={ name="Scout's Gorget +2", augments={'Path: A',}},
+		left_ear="Odr Earring",
+		right_ear="Sherida Earring", -- 5 II
+        head = "Arcadian Beret +3",
+        body="Amini Caban +3",
+        hands="Amini Glove. +3",
+        legs="Amini Bragues +3",
+        feet={ name="Ikenga's Clogs", augments={'Path: A',}},
+        waist={ name="Tellen Belt", augments={'Path: A',}},
+		left_ring="Lehko's Ring",
+		right_ring="Regal Ring",
+        back = gear.crit_jse_back,
     }
 
     -- These sets will overlay based on accuracy level, regardless of other options.
@@ -348,9 +338,7 @@ function init_gear_sets()
         body = "Orion Jerkin +3"
     }
     sets.buff.Camouflage.Acc = {}
-    sets.buff['Double Shot'] = {
-        back = gear.tp_ranger_jse_back
-    }
+    sets.buff['Double Shot'] = {}
     sets.buff['Double Shot'].Acc = {}
     sets.buff.Barrage = {
         hands = "Orion Bracers +3"
@@ -468,7 +456,7 @@ function init_gear_sets()
         ammo = "Chrono Bullet"
     }    
     sets.weapons.Yoichi = {
-        main = "Kustawi +1",
+        main = "Perun +1",
         sub = "Nusku Shield",
         range = "Yoichinoyumi",
         ammo = "Chrono Arrow"
@@ -546,7 +534,7 @@ function init_gear_sets()
         hands = "Adhemar Wrist. +1",
         ring1 = "Epona's Ring",
         ring2 = "Lehko's Ring",
-        back = gear.da_jse_back,
+        back = "Null Shawl",
         waist = "Windbuffet Belt +1",
         legs = "Samnuha Tights",
         feet = "Herculean Boots"
@@ -608,4 +596,8 @@ function select_default_macro_book()
     else
         set_macro_page(1, 19)
     end
+end
+
+function user_job_lockstyle()
+    windower.chat.input('/lockstyleset 004') 
 end

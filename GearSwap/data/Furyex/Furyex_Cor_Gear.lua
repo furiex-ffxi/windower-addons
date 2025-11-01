@@ -86,11 +86,11 @@ function init_gear_sets()
     -- Start defining the sets
     --------------------------------------
     gear.Empy = {}
-    gear.Empy.Head = "Chass. Tricorne +2"
-    gear.Empy.Body = "Chasseur's Frac +2"
-    gear.Empy.Hands = "Chasseur's Gants +2"
-    gear.Empy.Legs = "Chas. Culottes +2"
-    gear.Empy.Feet = "Chass. Bottes +2"
+    gear.Empy.Head = "Chass. Tricorne +3"
+    gear.Empy.Body = "Chasseur's Frac +3"
+    gear.Empy.Hands = "Chasseur's Gants +3"
+    gear.Empy.Legs = "Chas. Culottes +3"
+    gear.Empy.Feet = "Chass. Bottes +3"
 
     -- Precast Sets
 
@@ -305,11 +305,11 @@ function init_gear_sets()
 
     sets.precast.WS["Exenterator"] = {
         ammo = gear.WSbullet,
-        head = "Chass. Tricorne +3",
-        body = "Chasseur's Frac +3",
+        head = gear.Empy.Head,
+        body = gear.Empy.Body,
         hands = {name = "Gazu Bracelets +1", augments = {"Path: A"}},
-        legs = "Chas. Culottes +3",
-        feet = "Chass. Bottes +3",
+        legs = gear.Empy.Legs,
+        feet = gear.Empy.Feet,
         neck = "Sanctity necklace",
         waist = "Eschan Stone",
         left_ear = "Telos Earring",
@@ -416,7 +416,7 @@ function init_gear_sets()
         ammo = gear.MAbullet,
         head = sets.Nyame.Head,
         body = sets.Nyame.Body,
-        hands = "Chasseur's Gants +3",
+        hands = gear.Empy.Hands,
         legs = sets.Nyame.Legs,
         feet = {name = "Lanun Bottes +3", augments = {'Enhances "Wild Card" effect'}},
         neck = "Fotia Gorget",
@@ -490,7 +490,7 @@ function init_gear_sets()
         head = "Ikenga's Hat",
         body = "Ikenga's Vest",
         hands = "Ikenga's Gloves",
-        legs = "Chas. Culottes +3",
+        legs = gear.Empy.Legs,
         feet = "Ikenga's Clogs",
         neck = "Iskur Gorget",
         waist = "Yemaya Belt",
@@ -508,7 +508,7 @@ function init_gear_sets()
             head = "Malignance Chapeau",
             body = "Laksa. Frac +3",
             hands = "Malignance Gloves",
-            legs = "Chas. Culottes +3",
+            legs = gear.Empy.Legs,
             ring1 = "Regal Ring",
             feet = "Malignance Boots"
         }
