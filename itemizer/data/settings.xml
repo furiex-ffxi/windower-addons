@@ -29,4 +29,28 @@
         </UseUniversalTools>
         <version>3.1.0.0</version>
     </global>
+    <cleobabe>
+        <version>3.2.0.0</version>
+    </cleobabe>
+    <fedexman>
+        <version>3.2.0.0</version>
+    </fedexman>
+    <furyex>
+        <version>3.2.0.0</version>
+    </furyex>
+    <lanababe>
+        <version>3.2.0.0</version>
+    </lanababe>
+    <lolababe>
+        <version>3.2.0.0</version>
+    </lolababe>
+    <mailman>
+        <version>3.2.0.0</version>
+    </mailman>
+    <suckme>
+        <version>3.2.0.0</version>
+    </suckme>
+    <tuckme>
+        <version>3.2.0.0</version>
+    </tuckme>
 </settings>

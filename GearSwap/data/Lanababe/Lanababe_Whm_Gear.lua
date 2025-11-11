@@ -613,7 +613,7 @@ function init_gear_sets()
 		ring2 = "Freke Ring",
 		-- back = "Toro Cape",
 		back = "Alaunus's Cape",
-		waist = "Eschan Stone",
+		waist = "Sacro Cord",
 		legs = "Chironic Hose",
 		feet = "Volte Gaiters"
 	}
@@ -1052,7 +1052,7 @@ function init_gear_sets()
 		ring1 = "Kunaji Ring",
 		ring2 = "Meridian Ring",
 		back = "Alaunus's Cape",
-		waist = "Eschan Stone",
+		waist = "Sacro Cord",
 		legs = gear.empy.legs,
 		feet = "Kaykaus Boots"
 	}

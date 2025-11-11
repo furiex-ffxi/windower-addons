@@ -240,7 +240,7 @@ function init_gear_sets()
 	-- Default set for any weaponskill that isn't any more specifically defined
 	sets.precast.WS = {
 		head = sets.Nyame.Head,
-		ammo = "Oshasha's Treatise",
+		ammo = "Crepuscular Pebble",
 		neck = "Rep. Plat. Medal",
 		body = sets.Nyame.Body,
 		hands = sets.Nyame.Hands,
@@ -249,8 +249,8 @@ function init_gear_sets()
 		waist = "Sailfi Belt +1",
 		left_ear = "Ishvara Earring",
 		right_ear = {name = "Moonshade Earring", augments = {"Accuracy+4", "TP Bonus +250"}},
-		left_ring = "Epaminondas's Ring",
-		right_ring = "Karieyh Ring",
+		left_ring = "Karieyh Ring",
+		right_ring = "Epaminondas's Ring",
 		back = RDMCape.STRWSD
 	}
 

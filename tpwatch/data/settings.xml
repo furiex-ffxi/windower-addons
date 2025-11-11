@@ -1,0 +1,41 @@
+<?xml version="1.1" ?>
+<settings>
+    <global>
+        <box>
+            <bg>
+                <visible>true</visible>
+            </bg>
+            <flags>
+                <bold>true</bold>
+                <draggable>true</draggable>
+            </flags>
+            <pos>
+                <x>150</x>
+                <y>750</y>
+            </pos>
+            <text>
+                <font>Consolas</font>
+                <size>12</size>
+            </text>
+        </box>
+        <colors>
+            <caution>255,255,0</caution>
+            <danger>255,0,0</danger>
+            <default>255,255,255</default>
+            <safe>0,255,0</safe>
+        </colors>
+        <levels>
+            <amount>
+                <caution>200</caution>
+                <danger>300</danger>
+                <safe>0</safe>
+            </amount>
+            <recast>
+                <caution>18</caution>
+                <danger>30</danger>
+                <safe>12</safe>
+            </recast>
+        </levels>
+        <timeout>180</timeout>
+    </global>
+</settings>

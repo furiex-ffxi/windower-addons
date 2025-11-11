@@ -293,23 +293,41 @@ function init_gear_sets()
     sets.precast.WS['Chant du Cygne'].Acc = set_combine(sets.precast.WS.Acc, {})
 
 	sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {
-        ammo="Staunch Tathlum +1",
+        ammo="Coiste Bodhar", -- Crepuscular Pebble
         head={ name="Nyame Helm", augments={'Path: B',}},
         body={ name="Nyame Mail", augments={'Path: B',}},
         hands={ name="Nyame Gauntlets", augments={'Path: B',}},
         legs={ name="Nyame Flanchard", augments={'Path: B',}},
         feet={ name="Nyame Sollerets", augments={'Path: B',}},
-        neck={ name="Kgt. Beads +2", augments={'Path: A',}},
+        neck="Rep. Plat. Medal",
         waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-        left_ear="Tuisto Earring",
+        left_ear="Thrud Earring",
         right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-        left_ring="Gelatinous Ring +1",
-        right_ring="Moonlight Ring",
-        back=gear.jse_str_back,}
-    )
-    
+        left_ring="Sroda Ring",
+        right_ring="Epaminondas's Ring",
+        back=gear.jse_str_back,
+    })
+
     sets.precast.WS['Savage Blade'].Acc = set_combine(sets.precast.WS.Acc, {})
 	
+	sets.precast.WS['Knights of the Round'] = set_combine(sets.precast.WS, {
+        ammo="Coiste Bodhar", -- Crepuscular Pebble
+        head={ name="Nyame Helm", augments={'Path: B',}},
+        body={ name="Nyame Mail", augments={'Path: B',}},
+        hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+        legs={ name="Nyame Flanchard", augments={'Path: B',}},
+        feet={ name="Nyame Sollerets", augments={'Path: B',}},
+        neck="Rep. Plat. Medal",
+        waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+        left_ear="Thrud Earring",
+        right_ear="Tuisto Earring", -- Chev. Earring +2
+        left_ring="Sroda Ring",
+        right_ring="Epaminondas's Ring",
+        back=gear.jse_str_back,
+    })
+    
+    sets.precast.WS['Knights of the Round'].Acc = set_combine(sets.precast.WS.Acc, {})
+
 	sets.precast.WS['Flat Blade'] = {}
 
     sets.precast.WS['Sanguine Blade'] = {}
@@ -545,7 +563,11 @@ function init_gear_sets()
         back=gear.jse_fc_back,
     }
 
-	sets.midcast.Stoneskin = set_combine(sets.midcast['Enhancing Magic'], {waist="Siegel Sash"})
+	sets.midcast.Stoneskin = set_combine(sets.midcast['Enhancing Magic'], {
+        ear1 = "Earthcry Earring",
+        legs = "Haven Hose",
+        waist = "Siegel Sash"
+    })
 
     sets.midcast.Protect = set_combine(sets.midcast['Enhancing Magic'], {sub="Srivatsa",ring2="Sheltered Ring"}) 
     sets.midcast.Shell = set_combine(sets.midcast['Enhancing Magic'], {ring2="Sheltered Ring"})
@@ -554,7 +576,7 @@ function init_gear_sets()
         main="Burtgang",
         sub="Priwen",
         ammo="Staunch Tathlum +1",
-        head={ name="Yorium Barbuta", augments={'DEF+23','Spell interruption rate down -10%','Phalanx +3',}},
+        head={ name="Odyssean Helm", augments={'"Fast Cast"+5','VIT+14','Phalanx +4',}},
         body={ name="Yorium Cuirass", augments={'DEF+25','Spell interruption rate down -10%','Phalanx +3',}},
         hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
         legs={ name="Sakpata's Cuisses", augments={'Path: A',}},
@@ -572,7 +594,7 @@ function init_gear_sets()
         main="Burtgang",
         sub="Priwen",
         ammo="Staunch Tathlum +1",
-        head={ name="Yorium Barbuta", augments={'DEF+23','Spell interruption rate down -10%','Phalanx +3',}},
+        head={ name="Odyssean Helm", augments={'"Fast Cast"+5','VIT+14','Phalanx +4',}},
         body={ name="Yorium Cuirass", augments={'DEF+25','Spell interruption rate down -10%','Phalanx +3',}},
         hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
         legs={ name="Sakpata's Cuisses", augments={'Path: A',},priority=1},
@@ -590,7 +612,7 @@ function init_gear_sets()
         main="Burtgang",
         sub="Priwen",
         ammo="Staunch Tathlum +1",
-        head={ name="Yorium Barbuta", augments={'DEF+23','Spell interruption rate down -10%','Phalanx +3',}},
+        head={ name="Odyssean Helm", augments={'"Fast Cast"+5','VIT+14','Phalanx +4',}},
         body={ name="Yorium Cuirass", augments={'DEF+25','Spell interruption rate down -10%','Phalanx +3',}},
         hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',},priority=1},
         legs={ name="Sakpata's Cuisses", augments={'Path: A',},priority=1},
@@ -608,7 +630,7 @@ function init_gear_sets()
         main="Sakpata's Sword",
         sub="Priwen",
         ammo="Staunch Tathlum +1",
-        head={ name="Yorium Barbuta", augments={'DEF+23','Spell interruption rate down -10%','Phalanx +3',}},
+        head={ name="Odyssean Helm", augments={'"Fast Cast"+5','VIT+14','Phalanx +4',}},
         body={ name="Yorium Cuirass", augments={'DEF+25','Spell interruption rate down -10%','Phalanx +3',}},
         hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
         legs={ name="Sakpata's Cuisses", augments={'Path: A',}},
@@ -651,18 +673,18 @@ function init_gear_sets()
     sets.idle.MDT = {
         main="Burtgang",
         sub="Aegis",
-        ammo="Brigantia Pebble",
+        ammo="Staunch Tathlum +1",
         head={ name="Sakpata's Helm", augments={'Path: A',}},
         body={ name="Sakpata's Plate", augments={'Path: A',}},
         hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
         legs={ name="Sakpata's Cuisses", augments={'Path: A',},priority=1},
         feet={ name="Sakpata's Leggings", augments={'Path: A',},priority=1},
-        neck="Loricate Torque +1",
-        waist="Flume Belt +1",
-        left_ear={ name="Tuisto Earring",priority=1},
+        neck="Warder's Charm +1",
+        waist="Creed Baudrier",
+        left_ear="Sanare Earring",
         right_ear={ name="Odnowa Earring +1", augments={'Path: A',},priority=1},
         left_ring="Gelatinous Ring +1",
-        right_ring="Fortified Ring",
+        right_ring="Moonlight Ring",
         back=gear.jse_def_back,
     }
 
@@ -683,7 +705,7 @@ function init_gear_sets()
         left_ring="Gelatinous Ring +1",
         right_ring="Fortified Ring",
         back=gear.jse_def_back,
-    }
+    }  
 
     sets.idle.Town = {
         body = "Sacro Breastplate"

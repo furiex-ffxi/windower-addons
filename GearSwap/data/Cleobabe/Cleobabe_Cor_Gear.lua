@@ -323,7 +323,7 @@ function init_gear_sets()
         right_ear="Telos Earring",
         left_ring="Hajduk Ring +1",
         right_ring="Cornelia's Ring",
-        back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%','Damage taken-5%',}},
+        back=gear.ranger_wsd_jse_back,
     }
 
 

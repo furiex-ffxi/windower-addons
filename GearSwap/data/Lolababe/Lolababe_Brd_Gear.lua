@@ -4,7 +4,7 @@ function user_job_setup()
     state.OffenseMode:options('Normal', 'Acc', 'Subtle')
     state.HybridMode:options('Normal', 'DT')
     state.CastingMode:options('Normal', 'Duration', 'Resistant')
-    state.IdleMode:options('Normal', 'NoRefresh', 'DT')
+    state.IdleMode:options('Normal', 'Aminon', 'NoRefresh', 'DT')
     state.Weapons:options('None', 'Naegling', 'Onion', 'Aeneas', 'Carnwenhan', 'Xoanon', 'DualQutrub', 'DualNaegling',
         'DualOnion', 'DualCarnwenhan', 'DualWeapons', 'DualTauret', 'DualAeolian')
     -- Whether to use Carn (or song daggers in general) under a certain threshhold even when weapons are locked.
@@ -14,6 +14,12 @@ function user_job_setup()
         name = "Intarabus's Cape",
         augments = {'CHR+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'CHR+10', '"Fast Cast"+10', 'Phys. dmg. taken-10%'}
     }
+
+    gear.int_fc_jse_back = {
+        name = "Intarabus's Cape",
+        augments = {'INT+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'INT+10', '"Fast Cast"+10', 'Phys. dmg. taken-10%'}
+    }
+
     gear.str_wsd_jse_back = {
         name = "Intarabus's Cape",
         augments = {'STR+20', 'Accuracy+20 Attack+20', 'STR+10', 'Weapon skill damage +10%', 'Phys. dmg. taken-10%'}
@@ -620,7 +626,7 @@ function init_gear_sets()
         ear2 = "Meili Earring",
         ring1 = "Menelaus's Ring",
         ring2 = "Haoma's Ring",
-        back = gear.BRD_Song_Cape,
+        back = gear.fc_jse_back,
         waist = "Bishop's Sash"
     })
 
@@ -650,20 +656,20 @@ function init_gear_sets()
     sets.midcast.Absorb = {
         main = "Carnwenhan",
         sub = "Ammurapi Shield",
-        -- range = { name = "Linos", augments = {'Mag. Acc.+15', '"Fast Cast"+5', 'INT+8'} },
-        head = "Bunzi's Hat",
-        neck = "Mnbw. Whistle +1",
+        range = { name = "Linos", augments = {'Mag. Acc.+18', '"Fast Cast"+6', 'INT+8'} }, -- 6
+        head = "Bunzi's Hat", -- 10
+        neck = "Null Loop",
         ear1 = "Regal Earring",
-        ear2 = "Fili Earring +1",
-        body = "Inyanga Jubbah +2",
-        hands = "Fili Manchettes +3",
-        ring1 = "Stikini Ring +1",
-        ring2 = "Metamor. Ring +1",
-        -- back = { name = "Intarabus's Cape", augments = {'INT+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'Mag. Acc.+10', '"Fast Cast"+10', 'Damage taken-5%'} },
-        waist = "Acuity Belt +1",
-        legs = "Fili Rhingrave +3",
-        feet = "Fili Cothurnes +3"
-    }
+        ear2 = "Malignance Earring", -- 4
+        body = "Zendik Robe", -- 13
+        hands = "Brioso Cuffs +4",
+        ring1 = "Medada's Ring", -- 10
+        ring2 = "Kishar Ring", -- 4
+        back = gear.int_fc_jse_back, -- 10
+        waist = "Null Belt",
+        legs = "Volte Brais", -- 8
+        feet = "Fili Cothurnes +3" -- 13
+    } -- FC Total 78%
 
     -- Gear to enhance certain classes of songs
     sets.midcast.Lullaby = {
@@ -839,6 +845,11 @@ function init_gear_sets()
         legs = "Nyame Flanchard",
         feet = "Nyame Sollerets"
     }
+
+    sets.idle.Aminon = set_combine(sets.idle, {
+        head = "Null Masque",
+        neck = "Rep. Plat. Medal",
+    })
 
     -- Defense sets
     sets.enmity = set_combine(sets.idle, {

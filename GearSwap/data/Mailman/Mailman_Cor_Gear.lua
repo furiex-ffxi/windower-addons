@@ -4,7 +4,7 @@ function user_job_setup()
     state.RangedMode:options('Normal', 'Acc')
     state.WeaponskillMode:options('Match', 'Normal', 'Acc', 'SB', 'Proc')
     state.CastingMode:options('Normal', 'Resistant')
-    state.IdleMode:options('Normal', 'PDT', 'Refresh')
+    state.IdleMode:options('Normal', 'Aminon', 'PDT', 'Refresh')
     state.HybridMode:options('Normal', 'DT')
     state.ExtraMeleeMode = M { ['description'] = 'Extra Melee Mode', 'None', 'DWMax' }
     state.Weapons:options('Default', 'Ranged', 'RangedAcc', 'Savage', 'Onion', 'Evisceration', 'LeadenMelee', 'Roll', 'DualWeapons', 'DualSavageWeapons',
@@ -127,8 +127,8 @@ function init_gear_sets()
         waist = "Eschan Stone",
         left_ear = "Friomisi Earring",
         right_ear = "Hecate's Earring",
-        left_ring = "Acumen Ring",
-        right_ring = "Dingir Ring",
+        left_ring = "Dingir Ring",
+        right_ring = "Acumen Ring",
     }
 
     sets.precast.CorsairShot.Proc = {
@@ -252,7 +252,21 @@ function init_gear_sets()
 		back=gear.str_wsd_jse_back,
     }
 
-    sets.precast.WS.Acc = set_combine(sets.precast.WS, {})
+    sets.precast.WS.Acc = {
+        ammo = gear.WSbullet,
+		head=sets.Nyame.Head,
+		body=sets.Nyame.Body,
+		hands=gear.Empy.Hands,
+		legs=sets.Nyame.Legs,
+		feet=sets.Nyame.Feet, 
+        neck = "Null Loop",
+        waist = "Null Belt",
+		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+		right_ear="Chass. Earring +2",
+		left_ring="Cacoethic Ring +1",
+        right_ring="Epaminondas's Ring",
+		back=gear.str_wsd_jse_back,        
+    }
 
     sets.precast.WS.Proc = set_combine(sets.engaged, {})
 
@@ -278,7 +292,8 @@ function init_gear_sets()
 
     sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {
     })
-    sets.precast.WS['Savage Blade'].Acc = set_combine(sets.precast.WS['Savage Blade'], {        
+    sets.precast.WS['Savage Blade'].Acc = set_combine(sets.precast.WS.Acc, {   
+
     })
 
     sets.precast.WS['Fast Blade II'] = set_combine(sets.precast.WS, {
@@ -286,7 +301,7 @@ function init_gear_sets()
         waist = "Fotia Belt",
     })
 
-    sets.precast.WS['Fast Blade II'].Acc = set_combine(sets.precast.WS, {
+    sets.precast.WS['Fast Blade II'].Acc = set_combine(sets.precast.WS.Acc, {
         neck = "Fotia Gorget",
         waist = "Fotia Belt",
     }) 
@@ -373,8 +388,8 @@ function init_gear_sets()
         neck = "Comm. Charm +2",
         ear1 = "Crematio Earring",
         ear2 = "Friomisi Earring",
-        ring1 = "Epaminondas's Ring",
-        ring2 = "Dingir Ring",
+        ring1 = "Dingir Ring",
+        ring2 = "Epaminondas's Ring",
         waist = "Eschan Stone",
         legs = sets.Nyame.Legs,
         feet = "Lanun Bottes +4",
@@ -440,21 +455,21 @@ function init_gear_sets()
     }
 
     sets.midcast.Absorb = {
-        head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}},
-        body="Chasseur's Frac +3",
+        ammo = gear.QDbullet,
+        head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}}, -- 14 FC
+        body="Chasseur's Frac +3", 
         hands="Chasseur's Gants +3",
         legs="Chas. Culottes +3",
         feet="Chass. Bottes +3",
-        neck={ name="Comm. Charm +2", augments={'Path: A',}},
+        neck="Null Loop",
         waist="Null Belt",
-        -- left_ear="Mani Earring",
-        left_ear="Etiolation Earring",
+        left_ear="Alabaster Earring",
         right_ear="Chas. Earring +2",
         -- left_ring="Medada's Ring",
-        left_ring="Weatherspoon Ring",
-        right_ring="Kishar Ring",
-        back=gear.fc_jse_back,
-    }
+        left_ring="Weatherspoon Ring", -- 5 FC
+        right_ring="Kishar Ring", -- 4
+        back=gear.fc_jse_back, -- 10
+    } -- FC Total 33
 
     sets.Self_Healing = { neck = "Phalaina Locket", hands = "Buremte Gloves", ring2 = "Kunaji Ring",
         waist = "Gishdubar Sash" }
@@ -530,6 +545,21 @@ function init_gear_sets()
 		left_ring="Defending Ring",
 		right_ring="Gelatinous Ring +1",
 		back=gear.tp_jse_back,
+    }
+
+    sets.idle.Aminon = {
+        head="Null Masque",
+        body="Volte Harness",
+        hands="Regal Gloves",
+        legs="Malignance Tights",
+        feet="Malignance Boots",
+        neck="Rep. Plat. Medal",
+        waist="Kentarch Belt +1",
+        left_ear="Crep. Earring",
+        right_ear="Dedition Earring",
+        left_ring="Chirich Ring +1",
+        right_ring="Chirich Ring +1",
+        back=gear.tp_ranger_jse_back,        
     }
 
     sets.idle.PDT = {

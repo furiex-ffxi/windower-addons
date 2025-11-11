@@ -229,7 +229,6 @@ profiles['junk'] = S{
     'Black Ghost', 
     'Faerie Apple', 
     'Red Terrapin', 
-    'Barnacle', 
     'Little Worm', 
     'Vegetable Seeds', 
     'Chestnut', 

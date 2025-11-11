@@ -2,12 +2,12 @@ function user_job_setup()
     -- Options: Override default values
     state.OffenseMode:options('Normal')
     state.HybridMode:options("Normal", "Staff")
-    state.CastingMode:options('Normal', 'Resistant', 'Fodder', 'Proc')
-    state.IdleMode:options('Normal', 'PDT')
+    state.CastingMode:options('Normal', 'OccultAcumen', 'Resistant', 'Fodder', 'Proc')
+    state.IdleMode:options('Normal', 'PDT', 'Aminon')
     state.PhysicalDefenseMode:options('PDT', 'NukeLock', 'GeoLock', 'PetPDT')
     state.MagicalDefenseMode:options('MDT', 'NukeLock')
     state.ResistDefenseMode:options('MEVA')
-    state.Weapons:options('None', 'Idris', 'Mpaca', 'Maxentius', 'Ternion', 'Daybreak', 'DualWeapons')
+    state.Weapons:options('None', 'Idris', 'Tishtrya', 'Mpaca', 'Maxentius', 'Ternion', 'Daybreak', 'DualWeapons')
 
     gear.nuke_jse_back = {
         name = "Nantosuelta's Cape",
@@ -16,6 +16,16 @@ function user_job_setup()
     gear.idle_jse_back = {
         name = "Nantosuelta's Cape",
         augments = {'HP+60', 'Eva.+20 /Mag. Eva.+20', 'Mag. Evasion+10', 'Pet: "Regen"+10', 'Pet: "Regen"+5'}
+    }
+    
+    gear.fc_jse_back = {
+        name = "Nantosuelta's Cape",
+        augments = {'INT+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'Mag. Acc.+10', '"Fast Cast"+10', 'Damage taken-5%'}
+    }
+
+    gear.tp_jse_back = { 
+        name="Nantosuelta's Cape", 
+        augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%'}
     }
 
     gear.obi_cure_back = "Tempered Cape +1"
@@ -112,8 +122,7 @@ function init_gear_sets()
 
     sets.precast.FC = {
         range = "Dunna", -- 3
-        head = "C. Palug Crown",
-        -- head = "Amalric Coif +1", -- 11
+        head = "C. Palug Crown", -- 8
         neck = "Voltsurge Torque", -- 4
         ear1 = "Enchntr. Earring +1", -- 2
         ear2 = "Malignance Earring", -- 4
@@ -124,8 +133,8 @@ function init_gear_sets()
         back = "Fi Follet Cape +1", -- 10
         waist = "Witful Belt", -- 3 / 3 QM
         legs = gear.af.Legs, -- 15
-        feet = "Volte Gaiters"
-    } -- 81
+        feet = "Volte Gaiters" -- 6
+    } -- Total FC 80%
 
     sets.precast.FC.Geomancy = set_combine(sets.precast.FC, {
         range = "Dunna",
@@ -169,7 +178,6 @@ function init_gear_sets()
     sets.precast.FC.Stoneskin = set_combine(sets.precast.FC['Enhancing Magic'], {})
 
     sets.precast.FC.Impact = {
-        ammo = "Impatiens",
         head = empty,
         neck = "Voltsurge Torque",
         ear1 = "Enchntr. Earring +1",
@@ -303,7 +311,6 @@ function init_gear_sets()
     sets.midcast.Cure = {
         -- main = "Daybreak",
         -- sub = "Sors Shield",
-        ammo = "Hasty Pinion +1",
         head = "Amalric Coif +1",
         neck = "Incanter's Torque",
         ear1 = "Gifted Earring",
@@ -321,7 +328,6 @@ function init_gear_sets()
     sets.midcast.LightWeatherCure = {
         -- main = "Chatoyant Staff",
         -- sub = "Curatio Grip",
-        ammo = "Hasty Pinion +1",
         head = "Amalric Coif +1",
         neck = "Phalaina Locket",
         ear1 = "Gifted Earring",
@@ -340,7 +346,6 @@ function init_gear_sets()
     sets.midcast.LightDayCure = {
         -- main = "Daybreak",
         -- sub = "Sors Shield",
-        ammo = "Hasty Pinion +1",
         head = "Amalric Coif +1",
         neck = "Incanter's Torque",
         ear1 = "Gifted Earring",
@@ -396,7 +401,6 @@ function init_gear_sets()
     sets.midcast['Elemental Magic'].Proc = {
         main = empty,
         sub = empty,
-        ammo = "Impatiens",
         head = "Vanya Hood",
         neck = "Loricate Torque +1",
         ear1 = "Gifted Earring",
@@ -416,10 +420,26 @@ function init_gear_sets()
     sets.midcast['Elemental Magic'].HighTierNuke.Resistant = set_combine(sets.midcast['Elemental Magic'], {})
     sets.midcast['Elemental Magic'].HighTierNuke.Fodder = set_combine(sets.midcast['Elemental Magic'], {})
 
+    sets.midcast["Thundara III"] = set_combine(sets.midcast['Elemental Magic'], {})
+    sets.midcast["Blizzara III"] = set_combine(sets.midcast['Elemental Magic'], {})
+
+    sets.midcast["Blizzara III"].OccultAcumen = {
+        head={ name="Merlinic Hood", augments={'"Occult Acumen"+11','Mag. Acc.+4',}},
+        body={ name="Merlinic Jubbah", augments={'Mag. Acc.+1','"Occult Acumen"+11','AGI+9','"Mag.Atk.Bns."+8',}},
+        hands={ name="Merlinic Dastanas", augments={'"Mag.Atk.Bns."+18','"Occult Acumen"+11','Mag. Acc.+4',}},
+        legs="Perdition Slops",
+        feet={ name="Merlinic Crackows", augments={'"Occult Acumen"+11','CHR+10','Mag. Acc.+5','"Mag.Atk.Bns."+12',}},
+        neck="Combatant's Torque",
+        waist="Oneiros Rope",
+        left_ear="Crep. Earring",
+        right_ear="Dedition Earring",
+        left_ring="Chirich Ring +1",
+        right_ring="Chirich Ring +1",
+        back=gear.tp_jse_back
+    }
+    sets.midcast["Thundara III"].OccultAcumen = set_combine(sets.midcast["Blizzara III"].OccultAcumen, {})
+
     sets.midcast['Dark Magic'] = {
-        main = "Rubicundity",
-        sub = "Ammurapi Shield",
-        ammo = "Pemphredo Tathlum",
         head = gear.merlinic_nuke_head,
         neck = "Erra Pendant",
         ear1 = "Regal Earring",
@@ -435,9 +455,6 @@ function init_gear_sets()
     }
 
     sets.midcast.Drain = {
-        main = "Rubicundity",
-        sub = "Ammurapi Shield",
-        ammo = "Pemphredo Tathlum",
         head = "Pixie Hairpin +1",
         neck = "Erra Pendant",
         ear1 = "Regal Earring",
@@ -457,7 +474,6 @@ function init_gear_sets()
     sets.midcast.Stun = {
         main = gear.grioavolr_fc_staff,
         sub = "Clerisy Strap +1",
-        ammo = "Hasty Pinion +1",
         head = "Amalric Coif +1",
         neck = "Voltsurge Torque",
         ear1 = "Enchntr. Earring +1",
@@ -473,9 +489,6 @@ function init_gear_sets()
     }
 
     sets.midcast.Stun.Resistant = {
-        main = "Daybreak",
-        sub = "Ammurapi Shield",
-        ammo = "Pemphredo Tathlum",
         head = "Amalric Coif +1",
         neck = "Erra Pendant",
         ear1 = "Regal Earring",
@@ -491,9 +504,6 @@ function init_gear_sets()
     }
 
     sets.midcast.Impact = {
-        main = "Daybreak",
-        sub = "Ammurapi Shield",
-        ammo = "Pemphredo Tathlum",
         head = empty,
         neck = "Erra Pendant",
         ear1 = "Regal Earring",
@@ -508,10 +518,12 @@ function init_gear_sets()
         feet = "Amalric Nails +1"
     }
 
+    sets.midcast["Impact"].OccultAcumen = set_combine(sets.midcast["Blizzara III"].OccultAcumen, {
+        head = empty,
+        body = "Twilight Cloak",
+    })
+
     sets.midcast.Dispel = {
-        -- main = "Daybreak",
-        -- sub = "Ammurapi Shield",
-        ammo = "Pemphredo Tathlum",
         head = "Amalric Coif +1",
         neck = "Erra Pendant",
         ear1 = "Regal Earring",
@@ -532,23 +544,22 @@ function init_gear_sets()
     })
 
     sets.midcast.Absorb = {
-        main = "Maxentius",
+        main = "Tishtrya",
         sub = "Ammurapi Shield",
-        range = empty,
-        ammo = "Pemphredo Tathlum",
-        head = gear.empy.Head,
-        neck = "Erra Pendant",
-        ear1 = "Enchntr. Earring +1",
-        ear2 = "Malignance Earring",
-        body = "Zendik Robe",
+        range = "Dunna", -- 3
+        head = gear.empy.Head, 
+        neck = "Null Loop",
+        ear1 = "Malignance Earring", -- 4 FC
+        ear2 = "Alabaster Earring", 
+        body = "Zendik Robe", -- 13 FC
         hands = gear.empy.Hands,
-        ring1 = "Kishar Ring",
-        ring2 = "Rahab Ring",
-        -- back = { name = "Nantosuelta's Cape", augments = {'INT+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'Mag. Acc.+10', '"Fast Cast"+10', 'Damage taken-5%'} },
-        waist = "Embla Sash",
-        legs = gear.af.Legs,
-        feet = gear.empy.Feet
-    }
+        ring1 = "Kishar Ring", -- 4 FC
+        ring2 = "Prolix Ring", -- 2 FC
+        back = gear.fc_jse_back, -- 10 FC
+        waist = "Embla Sash", -- 5 FC
+        legs = gear.af.Legs, -- 15 FC
+        feet = "Agwu's Pigaches" -- 4 FC
+    } -- Total FC 60%
 
     sets.midcast['Enfeebling Magic'] = {
         head = gear.empy.Head,
@@ -622,7 +633,6 @@ function init_gear_sets()
     sets.midcast['Enhancing Magic'] = {
         main = gear.gada_enhancing_club,
         sub = "Ammurapi Shield",
-        ammo = "Hasty Pinion +1",
         head = "Telchine Cap",
         neck = "Incanter's Torque",
         ear1 = "Andoaa Earring",
@@ -737,6 +747,12 @@ function init_gear_sets()
         waist = "Null Belt"
     })
 
+    sets.idle.Aminon = set_combine(sets.idle, {
+        main = "Tishtrya",
+        sub = "Ammurapi Shield",
+        ranged = "Dunna",
+    })
+
     -- .Pet sets are for when Luopan is present.
     sets.idle.Pet = {
         head = gear.empy.Head,
@@ -768,6 +784,12 @@ function init_gear_sets()
         feet = gear.relic.Feet
     }
 
+    sets.idle.Aminon.Pet = set_combine(sets.idle.Pet, {
+        main = "Tishtrya",
+        sub = "Ammurapi Shield",
+        ranged = "Dunna",
+    })
+
     -- .Indi sets are for when an Indi-spell is active.
     sets.idle.Indi = set_combine(sets.idle, {})
     sets.idle.Pet.Indi = set_combine(sets.idle.Pet, {})
@@ -775,9 +797,6 @@ function init_gear_sets()
     sets.idle.PDT.Pet.Indi = set_combine(sets.idle.PDT.Pet, {})
 
     sets.idle.Weak = {
-        main = "Bolelabunga",
-        sub = "Genmei Shield",
-        ammo = "Staunch Tathlum +1",
         head = "Befouled Crown",
         neck = "Loricate Torque +1",
         ear1 = "Etiolation Earring",
@@ -797,7 +816,6 @@ function init_gear_sets()
     sets.defense.PDT = {
         main = "Malignance Pole",
         sub = "Umbra Strap",
-        ammo = "Staunch Tathlum +1",
         head = "Null Masque",
         neck = "Loricate Torque +1",
         ear1 = "Etiolation Earring",
@@ -815,7 +833,6 @@ function init_gear_sets()
     sets.defense.MDT = {
         main = "Malignance Pole",
         sub = "Umbra Strap",
-        ammo = "Staunch Tathlum +1",
         head = gear.empy.Head,
         neck = "Loricate Torque +1",
         ear1 = "Etiolation Earring",
@@ -833,7 +850,6 @@ function init_gear_sets()
     sets.defense.MEVA = {
         main = "Malignance Pole",
         sub = "Enki Strap",
-        ammo = "Staunch Tathlum +1",
         head = gear.empy.Head,
         neck = "Warder's Charm +1",
         ear1 = "Etiolation Earring",
@@ -899,7 +915,8 @@ function init_gear_sets()
 
     -- Normal melee group
     sets.engaged = {
-        main = "Maxentius",
+        main = "Tishtrya",
+        sub = "Ammurapi Shield",
         head = "Blistering Sallet +1",
         neck = "Combatant's Torque",
         ear1 = "Cessance Earring",
@@ -932,9 +949,8 @@ function init_gear_sets()
     }
 
     sets.engaged.DW = {
-        main = "Maxentius",
+        main = "Tishtrya",
         sub = "C. Palug Hammer",
-        ammo = "Amar Cluster",
         head = "Blistering Sallet +1",
         neck = "Null Loop",
         ear1 = "Crep. Earring",
@@ -990,6 +1006,12 @@ function init_gear_sets()
         main = 'Idris',
         sub = 'Genmei Shield'
     }
+
+    sets.weapons.Tishtrya = {
+        main = 'Tishtrya',
+        sub = 'Ammurapi Shield'
+    }
+
     sets.weapons.Mpaca = {
         main = "Mpaca's Staff",
         sub = 'Umbra Strap'

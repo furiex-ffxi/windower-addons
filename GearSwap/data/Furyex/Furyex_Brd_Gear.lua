@@ -97,12 +97,12 @@ function init_gear_sets()
 	sets.weapons.Naegling = {main = "Naegling", sub = "Genmei Shield"}
 	sets.weapons.Xoanon = {main = "Xoanon", sub = "Enki Strap"}
 	sets.weapons.Qutrub = {main = "Qutrub Knife", sub = "Genmei Shield"}
-	sets.weapons.DualCarnwenhan = {main = "Carnwenhan", sub = "Fusetto +3"}
+	sets.weapons.DualCarnwenhan = {main = "Carnwenhan", sub = "Centovente"}
 	sets.weapons.DualWeapons = {main = "Kartika", sub = "Gleti's Knife"} -- Aenas
-	sets.weapons.DualMpu = {main = "Mpu Gandring", sub = "Fusetto +3"}
-	sets.weapons.DualNaegling = {main = "Naegling", sub = "Fusetto +3"}
+	sets.weapons.DualMpu = {main = "Mpu Gandring", sub = "Centovente"}
+	sets.weapons.DualNaegling = {main = "Naegling", sub = "Centovente"}
 	sets.weapons.DualNaeglingAcc = {main = "Naegling", sub = "Gleti's Knife"}
-	sets.weapons.DualTwash = {main = "Twashtar", sub = "Fusetto +3"}
+	sets.weapons.DualTwash = {main = "Twashtar", sub = "Centovente"}
 	sets.weapons.DualAeolian = {main = "Tauret", sub = "Malevolence"}
     sets.weapons.DualFermion = {main="Fermion Sword", sub="Hedron Dagger"}
 

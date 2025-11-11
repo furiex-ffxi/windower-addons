@@ -24,7 +24,7 @@ local black_listed_words = T {string.char(0x81, 0x69), string.char(0x81, 0x99), 
                               'Aeonic Weapon.*3zone.*Buy', 'Tumult Curator.*Kill', 'Aeonic Weapon.*Mind',
                               'Aeonic Weapon.*Buy', 'Selling Aeonic', 'Empy Weapons Abyssea', '50 50 75',
                               'Bibiki Bay', 'UC HTMB', '500P', '500p', 'RP2386', 'T1T2T3T4', '50M JST', 'Master Trials',
-                              'MasterTrials', 'CP500P', 'SuperRP', 'Seg11k.*', 'Supercharge', '43k+',
+                              'MasterTrials', 'CP500P', 'SuperRP', 'Seg11k.*', 'Seg10k.*', 'Supercharge', '43k+',
                               'Aeonic.*Clear Mind.*','W3.*Clear Mind.*'} -- First two are '☆' and '★' symbols.
 
 local black_listed_skill_pages = T {'6147', '6148', '6149', '6150', '6151', '6152', '6153', '6154', '6155', '6156',

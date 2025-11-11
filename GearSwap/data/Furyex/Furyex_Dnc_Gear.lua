@@ -1,6 +1,6 @@
 -- Setup vars that are user-dependent.  Can override this function in a sidecar file.
 function user_job_setup()
-    state.OffenseMode:options("Normal", "SomeAcc", "Acc", "FullAcc", "Fodder")
+    state.OffenseMode:options("Normal", "Aminon", "SomeAcc", "Acc", "FullAcc", "Fodder")
     state.HybridMode:options("Normal", "DT")
     state.WeaponskillMode:options("Match", "Normal", "SomeAcc", "Acc", "FullAcc", "Fodder", "Proc")
     state.IdleMode:options("Normal", "Sphere")
@@ -71,7 +71,7 @@ function init_gear_sets()
     sets.weapons.Mpu = {
         main = "Mpu Gandring",
         sub = {
-            name = "Fusetto +3",
+            name = "Centovente",
             augments = {"TP Bonus +1000"}
         }
     }
@@ -81,7 +81,7 @@ function init_gear_sets()
             augments = {"Path: A"}
         },
         sub = {
-            name = "Fusetto +3",
+            name = "Centovente",
             augments = {"TP Bonus +1000"}
         }
     }
@@ -97,14 +97,14 @@ function init_gear_sets()
     sets.weapons.Onion = {
         main = "Onion Sword III",
         sub = {
-            name = "Fusetto +3",
+            name = "Centovente",
             augments = {"TP Bonus +1000"}
         }
     }
 
     sets.weapons.Qutrub = {
         main = "Qutrub Knife",
-        sub = "Fusetto +3"
+        sub = "Centovente"
     }
 
     -- Precast Sets
@@ -996,13 +996,10 @@ function init_gear_sets()
 
     sets.engaged.AM = {}
 
-    sets.engaged.Amon = {
+    sets.engaged.Aminon = {
         ammo = "Aurgelmir Orb +1",
         head = "Turms Cap +1",
-        body = {
-            name = "Gleti's Cuirass",
-            augments = {"Path: A"}
-        },
+        body = "Volte Harness",
         hands = "Regal Gloves",
         legs = {
             name = "Gleti's Breeches",

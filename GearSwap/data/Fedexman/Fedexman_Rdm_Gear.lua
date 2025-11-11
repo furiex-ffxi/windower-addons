@@ -226,14 +226,11 @@ function init_gear_sets()
 		neck = "Null Loop",
 		waist = "Null Belt",
 		left_ear = "Malignance Earring", -- 4 FC
-		right_ear = {
-			name = "Lethargy Earring",
-			augments = {"System: 1 ID: 1676 Val: 0", "Accuracy+13", "Mag. Acc.+13", '"Dbl.Atk."+4'}
-		}, -- 8 FC
+		right_ear = "Lethargy Earring", -- 7 FC
 		left_ring = {name = "Metamor. Ring +1", augments = {"Path: A"}},
 		right_ring = "Kishar Ring", -- 4 FC
 		back = RDMCape.FC -- 10 FC
-	}
+	} 
 
 	sets.precast.FC.Stun = set_combine(sets.precast.FC.Absorb)
 
@@ -250,8 +247,8 @@ function init_gear_sets()
 		waist = "Sailfi Belt +1",
 		left_ear = "Sherida Earring",
 		right_ear = {name = "Moonshade Earring", augments = {"Accuracy+4", "TP Bonus +250"}},
-		left_ring = "Epaminondas's Ring",
-		right_ring = "Karieyh Ring",
+		left_ring = "Karieyh Ring",
+		right_ring = "Epaminondas's Ring",
 		back = RDMCape.STRWSD
 	}
 
@@ -454,11 +451,11 @@ function init_gear_sets()
 		neck = "Null Loop",
 		waist = "Sailfi Belt +1",
 		left_ear = "Regal Earring",
-		right_ear = "Lethargy Earring", -- 8
+		right_ear = "Lethargy Earring", -- 7
 		left_ring = {name = "Metamor. Ring +1", augments = {"Path: A"}},
 		right_ring = {name = "Stikini Ring +1", bag = "wardrobe2"},
 		back = RDMCape.FC -- 10
-	}
+	} -- FC Total 48 Gear + 38 Job Traits
 
 	sets.midcast.Cure =
 		set_combine(
@@ -892,13 +889,11 @@ function init_gear_sets()
 		set_combine(
 		sets.midcast.Impact,
 		{
-			main = "Maxentius",
-			sub = "Ammurapi Shield",
 			ammo = "Aurgelmir Orb +1",
 			body = "Crepuscular Cloak",
-			hands = {name = "Merlinic Dastanas", augments = {'"Occult Acumen"+11', "INT+9"}},
+	    	hands={ name="Merlinic Dastanas", augments={'"Mag.Atk.Bns."+24','"Occult Acumen"+11','VIT+5',}},
 			legs = "Perdition Slops",
-			feet = {name = "Merlinic Crackows", augments = {'"Occult Acumen"+11', "MND+9"}},
+	  		feet={ name="Merlinic Crackows", augments={'"Occult Acumen"+11','CHR+4','Mag. Acc.+5',}},
 			neck = "Anu Torque",
 			waist = "Oneiros Rope",
 			left_ear = "Sherida Earring",
@@ -910,13 +905,12 @@ function init_gear_sets()
 	)
 
 	sets.midcast["Blizzard V"].OccultAcumen = {
-		sub = "Ammurapi Shield",
 		ammo = "Aurgelmir Orb +1",
-		head = {name = "Merlinic Hood", augments = {'"Mag.Atk.Bns."+19', '"Occult Acumen"+11', "VIT+7", "Mag. Acc.+14"}},
-		body = {name = "Merlinic Jubbah", augments = {'"Occult Acumen"+11', "INT+9"}},
-		hands = {name = "Merlinic Dastanas", augments = {'"Occult Acumen"+11', "INT+9"}},
+		head={ name="Merlinic Hood", augments={'"Occult Acumen"+11',}},
+    	body={ name="Merlinic Jubbah", augments={'Attack+22','"Occult Acumen"+11','INT+6',}},
+    	hands={ name="Merlinic Dastanas", augments={'"Mag.Atk.Bns."+24','"Occult Acumen"+11','VIT+5',}},
 		legs = "Perdition Slops",
-		feet = {name = "Merlinic Crackows", augments = {'"Occult Acumen"+11', "MND+9"}},
+	    feet={ name="Merlinic Crackows", augments={'"Occult Acumen"+11','CHR+4','Mag. Acc.+5',}},
 		neck = "Anu Torque",
 		waist = "Oneiros Rope",
 		left_ear = "Sherida Earring",
