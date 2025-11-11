@@ -291,9 +291,13 @@ function init_gear_sets()
         { head = "Carmine Mask +1", ring2 = "Rufescent Ring", legs = "Carmine Cuisses +1", feet = "Carmine Greaves +1" })
 
     sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {
+        left_ring = "Sroda Ring",
+        neck = "Rep. Plat. Medal"
     })
-    sets.precast.WS['Savage Blade'].Acc = set_combine(sets.precast.WS.Acc, {   
 
+    sets.precast.WS['Savage Blade'].Acc = set_combine(sets.precast.WS.Acc, {  
+        left_ring = "Cacoethic Ring +1",
+        neck = "Rep. Plat. Medal" 
     })
 
     sets.precast.WS['Fast Blade II'] = set_combine(sets.precast.WS, {

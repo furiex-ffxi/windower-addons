@@ -3,6 +3,7 @@ function user_job_setup()
     state.UnlockWeapons = M(false, 'Unlock Weapons')
     state.OffenseMode:options('Normal', 'Acc', 'Subtle')
     state.HybridMode:options('Normal', 'DT')
+    state.WeaponskillMode:options("Match", "Acc")
     state.CastingMode:options('Normal', 'Duration', 'Resistant')
     state.IdleMode:options('Normal', 'Aminon', 'NoRefresh', 'DT')
     state.Weapons:options('None', 'Naegling', 'Onion', 'Aeneas', 'Carnwenhan', 'Xoanon', 'DualQutrub', 'DualNaegling',
@@ -50,9 +51,9 @@ function user_job_setup()
 
     gear.relic = {}
     gear.relic.Head = "Bihu Roundlet +4"
-    gear.relic.Body = "Bihu Jstcorps. +4"
+    gear.relic.Body = "Bihu Just. +4"
     gear.relic.Hands = "Bihu Cuffs +4"
-    gear.relic.Legs = "Bihu Cannions +4"
+    gear.relic.Legs = "Bihu Cann. +4"
     gear.relic.Feet = "Bihu Slippers +4"
 
     gear.empy = {}
@@ -276,7 +277,9 @@ function init_gear_sets()
         back = gear.str_wsd_jse_back
     }
 
-    sets.precast.WS.Acc = set_combine(sets.precast.WS, {})
+    sets.precast.WS.Acc = set_combine(sets.precast.WS, {
+
+    })
 
     sets.precast.WS.Subtle = set_combine(sets.precast.WS, {
         ring1 = "Chirich Ring +1",
@@ -308,9 +311,8 @@ function init_gear_sets()
     sets.precast.WS['Fast Blade II'] = sets.precast.WS['Evisceration']
 
     sets.precast.WS['Mordant Rime'] = set_combine(sets.precast.WS, {
-        body = sets.Nyame.Body,
         ear1 = "Regal Earring",
-        ear2 = "Domin. Earring +1", -- Fili Earring +2 or Enchanting Earring +1
+        ear2 = "Ishvara Earring", -- Fili Earring +2 or Enchanting Earring +1
         waist = {
             name = "Sailfi Belt +1",
             augments = {'Path: A'}
@@ -322,6 +324,10 @@ function init_gear_sets()
         },
         back = gear.chr_wsd_jse_back
     })
+
+    sets.precast.WS['Mordant Rime'].Acc = set_combine(sets.precast.WS['Mordant Rime'], {
+        ear2 = "Telos Earring",
+    })    
 
     sets.precast.WS['Rudra\'s Storm'] = set_combine(sets.precast.WS, {
         waist = "Kentarch Belt +1",
@@ -344,6 +350,11 @@ function init_gear_sets()
         body = sets.Nyame.Body,
         waist = "Sailfi Belt +1"
     })
+
+    sets.precast.WS['Savage Blade'].Acc = set_combine(sets.precast.WS, {
+        body = sets.Nyame.Body,
+        waist = "Sailfi Belt +1"
+    })    
 
     sets.precast.WS['Savage Blade'].Subtle = set_combine(sets.precast.WS.Subtle, {
         body = sets.Nyame.Body,

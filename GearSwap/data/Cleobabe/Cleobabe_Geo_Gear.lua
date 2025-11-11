@@ -1,7 +1,8 @@
 function user_job_setup()
     -- Options: Override default values
-    state.OffenseMode:options('Normal')
-    state.HybridMode:options("Normal", "Staff")
+    state.OffenseMode:options('Normal', 'Acc', 'Staff', 'DW')
+    state.HybridMode:options("Normal")
+    state.WeaponskillMode:options("Match", "Acc")
     state.CastingMode:options('Normal', 'OccultAcumen', 'Resistant', 'Fodder', 'Proc')
     state.IdleMode:options('Normal', 'PDT', 'Aminon')
     state.PhysicalDefenseMode:options('PDT', 'NukeLock', 'GeoLock', 'PetPDT')
@@ -23,9 +24,9 @@ function user_job_setup()
         augments = {'INT+20', 'Mag. Acc+20 /Mag. Dmg.+20', 'Mag. Acc.+10', '"Fast Cast"+10', 'Damage taken-5%'}
     }
 
-    gear.tp_jse_back = { 
+    gear.wsd_str_jse_back = { 
         name="Nantosuelta's Cape", 
-        augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%'}
+        augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}
     }
 
     gear.obi_cure_back = "Tempered Cape +1"
@@ -206,16 +207,22 @@ function init_gear_sets()
         hands = sets.Nyame.Hands,
         legs = sets.Nyame.Legs,
         feet = sets.Nyame.Feet,
-        waist = "Sailfi Belt +1",
+        waist = "Cornelia's Belt",
         left_ear = {
             name = "Moonshade Earring",
             augments = {'Accuracy+4', 'TP Bonus +250'}
         },
         right_ear = "Ishvara Earring",
         left_ring = "Epaminondas's Ring",
-        right_ring = "Karieyh Ring",
-        back = "Null Shawl"
+        right_ring = "Cornelia's Ring",
+        back = gear.wsd_str_jse_back
     }
+
+    sets.precast.WS.Acc = set_combine(sets.precast.WS, {
+        neck = "Null Loop",
+        waist = "Null Belt",
+        right_ear = "Telos Earring",
+    })
 
     sets.precast.WS["Flash Nova"] = set_combine(sets.precast.WS, {
         right_ear = "Malignance Earring"
@@ -236,12 +243,12 @@ function init_gear_sets()
         right_ear = "Ishvara Earring",
         left_ring = "Epaminondas's Ring",
         right_ring = "Karieyh Ring",
-        back = "Aurist's Cape +1"
+        back = gear.wsd_str_jse_back
     }
 
     sets.precast.WS["Black Halo"] = set_combine(sets.precast.WS, {
         right_ring = "Metamor. Ring +1",
-        back = "Aurist's Cape +1"
+        back = gear.wsd_str_jse_back
     })
 
     sets.precast.WS['Aeolian Edge'] = {
@@ -258,8 +265,8 @@ function init_gear_sets()
         },
         right_ear = "Ishvara Earring",
         left_ring = "Epaminondas's Ring",
-        right_ring = "Karieyh Ring"
-        -- back = RDMCape.MACC,
+        right_ring = "Karieyh Ring",
+        back = gear.wsd_str_jse_back,
     }
 
     --------------------------------------
@@ -435,7 +442,7 @@ function init_gear_sets()
         right_ear="Dedition Earring",
         left_ring="Chirich Ring +1",
         right_ring="Chirich Ring +1",
-        back=gear.tp_jse_back
+        back="Null Shawl"
     }
     sets.midcast["Thundara III"].OccultAcumen = set_combine(sets.midcast["Blizzara III"].OccultAcumen, {})
 
@@ -544,9 +551,6 @@ function init_gear_sets()
     })
 
     sets.midcast.Absorb = {
-        main = "Tishtrya",
-        sub = "Ammurapi Shield",
-        range = "Dunna", -- 3
         head = gear.empy.Head, 
         neck = "Null Loop",
         ear1 = "Malignance Earring", -- 4 FC
@@ -720,12 +724,14 @@ function init_gear_sets()
     -- Idle sets
 
     sets.idle = {
+        main = "Tishtrya",
+        sub = "Ammurapi Shield",
+        ranged = "Dunna",
         neck = "Loricate Torque +1",
         ear1 = "Odnowa Earring +1",
         ear2 = "Alabaster Earring",
         head = "Null Masque",
         body = "Zendik Robe",
-        -- body = gear.empy.Body,
         hands = gear.relic.Hands,
         legs = "Volte Brais",
         feet = "Volte Gaiters",
@@ -930,6 +936,10 @@ function init_gear_sets()
         legs = sets.Nyame.Legs,
         feet = sets.Nyame.Feet
     }
+
+    sets.engaged.Acc = set_combine(sets.engaged, {
+        neck = "Null Loop",
+    })
 
     sets.engaged.Staff = {
         main = "Contemplator +1",

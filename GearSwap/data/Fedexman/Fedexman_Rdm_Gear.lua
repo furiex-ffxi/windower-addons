@@ -238,7 +238,7 @@ function init_gear_sets()
 	-- Default set for any weaponskill that isn't any more specifically defined
 	sets.precast.WS = {
 		head = sets.Nyame.Head,
-		ammo = "Oshasha's Treatise",
+		ammo = "Coiste Bodhar",
 		neck = "Rep. Plat. Medal",
 		body = sets.Nyame.Body,
 		hands = sets.Nyame.Hands,
@@ -275,7 +275,7 @@ function init_gear_sets()
 	sets.precast.WS["Mercy Stroke"] = set_combine(sets.precast.WS, {
 		ammo = "Coiste Bodhar",
 		right_ear = "Ishvara Earring",
-		right_ring = "Sroda Ring",
+		left_ring = "Sroda Ring",
 	})
 
 	sets.precast.WS["Chant Du Cygne"] =
@@ -314,7 +314,7 @@ function init_gear_sets()
 		set_combine(
 		sets.precast.WS,
 		{
-			right_ring = "Sroda Ring"
+			left_ring = "Sroda Ring"
 		}
 	)
 
@@ -337,7 +337,9 @@ function init_gear_sets()
 		set_combine(
 		sets.precast.WS["Black Halo"],
 		{
-			right_ear = "Dominance Earring +1"
+			ear1 = "Regal Earring",
+			ring1 = "Metamor. Ring +1",
+			hands = AF.Hands
 		}
 	)
 

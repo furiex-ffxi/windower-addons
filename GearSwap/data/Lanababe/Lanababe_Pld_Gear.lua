@@ -308,9 +308,9 @@ function init_gear_sets()
         back=gear.jse_str_back,
     })
 
-    sets.precast.WS['Savage Blade'].Acc = set_combine(sets.precast.WS.Acc, {})
+    sets.precast.WS['Savage Blade'].Acc = set_combine(sets.precast.WS['Savage Blade'], {})
 	
-	sets.precast.WS['Knights of the Round'] = set_combine(sets.precast.WS, {
+	sets.precast.WS['Knights of Round'] = set_combine(sets.precast.WS, {
         ammo="Coiste Bodhar", -- Crepuscular Pebble
         head={ name="Nyame Helm", augments={'Path: B',}},
         body={ name="Nyame Mail", augments={'Path: B',}},
@@ -326,7 +326,11 @@ function init_gear_sets()
         back=gear.jse_str_back,
     })
     
-    sets.precast.WS['Knights of the Round'].Acc = set_combine(sets.precast.WS.Acc, {})
+    sets.precast.WS['Knights of Round'].Acc = set_combine(sets.precast.WS['Knights of Round'], {
+        neck = "Null Loop",
+        waist = "Null Belt",
+        left_ring = "Regal Ring"
+    })
 
 	sets.precast.WS['Flat Blade'] = {}
 
